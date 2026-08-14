@@ -1,0 +1,203 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content",
+      "close": "Close",
+      "remove": "Remove",
+      "loading": "Loading",
+      "star_rating": "Rated {{ rating }} out of {{ rating_max }} stars",
+      "menu": "Menu",
+      "primary_nav": "Primary",
+      "breadcrumb": "Breadcrumb",
+      "pagination": "Pagination",
+      "opens_new_window": "(opens in a new window)"
+    },
+    "meta": {
+      "tags": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
+    "language": {
+      "label": "Language",
+      "english": "English",
+      "arabic": "العربية"
+    },
+    "search": {
+      "label": "Search",
+      "placeholder": "Search fragrances"
+    },
+    "breadcrumb": {
+      "home": "Home"
+    },
+    "countdown": {
+      "days": "d",
+      "hours": "h",
+      "minutes": "m",
+      "expired": "Ended"
+    },
+    "newsletter": {
+      "label": "Email",
+      "submit": "Subscribe",
+      "success": "Thanks — you're on the list."
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to bag",
+      "adding": "Adding…",
+      "added": "Added",
+      "add_failed": "Try again",
+      "sold_out": "Sold out",
+      "notify_me": "Notify me",
+      "price_from": "From",
+      "size": "Size",
+      "inspired_by": "Inspired by",
+      "vendor": "Vendor",
+      "quantity": "Quantity",
+      "regular_price": "Regular price",
+      "description": "Description",
+      "notes": "Fragrance notes",
+      "reviews": "Reviews",
+      "share": "Share",
+      "gallery": "Product images",
+      "view_image": "View image {{ index }}"
+    },
+    "badges": {
+      "sale": "Sale",
+      "sold_out": "Sold out",
+      "in_stock": "In stock",
+      "new": "New drop",
+      "best_seller": "Best seller",
+      "authentic": "Authentic Siwan"
+    },
+    "notes": {
+      "top": "Top notes",
+      "heart": "Heart notes",
+      "base": "Base notes",
+      "unavailable": "Fragrance notes for this scent are not published yet."
+    },
+    "reviews": {
+      "count": {
+        "one": "{{ count }} review",
+        "other": "{{ count }} reviews"
+      },
+      "verified": "Verified purchase",
+      "read_more": "Read full review",
+      "helpful": "Helpful",
+      "reply_from": "Reply from {{ shop }}",
+      "watch": "Watch full review",
+      "read_article": "Read article"
+    },
+    "layering": {
+      "base": "Base scent",
+      "partner": "Layer with",
+      "step_one": "Step 1 — choose your base",
+      "step_two": "Step 2 — choose what to layer with",
+      "start_with": "Start with",
+      "then_choose": "Then choose",
+      "add_duo": "Add layering duo",
+      "take_quiz": "Take the scent quiz to see your layering match.",
+      "incomplete": "Choose both scents first.",
+      "discount_note": "Save {{ percent }}% when you buy this pair."
+    },
+    "quiz": {
+      "progress": "Quiz progress",
+      "step": "Question {n} of {total}",
+      "next": "Next",
+      "back": "Back",
+      "see_result": "See my match",
+      "pick_one": "Choose an answer to continue.",
+      "no_questions": "No questions have been added to this quiz yet.",
+      "no_js": "The scent quiz needs JavaScript. Browse the full collection instead."
+    },
+    "contrast": {
+      "original": "Original",
+      "fragrance": "Fragrance",
+      "price": "Price",
+      "retail": "Original retail",
+      "learn_more": "Learn more",
+      "table_caption": "Comparison between {{ product }} and the fragrance it is inspired by",
+      "story": "If you love {{ house }} {{ fragrance }}, you will recognise {{ product }}."
+    },
+    "bundle": {
+      "save": "Save {{ amount }}"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Your bag",
+      "empty": "Your bag is empty",
+      "subtotal": "Subtotal",
+      "checkout": "Checkout",
+      "continue_shopping": "Continue shopping"
+    },
+    "shipping": {
+      "away_from_free": "away from free shipping",
+      "qualified": "You have free shipping",
+      "progress": "{{ percent }}% toward free shipping"
+    }
+  },
+  "collections": {
+    "general": {
+      "shop_all": "Shop all",
+      "explore": "Explore",
+      "shop_now": "Shop now",
+      "view_all": "View all",
+      "product_count": {
+        "one": "{{ count }} fragrance",
+        "other": "{{ count }} fragrances"
+      },
+      "previous": "Previous",
+      "next": "Next",
+      "go_to_page": "Go to page",
+      "load_more": "Load more",
+      "empty": "No fragrances match these filters."
+    },
+    "sorting": {
+      "label": "Sort by",
+      "featured": "Featured",
+      "best_selling": "Best selling",
+      "az": "Alphabetically, A–Z",
+      "za": "Alphabetically, Z–A",
+      "price_ascending": "Price, low to high",
+      "price_descending": "Price, high to low",
+      "date_ascending": "Date, old to new",
+      "date_descending": "Date, new to old"
+    },
+    "filters": {
+      "label": "Filter",
+      "clear": "Clear",
+      "clear_all": "Clear all",
+      "remove_filter": "Remove filter {{ name }}",
+      "apply": "Apply filters",
+      "min": "From",
+      "max": "To"
+    }
+  },
+  "onboarding": {
+    "product_title": "Example fragrance",
+    "collection_title": "Example collection"
+  },
+  "customer": {
+    "account": {
+      "title": "Account"
+    }
+  },
+  "sections": {
+    "contact": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send",
+      "success": "Thanks — we'll be in touch."
+    },
+    "hero": {
+      "carousel": "Carousel",
+      "slide_of": "Slide {{ index }} of {{ total }}",
+      "choose_slide": "Choose a slide",
+      "pause": "Pause slideshow",
+      "scroll": "Scroll to explore"
+    }
+  }
+}

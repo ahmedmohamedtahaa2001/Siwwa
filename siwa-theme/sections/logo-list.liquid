@@ -1,0 +1,59 @@
+{%- comment -%}
+  Logo list — press mentions, "as seen in", partner marks.
+  Each logo needs a NAME: an image with no accessible name is unusable.
+{%- endcomment -%}
+<div class="section {% if section.settings.color_scheme == 'tonal' %}section--tonal{% endif %}">
+  <div class="section__inner">
+    {%- if section.settings.heading != blank -%}
+      <div class="section__head section__head--center">
+        <h2 class="section__title">{{ section.settings.heading }}</h2>
+      </div>
+    {%- endif -%}
+    <div class="logos {% if section.settings.layout == 'grid' %}logos--grid{% endif %} {% if section.settings.grayscale %}logos--mono{% endif %}">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.logo != blank -%}
+          <div {{ block.shopify_attributes }}>
+            {%- if block.settings.url != blank -%}
+              <a href="{{ block.settings.url }}" rel="noopener" target="_blank">
+                {{ block.settings.logo | image_url: width: 320 | image_tag:
+                   loading: 'lazy', alt: block.settings.name }}
+              </a>
+            {%- else -%}
+              {{ block.settings.logo | image_url: width: 320 | image_tag:
+                 loading: 'lazy', alt: block.settings.name }}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.logo_list.name",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+    { "type": "select", "id": "layout", "label": "t:sections.logo_list.layout", "default": "row",
+      "options": [
+        { "value": "row", "label": "t:sections.logo_list.layout_row" },
+        { "value": "grid", "label": "t:sections.logo_list.layout_grid" }
+      ] },
+    { "type": "checkbox", "id": "grayscale", "label": "t:sections.logo_list.grayscale", "default": true },
+    { "type": "select", "id": "color_scheme", "label": "t:sections.general.color_scheme", "default": "canvas",
+      "options": [
+        { "value": "canvas", "label": "t:sections.general.scheme_canvas" },
+        { "value": "tonal", "label": "t:sections.general.scheme_tonal" }
+      ] }
+  ],
+  "blocks": [
+    { "type": "logo", "name": "t:sections.logo_list.block",
+      "settings": [
+        { "type": "image_picker", "id": "logo", "label": "t:sections.logo_list.logo" },
+        { "type": "text", "id": "name", "label": "t:sections.logo_list.publication", "info": "t:sections.logo_list.name_info" },
+        { "type": "url", "id": "url", "label": "t:components.button.url" }
+      ] }
+  ],
+  "presets": [ { "name": "t:sections.logo_list.name", "blocks": [ { "type": "logo" }, { "type": "logo" }, { "type": "logo" } ] } ]
+}
+{% endschema %}

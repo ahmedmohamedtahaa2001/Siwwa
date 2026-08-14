@@ -1,0 +1,124 @@
+{%- comment -%}
+  Contact form. Uses Shopify's native {% form 'contact' %}, so it works
+  with no JavaScript and posts to the store's own contact handler.
+
+  The address block carries the CLICKABLE contact affordances the live
+  store lacks entirely (00-OVERVIEW.md §5, anomaly 9).
+{%- endcomment -%}
+<div class="section">
+  <div class="section__inner">
+    {%- if section.settings.heading != blank -%}
+      <div class="section__head">
+        <h2 class="section__title">
+          {{ section.settings.heading }}
+          
+        </h2>
+        {%- if section.settings.body != blank -%}
+          <div class="section__sub rte">{{ section.settings.body }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="contact {% if section.settings.layout == 'split' %}contact--split{% endif %}">
+      {%- form 'contact', class: 'contact__form' -%}
+        {%- if form.posted_successfully? -%}
+          <p class="field__hint" role="status">{{ 'sections.contact.success' | t }}</p>
+        {%- endif -%}
+        {%- if form.errors -%}
+          <p class="field__err" role="alert">{{ form.errors | default_errors }}</p>
+        {%- endif -%}
+
+        <div class="contact__row">
+          {%- render 'input', id: 'ContactName-' | append: section.id,
+            name: 'contact[name]', label: 'sections.contact.name' | t,
+            autocomplete: 'name', required: true -%}
+          {%- render 'input', id: 'ContactEmail-' | append: section.id,
+            name: 'contact[email]', type: 'email', label: 'sections.contact.email' | t,
+            autocomplete: 'email', required: true -%}
+        </div>
+
+        {%- if section.settings.show_phone -%}
+          {%- render 'input', id: 'ContactPhone-' | append: section.id,
+            name: 'contact[phone]', type: 'tel', label: 'sections.contact.phone' | t,
+            autocomplete: 'tel' -%}
+        {%- endif -%}
+
+        {%- if section.settings.show_subject and section.blocks.size > 0 -%}
+          <div class="field">
+            <label for="ContactSubject-{{ section.id }}">{{ 'sections.contact.subject' | t }}</label>
+            <select class="select" id="ContactSubject-{{ section.id }}" name="contact[subject]">
+              {%- for block in section.blocks -%}
+                <option value="{{ block.settings.subject | escape }}" {{ block.shopify_attributes }}>
+                  {{ block.settings.subject }}
+                </option>
+              {%- endfor -%}
+            </select>
+          </div>
+        {%- endif -%}
+
+        {%- render 'input', id: 'ContactBody-' | append: section.id,
+          name: 'contact[body]', type: 'textarea', label: 'sections.contact.message' | t,
+          required: true, rows: 6 -%}
+
+        {%- render 'button', label: section.settings.submit_label | default: 'sections.contact.submit' | t,
+          style: 'primary', type: 'submit' -%}
+      {%- endform -%}
+
+      {%- if section.settings.layout == 'split' -%}
+        <div class="ftr__contact">
+          {%- if section.settings.email != blank -%}
+            <a href="mailto:{{ section.settings.email }}">
+              {%- render 'icon', name: 'mail' -%}{{ section.settings.email }}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.phone != blank -%}
+            {%- assign tel = section.settings.phone | remove: ' ' | remove: '-' | remove: '(' | remove: ')' -%}
+            <a href="tel:{{ tel }}">
+              {%- render 'icon', name: 'phone' -%}{{ section.settings.phone }}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.whatsapp_url != blank -%}
+            <a href="{{ section.settings.whatsapp_url }}" rel="noopener" target="_blank">
+              {%- render 'icon', name: 'whatsapp' -%}
+              {{ section.settings.whatsapp_label | default: section.settings.phone }}
+              <span class="visually-hidden">{{ 'general.accessibility.opens_new_window' | t }}</span>
+            </a>
+          {%- endif -%}
+          {%- if section.settings.address != blank -%}
+            <div class="rte">{{ section.settings.address }}</div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.contact.name",
+  "settings": [
+    { "type": "select", "id": "layout", "label": "t:sections.contact.layout", "default": "simple",
+      "options": [
+        { "value": "simple", "label": "t:sections.contact.layout_simple" },
+        { "value": "split", "label": "t:sections.contact.layout_split" }
+      ] },
+    { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+    { "type": "richtext", "id": "body", "label": "t:components.feature_card.body" },
+    { "type": "checkbox", "id": "show_phone", "label": "t:sections.contact.show_phone", "default": true },
+    { "type": "checkbox", "id": "show_subject", "label": "t:sections.contact.show_subject", "default": false },
+    { "type": "text", "id": "submit_label", "label": "t:components.button.label" },
+    { "type": "header", "content": "t:sections.footer.block_contact" },
+    { "type": "paragraph", "content": "t:sections.footer.contact_info" },
+    { "type": "text", "id": "email", "label": "t:sections.footer.email", "default": "contact@siwafragrances.com" },
+    { "type": "text", "id": "phone", "label": "t:sections.footer.phone", "default": "+20 106 625 0757" },
+    { "type": "url", "id": "whatsapp_url", "label": "t:sections.footer.whatsapp" },
+    { "type": "text", "id": "whatsapp_label", "label": "t:sections.footer.whatsapp_label" },
+    { "type": "richtext", "id": "address", "label": "t:sections.contact.address" }
+  ],
+  "blocks": [
+    { "type": "subject", "name": "t:sections.contact.block_subject",
+      "settings": [ { "type": "text", "id": "subject", "label": "t:sections.contact.subject" } ] }
+  ],
+  "presets": [ { "name": "t:sections.contact.name" } ]
+}
+{% endschema %}

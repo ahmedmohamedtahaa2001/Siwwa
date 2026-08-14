@@ -1,0 +1,80 @@
+{%- comment -%}
+  Icon — inline SVG by name.
+
+  Ported from component-library/js/library.js (the ICON map) so the theme
+  and the gallery draw the same glyphs. Structural markup only: no icon
+  here carries content a merchant would edit, the NAME is always passed
+  in from a schema setting.
+
+  Accepts:
+    name  {String}  arrow-right | plus | bag | search | close | check
+                    | heart | star | leaf | drop | wood | chevron-down
+    class {String}  optional class on the <svg>
+
+  Usage:
+    {% render 'icon', name: 'arrow-right', class: 'btn__icon btn__icon--dir' %}
+
+  Directional glyphs (arrow-right, chevron-*) must be given the
+  `--dir` class by the caller so they mirror under RTL.
+{%- endcomment -%}
+{%- liquid
+  assign n = name | default: 'arrow-right'
+  assign cls = class | default: ''
+-%}
+<svg class="{{ cls }}" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  {%- case n -%}
+    {%- when 'arrow-right' -%}
+      <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    {%- when 'chevron-down' -%}
+      <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    {%- when 'plus' -%}
+      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    {%- when 'bag' -%}
+      <path d="M6 8h12l-1 12H7L6 8z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    {%- when 'search' -%}
+      <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M20 20l-3.6-3.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    {%- when 'close' -%}
+      <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    {%- when 'check' -%}
+      <path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    {%- when 'heart' -%}
+      <path d="M12 20s-7-4.6-7-9.3A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.7C19 15.4 12 20 12 20z" fill="currentColor"/>
+    {%- when 'star' -%}
+      <path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4 6.2 20.5l1.1-6.5L2.6 9.4l6.5-.9z" fill="currentColor"/>
+    {%- when 'leaf' -%}
+      <path d="M20 4C10 4 4 9 4 16c0 2 .6 3.4.6 3.4S8 12 18 9c0 0-6 3.4-8.6 10.6C14 21 20 17 20 4z" fill="currentColor"/>
+    {%- when 'drop' -%}
+      <path d="M12 3s6 6.7 6 10.6A6 6 0 0 1 6 13.6C6 9.7 12 3 12 3z" fill="currentColor"/>
+    {%- when 'bottle' -%}
+      <path d="M9 2h6v3.5l1.6 2.2c.6.8.9 1.7.9 2.7V21a1 1 0 0 1-1 1H7.5a1 1 0 0 1-1-1V10.4c0-1 .3-1.9.9-2.7L9 5.5z" fill="none" stroke="currentColor" stroke-width="1.1"/>
+    {%- when 'play' -%}
+      <path d="M9 7.5v9l7.5-4.5z" fill="currentColor"/>
+    {%- when 'burger' -%}
+      <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    {%- when 'user' -%}
+      <circle cx="12" cy="8" r="3.6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M4.5 20a7.5 7.5 0 0 1 15 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    {%- when 'mail' -%}
+      <rect x="3" y="5.5" width="18" height="13" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M3 6.5l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    {%- when 'phone' -%}
+      <path d="M7 3.5l2.5 4-2 2a12 12 0 0 0 5 5l2-2 4 2.5v3a1.5 1.5 0 0 1-1.7 1.5A17.5 17.5 0 0 1 3.5 5.2 1.5 1.5 0 0 1 5 3.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    {%- when 'whatsapp' -%}
+      <path d="M12 3a9 9 0 0 0-7.7 13.6L3.2 21l4.5-1.1A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M9 8.4c.3-.1.6 0 .8.3l.7 1.2c.2.3.1.6-.1.8l-.5.5c.5 1 1.3 1.8 2.3 2.3l.5-.5c.2-.2.5-.3.8-.1l1.2.7c.3.2.4.5.3.8-.3.8-1.1 1.3-2 1.1a8 8 0 0 1-5.6-5.6c-.2-.9.3-1.7 1.1-2z" fill="currentColor"/>
+    {%- when 'instagram' -%}
+      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="17" cy="7" r="1.1" fill="currentColor"/>
+    {%- when 'facebook' -%}
+      <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.2c0-.9.3-1.5 1.5-1.5h1.6V4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1V10H7.5v3h2.7v8z" fill="currentColor"/>
+    {%- when 'tiktok' -%}
+      <path d="M15 3c.4 2 1.7 3.4 3.7 3.6v2.6c-1.3.1-2.6-.3-3.7-1v5.9a5.4 5.4 0 1 1-4.6-5.3v2.7a2.7 2.7 0 1 0 1.9 2.6V3z" fill="currentColor"/>
+    {%- when 'wood' -%}
+      <path d="M4 6h16v3H4zM4 11h16v3H4zM4 16h16v3H4z" fill="currentColor" opacity=".9"/>
+    {%- else -%}
+      <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  {%- endcase -%}
+</svg>

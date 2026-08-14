@@ -1,0 +1,19 @@
+{
+  "_comment": "Setting fragment for the Note pyramid. DATA WARNING: only 18 of 56 products have machine-readable notes and the store has zero custom metafields (_CORRECTIONS.md §2, 03-DATA-SCHEMA.md §7). `hide_when_empty` exists because ~38 of 56 products will render the empty state today.",
+  "settings": [
+    {
+      "type": "select", "id": "note_pyramid_style", "label": "t:components.note_pyramid.style", "default": "iconed",
+      "options": [
+        { "value": "hidden",   "label": "t:components.note_pyramid.style_hidden" },
+        { "value": "iconed",   "label": "t:components.note_pyramid.style_iconed" },
+        { "value": "graphic",  "label": "t:components.note_pyramid.style_graphic" },
+        { "value": "list",     "label": "t:components.note_pyramid.style_list" },
+        { "value": "radial",   "label": "t:components.note_pyramid.style_radial" },
+        { "value": "heritage", "label": "t:components.note_pyramid.style_heritage" }
+      ]
+    },
+    { "type": "checkbox", "id": "note_show_icons", "label": "t:components.note_pyramid.show_icons", "default": true },
+    { "type": "checkbox", "id": "note_hide_when_empty", "label": "t:components.note_pyramid.hide_when_empty", "default": true, "info": "t:components.note_pyramid.hide_when_empty_info" },
+    { "type": "text", "id": "note_heading", "label": "t:components.note_pyramid.heading" }
+  ]
+}

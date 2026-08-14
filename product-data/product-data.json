@@ -1,0 +1,4756 @@
+[
+ {
+  "handle": "layering-vanilla",
+  "title": "Layering Vanilla",
+  "vendor": "Vanilla 28 Kayali",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "Women"
+  ],
+  "published_at": "2023-10-20",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1000.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 650.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 450.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 450.0,
+  "price_max": 1000.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "layering-vanilla1.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 98,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 276,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Layering Vanilla Sweet, amber, vanilla Amber Vanilla fragrance captivates the senses with its creamy long lasting components of jasmine, vanilla orchid, tonka bean, sugar, vanilla, amberwood and Musk. Sensual vanilla perfume ideal for layering & sexy. Best for winter and fall",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Salma Osama",
+    "body": "بجد تحفه سواء ريحه لثبات للتغليف ١٠ من ١٠"
+   },
+   {
+    "rating": 5,
+    "author": "Rowan روان عادل صالح عمر سعيد",
+    "body": "Amazing quality"
+   },
+   {
+    "rating": 5,
+    "author": "Sama Makky",
+    "body": "تحفههه"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "One of my best perfumes"
+   },
+   {
+    "rating": 5,
+    "author": "Nada Nader",
+    "body": "Love it very warm"
+   }
+  ]
+ },
+ {
+  "handle": "mawj",
+  "title": "Mawj",
+  "vendor": "Siwa Fragrances",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men"
+  ],
+  "published_at": "2022-06-29",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1850.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 1100.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 800.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 800.0,
+  "price_max": 1850.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "mawj.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.99,
+  "review_count": 68,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 336,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Mawj Citrus , marine, woody Luxurios blend of sea notes, watery notes, ozonic notes, spicey notes, vanilla combined with bitter orange, pineapple, with hints of vetiver, violet, iris, jasmine with smooth touches of oud, musk and sandalwood. An elegant aquatic perfume reflects the depth of the sea & its fresh breeze in an oriental way.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Ramy Magdy",
+    "body": "Perfect, i got 3 compliments on the 1st day wearing it"
+   },
+   {
+    "rating": 5,
+    "author": "Ahmed Sherif",
+    "body": "تحفة بجد"
+   },
+   {
+    "rating": 5,
+    "author": "Hassan Ali",
+    "body": "very beautiful"
+   },
+   {
+    "rating": 5,
+    "author": "محمد ابوعوف",
+    "body": "جميله جدا و اما تركز فيها تحس فعلا بأجواء البحر و الصيف و بتفضل لفترة طويله من الحاجات المميزة فعلاً"
+   },
+   {
+    "rating": 5,
+    "author": "Ahmed Youssef",
+    "body": "ثبات وفواحه"
+   }
+  ]
+ },
+ {
+  "handle": "boujee-blush",
+  "title": "Boujee Blush",
+  "vendor": "Kayali Boujee Marshmallow",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "new",
+   "Women"
+  ],
+  "published_at": "2025-04-25",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1200.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 700.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 500.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 500.0,
+  "price_max": 1200.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "Boujee-Blush.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.97,
+  "review_count": 59,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 113,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Boujee Blush Yum powdery, sweet, fruity Notes: Marshmallow, strawberry, whipped cream, vanilla, coconut and musk.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "رقيه ياسر",
+    "body": "More than amazing im feeling like marshmallow"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "The scent is soo goodd"
+   },
+   {
+    "rating": 5,
+    "author": "Hajar",
+    "body": "حلوه اوي ثابته اوي و بجد و كمان جربت bare glow جميله اوي بردو و ثبات مش طبيعي"
+   },
+   {
+    "rating": 5,
+    "author": "Aya Anas",
+    "body": "Very good smell"
+   },
+   {
+    "rating": 5,
+    "author": "Eman Emara",
+    "body": "I looooooveeeeee ittttt, so sweet and the projection is top notch frrr"
+   }
+  ]
+ },
+ {
+  "handle": "hibiscusex",
+  "title": "Hibiscusex",
+  "vendor": "Hibiscus Mahajád",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "Women"
+  ],
+  "published_at": "2024-05-10",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1650.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 1000.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "30 ml",
+    "price": 700.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 700.0,
+  "price_max": 1650.0,
+  "variants_total": 3,
+  "variants_sold_out": 2,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "hibiscusex.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.98,
+  "review_count": 56,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 649,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Hibiscusex Vanilla, floral, rose In a classy hotel bar, amidst the soft glow of candlelight and the whispers of conversations, a couple shared a moment of intimacy on their elegant date night. As they savored their drinks, the air was imbued with the alluring scent of hibiscus and roses, casting a spell of romance around them. Vanilla infused the atmosphere with a delicate sweetness, while black currant added a touch of intrigue to their evening. With each sip & shared glance their connection deepened, their senses enveloped in the seductive perfume of their blossoming affection, marking the beginning of a memorable night to cherish forever.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Salma Osama",
+    "body": "تحفه"
+   },
+   {
+    "rating": 5,
+    "author": "Abdelmoniem Hakeem",
+    "body": "Intoxicating"
+   },
+   {
+    "rating": 5,
+    "author": "Muhammed Ashraf",
+    "body": "so good"
+   },
+   {
+    "rating": 5,
+    "author": "Sohair hisham",
+    "body": "Perfect"
+   },
+   {
+    "rating": 5,
+    "author": "Jana Mohammed",
+    "body": "Hibiscusex smells amazing with great depth. Although the intial top notes are like a slap in the face, the moment it settles the aroma is very intoxicating. It lasts DAYS on clothes that have even WASHED. Just amazing! I think I just found my new signature scent. <3"
+   }
+  ]
+ },
+ {
+  "handle": "drunk-gold",
+  "title": "Drunk Gold",
+  "vendor": "Angels’ Share Paradis",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "Women"
+  ],
+  "published_at": "2025-06-24",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1950.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 1150.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 750.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 750.0,
+  "price_max": 1950.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "Drunk-Gold.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 46,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 120,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Drunk Gold Liquid gold. Intoxication in every drop Woody, sweet, fruity Notes: Cognac, liquor, raspberry, praline, tonka",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Good"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "اداء مثالي"
+   },
+   {
+    "rating": 5,
+    "author": "Rana",
+    "body": "Very elegant scent"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "."
+   },
+   {
+    "rating": 5,
+    "author": "Ahmed Hossam",
+    "body": "A wonderful and long-lasting scent"
+   }
+  ]
+ },
+ {
+  "handle": "caramel-vanigliato",
+  "title": "Caramel vanigliato",
+  "vendor": "Bianco Latte Giardini Di Toscana",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "Women"
+  ],
+  "published_at": "2024-10-08",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1550.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 850.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 550.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 550.0,
+  "price_max": 1550.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "caramel-vanigliato.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.95,
+  "review_count": 43,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 149,
+  "accords": null,
+  "notes": {
+   "top": "Caramel",
+   "heart": "Coumarin and Honey",
+   "base": "Vanilla and White Musk"
+  },
+  "notes_structured": true,
+  "body_text": "Caramel Vanigliato Gourmand Vanilla fragrance for men & women. Top notes: Caramel Middle notes: Coumarin and Honey Base notes: Vanilla and White Musk",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Khatera wallahi it lasts days on clothes and a full day on skin❤️"
+   },
+   {
+    "rating": 5,
+    "author": "Ahmed Samy",
+    "body": "تحفة"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Amazing"
+   },
+   {
+    "rating": 5,
+    "author": "Yasmina Jamal",
+    "body": "خرررافي ❤️"
+   },
+   {
+    "rating": 5,
+    "author": "Amaal Ahmed",
+    "body": "الريحة دافية كريمية حاسة الكراميل والفانيلا متوازنين مديني احساس آيس كريم و ثباته بجد حلو جدا حبيته اوي❤️❤️"
+   }
+  ]
+ },
+ {
+  "handle": "lady-killer",
+  "title": "Lady killer",
+  "vendor": "Layton PDM",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men"
+  ],
+  "published_at": "2023-08-04",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1750.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 1100.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 750.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 750.0,
+  "price_max": 1750.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "lady-killer.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.96,
+  "review_count": 26,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 235,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Lady Killer Vanilla, warm, spicy. Sexy & hot blend of vanilla green apple, cardamom, lavender, pepper, jasmine, patchouli and woods. Ideal for special occasions and dates. Its like a date night in a fancy restaurant Its a lady killer !",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Emad",
+    "body": "Amazing ❤️ all your stuff is perfect"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Excellent"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Perfecf"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "اشتريت منها و عايز اشتري منها تاني وللأسف آوت أوف ستوك"
+   },
+   {
+    "rating": 5,
+    "author": "Maurice Weaver",
+    "body": "Understated scent of beauty"
+   }
+  ]
+ },
+ {
+  "handle": "alluring-rose",
+  "title": "Alluring Rose",
+  "vendor": "Delina La Rosée Parfums de Marly",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Women"
+  ],
+  "published_at": "2021-08-20",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1100.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 700.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "30 ml",
+    "price": 500.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 500.0,
+  "price_max": 1100.0,
+  "variants_total": 3,
+  "variants_sold_out": 3,
+  "fully_sold_out": true,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "alluring-rose.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.96,
+  "review_count": 24,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 167,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Floral fruity aquatic fragrance. Beautiful blend of rose, peony, lychee, musk, pear, vetiver with watery & floral notes. Gorgeous wearable & potent scent for daily use",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Marvel Raafat",
+    "body": "Please make it available again, always getting compliments about it 🤩"
+   },
+   {
+    "rating": 5,
+    "author": "Israa",
+    "body": "Ahla scent bgd yareet tenazeloha tani 🩷🩷"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Nzlohaaaa taniiii please 🥹"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Amazing Perfume"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Got many compliments on this pls restock"
+   }
+  ]
+ },
+ {
+  "handle": "marasi",
+  "title": "Marasi",
+  "vendor": "40 Knots Xerjoff",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Men",
+   "Women"
+  ],
+  "published_at": "2024-05-21",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1400.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 850.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 550.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   }
+  ],
+  "price_min": 550.0,
+  "price_max": 1400.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "marasi.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 23,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 757,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Marasi Marine, salty, woody On the deck of a majestic yacht, a gentleman basked in the lap of luxury as he sailed across the azure waters. Around him, the salty breeze mingled with the lush green notes of the coastline, creating an ambiance of refined opulence. The scent of the sea, carried on the wind, whispered tales of adventure and exploration, while the rich aroma of woods added depth and sophistication to the air. This beach-inspired perfume was a tribute to indulgence, capturing the essence of high-end relaxation on the open sea. As he breathed in the intoxicating blend of woods, salt, sea, and green notes, he felt a sense of serenity wash over him, knowing that every moment aboard his yacht was a testament to the pinnacle of luxury living.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Adham Abd-Elbary",
+    "body": "Beautiful smell and long lasting. Thank you!"
+   },
+   {
+    "rating": 5,
+    "author": "Amr Ibrahim",
+    "body": "رائع ويستحق التجربه"
+   },
+   {
+    "rating": 5,
+    "author": "Maria Hany",
+    "body": "Helwa gedn"
+   },
+   {
+    "rating": 5,
+    "author": "Basel Hassan",
+    "body": "Excellent"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "تحفة🥰♥️♥️"
+   }
+  ]
+ },
+ {
+  "handle": "bare-glow",
+  "title": "Bare Glow",
+  "vendor": "Goddess Burberry",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2025-11-05",
+  "option_names": [
+   "Size"
+  ],
+  "sizes": [
+   "30 ml",
+   "50 ml",
+   "100 ml"
+  ],
+  "variants": [
+   {
+    "title": "30 ml",
+    "price": 450.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 650.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "100 ml",
+    "price": 1000.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 450.0,
+  "price_max": 1000.0,
+  "variants_total": 3,
+  "variants_sold_out": 2,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "1EC1A752-2428-4549-B869-4EC86C442142.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.95,
+  "review_count": 21,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 202,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "A velvety cloud of vanilla in all its forms pure, absolute, and caviar, gently layered with calming lavender and deep cacao. Soft warmth that melts into your skin and stays close, like a gentle embrace.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "To7faaa"
+   },
+   {
+    "rating": 5,
+    "author": "Darin",
+    "body": "Smells amazing and the vanillia in it is addictive and not the gourmand type , it's so mature and elegant type of way and more creamy than burberry goddess"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Very great scent which last on the skin for a few hours"
+   },
+   {
+    "rating": 5,
+    "author": "Rahaf Badr",
+    "body": "One of the best scents l have ever smelt"
+   },
+   {
+    "rating": 5,
+    "author": "Habiba",
+    "body": "it’s a very summery and fresh scent. suitable for day and night."
+   }
+  ]
+ },
+ {
+  "handle": "citrine",
+  "title": "Citrine",
+  "vendor": "Tygar Bvlgari",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men"
+  ],
+  "published_at": "2022-04-07",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1850.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 1150.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "30 ml",
+    "price": 750.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 750.0,
+  "price_max": 1850.0,
+  "variants_total": 3,
+  "variants_sold_out": 3,
+  "fully_sold_out": true,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "citrine.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 20,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 1363,
+  "accords": null,
+  "notes": {
+   "top": "Bright and zesty grapefruit opens the scent with a burst of citrus energy, perfect for a fresh start to your day",
+   "heart": "The spice of ginger blends with soft ambrette, creating a warm, aromatic core that adds depth and character"
+  },
+  "notes_structured": true,
+  "body_text": "Citrine by Siwa Fragrances is a modern masculine fragrance crafted for those who command attention without saying a word. Clean yet sensual, vibrant yet deep — Citrine is your daily signature scent. Notes & Character Top Notes: Bright and zesty grapefruit opens the scent with a burst of citrus energy, perfect for a fresh start to your day. Heart Notes: The spice of ginger blends with soft ambrette, creating a warm, aromatic core that adds depth and character. Base Notes: A smooth, skin-like blend of musk and ambroxan offers sensuality and longevity, leaving a clean yet memorable trail. Citrine is made for men who value minimalism with presence. It’s the kind of scent people remember — not because it shouts, but because it lingers. You’ll smell like your best self — confident, clean, and put-together. Why Citrine is One of the Best Men’s Perfumes Crafted by Siwa Fragrances with premium-quality ingredients Features a modern blend of citrus, spice, and musk Perfect balance of freshness and sensuality Sleek, minimalistic scent profile — easy to wear, hard to forget Packaged with sophistication and made to impress Whether you’re walking into a meeting, a café, or a quiet evening with someone special, Citrine by Siwa Fragrances gives you the perfect scent of self-assurance. Add Citrine to your collection today — and step into your signature scent.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Disha",
+    "body": "Was amazing..but always sold out.."
+   },
+   {
+    "rating": 5,
+    "author": "Eyad Yahia",
+    "body": "Very pleasant and rich scent"
+   },
+   {
+    "rating": 5,
+    "author": "Mohammed Shapoury",
+    "body": "good"
+   },
+   {
+    "rating": 5,
+    "author": "Emad",
+    "body": "The best"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "ممتازة"
+   }
+  ]
+ },
+ {
+  "handle": "bleu-exclusive",
+  "title": "Bleu Exclusive",
+  "vendor": "Bleu De Chanel L’exclusif",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2026-02-27",
+  "option_names": [
+   "Size"
+  ],
+  "sizes": [
+   "30 ml",
+   "50 ml",
+   "100 ml"
+  ],
+  "variants": [
+   {
+    "title": "30 ml",
+    "price": 750.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 1100.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "100 ml",
+    "price": 1900.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 750.0,
+  "price_max": 1900.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "IMG-3917.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 19,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 1051,
+  "accords": null,
+  "notes": {
+   "top": "Soft citrus freshness with aromatic nuances",
+   "heart": "Creamy sandalwood blended with warm leathery labdanum",
+   "base": "Deep woody amber accords enriched with smooth vanilla and refined woods"
+  },
+  "notes_structured": true,
+  "body_text": "Bleu Exclusive Not every man tries to attract attention. Some simply walk into a room and are noticed naturally. Bleu Exclusive is crafted for the man who treats his appearance as part of his identity. The businessman who understands that details such as tailoring, presence, posture, and scent are not luxury choices, but priorities. A fragrance that reflects quiet confidence and refined authority. It opens with a subtle freshness before evolving into a deep, creamy woody amber signature that feels polished, professional, and undeniably elegant. This isn’t a scent for occasions. It’s the signature of a man who takes himself seriously, every single day. Notes Top Notes: Soft citrus freshness with aromatic nuances Heart Notes: Creamy sandalwood blended with warm leathery labdanum Base Notes: Deep woody amber accords enriched with smooth vanilla and refined woods Best For Business meetings and professional environments Formal and smart-casual looks Evening wear and elegant occasions Year-round use, especially in moderate and cooler weather",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "MOHAAMED GAFAR",
+    "body": "I had the original le exclusive and i know that channel dupes are never been copied but for this i respect you so much great blend"
+   },
+   {
+    "rating": 5,
+    "author": "Ahmed Zaghloul",
+    "body": "حلوة"
+   },
+   {
+    "rating": 5,
+    "author": "Mohamed",
+    "body": "ممتازة جدا"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Amazing fragrance"
+   },
+   {
+    "rating": 5,
+    "author": "Omar Alosh",
+    "body": "ممتاز"
+   }
+  ]
+ },
+ {
+  "handle": "coffee-vanilla",
+  "title": "Coffee Vanilla",
+  "vendor": "Siwa original creation",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "new",
+   "Women"
+  ],
+  "published_at": "2024-10-21",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1150.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 750.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 550.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 550.0,
+  "price_max": 1150.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "coffee-vanilla-1.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 18,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 171,
+  "accords": null,
+  "notes": {
+   "top": "Coffee and Amaretto",
+   "heart": "Ice cream and Vanilla",
+   "base": "Brown Sugar and Vanilla"
+  },
+  "notes_structured": true,
+  "body_text": "Coffee Vanilla Gourmand Coffee Vanilla fragrance for men & women. Top notes: Coffee and Amaretto. Middle notes: Ice cream and Vanilla. Base notes: Brown Sugar and Vanilla.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Hanatamer",
+    "body": "Bgd tuhfaaa awee w btsbat gedan el notes el fyha kul wahda fyha btban lama thda fl awel btkun coffe w baad kda chocolate w vanilla momayaxen awe w el atomiser tuhfa"
+   },
+   {
+    "rating": 5,
+    "author": "Rawan Mohamed",
+    "body": "I loved it . And i lasts so long"
+   },
+   {
+    "rating": 5,
+    "author": "Kamal Mohamed",
+    "body": "Great 😍"
+   },
+   {
+    "rating": 5,
+    "author": "Hana Ekramy",
+    "body": "ريحتها جميله جدانفس ريحه التراميسو بالظبط ولما بتهدى بتكون احلى كملن"
+   },
+   {
+    "rating": 5,
+    "author": "Toqa Magdy",
+    "body": "Amazing"
+   }
+  ]
+ },
+ {
+  "handle": "irresistible-vanilla",
+  "title": "Irresistible Vanilla",
+  "vendor": "Siwa original creation",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [
+   "Best Selling"
+  ],
+  "published_at": "2023-05-30",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1000.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 600.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 400.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 400.0,
+  "price_max": 1000.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "Irresistible_Vanilla.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.94,
+  "review_count": 18,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 227,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Irresistible Vanilla Vanilla, sweet, powdery. Warm sweet blend of vanilla, sugar, cacao, tonka beans, red berries based on amber, musk and woods. Sexy and beautiful perfume perfect for dates and nights out. It is irresistible !",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "تحفة اوووي"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "حلو اوي اوي انا جبته من الريفيوهات عالموقع مع انهم عالصفحة بتاعت الفيس ماجابوش سيرته بجد مش واخد حقه هادي وانثوي جدا ودافي وحميمي رائع رائع رائع"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "حبيت جدا ❤️"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "."
+   },
+   {
+    "rating": 5,
+    "author": "Saramohamed",
+    "body": "احلي حاجه أنا شميتها في حياتي البيرفيوم irresistible فعلا بجد يستاهل كل جنيه و ندماني اني مجبتش الفول سايز دي مش هتبقي آخر مره اجيب البيرفيوم دي ان شاء الله"
+   }
+  ]
+ },
+ {
+  "handle": "coco-woods",
+  "title": "Coco Woods",
+  "vendor": "Vanilla Powder Matiere Premiere",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Men",
+   "Women"
+  ],
+  "published_at": "2024-07-08",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "30 ml",
+   "50 ml",
+   "100 ml"
+  ],
+  "variants": [
+   {
+    "title": "30 ml",
+    "price": 850.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 1300.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "100 ml",
+    "price": 2300.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 850.0,
+  "price_max": 2300.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "coco-woods.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.94,
+  "review_count": 16,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 59,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Coco Woods Notes: Vanilla, musk, coconut powder, palo santo",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Very sexy"
+   },
+   {
+    "rating": 5,
+    "author": "ahmed gamal",
+    "body": "Very good"
+   },
+   {
+    "rating": 5,
+    "author": "Dalia",
+    "body": "It's perfect... a unique scent that gives sweet, attractive signature"
+   },
+   {
+    "rating": 5,
+    "author": "Dalia",
+    "body": "It's perfect... a unique scent that gives sweet, attractive signature"
+   },
+   {
+    "rating": 5,
+    "author": "Omar",
+    "body": "This might be the best fragrance I've used by far, not only that it has got me A LOT of compliments, but it also made feel happier about life for some reason. I believe it was worth the 20mins you had me wait till someone showed up at the store Haha."
+   }
+  ]
+ },
+ {
+  "handle": "pink-allure",
+  "title": "Pink Allure",
+  "vendor": "Siwa original creation",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2026-04-24",
+  "option_names": [
+   "Size"
+  ],
+  "sizes": [
+   "30 ml",
+   "50 ml",
+   "100 ml"
+  ],
+  "variants": [
+   {
+    "title": "30 ml",
+    "price": 590.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 850.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "100 ml",
+    "price": 1400.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 590.0,
+  "price_max": 1400.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "D45DDE71-48A7-4B1C-BE46-ACA593B54BA0.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 14,
+  "description_format": "B: Persona / The Story",
+  "body_chars": 1033,
+  "accords": null,
+  "notes": {
+   "top": "Mandarin, Bergamot & soft pink pepper touch",
+   "heart": "Soft rose, peony, powdery nuances",
+   "base": "Musk, smooth woods, hint of vanilla"
+  },
+  "notes_structured": true,
+  "body_text": "Persona A presence defined by softness. Calm, polished, and effortlessly composed. The kind of aura that feels gentle, yet leaves a lasting impression. The Story Pink Allure is built around a soft touch. It opens with a light, fresh brightness that feels clean and effortless, setting a smooth and delicate tone from the first moment. As it develops, a refined floral heart comes forward. Rose is present, but in its softest form, blended with airy petals and a subtle powdery nuance that keeps everything light and balanced. In the dry down, skin-like musk and smooth woods settle gently, wrapped in a hint of vanilla. The fragrance stays close, creating a soft, comforting trail that feels natural and elegant. A scent defined by its softness… quiet, refined, and beautifully understated. Notes Top Notes: Mandarin, Bergamot & soft pink pepper touch Heart Notes: Soft rose, peony, powdery nuances Base Notes: Musk, smooth woods, hint of vanilla Best For Daytime wear and soft occasions Spring and warm weather Clean, minimal styles",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "E3mlolha restock b2aaa"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "تحفة كان جدا وثابت اووي بالايام وتقيل"
+   },
+   {
+    "rating": 5,
+    "author": "Yasmin Mohsen",
+    "body": "Amazing perfume, smells great and lasts well. Please don’t increase the price!"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "تحفه"
+   },
+   {
+    "rating": 5,
+    "author": "Dalia Shawky",
+    "body": "حبيته جداً 🌸 ناعم وشيك🌸"
+   }
+  ]
+ },
+ {
+  "handle": "lagoon-flair",
+  "title": "Lagoon Flair",
+  "vendor": "Le Beau Le Parfum",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "new"
+  ],
+  "published_at": "2025-04-25",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1200.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 750.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 450.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 450.0,
+  "price_max": 1200.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "Lagoon-Flair.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.92,
+  "review_count": 13,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 75,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Lagoon Flair Sweet, woody Notes: Coconut, Pineapple, Tonka, Woods and Iris.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Mahmoud Khalaf",
+    "body": "ببقي مبسوط وانا راشش منه"
+   },
+   {
+    "rating": 5,
+    "author": "Nada Ahmed",
+    "body": "تحفههه💗💗💗"
+   },
+   {
+    "rating": 5,
+    "author": "كيغام زهراب Karsian",
+    "body": "Beautiful"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Amazing projection and it's very long lasting till the next day and it smells exactly like the og"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Perfect for daily use"
+   }
+  ]
+ },
+ {
+  "handle": "silk-vanilla",
+  "title": "Silk Vanilla",
+  "vendor": "Siwa Fragrances",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2025-02-21",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "125ML"
+  ],
+  "variants": [
+   {
+    "title": "125ML",
+    "price": 375.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 375.0,
+  "price_max": 375.0,
+  "variants_total": 1,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 3,
+  "image_files": [
+   "silk-vanilla.jpg",
+   "MG_0975-scaled.jpg",
+   "copy-of-brown-beige-minimalist-face-mist-features-instagram-post_png.png"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 13,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 188,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Silk Vanilla A long-lasting body splash enriched with vitamin E, blending warm vanilla, delicate orchid, sweet sugar, and rich amber for a sensual, irresistible scent that lingers all day.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Seif Hamdy",
+    "body": "ممتاز"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "‏very nice"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "نفسي اشتري الويب سايت كلوا بجد من كتر حلاوته😭❤️"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Love it"
+   },
+   {
+    "rating": 5,
+    "author": "Ashrakat Elnahrawy",
+    "body": "Lovely smell and long lasting."
+   }
+  ]
+ },
+ {
+  "handle": "hot-vanilla",
+  "title": "Hot Vanilla",
+  "vendor": "Althaïr Parfums de Marly",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Men",
+   "Women"
+  ],
+  "published_at": "2023-11-26",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1550.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 850.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 550.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 550.0,
+  "price_max": 1550.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "hot-vanilla.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.92,
+  "review_count": 12,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 415,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Hot Vanilla Sweet Warm spicy Indulge your senses in the enchanting embrace of our warm perfume. A harmonious blend of cardamom and cinnamon unfolds like a comforting hug, while the richness of vanilla and praline adds a touch of sweetness. The scent lingers with a subtle allure, courtesy of a sensual mix of musk & woods. Elevate your presence with this enticing fragrance, a symphony of warmth and sophistication.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Mahmoud Taymour",
+    "body": "gamila gda wallahy"
+   },
+   {
+    "rating": 5,
+    "author": "Abdallah omar",
+    "body": "رائع وريحتة تحب تشمها كل شوية"
+   },
+   {
+    "rating": 5,
+    "author": "Momen Edris",
+    "body": "."
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Very nice as a gift"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "."
+   }
+  ]
+ },
+ {
+  "handle": "male-elixir",
+  "title": "Male Elixir",
+  "vendor": "Le Male Elixir JPG",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men"
+  ],
+  "published_at": "2024-05-04",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1250.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 750.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 450.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 450.0,
+  "price_max": 1250.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "male-elixir.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 11,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 612,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Male Elixir In the dimly lit streets of a cosmopolitan city, a man strolled confidently, leaving a trail of allure in his wake. His presence was like a symphony of elegance and sensuality, embodied in the fragrance he wore. With each step, notes of intoxicating vanilla and golden honey enveloped him, blending seamlessly with the warmth of tonka and the soothing essence of lavender. Crisp mint added a refreshing twist, while whispers of tobacco added depth and intrigue. As he passed, heads turned, captivated by the irresistible allure of his scent, a subtle yet undeniable declaration of his magnetic charm.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Adham Abd-Elbary",
+    "body": "Long lasting and effective. Many thanks!"
+   },
+   {
+    "rating": 5,
+    "author": "احمد احمد",
+    "body": "Awesome"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Best Quality❤️❤️"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Great"
+   },
+   {
+    "rating": 5,
+    "author": "ziad rady",
+    "body": "الحاجه جميله جدا اللهم بارك وبشكركم علي المصداقيه ولشغل المتعوب عليه ❤️❤️"
+   }
+  ]
+ },
+ {
+  "handle": "mango-pineapple",
+  "title": "Mango Pineapple",
+  "vendor": "Summer Hammer",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "new",
+   "Women"
+  ],
+  "published_at": "2025-08-16",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1850.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 1100.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 750.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 750.0,
+  "price_max": 1850.0,
+  "variants_total": 3,
+  "variants_sold_out": 2,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "Mango-Pineapple.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 11,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 303,
+  "accords": null,
+  "notes": {
+   "top": "Mango, Pineapple, Bergamot/Lemon zest",
+   "heart": "White florals, Coconut water, Creamy accord",
+   "base": "Soft Musk, Light Amber, Cashmere Woods"
+  },
+  "notes_structured": true,
+  "body_text": "Mango Pineapple The taste of summer in a bottle. Juicy mango and pineapple, resting on soft musk that keeps your presence fresh and effortlessly chic all day Notes: Top: Mango, Pineapple, Bergamot/Lemon zest Heart: White florals, Coconut water, Creamy accord Base: Soft Musk, Light Amber, Cashmere Woods",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "محمد ناصر",
+    "body": "Gorgeous perfume 100% recommend 🔥❤️"
+   },
+   {
+    "rating": 5,
+    "author": "Fadi Ghattas",
+    "body": "Hiiiii siwa I ordered last moth Boujee Blush from the website for a friend’s birthday And bought mango pineapple from your store this weekend and Honestly, this perfume really surprised me. It smells clean, elegant, and lasts for hours without being too strong. I’ve gotten several compliments while wearing it,two of my colleges compliments the smell of mango this morning and it quickly became one of my favorites Thank you siwa. 🤩❤️❤️❤️❤️❤️❤️"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "رائع"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "جميله وثابته وشيك😍😍😍😍😍😍😍"
+   },
+   {
+    "rating": 5,
+    "author": "Omar Mahmoud",
+    "body": "7elw awy"
+   }
+  ]
+ },
+ {
+  "handle": "soul-poudree",
+  "title": "Soul Poudree",
+  "vendor": "Narciso Poudree",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Women"
+  ],
+  "published_at": "2024-06-17",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100",
+    "price": 1050.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 600.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 400.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 400.0,
+  "price_max": 1050.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "Soul_Poudree.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 11,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 177,
+  "accords": null,
+  "notes": {
+   "top": "Jasmine, Bulgarian Rose and Orange Blossom",
+   "heart": "Musk",
+   "base": "Coumarin, Cedar, Vetiver and Patchouli"
+  },
+  "notes_structured": true,
+  "body_text": "Soul Poudree Woody Floral Musk fragrance for women Top notes : Jasmine, Bulgarian Rose and Orange Blossom Middle notes : Musk Base notes : Coumarin, Cedar, Vetiver and Patchouli",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Asmaa",
+    "body": "تحفه جداوثباتها حلو اوي ❤️❤️❤️"
+   },
+   {
+    "rating": 5,
+    "author": "Samar",
+    "body": "جميل و شيك و راقى و انثوى جدا و ثباته حلو اوى"
+   },
+   {
+    "rating": 5,
+    "author": "Ahmed Said",
+    "body": "."
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Perfect scent"
+   },
+   {
+    "rating": 5,
+    "author": "Radwa Ahmed",
+    "body": "excellent fragrance that lasts for more than 24 hours. Its scent is fresh, clean, and feminine, smells like luxurious makeup."
+   }
+  ]
+ },
+ {
+  "handle": "vanilla-bundle",
+  "title": "Vanilla Bundle",
+  "vendor": "Siwa Fragrances",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [
+   "Bundles"
+  ],
+  "published_at": "2025-07-17",
+  "option_names": [
+   "silk vanilla (size)",
+   "Silk Vanilla Body Lotion ( size )",
+   "layering vanilla (size)"
+  ],
+  "sizes": [
+   "125ML / 120 ml / 30ML",
+   "125ML / 120 ml / 50ML",
+   "125ML / 120 ml / 100ML"
+  ],
+  "variants": [
+   {
+    "title": "125ML / 120 ml / 30ML",
+    "price": 1060.0,
+    "compare_at": 1175.0,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "125ML / 120 ml / 50ML",
+    "price": 1240.0,
+    "compare_at": 1375.0,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "125ML / 120 ml / 100ML",
+    "price": 1555.0,
+    "compare_at": 1725.0,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 1060.0,
+  "price_max": 1555.0,
+  "variants_total": 3,
+  "variants_sold_out": 3,
+  "fully_sold_out": true,
+  "on_sale": true,
+  "image_count": 1,
+  "image_files": [
+   "IMG-1919.png"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 11,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 559,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Vanilla Bundle – Your Everyday Glow in Luxury.. Sink into the warm, creamy essence of Silk Vanilla. This luxurious bundle features: Layering Vanilla Perfume – a rich, long-lasting scent that wraps you in sensual comfort. Silk Vanilla Body Lotion (125 ml) – deeply moisturizing with Shea Butter, Cocoa Butter & Vitamin E for a soft, radiant feel. Silk Vanilla Body Splash (125 ml) – a fresh touch of elegance that leaves a subtle trail of vanilla warmth all day. Layer all three for a long-lasting, addictive vanilla aura that feels both comforting and classy.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Merna Abo Basha",
+    "body": "The layering Vanilla bundle is amazing 😍😍"
+   },
+   {
+    "rating": 5,
+    "author": "Elshanshorylaila",
+    "body": "The smell is amazing I love everything about the bundle the packaging the perfume is long lasting would 1000% recommend"
+   },
+   {
+    "rating": 5,
+    "author": "Salma",
+    "body": "I have no words, this smells heavenly"
+   },
+   {
+    "rating": 5,
+    "author": "محمود محمد عز الدين",
+    "body": "You’re honestly the best. Great quality, great service, and everything is always on point."
+   },
+   {
+    "rating": 5,
+    "author": "Farah Samir",
+    "body": "must try"
+   }
+  ]
+ },
+ {
+  "handle": "carnal-trail",
+  "title": "Carnal Trail",
+  "vendor": "Side Effect Initio",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "Women"
+  ],
+  "published_at": "2023-09-24",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1550.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 900.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 600.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 600.0,
+  "price_max": 1550.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "CarnalTrail.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 10,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 225,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Carnal Trail Vanilla, Rum, Tobacco Irresistible boozy blend of rum, vanilla, tobacco and cinnamon. Drop dead sexy perfume gives a deep, sexy unforgettable trail. If you want to smell the sexiest person in this world Wear it !",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Marco farag",
+    "body": "Perfect opening and awesome dry down I love it so much"
+   },
+   {
+    "rating": 5,
+    "author": "Ahmed Nabawi",
+    "body": "So good"
+   },
+   {
+    "rating": 5,
+    "author": "Ahmed Gaafary",
+    "body": "حلوة وثابتة"
+   },
+   {
+    "rating": 5,
+    "author": "Riyadh Ibraheem",
+    "body": "من السعودية اجمل عطر اشتريته من المحل، كل العطور جميلة وثباتها قوي، بس هذا جدا مميز من ناحية الرائحة والثبات، العلب جميلة والتغليف جدا راقي الله يوفقكم تجربة جميلة واكيد راح تتكرر عقبال ماتفتحون عندنا في الرياض"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "It’s super awesome , maybe cinnamon has to be increased a bit , long lasting and it’s great experience"
+   }
+  ]
+ },
+ {
+  "handle": "layering-pistachio",
+  "title": "Layering Pistachio",
+  "vendor": "Yum Pistachio Gelato Kayali",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "Women"
+  ],
+  "published_at": "2023-10-27",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1000.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 650.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 450.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 450.0,
+  "price_max": 1000.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "layering-pistachio.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 10,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 298,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Layering Pistachio Sweet, woody, nutty Delicious blend captivates the senses with its irresistible and edible notes including pistachio, whipped cream, roasted hazelnut, sweet rum, fluffy marshmallow, and fizzy cotton candy. Irresistible perfume ideal for layering & sexy. Best for winter and fall.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Nice"
+   },
+   {
+    "rating": 5,
+    "author": "Marwa Abdelaziz",
+    "body": "❤️❤️❤️"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "very good scent and lasts for a very long time"
+   },
+   {
+    "rating": 5,
+    "author": "Tarek Yehia",
+    "body": "Good & unique smell"
+   },
+   {
+    "rating": 5,
+    "author": "Nada Khalifa",
+    "body": "‏♥️"
+   }
+  ]
+ },
+ {
+  "handle": "apple-pie",
+  "title": "Apple Pie",
+  "vendor": "Siwa Fragrances",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2025-02-22",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "125ML"
+  ],
+  "variants": [
+   {
+    "title": "125ML",
+    "price": 375.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 375.0,
+  "price_max": 375.0,
+  "variants_total": 1,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 3,
+  "image_files": [
+   "apple-pie.jpg",
+   "MG_0974-scaled.jpg",
+   "brown-beige-minimalist-face-mist-features-instagram-post-4.png-4.png"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 9,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 189,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Apple Pie A long-lasting body splash enriched with vitamin E, blending warm vanilla, delicate Apple, sweet praline, and rich cinnamon for a sensual, irresistible scent that lingers all day.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "ممتاز"
+   },
+   {
+    "rating": 5,
+    "author": "Mohanad Tarek",
+    "body": "Beautiful"
+   },
+   {
+    "rating": 5,
+    "author": "Elham Khedr",
+    "body": "Highly recommended"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "The scent is so lovely bgd I got so many compliments on it and I’ll definitely purchase it again✨."
+   },
+   {
+    "rating": 5,
+    "author": "Ahmed Mahmoud",
+    "body": "تحفة"
+   }
+  ]
+ },
+ {
+  "handle": "hot-male",
+  "title": "Hot Male",
+  "vendor": "You Intensely Giorgio Armani",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Men"
+  ],
+  "published_at": "2024-06-14",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "50 ml",
+   "100 ml"
+  ],
+  "variants": [
+   {
+    "title": "50 ml",
+    "price": 800.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "100 ml",
+    "price": 1250.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 800.0,
+  "price_max": 1250.0,
+  "variants_total": 2,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "hot-male.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 9,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 184,
+  "accords": null,
+  "notes": {
+   "top": "Pink Pepper, Juniper and Violet",
+   "heart": "Toffee, Cinnamon, Lavender and Sage",
+   "base": "Vanilla, Amber, Tonka Bean and Suede"
+  },
+  "notes_structured": true,
+  "body_text": "Hot Male Amber Fougere fragrance for men. Top notes :Pink Pepper, Juniper and Violet Middle notes :Toffee, Cinnamon, Lavender and Sage Base notes : Vanilla, Amber, Tonka Bean and Suede",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Nice"
+   },
+   {
+    "rating": 5,
+    "author": "Moaz Ahmed",
+    "body": "To7fa"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "A distinctive and long-lasting perfume as well"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Smells amazing"
+   },
+   {
+    "rating": 5,
+    "author": "Ebram Nady",
+    "body": "Excellent"
+   }
+  ]
+ },
+ {
+  "handle": "luna-di-roma",
+  "title": "Luna Di Roma",
+  "vendor": "Valentino Donna Born In Roma Intense",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Women"
+  ],
+  "published_at": "2024-08-14",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "50 ml"
+  ],
+  "variants": [
+   {
+    "title": "50 ml",
+    "price": 600.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 600.0,
+  "price_max": 600.0,
+  "variants_total": 1,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "Luna_Di_Roma.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.78,
+  "review_count": 9,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 127,
+  "accords": null,
+  "notes": {
+   "top": "Bourbon Vanilla and Amber",
+   "heart": "Jasmine",
+   "base": "Benzoin"
+  },
+  "notes_structured": true,
+  "body_text": "Luna Di Roma Amber floral fragrance for women Top notes : Bourbon Vanilla and Amber Middle notes : Jasmine Base notes : Benzoin",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Sahar Elagamy",
+    "body": "Perfect"
+   },
+   {
+    "rating": 5,
+    "author": "FATIMA ABED",
+    "body": "It smells soooooo good better than the original and it lasted so long on me"
+   },
+   {
+    "rating": 5,
+    "author": "عمر محمد",
+    "body": "المنتج تحفه"
+   },
+   {
+    "rating": 5,
+    "author": "Naira Adel",
+    "body": ".."
+   },
+   {
+    "rating": 5,
+    "author": "Esraa Samir",
+    "body": "Amazing smell I’m going to get another bottle immediately"
+   }
+  ]
+ },
+ {
+  "handle": "aurableu",
+  "title": "Aurableu",
+  "vendor": "Symphony LV",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2026-04-24",
+  "option_names": [
+   "Size"
+  ],
+  "sizes": [
+   "30 ml",
+   "50 ml",
+   "100 ml"
+  ],
+  "variants": [
+   {
+    "title": "30 ml",
+    "price": 700.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 1050.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "100 ml",
+    "price": 1750.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 700.0,
+  "price_max": 1750.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "3BA9765B-63D6-4CE5-9C0D-73CD8D312E09.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 8,
+  "description_format": "B: Persona / The Story",
+  "body_chars": 1000,
+  "accords": null,
+  "notes": {
+   "top": "Bright citrus blend with vibrant freshness",
+   "heart": "Soft aromatic nuances and refined floral layers",
+   "base": "Clean musky undertones with subtle woody freshness and ginger"
+  },
+  "notes_structured": true,
+  "body_text": "Persona For those who move with lightness and clarity. Effortless, fresh, and naturally refined. A presence that feels clean, uplifting, and quietly confident. The Story Aurableu captures the feeling of a bright horizon and open air. Inspired by a radiant citrus symphony, it opens with a vibrant burst of fresh, juicy notes that feel instantly energizing and pure. As it settles, the composition becomes smoother and more balanced, blending crisp citrus with subtle aromatic and floral nuances that keep it elegant and never overwhelming. The result is a scent that feels transparent, refreshing, and perfectly polished. Clean, luminous, and full of life. A fragrance that feels like a breath of fresh air. Notes Top Notes: Bright citrus blend with vibrant freshness Heart Notes: Soft aromatic nuances and refined floral layers Base Notes: Clean musky undertones with subtle woody freshness and ginger Best For Daytime wear and fresh starts Summer days and warm weather Casual and smart casual looks",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "FARES Ehab",
+    "body": "Smells really nice"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Fresh summery lime"
+   },
+   {
+    "rating": 5,
+    "author": "Youssef Mahmoud",
+    "body": "Very good"
+   },
+   {
+    "rating": 5,
+    "author": "Omar Alzanati",
+    "body": "Very good"
+   },
+   {
+    "rating": 5,
+    "author": "عمرو على جلال الدين شاهين",
+    "body": "Smells great"
+   }
+  ]
+ },
+ {
+  "handle": "chocolate-creme",
+  "title": "Chocolate Creme",
+  "vendor": "Siwa original creation",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [
+   "Men",
+   "new",
+   "Unisex",
+   "Women"
+  ],
+  "published_at": "2024-12-06",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1250.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 750.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 450.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   }
+  ],
+  "price_min": 450.0,
+  "price_max": 1250.0,
+  "variants_total": 3,
+  "variants_sold_out": 2,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "chocolate-creme.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 8,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 96,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Chocolate Creme Gourmand fragrance for men & women. Notes: Chocolate, Vanilla, orange and woods.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Very rich and nice"
+   },
+   {
+    "rating": 5,
+    "author": "Maryamgibreel",
+    "body": "Msh tbe3yaaaaaaa😍😍😍😍😍"
+   },
+   {
+    "rating": 5,
+    "author": "Jana",
+    "body": "It smells so edible, for those who like to smell edible it’s the perfect scent for you"
+   },
+   {
+    "rating": 5,
+    "author": "Yasmine Hesham",
+    "body": "Khateraaa creamyy awyy wl scent tohfaa nfs rehet choco musk mn gher ay scent alcoholic ,perfectttt"
+   },
+   {
+    "rating": 5,
+    "author": "Nourhan Abdelhady",
+    "body": "It's really great and special"
+   }
+  ]
+ },
+ {
+  "handle": "bleu-intense",
+  "title": "Bleu Intense",
+  "vendor": "Bleu De Chanel Parfum",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2025-10-21",
+  "option_names": [
+   "Size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1050.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 700.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "30 ml",
+    "price": 500.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 500.0,
+  "price_max": 1050.0,
+  "variants_total": 3,
+  "variants_sold_out": 3,
+  "fully_sold_out": true,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "BleuIntense.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 7,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 400,
+  "accords": null,
+  "notes": {
+   "top": "Bergamot, Lemon, Mint",
+   "heart": "Lavender, Pineapple",
+   "base": "Cedar wood, Sandalwood, Amber, Tonka Bean"
+  },
+  "notes_structured": true,
+  "body_text": "Bleu Intense the scent of quiet confidence, bold yet effortless, like a man who leads without speaking. Fresh citrus bursts of bergamot and lemon zest open the scent. As it settles, cedar wood and sandalwood reveal depth and warmth, balanced with whispers of amber and tonka bean. Top notes: Bergamot, Lemon, Mint Heart notes: Lavender, Pineapple Base notes: Cedar wood, Sandalwood, Amber, Tonka Bean",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "very good local perfumes"
+   },
+   {
+    "rating": 5,
+    "author": "Ibrahim",
+    "body": "Great quality the perfume stays for a very long time and the scent profile is masculine and appealing"
+   },
+   {
+    "rating": 5,
+    "author": "Kareem El oraby",
+    "body": "Amazing but needs to be a little fresh to smell like the original more"
+   },
+   {
+    "rating": 5,
+    "author": "Kareemmagdi",
+    "body": "الافتتاحيه متفجرة بتقلب الغرفة حرفيا والثبات أنا رشيت رشه واحدة علي ظهر إيدي كملت 8 ساعات ولسه ثابته وقاعده خشب الصندل تحفه"
+   },
+   {
+    "rating": 5,
+    "author": "Youssef Mahmoud",
+    "body": "Best perfume"
+   }
+  ]
+ },
+ {
+  "handle": "libre-desire",
+  "title": "Libre Desire",
+  "vendor": "YSL Libre intense",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "new",
+   "Women"
+  ],
+  "published_at": "2025-03-11",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1250.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 800.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 500.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 500.0,
+  "price_max": 1250.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "libre-desire-1.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 7,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 219,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Libre Desire A bold and sensual fusion of warm vanilla, radiant orange blossom, and rich honey, with a touch of lavender and tonka bean for elegance. A rich, long-lasting scent that mirrors the allure of Beautiful Lady.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "مني عبد الرحمن عوض Awad",
+    "body": "nice smell and long-lasting"
+   },
+   {
+    "rating": 5,
+    "author": "Mariamessam",
+    "body": "Touhfaaaaa"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Nice long lasting"
+   },
+   {
+    "rating": 5,
+    "author": "Mohammed Abou Ouf",
+    "body": "Very premium experience"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "PERFECT"
+   }
+  ]
+ },
+ {
+  "handle": "pacific-elixir",
+  "title": "Pacific Elixir",
+  "vendor": "Pacific Chill Louis Vuitton",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Men",
+   "Women"
+  ],
+  "published_at": "2023-10-06",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "30 ml",
+   "50 ml",
+   "100 ml"
+  ],
+  "variants": [
+   {
+    "title": "30 ml",
+    "price": 600.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 900.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "100 ml",
+    "price": 1500.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 600.0,
+  "price_max": 1500.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "pacific-elixir.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 7,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 264,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Pacific Elixir Citrus, fruity, sweet. Fresh blend of apricot, orange, mint, lemon, cedrat, blackcurrant, basil with slight hints of dates and amber. Sparkly fresh heavenly scent evokes the serenity of the sparkling ocean. Very comforting & gives a cooling effect !",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Mohamed",
+    "body": "Perfect"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Perfect"
+   },
+   {
+    "rating": 5,
+    "author": "Hazem Sobhy",
+    "body": "تحفه بجد سوبر فريش و سويت مع تويست فريش و ريحه مرار قشر برتقال في الخلفيةبجد تحفه"
+   },
+   {
+    "rating": 5,
+    "author": "Mohamed",
+    "body": "قوية اوي"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "يا ريت لو يبقي فيه ستوك منه"
+   }
+  ]
+ },
+ {
+  "handle": "silk-vanilla-body-lotion",
+  "title": "Silk Vanilla Body Lotion",
+  "vendor": "Siwa Fragrances",
+  "vendor_kind": "siwa_owned",
+  "product_type": "body lotion",
+  "tags": [],
+  "published_at": "2025-09-29",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "120ML"
+  ],
+  "variants": [
+   {
+    "title": "120ML",
+    "price": 350.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 350.0,
+  "price_max": 350.0,
+  "variants_total": 1,
+  "variants_sold_out": 1,
+  "fully_sold_out": true,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "CopyofSilkVanillaLotion.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 7,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 197,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Silk Vanilla Body Lotion Lightweight lotion enriched with Vitamin E, Panthenol, Shea Butter & Cocoa Butter. Deeply hydrates, absorbs quickly, and leaves skin silky smooth with a warm vanilla scent.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Absolutely to7fa the scent is really good and even the hydrate it gives is so deep"
+   },
+   {
+    "rating": 5,
+    "author": "Sarah Badran",
+    "body": "Amazing🤩"
+   },
+   {
+    "rating": 5,
+    "author": "Mina",
+    "body": "An essential product for everyday use, this is a must if you are obsessed with smelling good."
+   },
+   {
+    "rating": 5,
+    "author": "Yousef Alaa",
+    "body": "تووووحفه"
+   },
+   {
+    "rating": 5,
+    "author": "Mona Shehata",
+    "body": "جمييييله"
+   }
+  ]
+ },
+ {
+  "handle": "summer-holidays",
+  "title": "Summer Holidays",
+  "vendor": "LV Afternoon Swim",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "Women"
+  ],
+  "published_at": "2022-05-20",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1700.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 1000.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 650.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 650.0,
+  "price_max": 1700.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "summer-holidays.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 7,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 217,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Citrus, fresh, aquatic Summer Holidays a super refreshing blend of sicilian orange, bergamot, mandarine, ginger with hints of ambergris. A beautiful citrus scent, juicy and addictive. perfect for summer and daily use.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Raghda",
+    "body": "بجد خطييييرة وريحتها منعشة اوي"
+   },
+   {
+    "rating": 5,
+    "author": "Zain Khalid",
+    "body": "Amazing perfum"
+   },
+   {
+    "rating": 5,
+    "author": "Waiz Maswadi",
+    "body": "Good smell and long lasting"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Great"
+   },
+   {
+    "rating": 5,
+    "author": "Youssef Amr",
+    "body": "Great Refreshing scent that last long"
+   }
+  ]
+ },
+ {
+  "handle": "sweet-rum",
+  "title": "Sweet Rum",
+  "vendor": "Siwa Fragrances",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2025-03-02",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "125ml"
+  ],
+  "variants": [
+   {
+    "title": "125ml",
+    "price": 375.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 375.0,
+  "price_max": 375.0,
+  "variants_total": 1,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 3,
+  "image_files": [
+   "sweet-rum.jpg",
+   "MG_0973-scaled.jpg",
+   "copy-of-brown-beige-minimalist-face-mist-features-instagram-post_png_85708ae2-29a7-4237-91f8-1bd663d1321d.png"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 7,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 191,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Sweet Rum A long-lasting body splash enriched with vitamin E, blending warm vanilla, delicate dates, sweet praline, and rich cinnamon for a sensual, irresistible scent that lingers all night.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "It's the 3rd time to order it actually , it's so good and long-lasting"
+   },
+   {
+    "rating": 5,
+    "author": "Bimen Atef",
+    "body": "Perfect"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "حقيقي بتجنننن كتيير حلوة وبتثبت لأيام روووعة❤️❤️❤️"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Nice mix for morning use, a new vision for sweety category of perfumes"
+   },
+   {
+    "rating": 5,
+    "author": "Yousef Alaa",
+    "body": "ريحته جميلة جدا شبه خمرة العادية و ينفع كبرفيوم في المشاوير الخفيفة او بعد الشاور"
+   }
+  ]
+ },
+ {
+  "handle": "gourmet",
+  "title": "Gourmet",
+  "vendor": "Siwa original creation",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "new",
+   "Unisex",
+   "Women"
+  ],
+  "published_at": "2025-01-09",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 2100.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 1250.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 800.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 800.0,
+  "price_max": 2100.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 2,
+  "image_files": [
+   "gourmet.jpg",
+   "IMG_7982-1-scaled.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 6,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 236,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Gourmet Where Gourmand Scent meets buttery Warmth ! A warm croissant fresh from the oven, layered with sweet berries and rich blackcurrant, melts into the heart of toasted vanilla, gold butter and velvety Tonka bean based on Sandalwood.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "More than great ❤️❤️❤️❤️ tuhfaaaaaaa"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Perfect"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "perfect scent"
+   },
+   {
+    "rating": 5,
+    "author": "إنجي البدوي",
+    "body": "Love ittt so much"
+   },
+   {
+    "rating": 5,
+    "author": "Aya Abouelnasr",
+    "body": "حلوة و مميزة جداا"
+   }
+  ]
+ },
+ {
+  "handle": "iris-elixir",
+  "title": "Iris elixir",
+  "vendor": "Prada L’Homme Intense",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Men"
+  ],
+  "published_at": "2024-06-14",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1350.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 850.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 850.0,
+  "price_max": 1350.0,
+  "variants_total": 2,
+  "variants_sold_out": 2,
+  "fully_sold_out": true,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "iris-elixir-1.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 6,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 141,
+  "accords": null,
+  "notes": {
+   "top": "Iris",
+   "heart": "Amber and Patchouli",
+   "base": "Tonka Bean, Leather and Sandalwood"
+  },
+  "notes_structured": true,
+  "body_text": "Iris elixir Amber Woody fragrance for men Top notes : Iris Middle notes : Amber and Patchouli Base notes : Tonka Bean, Leather and Sandalwood",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Super clean masculine smell"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "برفيوم ولا غلطة نسبة تطابق عالية جدا ، ثبات وفوحان ولا أروع قيمة مقابل سعر بجد برافوو"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "The best"
+   },
+   {
+    "rating": 5,
+    "author": "Mohamed Sharaf",
+    "body": "Excellent"
+   },
+   {
+    "rating": 5,
+    "author": "@yman",
+    "body": "Perfect 😃"
+   }
+  ]
+ },
+ {
+  "handle": "layering-lychee",
+  "title": "Layering Lychee",
+  "vendor": "Eden Sparkling Lychee 39 Kayali",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Women"
+  ],
+  "published_at": "2024-04-03",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1000.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 650.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 450.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 450.0,
+  "price_max": 1000.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "Layering_Lychee.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 6,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 399,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Layering Lychee Sweet, Fruity, vanilla Introducing our summer feminine perfume, where juicy lychee takes center stage, dancing with notes of vanilla, black currant, and a sprinkle of sugar. A delightful concoction that captures the essence of sunny days and carefree moments. Revel in the sweet and refreshing allure of this irresistible fragrance, perfect for brightening up your summer adventures.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Sondos Tarek",
+    "body": "Ten out of ten chefs kiss🤪😍😍💕"
+   },
+   {
+    "rating": 5,
+    "author": "Nada",
+    "body": "my favorite helwa gedan w sabta"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "very sweet w tuhfa ll summer"
+   },
+   {
+    "rating": 5,
+    "author": "Farida Salah",
+    "body": "The Best perfume I ever smell It’s my signature scent in summer"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Very unique smell loved it, perfect for summer nights"
+   }
+  ]
+ },
+ {
+  "handle": "insane-pineapple",
+  "title": "Insane Pineapple",
+  "vendor": "Nishane Hacivat",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Men"
+  ],
+  "published_at": "2023-09-21",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1350.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 850.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 500.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 500.0,
+  "price_max": 1350.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "insane-pineapple.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 4.8,
+  "review_count": 5,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 286,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Insane Pineapple Citrus, Woody, mossy Unique fresh blend of pineapple, grapefruit, bergamot, patchouli based on moss and woods. Strong summer perfume gives the feeling of sitting on the beach on a sunny day while drinking an extremely fresh pineapple juice & breezing a mossy fresh air.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Ahmed nabil",
+    "body": "روعه"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "I love it"
+   },
+   {
+    "rating": 5,
+    "author": "Raghda",
+    "body": "حلوة اوي بجد و ريحتها منعشة"
+   },
+   {
+    "rating": 4,
+    "author": "Ahmed Samir",
+    "body": "محتاجه ثبات اكتر ومده فوحان اكثر"
+   },
+   {
+    "rating": 5,
+    "author": "Hussein Hassan",
+    "body": "It is so amazing"
+   }
+  ]
+ },
+ {
+  "handle": "marshmallow",
+  "title": "Marshmallow",
+  "vendor": "Siwa Fragrances",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2025-05-06",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "125ML"
+  ],
+  "variants": [
+   {
+    "title": "125ML",
+    "price": 375.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 375.0,
+  "price_max": 375.0,
+  "variants_total": 1,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "Marshmallow-Splash.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 5,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 112,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "A long-lasting body splash enriched with vitamin E, sweet, warm blend of vanilla, sugar, and fluffy marshmallow.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Ahmed aboalfath",
+    "body": "its smell is really sweet and the packaging is great, thank you very much"
+   },
+   {
+    "rating": 5,
+    "author": "Tarek ELGHABATY",
+    "body": "رائع"
+   },
+   {
+    "rating": 5,
+    "author": "mostafa badr",
+    "body": "Very good"
+   },
+   {
+    "rating": 5,
+    "author": "Sandra Karam",
+    "body": "Long lasting. You will smell like marshmallows all day ❤️❤️"
+   },
+   {
+    "rating": 5,
+    "author": "safa eltahawy",
+    "body": "smells feminine and amazing. long lasting really."
+   }
+  ]
+ },
+ {
+  "handle": "siwa-trail",
+  "title": "Siwa Trail",
+  "vendor": "Guidance Amouage",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Men",
+   "new",
+   "Unisex",
+   "Women"
+  ],
+  "published_at": "2026-04-25",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1750.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 950.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "30 ml",
+    "price": 600.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   }
+  ],
+  "price_min": 600.0,
+  "price_max": 1750.0,
+  "variants_total": 3,
+  "variants_sold_out": 3,
+  "fully_sold_out": true,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "siwa-trail.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 5,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 428,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Siwa Trail The new summer edition A journey through the golden dunes of Siwa, the scent of hazelnut, pear, vanilla and soft woods lingering in the air with shades of amber. A fragrance that felt like a memory, a whisper of elegance wrapped in warmth. Siwa Trail brings you a scent that tells a story of beauty and resilience. Rich, floral, and irresistibly creamy, it’s more than a perfume it’s a journey..now within your reach.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "حنان سامي",
+    "body": "عجبني جدا و فوحانه و ثباته رائع لسه ماستخدمتوش كفايه بس جربته اول ما وصلني الريحة كانت فواحة وثابته فترة طويله، بالنسبة للريحة نفسها فهي مش بالظبط الزوق المتعودة عليه لكن عجبني و حسيته ينفع لمناسبة و خررجة بالليل اكتر من النهار شيك جدا بصراحة ، دمتم مميزين و الله ♥️♥️♥️🙏🏻"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "حلوه جدا لأول وهله تحسها تقيله بعد كدا تهدأ وتكون تحفه وقيمه وشيك اللي هيعرف قيمتها اللي عايشين في الخليج ."
+   },
+   {
+    "rating": 5,
+    "author": "Mohamed Ahmed",
+    "body": "I love is so much I think I will never stop by it from you. It’s very unique. I hope that youmake 100 ml from it soon"
+   },
+   {
+    "rating": 5,
+    "author": "Nourhan Osama",
+    "body": "Really elegent and unique and it lasts forever bgd ♥️"
+   },
+   {
+    "rating": 5,
+    "author": "Nash",
+    "body": "Amazing packaging & scent. Absolutely will purchase again. ❤️"
+   }
+  ]
+ },
+ {
+  "handle": "belle-riche",
+  "title": "Belle Riche",
+  "vendor": "La Belle Le Parfum",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2026-01-29",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1150.0,
+    "compare_at": 1450.0,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 750.0,
+    "compare_at": 1000.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 550.0,
+    "compare_at": 650.0,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 550.0,
+  "price_max": 1150.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": true,
+  "image_count": 1,
+  "image_files": [
+   "belle-riche-4.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 4,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 204,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Belle Riche A seductive blend of juicy pear, rich vanilla, and creamy tonka bean, wrapped in warm jasmine and a hint of amber. A deep, addictive fragrance that captures the essence of richness & softness.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Mayar Khaled",
+    "body": "Smells very much like the original with a very slight difference that made me like this version even more. Longevity is amaaziingggg literally stays all day. Quality tohfa as usual❤️."
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Nice"
+   },
+   {
+    "rating": 5,
+    "author": "H.Ahmed",
+    "body": "حلوه اوي اوي اوي 🤩🤩🤩 نسبه تطابق عاليه جدا الفكره انها كل بتقعد بتحلو اوي 🫶🫶🫶"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "🤩🤩"
+   }
+  ]
+ },
+ {
+  "handle": "lost-on-you",
+  "title": "Lost On You",
+  "vendor": "Lost In Paris Roja",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2026-04-24",
+  "option_names": [
+   "Size"
+  ],
+  "sizes": [
+   "30 ml",
+   "50 ml",
+   "100 ml"
+  ],
+  "variants": [
+   {
+    "title": "30 ml",
+    "price": 750.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 1100.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "100 ml",
+    "price": 1900.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 750.0,
+  "price_max": 1900.0,
+  "variants_total": 3,
+  "variants_sold_out": 3,
+  "fully_sold_out": true,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "06EE0A47-1E7B-4AE1-ACF0-BA56D57994D1.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 4,
+  "description_format": "B: Persona / The Story",
+  "body_chars": 986,
+  "accords": null,
+  "notes": {
+   "top": "Blood orange, mandarin, bitter orange, rum",
+   "heart": "Caramel, sugar, creamy gourmand accords",
+   "base": "Vanilla, ambergris, warm woods, soft spices"
+  },
+  "notes_structured": true,
+  "body_text": "Persona For a presence that feels magnetic and unforgettable. Emotional, indulgent, and effortlessly captivating. The Story Lost On You is where indulgence meets elegance. It opens with a luminous citrus glow, lifted by a warm hint of rum, like the first sip of something rich on a Parisian night. As it unfolds, a smooth gourmand heart takes shape. Caramel softens into a buttery warmth, wrapping the scent in a creamy, refined sweetness that feels luxurious, never excessive. In the dry down, vanilla melts into soft woods, settling close to the skin in a way that feels intimate, warm, and quietly addictive. A fragrance that doesn’t overwhelm… it draws you in, slowly. Notes Top Notes: Blood orange, mandarin, bitter orange, rum Heart Notes: Caramel, sugar, creamy gourmand accords Base Notes: Vanilla, ambergris, warm woods, soft spices Best For Evenings and indulgent moments Date nights and special occasions Cooler weather Signature scent for lovers of rich, gourmand fragrances",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Youssef Dahy",
+    "body": "simple GREAT"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "عطر جيد جدا وفي مرحلة التجربة"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "sweet amazing pure feminien it has a strong entrance but its pure notes later on turns to something very unique"
+   },
+   {
+    "rating": 5,
+    "author": "Ali Farahat",
+    "body": "Premium scent"
+   }
+  ]
+ },
+ {
+  "handle": "marshmallow-bundle",
+  "title": "Marshmallow Bundle",
+  "vendor": "Siwa Fragrances",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [
+   "Bundles"
+  ],
+  "published_at": "2025-05-17",
+  "option_names": [
+   "Marshmallow (size)",
+   "Boujee Blush (size)"
+  ],
+  "sizes": [
+   "125ML / 50ML"
+  ],
+  "variants": [
+   {
+    "title": "125ML / 50ML",
+    "price": 950.0,
+    "compare_at": 1250.0,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 950.0,
+  "price_max": 950.0,
+  "variants_total": 1,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": true,
+  "image_count": 1,
+  "image_files": [
+   "body-splash-marshmellow.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 4,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 77,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Marshmallow Bundle Enjoy additional 10% off when you buy marshmallow bundle !",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "تحفه تحفه"
+   },
+   {
+    "rating": 5,
+    "author": "RowanAhmed",
+    "body": "MASTERPIECE ❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥"
+   },
+   {
+    "rating": 5,
+    "author": "youmna Yasser",
+    "body": "touhfaaa"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "خطيييييييرررررررر"
+   }
+  ]
+ },
+ {
+  "handle": "pink-arrogance",
+  "title": "Pink Arrogance",
+  "vendor": "Siwa original creation",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2026-04-24",
+  "option_names": [
+   "Size"
+  ],
+  "sizes": [
+   "30 ml",
+   "50 ml",
+   "100 ml"
+  ],
+  "variants": [
+   {
+    "title": "30 ml",
+    "price": 450.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 650.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "100 ml",
+    "price": 1000.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 450.0,
+  "price_max": 1000.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "068E4637-6A79-41AB-80D5-7658C653F7BC.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 4,
+  "description_format": "B: Persona / The Story",
+  "body_chars": 997,
+  "accords": null,
+  "notes": {
+   "top": "Orange blossom, neroli, almond",
+   "heart": "Jasmine, violet, apricot",
+   "base": "Musk, sandalwood"
+  },
+  "notes_structured": true,
+  "body_text": "Persona She doesn’t wait to be noticed. She decides when she is. Confident, composed, and always in control. There’s a quiet sharpness to her presence… soft at first, but never weak. The Story Pink Arrogance isn’t about being sweet. It’s about being certain. It opens with a bright floral lift, where orange blossom and neroli meet a soft almond nuance, creating a start that feels clean but with a subtle edge. As it settles, the scent becomes more defined. Jasmine and violet bring a powdery elegance, while a smooth fruity touch adds just enough warmth to keep it balanced without losing its composure. In the dry down, musk and sandalwood take over quietly, giving the fragrance structure and presence. It stays controlled, polished, and slightly distant… never trying too hard, yet impossible to ignore. Notes Top Notes: Orange blossom, neroli, almond Heart Notes: Jasmine, violet, apricot Base Notes: Musk, sandalwood Best For Spring and summer Daytime elegance Confident, dressed-up moments",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Mai Habib",
+    "body": "It's an amazing perfume. I love it"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "5teeeeeraaaa♥️"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "A very unique scent"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Tohfffaaaa awe aweee"
+   }
+  ]
+ },
+ {
+  "handle": "layering-30-ml-bundle",
+  "title": "Layering bundle",
+  "vendor": "Siwa Fragrances",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [
+   "Bundles"
+  ],
+  "published_at": "2024-11-14",
+  "option_names": [
+   "Layering Vanilla (size)",
+   "Layering Lychee",
+   "Layerng Pistachio"
+  ],
+  "sizes": [
+   "30ML / 30ML / 30ML",
+   "30ML / 30ML / 50ML",
+   "30ML / 30ML / 100ML",
+   "30ML / 50ML / 30ML",
+   "30ML / 50ML / 50ML",
+   "30ML / 50ML / 100ML",
+   "50ML / 30ML / 30ML",
+   "50ML / 30ML / 50ML",
+   "50ML / 30ML / 100ML",
+   "50ML / 50ML / 30ML",
+   "50ML / 50ML / 50ML",
+   "50ML / 50ML / 100ML"
+  ],
+  "variants": [
+   {
+    "title": "30ML / 30ML / 30ML",
+    "price": 1105.0,
+    "compare_at": 1650.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30ML / 30ML / 50ML",
+    "price": 1285.0,
+    "compare_at": 1850.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30ML / 30ML / 100ML",
+    "price": 1645.0,
+    "compare_at": 2300.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30ML / 50ML / 30ML",
+    "price": 1275.0,
+    "compare_at": 1900.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30ML / 50ML / 50ML",
+    "price": 1455.0,
+    "compare_at": 2100.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30ML / 50ML / 100ML",
+    "price": 1815.0,
+    "compare_at": 2550.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50ML / 30ML / 30ML",
+    "price": 1285.0,
+    "compare_at": 1850.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50ML / 30ML / 50ML",
+    "price": 1465.0,
+    "compare_at": 2050.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50ML / 30ML / 100ML",
+    "price": 1825.0,
+    "compare_at": 2500.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50ML / 50ML / 30ML",
+    "price": 1455.0,
+    "compare_at": 2100.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50ML / 50ML / 50ML",
+    "price": 1635.0,
+    "compare_at": 2300.0,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50ML / 50ML / 100ML",
+    "price": 1995.0,
+    "compare_at": 2750.0,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 1105.0,
+  "price_max": 1995.0,
+  "variants_total": 12,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": true,
+  "image_count": 1,
+  "image_files": [
+   "artboard-3.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 3,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 77,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Pay less get more! Enjoy a bundle of our three top layering perfumes with 15%",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Samar Khalied",
+    "body": "الليتشي خطيرة ومختلفة بجد تحفة البستاشيو جوكر مع كل البرفيومز بتمشي معاهم حلو اوي الفانيلا لذيذه بس تقريبا عليها توباكو ف تقيله شويه و ثابتين ✨"
+   },
+   {
+    "rating": 5,
+    "author": "Nouran Emad",
+    "body": "Very good quality and long lasting"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "All items are amazing"
+   }
+  ]
+ },
+ {
+  "handle": "stellar-nights",
+  "title": "Stellar Nights",
+  "vendor": "Stellar Times Louis Vuitton",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "Women"
+  ],
+  "published_at": "2023-12-20",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 2050.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 1200.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 800.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 800.0,
+  "price_max": 2050.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "Stellar_Nights.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 3,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 367,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Stellar Nights Discover the allure of our new unisex perfume, a harmonious fusion where the warm amber intertwines with the vibrant essence of orange blossoms. Balanced by the grounding notes of woods which captures the essence of timeless sophistication. Embrace the versatility of scent that transcends boundaries, leaving an indelible impression with every spritz.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "The stunning entry to the perfume is strong, then turns into warm and long-lasting; beautifully combined notes make you feel elite."
+   },
+   {
+    "rating": 5,
+    "author": "Tarek ELGHABATY",
+    "body": "ممتاز"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Perfect"
+   }
+  ]
+ },
+ {
+  "handle": "absolute-drunk",
+  "title": "Absolute Drunk",
+  "vendor": "Il Padrino Sospiro",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2026-03-14",
+  "option_names": [
+   "Size"
+  ],
+  "sizes": [
+   "30 ml",
+   "50 ml",
+   "100 ml"
+  ],
+  "variants": [
+   {
+    "title": "30 ml",
+    "price": 750.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 1100.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "100 ml",
+    "price": 1850.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 750.0,
+  "price_max": 1850.0,
+  "variants_total": 3,
+  "variants_sold_out": 3,
+  "fully_sold_out": true,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "IMG-4136.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 2,
+  "description_format": "B: Persona / The Story",
+  "body_chars": 1062,
+  "accords": null,
+  "notes": {
+   "top": "Boozy accord with black currant",
+   "heart": "Rich patchouli, dark woods, and oriental depth",
+   "base": "Vanilla, amber warmth, and smooth woody accords"
+  },
+  "notes_structured": true,
+  "body_text": "Absolute Drunk Persona A man who doesn’t follow the room… he owns it. Confident, charismatic, and unapologetically bold. The kind of presence that turns heads without trying. Nights, conversations, and moments seem to orbit around him. The Story Absolute Drunk captures the intoxicating atmosphere of luxury evenings and unforgettable encounters. Inspired by the richness of oriental perfumery, it opens with a warm boozy sensation that immediately feels deep and addictive. As the scent unfolds, rich patchouli and dark woods begin to dominate, creating a bold and mysterious character. In the dry down, smooth vanilla and warm amber and benzoin wrap the fragrance in a luxurious softness that lingers for hours. This is a fragrance that feels powerful, seductive, and unforgettable. Notes Top Notes: Boozy accord with black currant Heart Notes: Rich patchouli, dark woods, and oriental depth Base Notes: Vanilla, amber warmth, and smooth woody accords Best For Evening wear and special occasions Elegant dinners and night events Cold weather and winter seasons",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Mohamed Bayomi",
+    "body": "FANTASY"
+   },
+   {
+    "rating": 5,
+    "author": "Khaled medany",
+    "body": "Amazing Powerful performance 👏"
+   }
+  ]
+ },
+ {
+  "handle": "summer-elegance",
+  "title": "summer elegance",
+  "vendor": "Imagination LV",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men"
+  ],
+  "published_at": "2023-05-29",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 2150.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 1250.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 850.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 850.0,
+  "price_max": 2150.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "summer-elegance.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 2,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 241,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Summer elegance Citrus, Fresh, Clean Elegant blend of citron, bergamot, orange, neroli, cinnamon based on ambroxan, woods, and chinese black tea. Calming, refreshing and inviting perfume will avoid you to smell like everyone else in Summer !",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Daniel Salman",
+    "body": "Great fragrance a must have for summer in my collection Longevity is amazing i get 10 hours on my skin"
+   },
+   {
+    "rating": 5,
+    "author": "عمرو على جلال الدين شاهين",
+    "body": "It is a wonderful fresh summer fragrance"
+   }
+  ]
+ },
+ {
+  "handle": "vanilla-91",
+  "title": "Vanilla 91",
+  "vendor": "Siwa Fragrances",
+  "vendor_kind": "siwa_owned",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2026-05-16",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "125ML"
+  ],
+  "variants": [
+   {
+    "title": "125ML",
+    "price": 380.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 380.0,
+  "price_max": 380.0,
+  "variants_total": 1,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 2,
+  "image_files": [
+   "C8C728AE-A095-4A70-A6C1-87DE3302578F.jpg",
+   "129BA2AA-F4DE-46A8-BD2E-DA03FFE389E2.png"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 2,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 222,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Vanilla 91 A long-lasting body splash enriched with vitamin E, b lending creamy vanilla, soft jasmine petals and glowing sandalwood for a warm, comforting fragrance that feels sweet, cozy, and effortlessly elegant. Limited",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Love it so much"
+   },
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "بجد ريحتها تحفة و ثباتها قوي اوي بتقعد طول اليوم الكواليتي بتاعتهاخطيرةةة ♥️🔥🔥"
+   }
+  ]
+ },
+ {
+  "handle": "layering-apple",
+  "title": "Layering Apple",
+  "vendor": "Eden Juicy Apple kayali",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Women"
+  ],
+  "published_at": "2024-10-21",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "50 ml",
+    "price": 650.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 450.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   }
+  ],
+  "price_min": 450.0,
+  "price_max": 650.0,
+  "variants_total": 2,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "layering-apple.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 1,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 204,
+  "accords": null,
+  "notes": {
+   "top": "Red Apple, Litchi, Black Currant",
+   "heart": "Wild Berries, Raspberry Bloom, May Rose and Jasmine",
+   "base": "Sugar, Musk, Vanilla"
+  },
+  "notes_structured": true,
+  "body_text": "Layering Apple Floral Fruity Gourmand fragrance for women. Top notes: Red Apple, Litchi, Black Currant. Middle notes: Wild Berries, Raspberry Bloom, May Rose and Jasmine. Base notes: Sugar, Musk, Vanilla.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Habiba Tarek",
+    "body": "it so sweet I love it"
+   }
+  ]
+ },
+ {
+  "handle": "mango-on-woods",
+  "title": "Mango on woods",
+  "vendor": "God of Fire Stéphane Humbert",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Men"
+  ],
+  "published_at": "2023-10-06",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1800.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 1000.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 700.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 700.0,
+  "price_max": 1800.0,
+  "variants_total": 3,
+  "variants_sold_out": 1,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "mango-on-woods.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 1,
+  "description_format": "D: free prose, no labelled tiers",
+  "body_chars": 272,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Mango on woods Fruity, sweet, woody Tropical woody blend of mango, lemon, ginger, red berries enriched with woody notes & based on amber, musk and nagarmotha. Attractive woody scent has a realistic mango scent with a unique sweetness touch makes it ideal for all year use.",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "Anonymous",
+    "body": "Fresh"
+   }
+  ]
+ },
+ {
+  "handle": "sweet-oud",
+  "title": "Sweet Oud",
+  "vendor": "Oud Cadenza MC",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [
+   "Best Selling",
+   "Men",
+   "new",
+   "Unisex",
+   "Women"
+  ],
+  "published_at": "2025-03-23",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1650.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "50 ml",
+    "price": 1000.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   },
+   {
+    "title": "30 ml",
+    "price": 650.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": false
+   }
+  ],
+  "price_min": 650.0,
+  "price_max": 1650.0,
+  "variants_total": 3,
+  "variants_sold_out": 3,
+  "fully_sold_out": true,
+  "on_sale": false,
+  "image_count": 2,
+  "image_files": [
+   "sweet-oud-1.jpg",
+   "Sweet-Oud.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": 5.0,
+  "review_count": 1,
+  "description_format": "C: name + accords + labelled notes",
+  "body_chars": 152,
+  "accords": null,
+  "notes": {
+   "top": "Saffron, cinnamon, cardamom",
+   "heart": "Dates, caramel, oud, sugar",
+   "base": "Vanilla, tonka, leather"
+  },
+  "notes_structured": true,
+  "body_text": "Sweet Oud Gourmand woody oud blend . Top notes: Saffron, cinnamon, cardamom. Heart notes: Dates, caramel, oud, sugar Base notes: Vanilla, tonka, leather",
+  "review_quotes": [
+   {
+    "rating": 5,
+    "author": "farah yusri",
+    "body": "i love it"
+   }
+  ]
+ },
+ {
+  "handle": "soiree",
+  "title": "Soiree",
+  "vendor": "Grand Soir MFK",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2022-04-05",
+  "option_names": [
+   "size"
+  ],
+  "sizes": [
+   "100 ml",
+   "50 ml",
+   "30 ml"
+  ],
+  "variants": [
+   {
+    "title": "100 ml",
+    "price": 1400.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 850.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   },
+   {
+    "title": "30 ml",
+    "price": 550.0,
+    "compare_at": null,
+    "compare_at_junk": true,
+    "available": true
+   }
+  ],
+  "price_min": 550.0,
+  "price_max": 1400.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "CopyofWebsiteBottle_1.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": null,
+  "review_count": 0,
+  "description_format": "E: minimal / boilerplate",
+  "body_chars": 189,
+  "accords": null,
+  "notes": {},
+  "notes_structured": false,
+  "body_text": "Soiree Warm amber fragrance. Velvety rich amber enriched with expensive vanilla extract, creamy tonka, labdanum with resin & woody touches. Dense smoky scent with leathery animalic nuances.",
+  "review_quotes": []
+ },
+ {
+  "handle": "sundaze",
+  "title": "Sundaze",
+  "vendor": "Power Of You Giorgio Armani",
+  "vendor_kind": "inspired_by",
+  "product_type": null,
+  "tags": [],
+  "published_at": "2026-07-25",
+  "option_names": [
+   "Size"
+  ],
+  "sizes": [
+   "30 ml",
+   "50 ml",
+   "100 ml"
+  ],
+  "variants": [
+   {
+    "title": "30 ml",
+    "price": 500.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "50 ml",
+    "price": 700.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   },
+   {
+    "title": "100 ml",
+    "price": 1100.0,
+    "compare_at": null,
+    "compare_at_junk": false,
+    "available": true
+   }
+  ],
+  "price_min": 500.0,
+  "price_max": 1100.0,
+  "variants_total": 3,
+  "variants_sold_out": 0,
+  "fully_sold_out": false,
+  "on_sale": false,
+  "image_count": 1,
+  "image_files": [
+   "IMG-6766.jpg"
+  ],
+  "alt_missing": true,
+  "review_avg": null,
+  "review_count": 0,
+  "description_format": "A: THE VIBE + FRAGRANCE PROFILE",
+  "body_chars": 769,
+  "accords": "Tropical Fruit • Creamy Solar Florals • Warm Bourbon Vanilla",
+  "notes": {
+   "top": "Passionfruit, Bitter Orange & Lemon",
+   "heart": "Frangipani & Solar Accords"
+  },
+  "notes_structured": true,
+  "body_text": "THE VIBE A radiant, sunkissed gourmand that blends juicy passionfruit with creamy vanilla and warm amber. Sundaze radiates magnetic warmth invigorating at first spray, then settling into a rich, addictive skin trail. If you love Armani Power of You , this is your scent. FRAGRANCE PROFILE Main Accords: Tropical Fruit • Creamy Solar Florals • Warm Bourbon Vanilla Top: Passionfruit, Bitter Orange & Lemon Heart: Frangipani & Solar Accords Base: Madagascar Vanilla, Benzoin & Labdanum PERFORMANCE & WEAR Longevity: 7–8 Hours (Transforms from vibrant fruit into a long-lasting vanilla-amber base) Projection / Sillage: Moderate (Creates a radiant, noticeable halo without overpowering the room) Best For: Golden hour, warm weather, evening dates & everyday signature wear",
+  "review_quotes": []
+ }
+]

@@ -1,0 +1,480 @@
+{
+  "_provenance": {
+    "generated": "2026-07-28",
+    "purpose": "Demo product record for client approval. Superset schema — richer than anything the live store holds.",
+    "sources": {
+      "catalog": "reference-analysis/raw/products.json (captured 2026-07-27)",
+      "reviews": "reference-analysis/raw/reviews_complete.json",
+      "social": "instagram-assets/matched-data.json",
+      "images": "instagram-assets/mawj/ (dimensions read from the files)"
+    },
+    "real": [
+      "handle", "shopify_id", "naming.title", "naming.arabic_name",
+      "descriptions.headline / story / pullquote (verbatim Instagram captions)",
+      "descriptions.summary (verbatim body_html)", "descriptions.voice_register",
+      "classification.accords (labelled in body_html: 'Citrus, marine, woody')",
+      "every note NAME (all appear verbatim in body_html)",
+      "brand.launched", "commerce.variants (ids, titles, prices, sku, availability)",
+      "media.images src / width / height / art_direction", "media.palette",
+      "media.instagram", "social_proof.reviews.average / count",
+      "social_proof.reviews.featured_quotes (verbatim Judge.me)",
+      "social_proof.engagement", "meta.published_at / updated_at"
+    ],
+    "derived": [
+      "notes TIERING — body_html is format D (free prose, no labelled tiers). Ingredient names are real; the top/heart/base assignment is perfumery convention applied to the prose order, not brand data.",
+      "commerce.*.value_metrics — arithmetic on real prices (0.1 ml/spray, 4 sprays/wear, 1 wear/day)",
+      "classification.family / sub_family", "taxonomy.gender_lean",
+      "social_proof.reviews.distribution (only integer split that reconciles 4.99 × 68)"
+    ],
+    "demo_placeholder": [
+      "concentration.percentage", "accords_chart values", "note category / natural / allergen flags",
+      "performance.* (longevity, sillage, seasons, occasions, time_of_day)",
+      "descriptions.persona / best_for / subtitle", "naming.pronunciation / name_meaning",
+      "taxonomy.collections (the capture has collections and products but not the join)",
+      "taxonomy.tags.* facets", "related.similar_to / layering_with",
+      "availability.stock_level", "featured_quotes[].verified_purchase / sentiment",
+      "meta.sort_rank"
+    ],
+    "known_gaps": [
+      "vendor is 'Siwa Fragrances' here — genuinely Siwa-owned, so unlike 40 of 56 products it is safe to print. inspiration.type is siwa_original.",
+      "compare_at_price is the junk value '0.00' on all three live variants; normalised to null.",
+      "PDP holds ONE image with null alt against 68 reviews at 4.99. All alt text below is written new.",
+      "Tagged 'Men' only; aquatic positioning and review voice read unisex.",
+      "Marasi is co-marketed in 2 of 3 Instagram posts with no cross-sell between the PDPs."
+    ]
+  },
+
+  "handle": "mawj",
+  "shopify_id": "7735873568816",
+
+  "naming": {
+    "title": "Mawj",
+    "arabic_name": "موج",
+    "pronunciation": "MOWJ",
+    "name_meaning": "Arabic for 'wave' — the swell itself, not the sea",
+    "subtitle": "Aquatic Woody Extrait"
+  },
+
+  "descriptions": {
+    "headline": "Where the sea is always moving.",
+    "summary": "An elegant aquatic perfume reflects the depth of the sea & its fresh breeze in an oriental way.",
+    "story": "Mawj is not a scent of sweetness or softness, but of power in motion. A wave that cannot be held back. A presence that arrives, lingers, and commands. Sea, water and ozone open it; bitter orange and pineapple cut across the top. Underneath, violet, iris and jasmine hold a quiet floral centre, and it dries down through vetiver, oud, musk and sandalwood into something warm and oriental — the depth of the sea rather than its surface.",
+    "pullquote": "Not all waves are meant to be chased. Some are meant to be worn.",
+    "persona": "Composed, deliberate, unhurried. Arrives before he speaks and is remembered after he leaves.",
+    "best_for": [
+      "Daytime and office wear",
+      "Egyptian summer and coastal heat",
+      "Long days that need to hold"
+    ],
+    "voice_register": "Declarative, elemental, masculine. Short lines with hard stops. Sea as metaphor for presence."
+  },
+
+  "composition": {
+    "concentration": {
+      "type": "Extrait de Parfum",
+      "percentage": "22%"
+    },
+
+    "classification": {
+      "family": "Aquatic Woody",
+      "sub_family": "Marine Oriental",
+      "accords": ["Citrus", "Marine", "Woody"],
+      "accords_chart": {
+        "citrus": 65,
+        "floral": 40,
+        "woody": 75,
+        "oriental": 55,
+        "fresh": 85,
+        "spicy": 30,
+        "sweet": 25,
+        "powdery": 20,
+        "aquatic": 95,
+        "green": 35
+      }
+    },
+
+    "notes": {
+      "top": [
+        { "name": "Sea Notes", "arabic_name": "نسمات البحر", "category": "aquatic", "natural": false, "allergen": false },
+        { "name": "Ozonic Notes", "arabic_name": "أوزونيك", "category": "aquatic", "natural": false, "allergen": false },
+        { "name": "Bitter Orange", "arabic_name": "برتقال مر", "category": "citrus", "natural": true, "allergen": true },
+        { "name": "Pineapple", "arabic_name": "أناناس", "category": "fruity", "natural": false, "allergen": false }
+      ],
+      "heart": [
+        { "name": "Jasmine", "arabic_name": "ياسمين", "category": "floral", "natural": true, "allergen": true },
+        { "name": "Iris", "arabic_name": "سوسن", "category": "floral", "natural": true, "allergen": false },
+        { "name": "Violet", "arabic_name": "بنفسج", "category": "floral", "natural": false, "allergen": false },
+        { "name": "Spice Notes", "arabic_name": "توابل", "category": "spicy", "natural": true, "allergen": false }
+      ],
+      "base": [
+        { "name": "Oud", "arabic_name": "عود", "category": "woody", "natural": true, "allergen": false },
+        { "name": "Sandalwood", "arabic_name": "خشب الصندل", "category": "woody", "natural": true, "allergen": false },
+        { "name": "Vetiver", "arabic_name": "الڤيتيڤر", "category": "woody", "natural": true, "allergen": false },
+        { "name": "Musk", "arabic_name": "مسك", "category": "musky", "natural": false, "allergen": false },
+        { "name": "Vanilla", "arabic_name": "فانيليا", "category": "gourmand", "natural": true, "allergen": false }
+      ]
+    },
+
+    "performance": {
+      "longevity": { "hours": "8–10 hours", "rating": 4.5 },
+      "sillage": { "projection": "Strong", "rating": 4.5, "distance": "Arm's length for the first 3 hours, close to skin after" },
+      "seasons": ["Summer", "Spring"],
+      "occasions": ["Daily", "Office", "Beach", "Evening out"],
+      "time_of_day": ["Morning", "Afternoon"]
+    }
+  },
+
+  "brand": {
+    "creator": "Siwa Fragrances",
+    "inspiration": {
+      "type": "siwa_original",
+      "designer_reference": null,
+      "similarity_note": null
+    },
+    "launched": "2022-06-29",
+    "perfumer": null
+  },
+
+  "taxonomy": {
+    "gender": ["Men", "Unisex"],
+    "gender_lean": -55,
+    "collections": ["best-sellers", "men-best-sellers", "for-him", "summer-collection", "siwa-perfumes"],
+    "bundles": [],
+    "tags": {
+      "vibe": ["fresh", "elemental", "confident", "clean"],
+      "notes_facet": ["marine", "citrus", "oud", "sandalwood", "vetiver"],
+      "occasion": ["daily", "office", "beach"],
+      "season": ["summer", "spring"],
+      "intensity": "moderate-strong",
+      "price_tier": "mid"
+    },
+    "related": {
+      "pairs_with": ["marasi"],
+      "similar_to": ["bleu-exclusive", "aurableu"],
+      "layering_with": ["marasi"]
+    }
+  },
+
+  "commerce": {
+    "variants": [
+      {
+        "id": "42389305098288",
+        "title": "30 ml",
+        "size_ml": 30,
+        "price": 800,
+        "compare_at_price": null,
+        "available": true,
+        "sku": "SP-012",
+
+        "value_metrics": {
+          "cost_per_ml": 26.67,
+          "estimated_sprays": 300,
+          "cost_per_spray": 2.67,
+          "total_wears": 75,
+          "usage_estimate_days": "~2.5 months at daily wear",
+          "monthly_cost": 320,
+          "savings_vs_smaller": null,
+          "best_value": false,
+          "recommended": false
+        }
+      },
+      {
+        "id": "42389305065520",
+        "title": "50 ml",
+        "size_ml": 50,
+        "price": 1100,
+        "compare_at_price": null,
+        "available": true,
+        "sku": "SP-012",
+
+        "value_metrics": {
+          "cost_per_ml": 22.0,
+          "estimated_sprays": 500,
+          "cost_per_spray": 2.2,
+          "total_wears": 125,
+          "usage_estimate_days": "~4 months at daily wear",
+          "monthly_cost": 264,
+          "savings_vs_smaller": 17.5,
+          "best_value": false,
+          "recommended": true
+        }
+      },
+      {
+        "id": "42389305032752",
+        "title": "100 ml",
+        "size_ml": 100,
+        "price": 1850,
+        "compare_at_price": null,
+        "available": true,
+        "sku": "SP-012",
+
+        "value_metrics": {
+          "cost_per_ml": 18.5,
+          "estimated_sprays": 1000,
+          "cost_per_spray": 1.85,
+          "total_wears": 250,
+          "usage_estimate_days": "~8 months at daily wear",
+          "monthly_cost": 222,
+          "savings_vs_smaller": 15.9,
+          "best_value": true,
+          "recommended": false
+        }
+      }
+    ],
+
+    "pricing": {
+      "price_min": 800,
+      "price_max": 1850,
+      "entry_point": { "size_ml": 30, "price": 800 },
+      "best_value": { "size_ml": 100, "price": 1850, "savings_vs_entry_percent": 31 },
+      "recommended": { "size_ml": 50, "price": 1100 },
+      "size_incentives": [
+        {
+          "from_size_ml": 30,
+          "to_size_ml": 50,
+          "save_percent": 17,
+          "save_amount": 233,
+          "message": "Add LE 300 for 20 ml more — LE 233 cheaper than buying the extra at 30 ml rates."
+        },
+        {
+          "from_size_ml": 50,
+          "to_size_ml": 100,
+          "save_percent": 16,
+          "save_amount": 350,
+          "message": "Double the bottle for LE 750 — LE 350 less than two 50 ml."
+        }
+      ],
+      "on_sale": false,
+      "sale_ends": null
+    },
+
+    "availability": {
+      "in_stock": true,
+      "stock_level": "in_stock",
+      "restock_date": null,
+      "backorder_available": false
+    }
+  },
+
+  "media": {
+    "images": [
+      {
+        "src": "instagram-assets/mawj/DOTzj9WFZwB_1.jpg",
+        "alt": "Mawj Extrait de Parfum standing on a white salt ledge against a deep navy sea horizon and pale blue sky",
+        "width": 1638,
+        "height": 2047,
+        "position": 1,
+        "type": "hero",
+        "art_direction": "Highest-resolution asset in the set. Symmetrical, editorial, glassy reflection below the bottle, large clean sky area at the top that takes a headline overlay.",
+        "usage": ["pdp_hero", "full_bleed_band", "collection_card"]
+      },
+      {
+        "src": "instagram-assets/mawj/DbG2mgBF2MQ_1.jpg",
+        "alt": "A hand with a steel bracelet lifting the Mawj bottle out of shallow sea water, water streaming from the base",
+        "width": 1080,
+        "height": 1440,
+        "position": 2,
+        "type": "lifestyle",
+        "art_direction": "Motion, masculinity, wetness. Soft teal-green water, heavy background blur.",
+        "usage": ["pdp_gallery", "editorial_band"]
+      },
+      {
+        "src": "instagram-assets/mawj/Da56ixwiJzJ_1.jpg",
+        "alt": "Mawj bottle photographed on an aquatic set, front three-quarter view",
+        "width": 1080,
+        "height": 1350,
+        "position": 3,
+        "type": "still_life",
+        "art_direction": "Bottle still life, aquatic set.",
+        "usage": ["pdp_gallery"]
+      },
+      {
+        "src": "instagram-assets/mawj/Da56ixwiJzJ_2.jpg",
+        "alt": "Second angle of the Mawj bottle on the same aquatic set",
+        "width": 1080,
+        "height": 1345,
+        "position": 4,
+        "type": "still_life",
+        "art_direction": "Second angle, same set.",
+        "usage": ["pdp_gallery"]
+      },
+      {
+        "src": "instagram-assets/mawj/DOTzj9WFZwB_2.jpg",
+        "alt": "Mawj bottle on the salt ledge, second frame from the sea location shoot",
+        "width": 1496,
+        "height": 1871,
+        "position": 5,
+        "type": "still_life",
+        "art_direction": "Second frame, same location.",
+        "usage": ["pdp_gallery"]
+      },
+      {
+        "src": "instagram-assets/mawj/DbG2mgBF2MQ_2.jpg",
+        "alt": "Companion frame from the sea-water session showing the Mawj bottle held above the surface",
+        "width": 1080,
+        "height": 1440,
+        "position": 6,
+        "type": "lifestyle",
+        "art_direction": "Companion frame, same session.",
+        "usage": ["pdp_gallery"]
+      },
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/mawj.jpg?v=1757237116",
+        "alt": "Mawj Extrait de Parfum, clear glass cylinder with a black gloss cap and matte black label",
+        "width": 1080,
+        "height": 1080,
+        "position": 7,
+        "type": "packshot",
+        "art_direction": "The live store's only product image. Alt text was null in the capture and is written new here.",
+        "usage": ["cart_thumbnail", "search_result", "structured_data"]
+      }
+    ],
+
+    "palette": {
+      "primary": "#1F4E79",
+      "secondary": "#7FA9A6",
+      "accent": "#AFCFE3",
+      "background": "#F2F3EF",
+      "text_on_primary": "#F2F3EF",
+      "css_vars": {
+        "--fragrance-primary": "#1F4E79",
+        "--fragrance-secondary": "#7FA9A6",
+        "--fragrance-accent": "#AFCFE3",
+        "--fragrance-bg": "#F2F3EF",
+        "--fragrance-text": "#141414"
+      }
+    },
+
+    "instagram": [
+      {
+        "shortcode": "DOTzj9WFZwB",
+        "url": "https://www.instagram.com/p/DOTzj9WFZwB/",
+        "date": "2025-09-07",
+        "type": "carousel",
+        "likes": 47,
+        "comments": 5,
+        "caption": "Mawj is not a scent of sweetness or softness, but of power in motion. A wave that cannot be held back. A presence that arrives, lingers, and commands."
+      },
+      {
+        "shortcode": "DbG2mgBF2MQ",
+        "url": "https://www.instagram.com/p/DbG2mgBF2MQ/",
+        "date": "2026-07-22",
+        "type": "carousel",
+        "likes": 29,
+        "comments": 0,
+        "caption": "Mawj — Where the sea is always moving.",
+        "pairs_with": "marasi"
+      },
+      {
+        "shortcode": "Da56ixwiJzJ",
+        "url": "https://www.instagram.com/p/Da56ixwiJzJ/",
+        "date": "2026-07-17",
+        "type": "carousel",
+        "likes": 23,
+        "comments": 2,
+        "caption": "Not all waves are meant to be chased. Some are meant to be worn. Marasi. Mawj.",
+        "pairs_with": "marasi"
+      }
+    ]
+  },
+
+  "social_proof": {
+    "reviews": {
+      "average": 4.99,
+      "count": 68,
+      "distribution": { "5": 67, "4": 1, "3": 0, "2": 0, "1": 0 },
+      "featured_quotes": [
+        {
+          "rating": 5,
+          "author": "Ramy Magdy",
+          "body": "Perfect, i got 3 compliments on the 1st day wearing it",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": null,
+            "sillage": "positive",
+            "compliments_mentioned": true,
+            "repurchase_intent": false
+          }
+        },
+        {
+          "rating": 5,
+          "author": "محمد ابوعوف",
+          "body": "جميله جدا و اما تركز فيها تحس فعلا بأجواء البحر و الصيف و بتفضل لفترة طويله من الحاجات المميزة فعلاً",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": "positive",
+            "sillage": null,
+            "compliments_mentioned": false,
+            "repurchase_intent": false
+          }
+        },
+        {
+          "rating": 5,
+          "author": "Ahmed Youssef",
+          "body": "ثبات وفواحه",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": "positive",
+            "sillage": "positive",
+            "compliments_mentioned": false,
+            "repurchase_intent": false
+          }
+        },
+        {
+          "rating": 5,
+          "author": "Ahmed Sherif",
+          "body": "تحفة بجد",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": null,
+            "sillage": null,
+            "compliments_mentioned": false,
+            "repurchase_intent": false
+          }
+        },
+        {
+          "rating": 5,
+          "author": "Hassan Ali",
+          "body": "very beautiful",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": null,
+            "sillage": null,
+            "compliments_mentioned": false,
+            "repurchase_intent": false
+          }
+        }
+      ]
+    },
+
+    "engagement": {
+      "instagram_likes": 99,
+      "instagram_comments": 7,
+      "user_photos_count": 0
+    },
+
+    "badges": ["Best Selling", "2nd most-reviewed in the catalogue"]
+  },
+
+  "meta": {
+    "published": true,
+    "published_at": "2022-06-29T23:52:27+02:00",
+    "updated_at": "2026-07-27T21:19:20+03:00",
+    "status": "active",
+    "featured": true,
+    "sort_rank": 2,
+    "completeness": {
+      "has_story": true,
+      "has_structured_notes": false,
+      "has_images": true,
+      "has_reviews": true,
+      "has_instagram": true,
+      "score": 85
+    }
+  }
+}

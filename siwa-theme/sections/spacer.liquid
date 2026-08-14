@@ -1,0 +1,28 @@
+{%- comment -%}
+  Spacer — adjustable vertical space, optionally with a divider rule.
+  Purely presentational, so the element is aria-hidden.
+{%- endcomment -%}
+<div class="spacer"
+     style="height:{{ section.settings.height_desktop }}px"
+     aria-hidden="true">
+  {%- if section.settings.show_divider -%}
+    <span class="spacer__rule" style="margin-top:{{ section.settings.height_desktop | divided_by: 2 }}px"></span>
+  {%- endif -%}
+</div>
+<style>
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} .spacer { height: {{ section.settings.height_mobile }}px !important; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "t:sections.spacer.name",
+  "settings": [
+    { "type": "range", "id": "height_desktop", "min": 8, "max": 200, "step": 4, "unit": "px", "label": "t:sections.spacer.height_desktop", "default": 72 },
+    { "type": "range", "id": "height_mobile", "min": 8, "max": 160, "step": 4, "unit": "px", "label": "t:sections.spacer.height_mobile", "default": 32 },
+    { "type": "checkbox", "id": "show_divider", "label": "t:sections.spacer.divider", "default": false }
+  ],
+  "presets": [ { "name": "t:sections.spacer.name" } ]
+}
+{% endschema %}

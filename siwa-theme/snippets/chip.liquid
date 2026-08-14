@@ -1,0 +1,84 @@
+{%- comment -%}
+  Chip — 5 variants. Scent families, collection facets, size selectors,
+  active-filter pills.
+
+  Styles: ../component-library/css/components.css (.chip and modifiers)
+
+  Variants (the `style` argument):
+    neutral   -> .chip                      Sailcloth fill, hairline border
+    active    -> .chip[aria-pressed="true"] ink fill, canvas label
+    scent     -> .chip--scent               Incense fill, heading label (4.83:1)
+    outline   -> .chip--outline             transparent, fills on hover
+    removable -> .chip--removable           active + a close control
+
+  A chip is a control, so it renders as <button> by default and carries
+  aria-pressed. Pass `url` to render a link instead (facet navigation
+  that changes the page rather than toggling state).
+
+  Accepts:
+    text      {String}   visible label. From a setting or a locale key.
+    style     {String}   neutral | active | scent | outline | removable
+    active    {Boolean}  sets aria-pressed
+    count     {Number}   optional facet count, shown muted
+    url       {String}   render as <a> instead of <button>
+    removable {Boolean}  show the close control
+    remove_label {String} accessible name for the close control
+    name,value {String}  form attributes when used inside a filter form
+    class     {String}
+
+  RTL: padding, gap and the close control all use logical properties, so
+  the chip mirrors without a direction-specific rule.
+{%- endcomment -%}
+{%- liquid
+  assign chip_style = style | default: 'neutral'
+  assign is_active = active
+
+  case chip_style
+    when 'scent'
+      assign modifier = 'chip--scent'
+    when 'outline'
+      assign modifier = 'chip--outline'
+    when 'removable'
+      assign modifier = 'chip--removable'
+      assign is_active = true
+    when 'active'
+      assign modifier = ''
+      assign is_active = true
+    else
+      assign modifier = ''
+  endcase
+
+  assign show_remove = removable
+  if chip_style == 'removable'
+    assign show_remove = true
+  endif
+
+  assign remove_text = remove_label | default: text
+  assign remove_a11y = 'collections.filters.remove_filter' | t: name: remove_text
+-%}
+{%- if url != blank -%}
+  <a
+    class="chip {{ modifier }} {{ class }}"
+    href="{{ url }}"
+    {% if is_active %}aria-current="true"{% endif %}
+  >
+    {{ text }}
+    {%- if count != blank %}<span class="n">{{ count }}</span>{% endif -%}
+  </a>
+{%- else -%}
+  <button
+    class="chip {{ modifier }} {{ class }}"
+    type="button"
+    aria-pressed="{% if is_active %}true{% else %}false{% endif %}"
+    {% if name != blank %}name="{{ name }}"{% endif %}
+    {% if value != blank %}value="{{ value }}"{% endif %}
+  >
+    {{ text }}
+    {%- if count != blank %}<span class="n">{{ count }}</span>{% endif -%}
+    {%- if show_remove -%}
+      <span class="chip__x" role="img" aria-label="{{ remove_a11y | escape }}">
+        {%- render 'icon', name: 'close' -%}
+      </span>
+    {%- endif -%}
+  </button>
+{%- endif -%}

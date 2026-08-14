@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Siwa — Homepage</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23212012'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23b18044' font-family='Georgia,serif'%3ES%3C/text%3E%3C/svg%3E">
+
+<!--
+  Renders siwa-theme/templates/index.json band by band, in the real order,
+  on the real grounds, with the real copy. It holds no content of its own —
+  change the template and this page changes.
+
+  Not a Liquid render: there is no Shopify runtime here. Each band shows the
+  component-library composition its section renders, drawn with the real
+  56-product catalogue and the real photography.
+-->
+
+<!-- The design system asks for these four families. Without them every
+     display heading falls back to Times, which is what made the first
+     pass look broken. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@400;500;600&family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap">
+
+<link rel="stylesheet" href="../component-library/css/tokens.css">
+<link rel="stylesheet" href="../component-library/css/components.css">
+<link rel="stylesheet" href="preview.css">
+</head>
+<body>
+
+<main id="pvMain" aria-busy="true"></main>
+
+<!-- Review controls. Deliberately small and out of the way: this is a page
+     first and an inspection tool second. -->
+<div class="pv-dock" role="group" aria-label="Preview controls">
+  <button id="pvLocale" type="button" aria-pressed="false">العربية</button>
+  <button id="pvTags" type="button" aria-pressed="false">Structure</button>
+</div>
+
+<script src="../component-library/js/data.js"></script>
+<script>window.SIWA_IMG_BASE = '../component-library/img/'; window.SIWA_DEMO_EVENTS = false;</script>
+<script src="../component-library/js/library.js"></script>
+<script src="preview.js"></script>
+</body>
+</html>

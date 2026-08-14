@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "reviews_badge": {
+          "type": "reviews_badge",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {}
+        },
+        "quantity": {
+          "type": "quantity",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "reviews_badge",
+        "price",
+        "variant_picker",
+        "quantity",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "layout": "standard"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ],
+  "_comment": [
+    "Product template. The announcement bar switches to the quiet",
+    "shipping-meter variant here — see sections/announcement-bar.liquid.",
+    "Set it per-template in the theme editor: Announcement bar → Style →",
+    "Quiet + shipping meter."
+  ]
+}

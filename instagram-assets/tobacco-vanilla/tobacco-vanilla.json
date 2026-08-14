@@ -1,0 +1,350 @@
+{
+  "_provenance": {
+    "generated": "2026-07-28",
+    "purpose": "Demo product record for client approval. ⚠️ HELD PRODUCT — see status_warning.",
+    "status_warning": "Tobacco Vanilla has NO record in the 56-product catalogue captured 2026-07-27. No handle, no title, no vendor, no price, no stock. The product is real — it is photographed with a finished production label — but it is unpublished, discontinued, or pending relaunch. Both Instagram posts predate the capture (Jan/Feb 2026), so 'created after the capture' is ruled out. EVERY commerce figure in this file is invented for demo layout purposes and must be replaced with client data before anything ships.",
+    "sources": {
+      "catalog": "NONE — no catalogue record exists",
+      "reviews": "NONE — no Judge.me widget exists for this product",
+      "social": "instagram-assets/matched-data.json",
+      "images": "instagram-assets/tobacco-vanilla/ (dimensions read from the files)"
+    },
+    "real": [
+      "naming.title (read off the production label in the photography)",
+      "descriptions.headline / story / summary / pullquote (verbatim Instagram captions)",
+      "descriptions.voice_register",
+      "composition.notes — every note name is lifted from the brand's own caption copy ('smoky tobacco leaves kissed by exotic spices, melting into clouds of creamy vanilla and velvety cacao'). Tier order follows the caption's own sequence.",
+      "concentration.type (the label reads EXTRAIT DE PARFUM)",
+      "media.images src / width / height / art_direction", "media.palette", "media.instagram",
+      "social_proof.engagement"
+    ],
+    "derived": [
+      "classification.family / sub_family / accords (from the caption's note list)",
+      "value_metrics arithmetic — correct maths over INVENTED prices"
+    ],
+    "demo_placeholder": [
+      "⚠️ ALL of commerce.* — variant ids, prices, sizes, SKUs, stock. Invented. Variant ids are deliberately non-numeric (DEMO-TV-…) so they can never be mistaken for real Shopify ids.",
+      "shopify_id (null)", "brand.launched", "concentration.percentage", "accords_chart values",
+      "note category / natural / allergen flags",
+      "naming.arabic_name / pronunciation / name_meaning / subtitle",
+      "descriptions.persona / best_for", "performance.*",
+      "taxonomy.* (no tags exist to derive from)", "availability.*", "meta.*"
+    ],
+    "not_fabricated": [
+      "social_proof.reviews — left at zero with an empty quote list. This product has no reviews. Inventing testimonials is the one class of demo data that could do real damage if it reached the live store, so none were written. The Instagram engagement below (169 likes, 24+ comments across two posts) is real and carries the social proof for the demo instead."
+    ],
+    "blocking_questions_for_client": [
+      "Is Tobacco Vanilla live, seasonal, discontinued, or pending relaunch?",
+      "What sizes are offered, and at what prices?",
+      "Current stock state per size, and a restock date if sold out?",
+      "Should it carry the full notes pyramid, or is the caption copy the whole spec?"
+    ]
+  },
+
+  "handle": "tobacco-vanilla",
+  "shopify_id": null,
+
+  "naming": {
+    "title": "Tobacco Vanilla",
+    "arabic_name": "توباكو فانيليا",
+    "pronunciation": "tuh-BAK-oh vuh-NIL-uh",
+    "name_meaning": "Names its own two poles — the leaf and the pod",
+    "subtitle": "Smoky Gourmand Extrait"
+  },
+
+  "descriptions": {
+    "headline": "It speaks of low amber light, and long autumn nights.",
+    "summary": "A deep tobacco-vanilla scent defined by warmth, stillness, and quiet intensity.",
+    "story": "Tobacco Vanilla unfolds with smoky tobacco leaves kissed by exotic spices, melting into clouds of creamy vanilla and velvety cacao. Imagine wrapping yourself in the scent of a grand, fireside library where time slows and every breath feels like an invitation. It speaks of low amber light, and long autumn nights — a fragrance that doesn't just linger in the air, but in the memories it creates.",
+    "pullquote": "A fragrance that doesn't just linger in the air, but in the memories it creates.",
+    "persona": "Unhurried and interior. Prefers a small room, a long evening, and no need to fill the silence.",
+    "best_for": [
+      "Autumn and winter evenings",
+      "Slow dinners and long conversations",
+      "Anyone who wants a vanilla with smoke in it"
+    ],
+    "voice_register": "The most literary of the four. Long sentences, sensory compounding, place-and-time imagery (fireside library, autumn nights)."
+  },
+
+  "composition": {
+    "concentration": {
+      "type": "Extrait de Parfum",
+      "percentage": "25%"
+    },
+
+    "classification": {
+      "family": "Oriental Gourmand",
+      "sub_family": "Smoky Tobacco Vanilla",
+      "accords": ["Tobacco", "Vanilla", "Cacao", "Spice"],
+      "accords_chart": {
+        "citrus": 0,
+        "floral": 5,
+        "woody": 55,
+        "oriental": 90,
+        "fresh": 5,
+        "spicy": 65,
+        "sweet": 85,
+        "powdery": 35,
+        "aquatic": 0,
+        "green": 10
+      }
+    },
+
+    "notes": {
+      "top": [
+        { "name": "Smoky Tobacco Leaf", "arabic_name": "ورق التبغ المدخن", "category": "smoky", "natural": true, "allergen": false },
+        { "name": "Exotic Spices", "arabic_name": "توابل شرقية", "category": "spicy", "natural": true, "allergen": true }
+      ],
+      "heart": [
+        { "name": "Creamy Vanilla", "arabic_name": "فانيليا كريمية", "category": "gourmand", "natural": true, "allergen": false }
+      ],
+      "base": [
+        { "name": "Velvety Cacao", "arabic_name": "كاكاو مخملي", "category": "gourmand", "natural": true, "allergen": false }
+      ]
+    },
+
+    "performance": {
+      "longevity": { "hours": "9–12 hours", "rating": 5.0 },
+      "sillage": { "projection": "Heavy", "rating": 4.5, "distance": "Fills a room for the first hours, then holds close through the night" },
+      "seasons": ["Autumn", "Winter"],
+      "occasions": ["Evening out", "Dinner", "Special occasion"],
+      "time_of_day": ["Evening", "Night"]
+    }
+  },
+
+  "brand": {
+    "creator": "Siwa Fragrances",
+    "inspiration": {
+      "type": "unconfirmed",
+      "designer_reference": null,
+      "similarity_note": "The hashtag #tobaccovanille appears on the brand's own post. Whether this is positioned as an inspired-by or a Siwa original is a question for the client — it is not recorded anywhere in the capture."
+    },
+    "launched": "2026-01-28",
+    "perfumer": null
+  },
+
+  "taxonomy": {
+    "gender": ["Men", "Women", "Unisex"],
+    "gender_lean": -10,
+    "collections": ["unisex", "perfumes"],
+    "bundles": [],
+    "tags": {
+      "vibe": ["warm", "smoky", "intimate", "literary"],
+      "notes_facet": ["tobacco", "vanilla", "cacao", "spice"],
+      "occasion": ["evening", "dinner", "special-occasion"],
+      "season": ["autumn", "winter"],
+      "intensity": "strong",
+      "price_tier": "premium"
+    },
+    "related": {
+      "pairs_with": ["coco-woods"],
+      "similar_to": ["male-elixir", "carnal-trail"],
+      "layering_with": ["layering-vanilla"]
+    }
+  },
+
+  "commerce": {
+    "variants": [
+      {
+        "id": "DEMO-TV-30",
+        "title": "30 ml",
+        "size_ml": 30,
+        "price": 900,
+        "compare_at_price": null,
+        "available": true,
+        "sku": "DEMO-TV-30",
+
+        "value_metrics": {
+          "cost_per_ml": 30.0,
+          "estimated_sprays": 300,
+          "cost_per_spray": 3.0,
+          "total_wears": 75,
+          "usage_estimate_days": "~2.5 months at daily wear",
+          "monthly_cost": 360,
+          "savings_vs_smaller": null,
+          "best_value": false,
+          "recommended": false
+        }
+      },
+      {
+        "id": "DEMO-TV-50",
+        "title": "50 ml",
+        "size_ml": 50,
+        "price": 1400,
+        "compare_at_price": null,
+        "available": true,
+        "sku": "DEMO-TV-50",
+
+        "value_metrics": {
+          "cost_per_ml": 28.0,
+          "estimated_sprays": 500,
+          "cost_per_spray": 2.8,
+          "total_wears": 125,
+          "usage_estimate_days": "~4 months at daily wear",
+          "monthly_cost": 350,
+          "savings_vs_smaller": 6.7,
+          "best_value": false,
+          "recommended": true
+        }
+      },
+      {
+        "id": "DEMO-TV-100",
+        "title": "100 ml",
+        "size_ml": 100,
+        "price": 2450,
+        "compare_at_price": null,
+        "available": true,
+        "sku": "DEMO-TV-100",
+
+        "value_metrics": {
+          "cost_per_ml": 24.5,
+          "estimated_sprays": 1000,
+          "cost_per_spray": 2.45,
+          "total_wears": 250,
+          "usage_estimate_days": "~8 months at daily wear",
+          "monthly_cost": 306,
+          "savings_vs_smaller": 12.5,
+          "best_value": true,
+          "recommended": false
+        }
+      }
+    ],
+
+    "pricing": {
+      "price_min": 900,
+      "price_max": 2450,
+      "entry_point": { "size_ml": 30, "price": 900 },
+      "best_value": { "size_ml": 100, "price": 2450, "savings_vs_entry_percent": 18 },
+      "recommended": { "size_ml": 50, "price": 1400 },
+      "size_incentives": [
+        {
+          "from_size_ml": 30,
+          "to_size_ml": 50,
+          "save_percent": 7,
+          "save_amount": 100,
+          "message": "Add LE 500 for 20 ml more — LE 100 cheaper than buying the extra at 30 ml rates."
+        },
+        {
+          "from_size_ml": 50,
+          "to_size_ml": 100,
+          "save_percent": 13,
+          "save_amount": 350,
+          "message": "Double the bottle for LE 1,050 — LE 350 less than two 50 ml."
+        }
+      ],
+      "on_sale": false,
+      "sale_ends": null
+    },
+
+    "availability": {
+      "in_stock": false,
+      "stock_level": "unknown — no catalogue record; awaiting client confirmation",
+      "restock_date": null,
+      "backorder_available": false
+    }
+  },
+
+  "media": {
+    "images": [
+      {
+        "src": "instagram-assets/tobacco-vanilla/DUEWP1fCO4Q_1.jpg",
+        "alt": "Tobacco Vanilla standing on a bed of dry autumn leaves in gold, ochre and rust, whole vanilla pods laid across the foreground in raked warm sunlight",
+        "width": 1440,
+        "height": 1920,
+        "position": 1,
+        "type": "hero",
+        "art_direction": "Strongest single image in the whole capture. The juice reads deep amber through clear glass; the cap is top-embossed SIWA FRAGRANCES. Shallow depth of field, editorial-campaign quality.",
+        "usage": ["pdp_hero", "full_bleed_band", "campaign_lead"]
+      },
+      {
+        "src": "instagram-assets/tobacco-vanilla/DUWYHackb8X_1.jpg",
+        "alt": "Tobacco Vanilla photographed in a warm amber scene of low, fireside light",
+        "width": 1302,
+        "height": 1627,
+        "position": 2,
+        "type": "lifestyle",
+        "art_direction": "Warm amber scene. Pairs with the 'fireside library' caption.",
+        "usage": ["pdp_gallery", "editorial_band"]
+      }
+    ],
+
+    "palette": {
+      "primary": "#8C5A2B",
+      "secondary": "#C89A3C",
+      "accent": "#D9A441",
+      "background": "#E8C98A",
+      "text_on_primary": "#E8C98A",
+      "css_vars": {
+        "--fragrance-primary": "#8C5A2B",
+        "--fragrance-secondary": "#C89A3C",
+        "--fragrance-accent": "#D9A441",
+        "--fragrance-bg": "#E8C98A",
+        "--fragrance-text": "#3B2617"
+      }
+    },
+
+    "instagram": [
+      {
+        "shortcode": "DUWYHackb8X",
+        "url": "https://www.instagram.com/p/DUWYHackb8X/",
+        "date": "2026-02-04",
+        "type": "single",
+        "likes": 101,
+        "comments": "9+",
+        "caption": "Imagine wrapping yourself in the scent of a grand, fireside library where time slows and every breath feels like an invitation. Tobacco Vanilla, a deep tobacco-vanilla scent defined by warmth, stillness, and quiet intensity.",
+        "notable_comments": [
+          { "user": "ahmed_nasser_mohammed_anwar", "body": "موجوده؟", "signal": "'is it available?' — corroborates the unpublished status" },
+          { "user": "mira_welliam", "body": "Hi wanna ask about the heavuer perfumes u have and what is the notes for it and hopfully u have smaller sizes", "signal": "notes + size discovery gap" },
+          { "user": "alexmann2000", "body": "Do you have any outlets in Alexandria?", "signal": "retail expansion demand" }
+        ]
+      },
+      {
+        "shortcode": "DUEWP1fCO4Q",
+        "url": "https://www.instagram.com/p/DUEWP1fCO4Q/",
+        "date": "2026-01-28",
+        "type": "single",
+        "likes": 68,
+        "comments": 15,
+        "caption": "Tobacco Vanilla unfolds with smoky tobacco leaves kissed by exotic spices, melting into clouds of creamy vanilla and velvety cacao. It speaks of low amber light, and long autumn nights — a fragrance that doesn't just linger in the air, but in the memories it creates.",
+        "notable_comments": [
+          { "user": "sohaila_203p", "body": "ب كام", "signal": "price" },
+          { "user": "geek_dyma", "body": "Price?", "signal": "price" }
+        ]
+      }
+    ]
+  },
+
+  "social_proof": {
+    "reviews": {
+      "average": 0,
+      "count": 0,
+      "distribution": { "5": 0, "4": 0, "3": 0, "2": 0, "1": 0 },
+      "featured_quotes": []
+    },
+
+    "engagement": {
+      "instagram_likes": 169,
+      "instagram_comments": 24,
+      "user_photos_count": 0
+    },
+
+    "badges": ["Coming soon"]
+  },
+
+  "meta": {
+    "published": false,
+    "published_at": null,
+    "updated_at": "2026-07-28",
+    "status": "held_pending_client_data",
+    "featured": false,
+    "sort_rank": null,
+    "completeness": {
+      "has_story": true,
+      "has_structured_notes": true,
+      "has_images": true,
+      "has_reviews": false,
+      "has_instagram": true,
+      "score": 55
+    }
+  }
+}

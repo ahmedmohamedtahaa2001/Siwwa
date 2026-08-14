@@ -1,0 +1,10 @@
+# Siwa theme — theme-check configuration
+# Gate 4 of the Phase 1 quality gates requires 0 offenses.
+root: "."
+
+# The component library is the source of truth for CSS. Theme assets are
+# generated copies (tools/build-theme-assets.sh), so they are excluded
+# from linting as hand-authored theme code.
+ignore:
+  - assets/siwa-tokens.css
+  - assets/siwa-components.css

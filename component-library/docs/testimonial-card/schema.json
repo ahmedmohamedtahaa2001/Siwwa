@@ -1,0 +1,25 @@
+{
+  "_comment": "Setting fragment for the Testimonial card. Unlike review-card these ARE content settings, because a testimonial is curated rather than verified. That is not a licence to invent praise — if the quote did not happen, it does not go here.",
+  "settings": [
+    { "type": "text", "id": "quote", "label": "t:components.testimonial.quote" },
+    { "type": "text", "id": "author", "label": "t:components.testimonial.author" },
+    { "type": "text", "id": "author_role", "label": "t:components.testimonial.author_role" },
+    { "type": "image_picker", "id": "image", "label": "t:components.testimonial.image" },
+    { "type": "image_picker", "id": "publication_logo", "label": "t:components.testimonial.publication_logo" },
+    { "type": "text", "id": "publication_name", "label": "t:components.testimonial.publication_name", "info": "t:components.testimonial.publication_name_info" },
+    { "type": "url", "id": "video_url", "label": "t:components.testimonial.video_url" },
+    { "type": "url", "id": "link_url", "label": "t:components.testimonial.link_url" },
+    { "type": "text", "id": "link_label", "label": "t:components.testimonial.link_label" },
+    { "type": "range", "id": "rating", "min": 1, "max": 5, "step": 1, "label": "t:components.testimonial.rating", "default": 5 },
+    {
+      "type": "select", "id": "testimonial_style", "label": "t:components.testimonial.style", "default": "quote",
+      "options": [
+        { "value": "quote",    "label": "t:components.testimonial.style_quote" },
+        { "value": "avatar",   "label": "t:components.testimonial.style_avatar" },
+        { "value": "video",    "label": "t:components.testimonial.style_video" },
+        { "value": "press",    "label": "t:components.testimonial.style_press" },
+        { "value": "heritage", "label": "t:components.testimonial.style_heritage" }
+      ]
+    }
+  ]
+}

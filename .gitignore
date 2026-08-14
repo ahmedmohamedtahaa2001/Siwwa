@@ -1,0 +1,14 @@
+# Credentials and machine-local config. Never commit — this repo is public.
+.env
+.env.*
+!.env.example
+
+# Tooling scratch
+.playwright-mcp/
+__pycache__/
+*.pyc
+node_modules/
+
+# OS noise
+.DS_Store
+Thumbs.db

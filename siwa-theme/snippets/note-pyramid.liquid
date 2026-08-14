@@ -1,0 +1,203 @@
+{%- comment -%}
+  Note pyramid / fragrance profile — 5 variants.
+
+  Styles: ../component-library/css/components.css (.pyramid and modifiers)
+
+  Variants (the `style` argument):
+    iconed    .pyramid             Top / Heart / Base as three iconed rows,
+                                   note names as scent chips. Default.
+    graphic   .pyramid--graphic    Visual triangle, apex to base.
+    list      .pyramid--list       Labelled rows, no icons. Densest.
+    radial    .pyramid--radial     Concentric rings — the Coco Woods pattern.
+    heritage  .pyramid--heritage   Serif labels, one Cultural Accent rule,
+                                   provenance sub-label. ORIGINALS ONLY.
+
+  ⚠ THE DATA DOES NOT EXIST YET — READ BEFORE RELYING ON THIS
+  `_CORRECTIONS.md` §2: only **18 of 56 products** have machine-readable
+  fragrance notes (two or more labelled tiers), written across **13
+  distinct tier-label spellings**, and both `Heart` and `Middle` are used
+  for the same tier. `03-DATA-SCHEMA.md` §7 records **zero** custom
+  metafields on the store — the `fragrance` namespace is a RECOMMENDATION,
+  not something that exists.
+
+  So this snippet resolves notes in three steps:
+    1. `product.metafields.fragrance.{top,heart,base}_notes` — the target
+       state, once a metafield migration happens.
+    2. A parser over `product.description`, normalising the 13 spellings.
+       Lossy: it downcases, so note names are re-capitalised with CSS.
+    3. Nothing found -> renders the empty state, or nothing at all if
+       `hide_when_empty`. It must never invent notes.
+
+  For roughly 38 of 56 products, step 3 is what will happen today. That is
+  a content problem, not a markup one. Do not paper over it.
+
+  Accepts:
+    product         {Product}  required
+    style           {String}   iconed | graphic | list | radial | heritage
+    show_icons      {Boolean}  default true for `iconed`
+    accent_color    {String}   heritage variant only; Originals only
+    hide_when_empty {Boolean}  default false. Renders nothing at all.
+    heading         {String}   optional section heading
+{%- endcomment -%}
+{%- liquid
+  assign py_style = style | default: 'iconed'
+
+  comment  1. Metafields — the target state.  endcomment
+  assign top_notes = product.metafields.fragrance.top_notes | default: ''
+  assign heart_notes = product.metafields.fragrance.heart_notes | default: ''
+  assign base_notes = product.metafields.fragrance.base_notes | default: ''
+
+  comment
+    2. Parser fallback. Normalises the 13 observed spellings:
+       "Top Notes:" "Top notes:" "Top notes :" "Top:" and the
+       Heart/Middle synonym. Lossy — downcased for matching.
+  endcomment
+  assign notes_source = 'metafield'
+  if top_notes == blank and heart_notes == blank and base_notes == blank
+    assign notes_source = 'parsed'
+    assign desc = product.description | strip_html | strip_newlines | downcase
+    assign desc = desc | replace: ' :', ':'
+    assign desc = desc | replace: 'middle notes:', 'heart notes:'
+    assign desc = desc | replace: 'middle note:', 'heart notes:'
+    assign desc = desc | replace: 'heart note:', 'heart notes:'
+    assign desc = desc | replace: 'top note:', 'top notes:'
+    assign desc = desc | replace: 'base note:', 'base notes:'
+    assign desc = desc | replace: 'top:', 'top notes:'
+    assign desc = desc | replace: 'heart:', 'heart notes:'
+    assign desc = desc | replace: 'base:', 'base notes:'
+
+    if desc contains 'top notes:'
+      assign top_notes = desc | split: 'top notes:' | last | split: 'heart notes:' | first | split: 'base notes:' | first | strip | truncate: 120
+    endif
+    if desc contains 'heart notes:'
+      assign heart_notes = desc | split: 'heart notes:' | last | split: 'base notes:' | first | strip | truncate: 120
+    endif
+    if desc contains 'base notes:'
+      assign base_notes = desc | split: 'base notes:' | last | strip | truncate: 120
+    endif
+  endif
+
+  assign has_notes = false
+  if top_notes != blank or heart_notes != blank or base_notes != blank
+    assign has_notes = true
+  endif
+  unless has_notes
+    assign notes_source = 'none'
+  endunless
+
+  case py_style
+    when 'graphic'
+      assign modifier = 'pyramid--graphic'
+    when 'list'
+      assign modifier = 'pyramid--list'
+    when 'radial'
+      assign modifier = 'pyramid--radial'
+    when 'heritage'
+      assign modifier = 'pyramid--heritage'
+    else
+      assign modifier = ''
+  endcase
+
+  assign do_icons = show_icons
+  if show_icons == nil
+    assign do_icons = false
+    if py_style == 'iconed'
+      assign do_icons = true
+    endif
+  endif
+
+  assign accent_var = ''
+  case accent_color
+    when 'palm-green'
+      assign accent_var = '--accent-color:var(--palm-green)'
+    when 'date-red'
+      assign accent_var = '--accent-color:var(--date-red)'
+    when 'date-yellow'
+      assign accent_var = '--accent-color:var(--date-yellow)'
+    when 'desert-brown'
+      assign accent_var = '--accent-color:var(--desert-brown)'
+  endcase
+-%}
+{%- unless has_notes == false and hide_when_empty -%}
+  {%- comment -%}
+    data-notes-source records WHERE these notes came from: `metafield`
+    (the target state), `parsed` (scraped from the description, lossy),
+    or `none`. It makes the 18-of-56 data gap auditable in the rendered
+    page instead of invisible.
+  {%- endcomment -%}
+  <div class="pyramid {{ modifier }} {{ class }}"
+    data-notes-source="{{ notes_source }}"
+    {% if accent_var != blank %}style="{{ accent_var }}"{% endif %}>
+
+    {%- if heading != blank -%}
+      <h3 class="pyramid__heading">{{ heading }}</h3>
+    {%- endif -%}
+
+    {%- if has_notes -%}
+      {%- comment -%}
+        Three tiers, rendered only when the tier has content. A tier with
+        no data is omitted rather than shown empty.
+      {%- endcomment -%}
+      {%- for tier in (1..3) -%}
+        {%- liquid
+          case tier
+            when 1
+              assign tier_value = top_notes
+              assign tier_label = 'products.notes.top' | t
+              assign tier_icon = 'leaf'
+            when 2
+              assign tier_value = heart_notes
+              assign tier_label = 'products.notes.heart' | t
+              assign tier_icon = 'drop'
+            else
+              assign tier_value = base_notes
+              assign tier_label = 'products.notes.base' | t
+              assign tier_icon = 'wood'
+          endcase
+        -%}
+        {%- if tier_value != blank -%}
+          <div class="pyramid__tier">
+            {%- if do_icons -%}
+              <span class="pyramid__dot" aria-hidden="true">
+                {%- render 'icon', name: tier_icon -%}
+              </span>
+            {%- endif -%}
+            <div>
+              <p class="pyramid__label">{{ tier_label }}</p>
+              {%- if py_style == 'iconed' -%}
+                <span class="filters__row">
+                  {%- assign note_list = tier_value | split: ',' -%}
+                  {%- for note in note_list -%}
+                    {%- assign note_clean = note | strip -%}
+                    {%- if note_clean != blank -%}
+                      <span class="chip chip--scent" style="text-transform:capitalize">{{ note_clean }}</span>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </span>
+              {%- else -%}
+                <p class="pyramid__val" style="text-transform:capitalize">{{ tier_value }}</p>
+              {%- endif -%}
+            </div>
+          </div>
+          {%- if py_style == 'heritage' and forloop.last == false -%}
+            <span class="pyramid__rule" aria-hidden="true"></span>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if py_style == 'heritage' -%}
+        {%- assign provenance = product.metafields.fragrance.provenance -%}
+        {%- if provenance != blank -%}
+          <p class="pcard__provenance">{{ provenance }}</p>
+        {%- endif -%}
+      {%- endif -%}
+
+    {%- else -%}
+      {%- comment -%}
+        No notes for this product. Say so plainly rather than inventing
+        a profile — 38 of 56 products are in this state today.
+      {%- endcomment -%}
+      <p class="pyramid__empty">{{ 'products.notes.unavailable' | t }}</p>
+    {%- endif -%}
+  </div>
+{%- endunless -%}

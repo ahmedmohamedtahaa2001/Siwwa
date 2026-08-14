@@ -1,0 +1,479 @@
+{
+  "_provenance": {
+    "generated": "2026-07-28",
+    "purpose": "Demo product record for client approval. Superset schema — richer than anything the live store holds.",
+    "sources": {
+      "catalog": "reference-analysis/raw/products.json (captured 2026-07-27)",
+      "reviews": "reference-analysis/raw/reviews_complete.json",
+      "social": "instagram-assets/matched-data.json",
+      "images": "instagram-assets/pink-allure/ (dimensions read from the files)"
+    },
+    "real": [
+      "handle", "shopify_id", "naming.title",
+      "descriptions.headline / pullquote (verbatim Instagram captions)",
+      "descriptions.persona / story / best_for (verbatim body_html — format B, the strongest editorial template in the catalogue)",
+      "composition.notes — ALL THREE TIERS are labelled in body_html. Nothing here is inferred.",
+      "descriptions.voice_register",
+      "brand.launched", "commerce.variants (ids, titles, prices, availability)",
+      "media.images src / width / height / art_direction", "media.palette",
+      "media.instagram", "social_proof.reviews.average / count",
+      "social_proof.reviews.featured_quotes (verbatim Judge.me)",
+      "social_proof.engagement", "meta.published_at / updated_at"
+    ],
+    "derived": [
+      "commerce.*.value_metrics — arithmetic on real prices (0.1 ml/spray, 4 sprays/wear, 1 wear/day)",
+      "classification.family / sub_family / accords", "taxonomy.gender / gender_lean",
+      "social_proof.reviews.distribution (5.00 × 14 ⇒ all five-star)"
+    ],
+    "demo_placeholder": [
+      "concentration.percentage", "accords_chart values", "note category / natural / allergen flags",
+      "naming.arabic_name / pronunciation / name_meaning / subtitle",
+      "performance.* (longevity, sillage, seasons, occasions, time_of_day)",
+      "taxonomy.collections", "taxonomy.tags.* facets", "related.similar_to / layering_with",
+      "availability.stock_level", "featured_quotes[].verified_purchase / sentiment",
+      "meta.sort_rank"
+    ],
+    "known_gaps": [
+      "tags[] is EMPTY on the live product — Pink Allure is unreachable through FOR HER, UNISEX or any other tag-driven nav route, for a 2026 flagship launch. taxonomy.collections below is the recommended fix, not a capture.",
+      "vendor is the string 'Siwa original creation' — a value, not a brand name. Never print it as brand.",
+      "The store image filename is a raw camera UUID (D45DDE71-…jpg) with null alt — zero SEO value.",
+      "Marketed as a DUO with Pink Arrogance in 2 of 3 posts; no bundle, no cross-sell, no collection links them.",
+      "A commenter asked 'notes?' under a product whose notes ARE in body_html — no template renders them as anything but a paragraph.",
+      "Review 'E3mlolha restock b2aaa' and comment 'It might be available again. Please 😢' indicate a stockout the catalogue snapshot records as in-stock."
+    ]
+  },
+
+  "handle": "pink-allure",
+  "shopify_id": "7954860539952",
+
+  "naming": {
+    "title": "Pink Allure",
+    "arabic_name": "بينك ألور",
+    "pronunciation": "PINK a-LOOR",
+    "name_meaning": "Allure in its quietest register — attraction without effort",
+    "subtitle": "Powdery Floral Musk Extrait"
+  },
+
+  "descriptions": {
+    "headline": "The kind of femininity that doesn't ask for attention.",
+    "summary": "A presence defined by softness. Calm, polished, and effortlessly composed. The kind of aura that feels gentle, yet leaves a lasting impression.",
+    "story": "Pink Allure is built around a soft touch. It opens with a light, fresh brightness that feels clean and effortless, setting a smooth and delicate tone from the first moment. As it develops, a refined floral heart comes forward. Rose is present, but in its softest form, blended with airy petals and a subtle powdery nuance that keeps everything light and balanced. In the dry down, skin-like musk and smooth woods settle gently, wrapped in a hint of vanilla. The fragrance stays close, creating a soft, comforting trail that feels natural and elegant. A scent defined by its softness… quiet, refined, and beautifully understated.",
+    "pullquote": "The kind of femininity that doesn't ask for attention. Yet somehow gets it anyway.",
+    "persona": "A presence defined by softness. Calm, polished, and effortlessly composed.",
+    "best_for": [
+      "Daytime wear and soft occasions",
+      "Spring and warm weather",
+      "Clean, minimal styles"
+    ],
+    "voice_register": "Restrained feminine. Antithesis constructions — defines by what it does not do. Two-beat lines."
+  },
+
+  "composition": {
+    "concentration": {
+      "type": "Extrait de Parfum",
+      "percentage": "20%"
+    },
+
+    "classification": {
+      "family": "Floral Musk",
+      "sub_family": "Powdery Rose",
+      "accords": ["Powdery", "Soft Floral", "Musk"],
+      "accords_chart": {
+        "citrus": 45,
+        "floral": 90,
+        "woody": 40,
+        "oriental": 20,
+        "fresh": 55,
+        "spicy": 25,
+        "sweet": 40,
+        "powdery": 85,
+        "aquatic": 5,
+        "green": 15
+      }
+    },
+
+    "notes": {
+      "top": [
+        { "name": "Mandarin", "arabic_name": "يوسفي", "category": "citrus", "natural": true, "allergen": true },
+        { "name": "Bergamot", "arabic_name": "برغموت", "category": "citrus", "natural": true, "allergen": true },
+        { "name": "Pink Pepper", "arabic_name": "فلفل وردي", "category": "spicy", "natural": true, "allergen": false }
+      ],
+      "heart": [
+        { "name": "Soft Rose", "arabic_name": "ورد ناعم", "category": "floral", "natural": true, "allergen": true },
+        { "name": "Peony", "arabic_name": "الفاوانيا", "category": "floral", "natural": false, "allergen": false },
+        { "name": "Powdery Nuances", "arabic_name": "لمسات بودرية", "category": "powdery", "natural": false, "allergen": false }
+      ],
+      "base": [
+        { "name": "Musk", "arabic_name": "مسك", "category": "musky", "natural": false, "allergen": false },
+        { "name": "Smooth Woods", "arabic_name": "أخشاب ناعمة", "category": "woody", "natural": true, "allergen": false },
+        { "name": "Vanilla", "arabic_name": "فانيليا", "category": "gourmand", "natural": true, "allergen": false }
+      ]
+    },
+
+    "performance": {
+      "longevity": { "hours": "6–8 hours", "rating": 4.0 },
+      "sillage": { "projection": "Soft", "rating": 3.0, "distance": "Close to skin — a personal trail rather than a room-filler" },
+      "seasons": ["Spring", "Summer"],
+      "occasions": ["Daily", "Office", "Brunch", "Engagement"],
+      "time_of_day": ["Morning", "Afternoon"]
+    }
+  },
+
+  "brand": {
+    "creator": "Siwa Fragrances",
+    "inspiration": {
+      "type": "siwa_original",
+      "designer_reference": null,
+      "similarity_note": null
+    },
+    "launched": "2026-04-24",
+    "perfumer": null
+  },
+
+  "taxonomy": {
+    "gender": ["Women"],
+    "gender_lean": 80,
+    "collections": ["for-her", "women-new-drops", "new-drops", "original-creations", "siwa-perfumes"],
+    "bundles": [],
+    "tags": {
+      "vibe": ["soft", "refined", "understated", "clean"],
+      "notes_facet": ["rose", "peony", "musk", "powdery", "vanilla"],
+      "occasion": ["daily", "office", "daytime"],
+      "season": ["spring", "summer"],
+      "intensity": "soft",
+      "price_tier": "entry"
+    },
+    "related": {
+      "pairs_with": ["pink-arrogance"],
+      "similar_to": ["soul-poudree", "alluring-rose"],
+      "layering_with": ["pink-arrogance", "silk-vanilla"]
+    }
+  },
+
+  "commerce": {
+    "variants": [
+      {
+        "id": "42973000663088",
+        "title": "30 ml",
+        "size_ml": 30,
+        "price": 590,
+        "compare_at_price": null,
+        "available": true,
+        "sku": null,
+
+        "value_metrics": {
+          "cost_per_ml": 19.67,
+          "estimated_sprays": 300,
+          "cost_per_spray": 1.97,
+          "total_wears": 75,
+          "usage_estimate_days": "~2.5 months at daily wear",
+          "monthly_cost": 236,
+          "savings_vs_smaller": null,
+          "best_value": false,
+          "recommended": false
+        }
+      },
+      {
+        "id": "42973000695856",
+        "title": "50 ml",
+        "size_ml": 50,
+        "price": 850,
+        "compare_at_price": null,
+        "available": true,
+        "sku": null,
+
+        "value_metrics": {
+          "cost_per_ml": 17.0,
+          "estimated_sprays": 500,
+          "cost_per_spray": 1.7,
+          "total_wears": 125,
+          "usage_estimate_days": "~4 months at daily wear",
+          "monthly_cost": 204,
+          "savings_vs_smaller": 13.6,
+          "best_value": false,
+          "recommended": true
+        }
+      },
+      {
+        "id": "42973000728624",
+        "title": "100 ml",
+        "size_ml": 100,
+        "price": 1400,
+        "compare_at_price": null,
+        "available": true,
+        "sku": null,
+
+        "value_metrics": {
+          "cost_per_ml": 14.0,
+          "estimated_sprays": 1000,
+          "cost_per_spray": 1.4,
+          "total_wears": 250,
+          "usage_estimate_days": "~8 months at daily wear",
+          "monthly_cost": 168,
+          "savings_vs_smaller": 17.6,
+          "best_value": true,
+          "recommended": false
+        }
+      }
+    ],
+
+    "pricing": {
+      "price_min": 590,
+      "price_max": 1400,
+      "entry_point": { "size_ml": 30, "price": 590 },
+      "best_value": { "size_ml": 100, "price": 1400, "savings_vs_entry_percent": 29 },
+      "recommended": { "size_ml": 50, "price": 850 },
+      "size_incentives": [
+        {
+          "from_size_ml": 30,
+          "to_size_ml": 50,
+          "save_percent": 14,
+          "save_amount": 134,
+          "message": "Add LE 260 for 20 ml more — LE 134 cheaper than buying the extra at 30 ml rates."
+        },
+        {
+          "from_size_ml": 50,
+          "to_size_ml": 100,
+          "save_percent": 18,
+          "save_amount": 300,
+          "message": "Double the bottle for LE 550 — LE 300 less than two 50 ml."
+        }
+      ],
+      "on_sale": false,
+      "sale_ends": null
+    },
+
+    "availability": {
+      "in_stock": true,
+      "stock_level": "in_stock",
+      "restock_date": null,
+      "backorder_available": false
+    }
+  },
+
+  "media": {
+    "images": [
+      {
+        "src": "instagram-assets/pink-allure/DZVlKydl2I0_1.jpg",
+        "alt": "Pink Allure bottle lying on rippling blush-pink satin, curved glass refracting across the black label",
+        "width": 848,
+        "height": 1130,
+        "position": 1,
+        "type": "hero",
+        "art_direction": "Overhead three-quarter. Soft, dreamy, high-key. Strongest candidate for a full-bleed editorial band.",
+        "usage": ["pdp_hero", "full_bleed_band", "collection_card"]
+      },
+      {
+        "src": "instagram-assets/pink-allure/DZ5oMKtF7aa_1.jpg",
+        "alt": "Pink Allure sharp in the foreground with Pink Arrogance soft-focus behind it on a pale blush ground",
+        "width": 848,
+        "height": 1130,
+        "position": 2,
+        "type": "duo",
+        "art_direction": "Paired shot framed by out-of-focus curved glass. Reads as a duo / collection module — the bundle that does not yet exist.",
+        "usage": ["pdp_gallery", "cross_sell_module"]
+      },
+      {
+        "src": "instagram-assets/pink-allure/DZGMMDtKWf7_1.jpg",
+        "alt": "Pink Allure bottle against a blush background, label lockup fully legible",
+        "width": 880,
+        "height": 983,
+        "position": 3,
+        "type": "still_life",
+        "art_direction": "Cleanest read of the label lockup: SIWA FRAGRANCES / Pink Allure / EXTRAIT DE PARFUM.",
+        "usage": ["pdp_gallery", "label_detail"]
+      },
+      {
+        "src": "instagram-assets/pink-allure/DZVlKydl2I0_2.jpg",
+        "alt": "Extreme close crop of the Pink Allure bottle — glass and blush liquid abstraction",
+        "width": 848,
+        "height": 1130,
+        "position": 4,
+        "type": "texture",
+        "art_direction": "Usable as a texture / background plate behind type.",
+        "usage": ["section_background", "pdp_gallery"]
+      },
+      {
+        "src": "instagram-assets/pink-allure/DZVlKydl2I0_3.jpg",
+        "alt": "Third angle of Pink Allure on the blush liquid set",
+        "width": 848,
+        "height": 1130,
+        "position": 5,
+        "type": "still_life",
+        "art_direction": "Third angle, same set.",
+        "usage": ["pdp_gallery"]
+      },
+      {
+        "src": "instagram-assets/pink-allure/DZ5oMKtF7aa_2.jpg",
+        "alt": "Reverse framing of the Pink Allure and Pink Arrogance pair",
+        "width": 848,
+        "height": 1130,
+        "position": 6,
+        "type": "duo",
+        "art_direction": "Reverse framing of the same pair.",
+        "usage": ["pdp_gallery", "cross_sell_module"]
+      },
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/D45DDE71-48A7-4B1C-BE46-ACA593B54BA0.jpg?v=1776984937",
+        "alt": "Pink Allure Extrait de Parfum, clear glass cylinder with a black gloss cap and matte black label",
+        "width": 1080,
+        "height": 1080,
+        "position": 7,
+        "type": "packshot",
+        "art_direction": "The live store's only product image. Raw camera UUID filename, alt was null in the capture and is written new here.",
+        "usage": ["cart_thumbnail", "search_result", "structured_data"]
+      }
+    ],
+
+    "palette": {
+      "primary": "#B98A8C",
+      "secondary": "#EBD3D2",
+      "accent": "#F2DCDC",
+      "background": "#FBF1F0",
+      "text_on_primary": "#FBF1F0",
+      "css_vars": {
+        "--fragrance-primary": "#B98A8C",
+        "--fragrance-secondary": "#EBD3D2",
+        "--fragrance-accent": "#F2DCDC",
+        "--fragrance-bg": "#FBF1F0",
+        "--fragrance-text": "#171416"
+      }
+    },
+
+    "instagram": [
+      {
+        "shortcode": "DZGMMDtKWf7",
+        "url": "https://www.instagram.com/p/DZGMMDtKWf7/",
+        "date": "2026-06-02",
+        "type": "single",
+        "likes": 41,
+        "comments": 9,
+        "caption": "The kind of femininity that doesn't ask for attention. Yet somehow gets it anyway. Pink Allure.",
+        "notable_comments": [
+          { "user": "mo0395sh", "body": "It might be available again. Please 😢", "signal": "restock demand" },
+          { "user": "areej.966", "body": "notes?", "signal": "notes not discoverable" }
+        ]
+      },
+      {
+        "shortcode": "DZ5oMKtF7aa",
+        "url": "https://www.instagram.com/p/DZ5oMKtF7aa/",
+        "date": "2026-06-22",
+        "type": "carousel",
+        "likes": 35,
+        "comments": 0,
+        "caption": "Two signatures. Waiting to be worn your way!",
+        "pairs_with": "pink-arrogance"
+      },
+      {
+        "shortcode": "DZVlKydl2I0",
+        "url": "https://www.instagram.com/p/DZVlKydl2I0/",
+        "date": "2026-06-08",
+        "type": "carousel",
+        "likes": 35,
+        "comments": 0,
+        "caption": "Two shades of pink. One draws you in. One takes up the room.",
+        "pairs_with": "pink-arrogance"
+      }
+    ]
+  },
+
+  "social_proof": {
+    "reviews": {
+      "average": 5.0,
+      "count": 14,
+      "distribution": { "5": 14, "4": 0, "3": 0, "2": 0, "1": 0 },
+      "featured_quotes": [
+        {
+          "rating": 5,
+          "author": "Yasmin Mohsen",
+          "body": "Amazing perfume, smells great and lasts well. Please don’t increase the price!",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": "positive",
+            "sillage": null,
+            "compliments_mentioned": false,
+            "repurchase_intent": true
+          }
+        },
+        {
+          "rating": 5,
+          "author": "Dalia Shawky",
+          "body": "حبيته جداً 🌸 ناعم وشيك🌸",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": null,
+            "sillage": null,
+            "compliments_mentioned": false,
+            "repurchase_intent": false
+          }
+        },
+        {
+          "rating": 5,
+          "author": "Anonymous",
+          "body": "تحفة كان جدا وثابت اووي بالايام وتقيل",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": "positive",
+            "sillage": "positive",
+            "compliments_mentioned": false,
+            "repurchase_intent": false
+          }
+        },
+        {
+          "rating": 5,
+          "author": "Anonymous",
+          "body": "E3mlolha restock b2aaa",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": null,
+            "sillage": null,
+            "compliments_mentioned": false,
+            "repurchase_intent": true
+          }
+        },
+        {
+          "rating": 5,
+          "author": "Anonymous",
+          "body": "تحفه",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": null,
+            "sillage": null,
+            "compliments_mentioned": false,
+            "repurchase_intent": false
+          }
+        }
+      ]
+    },
+
+    "engagement": {
+      "instagram_likes": 111,
+      "instagram_comments": 9,
+      "user_photos_count": 0
+    },
+
+    "badges": ["New Drop", "5.00★ across every review"]
+  },
+
+  "meta": {
+    "published": true,
+    "published_at": "2026-04-24T02:05:44+03:00",
+    "updated_at": "2026-07-27T21:19:20+03:00",
+    "status": "active",
+    "featured": true,
+    "sort_rank": 1,
+    "completeness": {
+      "has_story": true,
+      "has_structured_notes": true,
+      "has_images": true,
+      "has_reviews": true,
+      "has_instagram": true,
+      "score": 95
+    }
+  }
+}

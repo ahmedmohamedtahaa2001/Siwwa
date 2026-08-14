@@ -1,0 +1,73 @@
+{%- comment -%}
+  Card — 5 variants. The base container behind product-card,
+  collection-card, feature-card and testimonial-card (all Phase 2).
+
+  Styles: ../component-library/css/components.css (.card and modifiers)
+          ../component-library/css/tokens.css     (.vintage-surface)
+
+  Variants (the `style` argument):
+    flat      -> .card--flat      Sailcloth fill, no border, no shadow
+    hairline  -> .card--hairline  canvas fill, 1px hairline border
+    lift      -> .card--lift      flat + 2px rise on hover/focus-within
+    vintage   -> .vintage-surface paper grain, vignette, edge wear
+    dark      -> .card--dark      Black Mesa fill, on-dark text
+
+  Because a snippet cannot wrap caller markup, the card is rendered by
+  passing pre-captured content in `content`:
+
+    {%- capture card_body -%}
+      ...markup...
+    {%- endcapture -%}
+    {% render 'card', style: 'lift', content: card_body %}
+
+  Accepts:
+    content   {String}   captured inner markup
+    style     {String}   flat | hairline | lift | vintage | dark
+    padding   {Number}   px, overrides --card-pad (schema range 8–48)
+    tag       {String}   div | article | li  (structural, default div)
+    href      {String}   when present the whole card becomes a link
+    aria_label {String}  required when href is set and content is visual
+    class     {String}
+    id        {String}
+
+  Accessibility: when `href` is set the card renders as <a>. Do not nest
+  another link inside it — pass the link as the card itself.
+{%- endcomment -%}
+{%- liquid
+  assign card_style = style | default: 'flat'
+
+  case card_style
+    when 'hairline'
+      assign modifier = 'card--hairline'
+    when 'lift'
+      assign modifier = 'card--lift'
+    when 'vintage'
+      assign modifier = 'card--vintage vintage-surface'
+    when 'dark'
+      assign modifier = 'card--dark'
+    else
+      assign modifier = 'card--flat'
+  endcase
+
+  assign card_tag = tag | default: 'div'
+  if href != blank
+    assign card_tag = 'a'
+  endif
+
+  assign pad_style = ''
+  if padding != blank
+    assign pad_style = '--card-pad:' | append: padding | append: 'px'
+  endif
+-%}
+<{{ card_tag }}
+  {% if id != blank %}id="{{ id }}"{% endif %}
+  class="card {{ modifier }} {{ class }}"
+  {% if pad_style != blank %}style="{{ pad_style }}"{% endif %}
+  {% if href != blank %}href="{{ href }}"{% endif %}
+  {% if aria_label != blank %}aria-label="{{ aria_label | escape }}"{% endif %}
+>
+  {%- if card_style == 'vintage' -%}
+    <span class="edge-wear" aria-hidden="true"></span>
+  {%- endif -%}
+  {{ content }}
+</{{ card_tag }}>

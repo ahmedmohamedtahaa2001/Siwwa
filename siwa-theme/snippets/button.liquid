@@ -1,0 +1,102 @@
+{%- comment -%}
+  Button — 5 variants.
+
+  Renders the component library's existing .btn classes; no button CSS
+  lives in this theme. Source of styles:
+    ../component-library/css/components.css  (.btn and modifiers)
+
+  Variants (the `style` argument):
+    minimal  -> .btn--secondary  hairline border, transparent fill
+    primary  -> .btn             Unforgettably Gold, ink label (4.72:1 AA)
+    dark     -> .btn--dark       for --surface-dark strips
+    ghost    -> .btn--tertiary   no border or fill, underlined link
+    icon     -> .btn + glyph     primary fill with a leading icon
+
+  Accepts:
+    label      {String}  visible text. ALWAYS from a schema setting or
+                         a locale key — never written here.
+    url        {String}  when present renders <a>, otherwise <button>
+    style      {String}  minimal | primary | dark | ghost | icon
+    icon       {String}  glyph name, used when style == 'icon'
+    icon_is_directional {Boolean} mirror the glyph under RTL (arrows)
+    size       {String}  sm | md | lg
+    full_width {Boolean} .btn--block
+    disabled   {Boolean}
+    type       {String}  button | submit  (ignored when url is present)
+    name,value {String}  form attributes
+    aria_label {String}  when the label alone is not descriptive
+    id         {String}
+
+  Usage:
+    {% render 'button',
+       label: section.settings.cta_label,
+       url: section.settings.cta_url,
+       style: section.settings.cta_style,
+       icon: 'arrow-right',
+       icon_is_directional: true %}
+{%- endcomment -%}
+{%- liquid
+  assign btn_style = style | default: 'primary'
+  assign btn_size = size | default: 'md'
+
+  case btn_style
+    when 'minimal'
+      assign style_class = 'btn--secondary'
+    when 'dark'
+      assign style_class = 'btn--dark'
+    when 'ghost'
+      assign style_class = 'btn--tertiary'
+    else
+      assign style_class = ''
+  endcase
+
+  case btn_size
+    when 'sm'
+      assign size_class = 'btn--sm'
+    when 'lg'
+      assign size_class = 'btn--lg'
+    else
+      assign size_class = ''
+  endcase
+
+  assign block_class = ''
+  if full_width
+    assign block_class = 'btn--block'
+  endif
+
+  assign icon_class = 'btn__icon'
+  if icon_is_directional
+    assign icon_class = 'btn__icon btn__icon--dir'
+  endif
+
+  assign classes = 'btn' | append: ' ' | append: style_class | append: ' ' | append: size_class | append: ' ' | append: block_class | append: ' ' | append: class | strip
+-%}
+{%- capture button_inner -%}
+  {%- if btn_style == 'icon' and icon != blank -%}
+    {%- render 'icon', name: icon, class: icon_class -%}
+  {%- endif -%}
+  <span class="btn__label">{{ label }}</span>
+{%- endcapture -%}
+{%- if url != blank -%}
+  <a
+    {% if id != blank %}id="{{ id }}"{% endif %}
+    class="{{ classes }}"
+    href="{{ url }}"
+    {% if aria_label != blank %}aria-label="{{ aria_label | escape }}"{% endif %}
+    {% if disabled %}aria-disabled="true" tabindex="-1"{% endif %}
+  >
+    {{- button_inner -}}
+  </a>
+{%- else -%}
+  <button
+    {% if id != blank %}id="{{ id }}"{% endif %}
+    class="{{ classes }}"
+    type="{{ type | default: 'button' }}"
+    {% if name != blank %}name="{{ name }}"{% endif %}
+    {% if value != blank %}value="{{ value }}"{% endif %}
+    {% if aria_label != blank %}aria-label="{{ aria_label | escape }}"{% endif %}
+    {% if disabled %}disabled{% endif %}
+  >
+    {{- button_inner -}}
+  </button>
+{%- endif -%}

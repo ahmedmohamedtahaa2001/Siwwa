@@ -1,0 +1,90 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "reviews_badge": {
+          "type": "reviews_badge",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "price_contrast": {
+          "type": "price_contrast",
+          "settings": {
+            "show_comparison": false,
+            "show_retail_price": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {}
+        },
+        "quantity": {
+          "type": "quantity",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "note_pyramid": {
+          "type": "note_pyramid",
+          "settings": {
+            "hide_when_empty": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "reviews_badge",
+        "price",
+        "price_contrast",
+        "variant_picker",
+        "quantity",
+        "buy_buttons",
+        "description",
+        "note_pyramid",
+        "share"
+      ],
+      "settings": {
+        "layout": "standard"
+      }
+    },
+    "related": {
+      "type": "featured-collections",
+      "settings": {
+        "layout": "carousel"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related"
+  ],
+  "_comment": [
+    "Product template. The announcement bar switches to the quiet",
+    "shipping-meter variant here — see sections/announcement-bar.liquid.",
+    "Set it per-template in the theme editor: Announcement bar → Style →",
+    "Quiet + shipping meter."
+  ]
+}

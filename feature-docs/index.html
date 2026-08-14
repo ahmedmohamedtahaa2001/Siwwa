@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Siwa — Feature Programme, section by section</title>
+<meta name="description" content="Every feature in the Siwa rebuild programme, with the section designs built for it — 30 features across six tracks, mapped to 120 section variants.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23b18044'/><text x='16' y='23' font-size='18' text-anchor='middle' fill='%23212012' font-family='serif'>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../component-library/css/tokens.css">
+<link rel="stylesheet" href="../component-library/css/library.css">
+<link rel="stylesheet" href="../component-library/css/components.css">
+<link rel="stylesheet" href="../component-library/css/sections.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to features</a>
+
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="../component-library/index.html">
+      <b>SIWA</b>
+      <span class="ar" lang="ar" dir="rtl">سيوة</span>
+      <small>Feature Programme</small>
+    </a>
+    <div class="side__search">
+      <label class="field">
+        <span class="lbl" style="font-size:10px">Filter features</span>
+        <input class="input" id="libFilter" type="search" placeholder="A-01, quiz, reviews…" autocomplete="off">
+      </label>
+    </div>
+    <nav class="side__nav" id="nav" aria-label="Features"></nav>
+    <div style="margin-top:auto;padding-top:var(--sp-md);border-top:1px solid var(--hairline);display:grid;gap:6px">
+      <a class="lnk lnk--arrow" href="../component-library/index.html">78 components</a>
+      <a class="lnk lnk--arrow" href="../component-library/sections.html">120 section designs</a>
+      <a class="lnk lnk--arrow" href="../feature-doc/index.html">The written programme</a>
+    </div>
+  </aside>
+
+  <main class="main" id="top">
+    <div class="wrap">
+
+      <div class="topbar">
+        <span class="p p0">30 features</span>
+        <span class="p p1">6 tracks</span>
+        <span class="spacer"></span>
+        <div class="langtog" role="group" aria-label="Language">
+          <button data-loc="en" aria-pressed="true">EN</button>
+          <button data-loc="ar" aria-pressed="false" lang="ar">ع</button>
+        </div>
+      </div>
+
+      <header class="masthead">
+        <h1>Feature Programme</h1>
+        <p>
+          The same 126 section designs as
+          <a class="lnk" href="../component-library/sections.html">the section gallery</a>,
+          regrouped by the feature each one implements. Thirty features across six tracks, taken
+          from <a class="lnk" href="../feature-doc/index.html">the written programme</a> —
+          findability, the product page, basket building, trust, identity, retention.
+        </p>
+        <div class="stats">
+          <div class="stat"><b>30</b><span>Features</span></div>
+          <div class="stat"><b>6</b><span>Tracks</span></div>
+          <div class="stat"><b>126</b><span>Section designs</span></div>
+          <div class="stat"><b>78</b><span>Components</span></div>
+        </div>
+        <div class="callout">
+          <b>One source, two views.</b> The designs live in
+          <code>component-library/js/sections.js</code> and are rendered here and in the section
+          gallery from the same definitions — so a change lands in both, and neither can drift
+          from the other.
+        </div>
+      </header>
+
+      <div id="content"></div>
+    </div>
+  </main>
+</div>
+
+<div id="drawerHost"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>window.SIWA_IMG_BASE = "../component-library/img/";</script>
+<script src="../component-library/js/data.js"></script>
+<script src="../component-library/js/library.js"></script>
+<script src="../component-library/js/sections.js"></script>
+<script>
+(() => {
+  const mount = document.getElementById('content');
+  const nav = document.getElementById('nav');
+  const esc = SIWA.helpers.esc, digits = SIWA.helpers.digits;
+  const SECS = window.SIWA_SECTIONS, FEATS = window.SIWA_FEATURES;
+  const AR = () => SIWA.locale === 'ar';
+  const T = (en, ar) => AR() ? ar : en;
+
+  // feature code -> [{section, variantIndex, variantName, doc}]
+  function designsFor(code) {
+    const out = [];
+    SECS.forEach(s => {
+      if (!s.features.includes(code)) return;
+      s.variants.forEach((v, i) => out.push({ s, i, v }));
+    });
+    return out;
+  }
+
+  const STATUS = {
+    built:   [T('Built', 'مبني'),   'status--built'],
+    spec:    [T('Specified', 'محدد'), 'status--spec'],
+    blocked: [T('Blocked', 'معلّق'), 'status--blocked']
+  };
+
+  function draw() {
+    document.documentElement.lang = SIWA.locale;
+    document.documentElement.dir = AR() ? 'rtl' : 'ltr';
+
+    mount.innerHTML = FEATS.map(([letter, title, feats]) => `
+      <section class="track" id="track-${letter}">
+        <div class="track__h"><b>${letter}</b><h2>${esc(title)}</h2></div>
+        ${feats.map(([code, name, status]) => {
+          const d = designsFor(code);
+          const [slabel, scls] = STATUS[status] || STATUS.spec;
+          return `<article class="feat" id="${code}">
+            <div class="feat__h">
+              <span class="fcode fcode--${letter}">${code}</span>
+              <h3>${esc(name)}</h3>
+              <span class="status ${scls}" style="margin-inline-start:auto">${slabel}</span>
+            </div>
+            <div class="feat__body">
+              ${d.length ? `
+                <p class="t-muted" style="font-size:var(--t-body-sm)">
+                  ${digits(d.length)} ${T('section designs implement this feature', 'تصميماً للأقسام تنفّذ هذه الميزة')}
+                  — ${[...new Set(d.map(x => x.s.name))].map(esc).join(' · ')}
+                </p>
+                <div class="feat__links">${d.map(x =>
+                  `<a class="chip" href="../component-library/sections.html#${x.s.id}-${x.i + 1}">
+                     ${esc(x.s.name)} <span class="n">${digits(x.i + 1)}. ${esc(x.v.n)}</span></a>`).join('')}</div>`
+              : `<p class="feat__none">${T('No section design yet — this feature is delivered by a component rather than a whole section, or is still pending.', 'لا يوجد تصميم قسم بعد — تُنفَّذ هذه الميزة عبر مكوّن لا قسم كامل، أو ما زالت معلّقة.')}</p>`}
+            </div>
+          </article>`;
+        }).join('')}
+      </section>`).join('');
+
+    nav.innerHTML = FEATS.map(([letter, title, feats]) => `
+      <div class="side__grp"><h4>${letter} — ${esc(title.split('—')[0].trim())}</h4>
+        <ul>${feats.map(([code, name]) => {
+          const n = designsFor(code).length;
+          return `<li><a href="#${code}" data-nav="${code} ${esc(name)}">${code} ${esc(name)}
+            <span class="p ${n ? 'p1' : 'p3'}">${digits(n)}</span></a></li>`;
+        }).join('')}</ul></div>`).join('');
+
+    document.querySelectorAll('[data-loc]').forEach(b => b.setAttribute('aria-pressed', b.dataset.loc === SIWA.locale));
+  }
+
+  document.addEventListener('click', e => {
+    const l = e.target.closest('[data-loc]');
+    if (l) { SIWA.setLocale(l.dataset.loc); draw(); }
+  }, true);
+  document.addEventListener('input', e => {
+    if (e.target.id !== 'libFilter') return;
+    const q = e.target.value.toLowerCase();
+    nav.querySelectorAll('a[data-nav]').forEach(a => {
+      a.parentElement.style.display = a.dataset.nav.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+  draw();
+})();
+</script>
+</body>
+</html>

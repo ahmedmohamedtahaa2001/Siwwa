@@ -1,0 +1,2255 @@
+{
+  "vanilla-cream-duo@1440": {
+    "page": {
+      "h": 9802,
+      "bodyBg": "rgb(250, 250, 250)"
+    },
+    "rail": {
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 96
+      },
+      "pad": {
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "maxWidth": "2000px"
+      }
+    },
+    "heroGrid": {
+      "box": {
+        "x": 80,
+        "y": 1449,
+        "w": 1280,
+        "h": 5350
+      },
+      "style": {
+        "display": "flex",
+        "gridTemplateColumns": "none",
+        "columnGap": "0px",
+        "rowGap": "0px"
+      }
+    },
+    "media": {
+      "box": {
+        "x": 80,
+        "y": 1449,
+        "w": 640,
+        "h": 5350
+      },
+      "style": {
+        "maxWidth": "50%",
+        "width": "640px"
+      }
+    },
+    "info": {
+      "box": {
+        "x": 770,
+        "y": 1449,
+        "w": 590,
+        "h": 1457
+      },
+      "style": {
+        "maxWidth": "600px",
+        "position": "sticky",
+        "top": "30px"
+      }
+    },
+    "firstSlide": {
+      "x": 80,
+      "y": 1449,
+      "w": 640,
+      "h": 669
+    },
+    "mediaBox": {
+      "x": 80,
+      "y": 1449,
+      "w": 640,
+      "h": 669
+    },
+    "h1": {
+      "box": {
+        "x": 770,
+        "y": 1449,
+        "w": 234,
+        "h": 34
+      },
+      "type": {
+        "fontSize": "24px",
+        "fontWeight": "600",
+        "lineHeight": "33.6px",
+        "letterSpacing": "0.96px",
+        "textTransform": "uppercase"
+      }
+    },
+    "variantTitle": {
+      "box": {
+        "x": 770,
+        "y": 1489,
+        "w": 590,
+        "h": 24
+      },
+      "type": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "letterSpacing": "0.6px",
+        "textTransform": "none"
+      }
+    },
+    "tagline": {
+      "box": {
+        "x": 770,
+        "y": 1553,
+        "w": 590,
+        "h": 30
+      },
+      "type": {
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "letterSpacing": "0.6px",
+        "textTransform": "none"
+      },
+      "style": {
+        "borderLeftWidth": "2px",
+        "marginTop": "40px",
+        "marginBottom": "40px",
+        "paddingLeft": "0px"
+      }
+    },
+    "atc": {
+      "box": {
+        "x": 770,
+        "y": 2001,
+        "w": 590,
+        "h": 46
+      },
+      "style": {
+        "height": "46px",
+        "backgroundColor": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "width": "590px"
+      }
+    },
+    "accordion": {
+      "root": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "style": {
+        "borderTopWidth": "0px",
+        "marginTop": "0px"
+      },
+      "count": 4,
+      "header": {
+        "box": {
+          "x": 770,
+          "y": 2068,
+          "w": 590,
+          "h": 55
+        },
+        "style": {
+          "paddingTop": "12.5px",
+          "paddingBottom": "12.5px"
+        }
+      },
+      "icon": {
+        "x": 1330,
+        "y": 2081,
+        "w": 30,
+        "h": 30
+      }
+    },
+    "scentNotes": {
+      "box": null,
+      "row": null,
+      "third": {
+        "box": null,
+        "style": null
+      },
+      "twoThirds": {
+        "box": null,
+        "style": null
+      },
+      "section": {
+        "box": null,
+        "style": null
+      },
+      "label": {
+        "box": null,
+        "type": null,
+        "style": null
+      }
+    },
+    "quotes": {
+      "box": {
+        "x": 0,
+        "y": 6965,
+        "w": 1440,
+        "h": 185
+      },
+      "text": {
+        "box": {
+          "x": 80,
+          "y": 7025,
+          "w": 427,
+          "h": 65
+        },
+        "style": {
+          "maxWidth": "none",
+          "paddingRight": "0px",
+          "width": "426.609px"
+        }
+      },
+      "img": {
+        "x": 507,
+        "y": 7043,
+        "w": 127,
+        "h": 29
+      }
+    },
+    "stickyCta": {
+      "box": {
+        "x": 0,
+        "y": 8914,
+        "w": 1440,
+        "h": 163
+      },
+      "style": {
+        "position": "static",
+        "bottom": "auto",
+        "display": "block",
+        "justifyContent": "normal",
+        "minHeight": "0px"
+      }
+    },
+    "sections": [
+      {
+        "id": "announcement-bar",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 96
+        }
+      },
+      {
+        "id": "header",
+        "box": {
+          "x": 0,
+          "y": 96,
+          "w": 1440,
+          "h": 71
+        }
+      },
+      {
+        "id": "shop-nav-drawer",
+        "box": {
+          "x": 0,
+          "y": 167,
+          "w": 1440,
+          "h": 1252
+        }
+      },
+      {
+        "id": "breadcrumbs",
+        "box": {
+          "x": 0,
+          "y": 1419,
+          "w": 1440,
+          "h": 30
+        }
+      },
+      {
+        "id": "main",
+        "box": {
+          "x": 0,
+          "y": 1449,
+          "w": 1440,
+          "h": 5410
+        }
+      },
+      {
+        "id": "product-related-collection",
+        "box": {
+          "x": 0,
+          "y": 6859,
+          "w": 1440,
+          "h": 76
+        }
+      },
+      {
+        "id": "perfume-quotes",
+        "box": {
+          "x": 0,
+          "y": 6965,
+          "w": 1440,
+          "h": 185
+        }
+      },
+      {
+        "id": "custom_liquid_A7MtHK",
+        "box": {
+          "x": 0,
+          "y": 7150,
+          "w": 1440,
+          "h": 1658
+        }
+      },
+      {
+        "id": "related-products",
+        "box": {
+          "x": 0,
+          "y": 8808,
+          "w": 1440,
+          "h": 76
+        }
+      },
+      {
+        "id": "pdp-sticky-cta",
+        "box": {
+          "x": 0,
+          "y": 8914,
+          "w": 1440,
+          "h": 163
+        }
+      },
+      {
+        "id": "footer",
+        "box": {
+          "x": 0,
+          "y": 9157,
+          "w": 1440,
+          "h": 645
+        }
+      }
+    ],
+    "consoleErrors": [
+      "Access to font at 'file://phlur.com/cdn/shop/t/50/assets/ABCRepro-Regular.woff2?v=34804900962658174201712624869' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/shop/t/50/assets/ABCReproMono-Medium.woff2?v=176760288586883009441712624865' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+    ],
+    "overflow": false
+  },
+  "missing-person-50ml@1440": {
+    "page": {
+      "h": 8621,
+      "bodyBg": "rgb(250, 250, 250)"
+    },
+    "rail": {
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 96
+      },
+      "pad": {
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "maxWidth": "2000px"
+      }
+    },
+    "heroGrid": {
+      "box": {
+        "x": 80,
+        "y": 1401,
+        "w": 1280,
+        "h": 3344
+      },
+      "style": {
+        "display": "flex",
+        "gridTemplateColumns": "none",
+        "columnGap": "0px",
+        "rowGap": "0px"
+      }
+    },
+    "media": {
+      "box": {
+        "x": 80,
+        "y": 1401,
+        "w": 640,
+        "h": 3344
+      },
+      "style": {
+        "maxWidth": "50%",
+        "width": "640px"
+      }
+    },
+    "info": {
+      "box": {
+        "x": 770,
+        "y": 1401,
+        "w": 590,
+        "h": 2742
+      },
+      "style": {
+        "maxWidth": "600px",
+        "position": "sticky",
+        "top": "30px"
+      }
+    },
+    "firstSlide": {
+      "x": 80,
+      "y": 1401,
+      "w": 640,
+      "h": 669
+    },
+    "mediaBox": {
+      "x": 80,
+      "y": 1401,
+      "w": 640,
+      "h": 669
+    },
+    "h1": {
+      "box": {
+        "x": 770,
+        "y": 1401,
+        "w": 223,
+        "h": 34
+      },
+      "type": {
+        "fontSize": "24px",
+        "fontWeight": "600",
+        "lineHeight": "33.6px",
+        "letterSpacing": "0.96px",
+        "textTransform": "uppercase"
+      }
+    },
+    "variantTitle": {
+      "box": {
+        "x": 770,
+        "y": 1441,
+        "w": 590,
+        "h": 24
+      },
+      "type": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "letterSpacing": "0.6px",
+        "textTransform": "none"
+      }
+    },
+    "tagline": {
+      "box": {
+        "x": 770,
+        "y": 1505,
+        "w": 590,
+        "h": 30
+      },
+      "type": {
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "letterSpacing": "0.6px",
+        "textTransform": "none"
+      },
+      "style": {
+        "borderLeftWidth": "2px",
+        "marginTop": "40px",
+        "marginBottom": "40px",
+        "paddingLeft": "0px"
+      }
+    },
+    "atc": {
+      "box": {
+        "x": 770,
+        "y": 3295,
+        "w": 590,
+        "h": 46
+      },
+      "style": {
+        "height": "46px",
+        "backgroundColor": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "width": "590px"
+      }
+    },
+    "accordion": {
+      "root": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "style": {
+        "borderTopWidth": "0px",
+        "marginTop": "0px"
+      },
+      "count": 3,
+      "header": {
+        "box": {
+          "x": 770,
+          "y": 3362,
+          "w": 590,
+          "h": 55
+        },
+        "style": {
+          "paddingTop": "12.5px",
+          "paddingBottom": "12.5px"
+        }
+      },
+      "icon": {
+        "x": 1330,
+        "y": 3374,
+        "w": 30,
+        "h": 30
+      }
+    },
+    "scentNotes": {
+      "box": {
+        "x": 0,
+        "y": 4805,
+        "w": 1440,
+        "h": 629
+      },
+      "row": {
+        "display": "flex",
+        "gap": "30px",
+        "flexDirection": "row"
+      },
+      "third": {
+        "box": {
+          "x": 80,
+          "y": 4951,
+          "w": 417,
+          "h": 423
+        },
+        "style": {
+          "width": "416.656px",
+          "order": "0"
+        }
+      },
+      "twoThirds": {
+        "box": {
+          "x": 527,
+          "y": 4951,
+          "w": 833,
+          "h": 29
+        },
+        "style": {
+          "width": "833.344px",
+          "order": "0"
+        }
+      },
+      "section": {
+        "box": {
+          "x": 80,
+          "y": 4951,
+          "w": 417,
+          "h": 141
+        },
+        "style": {
+          "borderTopWidth": "1px",
+          "paddingTop": "25px",
+          "paddingBottom": "25px",
+          "fontSize": "20px",
+          "letterSpacing": "0.6px",
+          "lineHeight": "30px"
+        }
+      },
+      "label": {
+        "box": {
+          "x": 80,
+          "y": 4977,
+          "w": 104,
+          "h": 30
+        },
+        "type": {
+          "fontSize": "11px",
+          "fontWeight": "400",
+          "lineHeight": "30px",
+          "letterSpacing": "0.6px",
+          "textTransform": "uppercase"
+        },
+        "style": {
+          "width": "104.156px"
+        }
+      }
+    },
+    "quotes": {
+      "box": {
+        "x": 0,
+        "y": 5540,
+        "w": 1440,
+        "h": 362
+      },
+      "text": {
+        "box": {
+          "x": 80,
+          "y": 5600,
+          "w": 427,
+          "h": 242
+        },
+        "style": {
+          "maxWidth": "none",
+          "paddingRight": "0px",
+          "width": "426.609px"
+        }
+      },
+      "img": {
+        "x": 507,
+        "y": 5706,
+        "w": 127,
+        "h": 29
+      }
+    },
+    "stickyCta": {
+      "box": {
+        "x": 0,
+        "y": 7733,
+        "w": 1440,
+        "h": 163
+      },
+      "style": {
+        "position": "static",
+        "bottom": "auto",
+        "display": "block",
+        "justifyContent": "normal",
+        "minHeight": "0px"
+      }
+    },
+    "sections": [
+      {
+        "id": "announcement-bar",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 96
+        }
+      },
+      {
+        "id": "header",
+        "box": {
+          "x": 0,
+          "y": 96,
+          "w": 1440,
+          "h": 71
+        }
+      },
+      {
+        "id": "shop-nav-drawer",
+        "box": {
+          "x": 0,
+          "y": 167,
+          "w": 1440,
+          "h": 1204
+        }
+      },
+      {
+        "id": "breadcrumbs",
+        "box": {
+          "x": 0,
+          "y": 1371,
+          "w": 1440,
+          "h": 30
+        }
+      },
+      {
+        "id": "main",
+        "box": {
+          "x": 0,
+          "y": 1401,
+          "w": 1440,
+          "h": 3404
+        }
+      },
+      {
+        "id": "product-scent-notes",
+        "box": {
+          "x": 0,
+          "y": 4805,
+          "w": 1440,
+          "h": 629
+        }
+      },
+      {
+        "id": "product-related-collection",
+        "box": {
+          "x": 0,
+          "y": 5434,
+          "w": 1440,
+          "h": 76
+        }
+      },
+      {
+        "id": "perfume-quotes",
+        "box": {
+          "x": 0,
+          "y": 5540,
+          "w": 1440,
+          "h": 362
+        }
+      },
+      {
+        "id": "custom_liquid_A7MtHK",
+        "box": {
+          "x": 0,
+          "y": 5902,
+          "w": 1440,
+          "h": 1725
+        }
+      },
+      {
+        "id": "related-products",
+        "box": {
+          "x": 0,
+          "y": 7627,
+          "w": 1440,
+          "h": 76
+        }
+      },
+      {
+        "id": "pdp-sticky-cta",
+        "box": {
+          "x": 0,
+          "y": 7733,
+          "w": 1440,
+          "h": 163
+        }
+      },
+      {
+        "id": "footer",
+        "box": {
+          "x": 0,
+          "y": 7976,
+          "w": 1440,
+          "h": 645
+        }
+      }
+    ],
+    "consoleErrors": [
+      "Access to font at 'file://phlur.com/cdn/shop/t/105/assets/ABCRepro-Regular.woff2?v=34804900962658174201782867163' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/shop/t/105/assets/ABCReproMono-Medium.woff2?v=176760288586883009441782867164' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+    ],
+    "overflow": false
+  },
+  "vanilla-cream-duo@768": {
+    "page": {
+      "h": 7847,
+      "bodyBg": "rgb(250, 250, 250)"
+    },
+    "rail": {
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 768,
+        "h": 96
+      },
+      "pad": {
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "maxWidth": "2000px"
+      }
+    },
+    "heroGrid": {
+      "box": {
+        "x": 40,
+        "y": 1424,
+        "w": 688,
+        "h": 2982
+      },
+      "style": {
+        "display": "flex",
+        "gridTemplateColumns": "none",
+        "columnGap": "0px",
+        "rowGap": "0px"
+      }
+    },
+    "media": {
+      "box": {
+        "x": 40,
+        "y": 1424,
+        "w": 344,
+        "h": 2982
+      },
+      "style": {
+        "maxWidth": "100%",
+        "width": "344px"
+      }
+    },
+    "info": {
+      "box": {
+        "x": 434,
+        "y": 1424,
+        "w": 294,
+        "h": 1499
+      },
+      "style": {
+        "maxWidth": "600px",
+        "position": "sticky",
+        "top": "30px"
+      }
+    },
+    "firstSlide": {
+      "x": 40,
+      "y": 1424,
+      "w": 344,
+      "h": 373
+    },
+    "mediaBox": {
+      "x": 40,
+      "y": 1424,
+      "w": 344,
+      "h": 373
+    },
+    "h1": {
+      "box": {
+        "x": 434,
+        "y": 1424,
+        "w": 124,
+        "h": 47
+      },
+      "type": {
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "lineHeight": "23.4px",
+        "letterSpacing": "0.72px",
+        "textTransform": "uppercase"
+      }
+    },
+    "variantTitle": {
+      "box": {
+        "x": 434,
+        "y": 1477,
+        "w": 294,
+        "h": 21
+      },
+      "type": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "20.8px",
+        "letterSpacing": "0.48px",
+        "textTransform": "none"
+      }
+    },
+    "tagline": {
+      "box": {
+        "x": 434,
+        "y": 1538,
+        "w": 294,
+        "h": 21
+      },
+      "type": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "20.8px",
+        "letterSpacing": "0.48px",
+        "textTransform": "none"
+      },
+      "style": {
+        "borderLeftWidth": "2px",
+        "marginTop": "40px",
+        "marginBottom": "40px",
+        "paddingLeft": "0px"
+      }
+    },
+    "atc": {
+      "box": {
+        "x": 434,
+        "y": 2082,
+        "w": 294,
+        "h": 46
+      },
+      "style": {
+        "height": "46px",
+        "backgroundColor": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "width": "294px"
+      }
+    },
+    "accordion": {
+      "root": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "style": {
+        "borderTopWidth": "0px",
+        "marginTop": "0px"
+      },
+      "count": 4,
+      "header": {
+        "box": {
+          "x": 434,
+          "y": 2149,
+          "w": 294,
+          "h": 55
+        },
+        "style": {
+          "paddingTop": "12.5px",
+          "paddingBottom": "12.5px"
+        }
+      },
+      "icon": {
+        "x": 698,
+        "y": 2161,
+        "w": 30,
+        "h": 30
+      }
+    },
+    "scentNotes": {
+      "box": null,
+      "row": null,
+      "third": {
+        "box": null,
+        "style": null
+      },
+      "twoThirds": {
+        "box": null,
+        "style": null
+      },
+      "section": {
+        "box": null,
+        "style": null
+      },
+      "label": {
+        "box": null,
+        "type": null,
+        "style": null
+      }
+    },
+    "quotes": {
+      "box": {
+        "x": 0,
+        "y": 4562,
+        "w": 768,
+        "h": 231
+      },
+      "text": {
+        "box": {
+          "x": 40,
+          "y": 4622,
+          "w": 229,
+          "h": 82
+        },
+        "style": {
+          "maxWidth": "none",
+          "paddingRight": "0px",
+          "width": "229.297px"
+        }
+      },
+      "img": {
+        "x": 40,
+        "y": 4704,
+        "w": 127,
+        "h": 29
+      }
+    },
+    "stickyCta": {
+      "box": {
+        "x": 0,
+        "y": 6512,
+        "w": 768,
+        "h": 163
+      },
+      "style": {
+        "position": "static",
+        "bottom": "auto",
+        "display": "block",
+        "justifyContent": "normal",
+        "minHeight": "0px"
+      }
+    },
+    "sections": [
+      {
+        "id": "announcement-bar",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 768,
+          "h": 96
+        }
+      },
+      {
+        "id": "header",
+        "box": {
+          "x": 0,
+          "y": 96,
+          "w": 768,
+          "h": 49
+        }
+      },
+      {
+        "id": "shop-nav-drawer",
+        "box": {
+          "x": 0,
+          "y": 145,
+          "w": 768,
+          "h": 1249
+        }
+      },
+      {
+        "id": "breadcrumbs",
+        "box": {
+          "x": 0,
+          "y": 1394,
+          "w": 768,
+          "h": 30
+        }
+      },
+      {
+        "id": "main",
+        "box": {
+          "x": 0,
+          "y": 1424,
+          "w": 768,
+          "h": 3042
+        }
+      },
+      {
+        "id": "product-related-collection",
+        "box": {
+          "x": 0,
+          "y": 4466,
+          "w": 768,
+          "h": 66
+        }
+      },
+      {
+        "id": "perfume-quotes",
+        "box": {
+          "x": 0,
+          "y": 4562,
+          "w": 768,
+          "h": 231
+        }
+      },
+      {
+        "id": "custom_liquid_A7MtHK",
+        "box": {
+          "x": 0,
+          "y": 4793,
+          "w": 768,
+          "h": 1623
+        }
+      },
+      {
+        "id": "related-products",
+        "box": {
+          "x": 0,
+          "y": 6416,
+          "w": 768,
+          "h": 66
+        }
+      },
+      {
+        "id": "pdp-sticky-cta",
+        "box": {
+          "x": 0,
+          "y": 6512,
+          "w": 768,
+          "h": 163
+        }
+      },
+      {
+        "id": "footer",
+        "box": {
+          "x": 0,
+          "y": 6756,
+          "w": 768,
+          "h": 1091
+        }
+      }
+    ],
+    "consoleErrors": [
+      "Access to font at 'file://phlur.com/cdn/shop/t/50/assets/ABCRepro-Regular.woff2?v=34804900962658174201712624869' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/shop/t/50/assets/ABCReproMono-Medium.woff2?v=176760288586883009441712624865' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+    ],
+    "overflow": false
+  },
+  "missing-person-50ml@768": {
+    "page": {
+      "h": 7907,
+      "bodyBg": "rgb(250, 250, 250)"
+    },
+    "rail": {
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 768,
+        "h": 96
+      },
+      "pad": {
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "maxWidth": "2000px"
+      }
+    },
+    "heroGrid": {
+      "box": {
+        "x": 40,
+        "y": 1376,
+        "w": 688,
+        "h": 2331
+      },
+      "style": {
+        "display": "flex",
+        "gridTemplateColumns": "none",
+        "columnGap": "0px",
+        "rowGap": "0px"
+      }
+    },
+    "media": {
+      "box": {
+        "x": 40,
+        "y": 1376,
+        "w": 344,
+        "h": 1864
+      },
+      "style": {
+        "maxWidth": "100%",
+        "width": "344px"
+      }
+    },
+    "info": {
+      "box": {
+        "x": 434,
+        "y": 1376,
+        "w": 294,
+        "h": 2331
+      },
+      "style": {
+        "maxWidth": "600px",
+        "position": "sticky",
+        "top": "30px"
+      }
+    },
+    "firstSlide": {
+      "x": 40,
+      "y": 1376,
+      "w": 344,
+      "h": 373
+    },
+    "mediaBox": {
+      "x": 40,
+      "y": 1376,
+      "w": 344,
+      "h": 373
+    },
+    "h1": {
+      "box": {
+        "x": 434,
+        "y": 1376,
+        "w": 120,
+        "h": 47
+      },
+      "type": {
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "lineHeight": "23.4px",
+        "letterSpacing": "0.72px",
+        "textTransform": "uppercase"
+      }
+    },
+    "variantTitle": {
+      "box": {
+        "x": 434,
+        "y": 1429,
+        "w": 294,
+        "h": 21
+      },
+      "type": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "20.8px",
+        "letterSpacing": "0.48px",
+        "textTransform": "none"
+      }
+    },
+    "tagline": {
+      "box": {
+        "x": 434,
+        "y": 1490,
+        "w": 294,
+        "h": 21
+      },
+      "type": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "20.8px",
+        "letterSpacing": "0.48px",
+        "textTransform": "none"
+      },
+      "style": {
+        "borderLeftWidth": "2px",
+        "marginTop": "40px",
+        "marginBottom": "40px",
+        "paddingLeft": "0px"
+      }
+    },
+    "atc": {
+      "box": {
+        "x": 434,
+        "y": 2942,
+        "w": 294,
+        "h": 46
+      },
+      "style": {
+        "height": "46px",
+        "backgroundColor": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "width": "294px"
+      }
+    },
+    "accordion": {
+      "root": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "style": {
+        "borderTopWidth": "0px",
+        "marginTop": "0px"
+      },
+      "count": 3,
+      "header": {
+        "box": {
+          "x": 434,
+          "y": 3009,
+          "w": 294,
+          "h": 55
+        },
+        "style": {
+          "paddingTop": "12.5px",
+          "paddingBottom": "12.5px"
+        }
+      },
+      "icon": {
+        "x": 698,
+        "y": 3021,
+        "w": 30,
+        "h": 30
+      }
+    },
+    "scentNotes": {
+      "box": {
+        "x": 0,
+        "y": 3767,
+        "w": 768,
+        "h": 539
+      },
+      "row": {
+        "display": "flex",
+        "gap": "30px",
+        "flexDirection": "column"
+      },
+      "third": {
+        "box": {
+          "x": 40,
+          "y": 3932,
+          "w": 688,
+          "h": 314
+        },
+        "style": {
+          "width": "688px",
+          "order": "2"
+        }
+      },
+      "twoThirds": {
+        "box": {
+          "x": 40,
+          "y": 3873,
+          "w": 688,
+          "h": 29
+        },
+        "style": {
+          "width": "688px",
+          "order": "0"
+        }
+      },
+      "section": {
+        "box": {
+          "x": 40,
+          "y": 3932,
+          "w": 688,
+          "h": 87
+        },
+        "style": {
+          "borderTopWidth": "0px",
+          "paddingTop": "0px",
+          "paddingBottom": "25px",
+          "fontSize": "16px",
+          "letterSpacing": "0.48px",
+          "lineHeight": "20.8px"
+        }
+      },
+      "label": {
+        "box": {
+          "x": 40,
+          "y": 3932,
+          "w": 172,
+          "h": 21
+        },
+        "type": {
+          "fontSize": "11px",
+          "fontWeight": "400",
+          "lineHeight": "20.8px",
+          "letterSpacing": "0.48px",
+          "textTransform": "uppercase"
+        },
+        "style": {
+          "width": "172px"
+        }
+      }
+    },
+    "quotes": {
+      "box": {
+        "x": 0,
+        "y": 4402,
+        "w": 768,
+        "h": 407
+      },
+      "text": {
+        "box": {
+          "x": 40,
+          "y": 4462,
+          "w": 229,
+          "h": 258
+        },
+        "style": {
+          "maxWidth": "none",
+          "paddingRight": "0px",
+          "width": "229.297px"
+        }
+      },
+      "img": {
+        "x": 40,
+        "y": 4720,
+        "w": 127,
+        "h": 29
+      }
+    },
+    "stickyCta": {
+      "box": {
+        "x": 0,
+        "y": 6573,
+        "w": 768,
+        "h": 163
+      },
+      "style": {
+        "position": "static",
+        "bottom": "auto",
+        "display": "block",
+        "justifyContent": "normal",
+        "minHeight": "0px"
+      }
+    },
+    "sections": [
+      {
+        "id": "announcement-bar",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 768,
+          "h": 96
+        }
+      },
+      {
+        "id": "header",
+        "box": {
+          "x": 0,
+          "y": 96,
+          "w": 768,
+          "h": 49
+        }
+      },
+      {
+        "id": "shop-nav-drawer",
+        "box": {
+          "x": 0,
+          "y": 145,
+          "w": 768,
+          "h": 1201
+        }
+      },
+      {
+        "id": "breadcrumbs",
+        "box": {
+          "x": 0,
+          "y": 1346,
+          "w": 768,
+          "h": 30
+        }
+      },
+      {
+        "id": "main",
+        "box": {
+          "x": 0,
+          "y": 1376,
+          "w": 768,
+          "h": 2391
+        }
+      },
+      {
+        "id": "product-scent-notes",
+        "box": {
+          "x": 0,
+          "y": 3767,
+          "w": 768,
+          "h": 539
+        }
+      },
+      {
+        "id": "product-related-collection",
+        "box": {
+          "x": 0,
+          "y": 4306,
+          "w": 768,
+          "h": 66
+        }
+      },
+      {
+        "id": "perfume-quotes",
+        "box": {
+          "x": 0,
+          "y": 4402,
+          "w": 768,
+          "h": 407
+        }
+      },
+      {
+        "id": "custom_liquid_A7MtHK",
+        "box": {
+          "x": 0,
+          "y": 4809,
+          "w": 768,
+          "h": 1668
+        }
+      },
+      {
+        "id": "related-products",
+        "box": {
+          "x": 0,
+          "y": 6477,
+          "w": 768,
+          "h": 66
+        }
+      },
+      {
+        "id": "pdp-sticky-cta",
+        "box": {
+          "x": 0,
+          "y": 6573,
+          "w": 768,
+          "h": 163
+        }
+      },
+      {
+        "id": "footer",
+        "box": {
+          "x": 0,
+          "y": 6816,
+          "w": 768,
+          "h": 1091
+        }
+      }
+    ],
+    "consoleErrors": [
+      "Access to font at 'file://phlur.com/cdn/shop/t/105/assets/ABCRepro-Regular.woff2?v=34804900962658174201782867163' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/shop/t/105/assets/ABCReproMono-Medium.woff2?v=176760288586883009441782867164' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+    ],
+    "overflow": false
+  },
+  "vanilla-cream-duo@375": {
+    "page": {
+      "h": 8556,
+      "bodyBg": "rgb(250, 250, 250)"
+    },
+    "rail": {
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 375,
+        "h": 100
+      },
+      "pad": {
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "maxWidth": "2000px"
+      }
+    },
+    "heroGrid": {
+      "box": {
+        "x": 20,
+        "y": 1381,
+        "w": 335,
+        "h": 4264
+      },
+      "style": {
+        "display": "flex",
+        "gridTemplateColumns": "none",
+        "columnGap": "0px",
+        "rowGap": "0px"
+      }
+    },
+    "media": {
+      "box": {
+        "x": 20,
+        "y": 1381,
+        "w": 335,
+        "h": 2896
+      },
+      "style": {
+        "maxWidth": "100%",
+        "width": "335px"
+      }
+    },
+    "info": {
+      "box": {
+        "x": 20,
+        "y": 4299,
+        "w": 335,
+        "h": 1345
+      },
+      "style": {
+        "maxWidth": "none",
+        "position": "static",
+        "top": "auto"
+      }
+    },
+    "firstSlide": {
+      "x": 20,
+      "y": 1381,
+      "w": 335,
+      "h": 362
+    },
+    "mediaBox": {
+      "x": 20,
+      "y": 1381,
+      "w": 335,
+      "h": 362
+    },
+    "h1": {
+      "box": {
+        "x": 20,
+        "y": 4299,
+        "w": 145,
+        "h": 47
+      },
+      "type": {
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "lineHeight": "23.4px",
+        "letterSpacing": "0.72px",
+        "textTransform": "uppercase"
+      }
+    },
+    "variantTitle": {
+      "box": {
+        "x": 20,
+        "y": 4353,
+        "w": 335,
+        "h": 21
+      },
+      "type": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "20.8px",
+        "letterSpacing": "0.48px",
+        "textTransform": "none"
+      }
+    },
+    "tagline": {
+      "box": {
+        "x": 20,
+        "y": 4414,
+        "w": 335,
+        "h": 21
+      },
+      "type": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "20.8px",
+        "letterSpacing": "0.48px",
+        "textTransform": "none"
+      },
+      "style": {
+        "borderLeftWidth": "2px",
+        "marginTop": "40px",
+        "marginBottom": "40px",
+        "paddingLeft": "0px"
+      }
+    },
+    "atc": {
+      "box": {
+        "x": 20,
+        "y": 4830,
+        "w": 335,
+        "h": 46
+      },
+      "style": {
+        "height": "46px",
+        "backgroundColor": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "width": "335px"
+      }
+    },
+    "accordion": {
+      "root": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "style": {
+        "borderTopWidth": "0px",
+        "marginTop": "0px"
+      },
+      "count": 4,
+      "header": {
+        "box": {
+          "x": 20,
+          "y": 4897,
+          "w": 335,
+          "h": 55
+        },
+        "style": {
+          "paddingTop": "12.5px",
+          "paddingBottom": "12.5px"
+        }
+      },
+      "icon": {
+        "x": 325,
+        "y": 4909,
+        "w": 30,
+        "h": 30
+      }
+    },
+    "scentNotes": {
+      "box": null,
+      "row": null,
+      "third": {
+        "box": null,
+        "style": null
+      },
+      "twoThirds": {
+        "box": null,
+        "style": null
+      },
+      "section": {
+        "box": null,
+        "style": null
+      },
+      "label": {
+        "box": null,
+        "type": null,
+        "style": null
+      }
+    },
+    "quotes": {
+      "box": {
+        "x": 0,
+        "y": 5770,
+        "w": 375,
+        "h": 293
+      },
+      "text": {
+        "box": {
+          "x": 20,
+          "y": 5810,
+          "w": 112,
+          "h": 186
+        },
+        "style": {
+          "maxWidth": "none",
+          "paddingRight": "0px",
+          "width": "111.641px"
+        }
+      },
+      "img": {
+        "x": 20,
+        "y": 5997,
+        "w": 121,
+        "h": 27
+      }
+    },
+    "stickyCta": {
+      "box": {
+        "x": 0,
+        "y": 7301,
+        "w": 375,
+        "h": 159
+      },
+      "style": {
+        "position": "static",
+        "bottom": "auto",
+        "display": "block",
+        "justifyContent": "normal",
+        "minHeight": "0px"
+      }
+    },
+    "sections": [
+      {
+        "id": "announcement-bar",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 375,
+          "h": 100
+        }
+      },
+      {
+        "id": "header",
+        "box": {
+          "x": 0,
+          "y": 100,
+          "w": 375,
+          "h": 49
+        }
+      },
+      {
+        "id": "shop-nav-drawer",
+        "box": {
+          "x": 0,
+          "y": 149,
+          "w": 375,
+          "h": 1204
+        }
+      },
+      {
+        "id": "breadcrumbs",
+        "box": {
+          "x": 0,
+          "y": 1353,
+          "w": 375,
+          "h": 28
+        }
+      },
+      {
+        "id": "main",
+        "box": {
+          "x": 0,
+          "y": 1381,
+          "w": 375,
+          "h": 4304
+        }
+      },
+      {
+        "id": "product-related-collection",
+        "box": {
+          "x": 0,
+          "y": 5684,
+          "w": 375,
+          "h": 56
+        }
+      },
+      {
+        "id": "perfume-quotes",
+        "box": {
+          "x": 0,
+          "y": 5770,
+          "w": 375,
+          "h": 293
+        }
+      },
+      {
+        "id": "custom_liquid_A7MtHK",
+        "box": {
+          "x": 0,
+          "y": 6064,
+          "w": 375,
+          "h": 1151
+        }
+      },
+      {
+        "id": "related-products",
+        "box": {
+          "x": 0,
+          "y": 7215,
+          "w": 375,
+          "h": 56
+        }
+      },
+      {
+        "id": "pdp-sticky-cta",
+        "box": {
+          "x": 0,
+          "y": 7301,
+          "w": 375,
+          "h": 159
+        }
+      },
+      {
+        "id": "footer",
+        "box": {
+          "x": 0,
+          "y": 7540,
+          "w": 375,
+          "h": 1016
+        }
+      }
+    ],
+    "consoleErrors": [
+      "Access to font at 'file://phlur.com/cdn/shop/t/50/assets/ABCRepro-Regular.woff2?v=34804900962658174201712624869' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/shop/t/50/assets/ABCReproMono-Medium.woff2?v=176760288586883009441712624865' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL"
+    ],
+    "overflow": false
+  },
+  "missing-person-50ml@375": {
+    "page": {
+      "h": 9246,
+      "bodyBg": "rgb(250, 250, 250)"
+    },
+    "rail": {
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 375,
+        "h": 100
+      },
+      "pad": {
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "maxWidth": "2000px"
+      }
+    },
+    "heroGrid": {
+      "box": {
+        "x": 20,
+        "y": 1333,
+        "w": 335,
+        "h": 4085
+      },
+      "style": {
+        "display": "flex",
+        "gridTemplateColumns": "none",
+        "columnGap": "0px",
+        "rowGap": "0px"
+      }
+    },
+    "media": {
+      "box": {
+        "x": 20,
+        "y": 1333,
+        "w": 335,
+        "h": 1810
+      },
+      "style": {
+        "maxWidth": "100%",
+        "width": "335px"
+      }
+    },
+    "info": {
+      "box": {
+        "x": 20,
+        "y": 3165,
+        "w": 335,
+        "h": 2252
+      },
+      "style": {
+        "maxWidth": "none",
+        "position": "static",
+        "top": "auto"
+      }
+    },
+    "firstSlide": {
+      "x": 20,
+      "y": 1333,
+      "w": 335,
+      "h": 362
+    },
+    "mediaBox": {
+      "x": 20,
+      "y": 1333,
+      "w": 335,
+      "h": 362
+    },
+    "h1": {
+      "box": {
+        "x": 20,
+        "y": 3165,
+        "w": 141,
+        "h": 47
+      },
+      "type": {
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "lineHeight": "23.4px",
+        "letterSpacing": "0.72px",
+        "textTransform": "uppercase"
+      }
+    },
+    "variantTitle": {
+      "box": {
+        "x": 20,
+        "y": 3219,
+        "w": 335,
+        "h": 21
+      },
+      "type": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "20.8px",
+        "letterSpacing": "0.48px",
+        "textTransform": "none"
+      }
+    },
+    "tagline": {
+      "box": {
+        "x": 20,
+        "y": 3280,
+        "w": 335,
+        "h": 21
+      },
+      "type": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "20.8px",
+        "letterSpacing": "0.48px",
+        "textTransform": "none"
+      },
+      "style": {
+        "borderLeftWidth": "2px",
+        "marginTop": "40px",
+        "marginBottom": "40px",
+        "paddingLeft": "0px"
+      }
+    },
+    "atc": {
+      "box": {
+        "x": 20,
+        "y": 4679,
+        "w": 335,
+        "h": 46
+      },
+      "style": {
+        "height": "46px",
+        "backgroundColor": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "width": "335px"
+      }
+    },
+    "accordion": {
+      "root": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "style": {
+        "borderTopWidth": "0px",
+        "marginTop": "0px"
+      },
+      "count": 3,
+      "header": {
+        "box": {
+          "x": 20,
+          "y": 4746,
+          "w": 335,
+          "h": 55
+        },
+        "style": {
+          "paddingTop": "12.5px",
+          "paddingBottom": "12.5px"
+        }
+      },
+      "icon": {
+        "x": 325,
+        "y": 4759,
+        "w": 30,
+        "h": 30
+      }
+    },
+    "scentNotes": {
+      "box": {
+        "x": 0,
+        "y": 5457,
+        "w": 375,
+        "h": 497
+      },
+      "row": {
+        "display": "flex",
+        "gap": "30px",
+        "flexDirection": "column"
+      },
+      "third": {
+        "box": {
+          "x": 20,
+          "y": 5600,
+          "w": 335,
+          "h": 314
+        },
+        "style": {
+          "width": "335px",
+          "order": "2"
+        }
+      },
+      "twoThirds": {
+        "box": {
+          "x": 20,
+          "y": 5543,
+          "w": 335,
+          "h": 27
+        },
+        "style": {
+          "width": "335px",
+          "order": "0"
+        }
+      },
+      "section": {
+        "box": {
+          "x": 20,
+          "y": 5600,
+          "w": 335,
+          "h": 87
+        },
+        "style": {
+          "borderTopWidth": "0px",
+          "paddingTop": "0px",
+          "paddingBottom": "25px",
+          "fontSize": "16px",
+          "letterSpacing": "0.48px",
+          "lineHeight": "20.8px"
+        }
+      },
+      "label": {
+        "box": {
+          "x": 20,
+          "y": 5600,
+          "w": 84,
+          "h": 21
+        },
+        "type": {
+          "fontSize": "11px",
+          "fontWeight": "400",
+          "lineHeight": "20.8px",
+          "letterSpacing": "0.48px",
+          "textTransform": "uppercase"
+        },
+        "style": {
+          "width": "83.75px"
+        }
+      }
+    },
+    "quotes": {
+      "box": {
+        "x": 0,
+        "y": 6040,
+        "w": 375,
+        "h": 672
+      },
+      "text": {
+        "box": {
+          "x": 20,
+          "y": 6080,
+          "w": 112,
+          "h": 565
+        },
+        "style": {
+          "maxWidth": "none",
+          "paddingRight": "0px",
+          "width": "111.641px"
+        }
+      },
+      "img": {
+        "x": 20,
+        "y": 6645,
+        "w": 121,
+        "h": 27
+      }
+    },
+    "stickyCta": {
+      "box": {
+        "x": 0,
+        "y": 7991,
+        "w": 375,
+        "h": 159
+      },
+      "style": {
+        "position": "static",
+        "bottom": "auto",
+        "display": "block",
+        "justifyContent": "normal",
+        "minHeight": "0px"
+      }
+    },
+    "sections": [
+      {
+        "id": "announcement-bar",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 375,
+          "h": 100
+        }
+      },
+      {
+        "id": "header",
+        "box": {
+          "x": 0,
+          "y": 100,
+          "w": 375,
+          "h": 49
+        }
+      },
+      {
+        "id": "shop-nav-drawer",
+        "box": {
+          "x": 0,
+          "y": 149,
+          "w": 375,
+          "h": 1156
+        }
+      },
+      {
+        "id": "breadcrumbs",
+        "box": {
+          "x": 0,
+          "y": 1305,
+          "w": 375,
+          "h": 28
+        }
+      },
+      {
+        "id": "main",
+        "box": {
+          "x": 0,
+          "y": 1333,
+          "w": 375,
+          "h": 4125
+        }
+      },
+      {
+        "id": "product-scent-notes",
+        "box": {
+          "x": 0,
+          "y": 5457,
+          "w": 375,
+          "h": 497
+        }
+      },
+      {
+        "id": "product-related-collection",
+        "box": {
+          "x": 0,
+          "y": 5954,
+          "w": 375,
+          "h": 56
+        }
+      },
+      {
+        "id": "perfume-quotes",
+        "box": {
+          "x": 0,
+          "y": 6040,
+          "w": 375,
+          "h": 672
+        }
+      },
+      {
+        "id": "custom_liquid_A7MtHK",
+        "box": {
+          "x": 0,
+          "y": 6712,
+          "w": 375,
+          "h": 1193
+        }
+      },
+      {
+        "id": "related-products",
+        "box": {
+          "x": 0,
+          "y": 7905,
+          "w": 375,
+          "h": 56
+        }
+      },
+      {
+        "id": "pdp-sticky-cta",
+        "box": {
+          "x": 0,
+          "y": 7991,
+          "w": 375,
+          "h": 159
+        }
+      },
+      {
+        "id": "footer",
+        "box": {
+          "x": 0,
+          "y": 8230,
+          "w": 375,
+          "h": 1016
+        }
+      }
+    ],
+    "consoleErrors": [
+      "Access to font at 'file://phlur.com/cdn/shop/t/105/assets/ABCRepro-Regular.woff2?v=34804900962658174201782867163' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/shop/t/105/assets/ABCReproMono-Medium.woff2?v=176760288586883009441782867164' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Access to font at 'file://phlur.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_INVALID_URL",
+      "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+      "Failed to load resource: net::ERR_INVALID_URL"
+    ],
+    "overflow": false
+  }
+}

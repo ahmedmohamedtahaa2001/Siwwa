@@ -1,0 +1,233 @@
+{%- comment -%}
+  Featured collections — 5 variants.
+  Composes collection-card and product-grid; adds no styling of its own.
+
+  Variants (layout): tabs · carousel · grid · mega · storytelling
+{%- endcomment -%}
+{%- liquid
+  assign l = section.settings.layout
+-%}
+<div class="section {% if section.settings.color_scheme == 'tonal' %}section--tonal{% elsif section.settings.color_scheme == 'dark' %}section--dark{% endif %}">
+  <div class="section__inner">
+    {%- if section.settings.heading != blank -%}
+      <div class="section__head {% if section.settings.center_heading %}section__head--center{% endif %}">
+        <h2 class="section__title">
+          {{ section.settings.heading }}
+          
+        </h2>
+        {%- if section.settings.subheading != blank -%}
+          <div class="section__sub rte">{{ section.settings.subheading }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- case l -%}
+      {%- when 'tabs' -%}
+        {%- render 'product-grid',
+          grid_style: 'tabbed',
+          blocks: section.blocks,
+          columns: section.settings.columns,
+          limit: section.settings.products_per_collection,
+          card_style: section.settings.product_card_style,
+          heading_tag: 'h3',
+          section_id: section.id -%}
+
+      {%- when 'carousel' -%}
+        <div class="carousel-wrap" data-siwa-carousel>
+          <div class="carousel" role="region" tabindex="0"
+               aria-label="{{ section.settings.heading | escape }}">
+            {%- for block in section.blocks -%}
+              <div {{ block.shopify_attributes }}>
+                {%- render 'collection-card',
+                  collection: block.settings.collection,
+                  title: block.settings.title,
+                  description: block.settings.description,
+                  image: block.settings.image,
+                  style: section.settings.card_style,
+                  accent_color: block.settings.accent_color,
+                  cta_label: block.settings.cta_label -%}
+              </div>
+            {%- endfor -%}
+          </div>
+          {%- render 'carousel-controls' -%}
+        </div>
+
+      {%- when 'spotlight' -%}
+        {%- comment -%}
+          One product carrying a whole band, with customer reviews
+          attached directly beneath it rather than exiled to a separate
+          reviews section further down. The structural move is DedCool's;
+          the components are ours — product-card's `hero` variant and
+          review-card. Reviews sit WITH the product they are about, which
+          is the whole argument of DIRECTION.md Part 1 §2.1.
+        {%- endcomment -%}
+        {%- for block in section.blocks limit: 1 -%}
+          {%- liquid
+            assign spotlight = block.settings.product
+            unless spotlight
+              assign spotlight = block.settings.collection.products.first
+            endunless
+          -%}
+          {%- if spotlight != blank -%}
+            <div {{ block.shopify_attributes }}>
+              {%- render 'product-card',
+                product: spotlight,
+                style: 'hero',
+                show_reviews: true,
+                show_notes: true,
+                show_badge: true,
+                accent_color: block.settings.accent_color,
+                heading_tag: 'h3' -%}
+
+              {%- comment -%}
+                Review blocks on this section quote REAL reviews the
+                merchant has chosen. Inventing one here fabricates an
+                endorsement for a named product.
+              {%- endcomment -%}
+              {%- assign review_blocks = section.blocks | where: 'type', 'review' -%}
+              {%- if review_blocks.size > 0 -%}
+                <div class="mgrid" style="--tiles:{{ review_blocks.size | at_most: 4 }};margin-top:var(--sp-xl)">
+                  {%- for rb in review_blocks limit: 4 -%}
+                    <div {{ rb.shopify_attributes }}>
+                      {%- render 'review-card', review: rb.settings, style: 'carousel',
+                        truncate_length: 120 -%}
+                    </div>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+
+      {%- when 'storytelling' -%}
+        {%- for block in section.blocks -%}
+          <div {{ block.shopify_attributes }} style="margin-bottom:var(--sp-section)">
+            {%- render 'collection-card',
+              collection: block.settings.collection,
+              title: block.settings.title,
+              description: block.settings.description,
+              image: block.settings.image,
+              style: 'cinematic',
+              accent_color: block.settings.accent_color,
+              cta_label: block.settings.cta_label,
+              heading_tag: 'h3' -%}
+          </div>
+        {%- endfor -%}
+
+      {%- else -%}
+        {%- comment -%} grid and mega share the tile grid; mega spans the first {%- endcomment -%}
+        <div class="mgrid {% if l == 'mega' %}mgrid--asym{% endif %}"
+             style="--tiles:{{ section.settings.columns }}">
+          {%- for block in section.blocks -%}
+            <div {{ block.shopify_attributes }}>
+              {%- render 'collection-card',
+                collection: block.settings.collection,
+                title: block.settings.title,
+                description: block.settings.description,
+                image: block.settings.image,
+                style: section.settings.card_style,
+                accent_color: block.settings.accent_color,
+                cta_label: block.settings.cta_label,
+                show_count: section.settings.show_product_count,
+                heading_tag: 'h3' -%}
+            </div>
+          {%- endfor -%}
+        </div>
+    {%- endcase -%}
+
+    {%- if section.settings.cta_label != blank -%}
+      <div class="section__foot">
+        {%- render 'button', label: section.settings.cta_label, url: section.settings.cta_url, style: 'minimal' -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.featured_collections.name",
+  "settings": [
+    { "type": "select", "id": "layout", "label": "t:sections.featured_collections.layout", "default": "grid",
+      "options": [
+        { "value": "tabs", "label": "t:sections.featured_collections.layout_tabs" },
+        { "value": "carousel", "label": "t:sections.featured_collections.layout_carousel" },
+        { "value": "grid", "label": "t:sections.featured_collections.layout_grid" },
+        { "value": "mega", "label": "t:sections.featured_collections.layout_mega" },
+        { "value": "storytelling", "label": "t:sections.featured_collections.layout_storytelling" },
+        { "value": "spotlight", "label": "t:sections.featured_collections.layout_spotlight" }
+      ] },
+    { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+    { "type": "richtext", "id": "subheading", "label": "t:sections.hero.subheading" },
+    { "type": "checkbox", "id": "center_heading", "label": "t:sections.featured_collections.center_heading", "default": false },
+    { "type": "range", "id": "columns", "min": 2, "max": 5, "step": 1, "label": "t:sections.featured_collections.columns", "default": 3 },
+    { "type": "range", "id": "products_per_collection", "min": 2, "max": 12, "step": 1, "label": "t:sections.featured_collections.products_per_collection", "default": 8 },
+    { "type": "select", "id": "card_style", "label": "t:components.collection_card.style", "default": "overlay",
+      "options": [
+        { "value": "overlay", "label": "t:components.collection_card.style_overlay" },
+        { "value": "split", "label": "t:components.collection_card.style_split" },
+        { "value": "minimal", "label": "t:components.collection_card.style_minimal" },
+        { "value": "cinematic", "label": "t:components.collection_card.style_cinematic" },
+        { "value": "heritage", "label": "t:components.collection_card.style_heritage" }
+      ] },
+    { "type": "select", "id": "product_card_style", "label": "t:components.product_card.style", "default": "minimal",
+      "options": [
+        { "value": "minimal", "label": "t:components.product_card.style_minimal" },
+        { "value": "editorial", "label": "t:components.product_card.style_editorial" },
+        { "value": "compact", "label": "t:components.product_card.style_compact" }
+      ] },
+    { "type": "checkbox", "id": "show_product_count", "label": "t:components.collection_card.show_count", "default": false, "info": "t:components.collection_card.show_count_info" },
+    { "type": "select", "id": "color_scheme", "label": "t:sections.general.color_scheme", "default": "canvas",
+      "options": [
+        { "value": "canvas", "label": "t:sections.general.scheme_canvas" },
+        { "value": "tonal", "label": "t:sections.general.scheme_tonal" },
+        { "value": "dark", "label": "t:sections.general.scheme_dark" }
+      ] },
+    { "type": "text", "id": "cta_label", "label": "t:components.button.label" },
+    { "type": "url", "id": "cta_url", "label": "t:components.button.url" }
+  ],
+  "blocks": [
+    {
+      "type": "collection_tab",
+      "name": "t:components.product_grid.tab",
+      "limit": 6,
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "t:components.collection_card.collection" },
+        { "type": "product", "id": "product", "label": "t:sections.featured_collections.spotlight_product", "info": "t:sections.featured_collections.spotlight_product_info" },
+        { "type": "text", "id": "tab_label", "label": "t:components.product_grid.tab_label" },
+        { "type": "text", "id": "title", "label": "t:components.collection_card.title" },
+        { "type": "text", "id": "description", "label": "t:components.collection_card.description" },
+        { "type": "image_picker", "id": "image", "label": "t:components.feature_card.image" },
+        { "type": "text", "id": "cta_label", "label": "t:components.button.label" },
+        { "type": "select", "id": "accent_color", "label": "t:components.accent.label", "default": "none",
+          "options": [
+            { "value": "none", "label": "t:components.accent.none" },
+            { "value": "palm-green", "label": "t:components.accent.palm_green" },
+            { "value": "date-red", "label": "t:components.accent.date_red" },
+            { "value": "date-yellow", "label": "t:components.accent.date_yellow" },
+            { "value": "desert-brown", "label": "t:components.accent.desert_brown" }
+          ] }
+      ]
+    }
+    ,
+    {
+      "type": "review",
+      "name": "t:sections.reviews.block_review",
+      "limit": 4,
+      "settings": [
+        { "type": "paragraph", "content": "t:sections.reviews.block_review_info" },
+        { "type": "text", "id": "author", "label": "t:components.testimonial.author" },
+        { "type": "text", "id": "location", "label": "t:sections.reviews.location" },
+        { "type": "range", "id": "rating", "min": 1, "max": 5, "step": 1, "label": "t:components.testimonial.rating", "default": 5 },
+        { "type": "textarea", "id": "body", "label": "t:sections.reviews.body" },
+        { "type": "checkbox", "id": "verified", "label": "t:products.reviews.verified", "default": true },
+        { "type": "select", "id": "language", "label": "t:sections.reviews.language", "default": "en",
+          "options": [
+            { "value": "en", "label": "English" },
+            { "value": "ar", "label": "العربية" }
+          ] }
+      ]
+    }
+  ],
+  "presets": [ { "name": "t:sections.featured_collections.name", "blocks": [ { "type": "collection_tab" }, { "type": "collection_tab" }, { "type": "collection_tab" } ] } ]
+}
+{% endschema %}

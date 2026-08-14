@@ -1,0 +1,40 @@
+{
+  "_comment": "Section-level fragment for the Product grid. `products_per_row` is emitted as --grid-cols-desktop, NOT --grid-cols: an inline --grid-cols out-specifies the breakpoints and freezes the desktop count on mobile. The tabbed variant needs `collection_tab` blocks.",
+  "settings": [
+    {
+      "type": "select", "id": "grid_style", "label": "t:components.product_grid.style", "default": "standard",
+      "options": [
+        { "value": "standard", "label": "t:components.product_grid.style_standard" },
+        { "value": "compact",  "label": "t:components.product_grid.style_compact" },
+        { "value": "masonry",  "label": "t:components.product_grid.style_masonry" },
+        { "value": "carousel", "label": "t:components.product_grid.style_carousel" },
+        { "value": "tabbed",   "label": "t:components.product_grid.style_tabbed" }
+      ],
+      "info": "t:components.product_grid.style_info"
+    },
+    { "type": "range", "id": "products_per_row", "min": 2, "max": 6, "step": 1, "label": "t:components.product_grid.per_row", "default": 4, "info": "t:components.product_grid.per_row_info" },
+    { "type": "range", "id": "products_limit", "min": 2, "max": 48, "step": 1, "label": "t:components.product_grid.limit", "default": 8 },
+    { "type": "checkbox", "id": "show_filters", "label": "t:components.product_grid.show_filters", "default": false, "info": "t:components.product_grid.show_filters_info" },
+    { "type": "checkbox", "id": "show_sort", "label": "t:components.product_grid.show_sort", "default": false },
+    {
+      "type": "select", "id": "pagination_type", "label": "t:components.product_grid.pagination", "default": "numbered",
+      "options": [
+        { "value": "numbered",  "label": "t:components.product_grid.pagination_numbered" },
+        { "value": "load-more", "label": "t:components.product_grid.pagination_load_more" },
+        { "value": "infinite",  "label": "t:components.product_grid.pagination_infinite" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_tab",
+      "name": "t:components.product_grid.tab",
+      "limit": 3,
+      "settings": [
+        { "type": "text", "id": "tab_label", "label": "t:components.product_grid.tab_label" },
+        { "type": "text", "id": "tab_label_ar", "label": "t:components.product_grid.tab_label_ar" },
+        { "type": "collection", "id": "collection", "label": "t:components.collection_card.collection" }
+      ]
+    }
+  ]
+}

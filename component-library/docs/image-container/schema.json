@@ -1,0 +1,27 @@
+{
+  "_comment": "Setting fragment for the Image container primitive. Ratio is a select here for merchant clarity, but the snippet accepts any aspect-ratio value if a section needs a free range.",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "t:components.image.image" },
+    {
+      "type": "select", "id": "image_ratio", "label": "t:components.image.ratio", "default": "4x5",
+      "options": [
+        { "value": "4x5",  "label": "t:components.image.ratio_4x5" },
+        { "value": "16x9", "label": "t:components.image.ratio_16x9" },
+        { "value": "1x1",  "label": "t:components.image.ratio_1x1" },
+        { "value": "3x4",  "label": "t:components.image.ratio_3x4" },
+        { "value": "21x9", "label": "t:components.image.ratio_21x9" }
+      ]
+    },
+    {
+      "type": "select", "id": "image_focal", "label": "t:components.image.focal", "default": "center",
+      "options": [
+        { "value": "center", "label": "t:components.image.focal_center" },
+        { "value": "top",    "label": "t:components.image.focal_top" },
+        { "value": "bottom", "label": "t:components.image.focal_bottom" }
+      ]
+    },
+    { "type": "range", "id": "overlay_opacity", "min": 0, "max": 80, "step": 10, "unit": "%",
+      "label": "t:components.image.overlay", "default": 0, "info": "t:components.image.overlay_info" },
+    { "type": "checkbox", "id": "image_zoom", "label": "t:components.image.zoom", "default": false }
+  ]
+}

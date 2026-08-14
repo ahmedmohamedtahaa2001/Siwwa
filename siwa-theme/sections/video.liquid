@@ -1,0 +1,63 @@
+{%- comment -%}
+  Video — hosted Shopify video or an external URL.
+  Autoplay is muted and loops; a poster-plus-play variant avoids
+  autoplay entirely, which is the better default on mobile data.
+{%- endcomment -%}
+{%- liquid
+  assign l = section.settings.layout
+-%}
+<div class="section {% if l == 'background' %}section--full{% endif %}">
+  <div class="section__inner">
+    {%- if section.settings.heading != blank -%}
+      <div class="section__head section__head--center">
+        <h2 class="section__title">{{ section.settings.heading }}</h2>
+      </div>
+    {%- endif -%}
+
+    <div class="pimg" style="aspect-ratio:16/9">
+      {%- if section.settings.video != blank -%}
+        {{ section.settings.video | video_tag:
+           image_size: '1600x',
+           autoplay: section.settings.autoplay,
+           loop: section.settings.loop,
+           muted: true,
+           controls: section.settings.show_controls }}
+      {%- elsif section.settings.video_url != blank -%}
+        {{ section.settings.video_url | external_video_tag:
+           class: 'video__external',
+           loading: 'lazy' }}
+      {%- else -%}
+        {%- render 'image-container', image: section.settings.poster, ratio: '16x9' -%}
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.body != blank -%}
+      <div class="rte" style="margin-top:var(--sp-md)">{{ section.settings.body }}</div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.video.name",
+  "settings": [
+    { "type": "select", "id": "layout", "label": "t:sections.video.layout", "default": "centered",
+      "options": [
+        { "value": "centered", "label": "t:sections.video.layout_centered" },
+        { "value": "background", "label": "t:sections.video.layout_background" },
+        { "value": "poster", "label": "t:sections.video.layout_poster" },
+        { "value": "split", "label": "t:sections.video.layout_split" },
+        { "value": "loop", "label": "t:sections.video.layout_loop" }
+      ] },
+    { "type": "video", "id": "video", "label": "t:sections.video.video" },
+    { "type": "video_url", "id": "video_url", "label": "t:sections.video.video_url", "accept": ["youtube", "vimeo"] },
+    { "type": "image_picker", "id": "poster", "label": "t:sections.reviews.poster" },
+    { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+    { "type": "richtext", "id": "body", "label": "t:components.feature_card.body" },
+    { "type": "checkbox", "id": "autoplay", "label": "t:sections.video.autoplay", "default": false, "info": "t:sections.video.autoplay_info" },
+    { "type": "checkbox", "id": "loop", "label": "t:sections.video.loop", "default": true },
+    { "type": "checkbox", "id": "show_controls", "label": "t:sections.video.controls", "default": true }
+  ],
+  "presets": [ { "name": "t:sections.video.name" } ]
+}
+{% endschema %}

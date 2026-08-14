@@ -1,0 +1,1 @@
+{"token":"cc5246946d7b885c986e45a7a842b1d6","note":null,"attributes":{},"original_total_price":0,"total_price":0,"total_discount":0,"total_weight":0.0,"item_count":0,"items":[],"requires_shipping":false,"currency":"EGP","items_subtotal_price":0,"cart_level_discount_applications":[],"discount_codes":[]}

@@ -1,0 +1,194 @@
+{%- comment -%}
+  Hero — 5 variants. The primary landing element.
+
+  Styles: ../component-library/css/components.css (.hero, .slides)
+  Behaviour: assets/siwa-modules.js (slideshow)
+
+  Variants (hero_style):
+    image      One image, text overlaid, scrim.
+    slideshow  2–5 slides, auto-rotate, pausable, dots.
+    split      Image 60% / text 40%, no overlay.
+    video      Looping muted background video.
+    cinematic  21:9, vintage optional, Arabic + Latin at equal weight,
+               one Cultural Accent rule, scroll cue.
+
+  Slides are BLOCKS, never a fixed loop (Development Law 3).
+{%- endcomment -%}
+{%- liquid
+  assign hs = section.settings.hero_style
+  assign overlay = 'hero--overlay'
+  if hs == 'split'
+    assign overlay = ''
+  endif
+  assign align_class = ''
+  case section.settings.text_align
+    when 'center'
+      assign align_class = 'hero__body--center'
+    when 'end'
+      assign align_class = 'hero__body--end'
+  endcase
+  assign accent_var = ''
+  case section.settings.accent_color
+    when 'palm-green'
+      assign accent_var = '--accent-color:var(--palm-green)'
+    when 'date-red'
+      assign accent_var = '--accent-color:var(--date-red)'
+    when 'date-yellow'
+      assign accent_var = '--accent-color:var(--date-yellow)'
+    when 'desert-brown'
+      assign accent_var = '--accent-color:var(--desert-brown)'
+  endcase
+  assign ratio = '16x9'
+  if hs == 'cinematic'
+    assign ratio = '21x9'
+  endif
+-%}
+<div
+  class="slides {% if hs == 'slideshow' %}slides--auto{% endif %}"
+  {% if hs == 'slideshow' %}
+    data-siwa-slideshow
+    data-interval="{{ section.settings.rotate_seconds | times: 1000 }}"
+    data-autoplay="{{ section.settings.autoplay }}"
+  {% endif %}
+  {%- comment -%}
+    A rotating hero is a carousel: it must be pausable and must not
+    interrupt a screen reader, hence role=region + aria-roledescription
+    rather than a live region.
+  {%- endcomment -%}
+  role="region"
+  aria-roledescription="{{ 'sections.hero.carousel' | t }}"
+  aria-label="{{ section.settings.heading | default: shop.name | escape }}"
+>
+  {%- for block in section.blocks -%}
+    <section
+      class="hero hero--{{ hs }} {{ overlay }}"
+      style="min-height:{{ section.settings.height_desktop }}px;{{ accent_var }}"
+      aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+      aria-label="{{ 'sections.hero.slide_of' | t: index: forloop.index, total: section.blocks.size }}"
+      {{ block.shopify_attributes }}
+    >
+      <div class="hero__media">
+        {%- if hs == 'video' and block.settings.video != blank -%}
+          {{ block.settings.video | video_tag:
+             image_size: '1600x', autoplay: true, loop: true, muted: true, controls: false,
+             class: 'hero__video' }}
+        {%- else -%}
+          {%- render 'image-container',
+            image: block.settings.image,
+            ratio: ratio,
+            scrim_opacity: section.settings.overlay_opacity,
+            loading: forloop.first,
+            fetch_priority: 'high',
+            sizes: '100vw',
+            alt: block.settings.heading -%}
+        {%- endif -%}
+      </div>
+
+      <div class="hero__body {{ align_class }}">
+        {%- if hs == 'cinematic' -%}
+          <span class="hero__rule" aria-hidden="true"></span>
+        {%- endif -%}
+        {%- if block.settings.heading != blank -%}
+          <h2 class="hero__title">
+            {{ block.settings.heading }}
+            
+          </h2>
+        {%- endif -%}
+        {%- if block.settings.subheading != blank -%}
+          <div class="hero__sub rte">{{ block.settings.subheading }}</div>
+        {%- endif -%}
+        {%- if block.settings.cta_label != blank -%}
+          {%- render 'button',
+            label: block.settings.cta_label,
+            url: block.settings.cta_url,
+            style: block.settings.cta_style,
+            size: 'lg' -%}
+        {%- endif -%}
+        {%- if hs == 'cinematic' and section.settings.show_scroll_cue -%}
+          <span class="hero__scroll" aria-hidden="true">
+            {{ 'sections.hero.scroll' | t }}
+            {%- render 'icon', name: 'chevron-down' -%}
+          </span>
+        {%- endif -%}
+      </div>
+    </section>
+  {%- else -%}
+    <section class="hero" style="min-height:{{ section.settings.height_desktop }}px">
+      {%- render 'image-container', ratio: ratio -%}
+    </section>
+  {%- endfor -%}
+
+  {%- if hs == 'slideshow' and section.blocks.size > 1 -%}
+    <div class="slides__dots" role="group" aria-label="{{ 'sections.hero.choose_slide' | t }}">
+      {%- for block in section.blocks -%}
+        <button class="slides__dot" type="button"
+          data-slide-dot="{{ forloop.index0 }}"
+          aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+          aria-label="{{ 'sections.hero.slide_of' | t: index: forloop.index, total: section.blocks.size }}"></button>
+      {%- endfor -%}
+      <button class="slides__dot slides__pause" type="button" data-slide-pause
+        aria-label="{{ 'sections.hero.pause' | t }}"></button>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.hero.name",
+  "class": "shopify-section--hero",
+  "settings": [
+    { "type": "select", "id": "hero_style", "label": "t:sections.hero.style", "default": "image",
+      "options": [
+        { "value": "image", "label": "t:sections.hero.style_image" },
+        { "value": "slideshow", "label": "t:sections.hero.style_slideshow" },
+        { "value": "split", "label": "t:sections.hero.style_split" },
+        { "value": "video", "label": "t:sections.hero.style_video" },
+        { "value": "cinematic", "label": "t:sections.hero.style_cinematic" }
+      ] },
+    { "type": "range", "id": "height_mobile", "min": 320, "max": 800, "step": 20, "unit": "px", "label": "t:sections.hero.height_mobile", "default": 520 },
+    { "type": "range", "id": "height_desktop", "min": 400, "max": 1000, "step": 20, "unit": "px", "label": "t:sections.hero.height_desktop", "default": 700 },
+    { "type": "range", "id": "overlay_opacity", "min": 0, "max": 80, "step": 5, "unit": "%", "label": "t:components.image.overlay", "default": 35, "info": "t:sections.hero.overlay_info" },
+    { "type": "select", "id": "text_align", "label": "t:sections.hero.text_align", "default": "start",
+      "options": [
+        { "value": "start", "label": "t:sections.hero.align_start" },
+        { "value": "center", "label": "t:sections.hero.align_center" },
+        { "value": "end", "label": "t:sections.hero.align_end" }
+      ] },
+    { "type": "checkbox", "id": "autoplay", "label": "t:sections.hero.autoplay", "default": false, "info": "t:sections.hero.autoplay_info" },
+    { "type": "range", "id": "rotate_seconds", "min": 4, "max": 15, "step": 1, "unit": "s", "label": "t:sections.announcement.rotate_seconds", "default": 7 },
+    { "type": "checkbox", "id": "show_scroll_cue", "label": "t:sections.hero.scroll_cue", "default": true },
+    { "type": "select", "id": "accent_color", "label": "t:components.accent.label", "default": "none",
+      "options": [
+        { "value": "none", "label": "t:components.accent.none" },
+        { "value": "palm-green", "label": "t:components.accent.palm_green" },
+        { "value": "date-red", "label": "t:components.accent.date_red" },
+        { "value": "date-yellow", "label": "t:components.accent.date_yellow" },
+        { "value": "desert-brown", "label": "t:components.accent.desert_brown" }
+      ] },
+    { "type": "text", "id": "heading", "label": "t:sections.hero.aria_label" }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "t:sections.hero.slide",
+      "limit": 5,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "t:components.feature_card.image" },
+        { "type": "video", "id": "video", "label": "t:sections.hero.video" },
+        { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+        { "type": "richtext", "id": "subheading", "label": "t:sections.hero.subheading" },
+        { "type": "text", "id": "cta_label", "label": "t:components.button.label" },
+        { "type": "url", "id": "cta_url", "label": "t:components.button.url" },
+        { "type": "select", "id": "cta_style", "label": "t:components.button.style", "default": "primary",
+          "options": [
+            { "value": "primary", "label": "t:components.button.style_primary" },
+            { "value": "minimal", "label": "t:components.button.style_minimal" },
+            { "value": "dark", "label": "t:components.button.style_dark" },
+            { "value": "ghost", "label": "t:components.button.style_ghost" }
+          ] }
+      ]
+    }
+  ],
+  "presets": [ { "name": "t:sections.hero.name", "blocks": [ { "type": "slide" } ] } ]
+}
+{% endschema %}

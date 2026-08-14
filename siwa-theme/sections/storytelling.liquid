@@ -1,0 +1,156 @@
+{%- comment -%}
+  Storytelling — 5 layouts. "Our Story", "The Oasis", sourcing, ethics.
+  Composes heritage-block; adds no styling of its own.
+
+  ⚠ CONTENT MUST BE TRUE AND, PER THE KAHINA MODEL, QUANTIFIED —
+  named partners, countable items, real percentages. Unquantified warmth
+  is exactly what BENCHMARK.md Part 2 §3 warns against.
+{%- endcomment -%}
+{%- liquid
+  assign l = section.settings.layout
+  case l
+    when 'timeline'
+      assign hb_style = 'timeline'
+    when 'artisan'
+      assign hb_style = 'artisan'
+    when 'cinematic'
+      assign hb_style = 'cinematic'
+    else
+      assign hb_style = 'split'
+  endcase
+-%}
+<div class="section {% if section.settings.color_scheme == 'tonal' %}section--tonal{% elsif section.settings.color_scheme == 'dark' %}section--dark{% endif %}">
+  <div class="section__inner" {% if l == 'single' %}style="max-width:800px"{% endif %}>
+    {%- if section.settings.heading != blank -%}
+      <div class="section__head {% if l == 'single' %}section__head--center{% endif %}">
+        <h2 class="section__title">
+          {{ section.settings.heading }}
+          
+        </h2>
+      </div>
+    {%- endif -%}
+
+    {%- if l == 'timeline' or l == 'artisan' -%}
+      {%- render 'heritage-block',
+        block_style: hb_style,
+        blocks: section.blocks,
+        heading: section.settings.sub_heading,
+        body: section.settings.body,
+        accent_color: section.settings.accent_color,
+        enable_vintage: section.settings.enable_vintage_effects -%}
+    {%- else -%}
+      {%- for block in section.blocks -%}
+        <div {{ block.shopify_attributes }} style="margin-bottom:var(--sp-xl)">
+          {%- case block.type -%}
+            {%- when 'text' -%}
+              <div class="story rte">{{ block.settings.body }}</div>
+              
+            {%- when 'image' -%}
+              {%- render 'image-container', image: block.settings.image,
+                ratio: block.settings.ratio, alt: block.settings.caption -%}
+              {%- if block.settings.caption != blank -%}
+                <p class="review__meta">{{ block.settings.caption }}</p>
+              {%- endif -%}
+            {%- when 'pull_quote' -%}
+              {%- render 'heritage-block', block_style: 'quote',
+                quote: block.settings.quote, attribution: block.settings.attribution,
+                accent_color: section.settings.accent_color,
+                enable_vintage: section.settings.enable_vintage_effects -%}
+            {%- when 'heritage' -%}
+              {%- render 'heritage-block',
+                block_style: hb_style,
+                heading: block.settings.heading,
+                body: block.settings.body,
+                image: block.settings.image, provenance: block.settings.provenance,
+                accent_color: section.settings.accent_color,
+                enable_vintage: section.settings.enable_vintage_effects,
+                reverse: forloop.index0 | modulo: 2,
+                heading_tag: 'h3' -%}
+          {%- endcase -%}
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.storytelling.name",
+  "settings": [
+    { "type": "paragraph", "content": "t:sections.storytelling.truth_warning" },
+    { "type": "select", "id": "layout", "label": "t:sections.storytelling.layout", "default": "single",
+      "options": [
+        { "value": "single", "label": "t:sections.storytelling.layout_single" },
+        { "value": "two_column", "label": "t:sections.storytelling.layout_two_column" },
+        { "value": "timeline", "label": "t:sections.storytelling.layout_timeline" },
+        { "value": "cinematic", "label": "t:sections.storytelling.layout_cinematic" },
+        { "value": "artisan", "label": "t:sections.storytelling.layout_artisan" }
+      ] },
+    { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+    { "type": "text", "id": "sub_heading", "label": "t:sections.storytelling.sub_heading" },
+    { "type": "richtext", "id": "body", "label": "t:components.feature_card.body" },
+    { "type": "checkbox", "id": "enable_vintage_effects", "label": "t:settings_schema.vintage.name", "default": false },
+    { "type": "select", "id": "accent_color", "label": "t:components.accent.label", "default": "none",
+      "options": [
+        { "value": "none", "label": "t:components.accent.none" },
+        { "value": "palm-green", "label": "t:components.accent.palm_green" },
+        { "value": "date-red", "label": "t:components.accent.date_red" },
+        { "value": "date-yellow", "label": "t:components.accent.date_yellow" },
+        { "value": "desert-brown", "label": "t:components.accent.desert_brown" }
+      ] },
+    { "type": "select", "id": "color_scheme", "label": "t:sections.general.color_scheme", "default": "canvas",
+      "options": [
+        { "value": "canvas", "label": "t:sections.general.scheme_canvas" },
+        { "value": "tonal", "label": "t:sections.general.scheme_tonal" },
+        { "value": "dark", "label": "t:sections.general.scheme_dark" }
+      ] }
+  ],
+  "blocks": [
+    { "type": "text", "name": "t:sections.storytelling.block_text",
+      "settings": [
+        { "type": "richtext", "id": "body", "label": "t:components.feature_card.body" }
+      ] },
+    { "type": "image", "name": "t:sections.storytelling.block_image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "t:components.feature_card.image" },
+        { "type": "text", "id": "caption", "label": "t:sections.storytelling.caption" },
+        { "type": "select", "id": "ratio", "label": "t:components.image.ratio", "default": "16x9",
+          "options": [
+            { "value": "16x9", "label": "t:components.image.ratio_16x9" },
+            { "value": "4x5", "label": "t:components.image.ratio_4x5" },
+            { "value": "3x4", "label": "t:components.image.ratio_3x4" },
+            { "value": "21x9", "label": "t:components.image.ratio_21x9" }
+          ] }
+      ] },
+    { "type": "pull_quote", "name": "t:sections.storytelling.block_quote",
+      "settings": [
+        { "type": "text", "id": "quote", "label": "t:components.testimonial.quote" },
+        { "type": "text", "id": "attribution", "label": "t:components.testimonial.author" }
+      ] },
+    { "type": "heritage", "name": "t:sections.storytelling.block_heritage",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+        { "type": "richtext", "id": "body", "label": "t:components.feature_card.body" },
+        { "type": "image_picker", "id": "image", "label": "t:components.feature_card.image" },
+        { "type": "text", "id": "provenance", "label": "t:components.feature_card.provenance" }
+      ] },
+    { "type": "chapter", "name": "t:components.heritage.chapter",
+      "settings": [
+        { "type": "text", "id": "chapter_number", "label": "t:components.heritage.chapter_number" },
+        { "type": "text", "id": "chapter_heading", "label": "t:components.heritage.chapter_heading" },
+        { "type": "image_picker", "id": "chapter_image", "label": "t:components.feature_card.image" },
+        { "type": "richtext", "id": "chapter_body", "label": "t:components.feature_card.body" }
+      ] },
+    { "type": "artisan", "name": "t:components.heritage.artisan",
+      "settings": [
+        { "type": "paragraph", "content": "t:components.heritage.artisan_consent" },
+        { "type": "image_picker", "id": "photo", "label": "t:components.heritage.artisan_photo" },
+        { "type": "text", "id": "name", "label": "t:components.heritage.artisan_name" },
+        { "type": "text", "id": "role", "label": "t:components.heritage.artisan_role" },
+        { "type": "text", "id": "quote", "label": "t:components.testimonial.quote" },
+        { "type": "text", "id": "product_connection", "label": "t:components.heritage.artisan_connection" }
+      ] }
+  ],
+  "presets": [ { "name": "t:sections.storytelling.name" } ]
+}
+{% endschema %}

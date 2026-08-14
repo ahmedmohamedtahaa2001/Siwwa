@@ -1,0 +1,386 @@
+{
+  "_comment": [
+    "Siwa homepage.",
+    "",
+    "ORDER SET BY CLIENT, 2026-08-13:",
+    "  announcement · header · hero · USP · best selling · collections ·",
+    "  bundles · inspired by · layering · UGC videos · reviews · quiz ·",
+    "  brief about · footer",
+    "",
+    "This replaces the earlier DedCool-derived order. Two notes:",
+    "  · the quiz now sits LATE (10th of 11) rather than ahead of the",
+    "    catalogue. BENCHMARK.md Part 1 §3.5 calls the scent finder the",
+    "    biggest missing feature and discovery tools usually convert best",
+    "    before the products — but placement is a merchant call, and this",
+    "    is it.",
+    "  · bundles and layering are separate bands on purpose: bundles sells",
+    "    pre-made sets, layering builds a pair. Snif runs both",
+    "    (DIRECTION.md Part 1 §2.5); they answer different intents.",
+    "",
+    "Not in this order, though built and available: stay-close (newsletter",
+    "+ WhatsApp referral), recently-viewed, shop-by-mood, logo-list. There",
+    "is currently NO email capture anywhere on the homepage — worth a",
+    "decision before launch.",
+    "",
+    "Ground alternates so no two adjacent bands share a colour.",
+    "Copy is ported from homepage/js/config.js where it was researched.",
+    "",
+    "Collection and product references are deliberately EMPTY — they must",
+    "be picked against the real store. Inventing handles renders a blank",
+    "page that looks broken.",
+    "",
+    "ONE LANGUAGE AT A TIME (corrected 2026-08-13):",
+    "  Parallel `*_ar` fields have been removed from every section and",
+    "  snippet. They rendered English and Arabic simultaneously, which is",
+    "  not what bilingual means. Arabic content is now supplied through",
+    "  Settings → Languages (Translate & Adapt) — Shopify's own translation",
+    "  layer — and `request.locale` drives direction, type family, numerals",
+    "  and mirroring in layout/theme.liquid.",
+    "",
+    "  To publish Arabic: add it under Settings → Languages, then translate",
+    "  these section settings in Translate & Adapt. Nothing here changes."
+  ],
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "slide": {
+          "type": "slide",
+          "settings": {
+            "heading": "Where the desert meets the sea",
+            "subheading": "<p>Perfume from a real oasis. Sixteen scents we authored, forty you already know.</p>",
+            "cta_label": "Shop the house",
+            "cta_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "slide"
+      ],
+      "settings": {
+        "hero_style": "cinematic",
+        "height_mobile": 560,
+        "height_desktop": 700,
+        "overlay_opacity": 45,
+        "text_align": "start",
+        "autoplay": false,
+        "show_scroll_cue": true,
+        "accent_color": "date-yellow",
+        "heading": "Siwa Fragrances"
+      }
+    },
+    "usp": {
+      "type": "text-columns",
+      "blocks": {
+        "u1": {
+          "type": "column",
+          "settings": {
+            "icon": "check",
+            "heading": "14-day returns",
+            "body": "<p>Unopened, in its box, no questions.</p>"
+          }
+        },
+        "u2": {
+          "type": "column",
+          "settings": {
+            "icon": "heart",
+            "heading": "Support on WhatsApp",
+            "body": "<p>It is how we actually talk to people.</p>"
+          }
+        },
+        "u3": {
+          "type": "column",
+          "settings": {
+            "icon": "leaf",
+            "heading": "Free shipping over 1,500 EGP",
+            "body": "<p>Delivered across Egypt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "settings": {
+        "columns": 3,
+        "card_style": "icon",
+        "color_scheme": "dark"
+      }
+    },
+    "bestsellers": {
+      "type": "featured-collections",
+      "blocks": {
+        "c1": {
+          "type": "collection_tab",
+          "settings": {
+            "title": "Best selling"
+          }
+        }
+      },
+      "block_order": [
+        "c1"
+      ],
+      "settings": {
+        "layout": "carousel",
+        "heading": "Best selling",
+        "subheading": "<p>Ranked by how many people came back to say something.</p>",
+        "product_card_style": "minimal",
+        "products_per_collection": 8,
+        "color_scheme": "canvas"
+      }
+    },
+    "collections": {
+      "type": "media-grid",
+      "blocks": {
+        "t1": {
+          "type": "tile",
+          "settings": {
+            "title": "Original Creations",
+            "description": "Sixteen scents we authored.",
+            "cta_label": "Explore",
+            "accent_color": "date-red"
+          }
+        },
+        "t2": {
+          "type": "tile",
+          "settings": {
+            "title": "For Her",
+            "description": "",
+            "cta_label": "Shop"
+          }
+        },
+        "t3": {
+          "type": "tile",
+          "settings": {
+            "title": "For Him",
+            "description": "",
+            "cta_label": "Shop"
+          }
+        },
+        "t4": {
+          "type": "tile",
+          "settings": {
+            "title": "Body & Home",
+            "description": "Splashes, lotions, mists.",
+            "cta_label": "Build a set"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "settings": {
+        "heading": "Collections",
+        "center_heading": true,
+        "layout": "even",
+        "columns": 4,
+        "tile_style": "overlay",
+        "ratio": "4x5",
+        "overlay_opacity": 45,
+        "color_scheme": "tonal"
+      }
+    },
+    "bundles": {
+      "type": "featured-collections",
+      "blocks": {
+        "c1": {
+          "type": "collection_tab",
+          "settings": {
+            "title": "Sets & Gifts",
+            "description": "Two scents, one box.",
+            "cta_label": "Shop sets"
+          }
+        }
+      },
+      "block_order": [
+        "c1"
+      ],
+      "settings": {
+        "layout": "grid",
+        "heading": "Bundles",
+        "subheading": "<p>Pre-made sets, discovery tins and gifts.</p>",
+        "columns": 3,
+        "card_style": "split",
+        "product_card_style": "minimal",
+        "products_per_collection": 6,
+        "color_scheme": "canvas"
+      }
+    },
+    "inspired": {
+      "type": "featured-collections",
+      "blocks": {
+        "c1": {
+          "type": "collection_tab",
+          "settings": {
+            "tab_label": "For her"
+          }
+        },
+        "c2": {
+          "type": "collection_tab",
+          "settings": {
+            "tab_label": "For him"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2"
+      ],
+      "settings": {
+        "layout": "tabs",
+        "heading": "Inspired by",
+        "subheading": "<p>The scents you already know, at a price that makes sense.</p>",
+        "products_per_collection": 8,
+        "columns": 4,
+        "product_card_style": "minimal",
+        "color_scheme": "tonal"
+      }
+    },
+    "layering": {
+      "type": "layering",
+      "settings": {
+        "picker_style": "guided",
+        "heading": "Layering",
+        "cta_label": "Add both",
+        "bundle_discount": 0,
+        "color_scheme": "canvas"
+      }
+    },
+    "ugc": {
+      "type": "reviews",
+      "blocks": {
+        "v1": {
+          "type": "video_testimonial",
+          "settings": {}
+        },
+        "v2": {
+          "type": "video_testimonial",
+          "settings": {}
+        },
+        "v3": {
+          "type": "video_testimonial",
+          "settings": {}
+        },
+        "v4": {
+          "type": "video_testimonial",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4"
+      ],
+      "settings": {
+        "style": "video",
+        "heading": "Worn in Egypt",
+        "show_aggregate": false,
+        "columns": 4,
+        "color_scheme": "tonal"
+      }
+    },
+    "reviews": {
+      "type": "reviews",
+      "settings": {
+        "style": "carousel",
+        "heading": "4.98 out of 5",
+        "show_aggregate": true,
+        "columns": 3,
+        "truncate_length": 200,
+        "color_scheme": "dark",
+        "cta_label": "Read all reviews"
+      }
+    },
+    "quiz": {
+      "type": "scent-quiz",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question_text": "Where are you wearing it?",
+            "question_type": "single-choice",
+            "answer_1_label": "Every day",
+            "answer_1_value": "everyday",
+            "answer_2_label": "After dark",
+            "answer_2_value": "evening",
+            "answer_3_label": "Somewhere warm",
+            "answer_3_value": "warm",
+            "answer_4_label": "A room full of people",
+            "answer_4_value": "bold"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question_text": "Which of these do you reach for?",
+            "question_type": "single-choice",
+            "answer_1_label": "Something sweet",
+            "answer_1_value": "gourmand",
+            "answer_2_label": "Something green",
+            "answer_2_value": "fresh",
+            "answer_3_label": "Something woody",
+            "answer_3_value": "woody",
+            "answer_4_label": "Something floral",
+            "answer_4_value": "floral"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question_text": "How much should it announce you?",
+            "question_type": "single-choice",
+            "answer_1_label": "Only up close",
+            "answer_1_value": "soft",
+            "answer_2_label": "Across a table",
+            "answer_2_value": "medium",
+            "answer_3_label": "Across a room",
+            "answer_3_value": "strong"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "settings": {
+        "quiz_style": "visual",
+        "heading": "Not sure yet?",
+        "result_type": "layering-combo",
+        "color_scheme": "canvas"
+      }
+    },
+    "about": {
+      "type": "image-text-overlay",
+      "settings": {
+        "layout": "split",
+        "heading": "A real oasis, not an adjective",
+        "body": "<p>Six hundred kilometres from Cairo, past the last road, Siwa keeps its own language and builds its walls from salt. Dates, olives and salt — the oasis has traded all three for two thousand years, and they are what it actually produces.</p>",
+        "provenance": "Siwa Oasis, Egypt",
+        "cta_label": "The House of Siwa",
+        "text_position": "start",
+        "overlay_opacity": 0,
+        "accent_color": "palm-green",
+        "color_scheme": "tonal"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "usp",
+    "bestsellers",
+    "collections",
+    "bundles",
+    "inspired",
+    "layering",
+    "ugc",
+    "reviews",
+    "quiz",
+    "about"
+  ]
+}

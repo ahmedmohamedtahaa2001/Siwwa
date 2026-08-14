@@ -1,0 +1,274 @@
+{%- comment -%}
+  Collection listing — 5 layouts. Powers /collections/*.
+
+  Styles: ../component-library/css/components.css (.coll and modifiers)
+  Behaviour: assets/siwa-modules.js (AJAX facets via Section Rendering API)
+
+  Layouts (the `layout` setting):
+    sidebar   Filters 260px start, grid after. Prestige-like.
+    topbar    Filters and sort in a horizontal bar above a full-width grid.
+    drawer    Sort only in view; filters in a drawer. Mobile-first.
+    chips     Applied filters as removable chips above the grid.
+    infinite  Masonry grid, load-more instead of pagination.
+
+  ⚠ FACETS ARE THE POINT OF THIS SECTION
+  `01-SITE-STRUCTURE.md` anomaly 9: the live store has **no tag, vendor
+  or size facets at all**. This section renders whatever `collection.filters`
+  provides, so enabling a facet is an admin task (Search & Discovery),
+  not a code change. The high-value ones per the audit:
+    · Availability and price — already possible
+    · Tags — missing, high value
+    · Vendor — the DESIGNER facet, Oakcha's pattern. Note vendor holds
+      the inspired-by fragrance name, not a brand (04-PRODUCTS.md §1)
+    · Size — 30 / 50 / 100 ml
+    · Scent family — needs the metafield taxonomy that does not exist yet
+
+  ⚠ AJAX FILTERING DEGRADES TO A REAL FORM
+  The facet form submits normally with JavaScript off. The JS upgrades it
+  to a Section Rendering API fetch. Every facet is a real input inside a
+  real <form> with a real submit — never a div with a click handler.
+{%- endcomment -%}
+{%- liquid
+  assign layout = section.settings.layout
+  assign sidebar = ''
+  if layout == 'sidebar'
+    assign sidebar = 'coll--sidebar'
+  endif
+
+  comment
+    theme-check's UnusedAssign does not track variables passed as
+    `render` arguments, so it reports grid_layout as unused. It is used
+    below, in the product-grid render. Suppressed with a reason rather
+    than worked around by restructuring correct code.
+  endcomment
+  # theme-check-disable UnusedAssign
+  case layout
+    when 'infinite'
+      assign grid_layout = 'masonry'
+    else
+      assign grid_layout = 'standard'
+  endcase
+  # theme-check-enable UnusedAssign
+
+  comment
+    Count applied facets. A filter chain cannot be used as an `if`
+    condition in Liquid — `collection.filters | map: ... | first` parses
+    as a truthy object and silently drops the filters.
+  endcomment
+  assign active_filter_count = 0
+  for filter in collection.filters
+    assign active_filter_count = active_filter_count | plus: filter.active_values.size
+  endfor
+-%}
+<div class="section">
+  <div class="section__inner">
+
+    <div class="section__head">
+      <h1 class="section__title">{{ collection.title }}</h1>
+      {%- if section.settings.show_collection_description and collection.description != blank -%}
+        <div class="section__sub rte">{{ collection.description }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="coll {{ sidebar }}" id="CollectionGrid-{{ section.id }}"
+         data-siwa-collection data-section-id="{{ section.id }}">
+
+      {%- if section.settings.enable_filtering and collection.filters.size > 0 -%}
+        <form id="FacetForm-{{ section.id }}" data-facet-form
+              class="{% if layout == 'topbar' %}coll__bar{% endif %}">
+
+          {%- comment -%}
+            Preserve sort and pagination across a facet change; without
+            these the customer's sort silently resets on every filter.
+          {%- endcomment -%}
+          {%- if collection.sort_by != blank -%}
+            <input type="hidden" name="sort_by" value="{{ collection.sort_by }}">
+          {%- endif -%}
+
+          {%- for filter in collection.filters -%}
+            <fieldset class="coll__facet">
+              <legend>{{ filter.label }}</legend>
+
+              {%- case filter.type -%}
+                {%- when 'price_range' -%}
+                  <div class="contact__row">
+                    {%- render 'input',
+                      id: 'FilterMin-' | append: section.id | append: '-' | append: forloop.index,
+                      name: filter.min_value.param_name,
+                      type: 'number',
+                      label: 'collections.filters.min' | t,
+                      value: filter.min_value.value -%}
+                    {%- render 'input',
+                      id: 'FilterMax-' | append: section.id | append: '-' | append: forloop.index,
+                      name: filter.max_value.param_name,
+                      type: 'number',
+                      label: 'collections.filters.max' | t,
+                      value: filter.max_value.value -%}
+                  </div>
+
+                {%- else -%}
+                  <div class="filters__row">
+                    {%- for value in filter.values -%}
+                      {%- assign fid = section.id | append: '-' | append: forloop.parentloop.index | append: '-' | append: forloop.index -%}
+                      <input type="checkbox" class="visually-hidden"
+                        id="Filter-{{ fid }}"
+                        name="{{ value.param_name }}"
+                        value="{{ value.value }}"
+                        {% if value.active %}checked{% endif %}
+                        {% if value.count == 0 and value.active == false %}disabled{% endif %}>
+                      <label class="chip" for="Filter-{{ fid }}">
+                        {{ value.label }}
+                        <span class="n">{{ value.count }}</span>
+                      </label>
+                    {%- endfor -%}
+                  </div>
+              {%- endcase -%}
+            </fieldset>
+          {%- endfor -%}
+
+          <noscript>
+            {%- render 'button', label: 'collections.filters.apply' | t, style: 'primary', type: 'submit' -%}
+          </noscript>
+        </form>
+      {%- endif -%}
+
+      <div>
+        <div class="coll__bar">
+          <span class="coll__count">
+            {{ 'collections.general.product_count' | t: count: collection.products_count }}
+          </span>
+
+          {%- comment -%} Applied filters as removable chips. {%- endcomment -%}
+          {%- if layout == 'chips' or section.settings.show_active_chips -%}
+            <div class="coll__active">
+              {%- for filter in collection.filters -%}
+                {%- for value in filter.active_values -%}
+                  {%- render 'chip',
+                    style: 'removable',
+                    text: value.label,
+                    url: value.url_to_remove,
+                    remove_label: value.label -%}
+                {%- endfor -%}
+              {%- endfor -%}
+              {%- if active_filter_count > 0 -%}
+                <a class="btn btn--tertiary btn--sm" href="{{ collection.url }}">
+                  {{ 'collections.filters.clear_all' | t }}
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- if section.settings.enable_sorting -%}
+            <div class="field">
+              <label for="SortBy-{{ section.id }}">{{ 'collections.sorting.label' | t }}</label>
+              <select id="SortBy-{{ section.id }}" name="sort_by" class="select"
+                      form="FacetForm-{{ section.id }}" data-facet-sort>
+                {%- for option in collection.sort_options -%}
+                  <option value="{{ option.value }}"
+                    {% if option.value == collection.sort_by %}selected{% endif %}>
+                    {{ option.name }}
+                  </option>
+                {%- endfor -%}
+              </select>
+            </div>
+          {%- endif -%}
+        </div>
+
+        {%- paginate collection.products by section.settings.products_per_page -%}
+          {%- render 'product-grid',
+            products: collection.products,
+            grid_style: grid_layout,
+            columns: section.settings.products_per_row_desktop,
+            card_style: section.settings.product_card_style,
+            show_reviews: section.settings.show_reviews,
+            show_badge: section.settings.show_badge,
+            heading_tag: 'h2',
+            section_id: section.id,
+            empty_message: 'collections.general.empty' | t -%}
+
+          {%- if paginate.pages > 1 -%}
+            {%- if section.settings.pagination_type == 'numbered' -%}
+              <nav class="pager" aria-label="{{ 'general.accessibility.pagination' | t }}">
+                {{ paginate | default_pagination }}
+              </nav>
+            {%- else -%}
+              {%- if paginate.next -%}
+                <div class="section__foot">
+                  <a class="btn btn--secondary" href="{{ paginate.next.url }}"
+                     data-load-more="{{ paginate.next.url }}">
+                    {{ 'collections.general.load_more' | t }}
+                  </a>
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endpaginate -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.collection.name",
+  "class": "shopify-section--collection",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.collection.layout",
+      "default": "sidebar",
+      "options": [
+        { "value": "sidebar", "label": "t:sections.collection.layout_sidebar" },
+        { "value": "topbar", "label": "t:sections.collection.layout_topbar" },
+        { "value": "drawer", "label": "t:sections.collection.layout_drawer" },
+        { "value": "chips", "label": "t:sections.collection.layout_chips" },
+        { "value": "infinite", "label": "t:sections.collection.layout_infinite" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "products_per_row_desktop",
+      "min": 2, "max": 6, "step": 1,
+      "label": "t:components.product_grid.per_row",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8, "max": 48, "step": 4,
+      "label": "t:sections.collection.per_page",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "product_card_style",
+      "label": "t:components.product_card.style",
+      "default": "minimal",
+      "options": [
+        { "value": "minimal", "label": "t:components.product_card.style_minimal" },
+        { "value": "editorial", "label": "t:components.product_card.style_editorial" },
+        { "value": "compact", "label": "t:components.product_card.style_compact" }
+      ]
+    },
+    { "type": "checkbox", "id": "show_reviews", "label": "t:components.product_card.show_reviews", "default": true },
+    { "type": "checkbox", "id": "show_badge", "label": "t:components.product_card.show_badge", "default": true },
+    { "type": "header", "content": "t:sections.collection.header_facets" },
+    { "type": "paragraph", "content": "t:sections.collection.facets_info" },
+    { "type": "checkbox", "id": "enable_filtering", "label": "t:sections.collection.enable_filtering", "default": true },
+    { "type": "checkbox", "id": "enable_sorting", "label": "t:sections.collection.enable_sorting", "default": true },
+    { "type": "checkbox", "id": "show_active_chips", "label": "t:sections.collection.show_active_chips", "default": true },
+    {
+      "type": "select",
+      "id": "pagination_type",
+      "label": "t:components.product_grid.pagination",
+      "default": "numbered",
+      "options": [
+        { "value": "numbered", "label": "t:components.product_grid.pagination_numbered" },
+        { "value": "load-more", "label": "t:components.product_grid.pagination_load_more" }
+      ]
+    },
+    { "type": "checkbox", "id": "show_collection_description", "label": "t:sections.collection.show_description", "default": false }
+  ]
+}
+{% endschema %}

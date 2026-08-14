@@ -1,0 +1,144 @@
+{%- comment -%}
+  Siwa — theme layout
+  ------------------------------------------------------------------
+  The bilingual spine. One locale switch flips direction, type
+  families, numerals, layout mirroring, title, meta description and
+  canonical. Nothing below is a literal a merchant might want to
+  change: colours, spacing, radius and fonts all resolve from
+  settings_schema.json, and every visible string from locales/.
+
+  Design tokens are the SAME custom properties the component library
+  ships (--primary, --sp-md, --r-md). They are re-declared here from
+  settings so the merchant owns them, then siwa-tokens.css supplies
+  everything the merchant does not control.
+  Source of truth: ../component-library/css/tokens.css
+{%- endcomment -%}
+{%- liquid
+  assign locale_code = request.locale.iso_code
+  assign is_rtl = false
+  if locale_code == 'ar' or locale_code == 'he' or locale_code == 'fa' or locale_code == 'ur'
+    assign is_rtl = true
+  endif
+-%}
+<!doctype html>
+<html
+  lang="{{ locale_code }}"
+  dir="{% if is_rtl %}rtl{% else %}ltr{% endif %}"
+  class="{% if is_rtl %}locale-rtl{% else %}locale-ltr{% endif %}"
+  data-money-format="{{ shop.money_format | escape }}"
+>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_canvas }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.font_ar_stylesheet_url != blank -%}
+      <link rel="stylesheet" href="{{ settings.font_ar_stylesheet_url }}" media="print" onload="this.media='all'">
+    {%- endif -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; {{ 'general.meta.tags' | t: tags: current_tags | join: ', ' }}{% endif -%}
+      {%- if current_page != 1 %} &ndash; {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    {{ content_for_header }}
+
+    {{ 'siwa-tokens.css' | asset_url | stylesheet_tag }}
+    {{ 'siwa-components.css' | asset_url | stylesheet_tag }}
+
+    {%- comment -%}
+      Module behaviour. `defer` so it never blocks the parser; the script
+      boots on DOMContentLoaded and re-boots on shopify:section:load.
+    {%- endcomment -%}
+    <script src="{{ 'siwa-modules.js' | asset_url }}" defer="defer"></script>
+
+    {%- style -%}
+      /* Merchant-owned token overrides. Every value below is a schema
+         setting; none is a literal. */
+      :root {
+        --primary:        {{ settings.color_primary }};
+        --primary-alt:    {{ settings.color_primary_alt }};
+        --on-primary:     {{ settings.color_on_primary }};
+        --canvas:         {{ settings.color_canvas }};
+        --surface-card:   {{ settings.color_surface_card }};
+        --surface-hover:  {{ settings.color_surface_hover }};
+        --surface-dark:   {{ settings.color_surface_dark }};
+        --on-dark:        {{ settings.color_on_dark }};
+        --hairline:       {{ settings.color_hairline }};
+        --ink:            {{ settings.color_ink }};
+        --heading:        {{ settings.color_heading }};
+        --text-secondary-aa: {{ settings.color_text_secondary }};
+        --link:           {{ settings.color_link }};
+        --success-aa:     {{ settings.color_success }};
+        --tag:            {{ settings.color_tag }};
+        --sale:           {{ settings.color_sale }};
+
+        --palm-green:     {{ settings.cultural_palm_green }};
+        --date-red:       {{ settings.cultural_date_red }};
+        --date-yellow:    {{ settings.cultural_date_yellow }};
+        --desert-brown:   {{ settings.cultural_desert_brown }};
+
+        --container:      {{ settings.container_width }}px;
+        --gutter:         {{ settings.gutter }}px;
+        --sp-section:     {{ settings.section_spacing }}px;
+        --r-md:           {{ settings.radius_md }}px;
+        --r-full:         {{ settings.radius_full }}px;
+
+        --font-display:   {{ settings.font_display.family }}, {{ settings.font_display.fallback_families }};
+        --font-ui:        {{ settings.font_ui.family }}, {{ settings.font_ui.fallback_families }};
+        --font-ar-display: {{ settings.font_ar_display_stack }};
+        --font-ar-ui:      {{ settings.font_ar_ui_stack }};
+
+        --vintage-grain:    {{ settings.vintage_grain_opacity | divided_by: 100.0 }};
+        --vintage-vignette: {{ settings.vintage_vignette_opacity | divided_by: 100.0 }};
+      }
+
+      {{ settings.font_display | font_face: font_display: 'swap' }}
+      {{ settings.font_ui | font_face: font_display: 'swap' }}
+
+      body {
+        margin: 0;
+        background: var(--canvas);
+        color: var(--ink);
+        font: 400 var(--t-body)/var(--lh-body) var(--font-ui);
+      }
+      .skip-link {
+        position: absolute;
+        inset-inline-start: -9999px;
+        top: 0;
+        z-index: 100;
+        padding: var(--sp-sm) var(--sp-md);
+        background: var(--canvas);
+        color: var(--ink);
+      }
+      .skip-link:focus { inset-inline-start: 0; }
+    {%- endstyle -%}
+  </head>
+
+  <body class="template-{{ template.name | handle }}">
+    <a class="skip-link" href="#MainContent">
+      {{ 'general.accessibility.skip_to_content' | t }}
+    </a>
+
+    {% sections 'header-group' %}
+
+    <main id="MainContent" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    {% sections 'footer-group' %}
+
+    {%- comment -%}
+      Overlays: cart drawer and newsletter popup. Last in the DOM so they
+      sit above everything without a z-index fight.
+    {%- endcomment -%}
+    {% sections 'overlay-group' %}
+  </body>
+</html>

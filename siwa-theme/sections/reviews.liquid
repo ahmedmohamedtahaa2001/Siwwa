@@ -1,0 +1,232 @@
+{%- comment -%}
+  Reviews / testimonials — 5 variants. Homepage and landing pages,
+  distinct from the PDP review widget.
+
+  ⚠ REVIEWS ARE THE STORE'S STRONGEST ASSET
+  DIRECTION.md Part 1 §2.1: do NOT copy Amouage's review restraint.
+  This section must read as trustworthy and prominent.
+
+  ⚠ THE AGGREGATE IS NEVER TYPED IN
+  4.98★ / 1,212 is live at 2026-08-12 and moves (it was 1,176 on
+  2026-07-27). The figure comes from shop.metafields.judgeme.* and the
+  block is omitted when those are empty, never filled with a constant.
+
+  ⚠ FEATURED REVIEW BLOCKS MUST QUOTE REAL REVIEWS
+  These blocks exist so a merchant can choose WHICH real review to
+  feature. Typing an invented review here is fabricating an endorsement.
+{%- endcomment -%}
+{%- liquid
+  assign s = section.settings.style
+  assign agg_rating = shop.metafields.judgeme.all_reviews_rating
+  assign agg_count = shop.metafields.judgeme.all_reviews_count
+-%}
+<div class="section {% if section.settings.color_scheme == 'tonal' %}section--tonal{% elsif section.settings.color_scheme == 'dark' %}section--dark{% endif %}">
+  <div class="section__inner">
+    <div class="section__head section__head--center">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="section__title">
+          {{ section.settings.heading }}
+          
+        </h2>
+      {%- endif -%}
+
+      {%- if section.settings.show_aggregate and agg_rating != blank and agg_count != blank -%}
+        <div class="rsummary__top">
+          <span class="rsummary__avg">{{ agg_rating }}</span>
+          {%- render 'star-rating', rating: agg_rating, size: 'featured' -%}
+          <span class="review__meta">{{ 'products.reviews.count' | t: count: agg_count }}</span>
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- case s -%}
+      {%- when 'carousel' -%}
+        <div class="carousel-wrap" data-siwa-carousel>
+          <div class="carousel" role="region" tabindex="0" aria-label="{{ section.settings.heading | escape }}">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'review' -%}
+                <div {{ block.shopify_attributes }}>{%- render 'review-card', review: block.settings, style: 'carousel' -%}</div>
+              {%- else -%}
+                <div {{ block.shopify_attributes }}>{% render block %}</div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+          {%- render 'carousel-controls' -%}
+        </div>
+
+      {%- when 'single' -%}
+        {%- for block in section.blocks limit: 1 -%}
+          <div {{ block.shopify_attributes }} style="max-width:760px;margin-inline:auto">
+            {%- render 'review-card', review: block.settings, style: 'featured', truncate_length: 0 -%}
+          </div>
+        {%- endfor -%}
+
+      {%- when 'proof' -%}
+        {%- comment -%}
+          "Reviews, loud" — the homepage proof band. Aggregate plus the
+          star distribution, immediately under the hero. This is the one
+          place DIRECTION.md Part 1 §2.1 is most emphatic about: Amouage
+          can afford restraint at $395, Siwa cannot at ~$19.
+        {%- endcomment -%}
+        {%- render 'review-widget',
+          widget_style: 'histogram',
+          show_summary: true,
+          show_histogram: true,
+          featured_count: section.settings.columns -%}
+
+      {%- when 'trust' -%}
+        <div class="usp" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'trust' -%}
+              <div {{ block.shopify_attributes }}>
+                {%- render 'feature-card', style: 'icon', icon: block.settings.icon,
+                  heading: block.settings.heading, body: block.settings.body -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+      {%- when 'video' -%}
+        <div class="mgrid" style="--tiles:{{ section.settings.columns }}">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'video_testimonial' -%}
+              <div {{ block.shopify_attributes }}>
+                {%- render 'testimonial-card', style: 'video',
+                  quote: block.settings.quote, author: block.settings.author,
+                  author_role: block.settings.author_role,
+                  image: block.settings.image, video_url: block.settings.video_url -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+      {%- else -%}
+        <div class="mgrid" style="--tiles:{{ section.settings.columns }}">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'review' -%}
+              <div {{ block.shopify_attributes }}>
+                {%- render 'review-card', review: block.settings,
+                  style: 'featured', truncate_length: section.settings.truncate_length -%}
+              </div>
+            {%- elsif block.type == 'testimonial' -%}
+              <div {{ block.shopify_attributes }}>
+                {%- render 'testimonial-card', style: block.settings.testimonial_style,
+                  quote: block.settings.quote, author: block.settings.author,
+                  author_role: block.settings.author_role, image: block.settings.image,
+                  publication_logo: block.settings.publication_logo,
+                  publication_name: block.settings.publication_name,
+                  link_url: block.settings.link_url, link_label: block.settings.link_label -%}
+              </div>
+            {%- else -%}
+              <div {{ block.shopify_attributes }}>{% render block %}</div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+    {%- endcase -%}
+
+    {%- if section.settings.cta_label != blank -%}
+      <div class="section__foot">
+        {%- render 'button', label: section.settings.cta_label, url: section.settings.cta_url, style: 'minimal' -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.reviews.name",
+  "settings": [
+    { "type": "paragraph", "content": "t:sections.reviews.authenticity_warning" },
+    { "type": "select", "id": "style", "label": "t:sections.reviews.style", "default": "grid",
+      "options": [
+        { "value": "proof", "label": "t:sections.reviews.style_proof" },
+        { "value": "carousel", "label": "t:sections.reviews.style_carousel" },
+        { "value": "grid", "label": "t:sections.reviews.style_grid" },
+        { "value": "single", "label": "t:sections.reviews.style_single" },
+        { "value": "trust", "label": "t:sections.reviews.style_trust" },
+        { "value": "video", "label": "t:sections.reviews.style_video" }
+      ] },
+    { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+    { "type": "checkbox", "id": "show_aggregate", "label": "t:sections.reviews.show_aggregate", "default": true, "info": "t:sections.reviews.aggregate_info" },
+    { "type": "range", "id": "columns", "min": 2, "max": 4, "step": 1, "label": "t:sections.featured_collections.columns", "default": 3 },
+    { "type": "range", "id": "truncate_length", "min": 80, "max": 400, "step": 20, "label": "t:components.review_card.truncate", "default": 200 },
+    { "type": "select", "id": "color_scheme", "label": "t:sections.general.color_scheme", "default": "tonal",
+      "options": [
+        { "value": "canvas", "label": "t:sections.general.scheme_canvas" },
+        { "value": "tonal", "label": "t:sections.general.scheme_tonal" },
+        { "value": "dark", "label": "t:sections.general.scheme_dark" }
+      ] },
+    { "type": "text", "id": "cta_label", "label": "t:components.button.label" },
+    { "type": "url", "id": "cta_url", "label": "t:components.button.url" }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "t:sections.reviews.block_review",
+      "settings": [
+        { "type": "paragraph", "content": "t:sections.reviews.block_review_info" },
+        { "type": "text", "id": "author", "label": "t:components.testimonial.author" },
+        { "type": "text", "id": "location", "label": "t:sections.reviews.location" },
+        { "type": "range", "id": "rating", "min": 1, "max": 5, "step": 1, "label": "t:components.testimonial.rating", "default": 5 },
+        { "type": "textarea", "id": "body", "label": "t:sections.reviews.body" },
+        { "type": "text", "id": "title", "label": "t:components.collection_card.title" },
+        { "type": "text", "id": "product", "label": "t:sections.reviews.product" },
+        { "type": "checkbox", "id": "verified", "label": "t:products.reviews.verified", "default": true },
+        { "type": "select", "id": "language", "label": "t:sections.reviews.language", "default": "en",
+          "options": [
+            { "value": "en", "label": "English" },
+            { "value": "ar", "label": "العربية" }
+          ] }
+      ]
+    },
+    {
+      "type": "testimonial",
+      "name": "t:sections.reviews.block_testimonial",
+      "settings": [
+        { "type": "text", "id": "quote", "label": "t:components.testimonial.quote" },
+        { "type": "text", "id": "author", "label": "t:components.testimonial.author" },
+        { "type": "text", "id": "author_role", "label": "t:components.testimonial.author_role" },
+        { "type": "image_picker", "id": "image", "label": "t:components.testimonial.image" },
+        { "type": "image_picker", "id": "publication_logo", "label": "t:components.testimonial.publication_logo" },
+        { "type": "text", "id": "publication_name", "label": "t:components.testimonial.publication_name" },
+        { "type": "url", "id": "link_url", "label": "t:components.testimonial.link_url" },
+        { "type": "text", "id": "link_label", "label": "t:components.testimonial.link_label" },
+        { "type": "select", "id": "testimonial_style", "label": "t:components.testimonial.style", "default": "quote",
+          "options": [
+            { "value": "quote", "label": "t:components.testimonial.style_quote" },
+            { "value": "avatar", "label": "t:components.testimonial.style_avatar" },
+            { "value": "press", "label": "t:components.testimonial.style_press" },
+            { "value": "heritage", "label": "t:components.testimonial.style_heritage" }
+          ] }
+      ]
+    },
+    {
+      "type": "video_testimonial",
+      "name": "t:sections.reviews.block_video",
+      "settings": [
+        { "type": "text", "id": "quote", "label": "t:components.testimonial.quote" },
+        { "type": "text", "id": "author", "label": "t:components.testimonial.author" },
+        { "type": "text", "id": "author_role", "label": "t:components.testimonial.author_role" },
+        { "type": "image_picker", "id": "image", "label": "t:sections.reviews.poster" },
+        { "type": "url", "id": "video_url", "label": "t:components.testimonial.video_url" }
+      ]
+    },
+    {
+      "type": "trust",
+      "name": "t:sections.footer.block_trust",
+      "settings": [
+        { "type": "select", "id": "icon", "label": "t:components.feature_card.icon", "default": "check",
+          "options": [
+            { "value": "check", "label": "t:components.icon.check" },
+            { "value": "heart", "label": "t:components.icon.heart" },
+            { "value": "leaf", "label": "t:components.icon.leaf" }
+          ] },
+        { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+        { "type": "text", "id": "body", "label": "t:components.feature_card.body" }
+      ]
+    },
+    { "type": "@app" }
+  ],
+  "presets": [ { "name": "t:sections.reviews.name" } ]
+}
+{% endschema %}

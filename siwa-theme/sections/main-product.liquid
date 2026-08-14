@@ -1,0 +1,534 @@
+{%- comment -%}
+  Product detail (PDP) — 5 layouts. The most complex section.
+
+  Styles: ../component-library/css/components.css (.pdp and modifiers)
+
+  Layouts (the `layout` setting):
+    standard  Gallery 62%, info 38%, description below. Prestige-like.
+    sticky    Info column sticks while the gallery scrolls.
+    tabs      Gallery + info above; Description / Notes / Reviews below.
+    wide      Narrow centred column. Editorial storytelling.
+    heritage  ORIGINALS ONLY — vintage treatment, Arabic + Latin title,
+              provenance, larger note pyramid, Cultural Accent.
+
+  ══════════════════════════════════════════════════════════════════
+  ⚠ TWO TEMPLATES, ONE SECTION — AND WHY THAT IS THE RIGHT SPLIT
+  ══════════════════════════════════════════════════════════════════
+  The live store runs two product templates: the default (50 products)
+  and a body-splash/lotion variant (6 products). `01-SITE-STRUCTURE.md`
+  §545 records that they differ **in their Judge.me app section IDs**,
+  and instructs: "Must be recreated as two `product.*.json` templates and
+  reassigned per product."
+
+  So the split lives in `templates/product.json` and
+  `templates/product.body-splash.json` — two template files, each with
+  its own block configuration and therefore its own Judge.me app block
+  instance. Both render THIS section.
+
+  Duplicating the section itself would fork 400 lines of Liquid to vary a
+  handful of settings. Merging the templates would collapse the two
+  Judge.me instances into one and break reviews on six products. The
+  template layer is exactly where Shopify intends this distinction.
+
+  ⚠ HERITAGE LAYOUT IS FIREWALLED
+  `heritage` carries the Cultural Accent Set. On one of the 40
+  inspired-by products it downgrades to `standard`, as product-card does.
+
+  ⚠ BREADCRUMBS
+  `01-SITE-STRUCTURE.md` anomaly 8: the live store has none. Added here,
+  with BreadcrumbList JSON-LD.
+{%- endcomment -%}
+{%- liquid
+  assign layout = section.settings.layout
+
+  capture register_raw
+    render 'product-register', product: product
+  endcapture
+  assign register = register_raw | strip
+  assign is_original = false
+  if register == 'original'
+    assign is_original = true
+  endif
+
+  unless is_original
+    if layout == 'heritage'
+      assign layout = 'standard'
+    endif
+  endunless
+
+  case layout
+    when 'sticky'
+      assign modifier = 'pdp--sticky'
+    when 'wide'
+      assign modifier = 'pdp--wide'
+    when 'heritage'
+      assign modifier = 'pdp--heritage'
+    else
+      assign modifier = ''
+  endcase
+
+  assign current_variant = product.selected_or_first_available_variant
+-%}
+
+{%- comment -%}
+  Marks the product being viewed so the recently-viewed module can record
+  it — and can exclude it from its own list, since the product you are
+  looking at is not "recently viewed", it is "here".
+{%- endcomment -%}
+<div class="section" data-product-handle-current="{{ product.handle }}">
+  <div class="section__inner">
+
+    {%- if section.settings.show_breadcrumbs -%}
+      <nav class="crumbs" aria-label="{{ 'general.accessibility.breadcrumb' | t }}">
+        <ol style="display:flex;gap:var(--sp-xs);list-style:none;margin:0;padding:0;flex-wrap:wrap">
+          <li><a href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a></li>
+          {%- if collection.url != blank -%}
+            <li><span class="sep" aria-hidden="true">›</span>
+              <a href="{{ collection.url }}">{{ collection.title }}</a></li>
+          {%- endif -%}
+          <li><span class="sep" aria-hidden="true">›</span>
+            <span aria-current="page">{{ product.title }}</span></li>
+        </ol>
+      </nav>
+    {%- endif -%}
+
+    <div class="pdp {{ modifier }}">
+      {%- comment -%} ── Gallery ── {%- endcomment -%}
+      <div class="pdp__gallery">
+        {%- if product.media.size > 0 -%}
+          <div class="gallery">
+            {%- if product.media.size > 1 -%}
+              <div class="gallery__thumbs" role="tablist"
+                   aria-label="{{ 'products.product.gallery' | t }}">
+                {%- for media in product.media -%}
+                  <button class="gallery__thumb" type="button" role="tab"
+                    aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+                    aria-label="{{ 'products.product.view_image' | t: index: forloop.index }}"
+                    data-gallery-thumb="{{ forloop.index0 }}">
+                    {{ media.preview_image | image_url: width: 128 | image_tag:
+                       loading: 'lazy', alt: media.alt | default: product.title }}
+                  </button>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+            <div class="gallery__main" data-gallery-main>
+              {%- for media in product.media -%}
+                <div data-gallery-slide="{{ forloop.index0 }}"
+                     {% unless forloop.first %}hidden{% endunless %}>
+                  {%- render 'image-container',
+                    image: media.preview_image,
+                    ratio: section.settings.image_ratio,
+                    zoom: true,
+                    loading: forloop.first | default: false,
+                    sizes: '(min-width: 900px) 60vw, 100vw',
+                    alt: media.alt | default: product.title -%}
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- else -%}
+          {%- render 'image-container', ratio: section.settings.image_ratio -%}
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} ── Info column: blocks, in merchant order ── {%- endcomment -%}
+      <div class="pdp__info">
+        {%- for block in section.blocks -%}
+          <div {{ block.shopify_attributes }}>
+            {%- case block.type -%}
+
+              {%- when 'title' -%}
+                <h1 class="pdp__title">
+                  {{ product.title }}
+                  {%- if is_original -%}
+                    
+                  {%- endif -%}
+                </h1>
+
+              {%- when 'vendor' -%}
+                {%- unless is_original -%}
+                  {%- if block.settings.show_vendor and product.vendor != blank -%}
+                    {%- comment -%}
+                      House carries the weight, phrase does not — see
+                      .pcard__house in assets/siwa-components.css.
+                    {%- endcomment -%}
+                    <p class="pcard__sub">
+                      {{ 'products.product.inspired_by' | t }}
+                      <span class="pcard__house">{{ product.vendor }}</span>
+                    </p>
+                  {%- endif -%}
+                {%- endunless -%}
+
+              {%- when 'reviews_badge' -%}
+                {%- render 'judgeme-preview-badge', product: product -%}
+
+              {%- when 'price' -%}
+                {%- render 'price', product: product, variant: current_variant -%}
+
+              {%- when 'price_contrast' -%}
+                {%- comment -%}
+                  Renders nothing on an Original, and nothing at all
+                  unless show_comparison is on. Retail figure is behind a
+                  second switch pending legal counsel.
+                {%- endcomment -%}
+                {%- render 'price-contrast',
+                  product: product,
+                  show_comparison: block.settings.show_comparison,
+                  show_retail_price: block.settings.show_retail_price,
+                  contrast_style: block.settings.comparison_style,
+                  disclaimer: block.settings.disclaimer,
+                  disclaimer_url: block.settings.disclaimer_url -%}
+
+              {%- when 'variant_picker' -%}
+                {%- unless product.has_only_default_variant -%}
+                  <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
+                    {%- for option in product.options_with_values -%}
+                      <fieldset class="field">
+                        <legend>{{ option.name }}</legend>
+                        <div class="filters__row">
+                          {%- for value in option.values -%}
+                            {%- assign input_id = section.id | append: '-' | append: option.position | append: '-' | append: forloop.index -%}
+                            <input type="radio" class="visually-hidden"
+                              id="{{ input_id }}"
+                              name="{{ option.name }}-{{ section.id }}"
+                              value="{{ value | escape }}"
+                              {% if option.selected_value == value %}checked{% endif %}>
+                            <label class="chip" for="{{ input_id }}">{{ value }}</label>
+                          {%- endfor -%}
+                        </div>
+                      </fieldset>
+                    {%- endfor -%}
+                    <noscript>
+                      <select name="id" form="ProductForm-{{ section.id }}" class="select">
+                        {%- for variant in product.variants -%}
+                          <option value="{{ variant.id }}"
+                            {% if variant == current_variant %}selected{% endif %}
+                            {% unless variant.available %}disabled{% endunless %}>
+                            {{ variant.title }} — {{ variant.price | money }}
+                          </option>
+                        {%- endfor -%}
+                      </select>
+                    </noscript>
+                  </variant-selector>
+                {%- endunless -%}
+
+              {%- when 'quantity' -%}
+                {%- render 'input',
+                  id: 'Quantity-' | append: section.id,
+                  name: 'quantity',
+                  type: 'number',
+                  label: 'products.product.quantity' | t,
+                  value: 1 -%}
+
+              {%- when 'buy_buttons' -%}
+                {%- form 'product', product, id: 'ProductForm-' | append: section.id -%}
+                  <input type="hidden" name="id" value="{{ current_variant.id }}" data-variant-id>
+                  {%- if current_variant.available -%}
+                    {%- render 'button',
+                      label: block.settings.cta_label | default: 'products.product.add_to_cart' | t,
+                      style: 'primary', size: 'lg', full_width: true, type: 'submit' -%}
+                  {%- else -%}
+                    {%- render 'button',
+                      label: 'products.product.sold_out' | t,
+                      style: 'minimal', size: 'lg', full_width: true, disabled: true -%}
+                  {%- endif -%}
+                  {%- if block.settings.show_dynamic_checkout -%}
+                    {{ form | payment_button }}
+                  {%- endif -%}
+                {%- endform -%}
+
+              {%- when 'description' -%}
+                <div class="rte">{{ product.description }}</div>
+
+              {%- when 'note_pyramid' -%}
+                {%- assign py_accent = 'none' -%}
+                {%- if is_original -%}
+                  {%- assign py_accent = block.settings.accent_color -%}
+                {%- endif -%}
+                {%- render 'note-pyramid',
+                  product: product,
+                  style: block.settings.note_pyramid_style,
+                  hide_when_empty: block.settings.hide_when_empty,
+                  accent_color: py_accent,
+                  heading: block.settings.heading -%}
+
+              {%- when 'layering_suggestion' -%}
+                {%- if block.settings.partner_collection != blank -%}
+                  {%- render 'layering-picker',
+                    base_collection: block.settings.base_collection,
+                    partner_collection: block.settings.partner_collection,
+                    picker_style: 'dropdown',
+                    heading: block.settings.heading,
+                    section_id: section.id | append: '-lay' -%}
+                {%- endif -%}
+
+              {%- when 'share' -%}
+                <div class="share">
+                  <button class="btn btn--secondary btn--sm" type="button"
+                    data-siwa-share
+                    data-share-url="{{ shop.url }}{{ product.url }}"
+                    data-share-title="{{ product.title | escape }}">
+                    {{ 'products.product.share' | t }}
+                  </button>
+                </div>
+
+              {%- when '@app' -%}
+                {%- comment -%}
+                  Judge.me and any other app blocks. This is the
+                  integration point that must survive — see the note at
+                  the head of this file about the two templates.
+                {%- endcomment -%}
+                {% render block %}
+
+            {%- endcase -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- comment -%} ── Tabs below (tabs layout) ── {%- endcomment -%}
+    {%- if layout == 'tabs' -%}
+      <div class="pdp__tabs tabs" data-siwa-tabs>
+        <div class="tabs__list" role="tablist">
+          <button class="tabs__tab" role="tab" type="button" id="t-desc-{{ section.id }}"
+            aria-controls="p-desc-{{ section.id }}" aria-selected="true" tabindex="0">
+            {{ 'products.product.description' | t }}
+          </button>
+          <button class="tabs__tab" role="tab" type="button" id="t-notes-{{ section.id }}"
+            aria-controls="p-notes-{{ section.id }}" aria-selected="false" tabindex="-1">
+            {{ 'products.product.notes' | t }}
+          </button>
+          <button class="tabs__tab" role="tab" type="button" id="t-rev-{{ section.id }}"
+            aria-controls="p-rev-{{ section.id }}" aria-selected="false" tabindex="-1">
+            {{ 'products.product.reviews' | t }}
+          </button>
+        </div>
+        <div class="tabs__panel" role="tabpanel" id="p-desc-{{ section.id }}"
+             aria-labelledby="t-desc-{{ section.id }}" tabindex="0">
+          <div class="rte">{{ product.description }}</div>
+        </div>
+        <div class="tabs__panel" role="tabpanel" id="p-notes-{{ section.id }}"
+             aria-labelledby="t-notes-{{ section.id }}" tabindex="0" hidden>
+          {%- render 'note-pyramid', product: product, style: section.settings.note_pyramid_style -%}
+        </div>
+        <div class="tabs__panel" role="tabpanel" id="p-rev-{{ section.id }}"
+             aria-labelledby="t-rev-{{ section.id }}" tabindex="0" hidden>
+          {%- render 'review-widget', product: product, widget_style: section.settings.review_widget_style -%}
+        </div>
+      </div>
+    {%- elsif section.settings.show_reviews -%}
+      <div style="margin-top:var(--sp-section)">
+        {%- render 'review-widget',
+          product: product,
+          widget_style: section.settings.review_widget_style,
+          heading: section.settings.reviews_heading -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- comment -%}
+  Sticky buy bar. Hidden until the main add-to-cart scrolls out of view.
+{%- endcomment -%}
+{%- if section.settings.enable_sticky_buy_bar -%}
+  <div class="pdp__buybar" data-siwa-buybar hidden>
+    <span>{{ product.title }}</span>
+    {%- render 'price', product: product, variant: current_variant -%}
+    {%- render 'button',
+      label: 'products.product.add_to_cart' | t,
+      style: 'primary',
+      disabled: current_variant.available | default: false -%}
+  </div>
+{%- endif -%}
+
+{%- comment -%}
+  JSON-LD. ProductGroup with every variant, plus BreadcrumbList.
+  aggregateRating comes from Judge.me metafields and is OMITTED when
+  they are absent — a fabricated rating is a fabricated review.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "description": {{ product.description | strip_html | truncate: 400 | json }},
+  "url": {{ shop.url | append: product.url | json }},
+  {% if product.featured_image %}"image": {{ product.featured_image | image_url: width: 1200 | prepend: "https:" | json }},{% endif %}
+  {% unless is_original %}{% if product.vendor != blank %}"isSimilarTo": { "@type": "Product", "name": {{ product.vendor | json }} },{% endif %}{% endunless %}
+  {% if product.metafields.judgeme.badge != blank and product.metafields.reviews.rating.value != blank %}
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": {{ product.metafields.reviews.rating.value | json }},
+    "reviewCount": {{ product.metafields.reviews.rating_count | json }}
+  },
+  {% endif %}
+  "offers": [
+    {%- for variant in product.variants -%}
+    {
+      "@type": "Offer",
+      "sku": {{ variant.sku | default: variant.id | json }},
+      "name": {{ variant.title | json }},
+      "price": {{ variant.price | divided_by: 100.0 | json }},
+      "priceCurrency": {{ cart.currency.iso_code | json }},
+      "availability": "https://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+      "url": {{ shop.url | append: variant.url | json }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.product.name",
+  "class": "shopify-section--product",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.product.layout",
+      "default": "standard",
+      "info": "t:sections.product.layout_info",
+      "options": [
+        { "value": "standard", "label": "t:sections.product.layout_standard" },
+        { "value": "sticky", "label": "t:sections.product.layout_sticky" },
+        { "value": "tabs", "label": "t:sections.product.layout_tabs" },
+        { "value": "wide", "label": "t:sections.product.layout_wide" },
+        { "value": "heritage", "label": "t:sections.product.layout_heritage" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "t:components.image.ratio",
+      "default": "4x5",
+      "options": [
+        { "value": "4x5", "label": "t:components.image.ratio_4x5" },
+        { "value": "1x1", "label": "t:components.image.ratio_1x1" },
+        { "value": "3x4", "label": "t:components.image.ratio_3x4" }
+      ]
+    },
+    { "type": "checkbox", "id": "show_breadcrumbs", "label": "t:sections.product.breadcrumbs", "default": true, "info": "t:sections.product.breadcrumbs_info" },
+    { "type": "checkbox", "id": "enable_sticky_buy_bar", "label": "t:sections.product.sticky_buy_bar", "default": false },
+    { "type": "header", "content": "t:sections.product.header_reviews" },
+    { "type": "checkbox", "id": "show_reviews", "label": "t:components.product_card.show_reviews", "default": true, "info": "t:sections.product.reviews_info" },
+    { "type": "text", "id": "reviews_heading", "label": "t:components.review_widget.heading" },
+    {
+      "type": "select",
+      "id": "review_widget_style",
+      "label": "t:components.review_widget.style",
+      "default": "embed",
+      "options": [
+        { "value": "embed", "label": "t:components.review_widget.style_embed" },
+        { "value": "list", "label": "t:components.review_widget.style_list" },
+        { "value": "summary", "label": "t:components.review_widget.style_summary" },
+        { "value": "histogram", "label": "t:components.review_widget.style_histogram" },
+        { "value": "carousel", "label": "t:components.review_widget.style_carousel" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "note_pyramid_style",
+      "label": "t:components.note_pyramid.style",
+      "default": "iconed",
+      "options": [
+        { "value": "iconed", "label": "t:components.note_pyramid.style_iconed" },
+        { "value": "graphic", "label": "t:components.note_pyramid.style_graphic" },
+        { "value": "list", "label": "t:components.note_pyramid.style_list" },
+        { "value": "radial", "label": "t:components.note_pyramid.style_radial" },
+        { "value": "heritage", "label": "t:components.note_pyramid.style_heritage" }
+      ]
+    }
+  ],
+  "blocks": [
+    { "type": "title", "name": "t:sections.product.block_title", "limit": 1 },
+    {
+      "type": "vendor",
+      "name": "t:sections.product.block_vendor",
+      "limit": 1,
+      "settings": [
+        { "type": "paragraph", "content": "t:sections.product.vendor_info" },
+        { "type": "checkbox", "id": "show_vendor", "label": "t:components.product_card.show_vendor", "default": true }
+      ]
+    },
+    { "type": "reviews_badge", "name": "t:sections.product.block_reviews_badge", "limit": 1 },
+    { "type": "price", "name": "t:sections.product.block_price", "limit": 1 },
+    {
+      "type": "price_contrast",
+      "name": "t:sections.product.block_price_contrast",
+      "limit": 1,
+      "settings": [
+        { "type": "paragraph", "content": "t:components.price_contrast.legal_warning" },
+        { "type": "checkbox", "id": "show_comparison", "label": "t:components.price_contrast.show", "default": false },
+        { "type": "checkbox", "id": "show_retail_price", "label": "t:components.price_contrast.show_retail", "default": false, "info": "t:components.price_contrast.show_retail_info" },
+        {
+          "type": "select", "id": "comparison_style", "label": "t:components.price_contrast.style", "default": "inline",
+          "options": [
+            { "value": "inline", "label": "t:components.price_contrast.style_inline" },
+            { "value": "callout", "label": "t:components.price_contrast.style_callout" },
+            { "value": "table", "label": "t:components.price_contrast.style_table" },
+            { "value": "story", "label": "t:components.price_contrast.style_story" },
+            { "value": "footnote", "label": "t:components.price_contrast.style_footnote" }
+          ]
+        },
+        { "type": "text", "id": "disclaimer", "label": "t:components.price_contrast.disclaimer" },
+        { "type": "url", "id": "disclaimer_url", "label": "t:components.price_contrast.disclaimer_url" }
+      ]
+    },
+    { "type": "variant_picker", "name": "t:sections.product.block_variant_picker", "limit": 1 },
+    { "type": "quantity", "name": "t:sections.product.block_quantity", "limit": 1 },
+    {
+      "type": "buy_buttons",
+      "name": "t:sections.product.block_buy_buttons",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "cta_label", "label": "t:components.button.label" },
+        { "type": "checkbox", "id": "show_dynamic_checkout", "label": "t:sections.product.dynamic_checkout", "default": true }
+      ]
+    },
+    { "type": "description", "name": "t:sections.product.block_description", "limit": 1 },
+    {
+      "type": "note_pyramid",
+      "name": "t:sections.product.block_notes",
+      "limit": 1,
+      "settings": [
+        { "type": "paragraph", "content": "t:components.note_pyramid.data_warning" },
+        { "type": "text", "id": "heading", "label": "t:components.note_pyramid.heading" },
+        {
+          "type": "select", "id": "note_pyramid_style", "label": "t:components.note_pyramid.style", "default": "iconed",
+          "options": [
+            { "value": "iconed", "label": "t:components.note_pyramid.style_iconed" },
+            { "value": "graphic", "label": "t:components.note_pyramid.style_graphic" },
+            { "value": "list", "label": "t:components.note_pyramid.style_list" },
+            { "value": "radial", "label": "t:components.note_pyramid.style_radial" },
+            { "value": "heritage", "label": "t:components.note_pyramid.style_heritage" }
+          ]
+        },
+        { "type": "checkbox", "id": "hide_when_empty", "label": "t:components.note_pyramid.hide_when_empty", "default": true },
+        {
+          "type": "select", "id": "accent_color", "label": "t:components.accent.label", "default": "none",
+          "options": [
+            { "value": "none", "label": "t:components.accent.none" },
+            { "value": "palm-green", "label": "t:components.accent.palm_green" },
+            { "value": "date-red", "label": "t:components.accent.date_red" },
+            { "value": "date-yellow", "label": "t:components.accent.date_yellow" },
+            { "value": "desert-brown", "label": "t:components.accent.desert_brown" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "layering_suggestion",
+      "name": "t:sections.product.block_layering",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "heading", "label": "t:components.layering.heading" },
+        { "type": "collection", "id": "base_collection", "label": "t:components.layering.base_collection" },
+        { "type": "collection", "id": "partner_collection", "label": "t:components.layering.partner_collection" }
+      ]
+    },
+    { "type": "share", "name": "t:sections.product.block_share", "limit": 1 },
+    { "type": "@app" }
+  ]
+}
+{% endschema %}

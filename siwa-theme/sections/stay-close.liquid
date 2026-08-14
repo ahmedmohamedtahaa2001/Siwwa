@@ -1,0 +1,166 @@
+{%- comment -%}
+  Stay close — referral (F-01) + newsletter (F-02).
+
+  ⚠ WHATSAPP-FIRST, DELIBERATELY.
+  `00-OVERVIEW.md` §5 shows WhatsApp is how this store actually talks to
+  its customers — the number is in the footer, the contact page and the
+  service copy. An email-only capture would be designed for a market
+  Siwa is not in. The referral action is therefore a WhatsApp share, with
+  the newsletter beside it rather than instead of it.
+
+  The share URL and message are settings, so the copy that goes out is
+  merchant-controlled and translatable — nothing is composed in JS.
+{%- endcomment -%}
+{%- liquid
+  comment
+    The input must read against whichever ground the section sits on:
+    a canvas-coloured field on a Black Mesa band is invisible.
+
+    theme-check's UnusedAssign cannot see variables passed as `render`
+    arguments; field_style is used below, in the input render.
+  endcomment
+  # theme-check-disable UnusedAssign
+  case section.settings.color_scheme
+    when 'dark'
+      assign field_style = 'dark'
+    when 'tonal'
+      assign field_style = 'filled'
+    else
+      assign field_style = 'minimal'
+  endcase
+  # theme-check-enable UnusedAssign
+
+  assign accent_var = ''
+  case section.settings.accent_color
+    when 'palm-green'
+      assign accent_var = '--accent-color:var(--palm-green)'
+    when 'date-red'
+      assign accent_var = '--accent-color:var(--date-red)'
+    when 'date-yellow'
+      assign accent_var = '--accent-color:var(--date-yellow)'
+    when 'desert-brown'
+      assign accent_var = '--accent-color:var(--desert-brown)'
+  endcase
+-%}
+<div class="section {% if section.settings.color_scheme == 'dark' %}section--dark{% elsif section.settings.color_scheme == 'tonal' %}section--tonal{% endif %}"
+     style="{{ accent_var }}">
+  <div class="section__inner">
+    <div class="section__head section__head--center">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="eyebrow eyebrow--accent">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      <h2 class="section__title" data-reveal-line>
+        {{ section.settings.heading }}
+        
+      </h2>
+      {%- if section.settings.subheading != blank -%}
+        <div class="section__sub rte">{{ section.settings.subheading }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="contact contact--split" data-reveal>
+      {%- comment -%} ── Referral: WhatsApp first ── {%- endcomment -%}
+      {%- if section.settings.show_referral -%}
+        <div class="referral" style="display:grid;gap:var(--sp-sm);align-content:start">
+          <span class="heritage__rule" aria-hidden="true"></span>
+          {%- if section.settings.referral_heading != blank -%}
+            <h3 class="fcard__heading">{{ section.settings.referral_heading }}</h3>
+          {%- endif -%}
+          {%- if section.settings.referral_body != blank -%}
+            <div class="rte">{{ section.settings.referral_body }}</div>
+          {%- endif -%}
+          {%- if section.settings.whatsapp_share_url != blank -%}
+            {%- render 'button',
+              label: section.settings.referral_cta,
+              url: section.settings.whatsapp_share_url,
+              style: 'primary',
+              icon: 'whatsapp' -%}
+          {%- endif -%}
+          {%- if section.settings.referral_note != blank -%}
+            <p class="layering__reason">{{ section.settings.referral_note }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} ── Newsletter ── {%- endcomment -%}
+      {%- if section.settings.show_newsletter -%}
+        <div style="display:grid;gap:var(--sp-sm);align-content:start">
+          <span class="heritage__rule" aria-hidden="true"></span>
+          {%- if section.settings.newsletter_heading != blank -%}
+            <h3 class="fcard__heading">{{ section.settings.newsletter_heading }}</h3>
+          {%- endif -%}
+          {%- if section.settings.newsletter_body != blank -%}
+            <div class="rte">{{ section.settings.newsletter_body }}</div>
+          {%- endif -%}
+          {%- form 'customer', class: 'news' -%}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <div class="news__row">
+              {%- render 'input',
+                id: 'StayCloseEmail-' | append: section.id,
+                name: 'contact[email]',
+                type: 'email',
+                label: 'general.newsletter.label' | t,
+                placeholder: section.settings.newsletter_placeholder,
+                input_style: field_style,
+                required: true,
+                autocomplete: 'email' -%}
+              {%- render 'button',
+                label: section.settings.newsletter_cta | default: 'general.newsletter.submit' | t,
+                style: 'primary', type: 'submit' -%}
+            </div>
+            {%- if form.posted_successfully? -%}
+              <p class="field__hint" role="status">{{ 'general.newsletter.success' | t }}</p>
+            {%- endif -%}
+            {%- if form.errors -%}
+              <p class="field__err" role="alert">{{ form.errors.messages.email }}</p>
+            {%- endif -%}
+          {%- endform -%}
+          {%- if section.settings.newsletter_note != blank -%}
+            <p class="layering__reason">{{ section.settings.newsletter_note }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.stay_close.name",
+  "settings": [
+    { "type": "paragraph", "content": "t:sections.stay_close.info" },
+    { "type": "text", "id": "eyebrow", "label": "t:sections.general.eyebrow" },
+    { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+    { "type": "richtext", "id": "subheading", "label": "t:sections.hero.subheading" },
+    { "type": "header", "content": "t:sections.stay_close.header_referral" },
+    { "type": "checkbox", "id": "show_referral", "label": "t:sections.stay_close.show_referral", "default": true },
+    { "type": "text", "id": "referral_heading", "label": "t:components.feature_card.heading" },
+    { "type": "richtext", "id": "referral_body", "label": "t:components.feature_card.body" },
+    { "type": "text", "id": "referral_cta", "label": "t:components.button.label" },
+    { "type": "url", "id": "whatsapp_share_url", "label": "t:sections.stay_close.whatsapp_share", "info": "t:sections.stay_close.whatsapp_share_info" },
+    { "type": "text", "id": "referral_note", "label": "t:sections.stay_close.note" },
+    { "type": "header", "content": "t:sections.stay_close.header_newsletter" },
+    { "type": "checkbox", "id": "show_newsletter", "label": "t:sections.stay_close.show_newsletter", "default": true },
+    { "type": "text", "id": "newsletter_heading", "label": "t:components.feature_card.heading" },
+    { "type": "richtext", "id": "newsletter_body", "label": "t:components.feature_card.body" },
+    { "type": "text", "id": "newsletter_placeholder", "label": "t:components.input.placeholder" },
+    { "type": "text", "id": "newsletter_cta", "label": "t:components.button.label" },
+    { "type": "text", "id": "newsletter_note", "label": "t:sections.stay_close.note" },
+    { "type": "select", "id": "accent_color", "label": "t:components.accent.label", "default": "none",
+      "options": [
+        { "value": "none", "label": "t:components.accent.none" },
+        { "value": "palm-green", "label": "t:components.accent.palm_green" },
+        { "value": "date-red", "label": "t:components.accent.date_red" },
+        { "value": "date-yellow", "label": "t:components.accent.date_yellow" },
+        { "value": "desert-brown", "label": "t:components.accent.desert_brown" }
+      ] },
+    { "type": "select", "id": "color_scheme", "label": "t:sections.general.color_scheme", "default": "dark",
+      "options": [
+        { "value": "canvas", "label": "t:sections.general.scheme_canvas" },
+        { "value": "tonal", "label": "t:sections.general.scheme_tonal" },
+        { "value": "dark", "label": "t:sections.general.scheme_dark" }
+      ] }
+  ],
+  "presets": [ { "name": "t:sections.stay_close.name" } ]
+}
+{% endschema %}

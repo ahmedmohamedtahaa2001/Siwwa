@@ -1,0 +1,101 @@
+{%- comment -%}
+  Shop by mood — feature A-01, faceted browsing.
+
+  `01-SITE-STRUCTURE.md` anomaly 9: the live store has no tag, vendor or
+  size facets at all. This section is the homepage entry point into
+  browsing by scent family or occasion — the thing Oakcha does well and
+  Siwa currently cannot do at all.
+
+  Each mood is a BLOCK pointing at a real collection (or a filtered
+  collection URL). Counts come from `collection.products_count` at render
+  time, never typed in — `05-COLLECTIONS.md` records captured counts that
+  exceed the whole catalogue, so a typed number would be wrong.
+
+  Reference: Oakcha's note-family browse (DIRECTION.md Part 2 §3) —
+  tactical only: it governs WHAT data is exposed, never how it sounds.
+{%- endcomment -%}
+<div class="section {% if section.settings.color_scheme == 'tonal' %}section--tonal{% elsif section.settings.color_scheme == 'dark' %}section--dark{% endif %}">
+  <div class="section__inner">
+    {%- if section.settings.heading != blank -%}
+      <div class="section__head {% if section.settings.center_heading %}section__head--center{% endif %}">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        <h2 class="section__title" data-reveal-line>
+          {{ section.settings.heading }}
+          
+        </h2>
+        {%- if section.settings.subheading != blank -%}
+          <div class="section__sub rte">{{ section.settings.subheading }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="filters__row" data-reveal>
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign target = block.settings.collection
+          assign url = block.settings.url | default: target.url
+          assign label = block.settings.label | default: target.title
+          assign count = nil
+          if section.settings.show_counts and target != blank
+            assign count = target.products_count
+          endif
+        -%}
+        {%- if url != blank and label != blank -%}
+          <span {{ block.shopify_attributes }}>
+            {%- render 'chip',
+              text: label,
+              url: url,
+              count: count,
+              style: block.settings.chip_style -%}
+          </span>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.cta_label != blank -%}
+      <div class="section__foot">
+        {%- render 'button', label: section.settings.cta_label, url: section.settings.cta_url,
+          style: 'ghost', icon: 'arrow-right', icon_is_directional: true -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.mood.name",
+  "settings": [
+    { "type": "paragraph", "content": "t:sections.mood.info" },
+    { "type": "text", "id": "eyebrow", "label": "t:sections.general.eyebrow" },
+    { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+    { "type": "richtext", "id": "subheading", "label": "t:sections.hero.subheading" },
+    { "type": "checkbox", "id": "center_heading", "label": "t:sections.featured_collections.center_heading", "default": false },
+    { "type": "checkbox", "id": "show_counts", "label": "t:sections.mood.show_counts", "default": true, "info": "t:sections.mood.show_counts_info" },
+    { "type": "text", "id": "cta_label", "label": "t:components.button.label" },
+    { "type": "url", "id": "cta_url", "label": "t:components.button.url" },
+    { "type": "select", "id": "color_scheme", "label": "t:sections.general.color_scheme", "default": "canvas",
+      "options": [
+        { "value": "canvas", "label": "t:sections.general.scheme_canvas" },
+        { "value": "tonal", "label": "t:sections.general.scheme_tonal" },
+        { "value": "dark", "label": "t:sections.general.scheme_dark" }
+      ] }
+  ],
+  "blocks": [
+    { "type": "mood", "name": "t:sections.mood.block",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "t:components.collection_card.collection" },
+        { "type": "text", "id": "label", "label": "t:sections.mood.label", "info": "t:sections.mood.label_info" },
+        { "type": "url", "id": "url", "label": "t:sections.mood.url", "info": "t:sections.mood.url_info" },
+        { "type": "select", "id": "chip_style", "label": "t:components.chip.style", "default": "neutral",
+          "options": [
+            { "value": "neutral", "label": "t:components.chip.style_neutral" },
+            { "value": "scent", "label": "t:components.chip.style_scent" },
+            { "value": "outline", "label": "t:components.chip.style_outline" }
+          ] }
+      ] }
+  ],
+  "presets": [ { "name": "t:sections.mood.name", "blocks": [ { "type": "mood" }, { "type": "mood" }, { "type": "mood" }, { "type": "mood" } ] } ]
+}
+{% endschema %}

@@ -1,0 +1,64 @@
+{
+  "_comment": "Section-level fragment for the Heritage block. This is the ONE module where the Cultural Accent Set belongs. Content must be TRUE and, per the Kahina model (BENCHMARK.md Part 2 §3), QUANTIFIED — named partners, countable items, real percentages. The artisan blocks publish a real person's name and face: consent is a prerequisite.",
+  "settings": [
+    {
+      "type": "select", "id": "block_style", "label": "t:components.heritage.style", "default": "split",
+      "options": [
+        { "value": "split",     "label": "t:components.heritage.style_split" },
+        { "value": "quote",     "label": "t:components.heritage.style_quote" },
+        { "value": "timeline",  "label": "t:components.heritage.style_timeline" },
+        { "value": "artisan",   "label": "t:components.heritage.style_artisan", "info": "t:components.heritage.style_artisan_info" },
+        { "value": "cinematic", "label": "t:components.heritage.style_cinematic" }
+      ]
+    },
+    { "type": "text", "id": "heading", "label": "t:components.feature_card.heading" },
+    { "type": "text", "id": "heading_ar", "label": "t:components.feature_card.heading_ar", "info": "t:components.bilingual.equal_weight_info" },
+    { "type": "richtext", "id": "body", "label": "t:components.feature_card.body" },
+    { "type": "richtext", "id": "body_ar", "label": "t:components.feature_card.body_ar" },
+    { "type": "image_picker", "id": "image", "label": "t:components.feature_card.image" },
+    { "type": "text", "id": "quote", "label": "t:components.testimonial.quote" },
+    { "type": "text", "id": "attribution", "label": "t:components.testimonial.author" },
+    { "type": "text", "id": "provenance", "label": "t:components.feature_card.provenance" },
+    {
+      "type": "select", "id": "accent_color", "label": "t:components.accent.label", "default": "none",
+      "info": "t:components.heritage.accent_info",
+      "options": [
+        { "value": "none",         "label": "t:components.accent.none" },
+        { "value": "palm-green",   "label": "t:components.accent.palm_green" },
+        { "value": "date-red",     "label": "t:components.accent.date_red" },
+        { "value": "date-yellow",  "label": "t:components.accent.date_yellow" },
+        { "value": "desert-brown", "label": "t:components.accent.desert_brown" }
+      ]
+    },
+    { "type": "checkbox", "id": "enable_vintage_effects", "label": "t:settings_schema.vintage.name", "default": false },
+    { "type": "checkbox", "id": "reverse", "label": "t:components.feature_card.reverse", "default": false },
+    { "type": "range", "id": "scrim_opacity", "min": 0, "max": 80, "step": 10, "unit": "%", "label": "t:components.image.overlay", "default": 50 },
+    { "type": "text", "id": "cta_label", "label": "t:components.button.label" },
+    { "type": "url", "id": "cta_url", "label": "t:components.button.url" }
+  ],
+  "blocks": [
+    {
+      "type": "chapter",
+      "name": "t:components.heritage.chapter",
+      "settings": [
+        { "type": "text", "id": "chapter_number", "label": "t:components.heritage.chapter_number" },
+        { "type": "text", "id": "chapter_heading", "label": "t:components.heritage.chapter_heading" },
+        { "type": "text", "id": "chapter_heading_ar", "label": "t:components.heritage.chapter_heading_ar" },
+        { "type": "image_picker", "id": "chapter_image", "label": "t:components.feature_card.image" },
+        { "type": "richtext", "id": "chapter_body", "label": "t:components.feature_card.body" }
+      ]
+    },
+    {
+      "type": "artisan",
+      "name": "t:components.heritage.artisan",
+      "settings": [
+        { "type": "paragraph", "content": "t:components.heritage.artisan_consent" },
+        { "type": "image_picker", "id": "photo", "label": "t:components.heritage.artisan_photo" },
+        { "type": "text", "id": "name", "label": "t:components.heritage.artisan_name" },
+        { "type": "text", "id": "role", "label": "t:components.heritage.artisan_role" },
+        { "type": "text", "id": "quote", "label": "t:components.testimonial.quote" },
+        { "type": "text", "id": "product_connection", "label": "t:components.heritage.artisan_connection" }
+      ]
+    }
+  ]
+}

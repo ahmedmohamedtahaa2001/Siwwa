@@ -1,0 +1,58 @@
+{
+  "_comment": "Section-level fragment for the Scent quiz. Questions are BLOCKS, never a fixed loop (Development Law 3). The scorer falls back to `fallback_collection` when nothing scores well rather than asserting a match. The `persona` style needs an archetype set that nobody has authored yet (07-COPY-CONTENT.md).",
+  "settings": [
+    {
+      "type": "select", "id": "quiz_style", "label": "t:components.quiz.style", "default": "form",
+      "options": [
+        { "value": "form",    "label": "t:components.quiz.style_form" },
+        { "value": "visual",  "label": "t:components.quiz.style_visual" },
+        { "value": "persona", "label": "t:components.quiz.style_persona", "info": "t:components.quiz.style_persona_info" },
+        { "value": "scoring", "label": "t:components.quiz.style_scoring" },
+        { "value": "deep",    "label": "t:components.quiz.style_deep" }
+      ]
+    },
+    { "type": "text", "id": "heading", "label": "t:components.quiz.heading" },
+    { "type": "text", "id": "heading_ar", "label": "t:components.quiz.heading_ar" },
+    {
+      "type": "select", "id": "result_type", "label": "t:components.quiz.result_type", "default": "single-product",
+      "options": [
+        { "value": "single-product", "label": "t:components.quiz.result_single" },
+        { "value": "multi-product",  "label": "t:components.quiz.result_multi" },
+        { "value": "persona",        "label": "t:components.quiz.result_persona" },
+        { "value": "layering-combo", "label": "t:components.quiz.result_layering" }
+      ]
+    },
+    { "type": "collection", "id": "result_collection", "label": "t:components.quiz.result_collection" },
+    { "type": "collection", "id": "fallback_collection", "label": "t:components.quiz.fallback_collection", "info": "t:components.quiz.fallback_info" }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "t:components.quiz.question",
+      "limit": 15,
+      "settings": [
+        { "type": "text", "id": "question_text", "label": "t:components.quiz.question_text" },
+        { "type": "text", "id": "question_text_ar", "label": "t:components.quiz.question_text_ar" },
+        {
+          "type": "select", "id": "question_type", "label": "t:components.quiz.question_type", "default": "single-choice",
+          "options": [
+            { "value": "single-choice", "label": "t:components.quiz.type_single" },
+            { "value": "multi-choice",  "label": "t:components.quiz.type_multi" }
+          ]
+        },
+        { "type": "text", "id": "answer_1_label", "label": "t:components.quiz.answer_label" },
+        { "type": "text", "id": "answer_1_value", "label": "t:components.quiz.answer_value", "info": "t:components.quiz.answer_value_info" },
+        { "type": "image_picker", "id": "answer_1_image", "label": "t:components.quiz.answer_image" },
+        { "type": "text", "id": "answer_2_label", "label": "t:components.quiz.answer_label" },
+        { "type": "text", "id": "answer_2_value", "label": "t:components.quiz.answer_value" },
+        { "type": "image_picker", "id": "answer_2_image", "label": "t:components.quiz.answer_image" },
+        { "type": "text", "id": "answer_3_label", "label": "t:components.quiz.answer_label" },
+        { "type": "text", "id": "answer_3_value", "label": "t:components.quiz.answer_value" },
+        { "type": "image_picker", "id": "answer_3_image", "label": "t:components.quiz.answer_image" },
+        { "type": "text", "id": "answer_4_label", "label": "t:components.quiz.answer_label" },
+        { "type": "text", "id": "answer_4_value", "label": "t:components.quiz.answer_value" },
+        { "type": "image_picker", "id": "answer_4_image", "label": "t:components.quiz.answer_image" }
+      ]
+    }
+  ]
+}

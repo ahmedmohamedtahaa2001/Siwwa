@@ -1,0 +1,163 @@
+{%- comment -%}
+  Announcement bar — 5 variants.
+
+  Styles: ../component-library/css/components.css (.hdr__ann, .ann--sticky)
+  Behaviour: assets/siwa-modules.js (rotation, countdown)
+
+  Variants (bar_style):
+    static     One message. The live store's current shape.
+    rotating   2–5 messages on a timer, pausable.
+    countdown  Counts down to a date. Sale campaigns.
+    sticky     Stays at the top on scroll. Live store has this DISABLED
+               (`--announcement-bar-is-sticky: 0`).
+    bilingual  English at one end, Arabic at the other, centred on mobile.
+
+  Messages are BLOCKS, never a fixed loop (Development Law 3).
+{%- endcomment -%}
+{%- liquid
+  assign bs = section.settings.bar_style
+  assign sticky = ''
+  if section.settings.enable_sticky or bs == 'sticky'
+    assign sticky = 'ann--sticky'
+  endif
+  assign rotate = false
+  if bs == 'rotating'
+    assign rotate = true
+  endif
+-%}
+{%- comment -%}
+  QUIET + SHIPPING METER — the product-page variant.
+  `00-OVERVIEW.md` records a 1,500 EGP free-shipping threshold the store
+  already runs but never merchandises. This ties the bar to it: how much
+  further to go, with a progress rule. It reads from the live cart, so it
+  is never a decorative number.
+{%- endcomment -%}
+{%- if section.settings.bar_style == 'meter' -%}
+  {%- liquid
+    assign threshold = section.settings.free_shipping_threshold | times: 100
+    assign remaining = threshold | minus: cart.total_price
+    assign pct = 0
+    if threshold > 0
+      assign pct = cart.total_price | times: 100 | divided_by: threshold
+      if pct > 100
+        assign pct = 100
+      endif
+    endif
+  -%}
+  <div class="annq" role="status">
+    <span class="annq__txt">
+      {%- if remaining > 0 -%}
+        {{ remaining | money }} {{ 'cart.shipping.away_from_free' | t }}
+      {%- else -%}
+        {{ 'cart.shipping.qualified' | t }}
+      {%- endif -%}
+    </span>
+    <span class="annq__bar" role="img"
+          aria-label="{{ 'cart.shipping.progress' | t: percent: pct }}">
+      <i style="width:{{ pct }}%"></i>
+    </span>
+  </div>
+
+{%- elsif section.blocks.size > 0 -%}
+  <div
+    class="hdr__ann {{ sticky }}"
+    style="background:{{ section.settings.background_color }};color:{{ section.settings.text_color }}"
+    {% if rotate %}
+      data-siwa-announcement
+      data-interval="{{ section.settings.rotate_seconds | times: 1000 }}"
+    {% endif %}
+    {%- comment -%}
+      role="status" not "alert": an alert interrupts a screen reader
+      mid-sentence, which a shipping-threshold notice does not warrant.
+    {%- endcomment -%}
+    role="status"
+    aria-live="polite"
+  >
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign is_first = forloop.first
+        assign hidden_attr = ''
+        if rotate and is_first == false
+          assign hidden_attr = 'hidden'
+        endif
+      -%}
+      <div
+        class="{% if bs == 'bilingual' %}ann__split{% endif %}"
+        {% if rotate %}data-announcement-slide{% endif %}
+        {{ hidden_attr }}
+        {{ block.shopify_attributes }}
+      >
+        {%- capture message -%}
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" style="color:inherit">{{ block.settings.message }}</a>
+          {%- else -%}
+            {{ block.settings.message }}
+          {%- endif -%}
+        {%- endcapture -%}
+
+        {%- if bs == 'bilingual' -%}
+          <span>{{ message }}</span>
+          
+        {%- else -%}
+          {{ message }}
+          {%- if bs == 'countdown' and section.settings.countdown_to != blank -%}
+            <span class="ann__cd"
+              data-siwa-countdown
+              data-deadline="{{ section.settings.countdown_to }}"
+              data-unit-days="{{ 'general.countdown.days' | t }}"
+              data-unit-hours="{{ 'general.countdown.hours' | t }}"
+              data-unit-minutes="{{ 'general.countdown.minutes' | t }}"
+              data-expired="{{ 'general.countdown.expired' | t }}"></span>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.announcement.name",
+  "class": "shopify-section--announcement",
+  "settings": [
+    {
+      "type": "select",
+      "id": "bar_style",
+      "label": "t:sections.announcement.style",
+      "default": "static",
+      "options": [
+        { "value": "static", "label": "t:sections.announcement.style_static" },
+        { "value": "rotating", "label": "t:sections.announcement.style_rotating" },
+        { "value": "countdown", "label": "t:sections.announcement.style_countdown" },
+        { "value": "sticky", "label": "t:sections.announcement.style_sticky" },
+        { "value": "bilingual", "label": "t:sections.announcement.style_bilingual" },
+        { "value": "meter", "label": "t:sections.announcement.style_meter" }
+      ]
+    },
+    { "type": "number", "id": "free_shipping_threshold", "label": "t:sections.cart_drawer.threshold", "default": 1500, "info": "t:sections.announcement.meter_info" },
+    { "type": "checkbox", "id": "enable_sticky", "label": "t:sections.announcement.sticky", "default": false },
+    {
+      "type": "range",
+      "id": "rotate_seconds",
+      "min": 3, "max": 12, "step": 1, "unit": "s",
+      "label": "t:sections.announcement.rotate_seconds",
+      "default": 5
+    },
+    { "type": "text", "id": "countdown_to", "label": "t:sections.announcement.countdown_to", "info": "t:sections.announcement.countdown_info" },
+    { "type": "color", "id": "background_color", "label": "t:settings_schema.colors_chrome.color_surface_dark", "default": "#212012" },
+    { "type": "color", "id": "text_color", "label": "t:settings_schema.colors_chrome.color_on_dark", "default": "#d4cfc2" }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement.block",
+      "limit": 5,
+      "settings": [
+        { "type": "text", "id": "message", "label": "t:sections.announcement.message" },
+        { "type": "url", "id": "link", "label": "t:components.button.url" }
+      ]
+    }
+  ],
+  "enabled_on": { "groups": ["header"] }
+}
+{% endschema %}

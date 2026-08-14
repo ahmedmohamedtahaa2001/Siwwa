@@ -1,0 +1,23 @@
+{
+  "_comment": "Section-level fragment for the Review widget. `embed` is the default and safest: the full list, submission form, uploads, voting and moderation all live in Judge.me. Aggregate figures come from shop.metafields.judgeme.* and are NEVER written as constants — 4.98/1212 is live at 2026-08-12 and moves.",
+  "settings": [
+    {
+      "type": "select", "id": "widget_style", "label": "t:components.review_widget.style", "default": "embed",
+      "info": "t:components.review_widget.style_info",
+      "options": [
+        { "value": "embed",     "label": "t:components.review_widget.style_embed" },
+        { "value": "list",      "label": "t:components.review_widget.style_list" },
+        { "value": "summary",   "label": "t:components.review_widget.style_summary" },
+        { "value": "histogram", "label": "t:components.review_widget.style_histogram" },
+        { "value": "carousel",  "label": "t:components.review_widget.style_carousel" }
+      ]
+    },
+    { "type": "checkbox", "id": "show_summary", "label": "t:components.review_widget.show_summary", "default": true },
+    { "type": "checkbox", "id": "show_histogram", "label": "t:components.review_widget.show_histogram", "default": false },
+    { "type": "range", "id": "featured_review_count", "min": 0, "max": 10, "step": 1, "label": "t:components.review_widget.featured_count", "default": 3 },
+    { "type": "checkbox", "id": "allow_filtering", "label": "t:components.review_widget.allow_filtering", "default": false },
+    { "type": "text", "id": "heading", "label": "t:components.review_widget.heading" },
+    { "type": "text", "id": "cta_label", "label": "t:components.button.label" },
+    { "type": "url", "id": "cta_url", "label": "t:components.button.url" }
+  ]
+}

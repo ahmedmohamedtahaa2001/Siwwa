@@ -1,0 +1,41 @@
+{%- comment -%}
+  Judge.me preview badge — the star rating and review count.
+
+  Judge.me is installed as a theme app extension (handle `judgeme-657`,
+  widget version 3.0). The badge is hydrated client-side by the app's
+  loader, but Judge.me also writes a server-rendered copy into
+  `product.metafields.judgeme.badge`. Emitting that metafield inside the
+  hydration target means the rating is in the initial HTML — good for
+  SEO and for users on slow connections — and is then replaced in place
+  once the app's script runs.
+
+  ⚠ INTEGRATION POINTS ARE SACRED
+  The class `jdgm-widget jdgm-preview-badge` and the `data-id` attribute
+  are what the Judge.me loader looks for. Renaming either silently
+  breaks every rating on the site. Do not "tidy" them.
+
+  ⚠ NOT VERIFIED AGAINST A LIVE STORE
+  This repository has no store credentials, so this snippet has been
+  written from the audit rather than tested against a running Judge.me
+  install. Confirm it renders before relying on it.
+  Source: reference-analysis/06-REVIEWS.md §4.
+
+  WHY REVIEWS STAY LOUD
+  4.98★ from 1,212 reviews (live, 2026-08-12) is the store's strongest
+  competitive asset. DIRECTION.md Part 1 §2.1 is explicit that Amouage's
+  review restraint must NOT be copied — they sell at $395, Siwa at ~$19.
+  No caller may hide this badge to tidy a layout.
+
+  Accepts:
+    product  {Product}  required
+    class    {String}
+{%- endcomment -%}
+{%- if product != blank -%}
+  <div
+    class="jdgm-widget jdgm-preview-badge {{ class }}"
+    data-id="{{ product.id }}"
+    data-template="{{ template.name | default: 'index' }}"
+  >
+    {{- product.metafields.judgeme.badge -}}
+  </div>
+{%- endif -%}

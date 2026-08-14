@@ -1,0 +1,17 @@
+{
+  "_comment": "Setting fragment for the Chip primitive. Facet chips are normally generated from Shopify's filter objects rather than authored as blocks — these settings cover the authored cases (size selectors, curated scent tags).",
+  "settings": [
+    { "type": "text", "id": "chip_text", "label": "t:components.chip.text" },
+    {
+      "type": "select", "id": "chip_style", "label": "t:components.chip.style", "default": "neutral",
+      "options": [
+        { "value": "neutral",   "label": "t:components.chip.style_neutral" },
+        { "value": "active",    "label": "t:components.chip.style_active" },
+        { "value": "scent",     "label": "t:components.chip.style_scent" },
+        { "value": "outline",   "label": "t:components.chip.style_outline" },
+        { "value": "removable", "label": "t:components.chip.style_removable" }
+      ]
+    },
+    { "type": "url", "id": "chip_url", "label": "t:components.chip.url", "info": "t:components.chip.url_info" }
+  ]
+}

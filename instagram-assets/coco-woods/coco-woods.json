@@ -1,0 +1,448 @@
+{
+  "_provenance": {
+    "generated": "2026-07-28",
+    "purpose": "Demo product record for client approval. Superset schema — richer than anything the live store holds.",
+    "sources": {
+      "catalog": "reference-analysis/raw/products.json (captured 2026-07-27)",
+      "reviews": "reference-analysis/raw/reviews_complete.json",
+      "social": "instagram-assets/matched-data.json",
+      "images": "instagram-assets/coco-woods/ (dimensions read from the files)"
+    },
+    "real": [
+      "handle", "shopify_id", "naming.title",
+      "descriptions.headline / story / pullquote (verbatim Instagram captions)",
+      "descriptions.summary (verbatim body_html)", "descriptions.voice_register",
+      "composition.notes — tiers come from the brand's OWN notes diagram, post DXH731vCike ('TOP NOTES: Coconut' / 'MIDDLE NOTES: Vanilla' / 'BASE NOTES: Wood & Musk'), cross-checked against body_html 'Vanilla, musk, coconut powder, palo santo'. Not inferred.",
+      "brand.inspiration.designer_reference (the live vendor field)",
+      "brand.launched", "commerce.variants (ids, titles, prices, sku, availability incl. the 100 ml stockout)",
+      "media.images src / width / height / art_direction", "media.palette",
+      "media.instagram", "social_proof.reviews.average / count",
+      "social_proof.reviews.featured_quotes (verbatim Judge.me)",
+      "social_proof.engagement", "meta.published_at / updated_at"
+    ],
+    "derived": [
+      "commerce.*.value_metrics — arithmetic on real prices (0.1 ml/spray, 4 sprays/wear, 1 wear/day)",
+      "classification.family / sub_family / accords",
+      "taxonomy.gender_lean",
+      "social_proof.reviews.distribution (only integer split that reconciles 4.94 × 16)"
+    ],
+    "demo_placeholder": [
+      "concentration.percentage", "accords_chart values", "note category / natural / allergen flags",
+      "naming.arabic_name / pronunciation / name_meaning / subtitle",
+      "descriptions.persona / best_for",
+      "performance.* (longevity, sillage, seasons, occasions, time_of_day)",
+      "taxonomy.collections", "taxonomy.tags.* facets", "related.*",
+      "availability.restock_date", "featured_quotes[].verified_purchase / sentiment",
+      "meta.sort_rank"
+    ],
+    "known_gaps": [
+      "vendor on the live product is 'Vanilla Powder Matiere Premiere' — the designer fragrance this clones, currently rendered as the brand on the PDP and shipped to Google as schema.org brand.name. Here it is confined to brand.inspiration.designer_reference; creator stays Siwa Fragrances.",
+      "body_html is 59 characters, two lines. The Instagram captions describe the product better than the store does.",
+      "100 ml at LE 2,300 — the most expensive single variant in the entire catalogue — is SOLD OUT with no back-in-stock capture.",
+      "A buyer commented 'it is for ladies, right?' on a product tagged BOTH Men and Women. The site gives no wear guidance.",
+      "All three variants share one SKU (SF-069), so size is not independently trackable in inventory."
+    ]
+  },
+
+  "handle": "coco-woods",
+  "shopify_id": "7735875797040",
+
+  "naming": {
+    "title": "Coco Woods",
+    "arabic_name": "كوكو وودز",
+    "pronunciation": "KOH-koh WOODZ",
+    "name_meaning": "Coconut over wood — the two ends the fragrance is built between",
+    "subtitle": "Creamy Woody Extrait"
+  },
+
+  "descriptions": {
+    "headline": "Vanilla, in a deeper state.",
+    "summary": "A softer kind of depth. Vanilla, wrapped in coconut, musk… and everything in between.",
+    "story": "Coconut opens — soft, effortless. Vanilla settles at the heart, warm, close, and familiar. Then woods and musk bring everything into place. Some scents stay close. Others create their own space. Coco Woods sits somewhere in between: soft, but defined. Warm, but never overwhelming.",
+    "pullquote": "Soft, but defined. Warm, but never overwhelming.",
+    "persona": "Warm and self-possessed. Wears comfort as a kind of confidence, and never over-explains it.",
+    "best_for": [
+      "Cooler evenings and winter days",
+      "Close-quarters wear — dinner, cinema, home",
+      "Anyone who finds most vanillas too sweet"
+    ],
+    "voice_register": "Sensory sequencing — narrates the scent in time order (opens / settles / then). Ellipses as pacing. Softest register of the four."
+  },
+
+  "composition": {
+    "concentration": {
+      "type": "Extrait de Parfum",
+      "percentage": "24%"
+    },
+
+    "classification": {
+      "family": "Woody Gourmand",
+      "sub_family": "Creamy Vanilla Wood",
+      "accords": ["Coconut", "Vanilla", "Woody", "Musk"],
+      "accords_chart": {
+        "citrus": 5,
+        "floral": 10,
+        "woody": 80,
+        "oriental": 60,
+        "fresh": 15,
+        "spicy": 20,
+        "sweet": 75,
+        "powdery": 65,
+        "aquatic": 0,
+        "green": 10
+      }
+    },
+
+    "notes": {
+      "top": [
+        { "name": "Coconut Powder", "arabic_name": "بودرة جوز الهند", "category": "gourmand", "natural": false, "allergen": false }
+      ],
+      "heart": [
+        { "name": "Vanilla", "arabic_name": "فانيليا", "category": "gourmand", "natural": true, "allergen": false }
+      ],
+      "base": [
+        { "name": "Palo Santo", "arabic_name": "بالو سانتو", "category": "woody", "natural": true, "allergen": false },
+        { "name": "Musk", "arabic_name": "مسك", "category": "musky", "natural": false, "allergen": false }
+      ]
+    },
+
+    "performance": {
+      "longevity": { "hours": "7–9 hours", "rating": 4.0 },
+      "sillage": { "projection": "Moderate", "rating": 3.5, "distance": "An arm's length at first, settling into a close skin trail" },
+      "seasons": ["Autumn", "Winter"],
+      "occasions": ["Daily", "Dinner", "Evening out", "Cosy nights in"],
+      "time_of_day": ["Afternoon", "Evening", "Night"]
+    }
+  },
+
+  "brand": {
+    "creator": "Siwa Fragrances",
+    "inspiration": {
+      "type": "inspired_by",
+      "designer_reference": "Vanilla Powder — Matière Première",
+      "similarity_note": "Inspired by the creamy-powdery vanilla direction of Matière Première's Vanilla Powder. An interpretation, not a reproduction — and not affiliated with that house."
+    },
+    "launched": "2024-07-08",
+    "perfumer": null
+  },
+
+  "taxonomy": {
+    "gender": ["Men", "Women", "Unisex"],
+    "gender_lean": 15,
+    "collections": ["unisex", "for-her", "for-him", "best-sellers", "perfumes"],
+    "bundles": [],
+    "tags": {
+      "vibe": ["warm", "creamy", "comforting", "grounded"],
+      "notes_facet": ["coconut", "vanilla", "palo-santo", "musk", "woody"],
+      "occasion": ["daily", "evening", "dinner"],
+      "season": ["autumn", "winter"],
+      "intensity": "moderate",
+      "price_tier": "premium"
+    },
+    "related": {
+      "pairs_with": ["silk-vanilla"],
+      "similar_to": ["irresistible-vanilla", "hot-vanilla", "layering-vanilla"],
+      "layering_with": ["layering-vanilla"]
+    }
+  },
+
+  "commerce": {
+    "variants": [
+      {
+        "id": "42389311455280",
+        "title": "30 ml",
+        "size_ml": 30,
+        "price": 850,
+        "compare_at_price": null,
+        "available": true,
+        "sku": "SF-069",
+
+        "value_metrics": {
+          "cost_per_ml": 28.33,
+          "estimated_sprays": 300,
+          "cost_per_spray": 2.83,
+          "total_wears": 75,
+          "usage_estimate_days": "~2.5 months at daily wear",
+          "monthly_cost": 340,
+          "savings_vs_smaller": null,
+          "best_value": false,
+          "recommended": false
+        }
+      },
+      {
+        "id": "42389311422512",
+        "title": "50 ml",
+        "size_ml": 50,
+        "price": 1300,
+        "compare_at_price": null,
+        "available": true,
+        "sku": "SF-069",
+
+        "value_metrics": {
+          "cost_per_ml": 26.0,
+          "estimated_sprays": 500,
+          "cost_per_spray": 2.6,
+          "total_wears": 125,
+          "usage_estimate_days": "~4 months at daily wear",
+          "monthly_cost": 312,
+          "savings_vs_smaller": 8.2,
+          "best_value": false,
+          "recommended": true
+        }
+      },
+      {
+        "id": "42389311389744",
+        "title": "100 ml",
+        "size_ml": 100,
+        "price": 2300,
+        "compare_at_price": null,
+        "available": false,
+        "sku": "SF-069",
+
+        "value_metrics": {
+          "cost_per_ml": 23.0,
+          "estimated_sprays": 1000,
+          "cost_per_spray": 2.3,
+          "total_wears": 250,
+          "usage_estimate_days": "~8 months at daily wear",
+          "monthly_cost": 276,
+          "savings_vs_smaller": 11.5,
+          "best_value": true,
+          "recommended": false
+        }
+      }
+    ],
+
+    "pricing": {
+      "price_min": 850,
+      "price_max": 2300,
+      "entry_point": { "size_ml": 30, "price": 850 },
+      "best_value": { "size_ml": 100, "price": 2300, "savings_vs_entry_percent": 19 },
+      "recommended": { "size_ml": 50, "price": 1300 },
+      "size_incentives": [
+        {
+          "from_size_ml": 30,
+          "to_size_ml": 50,
+          "save_percent": 8,
+          "save_amount": 117,
+          "message": "Add LE 450 for 20 ml more — LE 117 cheaper than buying the extra at 30 ml rates."
+        },
+        {
+          "from_size_ml": 50,
+          "to_size_ml": 100,
+          "save_percent": 12,
+          "save_amount": 300,
+          "message": "Double the bottle for LE 1,000 — LE 300 less than two 50 ml. Currently sold out."
+        }
+      ],
+      "on_sale": false,
+      "sale_ends": null
+    },
+
+    "availability": {
+      "in_stock": true,
+      "stock_level": "partial — 30 ml and 50 ml available, 100 ml sold out",
+      "restock_date": null,
+      "backorder_available": false
+    }
+  },
+
+  "media": {
+    "images": [
+      {
+        "src": "instagram-assets/coco-woods/DXH731vCike_1.jpg",
+        "alt": "Coco Woods on a raw wooden plinth against warm cream, with three circular ingredient thumbnails — coconut, vanilla pods, wood chips — joined by gold leader lines to the top, middle and base notes",
+        "width": 1440,
+        "height": 1920,
+        "position": 1,
+        "type": "notes_diagram",
+        "art_direction": "THE most valuable asset in the set. A finished fragrance-pyramid layout: labels in small-caps serif, values in warm brown, thin gold hairline leaders. This is a design spec for the PDP notes component, and the highest-engagement post in the whole capture (122 likes, 16 comments).",
+        "usage": ["pdp_hero", "notes_component_reference", "editorial_band"]
+      },
+      {
+        "src": "instagram-assets/coco-woods/DXAKtxjFwyu_1.jpg",
+        "alt": "Coco Woods Extrait de Parfum standing on a warm neutral ground",
+        "width": 1131,
+        "height": 1508,
+        "position": 2,
+        "type": "still_life",
+        "art_direction": "Clean bottle on warm neutral ground.",
+        "usage": ["pdp_gallery", "collection_card"]
+      },
+      {
+        "src": "instagram-assets/coco-woods/DW4iEg6F6pz_1.jpg",
+        "alt": "Coco Woods in a warm neutral still life with cream and raw wood tones",
+        "width": 896,
+        "height": 1194,
+        "position": 3,
+        "type": "still_life",
+        "art_direction": "Warm neutral still life.",
+        "usage": ["pdp_gallery"]
+      },
+      {
+        "src": "instagram-assets/coco-woods/DW4iEg6F6pz_2.jpg",
+        "alt": "Second frame of the Coco Woods still life",
+        "width": 844,
+        "height": 1125,
+        "position": 4,
+        "type": "still_life",
+        "art_direction": "Second frame, same session. Lowest resolution in this product's set.",
+        "usage": ["pdp_gallery"]
+      },
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/coco-woods.jpg?v=1757237298",
+        "alt": "Coco Woods Extrait de Parfum, clear glass cylinder with a black gloss cap and matte black label",
+        "width": 1080,
+        "height": 1080,
+        "position": 5,
+        "type": "packshot",
+        "art_direction": "The live store's only product image. Alt text was null in the capture and is written new here.",
+        "usage": ["cart_thumbnail", "search_result", "structured_data"]
+      }
+    ],
+
+    "palette": {
+      "primary": "#5B3A28",
+      "secondary": "#A8886A",
+      "accent": "#C6A87C",
+      "background": "#EFE9E0",
+      "text_on_primary": "#EFE9E0",
+      "css_vars": {
+        "--fragrance-primary": "#5B3A28",
+        "--fragrance-secondary": "#A8886A",
+        "--fragrance-accent": "#C6A87C",
+        "--fragrance-bg": "#EFE9E0",
+        "--fragrance-text": "#1A1714"
+      }
+    },
+
+    "instagram": [
+      {
+        "shortcode": "DXH731vCike",
+        "url": "https://www.instagram.com/p/DXH731vCike/",
+        "date": "2026-04-14",
+        "type": "single",
+        "likes": 122,
+        "comments": 16,
+        "caption": "Coconut opens… soft, effortless. Vanilla settles at the heart, warm, close, and familiar. Then woods and musk… bringing everything into place.",
+        "engagement_note": "Highest-engagement post in the entire capture — and the only one that shows the notes breakdown.",
+        "notable_comments": [
+          { "user": "mai.atef1980", "body": "Details plz", "signal": "info gap" },
+          { "user": "atyat_abbass", "body": "I just purchased this one, and it's my first time dealing with you guys, it is for ladies, right ?", "signal": "gender ambiguity" },
+          { "user": "dina_swelam", "body": "❤️🔥one of my favs", "signal": "advocacy" }
+        ]
+      },
+      {
+        "shortcode": "DW4iEg6F6pz",
+        "url": "https://www.instagram.com/p/DW4iEg6F6pz/",
+        "date": "2026-04-08",
+        "type": "carousel",
+        "likes": 60,
+        "comments": 3,
+        "caption": "A softer kind of depth. Vanilla, wrapped in coconut, musk… and everything in between.",
+        "notable_comments": [
+          { "user": "dina_abdella", "body": "السعر", "signal": "price opacity (Arabic)" }
+        ]
+      },
+      {
+        "shortcode": "DXAKtxjFwyu",
+        "url": "https://www.instagram.com/p/DXAKtxjFwyu/",
+        "date": "2026-04-11",
+        "type": "single",
+        "likes": 45,
+        "comments": 3,
+        "caption": "Some scents stay close. Others create their own space. Coco Woods sits somewhere in between. Soft, but defined. Warm, but never overwhelming. Vanilla, in a deeper state.",
+        "notable_comments": [
+          { "user": "65aldosari", "body": "the price", "signal": "price opacity" }
+        ]
+      }
+    ]
+  },
+
+  "social_proof": {
+    "reviews": {
+      "average": 4.94,
+      "count": 16,
+      "distribution": { "5": 15, "4": 1, "3": 0, "2": 0, "1": 0 },
+      "featured_quotes": [
+        {
+          "rating": 5,
+          "author": "Omar",
+          "body": "This might be the best fragrance I've used by far, not only that it has got me A LOT of compliments, but it also made feel happier about life for some reason. I believe it was worth the 20mins you had me wait till someone showed up at the store Haha.",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": null,
+            "sillage": null,
+            "compliments_mentioned": true,
+            "repurchase_intent": false
+          }
+        },
+        {
+          "rating": 5,
+          "author": "Dalia",
+          "body": "It's perfect... a unique scent that gives sweet, attractive signature",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": null,
+            "sillage": null,
+            "compliments_mentioned": false,
+            "repurchase_intent": false
+          }
+        },
+        {
+          "rating": 5,
+          "author": "Anonymous",
+          "body": "Very sexy",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": null,
+            "sillage": null,
+            "compliments_mentioned": false,
+            "repurchase_intent": false
+          }
+        },
+        {
+          "rating": 5,
+          "author": "ahmed gamal",
+          "body": "Very good",
+          "verified_purchase": true,
+          "date": null,
+          "sentiment": {
+            "longevity": null,
+            "sillage": null,
+            "compliments_mentioned": false,
+            "repurchase_intent": false
+          }
+        }
+      ]
+    },
+
+    "engagement": {
+      "instagram_likes": 227,
+      "instagram_comments": 22,
+      "user_photos_count": 0
+    },
+
+    "badges": ["Unisex", "Most-liked post in the capture"]
+  },
+
+  "meta": {
+    "published": true,
+    "published_at": "2024-07-08T02:47:52+03:00",
+    "updated_at": "2026-07-27T21:19:20+03:00",
+    "status": "active",
+    "featured": true,
+    "sort_rank": 3,
+    "completeness": {
+      "has_story": true,
+      "has_structured_notes": true,
+      "has_images": true,
+      "has_reviews": true,
+      "has_instagram": true,
+      "score": 90
+    }
+  }
+}

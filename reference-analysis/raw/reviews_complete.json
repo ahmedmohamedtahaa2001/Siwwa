@@ -1,0 +1,1722 @@
+{
+ "per_product": [
+  {
+   "handle": "layering-vanilla",
+   "avg": 5.0,
+   "count": 98
+  },
+  {
+   "handle": "mawj",
+   "avg": 4.99,
+   "count": 68
+  },
+  {
+   "handle": "boujee-blush",
+   "avg": 4.97,
+   "count": 59
+  },
+  {
+   "handle": "hibiscusex",
+   "avg": 4.98,
+   "count": 56
+  },
+  {
+   "handle": "drunk-gold",
+   "avg": 5.0,
+   "count": 46
+  },
+  {
+   "handle": "caramel-vanigliato",
+   "avg": 4.95,
+   "count": 43
+  },
+  {
+   "handle": "lady-killer",
+   "avg": 4.96,
+   "count": 26
+  },
+  {
+   "handle": "alluring-rose",
+   "avg": 4.96,
+   "count": 24
+  },
+  {
+   "handle": "marasi",
+   "avg": 5.0,
+   "count": 23
+  },
+  {
+   "handle": "bare-glow",
+   "avg": 4.95,
+   "count": 21
+  },
+  {
+   "handle": "citrine",
+   "avg": 5.0,
+   "count": 20
+  },
+  {
+   "handle": "bleu-exclusive",
+   "avg": 5.0,
+   "count": 19
+  },
+  {
+   "handle": "coffee-vanilla",
+   "avg": 5.0,
+   "count": 18
+  },
+  {
+   "handle": "irresistible-vanilla",
+   "avg": 4.94,
+   "count": 18
+  },
+  {
+   "handle": "coco-woods",
+   "avg": 4.94,
+   "count": 16
+  },
+  {
+   "handle": "pink-allure",
+   "avg": 5.0,
+   "count": 14
+  },
+  {
+   "handle": "lagoon-flair",
+   "avg": 4.92,
+   "count": 13
+  },
+  {
+   "handle": "silk-vanilla",
+   "avg": 5.0,
+   "count": 13
+  },
+  {
+   "handle": "hot-vanilla",
+   "avg": 4.92,
+   "count": 12
+  },
+  {
+   "handle": "male-elixir",
+   "avg": 5.0,
+   "count": 11
+  },
+  {
+   "handle": "mango-pineapple",
+   "avg": 5.0,
+   "count": 11
+  },
+  {
+   "handle": "soul-poudree",
+   "avg": 5.0,
+   "count": 11
+  },
+  {
+   "handle": "vanilla-bundle",
+   "avg": 5.0,
+   "count": 11
+  },
+  {
+   "handle": "carnal-trail",
+   "avg": 5.0,
+   "count": 10
+  },
+  {
+   "handle": "layering-pistachio",
+   "avg": 5.0,
+   "count": 10
+  },
+  {
+   "handle": "apple-pie",
+   "avg": 5.0,
+   "count": 9
+  },
+  {
+   "handle": "hot-male",
+   "avg": 5.0,
+   "count": 9
+  },
+  {
+   "handle": "luna-di-roma",
+   "avg": 4.78,
+   "count": 9
+  },
+  {
+   "handle": "aurableu",
+   "avg": 5.0,
+   "count": 8
+  },
+  {
+   "handle": "chocolate-creme",
+   "avg": 5.0,
+   "count": 8
+  },
+  {
+   "handle": "bleu-intense",
+   "avg": 5.0,
+   "count": 7
+  },
+  {
+   "handle": "libre-desire",
+   "avg": 5.0,
+   "count": 7
+  },
+  {
+   "handle": "pacific-elixir",
+   "avg": 5.0,
+   "count": 7
+  },
+  {
+   "handle": "silk-vanilla-body-lotion",
+   "avg": 5.0,
+   "count": 7
+  },
+  {
+   "handle": "summer-holidays",
+   "avg": 5.0,
+   "count": 7
+  },
+  {
+   "handle": "sweet-rum",
+   "avg": 5.0,
+   "count": 7
+  },
+  {
+   "handle": "gourmet",
+   "avg": 5.0,
+   "count": 6
+  },
+  {
+   "handle": "iris-elixir",
+   "avg": 5.0,
+   "count": 6
+  },
+  {
+   "handle": "layering-lychee",
+   "avg": 5.0,
+   "count": 6
+  },
+  {
+   "handle": "insane-pineapple",
+   "avg": 4.8,
+   "count": 5
+  },
+  {
+   "handle": "marshmallow",
+   "avg": 5.0,
+   "count": 5
+  },
+  {
+   "handle": "siwa-trail",
+   "avg": 5.0,
+   "count": 5
+  },
+  {
+   "handle": "belle-riche",
+   "avg": 5.0,
+   "count": 4
+  },
+  {
+   "handle": "lost-on-you",
+   "avg": 5.0,
+   "count": 4
+  },
+  {
+   "handle": "marshmallow-bundle",
+   "avg": 5.0,
+   "count": 4
+  },
+  {
+   "handle": "pink-arrogance",
+   "avg": 5.0,
+   "count": 4
+  },
+  {
+   "handle": "layering-30-ml-bundle",
+   "avg": 5.0,
+   "count": 3
+  },
+  {
+   "handle": "stellar-nights",
+   "avg": 5.0,
+   "count": 3
+  },
+  {
+   "handle": "absolute-drunk",
+   "avg": 5.0,
+   "count": 2
+  },
+  {
+   "handle": "summer-elegance",
+   "avg": 5.0,
+   "count": 2
+  },
+  {
+   "handle": "vanilla-91",
+   "avg": 5.0,
+   "count": 2
+  },
+  {
+   "handle": "layering-apple",
+   "avg": 5.0,
+   "count": 1
+  },
+  {
+   "handle": "mango-on-woods",
+   "avg": 5.0,
+   "count": 1
+  },
+  {
+   "handle": "sweet-oud",
+   "avg": 5.0,
+   "count": 1
+  }
+ ],
+ "bodies": [
+  {
+   "product": "absolute-drunk",
+   "rating": "5",
+   "author": "Mohamed Bayomi",
+   "body": "FANTASY"
+  },
+  {
+   "product": "absolute-drunk",
+   "rating": "5",
+   "author": "Khaled medany",
+   "body": "Amazing Powerful performance 👏"
+  },
+  {
+   "product": "alluring-rose",
+   "rating": "5",
+   "author": "Marvel Raafat",
+   "body": "Please make it available again, always getting compliments about it 🤩"
+  },
+  {
+   "product": "alluring-rose",
+   "rating": "5",
+   "author": "Israa",
+   "body": "Ahla scent bgd yareet tenazeloha tani 🩷🩷"
+  },
+  {
+   "product": "alluring-rose",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Nzlohaaaa taniiii please 🥹"
+  },
+  {
+   "product": "alluring-rose",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Amazing Perfume"
+  },
+  {
+   "product": "alluring-rose",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Got many compliments on this pls restock"
+  },
+  {
+   "product": "apple-pie",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "ممتاز"
+  },
+  {
+   "product": "apple-pie",
+   "rating": "5",
+   "author": "Mohanad Tarek",
+   "body": "Beautiful"
+  },
+  {
+   "product": "apple-pie",
+   "rating": "5",
+   "author": "Elham Khedr",
+   "body": "Highly recommended"
+  },
+  {
+   "product": "apple-pie",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "The scent is so lovely bgd I got so many compliments on it and I’ll definitely purchase it again✨."
+  },
+  {
+   "product": "apple-pie",
+   "rating": "5",
+   "author": "Ahmed Mahmoud",
+   "body": "تحفة"
+  },
+  {
+   "product": "aurableu",
+   "rating": "5",
+   "author": "FARES Ehab",
+   "body": "Smells really nice"
+  },
+  {
+   "product": "aurableu",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Fresh summery lime"
+  },
+  {
+   "product": "aurableu",
+   "rating": "5",
+   "author": "Youssef Mahmoud",
+   "body": "Very good"
+  },
+  {
+   "product": "aurableu",
+   "rating": "5",
+   "author": "Omar Alzanati",
+   "body": "Very good"
+  },
+  {
+   "product": "aurableu",
+   "rating": "5",
+   "author": "عمرو على جلال الدين شاهين",
+   "body": "Smells great"
+  },
+  {
+   "product": "bare-glow",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "To7faaa"
+  },
+  {
+   "product": "bare-glow",
+   "rating": "5",
+   "author": "Darin",
+   "body": "Smells amazing and the vanillia in it is addictive and not the gourmand type , it's so mature and elegant type of way and more creamy than burberry goddess"
+  },
+  {
+   "product": "bare-glow",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Very great scent which last on the skin for a few hours"
+  },
+  {
+   "product": "bare-glow",
+   "rating": "5",
+   "author": "Rahaf Badr",
+   "body": "One of the best scents l have ever smelt"
+  },
+  {
+   "product": "bare-glow",
+   "rating": "5",
+   "author": "Habiba",
+   "body": "it’s a very summery and fresh scent. suitable for day and night."
+  },
+  {
+   "product": "belle-riche",
+   "rating": "5",
+   "author": "Mayar Khaled",
+   "body": "Smells very much like the original with a very slight difference that made me like this version even more. Longevity is amaaziingggg literally stays all day. Quality tohfa as usual❤️."
+  },
+  {
+   "product": "belle-riche",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Nice"
+  },
+  {
+   "product": "belle-riche",
+   "rating": "5",
+   "author": "H.Ahmed",
+   "body": "حلوه اوي اوي اوي 🤩🤩🤩 نسبه تطابق عاليه جدا الفكره انها كل بتقعد بتحلو اوي 🫶🫶🫶"
+  },
+  {
+   "product": "belle-riche",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "🤩🤩"
+  },
+  {
+   "product": "bleu-exclusive",
+   "rating": "5",
+   "author": "MOHAAMED GAFAR",
+   "body": "I had the original le exclusive and i know that channel dupes are never been copied but for this i respect you so much great blend"
+  },
+  {
+   "product": "bleu-exclusive",
+   "rating": "5",
+   "author": "Ahmed Zaghloul",
+   "body": "حلوة"
+  },
+  {
+   "product": "bleu-exclusive",
+   "rating": "5",
+   "author": "Mohamed",
+   "body": "ممتازة جدا"
+  },
+  {
+   "product": "bleu-exclusive",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Amazing fragrance"
+  },
+  {
+   "product": "bleu-exclusive",
+   "rating": "5",
+   "author": "Omar Alosh",
+   "body": "ممتاز"
+  },
+  {
+   "product": "bleu-intense",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "very good local perfumes"
+  },
+  {
+   "product": "bleu-intense",
+   "rating": "5",
+   "author": "Ibrahim",
+   "body": "Great quality the perfume stays for a very long time and the scent profile is masculine and appealing"
+  },
+  {
+   "product": "bleu-intense",
+   "rating": "5",
+   "author": "Kareem El oraby",
+   "body": "Amazing but needs to be a little fresh to smell like the original more"
+  },
+  {
+   "product": "bleu-intense",
+   "rating": "5",
+   "author": "Kareemmagdi",
+   "body": "الافتتاحيه متفجرة بتقلب الغرفة حرفيا والثبات أنا رشيت رشه واحدة علي ظهر إيدي كملت 8 ساعات ولسه ثابته وقاعده خشب الصندل تحفه"
+  },
+  {
+   "product": "bleu-intense",
+   "rating": "5",
+   "author": "Youssef Mahmoud",
+   "body": "Best perfume"
+  },
+  {
+   "product": "boujee-blush",
+   "rating": "5",
+   "author": "رقيه ياسر",
+   "body": "More than amazing im feeling like marshmallow"
+  },
+  {
+   "product": "boujee-blush",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "The scent is soo goodd"
+  },
+  {
+   "product": "boujee-blush",
+   "rating": "5",
+   "author": "Hajar",
+   "body": "حلوه اوي ثابته اوي و بجد و كمان جربت bare glow جميله اوي بردو و ثبات مش طبيعي"
+  },
+  {
+   "product": "boujee-blush",
+   "rating": "5",
+   "author": "Aya Anas",
+   "body": "Very good smell"
+  },
+  {
+   "product": "boujee-blush",
+   "rating": "5",
+   "author": "Eman Emara",
+   "body": "I looooooveeeeee ittttt, so sweet and the projection is top notch frrr"
+  },
+  {
+   "product": "caramel-vanigliato",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Khatera wallahi it lasts days on clothes and a full day on skin❤️"
+  },
+  {
+   "product": "caramel-vanigliato",
+   "rating": "5",
+   "author": "Ahmed Samy",
+   "body": "تحفة"
+  },
+  {
+   "product": "caramel-vanigliato",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Amazing"
+  },
+  {
+   "product": "caramel-vanigliato",
+   "rating": "5",
+   "author": "Yasmina Jamal",
+   "body": "خرررافي ❤️"
+  },
+  {
+   "product": "caramel-vanigliato",
+   "rating": "5",
+   "author": "Amaal Ahmed",
+   "body": "الريحة دافية كريمية حاسة الكراميل والفانيلا متوازنين مديني احساس آيس كريم و ثباته بجد حلو جدا حبيته اوي❤️❤️"
+  },
+  {
+   "product": "carnal-trail",
+   "rating": "5",
+   "author": "Marco farag",
+   "body": "Perfect opening and awesome dry down I love it so much"
+  },
+  {
+   "product": "carnal-trail",
+   "rating": "5",
+   "author": "Ahmed Nabawi",
+   "body": "So good"
+  },
+  {
+   "product": "carnal-trail",
+   "rating": "5",
+   "author": "Ahmed Gaafary",
+   "body": "حلوة وثابتة"
+  },
+  {
+   "product": "carnal-trail",
+   "rating": "5",
+   "author": "Riyadh Ibraheem",
+   "body": "من السعودية اجمل عطر اشتريته من المحل، كل العطور جميلة وثباتها قوي، بس هذا جدا مميز من ناحية الرائحة والثبات، العلب جميلة والتغليف جدا راقي الله يوفقكم تجربة جميلة واكيد راح تتكرر عقبال ماتفتحون عندنا في الرياض"
+  },
+  {
+   "product": "carnal-trail",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "It’s super awesome , maybe cinnamon has to be increased a bit , long lasting and it’s great experience"
+  },
+  {
+   "product": "chocolate-creme",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Very rich and nice"
+  },
+  {
+   "product": "chocolate-creme",
+   "rating": "5",
+   "author": "Maryamgibreel",
+   "body": "Msh tbe3yaaaaaaa😍😍😍😍😍"
+  },
+  {
+   "product": "chocolate-creme",
+   "rating": "5",
+   "author": "Jana",
+   "body": "It smells so edible, for those who like to smell edible it’s the perfect scent for you"
+  },
+  {
+   "product": "chocolate-creme",
+   "rating": "5",
+   "author": "Yasmine Hesham",
+   "body": "Khateraaa creamyy awyy wl scent tohfaa nfs rehet choco musk mn gher ay scent alcoholic ,perfectttt"
+  },
+  {
+   "product": "chocolate-creme",
+   "rating": "5",
+   "author": "Nourhan Abdelhady",
+   "body": "It's really great and special"
+  },
+  {
+   "product": "citrine",
+   "rating": "5",
+   "author": "Disha",
+   "body": "Was amazing..but always sold out.."
+  },
+  {
+   "product": "citrine",
+   "rating": "5",
+   "author": "Eyad Yahia",
+   "body": "Very pleasant and rich scent"
+  },
+  {
+   "product": "citrine",
+   "rating": "5",
+   "author": "Mohammed Shapoury",
+   "body": "good"
+  },
+  {
+   "product": "citrine",
+   "rating": "5",
+   "author": "Emad",
+   "body": "The best"
+  },
+  {
+   "product": "citrine",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "ممتازة"
+  },
+  {
+   "product": "coco-woods",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Very sexy"
+  },
+  {
+   "product": "coco-woods",
+   "rating": "5",
+   "author": "ahmed gamal",
+   "body": "Very good"
+  },
+  {
+   "product": "coco-woods",
+   "rating": "5",
+   "author": "Dalia",
+   "body": "It's perfect... a unique scent that gives sweet, attractive signature"
+  },
+  {
+   "product": "coco-woods",
+   "rating": "5",
+   "author": "Dalia",
+   "body": "It's perfect... a unique scent that gives sweet, attractive signature"
+  },
+  {
+   "product": "coco-woods",
+   "rating": "5",
+   "author": "Omar",
+   "body": "This might be the best fragrance I've used by far, not only that it has got me A LOT of compliments, but it also made feel happier about life for some reason. I believe it was worth the 20mins you had me wait till someone showed up at the store Haha."
+  },
+  {
+   "product": "coffee-vanilla",
+   "rating": "5",
+   "author": "Hanatamer",
+   "body": "Bgd tuhfaaa awee w btsbat gedan el notes el fyha kul wahda fyha btban lama thda fl awel btkun coffe w baad kda chocolate w vanilla momayaxen awe w el atomiser tuhfa"
+  },
+  {
+   "product": "coffee-vanilla",
+   "rating": "5",
+   "author": "Rawan Mohamed",
+   "body": "I loved it . And i lasts so long"
+  },
+  {
+   "product": "coffee-vanilla",
+   "rating": "5",
+   "author": "Kamal Mohamed",
+   "body": "Great 😍"
+  },
+  {
+   "product": "coffee-vanilla",
+   "rating": "5",
+   "author": "Hana Ekramy",
+   "body": "ريحتها جميله جدانفس ريحه التراميسو بالظبط ولما بتهدى بتكون احلى كملن"
+  },
+  {
+   "product": "coffee-vanilla",
+   "rating": "5",
+   "author": "Toqa Magdy",
+   "body": "Amazing"
+  },
+  {
+   "product": "drunk-gold",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Good"
+  },
+  {
+   "product": "drunk-gold",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "اداء مثالي"
+  },
+  {
+   "product": "drunk-gold",
+   "rating": "5",
+   "author": "Rana",
+   "body": "Very elegant scent"
+  },
+  {
+   "product": "drunk-gold",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "."
+  },
+  {
+   "product": "drunk-gold",
+   "rating": "5",
+   "author": "Ahmed Hossam",
+   "body": "A wonderful and long-lasting scent"
+  },
+  {
+   "product": "gourmet",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "More than great ❤️❤️❤️❤️ tuhfaaaaaaa"
+  },
+  {
+   "product": "gourmet",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Perfect"
+  },
+  {
+   "product": "gourmet",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "perfect scent"
+  },
+  {
+   "product": "gourmet",
+   "rating": "5",
+   "author": "إنجي البدوي",
+   "body": "Love ittt so much"
+  },
+  {
+   "product": "gourmet",
+   "rating": "5",
+   "author": "Aya Abouelnasr",
+   "body": "حلوة و مميزة جداا"
+  },
+  {
+   "product": "hibiscusex",
+   "rating": "5",
+   "author": "Salma Osama",
+   "body": "تحفه"
+  },
+  {
+   "product": "hibiscusex",
+   "rating": "5",
+   "author": "Abdelmoniem Hakeem",
+   "body": "Intoxicating"
+  },
+  {
+   "product": "hibiscusex",
+   "rating": "5",
+   "author": "Muhammed Ashraf",
+   "body": "so good"
+  },
+  {
+   "product": "hibiscusex",
+   "rating": "5",
+   "author": "Sohair hisham",
+   "body": "Perfect"
+  },
+  {
+   "product": "hibiscusex",
+   "rating": "5",
+   "author": "Jana Mohammed",
+   "body": "Hibiscusex smells amazing with great depth. Although the intial top notes are like a slap in the face, the moment it settles the aroma is very intoxicating. It lasts DAYS on clothes that have even WASHED. Just amazing! I think I just found my new signature scent. <3"
+  },
+  {
+   "product": "hot-male",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Nice"
+  },
+  {
+   "product": "hot-male",
+   "rating": "5",
+   "author": "Moaz Ahmed",
+   "body": "To7fa"
+  },
+  {
+   "product": "hot-male",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "A distinctive and long-lasting perfume as well"
+  },
+  {
+   "product": "hot-male",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Smells amazing"
+  },
+  {
+   "product": "hot-male",
+   "rating": "5",
+   "author": "Ebram Nady",
+   "body": "Excellent"
+  },
+  {
+   "product": "hot-vanilla",
+   "rating": "5",
+   "author": "Mahmoud Taymour",
+   "body": "gamila gda wallahy"
+  },
+  {
+   "product": "hot-vanilla",
+   "rating": "5",
+   "author": "Abdallah omar",
+   "body": "رائع وريحتة تحب تشمها كل شوية"
+  },
+  {
+   "product": "hot-vanilla",
+   "rating": "5",
+   "author": "Momen Edris",
+   "body": "."
+  },
+  {
+   "product": "hot-vanilla",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Very nice as a gift"
+  },
+  {
+   "product": "hot-vanilla",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "."
+  },
+  {
+   "product": "insane-pineapple",
+   "rating": "5",
+   "author": "Ahmed nabil",
+   "body": "روعه"
+  },
+  {
+   "product": "insane-pineapple",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "I love it"
+  },
+  {
+   "product": "insane-pineapple",
+   "rating": "5",
+   "author": "Raghda",
+   "body": "حلوة اوي بجد و ريحتها منعشة"
+  },
+  {
+   "product": "insane-pineapple",
+   "rating": "4",
+   "author": "Ahmed Samir",
+   "body": "محتاجه ثبات اكتر ومده فوحان اكثر"
+  },
+  {
+   "product": "insane-pineapple",
+   "rating": "5",
+   "author": "Hussein Hassan",
+   "body": "It is so amazing"
+  },
+  {
+   "product": "iris-elixir",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Super clean masculine smell"
+  },
+  {
+   "product": "iris-elixir",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "برفيوم ولا غلطة نسبة تطابق عالية جدا ، ثبات وفوحان ولا أروع قيمة مقابل سعر بجد برافوو"
+  },
+  {
+   "product": "iris-elixir",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "The best"
+  },
+  {
+   "product": "iris-elixir",
+   "rating": "5",
+   "author": "Mohamed Sharaf",
+   "body": "Excellent"
+  },
+  {
+   "product": "iris-elixir",
+   "rating": "5",
+   "author": "@yman",
+   "body": "Perfect 😃"
+  },
+  {
+   "product": "irresistible-vanilla",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "تحفة اوووي"
+  },
+  {
+   "product": "irresistible-vanilla",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "حلو اوي اوي انا جبته من الريفيوهات عالموقع مع انهم عالصفحة بتاعت الفيس ماجابوش سيرته بجد مش واخد حقه هادي وانثوي جدا ودافي وحميمي رائع رائع رائع"
+  },
+  {
+   "product": "irresistible-vanilla",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "حبيت جدا ❤️"
+  },
+  {
+   "product": "irresistible-vanilla",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "."
+  },
+  {
+   "product": "irresistible-vanilla",
+   "rating": "5",
+   "author": "Saramohamed",
+   "body": "احلي حاجه أنا شميتها في حياتي البيرفيوم irresistible فعلا بجد يستاهل كل جنيه و ندماني اني مجبتش الفول سايز دي مش هتبقي آخر مره اجيب البيرفيوم دي ان شاء الله"
+  },
+  {
+   "product": "lady-killer",
+   "rating": "5",
+   "author": "Emad",
+   "body": "Amazing ❤️ all your stuff is perfect"
+  },
+  {
+   "product": "lady-killer",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Excellent"
+  },
+  {
+   "product": "lady-killer",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Perfecf"
+  },
+  {
+   "product": "lady-killer",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "اشتريت منها و عايز اشتري منها تاني وللأسف آوت أوف ستوك"
+  },
+  {
+   "product": "lady-killer",
+   "rating": "5",
+   "author": "Maurice Weaver",
+   "body": "Understated scent of beauty"
+  },
+  {
+   "product": "lagoon-flair",
+   "rating": "5",
+   "author": "Mahmoud Khalaf",
+   "body": "ببقي مبسوط وانا راشش منه"
+  },
+  {
+   "product": "lagoon-flair",
+   "rating": "5",
+   "author": "Nada Ahmed",
+   "body": "تحفههه💗💗💗"
+  },
+  {
+   "product": "lagoon-flair",
+   "rating": "5",
+   "author": "كيغام زهراب Karsian",
+   "body": "Beautiful"
+  },
+  {
+   "product": "lagoon-flair",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Amazing projection and it's very long lasting till the next day and it smells exactly like the og"
+  },
+  {
+   "product": "lagoon-flair",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Perfect for daily use"
+  },
+  {
+   "product": "layering-30-ml-bundle",
+   "rating": "5",
+   "author": "Samar Khalied",
+   "body": "الليتشي خطيرة ومختلفة بجد تحفة البستاشيو جوكر مع كل البرفيومز بتمشي معاهم حلو اوي الفانيلا لذيذه بس تقريبا عليها توباكو ف تقيله شويه و ثابتين ✨"
+  },
+  {
+   "product": "layering-30-ml-bundle",
+   "rating": "5",
+   "author": "Nouran Emad",
+   "body": "Very good quality and long lasting"
+  },
+  {
+   "product": "layering-30-ml-bundle",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "All items are amazing"
+  },
+  {
+   "product": "layering-apple",
+   "rating": "5",
+   "author": "Habiba Tarek",
+   "body": "it so sweet I love it"
+  },
+  {
+   "product": "layering-lychee",
+   "rating": "5",
+   "author": "Sondos Tarek",
+   "body": "Ten out of ten chefs kiss🤪😍😍💕"
+  },
+  {
+   "product": "layering-lychee",
+   "rating": "5",
+   "author": "Nada",
+   "body": "my favorite helwa gedan w sabta"
+  },
+  {
+   "product": "layering-lychee",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "very sweet w tuhfa ll summer"
+  },
+  {
+   "product": "layering-lychee",
+   "rating": "5",
+   "author": "Farida Salah",
+   "body": "The Best perfume I ever smell It’s my signature scent in summer"
+  },
+  {
+   "product": "layering-lychee",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Very unique smell loved it, perfect for summer nights"
+  },
+  {
+   "product": "layering-pistachio",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Nice"
+  },
+  {
+   "product": "layering-pistachio",
+   "rating": "5",
+   "author": "Marwa Abdelaziz",
+   "body": "❤️❤️❤️"
+  },
+  {
+   "product": "layering-pistachio",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "very good scent and lasts for a very long time"
+  },
+  {
+   "product": "layering-pistachio",
+   "rating": "5",
+   "author": "Tarek Yehia",
+   "body": "Good & unique smell"
+  },
+  {
+   "product": "layering-pistachio",
+   "rating": "5",
+   "author": "Nada Khalifa",
+   "body": "‏♥️"
+  },
+  {
+   "product": "layering-vanilla",
+   "rating": "5",
+   "author": "Salma Osama",
+   "body": "بجد تحفه سواء ريحه لثبات للتغليف ١٠ من ١٠"
+  },
+  {
+   "product": "layering-vanilla",
+   "rating": "5",
+   "author": "Rowan روان عادل صالح عمر سعيد",
+   "body": "Amazing quality"
+  },
+  {
+   "product": "layering-vanilla",
+   "rating": "5",
+   "author": "Sama Makky",
+   "body": "تحفههه"
+  },
+  {
+   "product": "layering-vanilla",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "One of my best perfumes"
+  },
+  {
+   "product": "layering-vanilla",
+   "rating": "5",
+   "author": "Nada Nader",
+   "body": "Love it very warm"
+  },
+  {
+   "product": "libre-desire",
+   "rating": "5",
+   "author": "مني عبد الرحمن عوض Awad",
+   "body": "nice smell and long-lasting"
+  },
+  {
+   "product": "libre-desire",
+   "rating": "5",
+   "author": "Mariamessam",
+   "body": "Touhfaaaaa"
+  },
+  {
+   "product": "libre-desire",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Nice long lasting"
+  },
+  {
+   "product": "libre-desire",
+   "rating": "5",
+   "author": "Mohammed Abou Ouf",
+   "body": "Very premium experience"
+  },
+  {
+   "product": "libre-desire",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "PERFECT"
+  },
+  {
+   "product": "lost-on-you",
+   "rating": "5",
+   "author": "Youssef Dahy",
+   "body": "simple GREAT"
+  },
+  {
+   "product": "lost-on-you",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "عطر جيد جدا وفي مرحلة التجربة"
+  },
+  {
+   "product": "lost-on-you",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "sweet amazing pure feminien it has a strong entrance but its pure notes later on turns to something very unique"
+  },
+  {
+   "product": "lost-on-you",
+   "rating": "5",
+   "author": "Ali Farahat",
+   "body": "Premium scent"
+  },
+  {
+   "product": "luna-di-roma",
+   "rating": "5",
+   "author": "Sahar Elagamy",
+   "body": "Perfect"
+  },
+  {
+   "product": "luna-di-roma",
+   "rating": "5",
+   "author": "FATIMA ABED",
+   "body": "It smells soooooo good better than the original and it lasted so long on me"
+  },
+  {
+   "product": "luna-di-roma",
+   "rating": "5",
+   "author": "عمر محمد",
+   "body": "المنتج تحفه"
+  },
+  {
+   "product": "luna-di-roma",
+   "rating": "5",
+   "author": "Naira Adel",
+   "body": ".."
+  },
+  {
+   "product": "luna-di-roma",
+   "rating": "5",
+   "author": "Esraa Samir",
+   "body": "Amazing smell I’m going to get another bottle immediately"
+  },
+  {
+   "product": "male-elixir",
+   "rating": "5",
+   "author": "Adham Abd-Elbary",
+   "body": "Long lasting and effective. Many thanks!"
+  },
+  {
+   "product": "male-elixir",
+   "rating": "5",
+   "author": "احمد احمد",
+   "body": "Awesome"
+  },
+  {
+   "product": "male-elixir",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Best Quality❤️❤️"
+  },
+  {
+   "product": "male-elixir",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Great"
+  },
+  {
+   "product": "male-elixir",
+   "rating": "5",
+   "author": "ziad rady",
+   "body": "الحاجه جميله جدا اللهم بارك وبشكركم علي المصداقيه ولشغل المتعوب عليه ❤️❤️"
+  },
+  {
+   "product": "mango-on-woods",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Fresh"
+  },
+  {
+   "product": "mango-pineapple",
+   "rating": "5",
+   "author": "محمد ناصر",
+   "body": "Gorgeous perfume 100% recommend 🔥❤️"
+  },
+  {
+   "product": "mango-pineapple",
+   "rating": "5",
+   "author": "Fadi Ghattas",
+   "body": "Hiiiii siwa I ordered last moth Boujee Blush from the website for a friend’s birthday And bought mango pineapple from your store this weekend and Honestly, this perfume really surprised me. It smells clean, elegant, and lasts for hours without being too strong. I’ve gotten several compliments while wearing it,two of my colleges compliments the smell of mango this morning and it quickly became one of my favorites Thank you siwa. 🤩❤️❤️❤️❤️❤️❤️"
+  },
+  {
+   "product": "mango-pineapple",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "رائع"
+  },
+  {
+   "product": "mango-pineapple",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "جميله وثابته وشيك😍😍😍😍😍😍😍"
+  },
+  {
+   "product": "mango-pineapple",
+   "rating": "5",
+   "author": "Omar Mahmoud",
+   "body": "7elw awy"
+  },
+  {
+   "product": "marasi",
+   "rating": "5",
+   "author": "Adham Abd-Elbary",
+   "body": "Beautiful smell and long lasting. Thank you!"
+  },
+  {
+   "product": "marasi",
+   "rating": "5",
+   "author": "Amr Ibrahim",
+   "body": "رائع ويستحق التجربه"
+  },
+  {
+   "product": "marasi",
+   "rating": "5",
+   "author": "Maria Hany",
+   "body": "Helwa gedn"
+  },
+  {
+   "product": "marasi",
+   "rating": "5",
+   "author": "Basel Hassan",
+   "body": "Excellent"
+  },
+  {
+   "product": "marasi",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "تحفة🥰♥️♥️"
+  },
+  {
+   "product": "marshmallow-bundle",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "تحفه تحفه"
+  },
+  {
+   "product": "marshmallow-bundle",
+   "rating": "5",
+   "author": "RowanAhmed",
+   "body": "MASTERPIECE ❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥"
+  },
+  {
+   "product": "marshmallow-bundle",
+   "rating": "5",
+   "author": "youmna Yasser",
+   "body": "touhfaaa"
+  },
+  {
+   "product": "marshmallow-bundle",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "خطيييييييرررررررر"
+  },
+  {
+   "product": "marshmallow",
+   "rating": "5",
+   "author": "Ahmed aboalfath",
+   "body": "its smell is really sweet and the packaging is great, thank you very much"
+  },
+  {
+   "product": "marshmallow",
+   "rating": "5",
+   "author": "Tarek ELGHABATY",
+   "body": "رائع"
+  },
+  {
+   "product": "marshmallow",
+   "rating": "5",
+   "author": "mostafa badr",
+   "body": "Very good"
+  },
+  {
+   "product": "marshmallow",
+   "rating": "5",
+   "author": "Sandra Karam",
+   "body": "Long lasting. You will smell like marshmallows all day ❤️❤️"
+  },
+  {
+   "product": "marshmallow",
+   "rating": "5",
+   "author": "safa eltahawy",
+   "body": "smells feminine and amazing. long lasting really."
+  },
+  {
+   "product": "mawj",
+   "rating": "5",
+   "author": "Ramy Magdy",
+   "body": "Perfect, i got 3 compliments on the 1st day wearing it"
+  },
+  {
+   "product": "mawj",
+   "rating": "5",
+   "author": "Ahmed Sherif",
+   "body": "تحفة بجد"
+  },
+  {
+   "product": "mawj",
+   "rating": "5",
+   "author": "Hassan Ali",
+   "body": "very beautiful"
+  },
+  {
+   "product": "mawj",
+   "rating": "5",
+   "author": "محمد ابوعوف",
+   "body": "جميله جدا و اما تركز فيها تحس فعلا بأجواء البحر و الصيف و بتفضل لفترة طويله من الحاجات المميزة فعلاً"
+  },
+  {
+   "product": "mawj",
+   "rating": "5",
+   "author": "Ahmed Youssef",
+   "body": "ثبات وفواحه"
+  },
+  {
+   "product": "pacific-elixir",
+   "rating": "5",
+   "author": "Mohamed",
+   "body": "Perfect"
+  },
+  {
+   "product": "pacific-elixir",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Perfect"
+  },
+  {
+   "product": "pacific-elixir",
+   "rating": "5",
+   "author": "Hazem Sobhy",
+   "body": "تحفه بجد سوبر فريش و سويت مع تويست فريش و ريحه مرار قشر برتقال في الخلفيةبجد تحفه"
+  },
+  {
+   "product": "pacific-elixir",
+   "rating": "5",
+   "author": "Mohamed",
+   "body": "قوية اوي"
+  },
+  {
+   "product": "pacific-elixir",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "يا ريت لو يبقي فيه ستوك منه"
+  },
+  {
+   "product": "pink-allure",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "E3mlolha restock b2aaa"
+  },
+  {
+   "product": "pink-allure",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "تحفة كان جدا وثابت اووي بالايام وتقيل"
+  },
+  {
+   "product": "pink-allure",
+   "rating": "5",
+   "author": "Yasmin Mohsen",
+   "body": "Amazing perfume, smells great and lasts well. Please don’t increase the price!"
+  },
+  {
+   "product": "pink-allure",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "تحفه"
+  },
+  {
+   "product": "pink-allure",
+   "rating": "5",
+   "author": "Dalia Shawky",
+   "body": "حبيته جداً 🌸 ناعم وشيك🌸"
+  },
+  {
+   "product": "pink-arrogance",
+   "rating": "5",
+   "author": "Mai Habib",
+   "body": "It's an amazing perfume. I love it"
+  },
+  {
+   "product": "pink-arrogance",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "5teeeeeraaaa♥️"
+  },
+  {
+   "product": "pink-arrogance",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "A very unique scent"
+  },
+  {
+   "product": "pink-arrogance",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Tohfffaaaa awe aweee"
+  },
+  {
+   "product": "silk-vanilla-body-lotion",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Absolutely to7fa the scent is really good and even the hydrate it gives is so deep"
+  },
+  {
+   "product": "silk-vanilla-body-lotion",
+   "rating": "5",
+   "author": "Sarah Badran",
+   "body": "Amazing🤩"
+  },
+  {
+   "product": "silk-vanilla-body-lotion",
+   "rating": "5",
+   "author": "Mina",
+   "body": "An essential product for everyday use, this is a must if you are obsessed with smelling good."
+  },
+  {
+   "product": "silk-vanilla-body-lotion",
+   "rating": "5",
+   "author": "Yousef Alaa",
+   "body": "تووووحفه"
+  },
+  {
+   "product": "silk-vanilla-body-lotion",
+   "rating": "5",
+   "author": "Mona Shehata",
+   "body": "جمييييله"
+  },
+  {
+   "product": "silk-vanilla",
+   "rating": "5",
+   "author": "Seif Hamdy",
+   "body": "ممتاز"
+  },
+  {
+   "product": "silk-vanilla",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "‏very nice"
+  },
+  {
+   "product": "silk-vanilla",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "نفسي اشتري الويب سايت كلوا بجد من كتر حلاوته😭❤️"
+  },
+  {
+   "product": "silk-vanilla",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Love it"
+  },
+  {
+   "product": "silk-vanilla",
+   "rating": "5",
+   "author": "Ashrakat Elnahrawy",
+   "body": "Lovely smell and long lasting."
+  },
+  {
+   "product": "siwa-trail",
+   "rating": "5",
+   "author": "حنان سامي",
+   "body": "عجبني جدا و فوحانه و ثباته رائع لسه ماستخدمتوش كفايه بس جربته اول ما وصلني الريحة كانت فواحة وثابته فترة طويله، بالنسبة للريحة نفسها فهي مش بالظبط الزوق المتعودة عليه لكن عجبني و حسيته ينفع لمناسبة و خررجة بالليل اكتر من النهار شيك جدا بصراحة ، دمتم مميزين و الله ♥️♥️♥️🙏🏻"
+  },
+  {
+   "product": "siwa-trail",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "حلوه جدا لأول وهله تحسها تقيله بعد كدا تهدأ وتكون تحفه وقيمه وشيك اللي هيعرف قيمتها اللي عايشين في الخليج ."
+  },
+  {
+   "product": "siwa-trail",
+   "rating": "5",
+   "author": "Mohamed Ahmed",
+   "body": "I love is so much I think I will never stop by it from you. It’s very unique. I hope that youmake 100 ml from it soon"
+  },
+  {
+   "product": "siwa-trail",
+   "rating": "5",
+   "author": "Nourhan Osama",
+   "body": "Really elegent and unique and it lasts forever bgd ♥️"
+  },
+  {
+   "product": "siwa-trail",
+   "rating": "5",
+   "author": "Nash",
+   "body": "Amazing packaging & scent. Absolutely will purchase again. ❤️"
+  },
+  {
+   "product": "soul-poudree",
+   "rating": "5",
+   "author": "Asmaa",
+   "body": "تحفه جداوثباتها حلو اوي ❤️❤️❤️"
+  },
+  {
+   "product": "soul-poudree",
+   "rating": "5",
+   "author": "Samar",
+   "body": "جميل و شيك و راقى و انثوى جدا و ثباته حلو اوى"
+  },
+  {
+   "product": "soul-poudree",
+   "rating": "5",
+   "author": "Ahmed Said",
+   "body": "."
+  },
+  {
+   "product": "soul-poudree",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Perfect scent"
+  },
+  {
+   "product": "soul-poudree",
+   "rating": "5",
+   "author": "Radwa Ahmed",
+   "body": "excellent fragrance that lasts for more than 24 hours. Its scent is fresh, clean, and feminine, smells like luxurious makeup."
+  },
+  {
+   "product": "stellar-nights",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "The stunning entry to the perfume is strong, then turns into warm and long-lasting; beautifully combined notes make you feel elite."
+  },
+  {
+   "product": "stellar-nights",
+   "rating": "5",
+   "author": "Tarek ELGHABATY",
+   "body": "ممتاز"
+  },
+  {
+   "product": "stellar-nights",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Perfect"
+  },
+  {
+   "product": "summer-elegance",
+   "rating": "5",
+   "author": "Daniel Salman",
+   "body": "Great fragrance a must have for summer in my collection Longevity is amazing i get 10 hours on my skin"
+  },
+  {
+   "product": "summer-elegance",
+   "rating": "5",
+   "author": "عمرو على جلال الدين شاهين",
+   "body": "It is a wonderful fresh summer fragrance"
+  },
+  {
+   "product": "summer-holidays",
+   "rating": "5",
+   "author": "Raghda",
+   "body": "بجد خطييييرة وريحتها منعشة اوي"
+  },
+  {
+   "product": "summer-holidays",
+   "rating": "5",
+   "author": "Zain Khalid",
+   "body": "Amazing perfum"
+  },
+  {
+   "product": "summer-holidays",
+   "rating": "5",
+   "author": "Waiz Maswadi",
+   "body": "Good smell and long lasting"
+  },
+  {
+   "product": "summer-holidays",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Great"
+  },
+  {
+   "product": "summer-holidays",
+   "rating": "5",
+   "author": "Youssef Amr",
+   "body": "Great Refreshing scent that last long"
+  },
+  {
+   "product": "sweet-oud",
+   "rating": "5",
+   "author": "farah yusri",
+   "body": "i love it"
+  },
+  {
+   "product": "sweet-rum",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "It's the 3rd time to order it actually , it's so good and long-lasting"
+  },
+  {
+   "product": "sweet-rum",
+   "rating": "5",
+   "author": "Bimen Atef",
+   "body": "Perfect"
+  },
+  {
+   "product": "sweet-rum",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "حقيقي بتجنننن كتيير حلوة وبتثبت لأيام روووعة❤️❤️❤️"
+  },
+  {
+   "product": "sweet-rum",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Nice mix for morning use, a new vision for sweety category of perfumes"
+  },
+  {
+   "product": "sweet-rum",
+   "rating": "5",
+   "author": "Yousef Alaa",
+   "body": "ريحته جميلة جدا شبه خمرة العادية و ينفع كبرفيوم في المشاوير الخفيفة او بعد الشاور"
+  },
+  {
+   "product": "vanilla-91",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "Love it so much"
+  },
+  {
+   "product": "vanilla-91",
+   "rating": "5",
+   "author": "Anonymous",
+   "body": "بجد ريحتها تحفة و ثباتها قوي اوي بتقعد طول اليوم الكواليتي بتاعتهاخطيرةةة ♥️🔥🔥"
+  },
+  {
+   "product": "vanilla-bundle",
+   "rating": "5",
+   "author": "Merna Abo Basha",
+   "body": "The layering Vanilla bundle is amazing 😍😍"
+  },
+  {
+   "product": "vanilla-bundle",
+   "rating": "5",
+   "author": "Elshanshorylaila",
+   "body": "The smell is amazing I love everything about the bundle the packaging the perfume is long lasting would 1000% recommend"
+  },
+  {
+   "product": "vanilla-bundle",
+   "rating": "5",
+   "author": "Salma",
+   "body": "I have no words, this smells heavenly"
+  },
+  {
+   "product": "vanilla-bundle",
+   "rating": "5",
+   "author": "محمود محمد عز الدين",
+   "body": "You’re honestly the best. Great quality, great service, and everything is always on point."
+  },
+  {
+   "product": "vanilla-bundle",
+   "rating": "5",
+   "author": "Farah Samir",
+   "body": "must try"
+  }
+ ]
+}

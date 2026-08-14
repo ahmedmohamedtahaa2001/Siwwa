@@ -1,0 +1,264 @@
+{%- comment -%}
+  Product card — 5 variants. The single most important component:
+  it powers grids, carousels, related products and search results.
+
+  Styles: ../component-library/css/components.css (.pcard and modifiers)
+
+  Variants (the `style` argument):
+    minimal   .pcard              Inspired-by. UI Chrome only, reviews loud, CTA.
+    editorial .pcard--editorial   Originals. Arabic + Latin at EQUAL weight,
+                                  note descriptors, subtle badge, muted CTA.
+    compact   .pcard--compact     6-up grids. Stars only; quick-add on hover.
+    hero      .pcard--hero        Large. Excerpt, note pyramid, two CTAs.
+    vintage   .pcard--vintage     Originals. Sepia image, provenance stamp,
+                                  one Cultural Accent rule, review as pull-quote.
+
+  ⚠ TWO-REGISTER FIREWALL — ENFORCED HERE, NOT TRUSTED TO THE CALLER
+  `editorial` and `vintage` are heritage treatments and may carry the
+  Cultural Accent Set. On one of the 40 inspired-by products they are a
+  firewall breach, so this snippet DOWNGRADES them to `minimal` rather
+  than rendering them. The accent colour is likewise dropped.
+  Source: Planning/BENCHMARK.md Part 2 §5.
+
+  ⚠ VENDOR IS NOT A BRAND
+  `product.vendor` holds the designer fragrance a product is inspired by
+  (42 distinct values), not a brand. It is rendered as "Inspired by X"
+  and never as a brand line. Linking it to a vendor facet is the Oakcha
+  pattern and is opt-in via `link_vendor` — default off, because the
+  vendor/dupe posture is still an open decision (PROJECT-CONTEXT §7.4).
+
+  Accepts:
+    product      {Product}  required
+    style        {String}   minimal | editorial | compact | hero | vintage
+    show_vendor  {Boolean}  default true. Auto-suppressed on Originals.
+    link_vendor  {Boolean}  default false. See above.
+    show_reviews {Boolean}  default true. See the note on hiding it.
+    show_badge   {Boolean}
+    badge_type   {String}   auto | sale | in-stock | new | best-seller | authentic
+    show_notes   {Boolean}  accord descriptors under the title
+    cta_label    {String}   defaults to the locale add-to-cart string
+    accent_color {String}   none | palm-green | date-red | date-yellow | desert-brown
+                            Originals only; ignored on inspired-by.
+    image_ratio  {String}   overrides the per-variant default
+    heading_tag  {String}   h2 | h3 (default h3) — keep the page outline sane
+    reveal_index {Number}   for staggered animation by the caller
+
+  Usage:
+    {% render 'product-card',
+       product: product,
+       style: section.settings.product_card_style,
+       show_reviews: true %}
+{%- endcomment -%}
+{%- liquid
+  assign card_style = style | default: 'minimal'
+
+  capture register_raw
+    render 'product-register', product: product
+  endcapture
+  assign register = register_raw | strip
+  assign is_original = false
+  if register == 'original'
+    assign is_original = true
+  endif
+
+  comment
+    Firewall. Heritage treatments downgrade on inspired-by products.
+  endcomment
+  unless is_original
+    if card_style == 'editorial' or card_style == 'vintage'
+      assign card_style = 'minimal'
+    endif
+    assign accent_color = 'none'
+  endunless
+
+  case card_style
+    when 'editorial'
+      assign modifier = 'pcard--editorial'
+      assign default_ratio = '3x4'
+    when 'compact'
+      assign modifier = 'pcard--compact'
+      assign default_ratio = '4x5'
+    when 'hero'
+      assign modifier = 'pcard--hero'
+      assign default_ratio = '4x5'
+    when 'vintage'
+      assign modifier = 'pcard--vintage vintage-surface'
+      assign default_ratio = '3x4'
+    else
+      assign modifier = ''
+      assign default_ratio = '4x5'
+  endcase
+
+  assign ratio = image_ratio | default: default_ratio
+  assign tag = heading_tag | default: 'h3'
+
+  comment  Cultural Accent -> a CSS custom property, never a literal.  endcomment
+  assign accent_var = ''
+  case accent_color
+    when 'palm-green'
+      assign accent_var = '--accent-color:var(--palm-green)'
+    when 'date-red'
+      assign accent_var = '--accent-color:var(--date-red)'
+    when 'date-yellow'
+      assign accent_var = '--accent-color:var(--date-yellow)'
+    when 'desert-brown'
+      assign accent_var = '--accent-color:var(--desert-brown)'
+  endcase
+
+  assign sold_out = false
+  unless product.available
+    assign sold_out = true
+  endunless
+
+  comment  Defaults that only apply when the caller said nothing.  endcomment
+  assign do_vendor = show_vendor
+  if show_vendor == nil
+    assign do_vendor = true
+  endif
+  if is_original
+    assign do_vendor = false
+  endif
+
+  assign do_reviews = show_reviews
+  if show_reviews == nil
+    assign do_reviews = true
+  endif
+
+  assign auto_badge = badge_type | default: 'auto'
+  if auto_badge == 'auto'
+    if product.compare_at_price > product.price
+      assign auto_badge = 'sale'
+    elsif is_original
+      assign auto_badge = 'authentic'
+    else
+      assign auto_badge = 'new'
+    endif
+  endif
+-%}
+<article
+  class="pcard {{ modifier }} {% if sold_out %}pcard--soldout{% endif %} {{ class }}"
+  {% if accent_var != blank %}style="{{ accent_var }}"{% endif %}
+  {% if reveal_index %}data-reveal-index="{{ reveal_index }}"{% endif %}
+  data-product-id="{{ product.id }}"
+  data-register="{{ register }}"
+>
+  {%- if card_style == 'vintage' -%}
+    <span class="edge-wear" aria-hidden="true"></span>
+  {%- endif -%}
+
+  <a href="{{ product.url }}" class="pcard__media" tabindex="-1" aria-hidden="true">
+    {%- render 'image-container',
+      image: product.featured_image,
+      ratio: ratio,
+      zoom: true,
+      sizes: '(min-width: 990px) 25vw, (min-width: 750px) 33vw, 50vw' -%}
+    {%- if show_badge -%}
+      <span class="pimg__badges">
+        {%- render 'badge', type: auto_badge, product: product -%}
+      </span>
+    {%- endif -%}
+  </a>
+
+  <div class="pcard__info">
+    {%- if do_vendor and product.vendor != blank -%}
+      {%- comment -%}
+        The phrase frames the claim; the HOUSE is the claim, so it is
+        wrapped on its own and carries the weight (.pcard__house). The
+        span goes OUTSIDE the link/plain branch so both render the same
+        mark rather than styling the <a> in one case only.
+
+        The whitespace control matters here: the `{%- if` that used to
+        follow the phrase ate the space between them, so this rendered
+        "Inspired byKayali". `{{-` trims only the leading side and leaves
+        the newline after the phrase to separate the two.
+      {%- endcomment -%}
+      <p class="pcard__sub">
+        {{- 'products.product.inspired_by' | t }}
+        <span class="pcard__house">
+          {%- if link_vendor -%}
+            <a href="{{ routes.collections_url }}/vendors?q={{ product.vendor | url_encode }}">{{ product.vendor }}</a>
+          {%- else -%}
+            {{- product.vendor -}}
+          {%- endif -%}
+        </span>
+      </p>
+    {%- endif -%}
+
+    <{{ tag }} class="pcard__title">
+      <a href="{{ product.url }}">{{ product.title }}</a>
+      {%- comment -%}
+        Arabic title at EQUAL visual weight, not as a subtitle. It comes
+        from a metafield rather than the title, because Shopify's title
+        is single-valued per locale. Absent until the metafield exists.
+      {%- endcomment -%}
+      {%- if card_style == 'editorial' or card_style == 'vintage' -%}
+        
+      {%- endif -%}
+    </{{ tag }}>
+
+    {%- if card_style == 'vintage' -%}
+      <span class="pcard__accent-rule" aria-hidden="true"></span>
+      {%- assign provenance = product.metafields.fragrance.provenance -%}
+      {%- if provenance != blank -%}
+        <span class="pcard__provenance">{{ provenance }}</span>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if show_notes -%}
+      {%- assign accords = product.metafields.fragrance.accords -%}
+      {%- if accords != blank -%}
+        <p class="pcard__notes">{{ accords }}</p>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if card_style == 'hero' -%}
+      <div class="pcard__excerpt rte">{{ product.description | strip_html | truncatewords: 40 }}</div>
+      {%- render 'note-pyramid', product: product, style: 'list' -%}
+    {%- endif -%}
+  </div>
+
+  {%- comment -%}
+    Reviews. 4.98★ from 1,212 reviews is the strongest competitive asset
+    the store has — DIRECTION.md Part 1 §2.1 forbids copying Amouage's
+    restraint here. Kept above the price on every variant.
+  {%- endcomment -%}
+  {%- if do_reviews -%}
+    {%- render 'judgeme-preview-badge', product: product, class: 'pcard__reviews' -%}
+  {%- endif -%}
+
+  {%- if card_style == 'vintage' -%}
+    {%- assign pull_quote = product.metafields.fragrance.featured_review -%}
+    {%- if pull_quote != blank -%}
+      <blockquote class="review--vintage"><p class="review__body">{{ pull_quote }}</p></blockquote>
+    {%- endif -%}
+  {%- endif -%}
+
+  <div class="pcard__foot">
+    {%- render 'price', product: product -%}
+
+    {%- if card_style == 'compact' -%}
+      <span class="pcard__quickadd">
+        {%- render 'button',
+          label: cta_label | default: 'products.product.add_to_cart' | t,
+          style: 'minimal', size: 'sm', disabled: sold_out -%}
+      </span>
+    {%- elsif card_style == 'hero' -%}
+      <span class="pcard__ctas">
+        {%- render 'button',
+          label: cta_label | default: 'products.product.add_to_cart' | t,
+          style: 'primary', disabled: sold_out -%}
+        {%- render 'button', label: 'collections.general.explore' | t, url: product.url, style: 'ghost' -%}
+      </span>
+    {%- elsif card_style == 'vintage' or card_style == 'editorial' -%}
+      {%- render 'button',
+        label: cta_label | default: 'products.product.add_to_cart' | t,
+        style: 'ghost', disabled: sold_out -%}
+    {%- else -%}
+      {%- if sold_out -%}
+        {%- render 'button', label: 'products.product.notify_me' | t, style: 'minimal', size: 'sm' -%}
+      {%- else -%}
+        {%- render 'button', label: cta_label | default: 'products.product.add_to_cart' | t, style: 'primary', size: 'sm' -%}
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</article>

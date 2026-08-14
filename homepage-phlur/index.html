@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title, description, canonical and hreflang are rewritten by render.js
+     from config.seo on every locale switch — see CLAUDE.md "Bilingual by default". -->
+<title>Siwa Fragrances | Egyptian Luxury Perfumes</title>
+<meta name="description" content="Siwa Fragrances: 16 original Siwan creations and 40 designer-inspired scents. Free shipping over LE 1,500.">
+<link rel="canonical" href="https://siwafragrances.com/">
+<link rel="alternate" hreflang="en" href="https://siwafragrances.com/">
+<link rel="alternate" hreflang="ar" href="https://siwafragrances.com/?locale=ar">
+<link rel="alternate" hreflang="x-default" href="https://siwafragrances.com/">
+<meta name="theme-color" content="#212012">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23212012'/><text x='16' y='23' font-size='18' text-anchor='middle' fill='%23b18044' font-family='serif'>S</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- The design system is consumed verbatim and never forked. Only page-level
+     composition and rhythm live in css/phlur.css. -->
+<link rel="stylesheet" href="../component-library/css/tokens.css">
+<link rel="stylesheet" href="../component-library/css/components.css">
+<link rel="stylesheet" href="css/phlur.css">
+
+<!-- Above-the-fold reservation: the header stack and hero have fixed
+     heights, so reserving them here avoids a layout shift on paint. -->
+<style>
+  body { margin: 0; background: #f7f5ee; }
+  .annbar { min-height: 36px; }
+  .hdr__bar { min-height: 56px; }
+  /* The hero fills the viewport in its default 'fixed-parallax' mode.
+     Reserved here so the first paint does not shift when render.js runs. */
+  #sec-hero { min-height: 100vh; }
+  @media (max-width: 990px) { .hdr__bar { min-height: 48px; } }
+</style>
+
+<script type="application/ld+json" id="ldOrganization"></script>
+<script type="application/ld+json" id="ldProducts"></script>
+</head>
+
+<body class="ph" id="top">
+
+<a class="skiplink" href="#main">Skip to content</a>
+
+<!-- Structural clone of phlur.com's homepage stack, measured 2026-08-08.
+     Section order, geometry and rhythm are Phlur's; colour, type, imagery
+     and copy are Siwa's. Evidence: ../reference-phlur/PHLUR-SPEC.md -->
+
+<!-- 1 · ANNOUNCEMENT — 36px inverted strip -------------------- -->
+<div id="sec-announcement"></div>
+
+<!-- 2 · HEADER — 56px sticky, wordmark + inline nav, icons right -->
+<div id="sec-header"></div>
+
+<main id="main">
+
+  <!-- 3 · HERO — full-bleed banner, 630px ---------------------- -->
+  <div id="sec-hero"></div>
+
+  <!-- 4 · BESTSELLERS — carousel, 303px cards, 16px gap -------- -->
+  <div id="sec-bestsellers"></div>
+
+  <!-- 5 · MANIFESTO — rich text, 20px lead -------------------- -->
+  <div id="sec-manifesto"></div>
+
+  <!-- 6 · HOUSE — inset banner, 1280×560 ---------------------- -->
+  <div id="sec-house"></div>
+
+  <!-- 7 · ORIGINAL CREATIONS — carousel ----------------------- -->
+  <div id="sec-originals"></div>
+
+  <!-- 8 · FEATURED COLLECTIONS — 2-up square tiles ------------ -->
+  <div id="sec-collections"></div>
+
+  <!-- 9 · DISCOVERY — image with text ------------------------- -->
+  <div id="sec-discovery"></div>
+
+</main>
+
+<!-- 10 · FOOTER — 5 columns --------------------------------- -->
+<div id="sec-footer"></div>
+
+<!-- Overlays -->
+<div id="overlayHost"></div>
+<div class="sr-only" id="liveRegion" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<script>window.SIWA_IMG_BASE = '../component-library/img/';</script>
+<script src="../component-library/js/data.js"></script>
+<script src="../component-library/js/library.js"></script>
+<script src="js/config.js"></script>
+<script src="js/render.js"></script>
+</body>
+</html>

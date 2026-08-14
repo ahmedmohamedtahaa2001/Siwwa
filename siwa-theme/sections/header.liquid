@@ -1,0 +1,266 @@
+{%- comment -%}
+  Header — 5 variants.
+
+  Styles: ../component-library/css/components.css (.hdr and modifiers)
+  Behaviour: assets/siwa-modules.js (mega menu, drawer)
+
+  Variants (header_style):
+    flat      Logo centred, nav beneath. The live store's current shape.
+    logo-left Logo start, nav after it. One row, more compact.
+    mega      Dropdown panels that can carry collection cards.
+    sticky    Stays at the top on scroll. Live store has this DISABLED
+              (`--header-is-sticky: 0`) — turning it on is a real change.
+    bilingual Adds the EN/AR toggle. Also available on the others.
+
+  ⚠ THE MENU IS A link_list, NOT A LIST OF BLOCKS
+  The live store has 10 flat links and no dropdowns. Shopify's native
+  navigation editor already owns menu structure, and duplicating it as
+  blocks would create two places to edit the same thing. Mega-menu
+  *content* (featured collections) is blocks; the links are not.
+{%- endcomment -%}
+{%- liquid
+  assign hs = section.settings.header_style
+  assign sticky = ''
+  if section.settings.enable_sticky or hs == 'sticky'
+    assign sticky = 'hdr--sticky'
+  endif
+  assign logo_start = ''
+  if hs == 'logo-left' or hs == 'mega'
+    assign logo_start = 'hdr--logo-start'
+  endif
+-%}
+{%- if section.settings.strip_text != blank -%}
+  <div class="hdr__strip">{{ section.settings.strip_text }}</div>
+{%- endif -%}
+
+<header class="hdr {{ sticky }} {{ logo_start }}">
+  <div class="hdr__wrap">
+    <div class="hdr__bar">
+      <button
+        class="hdr__burger btn btn--tertiary"
+        type="button"
+        aria-expanded="false"
+        aria-controls="MobileNav-{{ section.id }}"
+        aria-label="{{ 'general.accessibility.menu' | t }}"
+        data-siwa-drawer-open="MobileNav-{{ section.id }}"
+      >
+        {%- render 'icon', name: 'burger' -%}
+      </button>
+
+      <a href="{{ routes.root_url }}" class="hdr__mark hdr__logo">
+        {%- comment -%}
+          BILINGUAL WORDMARK — the one sanctioned exception to
+          one-language-at-a-time. A lockup is a MARK, not content: the
+          physical bottles carry both scripts, so the site does too.
+          Headings and body copy stay single-language and translate
+          through Translate & Adapt.
+        {%- endcomment -%}
+        {%- if section.settings.logo == blank and section.settings.wordmark != blank -%}
+          <span class="wordmark">
+            <b>{{ section.settings.wordmark }}</b>
+            {%- if section.settings.wordmark_ar != blank -%}
+              <span lang="ar" dir="rtl">{{ section.settings.wordmark_ar }}</span>
+            {%- endif -%}
+          </span>
+        {%- elsif section.settings.logo != blank -%}
+          {%- assign logo_w = section.settings.logo_width_desktop -%}
+          {{ section.settings.logo | image_url: width: 400 | image_tag:
+             widths: '100, 200, 300, 400',
+             sizes: logo_w | append: 'px',
+             style: 'width:' | append: logo_w | append: 'px',
+             alt: shop.name,
+             loading: 'eager',
+             fetchpriority: 'high' }}
+        {%- else -%}
+          {{ shop.name }}
+        {%- endif -%}
+      </a>
+
+      <nav class="hdr__nav" aria-label="{{ 'general.accessibility.primary_nav' | t }}">
+        {%- for link in section.settings.main_menu.links -%}
+          {%- if hs == 'mega' and link.links.size > 0 -%}
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="Mega-{{ section.id }}-{{ forloop.index }}"
+              data-siwa-mega
+            >
+              {{ link.title }}
+              {%- render 'icon', name: 'chevron-down' -%}
+            </button>
+          {%- else -%}
+            <a href="{{ link.url }}"
+               {% if link.current %}aria-current="page"{% endif %}>{{ link.title }}</a>
+          {%- endif -%}
+        {%- endfor -%}
+      </nav>
+
+      <div class="hdr__tools">
+        {%- if section.settings.enable_language_toggle and settings.enable_language_toggle -%}
+          {%- render 'language-toggle' -%}
+        {%- endif -%}
+
+        {%- if section.settings.enable_search -%}
+          <a class="btn btn--tertiary" href="{{ routes.search_url }}"
+             aria-label="{{ 'general.search.label' | t }}">
+            {%- render 'icon', name: 'search' -%}
+          </a>
+        {%- endif -%}
+
+        {%- if shop.customer_accounts_enabled -%}
+          <a class="btn btn--tertiary" href="{{ routes.account_url }}"
+             aria-label="{{ 'customer.account.title' | t }}">
+            {%- render 'icon', name: 'user' -%}
+          </a>
+        {%- endif -%}
+
+        <a class="btn btn--tertiary cartdot" href="{{ routes.cart_url }}"
+           aria-label="{{ 'cart.general.title' | t }}" data-cart-link>
+          {%- render 'icon', name: 'bag' -%}
+          <span data-cart-count>{{ cart.item_count }}</span>
+        </a>
+      </div>
+    </div>
+
+    {%- comment -%}
+      Mega panels. Content is blocks; the links themselves come from the
+      navigation menu above. A panel is `hidden` so its links stay out of
+      the tab order until it opens.
+    {%- endcomment -%}
+    {%- if hs == 'mega' -%}
+      {%- for link in section.settings.main_menu.links -%}
+        {%- if link.links.size > 0 -%}
+          <div class="hdr__mega" id="Mega-{{ section.id }}-{{ forloop.index }}" hidden>
+            <div class="hdr__mega-inner">
+              {%- for child in link.links -%}
+                <div>
+                  <h3 class="ftr__heading">{{ child.title }}</h3>
+                  <ul style="list-style:none;margin:0;padding:0;display:grid;gap:var(--sp-xs)">
+                    {%- for grandchild in child.links -%}
+                      <li><a href="{{ grandchild.url }}">{{ grandchild.title }}</a></li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {%- endfor -%}
+
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'featured_collection' and block.settings.collection != blank -%}
+                  <div {{ block.shopify_attributes }}>
+                    {%- render 'collection-card',
+                      collection: block.settings.collection,
+                      style: 'minimal',
+                      title: block.settings.title -%}
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</header>
+
+{%- comment -%} Mobile drawer. Same menu object — never a second copy. {%- endcomment -%}
+<div class="drawer" id="MobileNav-{{ section.id }}" hidden data-siwa-drawer>
+  <div class="drawer__panel" role="dialog" aria-modal="true"
+       aria-label="{{ 'general.accessibility.primary_nav' | t }}">
+    <button class="popup__close" type="button" data-siwa-drawer-close
+            aria-label="{{ 'general.accessibility.close' | t }}">
+      {%- render 'icon', name: 'close' -%}
+    </button>
+    <nav>
+      <ul style="list-style:none;margin:0;padding:0;display:grid;gap:var(--sp-sm)">
+        {%- for link in section.settings.main_menu.links -%}
+          <li>
+            <a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>
+              {{ link.title }}
+            </a>
+            {%- if link.links.size > 0 -%}
+              <ul style="list-style:none;margin:var(--sp-xs) 0 0;padding-inline-start:var(--sp-md);display:grid;gap:var(--sp-xs)">
+                {%- for child in link.links -%}
+                  <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "shopify-section--header",
+  "settings": [
+    {
+      "type": "select",
+      "id": "header_style",
+      "label": "t:sections.header.style",
+      "default": "flat",
+      "options": [
+        { "value": "flat", "label": "t:sections.header.style_flat" },
+        { "value": "logo-left", "label": "t:sections.header.style_logo_left" },
+        { "value": "mega", "label": "t:sections.header.style_mega" },
+        { "value": "sticky", "label": "t:sections.header.style_sticky" },
+        { "value": "bilingual", "label": "t:sections.header.style_bilingual" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky",
+      "label": "t:sections.header.sticky",
+      "default": false,
+      "info": "t:sections.header.sticky_info"
+    },
+    { "type": "text", "id": "strip_text", "label": "t:sections.header.strip_text", "info": "t:sections.header.strip_text_info" },
+    { "type": "header", "content": "t:sections.header.header_logo" },
+    { "type": "image_picker", "id": "logo", "label": "t:sections.header.logo" },
+    { "type": "text", "id": "wordmark", "label": "t:sections.header.wordmark", "default": "SIWA", "info": "t:sections.header.wordmark_info" },
+    { "type": "text", "id": "wordmark_ar", "label": "t:sections.header.wordmark_ar", "default": "سيوة" },
+    {
+      "type": "range",
+      "id": "logo_width_mobile",
+      "min": 60, "max": 150, "step": 5, "unit": "px",
+      "label": "t:sections.header.logo_width_mobile",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "logo_width_desktop",
+      "min": 80, "max": 240, "step": 5, "unit": "px",
+      "label": "t:sections.header.logo_width_desktop",
+      "default": 110
+    },
+    { "type": "header", "content": "t:sections.header.header_nav" },
+    {
+      "type": "link_list",
+      "id": "main_menu",
+      "label": "t:sections.header.main_menu",
+      "default": "main-menu",
+      "info": "t:sections.header.main_menu_info"
+    },
+    { "type": "checkbox", "id": "enable_search", "label": "t:sections.header.enable_search", "default": true },
+    {
+      "type": "checkbox",
+      "id": "enable_language_toggle",
+      "label": "t:settings_schema.bilingual.enable_toggle",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "t:sections.header.mega_feature",
+      "limit": 4,
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "t:components.collection_card.collection" },
+        { "type": "text", "id": "title", "label": "t:components.collection_card.title" }
+      ]
+    }
+  ],
+  "enabled_on": { "groups": ["header"] }
+}
+{% endschema %}

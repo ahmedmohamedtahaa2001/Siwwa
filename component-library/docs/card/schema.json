@@ -1,0 +1,17 @@
+{
+  "_comment": "Setting fragment for the Card primitive. `vintage` is a heritage treatment — restrict it to Originals and storytelling surfaces (BENCHMARK.md Part 2 §5).",
+  "settings": [
+    {
+      "type": "select", "id": "card_style", "label": "t:components.card.style", "default": "flat",
+      "options": [
+        { "value": "flat",     "label": "t:components.card.style_flat" },
+        { "value": "hairline", "label": "t:components.card.style_hairline" },
+        { "value": "lift",     "label": "t:components.card.style_lift" },
+        { "value": "vintage",  "label": "t:components.card.style_vintage" },
+        { "value": "dark",     "label": "t:components.card.style_dark" }
+      ]
+    },
+    { "type": "range", "id": "card_padding", "min": 8, "max": 48, "step": 4, "unit": "px",
+      "label": "t:components.card.padding", "default": 16 }
+  ]
+}

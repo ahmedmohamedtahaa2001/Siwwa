@@ -1,0 +1,135 @@
+{%- comment -%}
+  Testimonial card — 5 variants.
+
+  Distinct from `review-card`: a review is a verified customer review
+  object from Judge.me; a testimonial is curated content — a brand
+  endorsement, a press quote, a video review. Because a testimonial IS
+  merchant-authored, its fields are legitimately schema settings.
+
+  Styles: ../component-library/css/components.css (.tcard, .quote)
+
+  Variants (the `style` argument):
+    quote     .quote             Large serif quote, author, role. No image.
+    avatar    .tcard             Monogram or photo beside the quote.
+    video     .tcard + play      Poster with a play control, quote below.
+    press     .tcard + logo      Publication logo, quote, "Read article".
+    heritage  .tcard--heritage   Handwritten-feel serif italic, author in
+                                 small caps, one Cultural Accent quote mark.
+
+  ⚠ A TESTIMONIAL MUST BE REAL
+  These fields are merchant-editable so that genuine endorsements can be
+  placed. They are not a licence to invent praise. If the quote did not
+  happen, it does not go here.
+
+  Accepts:
+    quote             {String}  required
+    author            {String}
+    author_role       {String}  e.g. "Fragrance enthusiast, Cairo"
+    image             {Image}   author photo, or video poster
+    publication_logo  {Image}   press variant
+    publication_name  {String}  press variant — the logo's alt text
+    video_url         {String}  video variant
+    link_url          {String}
+    link_label        {String}
+    rating            {Number}  optional stars
+    style             {String}  quote | avatar | video | press | heritage
+    accent_color      {String}  heritage variant only
+{%- endcomment -%}
+{%- liquid
+  assign tc_style = style | default: 'quote'
+  assign monogram = author | strip | slice: 0, 1 | upcase
+
+  assign accent_var = ''
+  case accent_color
+    when 'palm-green'
+      assign accent_var = '--accent-color:var(--palm-green)'
+    when 'date-red'
+      assign accent_var = '--accent-color:var(--date-red)'
+    when 'date-yellow'
+      assign accent_var = '--accent-color:var(--date-yellow)'
+    when 'desert-brown'
+      assign accent_var = '--accent-color:var(--desert-brown)'
+  endcase
+-%}
+{%- if quote != blank -%}
+  {%- case tc_style -%}
+
+    {%- when 'quote' -%}
+      <figure class="quote {{ class }}" style="margin:0">
+        <p>{{ quote }}</p>
+        {%- if author != blank -%}
+          <footer>
+            {{ author }}
+            {%- if author_role != blank %} · {{ author_role }}{% endif -%}
+          </footer>
+        {%- endif -%}
+      </figure>
+
+    {%- when 'avatar' -%}
+      <figure class="tcard {{ class }}" style="margin:0">
+        {%- if rating != blank -%}
+          {%- render 'star-rating', rating: rating -%}
+        {%- endif -%}
+        <blockquote style="margin:0"><p class="fcard__body">{{ quote }}</p></blockquote>
+        <div class="tcard__row">
+          {%- if image != blank -%}
+            {%- render 'image-container', image: image, ratio: '1x1', class: 'tcard__avatar', alt: author -%}
+          {%- else -%}
+            <span class="tcard__avatar" aria-hidden="true">{{ monogram }}</span>
+          {%- endif -%}
+          <figcaption>
+            {%- if author != blank -%}<span class="review__author">{{ author }}</span>{%- endif -%}
+            {%- if author_role != blank -%}<span class="review__meta"> · {{ author_role }}</span>{%- endif -%}
+          </figcaption>
+        </div>
+      </figure>
+
+    {%- when 'video' -%}
+      <figure class="tcard {{ class }}" style="margin:0">
+        <div style="position:relative">
+          {%- render 'image-container', image: image, ratio: '16x9', scrim_opacity: 30, alt: author -%}
+          <a class="tcard__play" href="{{ video_url }}"
+             aria-label="{{ 'products.reviews.watch' | t }}">
+            {%- render 'icon', name: 'play' -%}
+          </a>
+        </div>
+        <blockquote style="margin:0"><p class="fcard__body">{{ quote }}</p></blockquote>
+        <figcaption class="review__meta">
+          {{ author }}{% if author_role != blank %} · {{ author_role }}{% endif %}
+        </figcaption>
+        {%- if video_url != blank -%}
+          {%- render 'button', label: 'products.reviews.watch' | t, url: video_url, style: 'ghost' -%}
+        {%- endif -%}
+      </figure>
+
+    {%- when 'press' -%}
+      <figure class="tcard {{ class }}" style="margin:0">
+        {%- if publication_logo != blank -%}
+          {{ publication_logo | image_url: width: 240 | image_tag:
+             class: 'tcard__logo', loading: 'lazy', alt: publication_name }}
+        {%- elsif publication_name != blank -%}
+          <span class="review__meta">{{ publication_name }}</span>
+        {%- endif -%}
+        <blockquote style="margin:0"><p class="fcard__body">{{ quote }}</p></blockquote>
+        {%- if link_url != blank -%}
+          {%- render 'button',
+            label: link_label | default: 'products.reviews.read_article' | t,
+            url: link_url, style: 'ghost', icon: 'arrow-right' -%}
+        {%- endif -%}
+      </figure>
+
+    {%- when 'heritage' -%}
+      <figure class="tcard tcard--heritage vintage-surface {{ class }}"
+        style="margin:0;{{ accent_var }}">
+        <span class="edge-wear" aria-hidden="true"></span>
+        <span class="tcard__mark" aria-hidden="true">&ldquo;</span>
+        <blockquote style="margin:0"><p class="tcard__quote">{{ quote }}</p></blockquote>
+        {%- if author != blank -%}
+          <figcaption class="tcard__author">
+            {{ author }}{% if author_role != blank %} · {{ author_role }}{% endif %}
+          </figcaption>
+        {%- endif -%}
+      </figure>
+
+  {%- endcase -%}
+{%- endif -%}

@@ -1,0 +1,320 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Siwa",
+    "theme_version": "0.1.0",
+    "theme_author": "Siwa Fragrances",
+    "theme_documentation_url": "https:\/\/siwafragrances.com",
+    "theme_support_url": "https:\/\/siwafragrances.com\/pages\/contact"
+  },
+  {
+    "name": "t:settings_schema.colors_chrome.name",
+    "info": "t:settings_schema.colors_chrome.info",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.colors_chrome.header_brand"
+      },
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "t:settings_schema.colors_chrome.color_primary",
+        "info": "t:settings_schema.colors_chrome.color_primary_info",
+        "default": "#b18044"
+      },
+      {
+        "type": "color",
+        "id": "color_primary_alt",
+        "label": "t:settings_schema.colors_chrome.color_primary_alt",
+        "default": "#e1b160"
+      },
+      {
+        "type": "color",
+        "id": "color_on_primary",
+        "label": "t:settings_schema.colors_chrome.color_on_primary",
+        "info": "t:settings_schema.colors_chrome.color_on_primary_info",
+        "default": "#212012"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.colors_chrome.header_surface"
+      },
+      {
+        "type": "color",
+        "id": "color_canvas",
+        "label": "t:settings_schema.colors_chrome.color_canvas",
+        "default": "#f7f5ee"
+      },
+      {
+        "type": "color",
+        "id": "color_surface_card",
+        "label": "t:settings_schema.colors_chrome.color_surface_card",
+        "default": "#eae0c4"
+      },
+      {
+        "type": "color",
+        "id": "color_surface_hover",
+        "label": "t:settings_schema.colors_chrome.color_surface_hover",
+        "default": "#e4b68a"
+      },
+      {
+        "type": "color",
+        "id": "color_surface_dark",
+        "label": "t:settings_schema.colors_chrome.color_surface_dark",
+        "default": "#212012"
+      },
+      {
+        "type": "color",
+        "id": "color_on_dark",
+        "label": "t:settings_schema.colors_chrome.color_on_dark",
+        "default": "#d4cfc2"
+      },
+      {
+        "type": "color",
+        "id": "color_hairline",
+        "label": "t:settings_schema.colors_chrome.color_hairline",
+        "info": "t:settings_schema.colors_chrome.color_hairline_info",
+        "default": "#ccbca0"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.colors_chrome.header_text"
+      },
+      {
+        "type": "color",
+        "id": "color_ink",
+        "label": "t:settings_schema.colors_chrome.color_ink",
+        "default": "#212012"
+      },
+      {
+        "type": "color",
+        "id": "color_heading",
+        "label": "t:settings_schema.colors_chrome.color_heading",
+        "default": "#50251c"
+      },
+      {
+        "type": "color",
+        "id": "color_text_secondary",
+        "label": "t:settings_schema.colors_chrome.color_text_secondary",
+        "info": "t:settings_schema.colors_chrome.color_text_secondary_info",
+        "default": "#7d6a5b"
+      },
+      {
+        "type": "color",
+        "id": "color_link",
+        "label": "t:settings_schema.colors_chrome.color_link",
+        "default": "#8b5f4c"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.colors_chrome.header_semantic"
+      },
+      {
+        "type": "color",
+        "id": "color_success",
+        "label": "t:settings_schema.colors_chrome.color_success",
+        "info": "t:settings_schema.colors_chrome.color_success_info",
+        "default": "#6d5949"
+      },
+      {
+        "type": "color",
+        "id": "color_tag",
+        "label": "t:settings_schema.colors_chrome.color_tag",
+        "default": "#b09b7e"
+      },
+      {
+        "type": "color",
+        "id": "color_sale",
+        "label": "t:settings_schema.colors_chrome.color_sale",
+        "default": "#e1b160"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.colors_cultural.name",
+    "info": "t:settings_schema.colors_cultural.info",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.colors_cultural.firewall_warning"
+      },
+      {
+        "type": "color",
+        "id": "cultural_palm_green",
+        "label": "t:settings_schema.colors_cultural.palm_green",
+        "default": "#4f5734"
+      },
+      {
+        "type": "color",
+        "id": "cultural_date_red",
+        "label": "t:settings_schema.colors_cultural.date_red",
+        "default": "#8f3a2e"
+      },
+      {
+        "type": "color",
+        "id": "cultural_date_yellow",
+        "label": "t:settings_schema.colors_cultural.date_yellow",
+        "default": "#977f3a"
+      },
+      {
+        "type": "color",
+        "id": "cultural_desert_brown",
+        "label": "t:settings_schema.colors_cultural.desert_brown",
+        "default": "#865431"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.typography.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.typography.header_latin"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_display",
+        "label": "t:settings_schema.typography.font_display",
+        "info": "t:settings_schema.typography.font_display_info",
+        "default": "assistant_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_ui",
+        "label": "t:settings_schema.typography.font_ui",
+        "default": "assistant_n4"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.typography.header_arabic"
+      },
+      {
+        "type": "text",
+        "id": "font_ar_display_stack",
+        "label": "t:settings_schema.typography.font_ar_display",
+        "info": "t:settings_schema.typography.font_ar_info",
+        "default": "\"Aref Ruqaa\", \"Markazi Text\", \"Noto Naskh Arabic\", serif"
+      },
+      {
+        "type": "text",
+        "id": "font_ar_ui_stack",
+        "label": "t:settings_schema.typography.font_ar_ui",
+        "default": "\"IBM Plex Sans Arabic\", Tajawal, \"Noto Sans Arabic\", sans-serif"
+      },
+      {
+        "type": "url",
+        "id": "font_ar_stylesheet_url",
+        "label": "t:settings_schema.typography.font_ar_stylesheet",
+        "info": "t:settings_schema.typography.font_ar_stylesheet_info"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.layout.name",
+    "settings": [
+      {
+        "type": "range",
+        "id": "container_width",
+        "min": 1000,
+        "max": 1600,
+        "step": 20,
+        "unit": "px",
+        "label": "t:settings_schema.layout.container_width",
+        "default": 1200
+      },
+      {
+        "type": "range",
+        "id": "gutter",
+        "min": 12,
+        "max": 48,
+        "step": 4,
+        "unit": "px",
+        "label": "t:settings_schema.layout.gutter",
+        "default": 24
+      },
+      {
+        "type": "range",
+        "id": "section_spacing",
+        "min": 32,
+        "max": 120,
+        "step": 8,
+        "unit": "px",
+        "label": "t:settings_schema.layout.section_spacing",
+        "default": 72
+      },
+      {
+        "type": "range",
+        "id": "radius_md",
+        "min": 0,
+        "max": 24,
+        "step": 1,
+        "unit": "px",
+        "label": "t:settings_schema.layout.radius_md",
+        "info": "t:settings_schema.layout.radius_md_info",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "radius_full",
+        "min": 0,
+        "max": 9999,
+        "step": 1,
+        "unit": "px",
+        "label": "t:settings_schema.layout.radius_full",
+        "info": "t:settings_schema.layout.radius_full_info",
+        "default": 0
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.bilingual.name",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.bilingual.info"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_language_toggle",
+        "label": "t:settings_schema.bilingual.enable_toggle",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "arabic_numerals",
+        "label": "t:settings_schema.bilingual.arabic_numerals",
+        "info": "t:settings_schema.bilingual.arabic_numerals_info",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.vintage.name",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.vintage.info"
+      },
+      {
+        "type": "range",
+        "id": "vintage_grain_opacity",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "%",
+        "label": "t:settings_schema.vintage.grain_opacity",
+        "default": 4
+      },
+      {
+        "type": "range",
+        "id": "vintage_vignette_opacity",
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "unit": "%",
+        "label": "t:settings_schema.vintage.vignette_opacity",
+        "default": 12
+      }
+    ]
+  }
+]

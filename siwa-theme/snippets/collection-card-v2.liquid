@@ -1,0 +1,43 @@
+{%- comment -%}
+  Collection card — square, gradient veil, type on the veil.
+  Client spec 2026-08-13.
+
+  Styles: ../component-library/css/components.css (.ccd)
+
+  The veil is lighter at the top and deepest at the foot, where the type
+  sits — so the photograph reads at the top of the frame and the words
+  stay legible at the bottom. Contrast is measured against the DEEPEST
+  point, not an average.
+
+  Accepts:
+    collection  {Collection}
+    image       {Image}   overrides collection.image
+    title       {String}  overrides collection.title
+    meta        {String}  small label above the title
+    cta_label   {String}
+    url         {String}  overrides collection.url
+    index       {Number}  stagger index
+{%- endcomment -%}
+{%- liquid
+  assign cc_image = image | default: collection.image | default: collection.featured_image
+  assign cc_title = title | default: collection.title
+  assign cc_url = url | default: collection.url
+-%}
+<a class="ccd {{ class }}" href="{{ cc_url }}" style="--i:{{ index | default: 0 }}">
+  {%- if cc_image -%}
+    {{ cc_image | image_url: width: 1200 | image_tag:
+       loading: 'lazy', widths: '400, 600, 900, 1200',
+       sizes: '(min-width: 990px) 45vw, 92vw',
+       alt: cc_image.alt | default: cc_title }}
+  {%- endif -%}
+  <span class="ccd__veil"></span>
+  <span class="ccd__body">
+    {%- if meta != blank -%}<span class="ccd__meta">{{ meta }}</span>{%- endif -%}
+    <span class="ccd__title">{{ cc_title }}</span>
+    {%- if cta_label != blank -%}
+      <span class="ccd__cta">{{ cta_label }}
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </span>
+    {%- endif -%}
+  </span>
+</a>

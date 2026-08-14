@@ -1,0 +1,211 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "تخطَّ إلى المحتوى",
+      "close": "إغلاق",
+      "remove": "إزالة",
+      "loading": "جارٍ التحميل",
+      "star_rating": "التقييم {{ rating }} من {{ rating_max }} نجوم",
+      "menu": "القائمة",
+      "primary_nav": "الرئيسية",
+      "breadcrumb": "مسار التنقل",
+      "pagination": "ترقيم الصفحات",
+      "opens_new_window": "(يفتح في نافذة جديدة)"
+    },
+    "meta": {
+      "tags": "الوسم \"{{ tags }}\"",
+      "page": "صفحة {{ page }}"
+    },
+    "language": {
+      "label": "اللغة",
+      "english": "English",
+      "arabic": "العربية"
+    },
+    "search": {
+      "label": "بحث",
+      "placeholder": "ابحث عن عطر"
+    },
+    "breadcrumb": {
+      "home": "الرئيسية"
+    },
+    "countdown": {
+      "days": "ي",
+      "hours": "س",
+      "minutes": "د",
+      "expired": "انتهى"
+    },
+    "newsletter": {
+      "label": "البريد الإلكتروني",
+      "submit": "اشترك",
+      "success": "شكرًا — تم تسجيلك."
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "أضف إلى الحقيبة",
+      "adding": "جارٍ الإضافة…",
+      "added": "تمت الإضافة",
+      "add_failed": "حاول مرة أخرى",
+      "sold_out": "نفدت الكمية",
+      "notify_me": "أعلمني",
+      "price_from": "من",
+      "size": "الحجم",
+      "inspired_by": "مستوحى من",
+      "vendor": "الماركة",
+      "quantity": "الكمية",
+      "regular_price": "السعر الأصلي",
+      "description": "الوصف",
+      "notes": "نوتات العطر",
+      "reviews": "التقييمات",
+      "share": "مشاركة",
+      "gallery": "صور المنتج",
+      "view_image": "عرض الصورة {{ index }}"
+    },
+    "badges": {
+      "sale": "تخفيض",
+      "sold_out": "نفدت الكمية",
+      "in_stock": "متوفر",
+      "new": "وصل حديثًا",
+      "best_seller": "الأكثر مبيعًا",
+      "authentic": "أصيل · سيوي"
+    },
+    "notes": {
+      "top": "النوتات العليا",
+      "heart": "نوتات القلب",
+      "base": "النوتات الأساسية",
+      "unavailable": "لم تُنشر نوتات هذا العطر بعد."
+    },
+    "reviews": {
+      "count": {
+        "zero": "لا توجد تقييمات",
+        "one": "تقييم واحد",
+        "two": "تقييمان",
+        "few": "{{ count }} تقييمات",
+        "many": "{{ count }} تقييمًا",
+        "other": "{{ count }} تقييم"
+      },
+      "verified": "شراء موثّق",
+      "read_more": "اقرأ التقييم كاملًا",
+      "helpful": "مفيد",
+      "reply_from": "رد من {{ shop }}",
+      "watch": "شاهد التقييم",
+      "read_article": "اقرأ المقال"
+    },
+    "layering": {
+      "base": "العطر الأساسي",
+      "partner": "اطبقه مع",
+      "step_one": "الخطوة ١ — اختر الأساس",
+      "step_two": "الخطوة ٢ — اختر ما تطبّقه معه",
+      "start_with": "ابدأ بـ",
+      "then_choose": "ثم اختر",
+      "add_duo": "أضف الثنائي",
+      "take_quiz": "اخضع لاختبار العطور لمعرفة التركيبة المناسبة لك.",
+      "incomplete": "اختر العطرين أولًا.",
+      "discount_note": "وفّر {{ percent }}٪ عند شراء هذا الثنائي."
+    },
+    "quiz": {
+      "progress": "تقدّم الاختبار",
+      "step": "السؤال {n} من {total}",
+      "next": "التالي",
+      "back": "رجوع",
+      "see_result": "اعرض النتيجة",
+      "pick_one": "اختر إجابة للمتابعة.",
+      "no_questions": "لم تُضف أسئلة إلى هذا الاختبار بعد.",
+      "no_js": "يحتاج اختبار العطور إلى جافاسكريبت. تصفّح المجموعة كاملة بدلًا من ذلك."
+    },
+    "contrast": {
+      "original": "الأصلي",
+      "fragrance": "العطر",
+      "price": "السعر",
+      "retail": "سعر الأصلي",
+      "learn_more": "اعرف المزيد",
+      "table_caption": "مقارنة بين {{ product }} والعطر المستوحى منه",
+      "story": "إن كنت تحب {{ house }} {{ fragrance }}، فستتعرف على {{ product }}."
+    },
+    "bundle": {
+      "save": "وفّر {{ amount }}"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "حقيبتك",
+      "empty": "حقيبتك فارغة",
+      "subtotal": "المجموع",
+      "checkout": "إتمام الشراء",
+      "continue_shopping": "متابعة التسوق"
+    },
+    "shipping": {
+      "away_from_free": "يفصلك عن الشحن المجاني",
+      "qualified": "لديك شحن مجاني",
+      "progress": "{{ percent }}٪ نحو الشحن المجاني"
+    }
+  },
+  "collections": {
+    "general": {
+      "shop_all": "تسوق الكل",
+      "explore": "اكتشف",
+      "shop_now": "تسوق الآن",
+      "view_all": "عرض الكل",
+      "product_count": {
+        "zero": "لا توجد عطور",
+        "one": "عطر واحد",
+        "two": "عطران",
+        "few": "{{ count }} عطور",
+        "many": "{{ count }} عطرًا",
+        "other": "{{ count }} عطر"
+      },
+      "previous": "السابق",
+      "next": "التالي",
+      "go_to_page": "اذهب إلى الصفحة",
+      "load_more": "تحميل المزيد",
+      "empty": "لا توجد عطور تطابق هذه التصفية."
+    },
+    "sorting": {
+      "label": "ترتيب حسب",
+      "featured": "المميزة",
+      "best_selling": "الأكثر مبيعًا",
+      "az": "أبجديًا، أ–ي",
+      "za": "أبجديًا، ي–أ",
+      "price_ascending": "السعر، من الأقل للأعلى",
+      "price_descending": "السعر، من الأعلى للأقل",
+      "date_ascending": "التاريخ، من الأقدم للأحدث",
+      "date_descending": "التاريخ، من الأحدث للأقدم"
+    },
+    "filters": {
+      "label": "تصفية",
+      "clear": "مسح",
+      "clear_all": "مسح الكل",
+      "remove_filter": "إزالة التصفية {{ name }}",
+      "apply": "تطبيق التصفية",
+      "min": "من",
+      "max": "إلى"
+    }
+  },
+  "onboarding": {
+    "product_title": "عطر تجريبي",
+    "collection_title": "مجموعة تجريبية"
+  },
+  "customer": {
+    "account": {
+      "title": "الحساب"
+    }
+  },
+  "sections": {
+    "contact": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "subject": "الموضوع",
+      "message": "الرسالة",
+      "submit": "إرسال",
+      "success": "شكرًا — سنتواصل معك."
+    },
+    "hero": {
+      "carousel": "عارض الشرائح",
+      "slide_of": "الشريحة {{ index }} من {{ total }}",
+      "choose_slide": "اختر شريحة",
+      "pause": "إيقاف العرض",
+      "scroll": "مرّر للاستكشاف"
+    }
+  }
+}

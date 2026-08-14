@@ -1,0 +1,19 @@
+{
+  "_comment": "⚠ BOTH SWITCHES DEFAULT FALSE, DELIBERATELY. `show_comparison` gates the module; `show_retail_price` separately gates the NUMBER. Making the dupe claim louder is a legal posture decision — get counsel before enabling the retail price (PROJECT-CONTEXT.md §7.4). The library's retail figures are unsourced placeholders. Client decision, 2026-08-13: build it, default off, no price number. The snippet also renders nothing on the 16 Originals, enforced via product-register.liquid.",
+  "settings": [
+    { "type": "checkbox", "id": "show_comparison", "label": "t:components.price_contrast.show", "default": false, "info": "t:components.price_contrast.show_info" },
+    { "type": "checkbox", "id": "show_retail_price", "label": "t:components.price_contrast.show_retail", "default": false, "info": "t:components.price_contrast.show_retail_info" },
+    {
+      "type": "select", "id": "comparison_style", "label": "t:components.price_contrast.style", "default": "inline",
+      "options": [
+        { "value": "inline",   "label": "t:components.price_contrast.style_inline" },
+        { "value": "callout",  "label": "t:components.price_contrast.style_callout" },
+        { "value": "table",    "label": "t:components.price_contrast.style_table" },
+        { "value": "story",    "label": "t:components.price_contrast.style_story" },
+        { "value": "footnote", "label": "t:components.price_contrast.style_footnote" }
+      ]
+    },
+    { "type": "text", "id": "disclaimer", "label": "t:components.price_contrast.disclaimer", "info": "t:components.price_contrast.disclaimer_info" },
+    { "type": "url", "id": "disclaimer_url", "label": "t:components.price_contrast.disclaimer_url" }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "_comment": "Setting fragment for the Product card pattern. `style` is downgraded to `minimal` by product-card.liquid on any inspired-by product, so exposing editorial/vintage here is safe. `link_vendor` defaults false pending the vendor/dupe posture decision (PROJECT-CONTEXT.md §7.4). `show_reviews` defaults true and should stay true — DIRECTION.md Part 1 §2.1.",
+  "settings": [
+    {
+      "type": "select", "id": "product_card_style", "label": "t:components.product_card.style", "default": "minimal",
+      "info": "t:components.product_card.style_info",
+      "options": [
+        { "value": "minimal",   "label": "t:components.product_card.style_minimal" },
+        { "value": "editorial", "label": "t:components.product_card.style_editorial" },
+        { "value": "compact",   "label": "t:components.product_card.style_compact" },
+        { "value": "hero",      "label": "t:components.product_card.style_hero" },
+        { "value": "vintage",   "label": "t:components.product_card.style_vintage" }
+      ]
+    },
+    { "type": "checkbox", "id": "show_vendor", "label": "t:components.product_card.show_vendor", "default": true, "info": "t:components.product_card.show_vendor_info" },
+    { "type": "checkbox", "id": "link_vendor", "label": "t:components.product_card.link_vendor", "default": false, "info": "t:components.product_card.link_vendor_info" },
+    { "type": "checkbox", "id": "show_reviews", "label": "t:components.product_card.show_reviews", "default": true, "info": "t:components.product_card.show_reviews_info" },
+    { "type": "checkbox", "id": "show_badge", "label": "t:components.product_card.show_badge", "default": false },
+    {
+      "type": "select", "id": "badge_type", "label": "t:components.product_card.badge_type", "default": "auto",
+      "options": [
+        { "value": "auto",        "label": "t:components.badge.type_auto" },
+        { "value": "sale",        "label": "t:components.badge.type_sale" },
+        { "value": "new",         "label": "t:components.badge.type_new" },
+        { "value": "best-seller", "label": "t:components.badge.type_best_seller" },
+        { "value": "authentic",   "label": "t:components.badge.type_authentic" }
+      ]
+    },
+    { "type": "checkbox", "id": "show_notes", "label": "t:components.product_card.show_notes", "default": false, "info": "t:components.product_card.show_notes_info" },
+    { "type": "text", "id": "cta_label", "label": "t:components.button.label" },
+    {
+      "type": "select", "id": "accent_color", "label": "t:components.accent.label", "default": "none",
+      "info": "t:components.accent.info",
+      "options": [
+        { "value": "none",          "label": "t:components.accent.none" },
+        { "value": "palm-green",    "label": "t:components.accent.palm_green" },
+        { "value": "date-red",      "label": "t:components.accent.date_red" },
+        { "value": "date-yellow",   "label": "t:components.accent.date_yellow" },
+        { "value": "desert-brown",  "label": "t:components.accent.desert_brown" }
+      ]
+    }
+  ]
+}

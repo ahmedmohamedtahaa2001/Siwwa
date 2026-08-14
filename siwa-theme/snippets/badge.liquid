@@ -1,0 +1,88 @@
+{%- comment -%}
+  Badge — 5 variants.
+
+  Styles: ../component-library/css/components.css (.badge and modifiers)
+
+  Variants (the `type` argument):
+    sale         -> .badge--sale        Cameleer fill, heading label
+    in-stock     -> .badge--stock       darkened Dusty Canyon, white label
+    authentic    -> .badge--authentic   Cultural Accent date red  ⚠ ORIGINALS ONLY
+    new          -> .badge--new         card fill, hairline border
+    best-seller  -> .badge--bestseller  gold border, heading label
+
+  ⚠ TWO-REGISTER FIREWALL
+  `authentic` is the only badge that draws on the Cultural Accent Set.
+  It must never render on an inspired-by product. This snippet enforces
+  that itself rather than trusting the caller: pass `product` and an
+  authentic badge on a non-Original silently downgrades to `new`.
+  Source: Planning/BENCHMARK.md Part 2 §5.
+
+  Accepts:
+    text     {String}   visible label. From a setting or a locale key.
+                        Falls back to the locale string for `type`.
+    type     {String}   sale | in-stock | authentic | new | best-seller
+    show_icon {Boolean} prepend the glyph matching `type`
+    product  {Product}  optional. Enables the firewall check.
+    class    {String}
+
+  Usage:
+    {% render 'badge', type: 'in-stock', show_icon: true %}
+    {% render 'badge', type: 'authentic', product: product %}
+{%- endcomment -%}
+{%- liquid
+  assign badge_type = type | default: 'new'
+
+  comment
+    Firewall. An Original is identified by vendor, matching the rule the
+    component library already applies. When the vendor field migrates to
+    an `inspired_by` metafield (PROJECT-CONTEXT.md §7.4 — still open),
+    this is the single place that changes.
+  endcomment
+  if badge_type == 'authentic' and product != blank
+    assign is_original = false
+    assign vendor_handle = product.vendor | handle
+    if vendor_handle == 'siwa-fragrances' or vendor_handle == 'siwa-original-creation'
+      assign is_original = true
+    endif
+    unless is_original
+      assign badge_type = 'new'
+    endunless
+  endif
+
+  case badge_type
+    when 'sale'
+      assign modifier = 'badge--sale'
+      assign fallback = 'products.badges.sale' | t
+      assign glyph = ''
+    when 'in-stock'
+      assign modifier = 'badge--stock'
+      assign fallback = 'products.badges.in_stock' | t
+      assign glyph = 'check'
+    when 'sold-out'
+      assign modifier = 'badge--soldout'
+      assign fallback = 'products.badges.sold_out' | t
+      assign glyph = ''
+    when 'authentic'
+      assign modifier = 'badge--authentic'
+      assign fallback = 'products.badges.authentic' | t
+      assign glyph = ''
+    when 'best-seller'
+      assign modifier = 'badge--bestseller'
+      assign fallback = 'products.badges.best_seller' | t
+      assign glyph = 'star'
+    else
+      assign modifier = 'badge--new'
+      assign fallback = 'products.badges.new' | t
+      assign glyph = ''
+  endcase
+
+  assign badge_text = text | default: fallback
+-%}
+{%- if badge_text != blank -%}
+  <span class="badge {{ modifier }} {{ class }}">
+    {%- if show_icon and glyph != blank -%}
+      {%- render 'icon', name: glyph, class: 'badge__icon' -%}
+    {%- endif -%}
+    {{ badge_text }}
+  </span>
+{%- endif -%}

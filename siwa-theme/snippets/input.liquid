@@ -1,0 +1,116 @@
+{%- comment -%}
+  Input — 5 variants. Text, email, tel, number, search and textarea.
+
+  Styles: ../component-library/css/components.css (.field, .input, .textarea)
+
+  Variants (the `input_style` argument):
+    minimal  -> .input              canvas fill, hairline border
+    filled   -> .input--filled      Sailcloth fill, bottom border on focus
+    soft     -> .input              identical to minimal while --r-md is 0;
+                                    diverges automatically if the client
+                                    reverts radius to 10px. One token, no fork.
+    dark     -> .input--dark        for forms on --surface-dark
+    icon     -> .field--icon        minimal + leading glyph, RTL-aware
+
+  Accepts:
+    label       {String}  REQUIRED. Always rendered and always tied to the
+                          input by id — never a placeholder standing in
+                          for a label.
+    id          {String}  REQUIRED. Unique; pairs label to control.
+    name        {String}  form field name
+    type        {String}  text | email | tel | number | search | textarea
+    placeholder {String}
+    value       {String}
+    required    {Boolean}
+    disabled    {Boolean}
+    autocomplete {String}
+    hint        {String}  help text, announced via aria-describedby
+    error       {String}  error text; sets aria-invalid
+    icon        {String}  glyph name, used when input_style == 'icon'
+    input_style {String}  minimal | filled | soft | dark | icon
+    rows        {Number}  textarea only
+    class       {String}
+
+  Accessibility: error state is never colour-only — it carries text plus
+  aria-invalid. Hint and error are both wired through aria-describedby.
+{%- endcomment -%}
+{%- liquid
+  assign field_id = id | default: 'field'
+  assign field_type = type | default: 'text'
+  assign field_style = input_style | default: 'minimal'
+
+  case field_style
+    when 'filled'
+      assign input_modifier = 'input--filled'
+      assign field_modifier = ''
+    when 'dark'
+      assign input_modifier = 'input--dark'
+      assign field_modifier = ''
+    when 'icon'
+      assign input_modifier = ''
+      assign field_modifier = 'field--icon'
+    else
+      assign input_modifier = ''
+      assign field_modifier = ''
+  endcase
+
+  assign described_by = ''
+  if hint != blank
+    assign described_by = field_id | append: '-hint'
+  endif
+  if error != blank
+    assign err_id = field_id | append: '-err'
+    if described_by == blank
+      assign described_by = err_id
+    else
+      assign described_by = described_by | append: ' ' | append: err_id
+    endif
+  endif
+-%}
+<div class="field {{ field_modifier }} {{ class }}">
+  <label for="{{ field_id }}">
+    {{ label }}
+    {%- if required %} <span aria-hidden="true">*</span>{% endif -%}
+  </label>
+
+  {%- if field_style == 'icon' and icon != blank -%}
+    <span class="field__icon" aria-hidden="true">
+      {%- render 'icon', name: icon -%}
+    </span>
+  {%- endif -%}
+
+  {%- if field_type == 'textarea' -%}
+    <textarea
+      class="textarea {{ input_modifier }}"
+      id="{{ field_id }}"
+      {% if name != blank %}name="{{ name }}"{% endif %}
+      rows="{{ rows | default: 4 }}"
+      {% if placeholder != blank %}placeholder="{{ placeholder | escape }}"{% endif %}
+      {% if required %}required{% endif %}
+      {% if disabled %}disabled{% endif %}
+      {% if error != blank %}aria-invalid="true"{% endif %}
+      {% if described_by != blank %}aria-describedby="{{ described_by }}"{% endif %}
+    >{{ value }}</textarea>
+  {%- else -%}
+    <input
+      class="input {{ input_modifier }}"
+      id="{{ field_id }}"
+      type="{{ field_type }}"
+      {% if name != blank %}name="{{ name }}"{% endif %}
+      {% if value != blank %}value="{{ value | escape }}"{% endif %}
+      {% if placeholder != blank %}placeholder="{{ placeholder | escape }}"{% endif %}
+      {% if autocomplete != blank %}autocomplete="{{ autocomplete }}"{% endif %}
+      {% if required %}required{% endif %}
+      {% if disabled %}disabled{% endif %}
+      {% if error != blank %}aria-invalid="true"{% endif %}
+      {% if described_by != blank %}aria-describedby="{{ described_by }}"{% endif %}
+    >
+  {%- endif -%}
+
+  {%- if hint != blank -%}
+    <span class="field__hint" id="{{ field_id }}-hint">{{ hint }}</span>
+  {%- endif -%}
+  {%- if error != blank -%}
+    <span class="field__err" id="{{ field_id }}-err">{{ error }}</span>
+  {%- endif -%}
+</div>

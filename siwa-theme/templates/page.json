@@ -1,0 +1,1 @@
+{ "sections": { "main": { "type": "rich-text", "blocks": { "h": { "type": "heading", "settings": {} }, "t": { "type": "text", "settings": {} } }, "block_order": ["h","t"], "settings": {} } }, "order": ["main"] }

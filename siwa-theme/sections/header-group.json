@@ -1,0 +1,67 @@
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar",
+      "blocks": {
+        "a1": {
+          "type": "announcement",
+          "settings": {
+            "message": "Free shipping over LE 1,500"
+          }
+        },
+        "a2": {
+          "type": "announcement",
+          "settings": {
+            "message": "1,212 reviews · 4.98★"
+          }
+        },
+        "a3": {
+          "type": "announcement",
+          "settings": {
+            "message": "Crafted in Egypt"
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "settings": {
+        "bar_style": "rotating",
+        "rotate_seconds": 5
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "header_style": "logo-left",
+        "enable_sticky": true,
+        "strip_text": "Explore your Persona · Free shipping over LE 1,500",
+        "wordmark": "SIWA",
+        "wordmark_ar": "سيوة",
+        "enable_search": true,
+        "enable_language_toggle": true
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header"
+  ],
+  "_comment": [
+    "Header group — client spec 2026-08-13.",
+    "Announcement: ROTATING, three messages (shipping · social proof · provenance).",
+    "The product template overrides this with the quiet shipping-meter variant.",
+    "",
+    "Nav follows Amouage's dual track (DIRECTION.md Part 1 §2.1): commerce",
+    "categories plus The Oasis as a separate story entry.",
+    "",
+    "The wordmark is deliberately bilingual — SIWA سيوة — because the bottles",
+    "are. This is the ONE sanctioned exception to the one-language-at-a-time",
+    "rule: a brand lockup is a mark, not content. Headings, body copy and",
+    "product text stay single-language and translate through Translate & Adapt."
+  ]
+}

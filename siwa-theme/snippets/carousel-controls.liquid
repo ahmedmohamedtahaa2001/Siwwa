@@ -1,0 +1,37 @@
+{%- comment -%}
+  Carousel controls — prev · dots · next, under the track.
+
+  Styles: ../component-library/css/components.css (.car__foot, .car__dots)
+  Behaviour: assets/siwa-modules.js (initCarousel)
+
+  The site's ONE control convention for horizontal rails. Every carousel
+  is paged the same way, so a customer learns it once. Rendered from
+  'carousel' and from the sections that still hold their own track
+  markup, so the bar exists in exactly one place.
+
+  Must sit inside an element carrying [data-siwa-carousel], after the
+  track. The driver finds it by [data-carousel-foot].
+
+  Both arrows draw the same glyph; prev is mirrored in CSS, and the
+  mirroring swaps again under RTL. The glyph is rendered WITHOUT
+  btn__icon--dir on purpose: .car__btn--prev already owns the mirroring,
+  and the --dir modifier would flip it a second time. They disable at the
+  ends rather than wrapping — a silent no-op reads as broken.
+
+  The dots are built by the driver, not here: one dot is one PAGE, and
+  how many slides make a page depends on the viewport, which Liquid
+  cannot know. The bar ships hidden and is revealed only when there is
+  more than one page.
+{%- endcomment -%}
+<div class="car__foot" data-carousel-foot hidden>
+  <button class="car__btn car__btn--prev" type="button" data-carousel-prev
+          aria-label="{{ 'collections.general.previous' | t }}">
+    {%- render 'icon', name: 'arrow-right', class: 'btn__icon' -%}
+  </button>
+  <div class="car__dots" role="tablist" data-carousel-dots
+       data-label="{{ 'collections.general.go_to_page' | t | escape }}"></div>
+  <button class="car__btn car__btn--next" type="button" data-carousel-next
+          aria-label="{{ 'collections.general.next' | t }}">
+    {%- render 'icon', name: 'arrow-right', class: 'btn__icon' -%}
+  </button>
+</div>
