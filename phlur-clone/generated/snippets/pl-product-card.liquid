@@ -1,0 +1,73 @@
+{%- comment -%}
+  Product card. Maps to siwa-design-system 'product-card'.
+  Measured: 299x420, 1:1 media on --pl-surface, 0px radius, no shadow.
+
+  Params:
+    product      (product, required)
+    show_price   (boolean, default true)
+    badge        (string) overrides the auto badge
+    lazy         (boolean, default true)
+{%- endcomment -%}
+
+{%- liquid
+  assign auto_badge = badge
+  if auto_badge == blank
+    if product.available == false
+      assign auto_badge = 'Sold out'
+    elsif product.compare_at_price > product.price
+      assign auto_badge = 'Sale'
+    elsif product.tags contains 'new'
+      assign auto_badge = 'New'
+    elsif product.tags contains 'bestseller'
+      assign auto_badge = 'Bestseller'
+    endif
+  endif
+  assign loading = 'lazy'
+  if lazy == false
+    assign loading = 'eager'
+  endif
+-%}
+
+<a class="pl-card" href="{{ product.url }}">
+  <div class="pl-card__media">
+    {%- if auto_badge != blank -%}
+      <span class="pl-badge-slot">
+        {%- render 'pl-badge', label: auto_badge -%}
+      </span>
+    {%- endif -%}
+
+    {%- if product.featured_media -%}
+      {{ product.featured_media
+         | image_url: width: 800
+         | image_tag:
+             class: 'pl-card__image',
+             loading: loading,
+             widths: '300,450,600,800',
+             sizes: '(max-width: 749px) 62vw, 300px',
+             alt: product.featured_media.alt | default: product.title | escape }}
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'pl-card__image' }}
+    {%- endif -%}
+  </div>
+
+  <div class="pl-card__body">
+    <h3 class="pl-card__title">{{ product.title }}</h3>
+
+    {%- if product.metafields.custom.subtitle -%}
+      <p class="pl-card__subtitle">{{ product.metafields.custom.subtitle }}</p>
+    {%- elsif product.type != blank -%}
+      <p class="pl-card__subtitle">{{ product.type }}</p>
+    {%- endif -%}
+
+    {%- if show_price != false -%}
+      <p class="pl-card__price">
+        {%- if product.compare_at_price > product.price -%}
+          <del>{{ product.compare_at_price | money }}</del>
+          <span class="pl-card__price--sale">{{ product.price | money }}</span>
+        {%- else -%}
+          {{ product.price | money }}
+        {%- endif -%}
+      </p>
+    {%- endif -%}
+  </div>
+</a>

@@ -1,0 +1,74 @@
+{
+  "overrides": [
+    {
+      "component": "global",
+      "property": "background",
+      "phlur": "#fafafa (achromatic, s=0)",
+      "siwa": "#f7f5ee (warm, s≈30)",
+      "siwaRule": "Foundation: warm family only",
+      "resolution": "EMIT PHLUR — user chose Phlur fidelity. Warm equivalent kept in a swap layer."
+    },
+    {
+      "component": "global",
+      "property": "surface",
+      "phlur": "#f5f5f5 (achromatic)",
+      "siwa": "#eae0c4",
+      "siwaRule": "Foundation: warm family only",
+      "resolution": "EMIT PHLUR"
+    },
+    {
+      "component": "global",
+      "property": "text",
+      "phlur": "#000000",
+      "siwa": "#1b2724",
+      "siwaRule": "Foundation: --colors-text is #1b2724",
+      "resolution": "EMIT PHLUR"
+    },
+    {
+      "component": "global",
+      "property": "spacing base unit",
+      "phlur": "5px / 10px grid",
+      "siwa": "4px grid",
+      "siwaRule": "Foundation: 4px base, no arbitrary values",
+      "resolution": "EMIT PHLUR — 5px scale added as --phlur-space-* alongside Siwa --spacing-*"
+    },
+    {
+      "component": "global",
+      "property": "font-family (display)",
+      "phlur": "aktiv-grotesk-extended (licensed)",
+      "siwa": "'Fraunces', Georgia, 'Times New Roman', serif",
+      "siwaRule": "Principle 4: the serif speaks",
+      "resolution": "SUBSTITUTE — cannot redistribute a licensed webfont. Inter w600 + 0.64px tracking uppercase is the closest metric match already licensed to you."
+    },
+    {
+      "component": "global",
+      "property": "font-family (body)",
+      "phlur": "ABCRepro-Regular (licensed)",
+      "siwa": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "siwaRule": "Foundation: Latin UI = Inter",
+      "resolution": "SUBSTITUTE — Inter. Same reason."
+    },
+    {
+      "component": "global",
+      "property": "direction",
+      "phlur": "LTR only, physical properties",
+      "siwa": "logical properties throughout",
+      "siwaRule": "Rule 2: physical direction properties are a build error",
+      "resolution": "SIWA WINS — I emit logical properties regardless. This is free: it costs nothing visually in LTR and is the only way the sections work in Arabic."
+    }
+  ],
+  "compat": [
+    {
+      "property": "border-radius",
+      "phlur": "0px",
+      "siwa": "var(--rounded-none)",
+      "status": "COMPATIBLE"
+    },
+    {
+      "property": "box-shadow",
+      "phlur": "none (except drawer scrim)",
+      "siwa": "none except modal",
+      "status": "COMPATIBLE"
+    }
+  ]
+}

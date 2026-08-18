@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "main": {
+      "type": "pl-main-product",
+      "settings": {
+        "gallery_limit": 4
+      },
+      "blocks": {
+        "d": {
+          "type": "panel",
+          "settings": {
+            "title": "Details",
+            "use_description": true
+          }
+        },
+        "n": {
+          "type": "panel",
+          "settings": {
+            "title": "Notes"
+          }
+        }
+      },
+      "block_order": [
+        "d",
+        "n"
+      ]
+    },
+    "related": {
+      "type": "pl-product-carousel",
+      "settings": {
+        "title": "You may also like",
+        "product_limit": 8,
+        "show_view_all": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related"
+  ]
+}

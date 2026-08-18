@@ -1,0 +1,35 @@
+{%- comment -%}
+  Button. Maps to siwa-design-system 'button-primary / secondary / ghost'.
+  Geometry measured off phlur.com: 40px tall, 30px inline padding, 12px
+  uppercase mono at 0.8px tracking, 0px radius.
+
+  Params:
+    label    (string, required)
+    href     (string)  renders <a> when present, <button> otherwise
+    variant  (string)  primary | inverse | ghost   default: primary
+    type     (string)  submit | button             default: button
+    full     (boolean) stretch to container
+    disabled (boolean)
+{%- endcomment -%}
+
+{%- liquid
+  assign v = variant | default: 'primary'
+  assign classes = 'pl-button pl-button--' | append: v
+  if full
+    assign classes = classes | append: ' pl-button--full'
+  endif
+-%}
+
+{%- if href -%}
+  <a class="{{ classes }}"
+     href="{{ href }}"
+     {% if disabled %}aria-disabled="true" tabindex="-1"{% endif %}>
+    {{ label }}
+  </a>
+{%- else -%}
+  <button class="{{ classes }}"
+          type="{{ type | default: 'button' }}"
+          {% if disabled %}disabled{% endif %}>
+    {{ label }}
+  </button>
+{%- endif -%}

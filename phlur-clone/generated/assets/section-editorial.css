@@ -1,0 +1,37 @@
+/* Editorial / quote strip — measured 200px tall, centered, on --pl-bg. */
+
+.pl-editorial {
+  padding-block: var(--pl-space-12);
+  background-color: var(--pl-bg);
+  text-align: center;
+}
+.pl-editorial__inner {
+  max-inline-size: 800px;      /* measured max-width 800px */
+  margin-inline: auto;
+  padding-inline: var(--pl-space-4);
+}
+.pl-editorial__quote {
+  font-family: var(--pl-font-display);
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--pl-ink);
+  margin: 0 0 var(--pl-space-3);
+}
+.pl-editorial__attribution {
+  font-family: var(--pl-font-mono);
+  font-size: var(--pl-fs-micro);
+  letter-spacing: var(--pl-ls-micro);
+  text-transform: uppercase;
+  color: var(--pl-ink-muted);
+  margin: 0;
+}
+.pl-editorial--dark {
+  background-color: var(--pl-ink);
+}
+.pl-editorial--dark .pl-editorial__quote { color: var(--pl-ink-inverse); }
+
+@media (max-width: 749px) {
+  .pl-editorial__quote { font-size: 20px; }
+  .pl-editorial { padding-block: var(--pl-space-8); }
+}

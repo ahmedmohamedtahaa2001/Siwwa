@@ -1,0 +1,405 @@
+{%- comment -%}
+  Section: siwa-announcement-bar | Owner: A-02 | Task: ST-02
+
+  The persistent band above the header. Three things the store always wants
+  said — the free-shipping threshold, the tester offer, cash on delivery —
+  rotating in one line rather than competing for the same fold.
+
+  NOTHING HERE IS TYPED COPY.
+  · The free-shipping figure is settings.free_shipping_threshold rendered
+    through `money` and interpolated into `trust.free_shipping`. It is never
+    written into a message by hand — one number, four surfaces (DESIGN.md
+    §7.1 and the Commerce settings group).
+  · The tester price is a block setting rendered through `money` into
+    `tester.announcement`.
+  · Cash on delivery is `trust.cod`.
+  · A merchant's own message is a schema setting.
+
+  BEHAVIOUR — no JavaScript in this file, by design.
+  assets/siwa-theme.js is the behaviour layer and it implements no carousel,
+  so the rotation is native CSS: staggered keyframes for the advance,
+  :hover/:focus-within for the pause, and per-slide :target anchors for the
+  previous/next controls, which also freeze the rotation. Reduced motion
+  drops the animation entirely — §6.6 forbids auto-advancing anything for a
+  visitor who asked for less motion — and the controls remain the way to
+  reach the other messages. All of it works with JavaScript off.
+
+  The keyframes and the per-slide delay live in the scoped {% style %} block
+  below because their values depend on how many blocks exist; the rules that
+  consume them are in assets/siwa-announcement-bar.css.
+{%- endcomment -%}
+
+{{ 'siwa-announcement-bar.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign s = section.settings
+  assign count = section.blocks.size
+
+  assign rotate = false
+  if s.rotate and count > 1
+    assign rotate = true
+  endif
+  assign cycle = s.rotation_interval | times: count
+
+  comment
+    One slide's share of the cycle, and the point inside that share where it
+    starts fading out. Percentages have to be literal inside @keyframes, so
+    they are computed here rather than expressed as a custom property. Guarded
+    on `rotate` because `divided_by: 0` is a Liquid error, and a merchant who
+    deletes the last block must get an empty bar, not a broken page.
+  endcomment
+  assign share = 0
+  assign hold = 0
+  if rotate
+    assign share = 100.0 | divided_by: count
+    assign fade = share | times: 0.18
+    assign hold = share | minus: fade | round: 3
+    assign share = share | round: 3
+  endif
+
+  comment
+    Inline-axis arrows are mirrored by the asset, not by a CSS transform
+    (DESIGN.md §5). The two path strings are swapped for RTL so "previous"
+    always points at the inline start of the reader's own direction.
+  endcomment
+  assign locale = request.locale.iso_code
+  assign arrow_prev = 'M15 5 8 12 15 19'
+  assign arrow_next = 'M9 5 16 12 9 19'
+  if locale == 'ar' or locale == 'he' or locale == 'fa' or locale == 'ur'
+    assign arrow_prev = 'M9 5 16 12 9 19'
+    assign arrow_next = 'M15 5 8 12 15 19'
+  endif
+
+  assign tone_class = 'siwa-announcement--' | append: s.tone
+  if s.tone == 'dark'
+    assign tone_class = tone_class | append: ' on-dark'
+  endif
+-%}
+
+{%- if count > 0 -%}
+  {% style %}
+    #shopify-section-{{ section.id }} .siwa-announcement__inner {
+      padding-block-start: {{ s.padding_top }}px;
+      padding-block-end: {{ s.padding_bottom }}px;
+    }
+
+    @media (max-width: 768px) {
+      #shopify-section-{{ section.id }} .siwa-announcement__inner {
+        padding-block-start: {{ s.mobile_padding_top }}px;
+        padding-block-end: {{ s.mobile_padding_bottom }}px;
+      }
+    }
+
+    {%- if rotate -%}
+      #shopify-section-{{ section.id }} .siwa-announcement {
+        --siwa-rotate-name: siwa-announcement-{{ section.id }};
+        --siwa-rotate-interval: {{ s.rotation_interval }}s;
+        --siwa-rotate-cycle: {{ cycle }}s;
+      }
+
+      {%- for block in section.blocks -%}
+        #shopify-section-{{ section.id }} .siwa-announcement__slide:nth-child({{ forloop.index }}) {
+          --siwa-slide-index: {{ forloop.index0 }};
+        }
+      {%- endfor -%}
+
+      @keyframes siwa-announcement-{{ section.id }} {
+        0%, {{ hold }}% { opacity: 1; visibility: visible; }
+        {{ share }}%, 100% { opacity: 0; visibility: hidden; }
+      }
+    {%- endif -%}
+  {% endstyle %}
+
+  <aside
+    class="siwa-announcement {{ tone_class }} siwa-announcement--align-{{ s.align }}"
+    aria-label="{{ 'accessibility.announcement' | t }}"
+  >
+    <div class="siwa-container siwa-announcement__inner">
+      <div class="siwa-announcement__viewport">
+        <ul class="siwa-announcement__track" role="list">
+          {%- for block in section.blocks -%}
+            {%- liquid
+              case block.type
+                when 'free_shipping'
+                  assign amount = settings.free_shipping_threshold | times: 100 | money
+                  assign message = 'trust.free_shipping' | t: amount: amount
+                when 'tester'
+                  assign price = block.settings.price | times: 100 | money
+                  assign message = 'tester.announcement' | t: price: price
+                when 'cod'
+                  assign message = 'trust.cod' | t
+                else
+                  assign message = block.settings.text
+              endcase
+
+              assign prev_index = forloop.index0
+              if prev_index == 0
+                assign prev_index = count
+              endif
+              assign next_index = forloop.index | plus: 1
+              if next_index > count
+                assign next_index = 1
+              endif
+            -%}
+
+            <li
+              class="siwa-announcement__slide"
+              id="{{ section.id }}-msg-{{ forloop.index }}"
+              {{ block.shopify_attributes }}
+            >
+              {%- if count > 1 -%}
+                <a
+                  class="siwa-button siwa-button--icon siwa-announcement__control"
+                  href="#{{ section.id }}-msg-{{ prev_index }}"
+                  aria-label="{{ 'sections.announcement.previous' | t }}"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+                    <path d="{{ arrow_prev }}" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+              {%- endif -%}
+
+              <p class="siwa-announcement__message">
+                <span class="siwa-announcement__mark" aria-hidden="true"></span>
+                {%- if block.settings.link != blank -%}
+                  <a class="siwa-announcement__link" href="{{ block.settings.link }}">{{ message }}</a>
+                {%- else -%}
+                  <span class="siwa-announcement__text">{{ message }}</span>
+                {%- endif -%}
+              </p>
+
+              {%- if count > 1 -%}
+                <a
+                  class="siwa-button siwa-button--icon siwa-announcement__control"
+                  href="#{{ section.id }}-msg-{{ next_index }}"
+                  aria-label="{{ 'sections.announcement.next' | t }}"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+                    <path d="{{ arrow_next }}" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+
+      {%- if s.dismissible -%}
+        <a
+          class="siwa-button siwa-button--icon siwa-announcement__dismiss"
+          href="#{{ section.id }}-dismissed"
+          aria-label="{{ 'sections.announcement.dismiss' | t }}"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+            <path d="M6 6 18 18M18 6 6 18" stroke-linecap="round"></path>
+          </svg>
+        </a>
+      {%- endif -%}
+    </div>
+  </aside>
+
+  {%- comment -%}
+    The dismissal sentinel. Zero height, immediately after the bar, so
+    `.siwa-announcement:has(+ .siwa-announcement__sentinel:target)` can
+    collapse the band without a line of JavaScript.
+  {%- endcomment -%}
+  {%- if s.dismissible -%}
+    <span class="siwa-announcement__sentinel" id="{{ section.id }}-dismissed"></span>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "tag": "div",
+  "class": "siwa-announcement-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Each message is a block. With more than one, they rotate on their own and carry previous \/ next controls. Rotation pauses on hover and on keyboard focus, and never auto-advances for a visitor whose system asks for reduced motion."
+    },
+    {
+      "type": "select",
+      "id": "tone",
+      "label": "Ground",
+      "info": "Dark inverts the band through the design system's .on-dark tokens rather than through its own colours.",
+      "options": [
+        { "value": "parchment", "label": "Parchment — the page ground" },
+        { "value": "sand", "label": "Sand — one step up from the page" },
+        { "value": "dark", "label": "Ink — inverted band" }
+      ],
+      "default": "sand"
+    },
+    {
+      "type": "select",
+      "id": "align",
+      "label": "Message alignment",
+      "options": [
+        { "value": "center", "label": "Centred" },
+        { "value": "start", "label": "Start of the line" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "checkbox",
+      "id": "rotate",
+      "label": "Rotate through the messages",
+      "info": "Ignored when there is only one message, and always ignored for visitors who prefer reduced motion.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "rotation_interval",
+      "label": "Seconds per message",
+      "min": 3,
+      "max": 15,
+      "step": 1,
+      "unit": "s",
+      "default": 6
+    },
+    {
+      "type": "checkbox",
+      "id": "dismissible",
+      "label": "Let visitors dismiss the bar",
+      "info": "The bar returns on the next page view.",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Layout & spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Padding top (mobile)",
+      "min": 0,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Padding bottom (mobile)",
+      "min": 0,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    }
+  ],
+  "blocks": [
+    {
+      "type": "free_shipping",
+      "name": "Free shipping threshold",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "The figure comes from Theme settings → Commerce → Free shipping threshold, so the bar, the cart progress bar, the trust strip and the footer can never disagree. There is nothing to type here."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "tester",
+      "name": "Tester offer",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Principle 7 — the tester is a first-class option, not a consolation. The price is formatted in your store currency."
+        },
+        {
+          "type": "range",
+          "id": "price",
+          "label": "Tester price",
+          "min": 0,
+          "max": 500,
+          "step": 5,
+          "unit": "EGP",
+          "default": 85
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "cod",
+      "name": "Cash on delivery",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Trust gap 2. The wording is the store's own, translated for every locale you sell in."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "name": "Custom message",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Message",
+          "info": "Concise, confident, specific — DESIGN.md §7.1. Anything a customer will read twice a day is worth one more edit."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "default": {
+    "blocks": [
+      { "type": "free_shipping" },
+      { "type": "tester" },
+      { "type": "cod" }
+    ]
+  },
+  "presets": [
+    {
+      "name": "Announcement bar",
+      "blocks": [
+        { "type": "free_shipping" },
+        { "type": "tester" },
+        { "type": "cod" }
+      ]
+    }
+  ]
+}
+{% endschema %}

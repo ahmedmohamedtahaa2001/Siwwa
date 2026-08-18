@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIWA specimen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@300..700&family=Inter+Tight:wght@300..700&family=Archivo+Black&family=Cormorant+Garamond:wght@300..700&family=Nunito:wght@300..800&family=JetBrains+Mono:wght@400..600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300..700&family=Cairo:wght@300..900&family=Amiri:wght@400;700&family=Noto+Kufi+Arabic:wght@300..700&family=Baloo+Bhaijaan+2:wght@400..800&family=Almarai:wght@300;400;700;800&display=swap">
+<link rel="stylesheet" href="../assets/siwa-tokens.css">
+<link rel="stylesheet" href="../assets/siwa-base.css">
+<link rel="stylesheet" href="../assets/siwa-components.css">
+<link rel="stylesheet" href="../assets/siwa-themes.css">
+<link rel="stylesheet" href="../assets/siwa-announcement-bar.css">
+<link rel="stylesheet" href="../assets/siwa-header.css">
+<link rel="stylesheet" href="../assets/siwa-footer.css">
+<style>
+  /* Preview-only scaffolding. Nothing here is part of the theme. */
+  .pv-section { padding-block: var(--spacing-12); }
+  .pv-group + .pv-group { margin-block-start: var(--spacing-8); padding-block-start: var(--spacing-8); border-block-start: var(--rule-weight) solid var(--colors-border); }
+  .pv-group-label { margin-block-end: var(--spacing-3); }
+  .pv-group-label::before { content:''; display: var(--ornament-display); inline-size: 24px; block-size: var(--rule-weight); background: var(--colors-primary-strong); margin-block-end: var(--spacing-2); }
+  .pv-group > * + * { margin-block-start: var(--spacing-3); }
+  .pv-grid { --grid-cols: 2; }
+  .pv-ph { inline-size:100%; aspect-ratio:1/1; background: var(--colors-surface-hover); display:grid; place-items:center; color: var(--colors-text-secondary); font-family: var(--font-mono); font-size: var(--text-label); }
+  .pv-note { font-size: var(--text-label); color: var(--colors-text-secondary); }
+</style>
+</head>
+<body class="siwa-body" data-theme="archive">
+
+<a class="siwa-skip-link" href="#main">Skip to content</a>
+
+<!-- ── G-03 announcement bar (static rendering of the section markup) ── -->
+<aside class="siwa-announcement" aria-label="Announcement">
+  <div class="siwa-container siwa-announcement__inner">
+    <p class="siwa-announcement__text" data-en="Free shipping on orders over 500 EGP" data-ar="شحن مجاني للأوردرات فوق 500 EGP">Free shipping on orders over 500 EGP</p>
+  </div>
+</aside>
+
+<!-- ── G-01 site nav ── -->
+<header class="siwa-nav">
+  <div class="siwa-container siwa-nav__inner">
+    <button class="siwa-button siwa-button--icon siwa-nav__toggle" aria-label="Open menu" data-siwa-drawer="pv-menu" aria-expanded="false" aria-controls="pv-menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+    </button>
+    <a class="siwa-nav__logo" href="#">SIWA</a>
+    <nav aria-label="Primary">
+      <ul class="siwa-nav__list" id="pv-menu" role="list" data-siwa-panel>
+        <li><a class="siwa-nav__link" href="#" data-en="Siwa Originals" data-ar="عطور سيوة الأصلية">Siwa Originals</a></li>
+        <li><a class="siwa-nav__link" href="#" data-en="Siwa Impressions" data-ar="Impressions سيوة">Siwa Impressions</a></li>
+        <li><a class="siwa-nav__link" href="#" data-en="Try First" data-ar="جرّب الأول">Try First</a></li>
+        <li><a class="siwa-nav__link" href="#" data-en="The Oracle" data-ar="الحكيم">The Oracle</a></li>
+      </ul>
+    </nav>
+    <div class="siwa-nav__actions">
+      <button class="siwa-button siwa-button--icon" aria-label="Search">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M13.5 13.5 18 18" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+      <button class="siwa-button siwa-button--icon" aria-label="Bag, 2 items">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 6h12l-1 11H5L4 6Z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M7 6a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        <span class="siwa-nav__count" aria-hidden="true">2</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<div class="siwa-container pv-section">
+
+  <div class="pv-group">
+    <p class="siwa-label pv-group-label" data-en="Type" data-ar="الخطوط">Type</p>
+    <h1 class="siwa-h1" data-en="Smoke over cold stone" data-ar="دخان فوق حجر بارد">Smoke over cold stone</h1>
+    <p class="siwa-body" data-en="Lasts six to eight hours on skin, longer on fabric. The saffron opens sharp and settles into a dry richness." data-ar="بيفضل من ست لتمن ساعات على الجلد، وأكتر على القماش. الزعفران بيفتح حاد وبعدين بيستقر على دفء جاف.">Lasts six to eight hours on skin, longer on fabric. The saffron opens sharp and settles into a dry richness.</p>
+    <p class="siwa-body-sm siwa-muted"><span class="siwa-numeric">LOT-2025-0412</span> · <span data-en="verified before shipping" data-ar="اتراجعت قبل الشحن">verified before shipping</span></p>
+  </div>
+
+  <div class="pv-group">
+    <p class="siwa-label pv-group-label" data-en="Buttons" data-ar="الأزرار">Buttons</p>
+    <div class="siwa-cluster">
+      <button class="siwa-button siwa-button--primary" data-en="Add to bag" data-ar="ضيفه للشنطة">Add to bag</button>
+      <button class="siwa-button siwa-button--tester" data-en="Try it first — 85 EGP" data-ar="جرّبه الأول — 85 EGP">Try it first — 85 EGP</button>
+      <button class="siwa-button siwa-button--secondary" data-en="Size guide" data-ar="دليل المقاسات">Size guide</button>
+      <button class="siwa-button siwa-button--quiet" data-en="Not now" data-ar="مش دلوقتي">Not now</button>
+      <button class="siwa-button siwa-button--primary" aria-busy="true" data-en="Adding" data-ar="بيتضاف">Adding</button>
+      <button class="siwa-button siwa-button--primary" disabled data-en="Sold out" data-ar="خلص">Sold out</button>
+    </div>
+    <p class="pv-note" data-en="Tab to any control to see the focus ring in this direction." data-ar="اضغط Tab على أي زر عشان تشوف حلقة التركيز.">Tab to any control to see the focus ring in this direction.</p>
+  </div>
+
+  <div class="pv-group">
+    <p class="siwa-label pv-group-label" data-en="Catalog stamps" data-ar="أختام الكتالوج">Catalog stamps</p>
+    <div class="siwa-cluster">
+      <span class="siwa-badge siwa-badge--original" data-en="ORIGINAL" data-ar="أصلي">ORIGINAL</span>
+      <span class="siwa-badge siwa-badge--impression" data-en="IMPRESSION" data-ar="Impression">IMPRESSION</span>
+      <span class="siwa-badge siwa-badge--verified" data-en="VERIFIED" data-ar="موثّق">VERIFIED</span>
+      <span class="siwa-badge siwa-badge--new" data-en="NEW" data-ar="جديد">NEW</span>
+      <span class="siwa-badge siwa-badge--sale" data-en="SALE" data-ar="خصم">SALE</span>
+      <span class="siwa-badge siwa-badge--soldout" data-en="SOLD OUT" data-ar="خلص">SOLD OUT</span>
+    </div>
+  </div>
+
+  <div class="pv-group">
+    <p class="siwa-label pv-group-label" data-en="Product cards" data-ar="كروت المنتجات">Product cards</p>
+    <ul class="siwa-grid pv-grid" role="list">
+      <li class="siwa-card">
+        <div class="siwa-card__media">
+          <span class="siwa-badge siwa-badge--original siwa-badge--overlay" data-en="ORIGINAL" data-ar="أصلي">ORIGINAL</span>
+          <div class="pv-ph">bottle</div>
+        </div>
+        <div class="siwa-card__body">
+          <span class="siwa-card__eyebrow" data-en="Amber &amp; Resin" data-ar="عنبر وراتنج">Amber &amp; Resin</span>
+          <h3 class="siwa-card__title"><a class="siwa-card__link" href="#" data-en="Oud Nights" data-ar="ليالي العود">Oud Nights</a></h3>
+          <span class="siwa-card__price">980 EGP<span class="siwa-card__price-was">1,220 EGP</span></span>
+        </div>
+      </li>
+      <li class="siwa-card">
+        <div class="siwa-card__media">
+          <span class="siwa-badge siwa-badge--impression siwa-badge--overlay" data-en="IMPRESSION" data-ar="Impression">IMPRESSION</span>
+          <div class="pv-ph">bottle</div>
+        </div>
+        <div class="siwa-card__body">
+          <span class="siwa-card__eyebrow" data-en="Mineral &amp; Musk" data-ar="معدني ومسك">Mineral &amp; Musk</span>
+          <h3 class="siwa-card__title"><a class="siwa-card__link" href="#" data-en="Salt Flats No. 4" data-ar="سبخة الملح رقم ٤">Salt Flats No. 4</a></h3>
+          <span class="siwa-card__price">410 EGP</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="pv-group">
+    <p class="siwa-label pv-group-label" data-en="Size selector — the tester is a first-class CTA" data-ar="اختيار الحجم — التستر خيار أساسي">Size selector — the tester is a first-class CTA</p>
+    <fieldset style="border:0;padding:0;margin:0">
+      <legend class="siwa-label" data-en="Size" data-ar="الحجم">Size</legend>
+      <div class="siwa-sizes">
+        <label class="siwa-size siwa-size--tester">
+          <input class="siwa-size__input" type="radio" name="pv-size" checked>
+          <span class="siwa-size__body"><span class="siwa-size__name" data-en="Tester 2ml" data-ar="تستر ٢ مل">Tester 2ml</span><span class="siwa-size__price">85 EGP</span></span>
+        </label>
+        <label class="siwa-size">
+          <input class="siwa-size__input" type="radio" name="pv-size">
+          <span class="siwa-size__body"><span class="siwa-size__name">50ml</span><span class="siwa-size__price">980 EGP</span></span>
+        </label>
+        <label class="siwa-size">
+          <input class="siwa-size__input" type="radio" name="pv-size">
+          <span class="siwa-size__body"><span class="siwa-size__name">100ml</span><span class="siwa-size__price">1,640 EGP</span></span>
+        </label>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="pv-group">
+    <p class="siwa-label pv-group-label" data-en="Note pyramid" data-ar="هرم النوتات">Note pyramid</p>
+    <dl class="siwa-pyramid">
+      <div class="siwa-pyramid__tier"><dt class="siwa-pyramid__label" data-en="Top" data-ar="عليا">Top</dt><dd class="siwa-pyramid__notes"><span class="siwa-chip" data-en="Bergamot" data-ar="برغموت">Bergamot</span><span class="siwa-chip" data-en="Pink pepper" data-ar="فلفل وردي">Pink pepper</span></dd></div>
+      <div class="siwa-pyramid__tier"><dt class="siwa-pyramid__label" data-en="Heart" data-ar="قلب">Heart</dt><dd class="siwa-pyramid__notes"><span class="siwa-chip" data-en="Saffron" data-ar="زعفران">Saffron</span><span class="siwa-chip" data-en="Rose" data-ar="ورد">Rose</span></dd></div>
+      <div class="siwa-pyramid__tier"><dt class="siwa-pyramid__label" data-en="Base" data-ar="قاعدة">Base</dt><dd class="siwa-pyramid__notes"><span class="siwa-chip" data-en="Oud" data-ar="عود">Oud</span><span class="siwa-chip" data-en="Amber" data-ar="عنبر">Amber</span></dd></div>
+    </dl>
+  </div>
+
+  <div class="pv-group">
+    <p class="siwa-label pv-group-label" data-en="Performance — the number is mandatory" data-ar="الأداء — الرقم إجباري">Performance — the number is mandatory</p>
+    <div class="siwa-meter" style="--meter-value:72%">
+      <div class="siwa-meter__head"><span data-en="Longevity" data-ar="الثبات">Longevity</span><span class="siwa-meter__value">6–8 h</span></div>
+      <div class="siwa-meter__track" role="meter" aria-valuenow="7" aria-valuemin="0" aria-valuemax="12" aria-valuetext="6 to 8 hours" aria-label="Longevity"><div class="siwa-meter__fill"></div></div>
+    </div>
+  </div>
+
+  <div class="pv-group">
+    <p class="siwa-label pv-group-label" data-en="Form controls" data-ar="حقول الإدخال">Form controls</p>
+    <div class="siwa-field">
+      <label class="siwa-field__label" for="pv-email" data-en="Email" data-ar="الإيميل">Email</label>
+      <input class="siwa-input" id="pv-email" type="email" value="you@example" aria-invalid="true" aria-describedby="pv-err">
+      <span class="siwa-field__error" id="pv-err"><span class="siwa-alert__icon" aria-hidden="true">!</span> <span data-en="Email format is incorrect. Example: you@example.com" data-ar="شكل الإيميل غير صحيح. مثال: ">Email format is incorrect. Example: you@example.com</span><span lang="en" class="pv-ar-only" hidden>you@example.com</span></span>
+    </div>
+  </div>
+
+  <div class="pv-group">
+    <p class="siwa-label pv-group-label" data-en="Trust strip" data-ar="شريط الثقة">Trust strip</p>
+    <div class="siwa-trust">
+      <div class="siwa-trust__item"><span class="siwa-trust__icon" aria-hidden="true">✓</span><span data-en="Sourced from authorized distributors." data-ar="من موزعين معتمدين.">Sourced from authorized distributors.</span></div>
+      <div class="siwa-trust__item"><span class="siwa-trust__icon" aria-hidden="true">✓</span><span data-en="Cash on delivery" data-ar="الدفع عند الاستلام">Cash on delivery</span></div>
+      <div class="siwa-trust__item"><span class="siwa-trust__icon" aria-hidden="true">✓</span><span data-en="30-day return or exchange" data-ar="استبدال أو إرجاع خلال ٣٠ يوم">30-day return or exchange</span></div>
+    </div>
+  </div>
+
+  <div class="pv-group on-dark" style="padding: var(--spacing-8)">
+    <p class="siwa-label pv-group-label" data-en="Inverted band" data-ar="الشريط المقلوب">Inverted band</p>
+    <h3 class="siwa-h3" data-en="The Second Crossing" data-ar="العبور التاني">The Second Crossing</h3>
+    <p class="siwa-body-sm" data-en="This bottle carries a mark for what comes next." data-ar="الزجاجة دي شايلة علامة للي جاي.">This bottle carries a mark for what comes next.</p>
+    <p><span class="siwa-numeric">SIWA-7K4M-2Q9X</span></p>
+    <div class="siwa-cluster"><button class="siwa-button siwa-button--primary" data-en="Open it" data-ar="افتحه">Open it</button></div>
+  </div>
+
+</div>
+</main>
+
+<footer class="siwa-footer">
+  <div class="siwa-container">
+    <div class="siwa-footer__bottom">
+      <p class="siwa-body-sm siwa-muted">© 2026 Siwa</p>
+      <p class="siwa-body-sm siwa-muted" data-en="Siwa is an independent fragrance house. All product names are Siwa's own." data-ar="سيوة دار عطور مستقلة. كل أسماء المنتجات ملك سيوة.">Siwa is an independent fragrance house. All product names are Siwa's own.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/siwa-theme.js" defer></script>
+<script>
+(function () {
+  var p = new URLSearchParams(location.search);
+  var theme = p.get('theme') || 'archive';
+  var locale = p.get('locale') || 'en';
+  document.body.setAttribute('data-theme', theme);
+  document.documentElement.lang = locale;
+  document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-' + locale + ']').forEach(function (el) {
+    el.textContent = el.getAttribute('data-' + locale);
+  });
+  document.querySelectorAll('.pv-ar-only').forEach(function (el) { el.hidden = locale !== 'ar'; });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+{
+  "_note": "Container, section and grid metrics measured on the live site.",
+  "containers": {
+    "--container-gutter": "3rem / 48px",
+    "--container-max-width": "100%",
+    "--container-xxs-max-width": "27.5rem / 440px",
+    "--container-xs-max-width": "42.5rem / 680px",
+    "--container-sm-max-width": "61.25rem / 980px",
+    "--container-md-max-width": "71.875rem / 1150px",
+    "--container-lg-max-width": "78.75rem / 1260px",
+    "--container-xl-max-width": "85rem / 1360px"
+  },
+  "sections": {
+    "--section-vertical-spacing": "4rem / 64px",
+    "--section-vertical-spacing-tight": "4rem / 64px",
+    "--section-stack-gap": "3rem / 48px",
+    "--section-stack-gap-tight": "3rem / 48px",
+    "comment": "The 'tight' variants have been overridden to equal the default variants, so tight sections are NOT actually tighter on this store."
+  },
+  "forms": {
+    "--form-gap": "1.25rem / 20px",
+    "--fieldset-gap": "1rem / 16px",
+    "--form-control-gap": "0.625rem / 10px",
+    "--checkbox-control-gap": "0.75rem / 12px",
+    "--checkbox-size": "0.875rem / 14px",
+    "--input-padding-block": "0.65rem / 10.4px",
+    "--input-padding-inline": "0.8rem / 12.8px"
+  },
+  "chrome": {
+    "--header-height": "153.17px (desktop, 3-row: announcement + logo + nav)",
+    "--announcement-bar-height": "40.14px",
+    "--header-is-sticky": "0 (header does NOT stick)",
+    "--announcement-bar-is-sticky": "0"
+  },
+  "productGridResponsive": [
+    {
+      "viewport": "375-480",
+      "columns": 2,
+      "rowGap": "35px",
+      "columnGap": "10px",
+      "filters": "drawer",
+      "nav": "hamburger"
+    },
+    {
+      "viewport": "700-768",
+      "columns": 3,
+      "rowGap": "48px",
+      "columnGap": "24px",
+      "filters": "drawer",
+      "nav": "hamburger"
+    },
+    {
+      "viewport": "1000-1280",
+      "columns": 3,
+      "rowGap": "64px",
+      "columnGap": "48px",
+      "filters": "sticky sidebar",
+      "nav": "inline"
+    },
+    {
+      "viewport": "1440+",
+      "columns": 4,
+      "rowGap": "64px",
+      "columnGap": "60px",
+      "filters": "sticky sidebar",
+      "nav": "inline"
+    }
+  ],
+  "breakpoints": {
+    "_note": "Mobile-first min-width queries counted in theme.css",
+    "min-width:700px": 67,
+    "min-width:1000px": 33,
+    "min-width:1150px": 13,
+    "min-width:1400px": 5,
+    "max-width:699px": 18,
+    "max-width:999px": 5,
+    "pointer:fine": 18,
+    "comment": "Primary breakpoints are 700 / 1000 / 1150 / 1400px. 'pointer:fine' gates all hover styling."
+  },
+  "observedScale": [
+    "10px",
+    "12px",
+    "14px",
+    "16px",
+    "20px",
+    "24px",
+    "35px",
+    "48px",
+    "60px",
+    "64px"
+  ]
+}

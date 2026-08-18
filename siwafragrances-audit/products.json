@@ -1,0 +1,3904 @@
+{
+  "shop": "siwafragrances.com",
+  "currency": "EGP",
+  "extracted": "2026-08-16",
+  "product_count": 60,
+  "variant_count": 170,
+  "products": [
+    {
+      "id": 8047986114608,
+      "handle": "purevelle",
+      "title": "Purevelle",
+      "url": "https://siwafragrances.com/products/purevelle",
+      "inspired_by": "Erba Pura Xerjoff",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2026-08-13T01:09:12+03:00",
+      "description_html": "<h4 data-path-to-node=\"2\"><strong>THE VIBE</strong></h4>\n<p><span>A vibrant juicy fruit explosion wrapped in a velvety cloud of clean musk and sweet vanilla. <br></span><em><b data-path-to-node=\"4,0\" data-index-in-node=\"0\">    <br></b></em><em style=\"font-weight: 400;\"><b data-path-to-node=\"4,0\" data-index-in-node=\"0\">       If you love </b><strong>Xerjoff Erba Pura</strong></em><b data-path-to-node=\"4,0\" data-index-in-node=\"0\"><em>, this is your scent</em>.</b></p>\n<p><strong>FRAGRANCE PROFILE</strong></p>\n<ul data-path-to-node=\"7\">\n<li>\n<p data-path-to-node=\"7,0,0\"><b>Main Accords: </b>Mediterranean Fruits • Sparkling Citrus • Velvety White Musk</p>\n</li>\n<li>\n<p data-path-to-node=\"7,0,0\"><span></span><strong>Top:</strong> Sicilian Orange, Calabrian Bergamot &amp; Sicilian Lemon</p>\n</li>\n<li>\n<p data-path-to-node=\"7,0,0\"><span></span><b data-path-to-node=\"7,2,0\" data-index-in-node=\"0\">Heart:</b> Juicy Fruits</p>\n</li>\n<li>\n<p data-path-to-node=\"7,3,0\"><b data-path-to-node=\"7,3,0\" data-index-in-node=\"0\">Base: </b><span>White Musk, Madagascar Vanilla &amp; Amber</span></p>\n</li>\n</ul>\n<p><b data-path-to-node=\"9\" data-index-in-node=\"0\">PERFORMANCE &amp; WEAR</b></p>\n<ul data-path-to-node=\"10\">\n<li>\n<p data-path-to-node=\"10,0,0\"><b data-path-to-node=\"10,0,0\" data-index-in-node=\"0\">Longevity:</b> 7–8 Hours <i data-path-to-node=\"10,0,0\" data-index-in-node=\"21\">(Transforms </i><em>bright citrus-fruit burst into a lingering, musky-sweet cloud)</em></p>\n</li>\n<li>\n<p data-path-to-node=\"10,1,0\"><b data-path-to-node=\"10,1,0\" data-index-in-node=\"0\">Projection / Sillage:</b> Strong to Moderate <i data-path-to-node=\"10,1,0\" data-index-in-node=\"41\">(Creates a radiant, noticeable halo without overpowering the room)</i></p>\n</li>\n<li>\n<p data-path-to-node=\"10,2,0\"><b data-path-to-node=\"10,2,0\" data-index-in-node=\"0\">Best For: </b><em>Sunny days, vibrant outings, statement signature wear &amp; year round allure</em></p>\n</li>\n</ul>",
+      "description_text": "THE VIBE A vibrant juicy fruit explosion wrapped in a velvety cloud of clean musk and sweet vanilla. If you love Xerjoff Erba Pura , this is your scent . FRAGRANCE PROFILE Main Accords: Mediterranean Fruits • Sparkling Citrus • Velvety White Musk Top: Sicilian Orange, Calabrian Bergamot &amp; Sicilian Lemon Heart: Juicy Fruits Base: White Musk, Madagascar Vanilla &amp; Amber PERFORMANCE &amp; WEAR Longevity: 7–8 Hours (Transforms bright citrus-fruit burst into a lingering, musky-sweet cloud) Projection / Sillage: Strong to Moderate (Creates a radiant, noticeable halo without overpowering the room) Best For: Sunny days, vibrant outings, statement signature wear &amp; year round allure",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 550.0,
+      "price_max": 1250.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 43483879637040,
+          "title": "30 ml",
+          "sku": null,
+          "price": 550.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 43483879669808,
+          "title": "50 ml",
+          "sku": null,
+          "price": 800.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 43483879702576,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1250.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/IMG-7036.jpg?v=1786572208",
+          "width": 1755,
+          "height": 1755,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874912304,
+      "handle": "tobacco-honey",
+      "title": "Tobacco Honey",
+      "url": "https://siwafragrances.com/products/tobacco-honey",
+      "inspired_by": "Naxos Xerjoff",
+      "product_type": null,
+      "tags": [
+        "Men",
+        "Women"
+      ],
+      "published_at": "2026-08-08T00:16:59+03:00",
+      "description_html": "<p>Tobacco Honey<br>\nSweet, Tobacco, Honey<br>\nSpicy sweet blend of lavender, bergamot enriched with warm notes of honey, cinnamon, jasmine<br>\nbased on tobacco leaf, vanilla and tonka bean.<br>\nSmooth, comforting, warm sweet perfume ideal for winter and fall.</p>",
+      "description_text": "Tobacco Honey Sweet, Tobacco, Honey Spicy sweet blend of lavender, bergamot enriched with warm notes of honey, cinnamon, jasmine based on tobacco leaf, vanilla and tonka bean. Smooth, comforting, warm sweet perfume ideal for winter and fall.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 550.0,
+      "price_max": 1250.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389309161520,
+          "title": "100 ml",
+          "sku": "SP-052",
+          "price": 1250.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389309194288,
+          "title": "50 ml",
+          "sku": "SP-052",
+          "price": 800.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389309227056,
+          "title": "30 ml",
+          "sku": "SP-052",
+          "price": 550.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Tobacco_Honey.jpg?v=1758472100",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874584624,
+      "handle": "forbidden-cherry",
+      "title": "Forbidden Cherry",
+      "url": "https://siwafragrances.com/products/forbidden-cherry",
+      "inspired_by": "Lost Cherry Tom Ford",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "published_at": "2026-08-06T12:50:02+03:00",
+      "description_html": "<p>Forbidden Cherry</p>\n<p>Sweet, cherry, vanilla</p>\n<p>Sexy sweet blend of cherry, almond &amp; cherry liqueur enriched with jasmine based on vanilla, tonka, vetiver &amp; sandalwood.</p>\n<p>Juicy gourmand perfume so delicious heavy on cherry &amp; almond, sour sweet and creamy</p>",
+      "description_text": "Forbidden Cherry Sweet, cherry, vanilla Sexy sweet blend of cherry, almond &amp; cherry liqueur enriched with jasmine based on vanilla, tonka, vetiver &amp; sandalwood. Juicy gourmand perfume so delicious heavy on cherry &amp; almond, sour sweet and creamy",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 500.0,
+      "price_max": 1100.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389308145712,
+          "title": "100 ml",
+          "sku": "SP-042",
+          "price": 1100.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389308244016,
+          "title": "50 ml",
+          "sku": "SP-042",
+          "price": 750.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389308211248,
+          "title": "30 ml",
+          "sku": "SP-042",
+          "price": 500.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/forbidden-cherry.jpg?v=1757237197",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7976568782896,
+      "handle": "silvere",
+      "title": "Silvere",
+      "url": "https://siwafragrances.com/products/silvere",
+      "inspired_by": "Gentle Fluidity Silver MFK",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2026-08-04T12:46:42+03:00",
+      "description_html": "<p><strong>Persona</strong></p>\n<p><span>Precision in its most effortless form. Clean, composed, and naturally sharp. The kind of presence that feels modern without trying to be.</span></p>\n<p><strong>The Story</strong></p>\n<p><span>Silvere is freshness with structure. </span>It opens with a bright aromatic lift where juniper berries and crisp spices create an instantly clean, energetic impression. Freshness here feels cold, polished, and refined rather than playful or overly citrusy.<br><span></span></p>\n<p><span>As the fragrance develops, soft woods and aromatic herbs begin to settle in, giving the scent a smooth metallic elegance. Everything feels balanced and controlled, with a clarity that makes the fragrance feel effortlessly sophisticated.</span></p>\n<p><span>In the dry down, musks and amber woods create a cool sensuality that stays close to the skin while maintaining its sharp signature. Clean, airy, and quietly addictive.</span></p>\n<p><span>A fragrance that feels crisp from beginning to end…</span><span><br> </span><span>minimal in style, unforgettable in presence.</span></p>\n<p><strong>Notes</strong></p>\n<p><span>Top Notes: Juniper berries, nutmeg</span><span><br> </span><span>Heart Notes: Coriander, aromatic accords</span><span><br> </span><span>Base Notes: Musks, amber woods, vanilla</span><span><span class=\"Apple-converted-space\">  </span></span></p>\n<p><strong>Best For</strong></p>\n<p><span>Daily wear and clean aesthetics</span><span><br> </span><span>Spring, summer, and transitional weather</span><span><br> </span><span>Business casual and modern styling</span><span><br> </span><span>Perfect for those who prefer fresh fragrances with a refined edge</span></p>",
+      "description_text": "Persona Precision in its most effortless form. Clean, composed, and naturally sharp. The kind of presence that feels modern without trying to be. The Story Silvere is freshness with structure. It opens with a bright aromatic lift where juniper berries and crisp spices create an instantly clean, energetic impression. Freshness here feels cold, polished, and refined rather than playful or overly citrusy. As the fragrance develops, soft woods and aromatic herbs begin to settle in, giving the scent a smooth metallic elegance. Everything feels balanced and controlled, with a clarity that makes the fragrance feel effortlessly sophisticated. In the dry down, musks and amber woods create a cool sensuality that stays close to the skin while maintaining its sharp signature. Clean, airy, and quietly addictive. A fragrance that feels crisp from beginning to end… minimal in style, unforgettable in presence. Notes Top Notes: Juniper berries, nutmeg Heart Notes: Coriander, aromatic accords Base Notes: Musks, amber woods, vanilla Best For Daily wear and clean aesthetics Spring, summer, and transitional weather Business casual and modern styling Perfect for those who prefer fresh fragrances with a refined edge",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 600.0,
+      "price_max": 1600.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 43057660624944,
+          "title": "30 ml",
+          "sku": null,
+          "price": 600.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 43057660657712,
+          "title": "50 ml",
+          "sku": null,
+          "price": 900.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 43057660690480,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1600.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/IMG-5449.jpg?v=1779397253",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 8032720257072,
+      "handle": "sundaze",
+      "title": "Sundaze",
+      "url": "https://siwafragrances.com/products/sundaze",
+      "inspired_by": "Power Of You Giorgio Armani",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2026-07-25T16:15:16+03:00",
+      "description_html": "<h4 data-path-to-node=\"2\">THE VIBE</h4>\n<p data-path-to-node=\"3\">A radiant, sunkissed gourmand that blends juicy passionfruit with creamy vanilla and warm amber. Sundaze radiates magnetic warmth invigorating at first spray, then settling into a rich, addictive skin trail.</p>\n<blockquote data-path-to-node=\"4\">\n<p data-path-to-node=\"4,0\"><b data-path-to-node=\"4,0\" data-index-in-node=\"0\">If you love <i data-path-to-node=\"4,0\" data-index-in-node=\"12\">Armani Power of You</i>, this is your scent.</b></p>\n</blockquote>\n<h4 data-path-to-node=\"6\">FRAGRANCE PROFILE</h4>\n<ul data-path-to-node=\"7\">\n<li>\n<p data-path-to-node=\"7,0,0\"><b data-path-to-node=\"7,0,0\" data-index-in-node=\"0\">Main Accords:</b> Tropical Fruit • Creamy Solar Florals • Warm Bourbon Vanilla</p>\n</li>\n<li>\n<p data-path-to-node=\"7,1,0\"><b data-path-to-node=\"7,1,0\" data-index-in-node=\"0\">Top:</b> Passionfruit, Bitter Orange &amp; Lemon</p>\n</li>\n<li>\n<p data-path-to-node=\"7,2,0\"><b data-path-to-node=\"7,2,0\" data-index-in-node=\"0\">Heart:</b> Frangipani &amp; Solar Accords</p>\n</li>\n<li>\n<p data-path-to-node=\"7,3,0\"><b data-path-to-node=\"7,3,0\" data-index-in-node=\"0\">Base:</b> Madagascar Vanilla, Benzoin &amp; Labdanum</p>\n</li>\n</ul>\n<p><b data-path-to-node=\"9\" data-index-in-node=\"0\">PERFORMANCE &amp; WEAR</b></p>\n<ul data-path-to-node=\"10\">\n<li>\n<p data-path-to-node=\"10,0,0\"><b data-path-to-node=\"10,0,0\" data-index-in-node=\"0\">Longevity:</b> 7–8 Hours <i data-path-to-node=\"10,0,0\" data-index-in-node=\"21\">(Transforms from vibrant fruit into a long-lasting vanilla-amber base)</i></p>\n</li>\n<li>\n<p data-path-to-node=\"10,1,0\"><b data-path-to-node=\"10,1,0\" data-index-in-node=\"0\">Projection / Sillage:</b> Moderate <i data-path-to-node=\"10,1,0\" data-index-in-node=\"41\">(Creates a radiant, noticeable halo without overpowering the room)</i></p>\n</li>\n<li>\n<p data-path-to-node=\"10,2,0\"><b data-path-to-node=\"10,2,0\" data-index-in-node=\"0\">Best For:</b> Golden hour, warm weather, evening dates &amp; everyday signature wear</p>\n</li>\n</ul>",
+      "description_text": "THE VIBE A radiant, sunkissed gourmand that blends juicy passionfruit with creamy vanilla and warm amber. Sundaze radiates magnetic warmth invigorating at first spray, then settling into a rich, addictive skin trail. If you love Armani Power of You , this is your scent. FRAGRANCE PROFILE Main Accords: Tropical Fruit • Creamy Solar Florals • Warm Bourbon Vanilla Top: Passionfruit, Bitter Orange &amp; Lemon Heart: Frangipani &amp; Solar Accords Base: Madagascar Vanilla, Benzoin &amp; Labdanum PERFORMANCE &amp; WEAR Longevity: 7–8 Hours (Transforms from vibrant fruit into a long-lasting vanilla-amber base) Projection / Sillage: Moderate (Creates a radiant, noticeable halo without overpowering the room) Best For: Golden hour, warm weather, evening dates &amp; everyday signature wear",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 500.0,
+      "price_max": 1100.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 43433688563760,
+          "title": "30 ml",
+          "sku": null,
+          "price": 500.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 43433688596528,
+          "title": "50 ml",
+          "sku": null,
+          "price": 700.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 43433688629296,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1100.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/IMG-6766.jpg?v=1784984707",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7973168840752,
+      "handle": "vanilla-91",
+      "title": "Vanilla 91",
+      "url": "https://siwafragrances.com/products/vanilla-91",
+      "inspired_by": "Siwa Fragrances",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2026-05-16T02:57:23+03:00",
+      "description_html": "<p>Vanilla 91</p>\n<p>A long-lasting body splash enriched with vitamin E, b<span>lending creamy vanilla, soft jasmine petals and glowing sandalwood for a warm, comforting fragrance that feels sweet, cozy, and effortlessly elegant.</span></p>\n<p><span>Limited</span></p>",
+      "description_text": "Vanilla 91 A long-lasting body splash enriched with vitamin E, b lending creamy vanilla, soft jasmine petals and glowing sandalwood for a warm, comforting fragrance that feels sweet, cozy, and effortlessly elegant. Limited",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "125ML"
+          ]
+        }
+      ],
+      "price_min": 380.0,
+      "price_max": 380.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 43042776776752,
+          "title": "125ML",
+          "sku": "BS-1",
+          "price": 380.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/C8C728AE-A095-4A70-A6C1-87DE3302578F.jpg?v=1778889129",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/129BA2AA-F4DE-46A8-BD2E-DA03FFE389E2.png?v=1778889129",
+          "width": 1254,
+          "height": 1254,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876517936,
+      "handle": "siwa-trail",
+      "title": "Siwa Trail",
+      "url": "https://siwafragrances.com/products/siwa-trail",
+      "inspired_by": "Guidance Amouage",
+      "product_type": null,
+      "tags": [
+        "Men",
+        "new",
+        "Unisex",
+        "Women"
+      ],
+      "published_at": "2026-04-25T00:56:52+03:00",
+      "description_html": "<p>Siwa Trail</p>\n<p>The new summer edition </p>\n<p>A journey through the golden dunes of Siwa, the scent of hazelnut, pear, vanilla and soft woods lingering in the air with shades of amber. A fragrance that felt like a memory, a whisper of elegance wrapped in warmth.</p>\n<p>Siwa Trail brings you a scent that tells a story of beauty and resilience. Rich, floral, and irresistibly creamy, it’s more than a perfume it’s a journey..now within your reach.</p>",
+      "description_text": "Siwa Trail The new summer edition A journey through the golden dunes of Siwa, the scent of hazelnut, pear, vanilla and soft woods lingering in the air with shades of amber. A fragrance that felt like a memory, a whisper of elegance wrapped in warmth. Siwa Trail brings you a scent that tells a story of beauty and resilience. Rich, floral, and irresistibly creamy, it’s more than a perfume it’s a journey..now within your reach.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 600.0,
+      "price_max": 1750.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42389313290288,
+          "title": "100 ml",
+          "sku": "SF-080",
+          "price": 1750.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389313323056,
+          "title": "50 ml",
+          "sku": "SF-080",
+          "price": 950.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389313355824,
+          "title": "30 ml",
+          "sku": "SF-080",
+          "price": 600.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/siwa-trail.jpg?v=1757237357",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7954863554608,
+      "handle": "pink-arrogance",
+      "title": "Pink Arrogance",
+      "url": "https://siwafragrances.com/products/pink-arrogance",
+      "inspired_by": "Siwa original creation",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2026-04-24T02:19:32+03:00",
+      "description_html": "<p><strong>Persona</strong></p>\n<p><span>She doesn’t wait to be noticed. She decides when she is.<br></span><span>Confident, composed, and always in control. There’s a quiet sharpness to her presence… soft at first, but never weak.</span></p>\n<p><strong>The Story</strong></p>\n<p><span>Pink Arrogance isn’t about being sweet. It’s about being certain.</span></p>\n<p><span>It opens with a bright floral lift, where orange blossom and neroli meet a soft almond nuance, creating a start that feels clean but with a subtle edge. <span class=\"Apple-converted-space\"> </span></span></p>\n<p><span>As it settles, the scent becomes more defined. Jasmine and violet bring a powdery elegance, while a smooth fruity touch adds just enough warmth to keep it balanced without losing its composure. <span class=\"Apple-converted-space\"> </span></span></p>\n<p><span>In the dry down, musk and sandalwood take over quietly, giving the fragrance structure and presence. It stays controlled, polished, and slightly distant… never trying too hard, yet impossible to ignore. <span class=\"Apple-converted-space\"> </span></span></p>\n<p><strong>Notes</strong></p>\n<p><span>Top Notes: Orange blossom, neroli, almond</span><span><br> </span><span>Heart Notes: Jasmine, violet, apricot</span><span><br> </span><span>Base Notes: Musk, sandalwood</span></p>\n<p><strong>Best For <br></strong></p>\n<p><span>Spring and summer<br></span><span>Daytime elegance <br></span><span>Confident, dressed-up moments</span></p>",
+      "description_text": "Persona She doesn’t wait to be noticed. She decides when she is. Confident, composed, and always in control. There’s a quiet sharpness to her presence… soft at first, but never weak. The Story Pink Arrogance isn’t about being sweet. It’s about being certain. It opens with a bright floral lift, where orange blossom and neroli meet a soft almond nuance, creating a start that feels clean but with a subtle edge. As it settles, the scent becomes more defined. Jasmine and violet bring a powdery elegance, while a smooth fruity touch adds just enough warmth to keep it balanced without losing its composure. In the dry down, musk and sandalwood take over quietly, giving the fragrance structure and presence. It stays controlled, polished, and slightly distant… never trying too hard, yet impossible to ignore. Notes Top Notes: Orange blossom, neroli, almond Heart Notes: Jasmine, violet, apricot Base Notes: Musk, sandalwood Best For Spring and summer Daytime elegance Confident, dressed-up moments",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 450.0,
+      "price_max": 1000.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42973010526256,
+          "title": "30 ml",
+          "sku": null,
+          "price": 450.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42973010559024,
+          "title": "50 ml",
+          "sku": null,
+          "price": 650.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42973010591792,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1000.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/068E4637-6A79-41AB-80D5-7658C653F7BC.jpg?v=1776984937",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7954860539952,
+      "handle": "pink-allure",
+      "title": "Pink Allure",
+      "url": "https://siwafragrances.com/products/pink-allure",
+      "inspired_by": "Siwa original creation",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2026-04-24T02:05:44+03:00",
+      "description_html": "<p><strong>Persona</strong></p>\n<p><span>A presence defined by softness. Calm, polished, and effortlessly composed. The kind of aura that feels gentle, yet leaves a lasting impression.</span></p>\n<p><strong>The Story</strong></p>\n<p><span>Pink Allure is built around a soft touch. </span><span>It opens with a light, fresh brightness that feels clean and effortless, setting a smooth and delicate tone from the first moment.</span></p>\n<p><span>As it develops, a refined floral heart comes forward. Rose is present, but in its softest form, blended with airy petals and a subtle powdery nuance that keeps everything light and balanced.</span></p>\n<p><span>In the dry down, skin-like musk and smooth woods settle gently, wrapped in a hint of vanilla. The fragrance stays close, creating a soft, comforting trail that feels natural and elegant.</span></p>\n<p><span>A scent defined by its softness…</span><span><br> </span><span>quiet, refined, and beautifully understated.</span></p>\n<p><strong>Notes</strong></p>\n<p><span>Top Notes: Mandarin, Bergamot &amp; soft pink pepper touch</span><span><br> </span><span>Heart Notes: Soft rose, peony, powdery nuances</span><span><br> </span><span>Base Notes: Musk, smooth woods, hint of vanilla</span></p>\n<p><strong>Best For</strong></p>\n<p><span>Daytime wear and soft occasions</span><span><br> </span><span>Spring and warm weather</span><span><br> </span><span>Clean, minimal styles</span></p>",
+      "description_text": "Persona A presence defined by softness. Calm, polished, and effortlessly composed. The kind of aura that feels gentle, yet leaves a lasting impression. The Story Pink Allure is built around a soft touch. It opens with a light, fresh brightness that feels clean and effortless, setting a smooth and delicate tone from the first moment. As it develops, a refined floral heart comes forward. Rose is present, but in its softest form, blended with airy petals and a subtle powdery nuance that keeps everything light and balanced. In the dry down, skin-like musk and smooth woods settle gently, wrapped in a hint of vanilla. The fragrance stays close, creating a soft, comforting trail that feels natural and elegant. A scent defined by its softness… quiet, refined, and beautifully understated. Notes Top Notes: Mandarin, Bergamot &amp; soft pink pepper touch Heart Notes: Soft rose, peony, powdery nuances Base Notes: Musk, smooth woods, hint of vanilla Best For Daytime wear and soft occasions Spring and warm weather Clean, minimal styles",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 590.0,
+      "price_max": 1400.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42973000663088,
+          "title": "30 ml",
+          "sku": null,
+          "price": 590.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42973000695856,
+          "title": "50 ml",
+          "sku": null,
+          "price": 850.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42973000728624,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1400.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/D45DDE71-48A7-4B1C-BE46-ACA593B54BA0.jpg?v=1776984937",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7954857918512,
+      "handle": "lost-on-you",
+      "title": "Lost On You",
+      "url": "https://siwafragrances.com/products/lost-on-you",
+      "inspired_by": "Lost In Paris Roja",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2026-04-24T01:48:50+03:00",
+      "description_html": "<p><strong>Persona</strong><span><br> </span><span>For a presence that feels magnetic and unforgettable. Emotional, indulgent, and effortlessly captivating.</span></p>\n<p><strong>The Story <br></strong>Lost On You is where indulgence meets elegance. It opens with a luminous citrus glow, lifted by a warm hint of rum, like the first sip of something rich on a Parisian night.</p>\n<p>As it unfolds, a smooth gourmand heart takes shape. Caramel softens into a buttery warmth, wrapping the scent in a creamy, refined sweetness that feels luxurious, never excessive. <br>In the dry down, vanilla melts into soft woods, settling close to the skin in a way that feels intimate, warm, and quietly addictive. <br>A fragrance that doesn’t overwhelm…<br><span>it draws you in, slowly.</span></p>\n<p><strong>Notes <br></strong><span>Top Notes: Blood orange, mandarin, bitter orange, rum</span><span><br> </span><span>Heart Notes: Caramel, sugar, creamy gourmand accords</span><span><br> </span><span>Base Notes: Vanilla, ambergris, warm woods, soft spices</span></p>\n<p><strong>Best For <br></strong><span>Evenings and indulgent moments</span><span><br> </span><span>Date nights and special occasions</span><span><br> </span><span>Cooler weather</span><span><br> </span><span>Signature scent for lovers of rich, gourmand fragrances</span></p>",
+      "description_text": "Persona For a presence that feels magnetic and unforgettable. Emotional, indulgent, and effortlessly captivating. The Story Lost On You is where indulgence meets elegance. It opens with a luminous citrus glow, lifted by a warm hint of rum, like the first sip of something rich on a Parisian night. As it unfolds, a smooth gourmand heart takes shape. Caramel softens into a buttery warmth, wrapping the scent in a creamy, refined sweetness that feels luxurious, never excessive. In the dry down, vanilla melts into soft woods, settling close to the skin in a way that feels intimate, warm, and quietly addictive. A fragrance that doesn’t overwhelm… it draws you in, slowly. Notes Top Notes: Blood orange, mandarin, bitter orange, rum Heart Notes: Caramel, sugar, creamy gourmand accords Base Notes: Vanilla, ambergris, warm woods, soft spices Best For Evenings and indulgent moments Date nights and special occasions Cooler weather Signature scent for lovers of rich, gourmand fragrances",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 750.0,
+      "price_max": 1900.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42972997648432,
+          "title": "30 ml",
+          "sku": null,
+          "price": 750.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42972997681200,
+          "title": "50 ml",
+          "sku": null,
+          "price": 1100.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42972997713968,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1900.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/06EE0A47-1E7B-4AE1-ACF0-BA56D57994D1.jpg?v=1776984174",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7954855362608,
+      "handle": "aurableu",
+      "title": "Aurableu",
+      "url": "https://siwafragrances.com/products/aurableu",
+      "inspired_by": "Symphony LV",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2026-04-24T01:23:20+03:00",
+      "description_html": "<p><strong>Persona <br></strong>For those who move with lightness and clarity. Effortless, fresh, and naturally refined. A presence that feels clean, uplifting, and quietly confident.</p>\n<p><strong>The Story  <br></strong><span>Aurableu captures the feeling of a bright horizon and open air. Inspired by a radiant citrus symphony, it opens with a vibrant burst of fresh, juicy notes that feel instantly energizing and pure.</span></p>\n<p>As it settles, the composition becomes smoother and more balanced, blending crisp citrus with subtle aromatic and floral nuances that keep it elegant and never overwhelming. The result is a scent that feels transparent, refreshing, and perfectly polished.<br><span></span></p>\n<p>Clean, luminous, and full of life. <span>A fragrance that feels like a breath of fresh air.</span></p>\n<p><strong>Notes <br></strong><span>Top Notes: Bright citrus blend with vibrant freshness</span><span><br></span><span>Heart Notes: Soft aromatic nuances and refined floral layers</span><span><br></span><span>Base Notes: Clean musky undertones with subtle woody freshness and ginger </span></p>\n<p><strong>Best For <br></strong><span>Daytime wear and fresh starts</span><span><br></span><span>Summer days and warm weather</span><span><br></span><span>Casual and smart casual looks</span></p>",
+      "description_text": "Persona For those who move with lightness and clarity. Effortless, fresh, and naturally refined. A presence that feels clean, uplifting, and quietly confident. The Story Aurableu captures the feeling of a bright horizon and open air. Inspired by a radiant citrus symphony, it opens with a vibrant burst of fresh, juicy notes that feel instantly energizing and pure. As it settles, the composition becomes smoother and more balanced, blending crisp citrus with subtle aromatic and floral nuances that keep it elegant and never overwhelming. The result is a scent that feels transparent, refreshing, and perfectly polished. Clean, luminous, and full of life. A fragrance that feels like a breath of fresh air. Notes Top Notes: Bright citrus blend with vibrant freshness Heart Notes: Soft aromatic nuances and refined floral layers Base Notes: Clean musky undertones with subtle woody freshness and ginger Best For Daytime wear and fresh starts Summer days and warm weather Casual and smart casual looks",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 700.0,
+      "price_max": 1750.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42972982214704,
+          "title": "30 ml",
+          "sku": null,
+          "price": 700.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42972982247472,
+          "title": "50 ml",
+          "sku": null,
+          "price": 1050.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42972982280240,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1750.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/3BA9765B-63D6-4CE5-9C0D-73CD8D312E09.jpg?v=1776982158",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7924236714032,
+      "handle": "absolute-drunk",
+      "title": "Absolute Drunk",
+      "url": "https://siwafragrances.com/products/absolute-drunk",
+      "inspired_by": "Il Padrino Sospiro",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2026-03-14T17:06:27+02:00",
+      "description_html": "<p><strong>Absolute Drunk</strong></p>\n<p><strong>Persona</strong><br><span></span></p>\n<p><span>A man who doesn’t follow the room… he owns it. Confident, charismatic, and unapologetically bold. The kind of presence that turns heads without trying. Nights, conversations, and moments seem to orbit around him.</span></p>\n<p><strong>The Story</strong></p>\n<p><span>Absolute Drunk captures the intoxicating atmosphere of luxury evenings and unforgettable encounters. Inspired by the richness of oriental perfumery, it opens with a warm boozy sensation that immediately feels deep and addictive.</span></p>\n<p><span>As the scent unfolds, rich patchouli and dark woods begin to dominate, creating a bold and mysterious character.</span></p>\n<p><span> In the dry down, smooth vanilla and warm amber and benzoin wrap the fragrance in a luxurious softness that lingers for hours.</span></p>\n<p><span>This is a fragrance that feels powerful, seductive, and unforgettable.</span></p>\n<p><strong>Notes</strong></p>\n<p><span>Top Notes: Boozy accord with black currant</span></p>\n<p><span>Heart Notes: Rich patchouli, dark woods, and oriental depth</span></p>\n<p><span>Base Notes: Vanilla, amber warmth, and smooth woody accords</span></p>\n<p><strong>Best For</strong></p>\n<p><span>Evening wear and special occasions</span></p>\n<p><span>Elegant dinners and night events</span></p>\n<p><span>Cold weather and winter seasons</span></p>",
+      "description_text": "Absolute Drunk Persona A man who doesn’t follow the room… he owns it. Confident, charismatic, and unapologetically bold. The kind of presence that turns heads without trying. Nights, conversations, and moments seem to orbit around him. The Story Absolute Drunk captures the intoxicating atmosphere of luxury evenings and unforgettable encounters. Inspired by the richness of oriental perfumery, it opens with a warm boozy sensation that immediately feels deep and addictive. As the scent unfolds, rich patchouli and dark woods begin to dominate, creating a bold and mysterious character. In the dry down, smooth vanilla and warm amber and benzoin wrap the fragrance in a luxurious softness that lingers for hours. This is a fragrance that feels powerful, seductive, and unforgettable. Notes Top Notes: Boozy accord with black currant Heart Notes: Rich patchouli, dark woods, and oriental depth Base Notes: Vanilla, amber warmth, and smooth woody accords Best For Evening wear and special occasions Elegant dinners and night events Cold weather and winter seasons",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 750.0,
+      "price_max": 1850.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42843854667824,
+          "title": "30 ml",
+          "sku": null,
+          "price": 750.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42843854700592,
+          "title": "50 ml",
+          "sku": null,
+          "price": 1100.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42843854733360,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1850.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/IMG-4136.jpg?v=1773500269",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7909727961136,
+      "handle": "bleu-exclusive",
+      "title": "Bleu Exclusive",
+      "url": "https://siwafragrances.com/products/bleu-exclusive",
+      "inspired_by": "Bleu De Chanel L’exclusif",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2026-02-27T15:40:44+02:00",
+      "description_html": "<p class=\"p1\"><strong><span class=\"s1\">Bleu Exclusive</span></strong></p>\n<p class=\"p2\">Not every man tries to attract attention. Some simply walk into a room and are noticed naturally.<br><span class=\"s2\"></span></p>\n<p class=\"p2\">Bleu Exclusive is crafted for the man who treats his appearance as part of his identity. The businessman who understands that details such as tailoring, presence, posture, and scent are not luxury choices, but priorities.<br><span class=\"s2\"></span></p>\n<p class=\"p2\">A fragrance that reflects quiet confidence and refined authority. It opens with a subtle freshness before evolving into a deep, creamy woody amber signature that feels polished, professional, and undeniably elegant.<br><span class=\"s2\"></span></p>\n<p class=\"p2\"><span class=\"s2\">This isn’t a scent for occasions.</span><span class=\"s2\">It’s the signature of a man who takes himself seriously, every single day.</span><br><span class=\"s2\"></span></p>\n<p class=\"p2\"> </p>\n<p class=\"p1\"><strong><span class=\"s1\">Notes</span></strong></p>\n<p class=\"p1\"><span class=\"s2\">Top Notes: Soft citrus freshness with aromatic nuances</span></p>\n<p class=\"p1\"><span class=\"s2\">Heart Notes: Creamy sandalwood blended with warm leathery labdanum</span></p>\n<p class=\"p1\"><span class=\"s2\">Base Notes: Deep woody amber accords enriched with smooth vanilla and refined woods</span></p>\n<p class=\"p1\"> </p>\n<p class=\"p1\"><strong><span class=\"s1\">Best For</span></strong><br><span class=\"s2\"></span></p>\n<p class=\"p1\"><span class=\"s2\">Business meetings and professional environments</span></p>\n<p class=\"p1\"><span class=\"s2\">Formal and smart-casual looks</span></p>\n<p class=\"p1\"><span class=\"s2\">Evening wear and elegant occasions</span></p>\n<p class=\"p1\">Year-round use, especially in moderate and cooler weather</p>",
+      "description_text": "Bleu Exclusive Not every man tries to attract attention. Some simply walk into a room and are noticed naturally. Bleu Exclusive is crafted for the man who treats his appearance as part of his identity. The businessman who understands that details such as tailoring, presence, posture, and scent are not luxury choices, but priorities. A fragrance that reflects quiet confidence and refined authority. It opens with a subtle freshness before evolving into a deep, creamy woody amber signature that feels polished, professional, and undeniably elegant. This isn’t a scent for occasions. It’s the signature of a man who takes himself seriously, every single day. Notes Top Notes: Soft citrus freshness with aromatic nuances Heart Notes: Creamy sandalwood blended with warm leathery labdanum Base Notes: Deep woody amber accords enriched with smooth vanilla and refined woods Best For Business meetings and professional environments Formal and smart-casual looks Evening wear and elegant occasions Year-round use, especially in moderate and cooler weather",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 750.0,
+      "price_max": 1900.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42805930295344,
+          "title": "30 ml",
+          "sku": null,
+          "price": 750.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42805930328112,
+          "title": "50 ml",
+          "sku": null,
+          "price": 1100.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42805930360880,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1900.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/IMG-3917.jpg?v=1772197842",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876878384,
+      "handle": "belle-riche",
+      "title": "Belle Riche",
+      "url": "https://siwafragrances.com/products/belle-riche",
+      "inspired_by": "La Belle Le Parfum",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2026-01-29T11:06:47+02:00",
+      "description_html": "<p><strong>Belle Riche</strong></p>\n<p>A seductive blend of juicy pear, rich vanilla, and creamy tonka bean, wrapped in warm jasmine and a hint of amber. A deep, addictive fragrance that captures the essence of richness &amp; softness.</p>",
+      "description_text": "Belle Riche A seductive blend of juicy pear, rich vanilla, and creamy tonka bean, wrapped in warm jasmine and a hint of amber. A deep, addictive fragrance that captures the essence of richness &amp; softness.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 550.0,
+      "price_max": 1150.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389314043952,
+          "title": "100 ml",
+          "sku": "P085",
+          "price": 1150.0,
+          "compare_at_price": 1450.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389314076720,
+          "title": "50 ml",
+          "sku": "P085",
+          "price": 750.0,
+          "compare_at_price": 1000.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389314109488,
+          "title": "30 ml",
+          "sku": "P085",
+          "price": 550.0,
+          "compare_at_price": 650.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/belle-riche-4.jpg?v=1757237388",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7776920109104,
+      "handle": "bare-glow",
+      "title": "Bare Glow",
+      "url": "https://siwafragrances.com/products/bare-glow",
+      "inspired_by": "Goddess Burberry",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2025-11-05T21:25:01+02:00",
+      "description_html": "<p><span>A velvety cloud of vanilla in all its forms pure, absolute, and caviar, gently layered with calming lavender and deep cacao. </span><span>Soft warmth that melts into your skin and stays close, like a gentle embrace.</span></p>",
+      "description_text": "A velvety cloud of vanilla in all its forms pure, absolute, and caviar, gently layered with calming lavender and deep cacao. Soft warmth that melts into your skin and stays close, like a gentle embrace.",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 450.0,
+      "price_max": 1000.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42538958422064,
+          "title": "30 ml",
+          "sku": null,
+          "price": 450.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42538958454832,
+          "title": "50 ml",
+          "sku": null,
+          "price": 650.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42538958487600,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1000.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/1EC1A752-2428-4549-B869-4EC86C442142.jpg?v=1762369369",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7767390748720,
+      "handle": "bleu-intense",
+      "title": "Bleu Intense",
+      "url": "https://siwafragrances.com/products/bleu-intense",
+      "inspired_by": "Bleu De Chanel Parfum",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2025-10-21T00:55:57+03:00",
+      "description_html": "<p><span>Bleu Intense the scent of quiet confidence, bold yet effortless, like a man who leads without speaking.</span></p>\n<p><span>Fresh citrus bursts of bergamot and lemon zest open the scent. </span><span>As it settles, cedar wood and sandalwood reveal depth and warmth, balanced with whispers of amber and tonka bean.</span></p>\n<p>Top notes: Bergamot, Lemon, Mint</p>\n<p><span>Heart notes: Lavender, Pineapple</span></p>\n<p><span>Base notes: Cedar wood, Sandalwood, Amber, Tonka Bean</span></p>",
+      "description_text": "Bleu Intense the scent of quiet confidence, bold yet effortless, like a man who leads without speaking. Fresh citrus bursts of bergamot and lemon zest open the scent. As it settles, cedar wood and sandalwood reveal depth and warmth, balanced with whispers of amber and tonka bean. Top notes: Bergamot, Lemon, Mint Heart notes: Lavender, Pineapple Base notes: Cedar wood, Sandalwood, Amber, Tonka Bean",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 500.0,
+      "price_max": 1050.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42502579781680,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1050.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42502579814448,
+          "title": "50 ml",
+          "sku": null,
+          "price": 700.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42502579847216,
+          "title": "30 ml",
+          "sku": null,
+          "price": 500.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/BleuIntense.jpg?v=1760996810",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7754046046256,
+      "handle": "silk-vanilla-body-lotion",
+      "title": "Silk Vanilla Body Lotion",
+      "url": "https://siwafragrances.com/products/silk-vanilla-body-lotion",
+      "inspired_by": "Siwa Fragrances",
+      "product_type": "body lotion",
+      "tags": [],
+      "published_at": "2025-09-29T14:30:54+03:00",
+      "description_html": "<p><span>Silk Vanilla Body Lotion</span><br><span>Lightweight lotion enriched with Vitamin E, Panthenol, Shea Butter &amp; Cocoa Butter. Deeply hydrates, absorbs quickly, and leaves skin silky smooth with a warm vanilla scent.</span></p>",
+      "description_text": "Silk Vanilla Body Lotion Lightweight lotion enriched with Vitamin E, Panthenol, Shea Butter &amp; Cocoa Butter. Deeply hydrates, absorbs quickly, and leaves skin silky smooth with a warm vanilla scent.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "120ML"
+          ]
+        }
+      ],
+      "price_min": 350.0,
+      "price_max": 350.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42440563228720,
+          "title": "120ML",
+          "sku": null,
+          "price": 350.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/CopyofSilkVanillaLotion.jpg?v=1759145417",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735877664816,
+      "handle": "mango-pineapple",
+      "title": "Mango Pineapple",
+      "url": "https://siwafragrances.com/products/mango-pineapple",
+      "inspired_by": "Summer Hammer",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "new",
+        "Women"
+      ],
+      "published_at": "2025-08-16T22:48:49+03:00",
+      "description_html": "<p>Mango Pineapple</p>\n<p>The taste of summer in a bottle. Juicy mango and pineapple, resting on soft musk that keeps your presence fresh and effortlessly chic all day</p>\n<p>Notes:</p>\n<p>Top: Mango, Pineapple, Bergamot/Lemon zest</p>\n<p>Heart: White florals, Coconut water, Creamy accord</p>\n<p>Base: Soft Musk, Light Amber, Cashmere Woods</p>",
+      "description_text": "Mango Pineapple The taste of summer in a bottle. Juicy mango and pineapple, resting on soft musk that keeps your presence fresh and effortlessly chic all day Notes: Top: Mango, Pineapple, Bergamot/Lemon zest Heart: White florals, Coconut water, Creamy accord Base: Soft Musk, Light Amber, Cashmere Woods",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 750.0,
+      "price_max": 1850.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389315747888,
+          "title": "100 ml",
+          "sku": "P100",
+          "price": 1850.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389315780656,
+          "title": "50 ml",
+          "sku": "P100",
+          "price": 1100.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389315813424,
+          "title": "30 ml",
+          "sku": "P100",
+          "price": 750.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Mango-Pineapple.jpg?v=1757237439",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735877533744,
+      "handle": "vanilla-bundle",
+      "title": "Vanilla Bundle",
+      "url": "https://siwafragrances.com/products/vanilla-bundle",
+      "inspired_by": "Siwa Fragrances",
+      "product_type": null,
+      "tags": [
+        "Bundles"
+      ],
+      "published_at": "2025-07-17T02:06:51+03:00",
+      "description_html": "<p> </p>\n<p><span>Vanilla Bundle – Your Everyday Glow in Luxury..</span></p>\n<p><span>Sink into the warm, creamy essence of Silk Vanilla.</span></p>\n<p><span>This luxurious bundle features:</span></p>\n<ul>\n<li><span>Layering Vanilla Perfume – a rich, long-lasting scent that wraps you in sensual comfort.</span></li>\n<li><span>Silk Vanilla Body Lotion (125 ml) – deeply moisturizing with Shea Butter, Cocoa Butter &amp; Vitamin E for a soft, radiant feel.</span></li>\n<li><span>Silk Vanilla Body Splash (125 ml) – a fresh touch of elegance that leaves a subtle trail of vanilla warmth all day.</span></li>\n</ul>\n<p><span>Layer all three for a long-lasting, addictive vanilla aura that feels both comforting and classy.</span></p>",
+      "description_text": "Vanilla Bundle – Your Everyday Glow in Luxury.. Sink into the warm, creamy essence of Silk Vanilla. This luxurious bundle features: Layering Vanilla Perfume – a rich, long-lasting scent that wraps you in sensual comfort. Silk Vanilla Body Lotion (125 ml) – deeply moisturizing with Shea Butter, Cocoa Butter &amp; Vitamin E for a soft, radiant feel. Silk Vanilla Body Splash (125 ml) – a fresh touch of elegance that leaves a subtle trail of vanilla warmth all day. Layer all three for a long-lasting, addictive vanilla aura that feels both comforting and classy.",
+      "options": [
+        {
+          "name": "silk vanilla (size)",
+          "values": [
+            "125ML"
+          ]
+        },
+        {
+          "name": "Silk Vanilla Body Lotion ( size )",
+          "values": [
+            "120 ml"
+          ]
+        },
+        {
+          "name": "layering vanilla (size)",
+          "values": [
+            "30ML",
+            "50ML",
+            "100ML"
+          ]
+        }
+      ],
+      "price_min": 1060.0,
+      "price_max": 1555.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42418323882032,
+          "title": "125ML / 120 ml / 30ML",
+          "sku": null,
+          "price": 1060.0,
+          "compare_at_price": 1175.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42418323914800,
+          "title": "125ML / 120 ml / 50ML",
+          "sku": null,
+          "price": 1240.0,
+          "compare_at_price": 1375.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42500489150512,
+          "title": "125ML / 120 ml / 100ML",
+          "sku": null,
+          "price": 1555.0,
+          "compare_at_price": 1725.0,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/IMG-1919.png?v=1760902182",
+          "width": 1080,
+          "height": 1440,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735877500976,
+      "handle": "drunk-gold",
+      "title": "Drunk Gold",
+      "url": "https://siwafragrances.com/products/drunk-gold",
+      "inspired_by": "Angels’ Share Paradis",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "published_at": "2025-06-24T00:13:32+03:00",
+      "description_html": "<p>Drunk Gold</p>\n<p>Liquid gold. Intoxication in every drop</p>\n<p><span style=\"font-size: 16px; -webkit-text-size-adjust: 100%;\">Woody, sweet, fruity<br>\n</span><span style=\"font-size: 16px; -webkit-text-size-adjust: 100%;\">Notes: Cognac, liquor, raspberry, praline, tonka</span></p>",
+      "description_text": "Drunk Gold Liquid gold. Intoxication in every drop Woody, sweet, fruity Notes: Cognac, liquor, raspberry, praline, tonka",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 750.0,
+      "price_max": 1950.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389315387440,
+          "title": "100 ml",
+          "sku": "P095",
+          "price": 1950.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389315420208,
+          "title": "50 ml",
+          "sku": "P095",
+          "price": 1150.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389315452976,
+          "title": "30 ml",
+          "sku": "P095",
+          "price": 750.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Drunk-Gold.jpg?v=1757237426",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735877402672,
+      "handle": "marshmallow-bundle",
+      "title": "Marshmallow Bundle",
+      "url": "https://siwafragrances.com/products/marshmallow-bundle",
+      "inspired_by": "Siwa Fragrances",
+      "product_type": null,
+      "tags": [
+        "Bundles"
+      ],
+      "published_at": "2025-05-17T22:01:56+03:00",
+      "description_html": "<p>Marshmallow Bundle<br>\nEnjoy additional 10% off when you buy marshmallow bundle !</p>",
+      "description_text": "Marshmallow Bundle Enjoy additional 10% off when you buy marshmallow bundle !",
+      "options": [
+        {
+          "name": "Marshmallow (size)",
+          "values": [
+            "125ML"
+          ]
+        },
+        {
+          "name": "Boujee Blush (size)",
+          "values": [
+            "50ML"
+          ]
+        }
+      ],
+      "price_min": 950.0,
+      "price_max": 950.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42418326962224,
+          "title": "125ML / 50ML",
+          "sku": null,
+          "price": 950.0,
+          "compare_at_price": 1250.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/body-splash-marshmellow.jpg?v=1759230513",
+          "width": 1350,
+          "height": 1350,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735877369904,
+      "handle": "marshmallow",
+      "title": "Marshmallow",
+      "url": "https://siwafragrances.com/products/marshmallow",
+      "inspired_by": "Siwa Fragrances",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2025-05-06T01:43:07+03:00",
+      "description_html": "<p>A long-lasting body splash enriched with vitamin E, sweet, warm blend of vanilla, sugar, and fluffy marshmallow.</p>\n<p><!--more--></p>",
+      "description_text": "A long-lasting body splash enriched with vitamin E, sweet, warm blend of vanilla, sugar, and fluffy marshmallow.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "125ML"
+          ]
+        }
+      ],
+      "price_min": 375.0,
+      "price_max": 375.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42440551890992,
+          "title": "125ML",
+          "sku": "SKU-44",
+          "price": 375.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Marshmallow-Splash.jpg?v=1757237416",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735877238832,
+      "handle": "lagoon-flair",
+      "title": "Lagoon Flair",
+      "url": "https://siwafragrances.com/products/lagoon-flair",
+      "inspired_by": "Le Beau Le Parfum",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "new"
+      ],
+      "published_at": "2025-04-25T01:25:33+03:00",
+      "description_html": "<p>Lagoon Flair<br>\n<span style=\"font-size: 16px;\">Sweet, woody<br>\n</span><span style=\"font-size: 16px; -webkit-text-size-adjust: 100%;\">Notes: Coconut, Pineapple, Tonka, Woods and Iris.</span></p>",
+      "description_text": "Lagoon Flair Sweet, woody Notes: Coconut, Pineapple, Tonka, Woods and Iris.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 450.0,
+      "price_max": 1200.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389314732080,
+          "title": "100 ml",
+          "sku": "P091",
+          "price": 1200.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389314764848,
+          "title": "50 ml",
+          "sku": "P091",
+          "price": 750.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389314797616,
+          "title": "30 ml",
+          "sku": "P091",
+          "price": 450.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Lagoon-Flair.jpg?v=1757237409",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735877206064,
+      "handle": "boujee-blush",
+      "title": "Boujee Blush",
+      "url": "https://siwafragrances.com/products/boujee-blush",
+      "inspired_by": "Kayali Boujee Marshmallow",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "new",
+        "Women"
+      ],
+      "published_at": "2025-04-25T01:12:34+03:00",
+      "description_html": "<p style=\"text-align: left;\">Boujee Blush<br>\n<span style=\"font-size: 16px;\">Yum powdery, sweet, fruity<br>\n</span><span style=\"font-size: 16px;\">Notes: Marshmallow, strawberry, whipped cream, vanilla, coconut and musk.</span></p>",
+      "description_text": "Boujee Blush Yum powdery, sweet, fruity Notes: Marshmallow, strawberry, whipped cream, vanilla, coconut and musk.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 500.0,
+      "price_max": 1200.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389314633776,
+          "title": "100 ml",
+          "sku": "P090",
+          "price": 1200.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389314666544,
+          "title": "50 ml",
+          "sku": "P090",
+          "price": 700.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389314699312,
+          "title": "30 ml",
+          "sku": "P090",
+          "price": 500.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Boujee-Blush.jpg?v=1757237407",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735877173296,
+      "handle": "sweet-oud",
+      "title": "Sweet Oud",
+      "url": "https://siwafragrances.com/products/sweet-oud",
+      "inspired_by": "Oud Cadenza MC",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "new",
+        "Unisex",
+        "Women"
+      ],
+      "published_at": "2025-03-23T00:00:38+02:00",
+      "description_html": "<p style=\"text-align: left\">Sweet Oud<br>\n<span style=\"font-size: 16px\">Gourmand woody oud blend .</span></p>\n<p>Top notes: Saffron, cinnamon, cardamom.</p>\n<p>Heart notes: Dates, caramel, oud, sugar</p>\n<p>Base notes: Vanilla, tonka, leather</p>",
+      "description_text": "Sweet Oud Gourmand woody oud blend . Top notes: Saffron, cinnamon, cardamom. Heart notes: Dates, caramel, oud, sugar Base notes: Vanilla, tonka, leather",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 650.0,
+      "price_max": 1650.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42389314535472,
+          "title": "100 ml",
+          "sku": "P089",
+          "price": 1650.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389314568240,
+          "title": "50 ml",
+          "sku": "P089",
+          "price": 1000.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389314601008,
+          "title": "30 ml",
+          "sku": "P089",
+          "price": 650.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/sweet-oud-1.jpg?v=1757237407",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Sweet-Oud.jpg?v=1757237407",
+          "width": 1151,
+          "height": 2048,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876911152,
+      "handle": "libre-desire",
+      "title": "Libre Desire",
+      "url": "https://siwafragrances.com/products/libre-desire",
+      "inspired_by": "YSL Libre intense",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "new",
+        "Women"
+      ],
+      "published_at": "2025-03-11T22:21:44+02:00",
+      "description_html": "<p><strong>Libre Desire</strong></p>\n<p>A bold and sensual fusion of warm vanilla, radiant orange blossom, and rich honey, with a touch of lavender and tonka bean for elegance. A rich, long-lasting scent that mirrors the allure of Beautiful Lady.</p>",
+      "description_text": "Libre Desire A bold and sensual fusion of warm vanilla, radiant orange blossom, and rich honey, with a touch of lavender and tonka bean for elegance. A rich, long-lasting scent that mirrors the allure of Beautiful Lady.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 500.0,
+      "price_max": 1250.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389314142256,
+          "title": "100 ml",
+          "sku": "P086",
+          "price": 1250.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389314175024,
+          "title": "50 ml",
+          "sku": "P086",
+          "price": 800.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389314207792,
+          "title": "30 ml",
+          "sku": "P086",
+          "price": 500.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/libre-desire-1.jpg?v=1757237390",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876747312,
+      "handle": "sweet-rum",
+      "title": "Sweet Rum",
+      "url": "https://siwafragrances.com/products/sweet-rum",
+      "inspired_by": "Siwa Fragrances",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2025-03-02T01:23:09+02:00",
+      "description_html": "<p>Sweet Rum</p>\n<p>A long-lasting body splash enriched with vitamin E, blending warm vanilla, delicate dates, sweet praline, and rich cinnamon for a sensual, irresistible scent that lingers all night.</p>",
+      "description_text": "Sweet Rum A long-lasting body splash enriched with vitamin E, blending warm vanilla, delicate dates, sweet praline, and rich cinnamon for a sensual, irresistible scent that lingers all night.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "125ml"
+          ]
+        }
+      ],
+      "price_min": 375.0,
+      "price_max": 375.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42440552022064,
+          "title": "125ml",
+          "sku": "BS-1-1-1",
+          "price": 375.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/sweet-rum.jpg?v=1757237382",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/MG_0973-scaled.jpg?v=1757237382",
+          "width": 1600,
+          "height": 2127,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/copy-of-brown-beige-minimalist-face-mist-features-instagram-post_png_85708ae2-29a7-4237-91f8-1bd663d1321d.png?v=1757237385",
+          "width": 1600,
+          "height": 1600,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876649008,
+      "handle": "apple-pie",
+      "title": "Apple Pie",
+      "url": "https://siwafragrances.com/products/apple-pie",
+      "inspired_by": "Siwa Fragrances",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2025-02-22T13:03:08+02:00",
+      "description_html": "<p>Apple Pie</p>\n<p>A long-lasting body splash enriched with vitamin E, blending warm vanilla, delicate Apple, sweet praline, and rich cinnamon for a sensual, irresistible scent that lingers all day.</p>",
+      "description_text": "Apple Pie A long-lasting body splash enriched with vitamin E, blending warm vanilla, delicate Apple, sweet praline, and rich cinnamon for a sensual, irresistible scent that lingers all day.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "125ML"
+          ]
+        }
+      ],
+      "price_min": 375.0,
+      "price_max": 375.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42440552054832,
+          "title": "125ML",
+          "sku": "BS-1-1",
+          "price": 375.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/apple-pie.jpg?v=1757237368",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/MG_0974-scaled.jpg?v=1757237368",
+          "width": 1600,
+          "height": 2150,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/brown-beige-minimalist-face-mist-features-instagram-post-4.png-4.png?v=1757237373",
+          "width": 1600,
+          "height": 1600,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876616240,
+      "handle": "silk-vanilla",
+      "title": "Silk Vanilla",
+      "url": "https://siwafragrances.com/products/silk-vanilla",
+      "inspired_by": "Siwa Fragrances",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2025-02-21T00:58:20+02:00",
+      "description_html": "<p>Silk Vanilla</p>\n<p>A long-lasting body splash enriched with vitamin E, blending warm vanilla, delicate orchid, sweet sugar, and rich amber for a sensual, irresistible scent that lingers all day.</p>",
+      "description_text": "Silk Vanilla A long-lasting body splash enriched with vitamin E, blending warm vanilla, delicate orchid, sweet sugar, and rich amber for a sensual, irresistible scent that lingers all day.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "125ML"
+          ]
+        }
+      ],
+      "price_min": 375.0,
+      "price_max": 375.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42440552120368,
+          "title": "125ML",
+          "sku": "BS-1",
+          "price": 375.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/silk-vanilla.jpg?v=1757237366",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/MG_0975-scaled.jpg?v=1757237366",
+          "width": 1600,
+          "height": 1999,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/copy-of-brown-beige-minimalist-face-mist-features-instagram-post_png.png?v=1757237371",
+          "width": 1600,
+          "height": 1600,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876583472,
+      "handle": "gourmet",
+      "title": "Gourmet",
+      "url": "https://siwafragrances.com/products/gourmet",
+      "inspired_by": "Siwa original creation",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "new",
+        "Unisex",
+        "Women"
+      ],
+      "published_at": "2025-01-09T02:03:38+02:00",
+      "description_html": "<p style=\"text-align: left\">Gourmet</p>\n<p style=\"text-align: left\">Where Gourmand Scent meets buttery Warmth !<br>\n<span style=\"font-size: 16px\">A warm croissant fresh from the oven, layered with sweet berries and rich blackcurrant, melts into the heart of toasted vanilla, gold butter and velvety Tonka bean based on Sandalwood. </span></p>",
+      "description_text": "Gourmet Where Gourmand Scent meets buttery Warmth ! A warm croissant fresh from the oven, layered with sweet berries and rich blackcurrant, melts into the heart of toasted vanilla, gold butter and velvety Tonka bean based on Sandalwood.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 800.0,
+      "price_max": 2100.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389313486896,
+          "title": "100 ml",
+          "sku": "SF-081",
+          "price": 2100.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389313519664,
+          "title": "50 ml",
+          "sku": "SF-081",
+          "price": 1250.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389313552432,
+          "title": "30 ml",
+          "sku": "SF-081",
+          "price": 800.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/gourmet.jpg?v=1757237361",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/IMG_7982-1-scaled.jpg?v=1757237362",
+          "width": 1600,
+          "height": 2133,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876419632,
+      "handle": "chocolate-creme",
+      "title": "Chocolate Creme",
+      "url": "https://siwafragrances.com/products/chocolate-creme",
+      "inspired_by": "Siwa original creation",
+      "product_type": null,
+      "tags": [
+        "Men",
+        "new",
+        "Unisex",
+        "Women"
+      ],
+      "published_at": "2024-12-06T01:04:10+02:00",
+      "description_html": "<p>Chocolate Creme</p>\n<p>Gourmand  fragrance for men &amp; women.</p>\n<p><span style=\"font-size: 16px\">Notes: Chocolate, Vanilla, orange and woods.</span></p>",
+      "description_text": "Chocolate Creme Gourmand fragrance for men &amp; women. Notes: Chocolate, Vanilla, orange and woods.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 450.0,
+      "price_max": 1250.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389312995376,
+          "title": "100 ml",
+          "sku": "SF-077",
+          "price": 1250.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389313028144,
+          "title": "50 ml",
+          "sku": "SF-077",
+          "price": 750.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389313060912,
+          "title": "30 ml",
+          "sku": "SF-077",
+          "price": 450.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/chocolate-creme.jpg?v=1757237347",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876321328,
+      "handle": "layering-30-ml-bundle",
+      "title": "Layering bundle",
+      "url": "https://siwafragrances.com/products/layering-30-ml-bundle",
+      "inspired_by": "Siwa Fragrances",
+      "product_type": null,
+      "tags": [
+        "Bundles"
+      ],
+      "published_at": "2024-11-14T01:33:28+02:00",
+      "description_html": "<p>Pay less get more!</p>\n<p>Enjoy a bundle of our three top layering perfumes with 15%</p>",
+      "description_text": "Pay less get more! Enjoy a bundle of our three top layering perfumes with 15%",
+      "options": [
+        {
+          "name": "Layering Vanilla (size)",
+          "values": [
+            "30ML",
+            "50ML"
+          ]
+        },
+        {
+          "name": "Layering Lychee",
+          "values": [
+            "30ML",
+            "50ML"
+          ]
+        },
+        {
+          "name": "Layerng Pistachio",
+          "values": [
+            "30ML",
+            "50ML",
+            "100ML"
+          ]
+        }
+      ],
+      "price_min": 1105.0,
+      "price_max": 1995.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42418330370096,
+          "title": "30ML / 30ML / 30ML",
+          "sku": null,
+          "price": 1105.0,
+          "compare_at_price": 1650.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42418330402864,
+          "title": "30ML / 30ML / 50ML",
+          "sku": null,
+          "price": 1285.0,
+          "compare_at_price": 1850.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42418330435632,
+          "title": "30ML / 30ML / 100ML",
+          "sku": null,
+          "price": 1645.0,
+          "compare_at_price": 2300.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42418330468400,
+          "title": "30ML / 50ML / 30ML",
+          "sku": null,
+          "price": 1275.0,
+          "compare_at_price": 1900.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42418330501168,
+          "title": "30ML / 50ML / 50ML",
+          "sku": null,
+          "price": 1455.0,
+          "compare_at_price": 2100.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42418330533936,
+          "title": "30ML / 50ML / 100ML",
+          "sku": null,
+          "price": 1815.0,
+          "compare_at_price": 2550.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42418330566704,
+          "title": "50ML / 30ML / 30ML",
+          "sku": null,
+          "price": 1285.0,
+          "compare_at_price": 1850.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42418330599472,
+          "title": "50ML / 30ML / 50ML",
+          "sku": null,
+          "price": 1465.0,
+          "compare_at_price": 2050.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42418330632240,
+          "title": "50ML / 30ML / 100ML",
+          "sku": null,
+          "price": 1825.0,
+          "compare_at_price": 2500.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42418330665008,
+          "title": "50ML / 50ML / 30ML",
+          "sku": null,
+          "price": 1455.0,
+          "compare_at_price": 2100.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42418330697776,
+          "title": "50ML / 50ML / 50ML",
+          "sku": null,
+          "price": 1635.0,
+          "compare_at_price": 2300.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42418330730544,
+          "title": "50ML / 50ML / 100ML",
+          "sku": null,
+          "price": 1995.0,
+          "compare_at_price": 2750.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/artboard-3.jpg?v=1759230575",
+          "width": 1350,
+          "height": 1350,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876223024,
+      "handle": "coffee-vanilla",
+      "title": "Coffee Vanilla",
+      "url": "https://siwafragrances.com/products/coffee-vanilla",
+      "inspired_by": "Siwa original creation",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "new",
+        "Women"
+      ],
+      "published_at": "2024-10-21T02:10:08+03:00",
+      "description_html": "<p>Coffee Vanilla<br>\nGourmand Coffee Vanilla fragrance for men &amp; women.<br>\nTop notes: Coffee and Amaretto.<br>\nMiddle notes: Ice cream and Vanilla.<br>\nBase notes: Brown Sugar and Vanilla.</p>",
+      "description_text": "Coffee Vanilla Gourmand Coffee Vanilla fragrance for men &amp; women. Top notes: Coffee and Amaretto. Middle notes: Ice cream and Vanilla. Base notes: Brown Sugar and Vanilla.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 550.0,
+      "price_max": 1150.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389312471088,
+          "title": "100 ml",
+          "sku": "SF-074",
+          "price": 1150.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389312503856,
+          "title": "50 ml",
+          "sku": "SF-074",
+          "price": 750.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389312536624,
+          "title": "30 ml",
+          "sku": "SF-074",
+          "price": 550.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/coffee-vanilla-1.jpg?v=1757237333",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876190256,
+      "handle": "layering-apple",
+      "title": "Layering Apple",
+      "url": "https://siwafragrances.com/products/layering-apple",
+      "inspired_by": "Eden Juicy Apple kayali",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Women"
+      ],
+      "published_at": "2024-10-21T01:43:13+03:00",
+      "description_html": "<p style=\"text-align: left\">Layering Apple<br>\nFloral Fruity Gourmand fragrance for women.<br>\nTop notes: Red Apple, Litchi, Black Currant.<br>\nMiddle notes: Wild Berries, Raspberry Bloom, May Rose and Jasmine.<br>\nBase notes: Sugar, Musk, Vanilla.</p>",
+      "description_text": "Layering Apple Floral Fruity Gourmand fragrance for women. Top notes: Red Apple, Litchi, Black Currant. Middle notes: Wild Berries, Raspberry Bloom, May Rose and Jasmine. Base notes: Sugar, Musk, Vanilla.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 450.0,
+      "price_max": 650.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42389312405552,
+          "title": "50 ml",
+          "sku": "SF-073",
+          "price": 650.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389312438320,
+          "title": "30 ml",
+          "sku": "SF-073",
+          "price": 450.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/layering-apple.jpg?v=1757237330",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735876059184,
+      "handle": "caramel-vanigliato",
+      "title": "Caramel vanigliato",
+      "url": "https://siwafragrances.com/products/caramel-vanigliato",
+      "inspired_by": "Bianco Latte Giardini Di Toscana",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "published_at": "2024-10-08T04:06:02+03:00",
+      "description_html": "<p>Caramel Vanigliato<br>\nGourmand Vanilla fragrance for men &amp; women.<br>\nTop notes: Caramel<br>\nMiddle notes: Coumarin and Honey<br>\nBase notes: Vanilla and White Musk</p>",
+      "description_text": "Caramel Vanigliato Gourmand Vanilla fragrance for men &amp; women. Top notes: Caramel Middle notes: Coumarin and Honey Base notes: Vanilla and White Musk",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 550.0,
+      "price_max": 1550.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389312045104,
+          "title": "100 ml",
+          "sku": "SF-070",
+          "price": 1550.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389312077872,
+          "title": "50 ml",
+          "sku": "SF-070",
+          "price": 850.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389312110640,
+          "title": "30 ml",
+          "sku": "SF-070",
+          "price": 550.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/caramel-vanigliato.jpg?v=1757237320",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735875829808,
+      "handle": "luna-di-roma",
+      "title": "Luna Di Roma",
+      "url": "https://siwafragrances.com/products/luna-di-roma",
+      "inspired_by": "Valentino Donna Born In Roma Intense",
+      "product_type": null,
+      "tags": [
+        "Women"
+      ],
+      "published_at": "2024-08-14T22:39:37+03:00",
+      "description_html": "<p>Luna Di Roma<br>\nAmber floral fragrance for women<br>\nTop notes : Bourbon Vanilla and Amber<br>\nMiddle notes : Jasmine<br>\nBase notes : Benzoin</p>",
+      "description_text": "Luna Di Roma Amber floral fragrance for women Top notes : Bourbon Vanilla and Amber Middle notes : Jasmine Base notes : Benzoin",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "50 ml"
+          ]
+        }
+      ],
+      "price_min": 600.0,
+      "price_max": 600.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389311488048,
+          "title": "50 ml",
+          "sku": "SL-012",
+          "price": 600.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Luna_Di_Roma.jpg?v=1758472096",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735875797040,
+      "handle": "coco-woods",
+      "title": "Coco Woods",
+      "url": "https://siwafragrances.com/products/coco-woods",
+      "inspired_by": "Vanilla Powder Matiere Premiere",
+      "product_type": null,
+      "tags": [
+        "Men",
+        "Women"
+      ],
+      "published_at": "2024-07-08T02:47:52+03:00",
+      "description_html": "<p>Coco Woods</p>\n<p>Notes: Vanilla, musk, coconut powder, palo santo</p>",
+      "description_text": "Coco Woods Notes: Vanilla, musk, coconut powder, palo santo",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 850.0,
+      "price_max": 2300.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389311455280,
+          "title": "30 ml",
+          "sku": "SF-069",
+          "price": 850.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389311422512,
+          "title": "50 ml",
+          "sku": "SF-069",
+          "price": 1300.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389311389744,
+          "title": "100 ml",
+          "sku": "SF-069",
+          "price": 2300.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/coco-woods.jpg?v=1757237298",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735875731504,
+      "handle": "soul-poudree",
+      "title": "Soul Poudree",
+      "url": "https://siwafragrances.com/products/soul-poudree",
+      "inspired_by": "Narciso Poudree",
+      "product_type": null,
+      "tags": [
+        "Women"
+      ],
+      "published_at": "2024-06-17T18:40:51+03:00",
+      "description_html": "<p>Soul Poudree<br>\nWoody Floral Musk fragrance for women<br>\nTop notes : Jasmine, Bulgarian Rose and Orange Blossom<br>\nMiddle notes : Musk<br>\nBase notes : Coumarin, Cedar, Vetiver and Patchouli</p>",
+      "description_text": "Soul Poudree Woody Floral Musk fragrance for women Top notes : Jasmine, Bulgarian Rose and Orange Blossom Middle notes : Musk Base notes : Coumarin, Cedar, Vetiver and Patchouli",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 400.0,
+      "price_max": 1050.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42621716856880,
+          "title": "100",
+          "sku": "SL-010",
+          "price": 1050.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389311291440,
+          "title": "50 ml",
+          "sku": "SL-010",
+          "price": 600.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389311324208,
+          "title": "30 ml",
+          "sku": "SL-010",
+          "price": 400.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Soul_Poudree.jpg?v=1758472096",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735875600432,
+      "handle": "iris-elixir",
+      "title": "Iris elixir",
+      "url": "https://siwafragrances.com/products/iris-elixir",
+      "inspired_by": "Prada L’Homme Intense",
+      "product_type": null,
+      "tags": [
+        "Men"
+      ],
+      "published_at": "2024-06-14T14:06:28+03:00",
+      "description_html": "<p>Iris elixir<br>\nAmber Woody fragrance for men<br>\nTop notes : Iris<br>\nMiddle notes : Amber and Patchouli<br>\nBase notes : Tonka Bean, Leather and Sandalwood</p>",
+      "description_text": "Iris elixir Amber Woody fragrance for men Top notes : Iris Middle notes : Amber and Patchouli Base notes : Tonka Bean, Leather and Sandalwood",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml"
+          ]
+        }
+      ],
+      "price_min": 850.0,
+      "price_max": 1350.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389311062064,
+          "title": "100 ml",
+          "sku": "SL-006",
+          "price": 1350.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389311094832,
+          "title": "50 ml",
+          "sku": "SL-006",
+          "price": 850.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/iris-elixir-1.jpg?v=1757237280",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735875502128,
+      "handle": "hot-male",
+      "title": "Hot Male",
+      "url": "https://siwafragrances.com/products/hot-male",
+      "inspired_by": "You Intensely Giorgio Armani",
+      "product_type": null,
+      "tags": [
+        "Men"
+      ],
+      "published_at": "2024-06-14T01:32:08+03:00",
+      "description_html": "<p>Hot Male<br>\nAmber Fougere fragrance for men.<br>\nTop notes :Pink Pepper, Juniper and Violet<br>\nMiddle notes :Toffee, Cinnamon, Lavender and Sage<br>\nBase notes : Vanilla, Amber, Tonka Bean and Suede</p>",
+      "description_text": "Hot Male Amber Fougere fragrance for men. Top notes :Pink Pepper, Juniper and Violet Middle notes :Toffee, Cinnamon, Lavender and Sage Base notes : Vanilla, Amber, Tonka Bean and Suede",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 800.0,
+      "price_max": 1250.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389310898224,
+          "title": "50 ml",
+          "sku": "SL-003",
+          "price": 800.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 43006254972976,
+          "title": "100 ml",
+          "sku": "SL-003",
+          "price": 1250.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/hot-male.jpg?v=1757237269",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735875436592,
+      "handle": "marasi",
+      "title": "Marasi",
+      "url": "https://siwafragrances.com/products/marasi",
+      "inspired_by": "40 Knots Xerjoff",
+      "product_type": null,
+      "tags": [
+        "Men",
+        "Women"
+      ],
+      "published_at": "2024-05-21T14:13:20+03:00",
+      "description_html": "<p>Marasi<br>\nMarine, salty, woody<br>\nOn the deck of a majestic yacht, a gentleman basked in the lap of luxury as he sailed across the azure waters. Around him, the salty breeze mingled with the lush green notes of the coastline, creating an ambiance of refined opulence. The scent of the sea, carried on the wind, whispered tales of adventure and exploration, while the rich aroma of woods added depth and sophistication to the air. This beach-inspired perfume was a tribute to indulgence, capturing the essence of high-end relaxation on the open sea. As he breathed in the intoxicating blend of woods, salt, sea, and green notes, he felt a sense of serenity wash over him, knowing that every moment aboard his yacht was a testament to the pinnacle of luxury living.</p>",
+      "description_text": "Marasi Marine, salty, woody On the deck of a majestic yacht, a gentleman basked in the lap of luxury as he sailed across the azure waters. Around him, the salty breeze mingled with the lush green notes of the coastline, creating an ambiance of refined opulence. The scent of the sea, carried on the wind, whispered tales of adventure and exploration, while the rich aroma of woods added depth and sophistication to the air. This beach-inspired perfume was a tribute to indulgence, capturing the essence of high-end relaxation on the open sea. As he breathed in the intoxicating blend of woods, salt, sea, and green notes, he felt a sense of serenity wash over him, knowing that every moment aboard his yacht was a testament to the pinnacle of luxury living.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 550.0,
+      "price_max": 1400.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389310701616,
+          "title": "100 ml",
+          "sku": "SF-067",
+          "price": 1400.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389310734384,
+          "title": "50 ml",
+          "sku": "SF-067",
+          "price": 850.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389310767152,
+          "title": "30 ml",
+          "sku": "SF-067",
+          "price": 550.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/marasi.jpg?v=1757237266",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735875338288,
+      "handle": "hibiscusex",
+      "title": "Hibiscusex",
+      "url": "https://siwafragrances.com/products/hibiscusex",
+      "inspired_by": "Hibiscus Mahajád",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "published_at": "2024-05-10T14:54:02+03:00",
+      "description_html": "<p>Hibiscusex<br>\nVanilla, floral, rose<br>\nIn a classy hotel bar, amidst the soft glow of candlelight and the whispers of conversations, a couple shared a moment of intimacy on their elegant date night. As they savored their drinks, the air was imbued with the alluring scent of hibiscus and roses, casting a spell of romance around them. Vanilla infused the atmosphere with a delicate sweetness, while black currant added a touch of intrigue to their evening. With each sip &amp; shared glance their connection deepened, their senses enveloped in the seductive perfume of their blossoming affection, marking the beginning of a memorable night to cherish forever.</p>",
+      "description_text": "Hibiscusex Vanilla, floral, rose In a classy hotel bar, amidst the soft glow of candlelight and the whispers of conversations, a couple shared a moment of intimacy on their elegant date night. As they savored their drinks, the air was imbued with the alluring scent of hibiscus and roses, casting a spell of romance around them. Vanilla infused the atmosphere with a delicate sweetness, while black currant added a touch of intrigue to their evening. With each sip &amp; shared glance their connection deepened, their senses enveloped in the seductive perfume of their blossoming affection, marking the beginning of a memorable night to cherish forever.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 700.0,
+      "price_max": 1650.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389310439472,
+          "title": "100 ml",
+          "sku": "SF-065",
+          "price": 1650.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389310472240,
+          "title": "50 ml",
+          "sku": "SF-065",
+          "price": 1000.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389310505008,
+          "title": "30 ml",
+          "sku": "SF-065",
+          "price": 700.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/hibiscusex.jpg?v=1757237253",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735875272752,
+      "handle": "male-elixir",
+      "title": "Male Elixir",
+      "url": "https://siwafragrances.com/products/male-elixir",
+      "inspired_by": "Le Male Elixir JPG",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men"
+      ],
+      "published_at": "2024-05-04T17:35:42+03:00",
+      "description_html": "<p>Male Elixir<br>\nIn the dimly lit streets of a cosmopolitan city, a man strolled confidently, leaving a trail of allure in his wake. His presence was like a symphony of elegance and sensuality, embodied in the fragrance he wore. With each step, notes of intoxicating vanilla and golden honey enveloped him, blending seamlessly with the warmth of tonka and the soothing essence of lavender. Crisp mint added a refreshing twist, while whispers of tobacco added depth and intrigue. As he passed, heads turned, captivated by the irresistible allure of his scent, a subtle yet undeniable declaration of his magnetic charm.</p>",
+      "description_text": "Male Elixir In the dimly lit streets of a cosmopolitan city, a man strolled confidently, leaving a trail of allure in his wake. His presence was like a symphony of elegance and sensuality, embodied in the fragrance he wore. With each step, notes of intoxicating vanilla and golden honey enveloped him, blending seamlessly with the warmth of tonka and the soothing essence of lavender. Crisp mint added a refreshing twist, while whispers of tobacco added depth and intrigue. As he passed, heads turned, captivated by the irresistible allure of his scent, a subtle yet undeniable declaration of his magnetic charm.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 450.0,
+      "price_max": 1250.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389310242864,
+          "title": "100 ml",
+          "sku": "SL-001",
+          "price": 1250.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389310275632,
+          "title": "50 ml",
+          "sku": "SL-001",
+          "price": 750.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389310308400,
+          "title": "30 ml",
+          "sku": "SL-001",
+          "price": 450.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/male-elixir.jpg?v=1757237253",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735875207216,
+      "handle": "layering-lychee",
+      "title": "Layering Lychee",
+      "url": "https://siwafragrances.com/products/layering-lychee",
+      "inspired_by": "Eden Sparkling Lychee 39 Kayali",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Women"
+      ],
+      "published_at": "2024-04-03T15:27:11+02:00",
+      "description_html": "<p>Layering Lychee<br>\nSweet, Fruity, vanilla<br>\nIntroducing our summer feminine perfume, where juicy lychee takes center stage, dancing with notes of vanilla, black currant, and a sprinkle of sugar. A delightful concoction that captures the essence of sunny days and carefree moments. Revel in the sweet and refreshing allure of this irresistible fragrance, perfect for brightening up your summer adventures.</p>",
+      "description_text": "Layering Lychee Sweet, Fruity, vanilla Introducing our summer feminine perfume, where juicy lychee takes center stage, dancing with notes of vanilla, black currant, and a sprinkle of sugar. A delightful concoction that captures the essence of sunny days and carefree moments. Revel in the sweet and refreshing allure of this irresistible fragrance, perfect for brightening up your summer adventures.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 450.0,
+      "price_max": 1000.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389310046256,
+          "title": "100 ml",
+          "sku": "SP-061",
+          "price": 1000.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389310079024,
+          "title": "50 ml",
+          "sku": "SP-061",
+          "price": 650.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389310111792,
+          "title": "30 ml",
+          "sku": "SP-061",
+          "price": 450.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Layering_Lychee.jpg?v=1758472098",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735875010608,
+      "handle": "stellar-nights",
+      "title": "Stellar Nights",
+      "url": "https://siwafragrances.com/products/stellar-nights",
+      "inspired_by": "Stellar Times Louis Vuitton",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "published_at": "2023-12-20T00:30:14+02:00",
+      "description_html": "<p>Stellar Nights<br>\nDiscover the allure of our new unisex perfume, a harmonious fusion where the warm<br>\namber intertwines with the vibrant essence of orange blossoms.<br>\nBalanced by the grounding notes of woods which captures the essence<br>\nof timeless sophistication.<br>\nEmbrace the versatility of scent that transcends boundaries, leaving an indelible impression<br>\nwith every spritz.</p>",
+      "description_text": "Stellar Nights Discover the allure of our new unisex perfume, a harmonious fusion where the warm amber intertwines with the vibrant essence of orange blossoms. Balanced by the grounding notes of woods which captures the essence of timeless sophistication. Embrace the versatility of scent that transcends boundaries, leaving an indelible impression with every spritz.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 800.0,
+      "price_max": 2050.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42389309521968,
+          "title": "100 ml",
+          "sku": "SP-056",
+          "price": 2050.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389309489200,
+          "title": "50 ml",
+          "sku": "SP-056",
+          "price": 1200.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389309456432,
+          "title": "30 ml",
+          "sku": "SP-056",
+          "price": 800.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Stellar_Nights.jpg?v=1758471182",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874977840,
+      "handle": "hot-vanilla",
+      "title": "Hot Vanilla",
+      "url": "https://siwafragrances.com/products/hot-vanilla",
+      "inspired_by": "Althaïr Parfums de Marly",
+      "product_type": null,
+      "tags": [
+        "Men",
+        "Women"
+      ],
+      "published_at": "2023-11-26T18:09:36+02:00",
+      "description_html": "<p>Hot Vanilla<br>\nSweet Warm spicy<br>\nIndulge your senses in the enchanting embrace of our warm perfume.<br>\nA harmonious blend of cardamom and cinnamon unfolds like a comforting hug, while the richness of vanilla and praline adds a touch of sweetness.<br>\nThe scent lingers with a subtle allure, courtesy of a sensual mix of musk &amp; woods. Elevate your presence with this enticing fragrance, a symphony of warmth and sophistication.</p>",
+      "description_text": "Hot Vanilla Sweet Warm spicy Indulge your senses in the enchanting embrace of our warm perfume. A harmonious blend of cardamom and cinnamon unfolds like a comforting hug, while the richness of vanilla and praline adds a touch of sweetness. The scent lingers with a subtle allure, courtesy of a sensual mix of musk &amp; woods. Elevate your presence with this enticing fragrance, a symphony of warmth and sophistication.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 550.0,
+      "price_max": 1550.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389309358128,
+          "title": "100 ml",
+          "sku": "SP-054",
+          "price": 1550.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389309390896,
+          "title": "50 ml",
+          "sku": "SP-054",
+          "price": 850.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389309423664,
+          "title": "30 ml",
+          "sku": "SP-054",
+          "price": 550.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/hot-vanilla.jpg?v=1757237229",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874879536,
+      "handle": "layering-pistachio",
+      "title": "Layering Pistachio",
+      "url": "https://siwafragrances.com/products/layering-pistachio",
+      "inspired_by": "Yum Pistachio Gelato Kayali",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "published_at": "2023-10-27T17:29:53+02:00",
+      "description_html": "<p>Layering Pistachio<br>\nSweet, woody, nutty<br>\nDelicious blend captivates the senses with its irresistible and edible notes including pistachio, whipped cream, roasted hazelnut, sweet rum, fluffy marshmallow, and fizzy cotton candy.<br>\nIrresistible perfume ideal for layering &amp; sexy.<br>\nBest for winter and fall.</p>",
+      "description_text": "Layering Pistachio Sweet, woody, nutty Delicious blend captivates the senses with its irresistible and edible notes including pistachio, whipped cream, roasted hazelnut, sweet rum, fluffy marshmallow, and fizzy cotton candy. Irresistible perfume ideal for layering &amp; sexy. Best for winter and fall.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 450.0,
+      "price_max": 1000.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42389309063216,
+          "title": "100 ml",
+          "sku": "SP-051",
+          "price": 1000.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389309095984,
+          "title": "50 ml",
+          "sku": "SP-051",
+          "price": 650.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389309128752,
+          "title": "30 ml",
+          "sku": "SP-051",
+          "price": 450.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/layering-pistachio.jpg?v=1757237217",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874814000,
+      "handle": "layering-vanilla",
+      "title": "Layering Vanilla",
+      "url": "https://siwafragrances.com/products/layering-vanilla",
+      "inspired_by": "Vanilla 28 Kayali",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "published_at": "2023-10-20T17:01:20+03:00",
+      "description_html": "<p>Layering Vanilla</p>\n<p>Sweet, amber, vanilla</p>\n<p>Amber Vanilla fragrance captivates the senses with its creamy long lasting components of jasmine, vanilla orchid, tonka bean, sugar, vanilla, amberwood and Musk.</p>\n<p>Sensual vanilla perfume ideal for layering &amp; sexy. <span style=\"font-size: 16px\">Best for winter and fall</span></p>",
+      "description_text": "Layering Vanilla Sweet, amber, vanilla Amber Vanilla fragrance captivates the senses with its creamy long lasting components of jasmine, vanilla orchid, tonka bean, sugar, vanilla, amberwood and Musk. Sensual vanilla perfume ideal for layering &amp; sexy. Best for winter and fall",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 450.0,
+      "price_max": 1000.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389308932144,
+          "title": "100 ml",
+          "sku": "SP-050",
+          "price": 1000.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389308964912,
+          "title": "50 ml",
+          "sku": "SP-050",
+          "price": 650.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389308997680,
+          "title": "30 ml",
+          "sku": "SP-050",
+          "price": 450.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/layering-vanilla1.jpg?v=1757237216",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874715696,
+      "handle": "mango-on-woods",
+      "title": "Mango on woods",
+      "url": "https://siwafragrances.com/products/mango-on-woods",
+      "inspired_by": "God of Fire Stéphane Humbert",
+      "product_type": null,
+      "tags": [
+        "Men"
+      ],
+      "published_at": "2023-10-06T19:07:40+03:00",
+      "description_html": "<p>Mango on woods</p>\n<p>Fruity, sweet, woody</p>\n<p>Tropical woody blend of mango, lemon, ginger, red berries enriched with woody notes &amp; based on amber, musk and nagarmotha.</p>\n<p>Attractive woody scent has a realistic mango scent with a unique sweetness touch makes it ideal for all year use.</p>",
+      "description_text": "Mango on woods Fruity, sweet, woody Tropical woody blend of mango, lemon, ginger, red berries enriched with woody notes &amp; based on amber, musk and nagarmotha. Attractive woody scent has a realistic mango scent with a unique sweetness touch makes it ideal for all year use.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 700.0,
+      "price_max": 1800.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389308637232,
+          "title": "100 ml",
+          "sku": "SP-046",
+          "price": 1800.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389308670000,
+          "title": "50 ml",
+          "sku": "SP-046",
+          "price": 1000.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389308702768,
+          "title": "30 ml",
+          "sku": "SP-046",
+          "price": 700.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/mango-on-woods.jpg?v=1757237206",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874682928,
+      "handle": "pacific-elixir",
+      "title": "Pacific Elixir",
+      "url": "https://siwafragrances.com/products/pacific-elixir",
+      "inspired_by": "Pacific Chill Louis Vuitton",
+      "product_type": null,
+      "tags": [
+        "Men",
+        "Women"
+      ],
+      "published_at": "2023-10-06T01:39:16+03:00",
+      "description_html": "<p>Pacific Elixir</p>\n<p>Citrus, fruity, sweet.</p>\n<p>Fresh blend of apricot, orange, mint, lemon, cedrat, blackcurrant, basil with slight hints of dates and amber. Sparkly fresh heavenly scent evokes the serenity of the sparkling ocean.</p>\n<p>Very comforting &amp; gives a cooling effect !</p>",
+      "description_text": "Pacific Elixir Citrus, fruity, sweet. Fresh blend of apricot, orange, mint, lemon, cedrat, blackcurrant, basil with slight hints of dates and amber. Sparkly fresh heavenly scent evokes the serenity of the sparkling ocean. Very comforting &amp; gives a cooling effect !",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "30 ml",
+            "50 ml",
+            "100 ml"
+          ]
+        }
+      ],
+      "price_min": 600.0,
+      "price_max": 1500.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389308538928,
+          "title": "30 ml",
+          "sku": "SP-045",
+          "price": 600.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389308571696,
+          "title": "50 ml",
+          "sku": "SP-045",
+          "price": 900.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389308604464,
+          "title": "100 ml",
+          "sku": "SP-045",
+          "price": 1500.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/pacific-elixir.jpg?v=1757237205",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874551856,
+      "handle": "carnal-trail",
+      "title": "Carnal Trail",
+      "url": "https://siwafragrances.com/products/carnal-trail",
+      "inspired_by": "Side Effect Initio",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "published_at": "2023-09-24T19:54:45+03:00",
+      "description_html": "<p>Carnal Trail</p>\n<p>Vanilla, Rum, Tobacco</p>\n<p>Irresistible boozy blend of rum, vanilla, tobacco and cinnamon.</p>\n<p>Drop dead sexy perfume gives a deep, sexy unforgettable trail.</p>\n<p>If you want to smell the sexiest person in this world Wear it !</p>",
+      "description_text": "Carnal Trail Vanilla, Rum, Tobacco Irresistible boozy blend of rum, vanilla, tobacco and cinnamon. Drop dead sexy perfume gives a deep, sexy unforgettable trail. If you want to smell the sexiest person in this world Wear it !",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 600.0,
+      "price_max": 1550.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389308047408,
+          "title": "100 ml",
+          "sku": "SP-041",
+          "price": 1550.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389308080176,
+          "title": "50 ml",
+          "sku": "SP-041",
+          "price": 900.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389308112944,
+          "title": "30 ml",
+          "sku": "SP-041",
+          "price": 600.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/CarnalTrail.jpg?v=1759184604",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874519088,
+      "handle": "insane-pineapple",
+      "title": "Insane Pineapple",
+      "url": "https://siwafragrances.com/products/insane-pineapple",
+      "inspired_by": "Nishane Hacivat",
+      "product_type": null,
+      "tags": [
+        "Men"
+      ],
+      "published_at": "2023-09-21T22:40:08+03:00",
+      "description_html": "<p>Insane Pineapple</p>\n<p>Citrus, Woody, mossy</p>\n<p>Unique fresh blend of pineapple, grapefruit, bergamot, patchouli based on moss and woods.</p>\n<p>Strong summer perfume gives the feeling of sitting on the beach on a sunny day while drinking an extremely fresh pineapple juice &amp; breezing a mossy fresh air.</p>",
+      "description_text": "Insane Pineapple Citrus, Woody, mossy Unique fresh blend of pineapple, grapefruit, bergamot, patchouli based on moss and woods. Strong summer perfume gives the feeling of sitting on the beach on a sunny day while drinking an extremely fresh pineapple juice &amp; breezing a mossy fresh air.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 500.0,
+      "price_max": 1350.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389307949104,
+          "title": "100 ml",
+          "sku": "SP-040",
+          "price": 1350.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389307981872,
+          "title": "50 ml",
+          "sku": "SP-040",
+          "price": 850.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389308014640,
+          "title": "30 ml",
+          "sku": "SP-040",
+          "price": 500.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/insane-pineapple.jpg?v=1757237187",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874322480,
+      "handle": "lady-killer",
+      "title": "Lady killer",
+      "url": "https://siwafragrances.com/products/lady-killer",
+      "inspired_by": "Layton PDM",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men"
+      ],
+      "published_at": "2023-08-04T15:54:14+03:00",
+      "description_html": "<p style=\"text-align: left\">Lady Killer</p>\n<p>Vanilla, warm, spicy.<br>\n<span style=\"font-size: 16px\">Sexy &amp; hot blend of vanilla green apple, cardamom, lavender, pepper, jasmine, patchouli and woods.</span></p>\n<p>Ideal for special occasions and dates. Its like a date night in a fancy restaurant Its a lady killer !</p>",
+      "description_text": "Lady Killer Vanilla, warm, spicy. Sexy &amp; hot blend of vanilla green apple, cardamom, lavender, pepper, jasmine, patchouli and woods. Ideal for special occasions and dates. Its like a date night in a fancy restaurant Its a lady killer !",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 750.0,
+      "price_max": 1750.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389307424816,
+          "title": "100 ml",
+          "sku": "SP-034",
+          "price": 1750.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389307392048,
+          "title": "50 ml",
+          "sku": "SP-034",
+          "price": 1100.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389307359280,
+          "title": "30 ml",
+          "sku": "SP-034",
+          "price": 750.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/lady-killer.jpg?v=1757237176",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874158640,
+      "handle": "irresistible-vanilla",
+      "title": "Irresistible Vanilla",
+      "url": "https://siwafragrances.com/products/irresistible-vanilla",
+      "inspired_by": "Siwa original creation",
+      "product_type": null,
+      "tags": [
+        "Best Selling"
+      ],
+      "published_at": "2023-05-30T00:32:15+03:00",
+      "description_html": "<p>Irresistible Vanilla</p>\n<p>Vanilla, sweet, powdery.</p>\n<p>Warm sweet blend of vanilla, sugar, cacao, tonka beans, red berries based on amber, musk and woods.</p>\n<p>Sexy and beautiful perfume perfect for dates and nights out.</p>\n<p>It is irresistible !</p>",
+      "description_text": "Irresistible Vanilla Vanilla, sweet, powdery. Warm sweet blend of vanilla, sugar, cacao, tonka beans, red berries based on amber, musk and woods. Sexy and beautiful perfume perfect for dates and nights out. It is irresistible !",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 400.0,
+      "price_max": 1000.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42389306933296,
+          "title": "100 ml",
+          "sku": "SP-030",
+          "price": 1000.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389306998832,
+          "title": "50 ml",
+          "sku": "SP-030",
+          "price": 600.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389306966064,
+          "title": "30 ml",
+          "sku": "SP-030",
+          "price": 400.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/Irresistible_Vanilla.jpg?v=1758472102",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735874125872,
+      "handle": "summer-elegance",
+      "title": "summer elegance",
+      "url": "https://siwafragrances.com/products/summer-elegance",
+      "inspired_by": "Imagination LV",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men"
+      ],
+      "published_at": "2023-05-29T23:56:08+03:00",
+      "description_html": "<p>Summer elegance</p>\n<p>Citrus, Fresh, Clean</p>\n<p>Elegant blend of citron, bergamot, orange, neroli, cinnamon based on ambroxan, woods, and chinese black tea.</p>\n<p>Calming, refreshing and inviting perfume will avoid you to smell like everyone else in Summer !</p>",
+      "description_text": "Summer elegance Citrus, Fresh, Clean Elegant blend of citron, bergamot, orange, neroli, cinnamon based on ambroxan, woods, and chinese black tea. Calming, refreshing and inviting perfume will avoid you to smell like everyone else in Summer !",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 850.0,
+      "price_max": 2150.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389306867760,
+          "title": "100 ml",
+          "sku": "SP-029",
+          "price": 2150.0,
+          "compare_at_price": null,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389306900528,
+          "title": "50 ml",
+          "sku": "SP-029",
+          "price": 1250.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389306834992,
+          "title": "30 ml",
+          "sku": "SP-029",
+          "price": 850.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/summer-elegance.jpg?v=1757237165",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735873568816,
+      "handle": "mawj",
+      "title": "Mawj",
+      "url": "https://siwafragrances.com/products/mawj",
+      "inspired_by": "Siwa Fragrances",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men"
+      ],
+      "published_at": "2022-06-29T23:52:27+02:00",
+      "description_html": "<p>Mawj</p>\n<p>Citrus , marine, woody</p>\n<p>Luxurios blend of sea notes, watery notes, ozonic notes, spicey notes, vanilla combined with bitter orange, pineapple, with hints of vetiver, violet, iris, jasmine with smooth touches of oud, musk and sandalwood. An elegant aquatic perfume reflects the depth of the sea &amp; its fresh breeze in an oriental way.</p>\n<p><!-- .wpforms-container --></p>",
+      "description_text": "Mawj Citrus , marine, woody Luxurios blend of sea notes, watery notes, ozonic notes, spicey notes, vanilla combined with bitter orange, pineapple, with hints of vetiver, violet, iris, jasmine with smooth touches of oud, musk and sandalwood. An elegant aquatic perfume reflects the depth of the sea &amp; its fresh breeze in an oriental way.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 800.0,
+      "price_max": 1850.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42389305032752,
+          "title": "100 ml",
+          "sku": "SP-012",
+          "price": 1850.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389305065520,
+          "title": "50 ml",
+          "sku": "SP-012",
+          "price": 1100.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389305098288,
+          "title": "30 ml",
+          "sku": "SP-012",
+          "price": 800.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/mawj.jpg?v=1757237116",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735873404976,
+      "handle": "summer-holidays",
+      "title": "Summer Holidays",
+      "url": "https://siwafragrances.com/products/summer-holidays",
+      "inspired_by": "LV Afternoon Swim",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "published_at": "2022-05-20T16:39:10+02:00",
+      "description_html": "<p>Citrus, fresh, aquatic</p>\n<p>Summer Holidays a super refreshing blend of sicilian orange, bergamot, mandarine, ginger with hints of ambergris.</p>\n<p>A beautiful citrus scent, juicy and addictive.</p>\n<p>perfect for summer and daily use.</p>",
+      "description_text": "Citrus, fresh, aquatic Summer Holidays a super refreshing blend of sicilian orange, bergamot, mandarine, ginger with hints of ambergris. A beautiful citrus scent, juicy and addictive. perfect for summer and daily use.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 650.0,
+      "price_max": 1700.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389304541232,
+          "title": "100 ml",
+          "sku": "SP-007",
+          "price": 1700.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389304574000,
+          "title": "50 ml",
+          "sku": "SP-007",
+          "price": 1000.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389304606768,
+          "title": "30 ml",
+          "sku": "SP-007",
+          "price": 650.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/summer-holidays.jpg?v=1757237094",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735873044528,
+      "handle": "citrine",
+      "title": "Citrine",
+      "url": "https://siwafragrances.com/products/citrine",
+      "inspired_by": "Tygar Bvlgari",
+      "product_type": null,
+      "tags": [
+        "Best Selling",
+        "Men"
+      ],
+      "published_at": "2022-04-07T22:25:10+02:00",
+      "description_html": "<p>Citrine by Siwa Fragrances is a modern masculine fragrance crafted for those who command attention without saying a word. Clean yet sensual, vibrant yet deep — Citrine is your daily signature scent.</p>\n<p><span style=\"font-size: 16px; -webkit-text-size-adjust: 100%;\">Notes &amp; Character</span></p>\n<ul>\n<li>Top Notes: Bright and zesty grapefruit opens the scent with a burst of citrus energy, perfect for a fresh start to your day.</li>\n<li>Heart Notes: The spice of ginger blends with soft ambrette, creating a warm, aromatic core that adds depth and character.</li>\n<li>Base Notes: A smooth, skin-like blend of musk and ambroxan offers sensuality and longevity, leaving a clean yet memorable trail.</li>\n</ul>\n<p><span style=\"font-size: 16px; -webkit-text-size-adjust: 100%;\">Citrine is made for men who value minimalism with presence. </span><span style=\"font-size: 16px; -webkit-text-size-adjust: 100%;\">It’s the kind of scent people remember — not because it shouts, but because it lingers.</span> <span style=\"font-size: 16px; -webkit-text-size-adjust: 100%;\">You’ll smell like your best self — confident, clean, and put-together.</span></p>\n<p><span style=\"font-size: 16px; -webkit-text-size-adjust: 100%;\">Why Citrine is One of the Best Men’s Perfumes</span></p>\n<ul>\n<li>Crafted by Siwa Fragrances with premium-quality ingredients</li>\n<li>Features a modern blend of citrus, spice, and musk</li>\n<li>Perfect balance of freshness and sensuality</li>\n<li>Sleek, minimalistic scent profile — easy to wear, hard to forget</li>\n<li>Packaged with sophistication and made to impress</li>\n</ul>\n<p>Whether you’re walking into a meeting, a café, or a quiet evening with someone special, Citrine by Siwa Fragrances gives you the perfect scent of self-assurance.</p>\n<p>Add Citrine to your collection today — and step into your signature scent.</p>\n<div id=\"wpforms-991\" class=\"wpforms-container \">\n<div class=\"wpforms-head-container\">\n<div class=\"wpforms-title\"></div>\n</div>\n</div>\n<p><!-- .wpforms-container --></p>",
+      "description_text": "Citrine by Siwa Fragrances is a modern masculine fragrance crafted for those who command attention without saying a word. Clean yet sensual, vibrant yet deep — Citrine is your daily signature scent. Notes &amp; Character Top Notes: Bright and zesty grapefruit opens the scent with a burst of citrus energy, perfect for a fresh start to your day. Heart Notes: The spice of ginger blends with soft ambrette, creating a warm, aromatic core that adds depth and character. Base Notes: A smooth, skin-like blend of musk and ambroxan offers sensuality and longevity, leaving a clean yet memorable trail. Citrine is made for men who value minimalism with presence. It’s the kind of scent people remember — not because it shouts, but because it lingers. You’ll smell like your best self — confident, clean, and put-together. Why Citrine is One of the Best Men’s Perfumes Crafted by Siwa Fragrances with premium-quality ingredients Features a modern blend of citrus, spice, and musk Perfect balance of freshness and sensuality Sleek, minimalistic scent profile — easy to wear, hard to forget Packaged with sophistication and made to impress Whether you’re walking into a meeting, a café, or a quiet evening with someone special, Citrine by Siwa Fragrances gives you the perfect scent of self-assurance. Add Citrine to your collection today — and step into your signature scent.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 750.0,
+      "price_max": 1850.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42389303459888,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1850.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389303492656,
+          "title": "50 ml",
+          "sku": null,
+          "price": 1150.0,
+          "compare_at_price": 0.0,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389303525424,
+          "title": "30 ml",
+          "sku": null,
+          "price": 750.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/citrine.jpg?v=1757237068",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735872585776,
+      "handle": "soiree",
+      "title": "Soiree",
+      "url": "https://siwafragrances.com/products/soiree",
+      "inspired_by": "Grand Soir MFK",
+      "product_type": null,
+      "tags": [],
+      "published_at": "2022-04-05T23:49:48+02:00",
+      "description_html": "<p>Soiree</p>\n<p>Warm amber fragrance.<br>\nVelvety rich amber enriched with expensive vanilla extract,<br>\ncreamy tonka, labdanum with resin &amp; woody touches.<br>\nDense smoky scent with leathery animalic nuances.</p>",
+      "description_text": "Soiree Warm amber fragrance. Velvety rich amber enriched with expensive vanilla extract, creamy tonka, labdanum with resin &amp; woody touches. Dense smoky scent with leathery animalic nuances.",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 550.0,
+      "price_max": 1400.0,
+      "currency": "EGP",
+      "available": true,
+      "variants": [
+        {
+          "id": 42389301788720,
+          "title": "100 ml",
+          "sku": "SP-047",
+          "price": 1400.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389301821488,
+          "title": "50 ml",
+          "sku": "SP-047",
+          "price": 850.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        },
+        {
+          "id": 42389301854256,
+          "title": "30 ml",
+          "sku": "SP-047",
+          "price": 550.0,
+          "compare_at_price": 0.0,
+          "available": true,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/CopyofWebsiteBottle_1.jpg?v=1759185131",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    },
+    {
+      "id": 7735872389168,
+      "handle": "alluring-rose",
+      "title": "Alluring Rose",
+      "url": "https://siwafragrances.com/products/alluring-rose",
+      "inspired_by": "Delina La Rosée Parfums de Marly",
+      "product_type": null,
+      "tags": [
+        "Women"
+      ],
+      "published_at": "2021-08-20T13:49:35+02:00",
+      "description_html": "<p>Floral fruity aquatic fragrance.<br>\nBeautiful blend of rose, peony, lychee, musk, pear, vetiver with watery &amp; floral notes.<br>\nGorgeous wearable &amp; potent scent for daily use</p>",
+      "description_text": "Floral fruity aquatic fragrance. Beautiful blend of rose, peony, lychee, musk, pear, vetiver with watery &amp; floral notes. Gorgeous wearable &amp; potent scent for daily use",
+      "options": [
+        {
+          "name": "size",
+          "values": [
+            "100 ml",
+            "50 ml",
+            "30 ml"
+          ]
+        }
+      ],
+      "price_min": 500.0,
+      "price_max": 1100.0,
+      "currency": "EGP",
+      "available": false,
+      "variants": [
+        {
+          "id": 42389301264432,
+          "title": "100 ml",
+          "sku": null,
+          "price": 1100.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389301231664,
+          "title": "50 ml",
+          "sku": null,
+          "price": 700.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        },
+        {
+          "id": 42389301198896,
+          "title": "30 ml",
+          "sku": null,
+          "price": 500.0,
+          "compare_at_price": null,
+          "available": false,
+          "grams": 0
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0648/9577/8864/files/alluring-rose.jpg?v=1757237015",
+          "width": 1080,
+          "height": 1080,
+          "alt": null
+        }
+      ]
+    }
+  ]
+}

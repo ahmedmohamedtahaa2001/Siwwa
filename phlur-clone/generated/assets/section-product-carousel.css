@@ -1,0 +1,75 @@
+/* Product carousel — measured: flex, gap 20px, overflow-x auto,
+   container 1265px, ~4.2 cards visible at 1440. Heading 18px/600 uppercase. */
+
+.pl-carousel {
+  padding-block: var(--pl-space-12);
+  background-color: var(--pl-bg);
+}
+
+.pl-carousel__inner {
+  max-inline-size: var(--pl-content-max);
+  margin-inline: auto;
+  padding-inline: var(--pl-space-4);
+}
+
+.pl-carousel__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--pl-space-4);
+  margin-block-end: var(--pl-space-4);
+}
+
+.pl-carousel__title {
+  font-family: var(--pl-font-display);
+  font-size: var(--pl-fs-section);
+  font-weight: 600;
+  letter-spacing: var(--pl-ls-section);
+  text-transform: uppercase;
+  color: var(--pl-ink);
+  margin: 0;
+}
+
+.pl-carousel__link {
+  font-family: var(--pl-font-body);
+  font-size: var(--pl-fs-body);
+  color: var(--pl-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+.pl-carousel__link:focus-visible { outline: 2px solid var(--pl-ink); outline-offset: 2px; }
+
+.pl-carousel__track {
+  display: flex;
+  gap: var(--pl-gutter);
+  list-style: none;
+  margin: 0;
+  padding-inline: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-block-end: var(--pl-space-1);
+}
+.pl-carousel__track::-webkit-scrollbar { display: none; }
+
+.pl-carousel__item {
+  flex: 0 0 auto;
+  inline-size: 300px;   /* measured */
+  scroll-snap-align: start;
+}
+
+@media (max-width: 989px) {
+  .pl-carousel__item { inline-size: 260px; }
+}
+@media (max-width: 749px) {
+  .pl-carousel        { padding-block: var(--pl-space-8); }
+  .pl-carousel__item  { inline-size: 62vw; }
+  .pl-carousel__inner { padding-inline: var(--pl-space-3); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-carousel__track { scroll-behavior: auto; }
+}

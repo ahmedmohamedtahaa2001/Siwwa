@@ -1,0 +1,9 @@
+{%- comment -%}
+  Badge stamp. Maps to siwa-design-system 'badge-stamp'.
+  Measured: 19px tall, 4px/6px padding, 11px mono uppercase, 0.7px tracking.
+
+  Params: label (string), variant (default | ink | outline)
+{%- endcomment -%}
+{%- if label != blank -%}
+  <span class="pl-badge pl-badge--{{ variant | default: 'default' }}">{{ label }}</span>
+{%- endif -%}

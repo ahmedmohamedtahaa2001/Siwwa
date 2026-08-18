@@ -1,0 +1,1778 @@
+[
+  {
+    "file": "agents.md.html",
+    "title": "",
+    "tlen": 0,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": false,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [],
+    "is404": false,
+    "kind": "other"
+  },
+  {
+    "file": "blogs__news.html",
+    "title": "News",
+    "tlen": 4,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "other"
+  },
+  {
+    "file": "cart.html",
+    "title": "Your Shopping Cart",
+    "tlen": 18,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "other"
+  },
+  {
+    "file": "collections__all.html",
+    "title": "Products",
+    "tlen": 8,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__best-sellers.html",
+    "title": "BEST SELLERS",
+    "tlen": 12,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__black-friday-2025.html",
+    "title": "Black Friday Offer",
+    "tlen": 18,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__body-lotion.html",
+    "title": "Body lotion",
+    "tlen": 11,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__body-splash.html",
+    "title": "Body Splash",
+    "tlen": 11,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__bundles.html",
+    "title": "Bundles",
+    "tlen": 7,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__for-her.html",
+    "title": "FOR HER",
+    "tlen": 7,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__for-him.html",
+    "title": "FOR HIM",
+    "tlen": 7,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__gift-boxes.html",
+    "title": "Gift Boxes",
+    "tlen": 10,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__men-best-sellers.html",
+    "title": "MEN BEST SELLERS",
+    "tlen": 16,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__men-new-drops.html",
+    "title": "men new drops",
+    "tlen": 13,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__new-drops.html",
+    "title": "new drops",
+    "tlen": 9,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__original-creations.html",
+    "title": "Original Creations",
+    "tlen": 18,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__perfumes.html",
+    "title": "perfumes",
+    "tlen": 8,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__ramadan-drops.html",
+    "title": "Ramadan Drops",
+    "tlen": 13,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__siwa-perfumes.html",
+    "title": "siwa fragrances",
+    "tlen": 15,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__summer-collection.html",
+    "title": "Summer Collection",
+    "tlen": 17,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__unisex.html",
+    "title": "UNISEX",
+    "tlen": 6,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__women-best-sellers.html",
+    "title": "WOMEN BEST SELLERS",
+    "tlen": 18,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "collections__women-new-drops.html",
+    "title": "women new drops",
+    "tlen": 15,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "collection"
+  },
+  {
+    "file": "index.html",
+    "title": "siwafragrances.com",
+    "tlen": 18,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem",
+      "Organization",
+      "SearchAction",
+      "WebSite"
+    ],
+    "is404": false,
+    "kind": "other"
+  },
+  {
+    "file": "pages__about-us.html",
+    "title": "ABOUT US",
+    "tlen": 8,
+    "dlen": 319,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": true,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "page"
+  },
+  {
+    "file": "pages__contact.html",
+    "title": "Contact",
+    "tlen": 7,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "page"
+  },
+  {
+    "file": "pages__our-comitments.html",
+    "title": "OUR COMITMENTS",
+    "tlen": 14,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": true,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "page"
+  },
+  {
+    "file": "pages__our-story.html",
+    "title": "OUR STORY",
+    "tlen": 9,
+    "dlen": 319,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": true,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "page"
+  },
+  {
+    "file": "pages__size-chart-1.html",
+    "title": "Size Chart",
+    "tlen": 10,
+    "dlen": 0,
+    "h1n": 0,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "page"
+  },
+  {
+    "file": "policies__contact-information.html",
+    "title": "Contact information",
+    "tlen": 19,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "policy"
+  },
+  {
+    "file": "policies__legal-notice.html",
+    "title": "404 Not Found",
+    "tlen": 13,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": true,
+    "kind": "policy"
+  },
+  {
+    "file": "policies__privacy-policy.html",
+    "title": "Privacy policy",
+    "tlen": 14,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "policy"
+  },
+  {
+    "file": "policies__refund-policy.html",
+    "title": "Refund policy",
+    "tlen": 13,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "policy"
+  },
+  {
+    "file": "policies__shipping-policy.html",
+    "title": "404 Not Found",
+    "tlen": 13,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": true,
+    "kind": "policy"
+  },
+  {
+    "file": "policies__terms-of-service.html",
+    "title": "404 Not Found",
+    "tlen": 13,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": true,
+    "kind": "policy"
+  },
+  {
+    "file": "products__absolute-drunk.html",
+    "title": "Absolute Drunk",
+    "tlen": 14,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__alluring-rose.html",
+    "title": "Alluring Rose",
+    "tlen": 13,
+    "dlen": 175,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__apple-pie.html",
+    "title": "Apple Pie",
+    "tlen": 9,
+    "dlen": 189,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__aurableu.html",
+    "title": "Aurableu",
+    "tlen": 8,
+    "dlen": 319,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__bare-glow.html",
+    "title": "Bare Glow",
+    "tlen": 9,
+    "dlen": 202,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__belle-riche.html",
+    "title": "Belle Riche",
+    "tlen": 11,
+    "dlen": 208,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__bleu-exclusive.html",
+    "title": "Bleu Exclusive",
+    "tlen": 14,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__bleu-intense.html",
+    "title": "Bleu Intense",
+    "tlen": 12,
+    "dlen": 201,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__boujee-blush.html",
+    "title": "Boujee Blush",
+    "tlen": 12,
+    "dlen": 113,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__caramel-vanigliato.html",
+    "title": "Caramel vanigliato",
+    "tlen": 18,
+    "dlen": 153,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__carnal-trail.html",
+    "title": "Carnal Trail",
+    "tlen": 12,
+    "dlen": 225,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__chocolate-creme.html",
+    "title": "Chocolate Creme",
+    "tlen": 15,
+    "dlen": 100,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__citrine.html",
+    "title": "Citrine",
+    "tlen": 7,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__coco-woods.html",
+    "title": "Coco Woods",
+    "tlen": 10,
+    "dlen": 59,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__coffee-vanilla.html",
+    "title": "Coffee Vanilla",
+    "tlen": 14,
+    "dlen": 175,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__drunk-gold.html",
+    "title": "Drunk Gold",
+    "tlen": 10,
+    "dlen": 120,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__forbidden-cherry.html",
+    "title": "Forbidden Cherry",
+    "tlen": 16,
+    "dlen": 256,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__gourmet.html",
+    "title": "Gourmet",
+    "tlen": 7,
+    "dlen": 236,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__hibiscusex.html",
+    "title": "Hibiscusex",
+    "tlen": 10,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__hot-male.html",
+    "title": "Hot Male",
+    "tlen": 8,
+    "dlen": 184,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__hot-vanilla.html",
+    "title": "Hot Vanilla",
+    "tlen": 11,
+    "dlen": 319,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__insane-pineapple.html",
+    "title": "Insane Pineapple",
+    "tlen": 16,
+    "dlen": 290,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__iris-elixir.html",
+    "title": "Iris elixir",
+    "tlen": 11,
+    "dlen": 141,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__irresistible-vanilla.html",
+    "title": "Irresistible Vanilla",
+    "tlen": 20,
+    "dlen": 227,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__lady-killer.html",
+    "title": "Lady killer",
+    "tlen": 11,
+    "dlen": 239,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__lagoon-flair.html",
+    "title": "Lagoon Flair",
+    "tlen": 12,
+    "dlen": 75,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__layering-30-ml-bundle.html",
+    "title": "Layering bundle",
+    "tlen": 15,
+    "dlen": 77,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__layering-apple.html",
+    "title": "Layering Apple",
+    "tlen": 14,
+    "dlen": 204,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__layering-lychee.html",
+    "title": "Layering Lychee",
+    "tlen": 15,
+    "dlen": 319,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__layering-pistachio.html",
+    "title": "Layering Pistachio",
+    "tlen": 18,
+    "dlen": 302,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__layering-vanilla.html",
+    "title": "Layering Vanilla",
+    "tlen": 16,
+    "dlen": 280,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__libre-desire.html",
+    "title": "Libre Desire",
+    "tlen": 12,
+    "dlen": 219,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__lost-on-you.html",
+    "title": "Lost On You",
+    "tlen": 11,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__luna-di-roma.html",
+    "title": "Luna Di Roma",
+    "tlen": 12,
+    "dlen": 127,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__male-elixir.html",
+    "title": "Male Elixir",
+    "tlen": 11,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__mango-on-woods.html",
+    "title": "Mango on woods",
+    "tlen": 14,
+    "dlen": 276,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__mango-pineapple.html",
+    "title": "Mango Pineapple",
+    "tlen": 15,
+    "dlen": 303,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__marasi.html",
+    "title": "Marasi",
+    "tlen": 6,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__marshmallow-bundle.html",
+    "title": "Marshmallow Bundle",
+    "tlen": 18,
+    "dlen": 77,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__marshmallow.html",
+    "title": "Marshmallow",
+    "tlen": 11,
+    "dlen": 112,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__mawj.html",
+    "title": "Mawj",
+    "tlen": 4,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__pacific-elixir.html",
+    "title": "Pacific Elixir",
+    "tlen": 14,
+    "dlen": 268,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__pink-allure.html",
+    "title": "Pink Allure",
+    "tlen": 11,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__pink-arrogance.html",
+    "title": "Pink Arrogance",
+    "tlen": 14,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__purevelle.html",
+    "title": "Purevelle Perfume | Xerjoff Erba Pura Alternative in Egypt",
+    "tlen": 58,
+    "dlen": 144,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__silk-vanilla-body-lotion.html",
+    "title": "Silk Vanilla Body Lotion",
+    "tlen": 24,
+    "dlen": 200,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__silk-vanilla.html",
+    "title": "Silk Vanilla",
+    "tlen": 12,
+    "dlen": 188,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__silvere.html",
+    "title": "Silvere",
+    "tlen": 7,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__siwa-trail.html",
+    "title": "Siwa Trail",
+    "tlen": 10,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__soiree.html",
+    "title": "Soiree",
+    "tlen": 6,
+    "dlen": 193,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__soul-poudree.html",
+    "title": "Soul Poudree",
+    "tlen": 12,
+    "dlen": 177,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__stellar-nights.html",
+    "title": "Stellar Nights",
+    "tlen": 14,
+    "dlen": 320,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__summer-elegance.html",
+    "title": "summer elegance",
+    "tlen": 15,
+    "dlen": 241,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__summer-holidays.html",
+    "title": "Summer Holidays",
+    "tlen": 15,
+    "dlen": 217,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__sundaze.html",
+    "title": "Sundaze Perfume | Armani Power of You Alternative in Egypt",
+    "tlen": 58,
+    "dlen": 177,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__sweet-oud.html",
+    "title": "Sweet Oud",
+    "tlen": 9,
+    "dlen": 152,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__sweet-rum.html",
+    "title": "Sweet Rum",
+    "tlen": 9,
+    "dlen": 191,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__tobacco-honey.html",
+    "title": "Tobacco Honey",
+    "tlen": 13,
+    "dlen": 241,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__vanilla-91.html",
+    "title": "Vanilla 91",
+    "tlen": 10,
+    "dlen": 221,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "products__vanilla-bundle.html",
+    "title": "Vanilla Bundle",
+    "tlen": 14,
+    "dlen": 318,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": true,
+    "ogdesc": true,
+    "jsonld": [
+      "Brand",
+      "BreadcrumbList",
+      "ListItem",
+      "Offer",
+      "Product",
+      "ProductGroup"
+    ],
+    "is404": false,
+    "kind": "product"
+  },
+  {
+    "file": "search_Q_q=vanilla.html",
+    "title": "Search: 44 results found for \"vanilla\"",
+    "tlen": 38,
+    "dlen": 0,
+    "h1n": 1,
+    "canon": true,
+    "ogimg": false,
+    "ogdesc": false,
+    "jsonld": [
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "is404": false,
+    "kind": "other"
+  }
+]

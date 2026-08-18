@@ -1,67 +1,26 @@
 {
-  "type": "footer",
   "name": "Footer",
+  "type": "footer",
   "sections": {
     "footer": {
-      "type": "footer",
+      "type": "siwa-footer",
       "blocks": {
         "shop": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Shop"
-          }
+          "type": "menu",
+          "settings": {}
         },
-        "house": {
-          "type": "link_list",
-          "settings": {
-            "heading": "The House"
-          }
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {}
         },
-        "help": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Help"
-          }
-        },
-        "follow": {
-          "type": "social",
-          "settings": {
-            "heading": "Follow"
-          }
+        "disclaimer": {
+          "type": "disclaimer",
+          "settings": {}
         }
       },
-      "block_order": [
-        "shop",
-        "house",
-        "help",
-        "follow"
-      ],
-      "settings": {
-        "footer_style": "dark",
-        "wordmark_ar": "سيوة",
-        "show_payment_icons": false
-      }
+      "block_order": ["shop", "newsletter", "disclaimer"],
+      "settings": {}
     }
   },
-  "order": [
-    "footer"
-  ],
-  "_comment": [
-    "Footer group — client spec 2026-08-13. Four columns:",
-    "  Shop      All fragrances · Original Creations · Layering · Gifting",
-    "  The House The Oasis · The Ingredients · The Craft · The House",
-    "  Help      Shipping · Returns · Contact · FAQ",
-    "  Follow    Instagram · TikTok · Facebook · WhatsApp — as ICONS",
-    "",
-    "Column 2 uses Fueguia's four-pillar naming (DIRECTION.md Part 1 §2.4).",
-    "",
-    "The link lists are Shopify NAVIGATION MENUS, not typed-in blocks —",
-    "menu structure is edited under Navigation in the admin so there is one",
-    "place to change it. Create menus named `footer-shop`, `footer-house`",
-    "and `footer-help`, then pick them in the theme editor.",
-    "",
-    "Base line: © 2026 Siwa Fragrances · سيوة  /  Made in Egypt.",
-    "The Arabic here is the brand lockup, the same sanctioned exception as",
-    "the header wordmark — not doubled content."
-  ]
+  "order": ["footer"]
 }

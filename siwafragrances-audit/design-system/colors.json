@@ -1,0 +1,117 @@
+{
+  "_note": "Source: Prestige 11.1.0 CSS custom properties, resolved on the live site (2026-08-16). Shopify stores these as space-separated RGB triplets for rgb(var(--x) / alpha) usage.",
+  "core": {
+    "background": {
+      "rgb": "255 255 255",
+      "hex": "#FFFFFF",
+      "role": "Page background"
+    },
+    "text": {
+      "rgb": "28 28 28",
+      "hex": "#1C1C1C",
+      "role": "Body + heading text (near-black, not pure black)"
+    },
+    "accent": {
+      "rgb": "28 28 28",
+      "hex": "#1C1C1C",
+      "role": "Accent \u2014 identical to text; brand uses no chromatic accent"
+    },
+    "border": {
+      "rgb": "221 221 221",
+      "hex": "#DDDDDD",
+      "role": "Hairline dividers, input + button outlines"
+    }
+  },
+  "button": {
+    "background": {
+      "rgb": "28 28 28",
+      "hex": "#1C1C1C"
+    },
+    "text": {
+      "rgb": "255 255 255",
+      "hex": "#FFFFFF"
+    },
+    "circleButtonBackground": {
+      "rgb": "255 255 255",
+      "hex": "#FFFFFF"
+    },
+    "circleButtonText": {
+      "rgb": "28 28 28",
+      "hex": "#1C1C1C"
+    }
+  },
+  "status": {
+    "onSaleBadgeBackground": {
+      "rgb": "255 215 0",
+      "hex": "#FFD700",
+      "role": "Gold sale badge"
+    },
+    "onSaleBadgeText": {
+      "rgb": "0 0 0 / 0.65",
+      "hex": "#000000 @65%"
+    },
+    "onSaleText": {
+      "rgb": "255 215 0",
+      "hex": "#FFD700"
+    },
+    "soldOutBadgeBackground": {
+      "rgb": "227 44 43",
+      "hex": "#E32C2B",
+      "role": "Red sold-out badge"
+    },
+    "soldOutBadgeText": {
+      "rgb": "255 255 255",
+      "hex": "#FFFFFF"
+    },
+    "customBadgeBackground": {
+      "rgb": "28 28 28",
+      "hex": "#1C1C1C"
+    },
+    "customBadgeText": {
+      "rgb": "255 255 255",
+      "hex": "#FFFFFF"
+    },
+    "star": {
+      "rgb": "255 215 0",
+      "hex": "#FFD700"
+    },
+    "error": {
+      "bg": "#F3CCCC",
+      "text": "#CB2B2B"
+    },
+    "success": {
+      "bg": "#D4E3CB",
+      "text": "#307A07"
+    },
+    "warning": {
+      "bg": "#FDF1E0",
+      "text": "#ED8A00"
+    }
+  },
+  "overlay": {
+    "pageOverlay": "rgb(0 0 0 / 0.4)",
+    "role": "Dimmer behind cart drawer / modals"
+  },
+  "thirdParty": {
+    "judgeMe": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "star": "gold",
+      "writeReviewBg": "#000000",
+      "writeReviewText": "#FFFFFF",
+      "borderRadius": "0"
+    },
+    "shopifyChat": {
+      "bg": "#FFFFFF",
+      "text": "#000000",
+      "accentBg": "#000000",
+      "accentText": "#FFFFFF",
+      "borderRadius": "16px"
+    }
+  },
+  "observations": [
+    "Strictly monochrome: white / #1C1C1C. The only chromatic values in the system are the gold #FFD700 sale+star colour and the red #E32C2B sold-out badge.",
+    "--accent is set to the same value as --text, so the theme's accent slot is effectively unused.",
+    "Warmth in the visual identity comes entirely from photography (sand, amber, wood tones), not from CSS."
+  ]
+}

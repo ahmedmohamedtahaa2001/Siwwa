@@ -1,0 +1,183 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   siwa-header.css — G-01 SiteNav, the part the design system does not ship.
+
+   siwa-components.css already styles .siwa-nav, .siwa-nav__inner,
+   .siwa-nav__logo, .siwa-nav__list, .siwa-nav__link, .siwa-nav__chevron,
+   .siwa-megamenu (+ __grid, __col, __title, and `a` by element selector),
+   .siwa-nav__actions, .siwa-nav__count, and the whole ≤1200px drawer
+   collapse including its RTL transform. None of that is repeated here.
+
+   What is here is only what a real header needs and the component sheet
+   never named: the drawer trigger and its head, the logo image box, the
+   search panel that reuses the mega-menu's positioning, the localization
+   form, and the one structural preset difference the token layer cannot
+   express.
+
+   Everything resolves to a token. The breakpoint literals match the ones in
+   siwa-components.css exactly — @media cannot read a custom property, which
+   is why siwa-tokens.css declares --bp-* for documentation only.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Lead: drawer trigger + logo ───────────────────────────────────────
+   The section wrapper itself carries .siwa-nav, so `position: sticky` has
+   the body as its containing block and the bar can actually travel. A nav
+   sticking inside a wrapper only as tall as itself never moves at all — and
+   turning stickiness off is therefore a rule against the wrapper's id,
+   emitted by the section, not a modifier class in here. */
+
+.siwa-nav__lead {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  min-inline-size: 0;
+}
+
+/* The drawer trigger only exists where the drawer does. Above the
+   breakpoint the link list is the nav, so the burger would be a control
+   that opens nothing. */
+.siwa-nav__toggle { display: none; }
+
+.siwa-nav__logo {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--tap-min);
+}
+
+.siwa-nav__logo-image {
+  inline-size: var(--siwa-logo-width);
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: contain;
+}
+
+/* ── Primary navigation ────────────────────────────────────────────────
+   No `position` on any of these. .siwa-megamenu is absolutely positioned
+   against .siwa-nav, and a positioned wrapper in between would re-anchor it
+   to a single menu item. */
+
+.siwa-nav__primary {
+  display: flex;
+  align-items: center;
+  min-inline-size: 0;
+}
+
+/* The top-level item's own destination, leading the panel it opens. The
+   anchor inside is already styled by `.siwa-megamenu a`; only the rule that
+   separates it from the columns is new. */
+.siwa-megamenu__lead {
+  margin-block-end: var(--spacing-4);
+  padding-block-end: var(--spacing-2);
+  border-block-end: var(--rule-weight) solid var(--colors-border);
+  font-size: var(--text-body-lg);
+  font-family: var(--font-display);
+  color: var(--colors-heading);
+}
+
+/* The drawer's own head. It is a list item so the markup stays a valid
+   list, and it is only shown where the list is a drawer. */
+.siwa-nav__drawer-head { display: none; }
+
+/* ── Actions ───────────────────────────────────────────────────────────── */
+
+.siwa-nav__actions svg {
+  inline-size: var(--spacing-6);
+  block-size: var(--spacing-6);
+}
+
+.siwa-nav__action { text-decoration: none; }
+
+/* ── Language ──────────────────────────────────────────────────────────
+   A real <form action="/localization"> with one submit button per language,
+   so the locale actually switches with JavaScript off. Never colour alone:
+   the current language is marked by ground AND border AND aria-current. */
+
+.siwa-nav__locale { display: flex; }
+
+.siwa-nav__locale-set {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.siwa-nav__locale-option[aria-current='true'] {
+  background-color: var(--colors-surface);
+  border-color: var(--colors-text);
+  color: var(--colors-text);
+}
+
+/* ── Search panel ──────────────────────────────────────────────────────
+   Reuses .siwa-megamenu for its full-bleed anchoring, shadow and ≤1200px
+   flattening; only the form row is new. The trigger is an <a> pointing at
+   the search page, so without JavaScript it navigates instead of opening —
+   the panel is an enhancement, never the only route to search. */
+
+.siwa-nav__search-form {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-3);
+}
+
+.siwa-nav__search-field { flex: 1 1 auto; min-inline-size: 0; }
+
+.siwa-nav__search-row {
+  display: flex;
+  align-items: stretch;
+  gap: var(--spacing-2);
+}
+
+.siwa-nav__search-row .siwa-input { flex: 1 1 auto; }
+
+/* ── Preset structure ──────────────────────────────────────────────────
+   Desert draws with graphic rules rather than hairlines. The weight already
+   follows --rule-weight everywhere; the underline beneath the open item is
+   the structural half the token layer cannot express, so it is expressed
+   here against the preset rather than with an {% if %} in the Liquid. */
+
+[data-theme='desert'] .siwa-nav {
+  border-block-end-width: calc(var(--rule-weight) * 2);
+  border-block-end-color: var(--colors-text);
+}
+[data-theme='desert'] .siwa-nav__link[aria-expanded='true'] {
+  box-shadow: inset 0 calc(-1 * var(--rule-weight) * 2) 0 0 var(--colors-text);
+}
+
+/* Oasis lets the header float on the page instead of sitting on a rule. */
+[data-theme='oasis'] .siwa-nav { border-block-end-color: var(--colors-border); }
+
+/* ── ≤1200px: the link list becomes the drawer ─────────────────────────
+   The panel itself is already handled by siwa-components.css — fixed, full
+   height, translated off the inline start, .is-open to slide in, mirrored
+   for RTL. assets/siwa-theme.js drives it from data-siwa-drawer: .is-open,
+   the scrim, the focus trap, the scroll lock, Escape, and focus restore. */
+
+@media (max-width: 1200px) {
+  .siwa-nav__toggle { display: inline-flex; }
+
+  .siwa-nav__drawer-head {
+    display: flex;
+    justify-content: flex-end;
+    padding-block-end: var(--spacing-2);
+    border-block-end: var(--rule-weight) solid var(--colors-border);
+    margin-block-end: var(--spacing-2);
+  }
+
+  /* Full-width rows read as a list on a phone; inline padding would make
+     them look like a desktop menu that lost its row. */
+  .siwa-nav__list .siwa-nav__link {
+    inline-size: 100%;
+    justify-content: space-between;
+    padding-inline: 0;
+    border-block-end: var(--rule-weight) solid var(--colors-border);
+  }
+
+  .siwa-nav__search-form { flex-direction: column; align-items: stretch; }
+  .siwa-nav__search-close { align-self: flex-end; }
+}
+
+@media (max-width: 768px) {
+  .siwa-nav__actions { gap: 0; }
+  .siwa-nav__logo-image { inline-size: calc(var(--siwa-logo-width) * 0.8); }
+}

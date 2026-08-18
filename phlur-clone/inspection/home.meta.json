@@ -1,0 +1,936 @@
+{
+  "meta": {
+    "title": "Phlur - Modern Fine Fragrance Brand",
+    "lang": "en",
+    "dir": "ltr",
+    "viewport": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
+    "docHeight": 4545
+  },
+  "nodeCount": 1355,
+  "shots": {
+    "full": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/full.png",
+    "sections": [
+      {
+        "sel": "[data-inspect-section-0]",
+        "idx": 0,
+        "h": 630,
+        "cls": "shopify-section section-full-width-banner",
+        "tag": "section",
+        "file": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/section-00.png"
+      },
+      {
+        "sel": "[data-inspect-section-1]",
+        "idx": 1,
+        "h": 561,
+        "cls": "shopify-section section featured-collection",
+        "tag": "section",
+        "file": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/section-01.png"
+      },
+      {
+        "sel": "[data-inspect-section-2]",
+        "idx": 2,
+        "h": 200,
+        "cls": "shopify-section section",
+        "tag": "section",
+        "file": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/section-02.png"
+      },
+      {
+        "sel": "[data-inspect-section-3]",
+        "idx": 3,
+        "h": 615,
+        "cls": "shopify-section section-full-width-banner",
+        "tag": "section",
+        "file": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/section-03.png"
+      },
+      {
+        "sel": "[data-inspect-section-4]",
+        "idx": 4,
+        "h": 561,
+        "cls": "shopify-section section featured-collection",
+        "tag": "section",
+        "file": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/section-04.png"
+      },
+      {
+        "sel": "[data-inspect-section-5]",
+        "idx": 5,
+        "h": 765,
+        "cls": "shopify-section section section-collection-list",
+        "tag": "section",
+        "file": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/section-05.png"
+      },
+      {
+        "sel": "[data-inspect-section-6]",
+        "idx": 6,
+        "h": 540,
+        "cls": "shopify-section section",
+        "tag": "div",
+        "file": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/section-06.png"
+      }
+    ],
+    "header": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/header.png",
+    "footer": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/footer.png",
+    "responsive": {
+      "mobile": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/mobile.png",
+      "tablet": "/ahmed-taha-dev/Siwa/phlur-clone/inspection/screenshots/home/tablet.png"
+    }
+  },
+  "hoverStates": [
+    {
+      "selector": "a[href*=\"product\"]",
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(253, 251, 239)",
+        "transform": "none",
+        "borderColor": "rgb(253, 251, 239)",
+        "opacity": "1",
+        "textDecoration": "none"
+      },
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(253, 251, 239)",
+        "transform": "none",
+        "borderColor": "rgb(253, 251, 239)",
+        "opacity": "1",
+        "textDecoration": "none"
+      },
+      "changed": false
+    },
+    {
+      "selector": "nav a",
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "transform": "none",
+        "borderColor": "rgb(0, 0, 0)",
+        "opacity": "1",
+        "textDecoration": "none"
+      },
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "transform": "none",
+        "borderColor": "rgb(0, 0, 0)",
+        "opacity": "1",
+        "textDecoration": "none"
+      },
+      "changed": false
+    }
+  ],
+  "fontFaces": [
+    "@font-face { font-family: Figtree; font-weight: 400; font-style: normal; font-display: swap; src: url(\"//phlur.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2\") format(\"woff2\"), url(\"//phlur.com/cdn/fonts/figtree/figtree_n4.c0575d1db21fc3821f17fd6617d3dee552312137.woff\") format(\"woff\"); }",
+    "@font-face { font-family: Figtree; font-weight: 700; font-style: normal; font-display: swap; src: url(\"//phlur.com/cdn/fonts/figtree/figtree_n7.2fd9bfe01586148e644724096c9d75e8c7a90e55.woff2\") format(\"woff2\"), url(\"//phlur.com/cdn/fonts/figtree/figtree_n7.ea05de92d862f9594794ab281c4c3a67501ef5fc.woff\") format(\"woff\"); }",
+    "@font-face { font-family: Figtree; font-weight: 400; font-style: italic; font-display: swap; src: url(\"//phlur.com/cdn/fonts/figtree/figtree_i4.89f7a4275c064845c304a4cf8a4a586060656db2.woff2\") format(\"woff2\"), url(\"//phlur.com/cdn/fonts/figtree/figtree_i4.6f955aaaafc55a22ffc1f32ecf3756859a5ad3e2.woff\") format(\"woff\"); }",
+    "@font-face { font-family: Figtree; font-weight: 700; font-style: italic; font-display: swap; src: url(\"//phlur.com/cdn/fonts/figtree/figtree_i7.06add7096a6f2ab742e09ec7e498115904eda1fe.woff2\") format(\"woff2\"), url(\"//phlur.com/cdn/fonts/figtree/figtree_i7.ee584b5fcaccdbb5518c0228158941f8df81b101.woff\") format(\"woff\"); }",
+    "@font-face { font-family: Figtree; font-weight: 400; font-style: normal; font-display: swap; src: url(\"//phlur.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2\") format(\"woff2\"), url(\"//phlur.com/cdn/fonts/figtree/figtree_n4.c0575d1db21fc3821f17fd6617d3dee552312137.woff\") format(\"woff\"); }",
+    "@font-face { font-family: ABCRepro-Regular; src: url(\"//phlur.com/cdn/shop/t/105/assets/ABCRepro-Regular.woff2?v=34804900962658174201782867163\") format(\"woff2\"), url(\"//phlur.com/cdn/shop/t/105/assets/ABCReproMono-Medium.woff?v=42794830930277184581782867163\") format(\"woff\"); font-display: swap; }",
+    "@font-face { font-family: ABCReproMono-Medium; src: url(\"//phlur.com/cdn/shop/t/105/assets/ABCReproMono-Medium.woff2?v=176760288586883009441782867164\") format(\"woff2\"), url(\"//phlur.com/cdn/shop/t/105/assets/ABCReproMono-Medium.woff?v=42794830930277184581782867163\") format(\"woff\"); font-weight: normal; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: oke-widget-icons; src: url(\"https://d3hw6dc1ow8pp2.cloudfront.net/reviews-widget-plus/fonts/oke-widget-icons.ttf\") format(\"truetype\"), url(\"https://d3hw6dc1ow8pp2.cloudfront.net/reviews-widget-plus/fonts/oke-widget-icons.woff\") format(\"woff\"); font-weight: 400; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: AvenirNext; src: url(\"https://cdn.shopify.com/s/files/1/0264/0124/3198/files/AvenirNext-Bold.woff?v=1728405404\"); font-weight: 700; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: AvenirNext; src: url(\"https://cdn.shopify.com/s/files/1/0264/0124/3198/files/AvenirNext-DemiBold.woff?v=1728405439\"); font-weight: 600; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: AvenirNext; src: url(\"https://cdn.shopify.com/s/files/1/0264/0124/3198/files/AvenirNext-Medium.woff2?v=1728405460\"); font-weight: 500; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: AvenirNext; src: url(\"https://cdn.shopify.com/s/files/1/0264/0124/3198/files/AvenirNext-Regular.woff?v=1728405460\"); font-weight: 400; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: Kanit-Klaviyo-Hosted; src: url(\"https://static.klaviyo.com/onsite/hosted-fonts/Kanit/latin/kanit_latin_italic_400.woff2\"); font-weight: 400; font-style: italic; font-display: swap; }",
+    "@font-face { font-family: Kanit-Klaviyo-Hosted; src: url(\"https://static.klaviyo.com/onsite/hosted-fonts/Kanit/latin/kanit_latin_italic_700.woff2\"); font-weight: 700; font-style: italic; font-display: swap; }",
+    "@font-face { font-family: Kanit-Klaviyo-Hosted; src: url(\"https://static.klaviyo.com/onsite/hosted-fonts/Kanit/latin/kanit_latin_regular_400.woff2\"); font-weight: 400; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: Kanit-Klaviyo-Hosted; src: url(\"https://static.klaviyo.com/onsite/hosted-fonts/Kanit/latin/kanit_latin_regular_700.woff2\"); font-weight: 700; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: Nunito-Sans-Klaviyo-Hosted; src: url(\"https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_italic_400.woff2\"); font-weight: 400; font-style: italic; font-display: swap; }",
+    "@font-face { font-family: Nunito-Sans-Klaviyo-Hosted; src: url(\"https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_italic_700.woff2\"); font-weight: 700; font-style: italic; font-display: swap; }",
+    "@font-face { font-family: Nunito-Sans-Klaviyo-Hosted; src: url(\"https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_regular_400.woff2\"); font-weight: 400; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: Nunito-Sans-Klaviyo-Hosted; src: url(\"https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_regular_700.woff2\"); font-weight: 700; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: Repro; src: url(\"https://cdn.shopify.com/s/files/1/0517/7203/1157/files/ABCRepro-Regular_05530fa0-6a3f-40d8-abf0-54a8fe01cf11.woff2?v=1715024749\"); font-weight: 400; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: ReproMono; src: url(\"https://cdn.shopify.com/s/files/1/0517/7203/1157/files/ABCReproMono-Medium_162f06bc-33db-449f-b14b-17e5a4dca080.woff2?v=1715025603\"); font-weight: 600; font-style: normal; font-display: swap; }",
+    "@font-face { font-family: affirm; src: url(\"data:font/woff2;base64,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\") format(\"woff2\"), url(\"data:font/woff;base64,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\") format(\"woff\"); font-weight: normal; font-style: normal; }"
+  ],
+  "mediaQueries": [
+    "screen and (forced-colors: active)",
+    "screen and (width <= 750px)",
+    "screen and (min-width: 750px)",
+    "screen and (min-width: 1200px)",
+    "screen and (max-width: 749px)",
+    "screen and (min-width: 750px) and (max-width: 989px)",
+    "screen and (min-width: 990px)",
+    "(prefers-reduced-motion)",
+    "screen and (max-width: 989px)",
+    "(forced-colors: active)",
+    "(prefers-reduced-motion: no-preference)",
+    "(prefers-reduced-motion: no-preference) and (hover: hover)",
+    "(max-width: 640px)",
+    "(max-width: 880px)",
+    "(max-width: 1200px)",
+    "(max-width: 749px)",
+    "(max-width: 480px)",
+    "(max-width: 989px)",
+    "screen and (max-width: 880px)",
+    "(max-width: 400px)",
+    "only screen and (min-width: 750px)",
+    "screen and (max-width: 990px)",
+    "screen and (min-width: 989px)",
+    "(max-width: 1600px)",
+    "only screen and (min-width: 1024px)",
+    "(max-width: 960px)",
+    "(min-width: 701px)",
+    "(prefers-reduced-motion: reduce)",
+    "only screen and (min-width: 700px)",
+    "only screen and (max-width: 700px)",
+    "only screen and (min-width: 1000px)",
+    "(hover: hover)",
+    "(hover: none)",
+    "(max-width: 600px)",
+    "screen and (min-width: 749px) and (max-width: 990px)",
+    "only screen and (max-width: 749px)",
+    "screen and (min-width: 480px)",
+    "only screen and (max-width: 640px)"
+  ],
+  "stylesheetSummary": [
+    {
+      "href": "https://pieeyegpc.pii.ai/1/dsrp/fcda9fa2-dcac-470a-80ed-baab2d698a30/gpc.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://phlur.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css",
+      "readable": true,
+      "ruleCount": 40
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 4
+    },
+    {
+      "href": "https://use.typekit.net/byz1fel.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 12
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 1
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/base.css?v=65793788233963184021786592543",
+      "readable": true,
+      "ruleCount": 460
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/main.bundle.css?v=66970060490819812551786592544",
+      "readable": true,
+      "ruleCount": 1116
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-rating.css?v=179577762467860590411782867163",
+      "readable": true,
+      "ruleCount": 10
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-volume-pricing.css?v=56284703641257077881782867162",
+      "readable": true,
+      "ruleCount": 14
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-card.css?v=89386976351092843091782867164",
+      "readable": true,
+      "ruleCount": 96
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/quick-add.css?v=26450902179660337051782867163",
+      "readable": true,
+      "ruleCount": 62
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-price.css?v=132681230003175939531782867165",
+      "readable": true,
+      "ruleCount": 16
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/quick-order-list.css?v=50976450016892089971782867163",
+      "readable": true,
+      "ruleCount": 118
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/quantity-popover.css?v=156736921087933243221782867166",
+      "readable": true,
+      "ruleCount": 31
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 2
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/index.bundle.css?v=2364115526265220641782867165",
+      "readable": true,
+      "ruleCount": 32
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-localization-form.css?v=7675190707830140721782867165",
+      "readable": true,
+      "ruleCount": 71
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-predictive-search.css?v=118580877929704197191786592543",
+      "readable": true,
+      "ruleCount": 40
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 1
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 106
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 4
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 40
+    },
+    {
+      "href": "https://cdn.shopify.com/extensions/019f9331-3ee3-7608-b502-ca67252a3239/inveterate-134/assets/inveterate.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cdn.shopify.com/extensions/019ff7d8-f017-7870-84db-6f15c8824f9b/klaviyo-email-marketing-63/assets/app.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cdn.rebuyengine.com/onsite/css/global.3534626a4ebdde3c7ed2.min.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 15
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 53
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 50
+    },
+    {
+      "href": "https://cdn.rebuyengine.com/onsite/css/fontawesome-embed.3422a4cc844b1c79fe87.min.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cdn.rebuyengine.com/onsite/css/rebuy-smart-cart-v2.3cf8e75febee0781bc4c.min.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cdn.rebuyengine.com/onsite/css/rebuy-flickity.16d0ff2874c140e640b2.min.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cdn.rebuyengine.com/onsite/css/cart-widget.146ce90dc46a59cf6346.min.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cdn.rebuyengine.com/onsite/css/cart-login-link.44462bc406c8d6331fe1.min.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cdn.rebuyengine.com/onsite/css/cart-progress-bar.4cbeebf873c6e5fc57a2.min.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cdn.rebuyengine.com/onsite/css/cart-title-bar.7a68bc0287d7dc1e16eb.min.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cached.rebuyengine.com/api/v1/user/stylesheet?shop=phlur-shop.myshopify.com&cache_key=1786848921",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://static.klaviyo.com/onsite/js/532.c8cdc52dccabc.css",
+      "readable": true,
+      "ruleCount": 339
+    },
+    {
+      "href": "https://cached.rebuyengine.com/api/v1/widgets/styles?id=232787&format=css&cache_key=1786848921",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cached.rebuyengine.com/api/v1/widgets/styles?id=232786&format=css&cache_key=1786848921",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 25
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "https://shopify-extension.getredo.com/7036-e189912b.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-slideshow.css?v=41568389003077754171782867164",
+      "readable": true,
+      "ruleCount": 35
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-slider.css?v=123216565374588961301782867164",
+      "readable": true,
+      "ruleCount": 68
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-list-social.css?v=110598103600610864261782867164",
+      "readable": true,
+      "ruleCount": 6
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 3
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-list-menu.css?v=151968516119678728991782867164",
+      "readable": true,
+      "ruleCount": 6
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-search.css?v=183263773459335230521782867163",
+      "readable": true,
+      "ruleCount": 14
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-menu-drawer.css?v=145930284309243098541782867162",
+      "readable": true,
+      "ruleCount": 35
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-cart-notification.css?v=54116361853792938221782867165",
+      "readable": true,
+      "ruleCount": 21
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-cart-items.css?v=72434576737038880241782867165",
+      "readable": true,
+      "ruleCount": 71
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-price.css?v=132681230003175939531782867165",
+      "readable": true,
+      "ruleCount": 16
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-mega-menu.css?v=13314261464342200021782867162",
+      "readable": true,
+      "ruleCount": 8
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 12
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/shop-nav-drawer.bundle.css?v=18727338358433076911785371408",
+      "readable": true,
+      "ruleCount": 106
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 1
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 79
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-price.css?v=132681230003175939531782867165",
+      "readable": true,
+      "ruleCount": 16
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-slider.css?v=123216565374588961301782867164",
+      "readable": true,
+      "ruleCount": 68
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/template-collection.css?v=167551946095178810381782867165",
+      "readable": true,
+      "ruleCount": 17
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/quick-add.css?v=26450902179660337051782867163",
+      "readable": true,
+      "ruleCount": 62
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 3
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/section-rich-text.css?v=5415466522639589081782867164",
+      "readable": true,
+      "ruleCount": 18
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 2
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 78
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-price.css?v=132681230003175939531782867165",
+      "readable": true,
+      "ruleCount": 16
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-slider.css?v=123216565374588961301782867164",
+      "readable": true,
+      "ruleCount": 68
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/template-collection.css?v=167551946095178810381782867165",
+      "readable": true,
+      "ruleCount": 17
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/quick-add.css?v=26450902179660337051782867163",
+      "readable": true,
+      "ruleCount": 62
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 3
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-loading-spinner.css?v=116724955567955766481782867165",
+      "readable": true,
+      "ruleCount": 7
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/section-collection-list.css?v=152994066824555050061782867162",
+      "readable": true,
+      "ruleCount": 10
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-slider.css?v=123216565374588961301782867164",
+      "readable": true,
+      "ruleCount": 68
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 2
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-image-with-text.css?v=12277190781806826231782867163",
+      "readable": true,
+      "ruleCount": 71
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 2
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/section-footer.css?v=72531277098879235901782867164",
+      "readable": true,
+      "ruleCount": 85
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-newsletter.css?v=61838620004686695071782867163",
+      "readable": true,
+      "ruleCount": 13
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-list-menu.css?v=151968516119678728991782867164",
+      "readable": true,
+      "ruleCount": 6
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-list-payment.css?v=69253961410771838501782867164",
+      "readable": true,
+      "ruleCount": 3
+    },
+    {
+      "href": "https://phlur.com/cdn/shop/t/105/assets/component-list-social.css?v=110598103600610864261782867164",
+      "readable": true,
+      "ruleCount": 6
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 4
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css",
+      "readable": false,
+      "reason": "cross-origin (CORS)"
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 13
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 1
+    },
+    {
+      "href": "inline",
+      "readable": true,
+      "ruleCount": 0
+    }
+  ]
+}

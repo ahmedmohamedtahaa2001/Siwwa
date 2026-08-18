@@ -1,0 +1,171 @@
+{
+  "startedAt": "2026-08-16T15:43:06.826Z",
+  "phases": {
+    "inspection": "reused",
+    "analysis": {
+      "home": {
+        "sections": 12,
+        "components": 25,
+        "typeStyles": 25,
+        "warmth": "warm-leaning",
+        "radii": [
+          {
+            "value": "0px",
+            "count": 1344
+          },
+          {
+            "value": "50%",
+            "count": 10
+          },
+          {
+            "value": "5px",
+            "count": 1
+          }
+        ]
+      },
+      "product": {
+        "sections": 12,
+        "components": 25,
+        "typeStyles": 31,
+        "warmth": "warm-leaning",
+        "radii": [
+          {
+            "value": "0px",
+            "count": 1485
+          },
+          {
+            "value": "50%",
+            "count": 13
+          },
+          {
+            "value": "80px",
+            "count": 1
+          }
+        ]
+      },
+      "collection": {
+        "sections": 7,
+        "components": 25,
+        "typeStyles": 21,
+        "warmth": "warm-leaning",
+        "radii": [
+          {
+            "value": "0px",
+            "count": 1071
+          },
+          {
+            "value": "50%",
+            "count": 6
+          },
+          {
+            "value": "5px",
+            "count": 1
+          }
+        ]
+      }
+    },
+    "mapping": {
+      "siwaTokens": 59,
+      "overrides": 7,
+      "compatible": 2
+    },
+    "build": {
+      "files": 25,
+      "list": [
+        "assets/component-badge-stamp.css",
+        "assets/component-button.css",
+        "assets/component-product-card.css",
+        "assets/phlur-siwa-tokens.css",
+        "assets/section-collection-grid.css",
+        "assets/section-editorial.css",
+        "assets/section-hero-banner.css",
+        "assets/section-main-product.css",
+        "assets/section-product-carousel.css",
+        "assets/section-site-footer.css",
+        "assets/section-site-header.css",
+        "sections/pl-collection-grid.liquid",
+        "sections/pl-editorial.liquid",
+        "sections/pl-footer.liquid",
+        "sections/pl-header.liquid",
+        "sections/pl-hero-banner.liquid",
+        "sections/pl-main-collection.liquid",
+        "sections/pl-main-product.liquid",
+        "sections/pl-product-carousel.liquid",
+        "snippets/pl-badge.liquid",
+        "snippets/pl-button.liquid",
+        "snippets/pl-product-card.liquid",
+        "templates/collection.json",
+        "templates/index.json",
+        "templates/product.json"
+      ]
+    },
+    "validation": {
+      "errors": 0,
+      "warnings": 0,
+      "contrast": [
+        {
+          "label": "body text on page",
+          "fg": "--pl-ink #000000",
+          "bg": "--pl-bg #fafafa",
+          "ratio": 20.12,
+          "min": 4.5,
+          "pass": true
+        },
+        {
+          "label": "text on card surface",
+          "fg": "--pl-ink #000000",
+          "bg": "--pl-surface #f5f5f5",
+          "ratio": 19.26,
+          "min": 4.5,
+          "pass": true
+        },
+        {
+          "label": "muted subtitle on page",
+          "fg": "--pl-ink-muted #707070",
+          "bg": "--pl-bg #fafafa",
+          "ratio": 4.74,
+          "min": 4.5,
+          "pass": true
+        },
+        {
+          "label": "muted on surface",
+          "fg": "--pl-ink-muted #707070",
+          "bg": "--pl-surface #f5f5f5",
+          "ratio": 4.54,
+          "min": 4.5,
+          "pass": true
+        },
+        {
+          "label": "button label on black fill",
+          "fg": "--pl-ink-inverse #ffffff",
+          "bg": "--pl-ink #000000",
+          "ratio": 21,
+          "min": 4.5,
+          "pass": true
+        },
+        {
+          "label": "hero CTA label on white fill",
+          "fg": "--pl-ink #000000",
+          "bg": "--pl-ink-inverse #ffffff",
+          "ratio": 21,
+          "min": 4.5,
+          "pass": true
+        }
+      ],
+      "findings": []
+    },
+    "verification": {
+      "score": 1,
+      "passed": 26,
+      "total": 26,
+      "failures": []
+    }
+  },
+  "finishedAt": "2026-08-16T15:43:08.573Z",
+  "summary": {
+    "geometryScore": 100,
+    "designSystemErrors": 0,
+    "filesGenerated": 25,
+    "documentedOverrides": 7
+  }
+}

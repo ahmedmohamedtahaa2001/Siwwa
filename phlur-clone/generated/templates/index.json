@@ -1,0 +1,79 @@
+{
+  "sections": {
+    "hero": {
+      "type": "pl-hero-banner",
+      "settings": {
+        "heading": "Vanilla Canyon",
+        "subheading": "A soulful vanilla that wears like the freedom of the open road",
+        "cta_label": "Shop now",
+        "cta_variant": "inverse",
+        "alignment": "start",
+        "height": 620,
+        "show_scrim": true
+      }
+    },
+    "bestsellers": {
+      "type": "pl-product-carousel",
+      "settings": {
+        "title": "Bestsellers",
+        "product_limit": 12,
+        "show_view_all": true
+      }
+    },
+    "quote": {
+      "type": "pl-editorial",
+      "settings": {
+        "quote": "Modern fragrances inspired by memory."
+      }
+    },
+    "members": {
+      "type": "pl-hero-banner",
+      "settings": {
+        "heading": "Members get more",
+        "cta_label": "Join",
+        "cta_variant": "inverse",
+        "alignment": "center",
+        "height": 610
+      }
+    },
+    "trending": {
+      "type": "pl-product-carousel",
+      "settings": {
+        "title": "Trending now",
+        "product_limit": 12,
+        "show_view_all": true
+      }
+    },
+    "collections": {
+      "type": "pl-collection-grid",
+      "settings": {
+        "title": "Featured collections",
+        "columns": "3"
+      },
+      "blocks": {
+        "t1": {
+          "type": "tile"
+        },
+        "t2": {
+          "type": "tile"
+        },
+        "t3": {
+          "type": "tile"
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "bestsellers",
+    "quote",
+    "members",
+    "trending",
+    "collections"
+  ]
+}

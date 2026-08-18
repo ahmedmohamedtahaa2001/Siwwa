@@ -1,20 +1,19 @@
 {
   "general": {
-    "accessibility": {
-      "skip_to_content": "تخطَّ إلى المحتوى",
-      "close": "إغلاق",
-      "remove": "إزالة",
-      "loading": "جارٍ التحميل",
-      "star_rating": "التقييم {{ rating }} من {{ rating_max }} نجوم",
-      "menu": "القائمة",
-      "primary_nav": "الرئيسية",
-      "breadcrumb": "مسار التنقل",
-      "pagination": "ترقيم الصفحات",
-      "opens_new_window": "(يفتح في نافذة جديدة)"
-    },
     "meta": {
-      "tags": "الوسم \"{{ tags }}\"",
+      "tags": "موسوم بـ \"{{ tags }}\"",
       "page": "صفحة {{ page }}"
+    },
+    "brand": {
+      "oracle_name": "الحكيم",
+      "reading_name": "القراءة",
+      "crossing_name": "العبور",
+      "second_crossing_name": "العبور التاني",
+      "compass_name": "البوصلة",
+      "field_notes_name": "دفتر الملاحظات",
+      "originals": "عطور سيوة الأصلية",
+      "impressions": "Impressions سيوة",
+      "try_first": "جرّب الأول"
     },
     "language": {
       "label": "اللغة",
@@ -23,189 +22,179 @@
     },
     "search": {
       "label": "بحث",
-      "placeholder": "ابحث عن عطر"
+      "placeholder": "دوّر على عطر",
+      "no_results": "مفيش نتايج لـ {{ terms }}. اتفرج على الشرقيات"
     },
-    "breadcrumb": {
-      "home": "الرئيسية"
-    },
-    "countdown": {
-      "days": "ي",
-      "hours": "س",
-      "minutes": "د",
-      "expired": "انتهى"
-    },
-    "newsletter": {
-      "label": "البريد الإلكتروني",
-      "submit": "اشترك",
-      "success": "شكرًا — تم تسجيلك."
+    "pagination": {
+      "label": "تصفّح الصفحات",
+      "previous": "السابق",
+      "next": "التالي",
+      "page": "صفحة {{ number }}"
     }
   },
-  "products": {
-    "product": {
-      "add_to_cart": "أضف إلى الحقيبة",
-      "adding": "جارٍ الإضافة…",
-      "added": "تمت الإضافة",
-      "add_failed": "حاول مرة أخرى",
-      "sold_out": "نفدت الكمية",
-      "notify_me": "أعلمني",
-      "price_from": "من",
-      "size": "الحجم",
-      "inspired_by": "مستوحى من",
-      "vendor": "الماركة",
-      "quantity": "الكمية",
-      "regular_price": "السعر الأصلي",
-      "description": "الوصف",
-      "notes": "نوتات العطر",
-      "reviews": "التقييمات",
-      "share": "مشاركة",
-      "gallery": "صور المنتج",
-      "view_image": "عرض الصورة {{ index }}"
+  "accessibility": {
+    "skip_to_content": "الانتقال إلى المحتوى",
+    "open_menu": "فتح القائمة",
+    "close_menu": "إغلاق القائمة",
+    "close": "إغلاق",
+    "primary_navigation": "التنقل الرئيسي",
+    "footer_navigation": "روابط أسفل الصفحة",
+    "bag_count": {
+      "zero": "الشنطة فاضية",
+      "one": "الشنطة، منتج واحد",
+      "two": "الشنطة، منتجين",
+      "few": "الشنطة، {{ count }} منتجات",
+      "many": "الشنطة، {{ count }} منتج",
+      "other": "الشنطة، {{ count }} منتج"
     },
-    "badges": {
-      "sale": "تخفيض",
-      "sold_out": "نفدت الكمية",
-      "in_stock": "متوفر",
-      "new": "وصل حديثًا",
-      "best_seller": "الأكثر مبيعًا",
-      "authentic": "أصيل · سيوي"
-    },
+    "account": "الحساب",
+    "wishlist_add": "إضافة {{ product }} إلى المفضلة",
+    "wishlist_remove": "إزالة {{ product }} من المفضلة",
+    "announcement": "إعلان",
+    "loading": "جاري التحميل",
+    "external_link": "يفتح في تبويب جديد",
+    "rating": "{{ rating }} من {{ max }} نجوم"
+  },
+  "catalog": {
+    "original": "أصلي",
+    "impression": "Impression",
+    "verified": "موثّق",
+    "new": "جديد",
+    "sold_out": "خلص",
+    "sale": "خصم",
+    "line_original": "سيوة أصلي",
+    "line_impression": "Impression من سيوة",
+    "untagged_warning": "المنتج ده مش متعلّم عليه ORIGINAL ولا IMPRESSION. علّم عليه قبل ما يتشحن.",
+    "disclaimer": "سيوة دار عطور مستقلة. كل أسماء المنتجات ملك سيوة. الإشارة إلى \"مستوحى من\" غرضها التعريف بعائلة العطر فقط، ولا تعني أي ارتباط بأي علامة أخرى أو اعتماد منها.",
+    "inspired_by": "مستوحى من {{ reference }}"
+  },
+  "product": {
+    "add_to_bag": "ضيفه للشنطة",
+    "adding": "بيتضاف",
+    "sold_out": "خلص من المخزن. عرّفني لما يرجع",
+    "notify_me": "عرّفني",
+    "price": "السعر",
+    "sale_price": "سعر الخصم",
+    "regular_price": "السعر الأصلي",
+    "from_price": "يبدأ من {{ price }}",
+    "size": "الحجم",
+    "quantity": "الكمية",
+    "decrease_quantity": "تقليل الكمية",
+    "increase_quantity": "زيادة الكمية",
+    "view_details": "اعرض {{ title }}",
     "notes": {
       "top": "النوتات العليا",
       "heart": "نوتات القلب",
-      "base": "النوتات الأساسية",
-      "unavailable": "لم تُنشر نوتات هذا العطر بعد."
+      "base": "النوتات القاعدية",
+      "top_timing": "تفتح في أول ١٥ إلى ٣٠ دقيقة",
+      "heart_timing": "تتطور من نصف ساعة لساعتين",
+      "base_timing": "تستقر بعد ساعتين — وهي اللي بتفضل"
     },
-    "reviews": {
-      "count": {
-        "zero": "لا توجد تقييمات",
-        "one": "تقييم واحد",
-        "two": "تقييمان",
-        "few": "{{ count }} تقييمات",
-        "many": "{{ count }} تقييمًا",
-        "other": "{{ count }} تقييم"
-      },
-      "verified": "شراء موثّق",
-      "read_more": "اقرأ التقييم كاملًا",
-      "helpful": "مفيد",
-      "reply_from": "رد من {{ shop }}",
-      "watch": "شاهد التقييم",
-      "read_article": "اقرأ المقال"
-    },
-    "layering": {
-      "base": "العطر الأساسي",
-      "partner": "اطبقه مع",
-      "step_one": "الخطوة ١ — اختر الأساس",
-      "step_two": "الخطوة ٢ — اختر ما تطبّقه معه",
-      "start_with": "ابدأ بـ",
-      "then_choose": "ثم اختر",
-      "add_duo": "أضف الثنائي",
-      "take_quiz": "اخضع لاختبار العطور لمعرفة التركيبة المناسبة لك.",
-      "incomplete": "اختر العطرين أولًا.",
-      "discount_note": "وفّر {{ percent }}٪ عند شراء هذا الثنائي."
-    },
-    "quiz": {
-      "progress": "تقدّم الاختبار",
-      "step": "السؤال {n} من {total}",
-      "next": "التالي",
-      "back": "رجوع",
-      "see_result": "اعرض النتيجة",
-      "pick_one": "اختر إجابة للمتابعة.",
-      "no_questions": "لم تُضف أسئلة إلى هذا الاختبار بعد.",
-      "no_js": "يحتاج اختبار العطور إلى جافاسكريبت. تصفّح المجموعة كاملة بدلًا من ذلك."
-    },
-    "contrast": {
-      "original": "الأصلي",
-      "fragrance": "العطر",
-      "price": "السعر",
-      "retail": "سعر الأصلي",
-      "learn_more": "اعرف المزيد",
-      "table_caption": "مقارنة بين {{ product }} والعطر المستوحى منه",
-      "story": "إن كنت تحب {{ house }} {{ fragrance }}، فستتعرف على {{ product }}."
-    },
-    "bundle": {
-      "save": "وفّر {{ amount }}"
+    "performance": {
+      "longevity": "الثبات",
+      "projection": "الانتشار",
+      "best_season": "أنسب موسم",
+      "best_for": "الأنسب لـ",
+      "hours": "{{ count }} ساعات"
     }
+  },
+  "tester": {
+    "cta": "جرّبه الأول — {{ price }}",
+    "announcement": "جرّب أي عطر الأول — {{ price }}",
+    "nav_label": "جرّب الأول",
+    "first_crossing": "أول عبور — {{ price }}",
+    "no_demand": "لسه مش متأكد؟ الحكيم مش بيستعجلك.",
+    "upgrade": "خده كامل",
+    "tier_label": "تستر"
+  },
+  "trust": {
+    "authenticity": "من موزعين معتمدين.",
+    "batch_verified": "كل تشغيلة بتتراجع قبل ما تتشحن.",
+    "formulation": "تركيبة سيوة الخاصة",
+    "packaging": "تغليف مميز مع كل أوردر",
+    "returns": "مش عاجبك؟ رجّعه. من غير أسئلة.",
+    "return_window": "استبدال أو إرجاع خلال {{ days }} يوم",
+    "exchange_first": "جرّب حاجة تانية — بدّله بأي عطر",
+    "cod": "الدفع عند الاستلام",
+    "installments": "تقسيط متاح",
+    "free_shipping": "شحن مجاني للأوردرات فوق {{ amount }}",
+    "free_shipping_progress": "باقي {{ amount }} وتوصل للشحن المجاني",
+    "free_shipping_reached": "الشحن المجاني اتفتح"
   },
   "cart": {
-    "general": {
-      "title": "حقيبتك",
-      "empty": "حقيبتك فارغة",
-      "subtotal": "المجموع",
-      "checkout": "إتمام الشراء",
-      "continue_shopping": "متابعة التسوق"
-    },
-    "shipping": {
-      "away_from_free": "يفصلك عن الشحن المجاني",
-      "qualified": "لديك شحن مجاني",
-      "progress": "{{ percent }}٪ نحو الشحن المجاني"
-    }
-  },
-  "collections": {
-    "general": {
-      "shop_all": "تسوق الكل",
-      "explore": "اكتشف",
-      "shop_now": "تسوق الآن",
-      "view_all": "عرض الكل",
-      "product_count": {
-        "zero": "لا توجد عطور",
-        "one": "عطر واحد",
-        "two": "عطران",
-        "few": "{{ count }} عطور",
-        "many": "{{ count }} عطرًا",
-        "other": "{{ count }} عطر"
-      },
-      "previous": "السابق",
-      "next": "التالي",
-      "go_to_page": "اذهب إلى الصفحة",
-      "load_more": "تحميل المزيد",
-      "empty": "لا توجد عطور تطابق هذه التصفية."
-    },
-    "sorting": {
-      "label": "ترتيب حسب",
-      "featured": "المميزة",
-      "best_selling": "الأكثر مبيعًا",
-      "az": "أبجديًا، أ–ي",
-      "za": "أبجديًا، ي–أ",
-      "price_ascending": "السعر، من الأقل للأعلى",
-      "price_descending": "السعر، من الأعلى للأقل",
-      "date_ascending": "التاريخ، من الأقدم للأحدث",
-      "date_descending": "التاريخ، من الأحدث للأقدم"
-    },
-    "filters": {
-      "label": "تصفية",
-      "clear": "مسح",
-      "clear_all": "مسح الكل",
-      "remove_filter": "إزالة التصفية {{ name }}",
-      "apply": "تطبيق التصفية",
-      "min": "من",
-      "max": "إلى"
-    }
-  },
-  "onboarding": {
-    "product_title": "عطر تجريبي",
-    "collection_title": "مجموعة تجريبية"
-  },
-  "customer": {
-    "account": {
-      "title": "الحساب"
-    }
+    "title": "شنطتك",
+    "empty": "الشنطة فاضية. ابدأ بتستر",
+    "empty_action": "ابدأ بتستر",
+    "subtotal": "الإجمالي",
+    "checkout": "إتمام الشراء",
+    "remove": "شيل {{ title }}",
+    "continue_shopping": "كمّل تسوّق"
   },
   "sections": {
-    "contact": {
-      "name": "الاسم",
-      "email": "البريد الإلكتروني",
-      "phone": "الهاتف",
-      "subject": "الموضوع",
-      "message": "الرسالة",
-      "submit": "إرسال",
-      "success": "شكرًا — سنتواصل معك."
+    "announcement": {
+      "dismiss": "إخفاء الإعلان",
+      "previous": "الإعلان السابق",
+      "next": "الإعلان التالي"
     },
-    "hero": {
-      "carousel": "عارض الشرائح",
-      "slide_of": "الشريحة {{ index }} من {{ total }}",
-      "choose_slide": "اختر شريحة",
-      "pause": "إيقاف العرض",
-      "scroll": "مرّر للاستكشاف"
+    "header": {
+      "menu": "القائمة",
+      "search": "بحث",
+      "account": "الحساب",
+      "bag": "الشنطة"
+    },
+    "footer": {
+      "newsletter_title": "دفتر الملاحظات",
+      "newsletter_body": "أخبار من الورشة. مرتين في الشهر، مش أكتر.",
+      "newsletter_label": "الإيميل",
+      "newsletter_submit": "اشترك",
+      "newsletter_success": "بقيت معانا.",
+      "newsletter_error": "شكل الإيميل غير صحيح. مثال: you@example.com",
+      "payment_methods": "طرق الدفع المتاحة",
+      "policies": "السياسات",
+      "copyright": "© {{ year }} {{ shop }}"
+    },
+    "product_row": {
+      "view_all": "شوف الكل",
+      "region_label": "{{ title }} — قائمة منتجات بتتحرك",
+      "empty": "لسه مفيش حاجة هنا.",
+      "empty_action": "اتفرج على كل حاجة"
+    },
+    "oracle": {
+      "eyebrow": "الحكيم",
+      "heading": "ست أسئلة. وبعدين الحكيم يتكلم.",
+      "body": "جاوب على ست أسئلة عن حياتك وعن اللي بتحبه أصلاً. الحكيم يقراهم ويسمّيلك من تلات لخمس عطور تناسبك — وكل واحد معاه تستر، فمفيش حاجة بالتخمين.",
+      "cta": "اسأل الحكيم",
+      "step": "خطوة {{ number }}"
+    },
+    "tester_invite": {
+      "eyebrow": "أول عبور",
+      "heading": "جرّبه الأول.",
+      "body": "كل عطر معاه تستر. البسه أسبوع، وبعدين قرر تاخد الزجاجة كاملة ولا لأ.",
+      "kit_heading": "علبة الاكتشاف",
+      "kit_body": "مجموعة تسترات في أوردر واحد — اتعرّف على البيت قبل ما تختار.",
+      "kit_cta": "شوف العلب"
+    },
+    "collections": {
+      "heading": "ابدأ من هنا"
     }
+  },
+  "preset_preview": {
+    "title": "الاتجاهات البصرية",
+    "intro": "نفس المكوّنات، معروضة في الاتجاهات الخمسة. مفيش أي مكوّن اتعمله ستايل مخصوص — كل الفرق جاي من طبقة الـ tokens.",
+    "current": "المُفعّل حاليًا",
+    "buttons": "الأزرار",
+    "badges": "أختام الكتالوج",
+    "form": "حقول الإدخال",
+    "product": "كارت المنتج",
+    "type": "سلّم الخطوط",
+    "primary_cta": "ضيفه للشنطة",
+    "tester_cta": "جرّبه الأول — 85 EGP",
+    "secondary_cta": "دليل المقاسات",
+    "quiet_cta": "مش دلوقتي",
+    "sample_product": "ليالي العود",
+    "sample_family": "عنبر وراتنج",
+    "sample_alt": "ليالي العود ٥٠ مل، زجاجة كهرمانية، من الأمام",
+    "email_error": "شكل الإيميل غير صحيح. مثال: you@example.com",
+    "longevity_value": "6–8 ساعات"
   }
 }

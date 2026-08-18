@@ -1,0 +1,400 @@
+{
+  "probe": {
+    "heroCta": {
+      "w": 126.2,
+      "h": 40,
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "letterSpacing": "0.8px",
+      "textTransform": "uppercase",
+      "lineHeight": "normal",
+      "padInline": "30px 30px",
+      "gap": "normal"
+    },
+    "hero": {
+      "w": 1440,
+      "h": 623,
+      "bg": "rgb(0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "lineHeight": "normal",
+      "padInline": "0px 0px",
+      "gap": "normal"
+    },
+    "heroHeading": {
+      "w": 480,
+      "h": 44,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "44px",
+      "fontWeight": "600",
+      "letterSpacing": "0.96px",
+      "textTransform": "uppercase",
+      "lineHeight": "44px",
+      "padInline": "0px 0px",
+      "gap": "normal"
+    },
+    "badge": {
+      "w": 34,
+      "h": 19,
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "11px",
+      "fontWeight": "500",
+      "letterSpacing": "0.7px",
+      "textTransform": "uppercase",
+      "lineHeight": "11px",
+      "padInline": "6px 6px",
+      "gap": "normal"
+    },
+    "card": {
+      "w": 300,
+      "h": 373,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "lineHeight": "normal",
+      "padInline": "0px 0px",
+      "gap": "normal"
+    },
+    "cardMedia": {
+      "w": 300,
+      "h": 300,
+      "bg": "rgb(245, 245, 245)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "lineHeight": "normal",
+      "padInline": "0px 0px",
+      "gap": "normal"
+    },
+    "cardTitle": {
+      "w": 300,
+      "h": 16,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "14px",
+      "fontWeight": "600",
+      "letterSpacing": "0.64px",
+      "textTransform": "uppercase",
+      "lineHeight": "normal",
+      "padInline": "0px 0px",
+      "gap": "normal"
+    },
+    "cardSubtitle": {
+      "w": 300,
+      "h": 16,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(112, 112, 112)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "lineHeight": "normal",
+      "padInline": "0px 0px",
+      "gap": "normal"
+    },
+    "track": {
+      "w": 1225,
+      "h": 378,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "lineHeight": "normal",
+      "padInline": "0px 0px",
+      "gap": "20px"
+    },
+    "sectionTitle": {
+      "w": 149.1,
+      "h": 21,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "letterSpacing": "0.96px",
+      "textTransform": "uppercase",
+      "lineHeight": "normal",
+      "padInline": "0px 0px",
+      "gap": "normal"
+    },
+    "header": {
+      "w": 1440,
+      "h": 56,
+      "bg": "rgb(250, 250, 250)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "lineHeight": "normal",
+      "padInline": "0px 0px",
+      "gap": "normal"
+    },
+    "announce": {
+      "w": 1440,
+      "h": 36,
+      "bg": "rgb(0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "11px",
+      "fontWeight": "400",
+      "letterSpacing": "0.7px",
+      "textTransform": "uppercase",
+      "lineHeight": "normal",
+      "padInline": "20px 20px",
+      "gap": "normal"
+    },
+    "inner": {
+      "w": 1265,
+      "h": 419,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "lineHeight": "normal",
+      "padInline": "20px 20px",
+      "gap": "normal"
+    }
+  },
+  "results": [
+    {
+      "name": "hero height",
+      "actual": 623,
+      "expected": 623.4,
+      "tolerance": "±3%",
+      "delta": -0.4,
+      "pass": true
+    },
+    {
+      "name": "hero heading font-size",
+      "actual": 44,
+      "expected": 44,
+      "tolerance": "±1%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "hero heading line-height",
+      "actual": 44,
+      "expected": 44,
+      "tolerance": "±2%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "hero heading tracking",
+      "actual": 0.96,
+      "expected": 0.96,
+      "tolerance": "±5%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "CTA width",
+      "actual": 126.2,
+      "expected": 130,
+      "tolerance": "±6%",
+      "delta": -3.8,
+      "pass": true
+    },
+    {
+      "name": "CTA height",
+      "actual": 40,
+      "expected": 40,
+      "tolerance": "±2%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "CTA font-size",
+      "actual": 12,
+      "expected": 12,
+      "tolerance": "±1%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "CTA tracking",
+      "actual": 0.8,
+      "expected": 0.8,
+      "tolerance": "±5%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "badge height",
+      "actual": 19,
+      "expected": 19,
+      "tolerance": "±6%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "badge font-size",
+      "actual": 11,
+      "expected": 11,
+      "tolerance": "±1%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "badge tracking",
+      "actual": 0.7,
+      "expected": 0.7,
+      "tolerance": "±5%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "card width",
+      "actual": 300,
+      "expected": 299.5,
+      "tolerance": "±2%",
+      "delta": 0.5,
+      "pass": true
+    },
+    {
+      "name": "card media ratio",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": "±2%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "card title font-size",
+      "actual": 14,
+      "expected": 14,
+      "tolerance": "±1%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "card title tracking",
+      "actual": 0.64,
+      "expected": 0.64,
+      "tolerance": "±6%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "carousel gap",
+      "actual": 20,
+      "expected": 20,
+      "tolerance": "±1%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "content container width",
+      "actual": 1265,
+      "expected": 1265,
+      "tolerance": "±2%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "header height",
+      "actual": 56,
+      "expected": 56,
+      "tolerance": "±3%",
+      "delta": 0,
+      "pass": true
+    },
+    {
+      "name": "announcement height",
+      "actual": 36,
+      "expected": 36,
+      "tolerance": "±6%",
+      "delta": 0,
+      "pass": true
+    }
+  ],
+  "categorical": [
+    {
+      "name": "card radius = 0",
+      "actual": "0px",
+      "expected": "0px",
+      "pass": true
+    },
+    {
+      "name": "card shadow = none",
+      "actual": "none",
+      "expected": "none",
+      "pass": true
+    },
+    {
+      "name": "CTA radius = 0",
+      "actual": "0px",
+      "expected": "0px",
+      "pass": true
+    },
+    {
+      "name": "badge radius = 0",
+      "actual": "0px",
+      "expected": "0px",
+      "pass": true
+    },
+    {
+      "name": "card title uppercase",
+      "actual": "uppercase",
+      "expected": "uppercase",
+      "pass": true
+    },
+    {
+      "name": "hero heading uppercase",
+      "actual": "uppercase",
+      "expected": "uppercase",
+      "pass": true
+    },
+    {
+      "name": "CTA uppercase",
+      "actual": "uppercase",
+      "expected": "uppercase",
+      "pass": true
+    }
+  ],
+  "score": 1,
+  "passed": 26,
+  "total": 26
+}

@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Siwa Design System v3.0.0 — reference</title>
+<link rel="stylesheet" href="../tokens/siwa-tokens.css">
+<link rel="stylesheet" href="../css/siwa-base.css">
+<link rel="stylesheet" href="../css/siwa-components.css">
+<style>
+  /* Preview chrome only — not part of the design system. */
+  .pv-bar {
+    position: sticky; inset-block-start: 0; z-index: 500;
+    display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-3);
+    padding: var(--spacing-3) var(--spacing-6);
+    background: var(--colors-text); color: var(--colors-background);
+    font-size: var(--text-body-sm);
+  }
+  .pv-bar strong { font-family: var(--font-display); letter-spacing: 0.08em; }
+  .pv-bar button {
+    min-block-size: 32px; padding-inline: var(--spacing-3);
+    background: transparent; color: inherit;
+    border: 1px solid currentColor; cursor: pointer;
+    font-size: var(--text-label); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .pv-bar button[aria-pressed="true"] { background: var(--colors-background); color: var(--colors-text); }
+  .pv-sec { padding-block: var(--spacing-12); border-block-start: 1px solid var(--colors-border); }
+  .pv-sec > h2 {
+    font-family: var(--font-display); font-size: var(--text-h2);
+    color: var(--colors-heading); margin-block-end: var(--spacing-2);
+  }
+  .pv-sec > p.pv-note { color: var(--colors-text-secondary); font-size: var(--text-body-sm); margin-block-end: var(--spacing-8); max-inline-size: var(--measure); }
+  .pv-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: var(--spacing-3); }
+  .pv-swatch { border: 1px solid var(--colors-border); }
+  .pv-swatch__chip { block-size: 64px; }
+  .pv-swatch__meta { padding: var(--spacing-2); font-size: 11px; font-family: var(--font-mono); line-height: 1.5; }
+  .pv-swatch__meta b { display: block; font-family: var(--font-ui); font-size: var(--text-label); font-weight: 600; }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-4); margin-block-end: var(--spacing-6); }
+  .pv-label { font-size: var(--text-label); text-transform: uppercase; letter-spacing: 0.12em; color: var(--colors-text-secondary); margin-block-end: var(--spacing-3); }
+  .pv-shapes { display: flex; flex-wrap: wrap; gap: var(--spacing-4); }
+  .pv-shape { inline-size: 96px; block-size: 96px; background: var(--colors-surface); display: grid; place-items: center; font-family: var(--font-mono); font-size: 11px; text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="pv-bar">
+  <strong>SIWA</strong>
+  <span>Design System v3.0.0 — reference</span>
+  <span style="flex:1"></span>
+  <button id="pv-dir" aria-pressed="false">عربي / RTL</button>
+</div>
+
+<main class="siwa-container">
+
+<!-- ══ COLOUR ══ -->
+<section class="pv-sec">
+  <h2>Colour</h2>
+  <p class="pv-note">Every pair verified by <code>tools/check-contrast.mjs</code> — 29 pairs, zero failures. Gold is rationed: CTA fills, display accents ≥24px, and meaningful strokes. Never body text, never a price.</p>
+
+  <p class="pv-label">Ground</p>
+  <div class="pv-swatches" style="margin-block-end:var(--spacing-8)">
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-background)"></div><div class="pv-swatch__meta"><b>background</b>#f7f5ee</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-surface)"></div><div class="pv-swatch__meta"><b>surface</b>#eae0c4</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-surface-hover)"></div><div class="pv-swatch__meta"><b>surface-hover</b>#d3cab0</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-surface-dark)"></div><div class="pv-swatch__meta"><b>surface-dark</b>#2f3932</div></div>
+  </div>
+
+  <p class="pv-label">Ink</p>
+  <div class="pv-swatches" style="margin-block-end:var(--spacing-8)">
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-text)"></div><div class="pv-swatch__meta"><b>text</b>#1b2724 · 14.13:1</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-text-secondary)"></div><div class="pv-swatch__meta"><b>text-secondary</b>#6f6156 · 5.47:1</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-heading)"></div><div class="pv-swatch__meta"><b>heading</b>#6b4a28 · 7.30:1</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-heading-alt)"></div><div class="pv-swatch__meta"><b>heading-alt</b>#50251c · 11.86:1</div></div>
+  </div>
+
+  <p class="pv-label">Gold — rationed</p>
+  <div class="pv-swatches" style="margin-block-end:var(--spacing-8)">
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-primary)"></div><div class="pv-swatch__meta"><b>primary</b>#b38145 · CTA fill</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-primary-strong)"></div><div class="pv-swatch__meta"><b>primary-strong</b>#a5773f · stroke</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-secondary)"></div><div class="pv-swatch__meta"><b>secondary</b>#e1b160 · dark only</div></div>
+  </div>
+
+  <p class="pv-label">Semantic + catalog</p>
+  <div class="pv-swatches">
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-link)"></div><div class="pv-swatch__meta"><b>link</b>#845a48</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-success)"></div><div class="pv-swatch__meta"><b>success</b>#586851</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-warning)"></div><div class="pv-swatch__meta"><b>warning</b>#8b5823</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-danger)"></div><div class="pv-swatch__meta"><b>danger</b>#9c3b2c</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-border-strong)"></div><div class="pv-swatch__meta"><b>border-strong</b>#997a5c · controls</div></div>
+    <div class="pv-swatch"><div class="pv-swatch__chip" style="background:var(--colors-border)"></div><div class="pv-swatch__meta"><b>border</b>#e4b68a · decorative</div></div>
+  </div>
+</section>
+
+<!-- ══ TYPE ══ -->
+<section class="pv-sec">
+  <h2>Type</h2>
+  <p class="pv-note">Fraunces for display, Inter for UI, JetBrains Mono for anything numeric. The ramp is <code>clamp()</code> — resize the window and the hero moves between 32 and 48px with no media query.</p>
+  <div class="siwa-stack" style="--stack-gap:var(--spacing-6)">
+    <div><p class="pv-label">--text-hero</p><p class="siwa-hero-title">The oasis remembers</p></div>
+    <div><p class="pv-label">--text-h1</p><h1 class="siwa-h1">Oud Nights</h1></div>
+    <div><p class="pv-label">--text-h2</p><h2 class="siwa-h2">Shop by family</h2></div>
+    <div><p class="pv-label">--text-h3</p><h3 class="siwa-h3">Amber &amp; Resin</h3></div>
+    <div><p class="pv-label">--text-body-lg</p><p class="siwa-body-lg siwa-prose">Smoke over cold stone, then something sweeter underneath — the way a room smells an hour after the incense has gone out.</p></div>
+    <div><p class="pv-label">--text-body</p><p class="siwa-body siwa-prose">Body copy is capped at 68ch. A full-bleed paragraph is a bug, not a layout.</p></div>
+    <div><p class="pv-label">--text-body-sm / muted</p><p class="siwa-body-sm siwa-muted">Batch 0241 · bottled in Cairo · 6–8 hours on skin</p></div>
+    <div><p class="pv-label">--text-label</p><p class="siwa-label">Limited release</p></div>
+    <div><p class="pv-label">--font-mono · tabular</p><p class="siwa-numeric">1,450 EGP &nbsp; 850 EGP &nbsp; 85 EGP</p></div>
+  </div>
+</section>
+
+<!-- ══ SHAPE ══ -->
+<section class="pv-sec">
+  <h2>Shape — two tiers</h2>
+  <p class="pv-note">If the customer can transact with it — click to buy, type a value, read a price off it — its radius is 0–2px. Radius lives on the editorial layer. A circle is not a rounded rectangle and is always allowed.</p>
+  <div class="pv-shapes">
+    <div class="pv-shape" style="border-radius:var(--rounded-none)">none<br>0px<br><small>commerce</small></div>
+    <div class="pv-shape" style="border-radius:var(--rounded-sm)">sm<br>2px<br><small>commerce</small></div>
+    <div class="pv-shape" style="border-radius:var(--rounded-editorial)">editorial<br>16px</div>
+    <div class="pv-shape" style="border-radius:var(--rounded-bento)">bento<br>24px</div>
+    <div class="pv-shape" style="border-radius:var(--rounded-full)">full<br>circle</div>
+  </div>
+</section>
+
+<!-- ══ BUTTONS ══ -->
+<section class="pv-sec">
+  <h2>A-01 Button</h2>
+  <p class="pv-note">One gold CTA per fold. The tester variant is deliberately identical in weight to the secondary — principle 7. Tab through these to see the two-ring focus token on parchment.</p>
+  <div class="pv-row">
+    <button class="siwa-button siwa-button--primary">Add to bag</button>
+    <button class="siwa-button siwa-button--tester">Try the tester — 85 EGP</button>
+    <button class="siwa-button siwa-button--secondary">Size guide</button>
+    <button class="siwa-button siwa-button--quiet">Compare</button>
+    <button class="siwa-button siwa-button--text">Read the batch notes</button>
+    <button class="siwa-button siwa-button--icon" aria-label="Add to wishlist">♡</button>
+  </div>
+  <div class="pv-row">
+    <button class="siwa-button siwa-button--primary" disabled>Sold out</button>
+    <button class="siwa-button siwa-button--primary" aria-busy="true">Adding…</button>
+    <button class="siwa-button siwa-button--secondary siwa-button--sm">Small · 44px hit area</button>
+  </div>
+</section>
+
+<!-- ══ BADGES ══ -->
+<section class="pv-sec">
+  <h2>E-02 BadgeStamp</h2>
+  <p class="pv-note">Catalog separation, non-negotiable 1. ORIGINAL or IMPRESSION appears on every thumbnail and in the first line of every PDP. These three colours are never re-mapped.</p>
+  <div class="pv-row">
+    <span class="siwa-badge siwa-badge--original">Original</span>
+    <span class="siwa-badge siwa-badge--impression">Impression</span>
+    <span class="siwa-badge siwa-badge--verified">Verified</span>
+    <span class="siwa-badge siwa-badge--new">New</span>
+    <span class="siwa-badge siwa-badge--sale">−20%</span>
+    <span class="siwa-badge siwa-badge--soldout">Sold out</span>
+  </div>
+</section>
+
+<!-- ══ PRODUCT GRID ══ -->
+<section class="pv-sec">
+  <h2>P-01 ProductCard · L-02 ProductGrid</h2>
+  <p class="pv-note">No shadow, no lift — hover scales the media and underlines the title. The price is ink, never gold (principle 6). Four body elements maximum.</p>
+  <ul class="siwa-grid">
+    <li class="siwa-card">
+      <div class="siwa-card__media">
+        <span class="siwa-badge siwa-badge--original siwa-badge--overlay">Original</span>
+        <button class="siwa-button siwa-button--icon siwa-card__wishlist" aria-label="Add Oud Nights to wishlist" aria-pressed="false">♡</button>
+        <svg viewBox="0 0 100 100" role="img" aria-label="Oud Nights 50ml, amber glass bottle, front"><rect width="100" height="100" fill="#eae0c4"/><rect x="36" y="30" width="28" height="46" fill="#8b5f3c"/><rect x="44" y="20" width="12" height="12" fill="#6b4a28"/></svg>
+      </div>
+      <div class="siwa-card__body">
+        <span class="siwa-card__eyebrow">Amber &amp; Resin</span>
+        <h3 class="siwa-card__title"><a class="siwa-card__link" href="#">Oud Nights</a></h3>
+        <span class="siwa-card__price">1,450 EGP</span>
+      </div>
+    </li>
+    <li class="siwa-card">
+      <div class="siwa-card__media">
+        <span class="siwa-badge siwa-badge--impression siwa-badge--overlay">Impression</span>
+        <button class="siwa-button siwa-button--icon siwa-card__wishlist" aria-label="Add Desert Fig to wishlist" aria-pressed="false">♡</button>
+        <svg viewBox="0 0 100 100" role="img" aria-label="Desert Fig 50ml, clear glass bottle, front"><rect width="100" height="100" fill="#eae0c4"/><rect x="36" y="30" width="28" height="46" fill="#a8a284"/><rect x="44" y="20" width="12" height="12" fill="#6b4a28"/></svg>
+      </div>
+      <div class="siwa-card__body">
+        <span class="siwa-card__eyebrow">Green &amp; Fresh</span>
+        <h3 class="siwa-card__title"><a class="siwa-card__link" href="#">Desert Fig</a></h3>
+        <span class="siwa-card__price">980 EGP<span class="siwa-card__price-was">1,220 EGP</span></span>
+      </div>
+    </li>
+    <li class="siwa-card">
+      <div class="siwa-card__media">
+        <span class="siwa-badge siwa-badge--original siwa-badge--overlay">Original</span>
+        <button class="siwa-button siwa-button--icon siwa-card__wishlist" aria-label="Add Salt Road to wishlist" aria-pressed="false">♡</button>
+        <svg viewBox="0 0 100 100" role="img" aria-label="Salt Road 50ml, frosted bottle, front"><rect width="100" height="100" fill="#eae0c4"/><rect x="36" y="30" width="28" height="46" fill="#c9c2ad"/><rect x="44" y="20" width="12" height="12" fill="#6b4a28"/></svg>
+      </div>
+      <div class="siwa-card__body">
+        <span class="siwa-card__eyebrow">Mineral</span>
+        <h3 class="siwa-card__title"><a class="siwa-card__link" href="#">Salt Road</a></h3>
+        <span class="siwa-card__price">1,150 EGP</span>
+      </div>
+    </li>
+    <li class="siwa-card">
+      <div class="siwa-card__media">
+        <span class="siwa-badge siwa-badge--soldout siwa-badge--overlay">Sold out</span>
+        <svg viewBox="0 0 100 100" role="img" aria-label="Night Crossing 50ml, dark glass bottle, front"><rect width="100" height="100" fill="#eae0c4"/><rect x="36" y="30" width="28" height="46" fill="#3f4a42"/><rect x="44" y="20" width="12" height="12" fill="#6b4a28"/></svg>
+      </div>
+      <div class="siwa-card__body">
+        <span class="siwa-card__eyebrow">Smoke</span>
+        <h3 class="siwa-card__title"><a class="siwa-card__link" href="#">Night Crossing</a></h3>
+        <span class="siwa-card__price">1,600 EGP</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ══ BENTO ══ -->
+<section class="pv-sec">
+  <h2>L-08 BentoGrid — the editorial layer</h2>
+  <p class="pv-note">The one place Siwa is allowed to be soft: 24px radius, shadow on hover. Photo tiles always carry a scrim. Note that only one tile in this fold uses gold.</p>
+  <div class="siwa-bento">
+    <a class="siwa-bento__tile siwa-bento__tile--w2 siwa-bento__tile--h2 siwa-bento__tile--photo" href="#">
+      <div class="siwa-bento__media"><svg viewBox="0 0 400 400" preserveAspectRatio="none" aria-hidden="true"><rect width="400" height="400" fill="#8b6f4a"/><circle cx="300" cy="90" r="55" fill="#c9a670"/></svg></div>
+      <div class="siwa-bento__content">
+        <h3 class="siwa-bento__title">The oasis, in a bottle</h3>
+        <p class="siwa-bento__text">Twelve compositions built from what actually grows there.</p>
+      </div>
+    </a>
+    <a class="siwa-bento__tile" href="#">
+      <div class="siwa-bento__content"><h3 class="siwa-bento__title">Amber &amp; Resin</h3><p class="siwa-bento__text">14 scents</p></div>
+    </a>
+    <a class="siwa-bento__tile" href="#">
+      <div class="siwa-bento__content"><h3 class="siwa-bento__title">Green &amp; Fresh</h3><p class="siwa-bento__text">9 scents</p></div>
+    </a>
+    <div class="siwa-bento__tile siwa-bento__tile--w2 siwa-bento__tile--promo">
+      <div class="siwa-bento__content">
+        <h3 class="siwa-bento__title">Not sure where to start?</h3>
+        <p class="siwa-bento__text">The Discovery Kit — five testers, credited against your first full bottle.</p>
+        <p style="margin-block-start:var(--spacing-4)"><a class="siwa-button siwa-button--primary" href="#">Build a kit</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SIZE + PYRAMID + METER ══ -->
+<section class="pv-sec">
+  <h2>P-07 SizeSelector · P-04 NotePyramid · P-06 LongevityBar</h2>
+  <p class="pv-note">The tester tile is the same size, type and footprint as every other tier — only the dashed rule differs. Selection carries two channels. The longevity bar always states its number.</p>
+
+  <fieldset style="border:0;padding:0;margin:0 0 var(--spacing-8)">
+    <legend class="pv-label">Size</legend>
+    <div class="siwa-sizes">
+      <label class="siwa-size siwa-size--tester">
+        <input class="siwa-size__input" type="radio" name="size" value="tester">
+        <span class="siwa-size__body"><span class="siwa-size__name">Tester 2ml</span><span class="siwa-size__price">85 EGP</span></span>
+      </label>
+      <label class="siwa-size">
+        <input class="siwa-size__input" type="radio" name="size" value="30" checked>
+        <span class="siwa-size__body"><span class="siwa-size__name">30 ml</span><span class="siwa-size__price">980 EGP</span></span>
+      </label>
+      <label class="siwa-size">
+        <input class="siwa-size__input" type="radio" name="size" value="50">
+        <span class="siwa-size__body"><span class="siwa-size__name">50 ml</span><span class="siwa-size__price">1,450 EGP</span></span>
+      </label>
+      <label class="siwa-size">
+        <input class="siwa-size__input" type="radio" name="size" value="100" disabled>
+        <span class="siwa-size__body"><span class="siwa-size__name">100 ml</span><span class="siwa-size__price">Sold out</span></span>
+      </label>
+    </div>
+  </fieldset>
+
+  <p class="pv-label">Note pyramid</p>
+  <dl class="siwa-pyramid" style="margin-block-end:var(--spacing-8)">
+    <div class="siwa-pyramid__tier"><dt class="siwa-pyramid__label">Top</dt><dd class="siwa-pyramid__notes"><span class="siwa-chip">Bergamot</span><span class="siwa-chip">Pink pepper</span></dd></div>
+    <div class="siwa-pyramid__tier"><dt class="siwa-pyramid__label">Heart</dt><dd class="siwa-pyramid__notes"><span class="siwa-chip">Incense</span><span class="siwa-chip">Dried fig</span><span class="siwa-chip">Rose</span></dd></div>
+    <div class="siwa-pyramid__tier"><dt class="siwa-pyramid__label">Base</dt><dd class="siwa-pyramid__notes"><span class="siwa-chip">Oud</span><span class="siwa-chip">Labdanum</span><span class="siwa-chip">Vetiver</span></dd></div>
+  </dl>
+
+  <div class="siwa-meter" style="max-inline-size:420px;--meter-value:72%">
+    <div class="siwa-meter__head"><span>Longevity</span><span class="siwa-meter__value">6–8 hours</span></div>
+    <div class="siwa-meter__track" role="meter" aria-valuenow="7" aria-valuemin="0" aria-valuemax="12" aria-valuetext="6 to 8 hours" aria-label="Longevity">
+      <div class="siwa-meter__fill"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FORMS + FEEDBACK ══ -->
+<section class="pv-sec">
+  <h2>Forms &amp; feedback</h2>
+  <p class="pv-note">Control boundaries use <code>--colors-border-strong</code> (3.02:1). Errors are never colour alone — border thickens, icon appears, message is specific.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--spacing-6);margin-block-end:var(--spacing-8)">
+    <div class="siwa-field">
+      <label class="siwa-field__label" for="pv-e1">Email</label>
+      <input class="siwa-input" id="pv-e1" type="email" placeholder="you@example.com">
+      <span class="siwa-field__hint">For order updates only.</span>
+    </div>
+    <div class="siwa-field">
+      <label class="siwa-field__label" for="pv-e2">Email</label>
+      <input class="siwa-input" id="pv-e2" type="email" value="ahmed@" aria-invalid="true" aria-describedby="pv-e2-err">
+      <span class="siwa-field__error" id="pv-e2-err"><span class="siwa-alert__icon" aria-hidden="true">⚠</span> Email format is incorrect. Example: you@example.com</span>
+    </div>
+  </div>
+  <div class="siwa-stack" style="--stack-gap:var(--spacing-3)">
+    <div class="siwa-alert siwa-alert--success"><span class="siwa-alert__icon" aria-hidden="true">✓</span><span>Added to your bag.</span></div>
+    <div class="siwa-alert siwa-alert--warning"><span class="siwa-alert__icon" aria-hidden="true">!</span><span>Only 2 left at this size.</span></div>
+    <div class="siwa-alert siwa-alert--danger"><span class="siwa-alert__icon" aria-hidden="true">⚠</span><span>Payment declined. Try another card or choose cash on delivery.</span></div>
+  </div>
+  <div class="siwa-progress" style="max-inline-size:420px;margin-block-start:var(--spacing-8);--progress-value:68%">
+    <span class="siwa-progress__label">420 EGP more for free shipping</span>
+    <div class="siwa-progress__track"><div class="siwa-progress__fill"></div></div>
+  </div>
+  <div class="siwa-empty" style="border:1px dashed var(--colors-border-strong);margin-block-start:var(--spacing-8)">
+    <p>Your bag is empty.</p>
+    <a class="siwa-button siwa-button--secondary" href="#">Start with a tester</a>
+  </div>
+</section>
+
+<!-- ══ ON DARK ══ -->
+<section class="pv-sec">
+  <h2>Inverted band</h2>
+  <p class="pv-note">Add <code>.on-dark</code> to any section. Components need no dark variants — the tokens re-point beneath them.</p>
+  <div class="on-dark" style="padding:var(--spacing-12) var(--spacing-8)">
+    <h3 class="siwa-h2" style="margin-block-end:var(--spacing-3)">Return the bottle</h3>
+    <p class="siwa-body siwa-prose" style="margin-block-end:var(--spacing-6)">Bring back an empty and we refill it at 30% off. The glass was the expensive part.</p>
+    <div class="pv-row" style="margin:0">
+      <a class="siwa-button siwa-button--primary" href="#">How it works</a>
+      <a class="siwa-button siwa-button--secondary" href="#">Find a drop-off</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+  // Preview chrome only. Flips the document to Arabic/RTL so every component
+  // above can be checked for mirroring, severed glyphs and reordered numerals.
+  var btn = document.getElementById('pv-dir');
+  btn.addEventListener('click', function () {
+    var rtl = document.documentElement.getAttribute('dir') === 'rtl';
+    document.documentElement.setAttribute('dir', rtl ? 'ltr' : 'rtl');
+    document.documentElement.setAttribute('lang', rtl ? 'en' : 'ar');
+    btn.setAttribute('aria-pressed', String(!rtl));
+  });
+
+  // The scrollytelling observer the design system assumes. Without it,
+  // .siwa-reveal elements simply render — they never start hidden.
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.siwa-reveal').forEach(function (el) { io.observe(el); });
+</script>
+</body>
+</html>

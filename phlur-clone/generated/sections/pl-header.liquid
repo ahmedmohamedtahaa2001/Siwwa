@@ -1,0 +1,52 @@
+{{ 'section-site-header.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.announcement != blank -%}
+  <div class="pl-announce">{{ section.settings.announcement }}</div>
+{%- endif -%}
+
+<header class="pl-header{% if section.settings.transparent %} pl-header--transparent{% endif %}">
+  <div class="pl-header__inner">
+    <nav class="pl-header__nav" aria-label="Primary">
+      {%- for link in linklists[section.settings.menu].links -%}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {%- endfor -%}
+    </nav>
+
+    <button class="pl-header__actions pl-header__burger" type="button"
+            aria-label="Open menu" aria-expanded="false" aria-controls="pl-menu-drawer">
+      &#9776;
+    </button>
+
+    <a class="pl-header__logo" href="{{ routes.root_url }}">
+      {%- if section.settings.logo != blank -%}
+        {%- assign logo_alt = shop.name | escape -%}
+        {{ section.settings.logo | image_url: width: 400
+           | image_tag: loading: 'eager', alt: logo_alt }}
+      {%- else -%}
+        {{ shop.name }}
+      {%- endif -%}
+    </a>
+
+    <div class="pl-header__actions">
+      <a href="{{ routes.search_url }}" aria-label="Search">Search</a>
+      <a href="{{ routes.account_url }}" aria-label="Account">Account</a>
+      <a href="{{ routes.cart_url }}" aria-label="Cart">
+        Cart ({{ cart.item_count }})
+      </a>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo" },
+    { "type": "link_list", "id": "menu", "label": "Menu", "default": "main-menu" },
+    { "type": "text", "id": "announcement", "label": "Announcement bar",
+      "default": "Complimentary shipping on orders over $75" },
+    { "type": "checkbox", "id": "transparent", "label": "Transparent over hero", "default": false,
+      "info": "Only enable on templates whose first section is a hero banner." }
+  ]
+}
+{% endschema %}

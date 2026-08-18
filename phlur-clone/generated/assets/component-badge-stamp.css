@@ -1,0 +1,36 @@
+/* Badge stamp — measured: 19px tall,
+   padding 4px 6px 4px 6px, 11px / 500 /
+   0.7px uppercase, white fill on black ink, radius 0.
+   Maps to Siwa 'badge-stamp'. */
+
+.pl-badge {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 4px;
+  padding-inline: 6px;
+
+  font-family: var(--pl-font-mono);
+  font-size: var(--pl-fs-micro);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: var(--pl-ls-micro);
+  text-transform: uppercase;
+
+  background-color: var(--pl-surface-alt);
+  color: var(--pl-ink);
+  border-radius: var(--pl-radius);
+  white-space: nowrap;
+}
+
+.pl-badge--ink    { background-color: var(--pl-ink);   color: var(--pl-ink-inverse); }
+.pl-badge--outline{ background-color: transparent; box-shadow: none; border: 1px solid var(--pl-ink); }
+
+/* positioned over card media */
+.pl-badge-slot {
+  position: absolute;
+  inset-block-start: var(--pl-space-2);
+  inset-inline-start: var(--pl-space-2);
+  z-index: 2;
+  display: flex;
+  gap: var(--pl-space-1);
+}

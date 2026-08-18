@@ -1,0 +1,125 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   siwa-editorial.css — ST-06, the editorial statement band
+
+   Phlur's slot 3 measured 200px: a single centred statement in an 800px
+   measure, no imagery, at most a small attribution. This file keeps it that
+   quiet. There is no grid, no media well and no hover state, because there
+   is nothing here to transact with — the whole section is type on a ground.
+
+   IT WRITES NO VALUES.
+   Every colour, size, rule and space below resolves to a token, so the band
+   changes register with the design direction without a single {% if %} on
+   the preset in the Liquid: Oasis gets Inter Tight at a 22→26px h2 on a 96px
+   ceremonial rhythm, Desert gets Archivo Black at 26→36px on 64px, and this
+   file says the same thing in both.
+
+   THE DARK GROUND IS THE SYSTEM'S BAND, NOT A LOCAL PALETTE.
+   `--dark` paints nothing here. The section adds `.on-dark`; siwa-tokens.css
+   re-points the semantic ink under it and siwa-themes.css re-expresses that
+   band per preset through --band-*. A background-color on the base rule
+   would out-specify it, exactly as siwa-announcement-bar.css notes, so the
+   base rule declares none.
+
+   WHERE THE RHYTHM LIVES — Gate 0 finding F2.
+   The rhythm is a class here, with its own @media (max-width: 768px) step
+   down, and the section's scoped {% style %} contributes only the two offset
+   custom properties. If the section emitted `padding-block` on
+   `#shopify-section-…` directly it would outrank the query below and freeze
+   the desktop rhythm at every width. The composition therefore happens in
+   this file, where the media query can still reach it.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── The band ──────────────────────────────────────────────────────────
+   Full-bleed ground. `--page` is stated rather than left transparent so the
+   band still reads as its own ground when it sits between two surfaces. */
+
+.siwa-editorial__band--page    { background-color: var(--colors-background); }
+.siwa-editorial__band--surface { background-color: var(--colors-surface); }
+
+/* `.siwa-editorial__band--dark` intentionally has no rule: `.on-dark` is the
+   ground, and it is checked by tools/check-contrast.mjs on every preset. */
+
+/* ── Rhythm ────────────────────────────────────────────────────────────
+   The offsets default to zero so the band is correct even before the
+   Customizer has written a value — a section rendered from a preset with no
+   settings block still gets its rhythm and nothing else. */
+
+.siwa-editorial__inner {
+  padding-block-start: calc(var(--siwa-editorial-rhythm) + var(--siwa-editorial-pad-start, 0px));
+  padding-block-end: calc(var(--siwa-editorial-rhythm) + var(--siwa-editorial-pad-end, 0px));
+}
+
+.siwa-editorial__inner--section { --siwa-editorial-rhythm: var(--spacing-section); }
+.siwa-editorial__inner--tight   { --siwa-editorial-rhythm: var(--spacing-section-tight); }
+
+/* Matches the step siwa-base.css takes for .siwa-section / --tight, so a
+   band and a plain section keep the same rhythm on a phone. */
+@media (max-width: 768px) {
+  .siwa-editorial__inner--section { --siwa-editorial-rhythm: var(--spacing-12); }
+  .siwa-editorial__inner--tight   { --siwa-editorial-rhythm: var(--spacing-8); }
+}
+
+/* ── Measure ───────────────────────────────────────────────────────────
+   --measure is set per section in the scoped {% style %}. min() keeps the
+   band inside the gutters on a narrow screen without a media query, and
+   .siwa-prose inside the statement reads the same token, so the statement
+   and the merchant's width can never disagree. */
+
+.siwa-editorial__measure {
+  max-inline-size: min(100%, var(--measure));
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.siwa-editorial__measure--center {
+  margin-inline: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.siwa-editorial__measure--start {
+  margin-inline-end: auto;
+  text-align: start;
+  align-items: flex-start;
+}
+
+/* ── Type ──────────────────────────────────────────────────────────────
+   The statement is display-face at the h2 step and REGULAR weight — the
+   measured reference sets it at 28px/400, and a band that shouts is not a
+   breath. The size itself is left to the direction's --text-h2 rather than
+   pinned to a pixel value. */
+
+.siwa-editorial__statement {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-display);
+  color: var(--colors-heading);
+  text-wrap: balance;
+}
+
+/* .siwa-prose's own paragraph gap is body-sized; at h2 the statement needs
+   the larger step between sentences that run to two paragraphs. */
+.siwa-editorial__statement > * + * {
+  margin-block-start: var(--spacing-6);
+}
+
+.siwa-editorial__attribution {
+  margin-block-start: calc(var(--spacing-1) * -1);
+}
+
+.siwa-editorial__actions {
+  margin-block-start: var(--spacing-2);
+}
+
+/* ── Bilingual ─────────────────────────────────────────────────────────
+   Arabic display faces carry no negative tracking well — the joins tighten
+   into each other. §5 neutralises casing and label tracking at the token
+   level; display tracking is the one this component sets itself, so it is
+   the one this component has to unset. */
+
+[lang="ar"] .siwa-editorial__statement {
+  letter-spacing: 0;
+}

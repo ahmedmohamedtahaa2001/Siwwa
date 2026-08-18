@@ -1,1 +1,0 @@
-{ "sections": { "main": { "type": "faq", "blocks": { "q1": { "type": "question", "settings": {} } }, "block_order": ["q1"], "settings": {} } }, "order": ["main"] }

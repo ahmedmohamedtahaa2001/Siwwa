@@ -1,0 +1,428 @@
+{%- comment -%}
+  Section: siwa-product-row | Owner: A-04 | Task: ST-05
+
+  L-02 ProductGrid, wearing phlur's slot 2 and slot 5. The homepage puts this
+  section on the page twice — new drops and best sellers — so nothing in it may
+  be true of only one of those two placements. The collection, the heading, the
+  card count, the rhythm and the link out are all settings; the section itself
+  knows nothing about which row it is.
+
+  EVERY PRODUCT GOES THROUGH snippets/siwa-product-card.liquid.
+  Not a copy of it, not a variation on it. The catalog stamp is non-negotiable
+  on every thumbnail (CI rule 11) and the only way to guarantee that on two
+  homepage rows, a collection page and a search result at once is for all four
+  to render the same snippet. That snippet cannot load its own stylesheet, so
+  the badge-stack extension it depends on is loaded here, by the caller.
+
+  TWO LAYOUTS, ONE LOOP — deviation D-4.
+  Phlur measures a scroll-snap carousel at this slot; DESIGN.md §4 routes any
+  set of products to `.siwa-grid`. Both are legitimate, so `layout` carries
+  both and defaults to `carousel` for phlur fidelity. The cards are captured
+  once and poured into whichever wrapper is asked for — one loop, one card
+  contract, two arrangements.
+
+  NO JAVASCRIPT, AND NOT AS A COMPROMISE.
+  Phlur's carousel has no scripted controls either: it is `overflow-x: auto`
+  plus CSS scroll-snap, which drags with a finger, scrolls with a trackpad and
+  is driven from the keyboard by the browser's own scroll handling. A section
+  that wrote its own JavaScript would also be a validator error in this theme —
+  the behaviour layer is assets/siwa-theme.js and nowhere else.
+
+  A SCROLL CONTAINER IS AN INTERACTIVE CONTROL AND HAS TO BE REACHABLE.
+  A `<div>` that scrolls but cannot be focused is unusable by a keyboard, so
+  the viewport takes `tabindex="0"`, and because a focusable scroll box needs a
+  name it takes `role="region"` and the translated region label with it. The
+  track inside is a real `<ul>` so the row announces "list, 12 items" rather
+  than twelve loose links (DESIGN.md §3.4). In grid mode nothing scrolls, so
+  the region and the tabstop are not rendered at all — an empty tabstop is
+  worse than none.
+
+  THE FIRST FOUR CARDS ARE EAGER. The rest are lazy. Four is the number of
+  cards that can be inside the first viewport at the widest measured card
+  width, so it is a loading budget rather than a piece of content, and it
+  stays out of the Customizer for the same reason the breakpoints do.
+
+  THE EMPTY STATE IS A REAL STATE, NOT A GHOST GRID.
+  An unset collection, or one whose products are all filtered out by the
+  in-stock switch, renders the translated empty line and a way out of it.
+  Placeholder cards pretending to be products would be a lie in the one place
+  a merchant is most likely to look at a preview and believe it.
+{%- endcomment -%}
+
+{{ 'siwa-product-card.css' | asset_url | stylesheet_tag }}
+{{ 'siwa-product-row.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign s = section.settings
+
+  comment
+    The hero owns the h1. This section takes h2 by default and h3 when it sits
+    under one, and the cards take the next level down so the outline never
+    skips a rank.
+  endcomment
+  assign heading_tag = s.heading_tag | default: 'h2'
+  assign heading_allowed = 'h2,h3' | split: ','
+  unless heading_allowed contains heading_tag
+    assign heading_tag = 'h2'
+  endunless
+  assign heading_class = 'siwa-' | append: heading_tag
+
+  assign card_heading = 'h3'
+  if heading_tag == 'h3'
+    assign card_heading = 'h4'
+  endif
+
+  assign row_collection = s.collection
+
+  comment
+    14 of the 60 products in this catalogue are fully sold out. Left unfiltered
+    a twelve-card row can legitimately fill with cards nobody can buy, so the
+    merchant decides — the switch is off by default, because a sold-out card
+    still carries a stamp, a name and a price and is honest merchandising.
+  endcomment
+  assign row_products = row_collection.products
+  if s.in_stock_only
+    assign row_products = row_products | where: 'available', true
+  endif
+  assign row_count = row_products.size | default: 0
+
+  assign row_title = s.heading
+  if row_title == blank
+    assign row_title = row_collection.title
+  endif
+  assign region_label = 'sections.product_row.region_label' | t: title: row_title
+
+  comment
+    The theme's established fallback shape: a blank setting means "use the
+    translated default", so a merchant who never opens the field still gets a
+    row that reads correctly in Arabic. Same pattern as the footer newsletter.
+  endcomment
+  assign view_all_label = 'sections.product_row.view_all' | t
+  if s.view_all_label != blank
+    assign view_all_label = s.view_all_label
+  endif
+
+  assign view_all_url = s.view_all_url
+  if view_all_url == blank
+    assign view_all_url = row_collection.url
+  endif
+
+  assign empty_label = 'sections.product_row.empty' | t
+  assign empty_action_label = 'sections.product_row.empty_action' | t
+  assign empty_url = view_all_url
+  if empty_url == blank
+    assign empty_url = routes.all_products_collection_url
+  endif
+
+  comment
+    DESIGN.md §4 alternates commerce and ceremonial rhythm down the page. The
+    class carries the rhythm; the padding settings below are ADDED to it, on a
+    separate element, so neither silently cancels the other.
+  endcomment
+  assign rhythm_class = 'siwa-section'
+  if s.rhythm == 'tight'
+    assign rhythm_class = 'siwa-section--tight'
+  endif
+
+  assign is_carousel = false
+  if s.layout == 'carousel'
+    assign is_carousel = true
+  endif
+-%}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    --siwa-row-gap: {{ s.item_gap }}px;
+  }
+
+  #shopify-section-{{ section.id }} .siwa-product-row__inner {
+    padding-block-start: {{ s.padding_top }}px;
+    padding-block-end: {{ s.padding_bottom }}px;
+  }
+
+  {%- comment -%}
+    Gate 0 finding F2. `.siwa-grid` sets --grid-cols inside max-width queries
+    at specificity (0,1,0). A bare `#shopify-section-… { --grid-cols }` rule,
+    or an inline style attribute, outranks those at EVERY viewport and freezes
+    the desktop column count on a phone. The count is therefore emitted inside
+    a min-width query that cannot overlap the collapse — exactly the shape
+    sections/siwa-footer.liquid uses for its own column setting.
+  {%- endcomment -%}
+  @media (min-width: 1201px) {
+    #shopify-section-{{ section.id }} .siwa-product-row__grid {
+      --grid-cols: {{ s.columns }};
+    }
+  }
+
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .siwa-product-row__inner {
+      padding-block-start: {{ s.mobile_padding_top }}px;
+      padding-block-end: {{ s.mobile_padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="siwa-product-row__rhythm {{ rhythm_class }}">
+  <div class="siwa-container siwa-product-row__inner">
+    <div class="siwa-section-heading siwa-product-row__head">
+      <div class="siwa-product-row__headings">
+        {%- if s.eyebrow != blank -%}
+          <p class="siwa-label siwa-section-heading__eyebrow siwa-product-row__eyebrow">{{ s.eyebrow }}</p>
+        {%- endif -%}
+
+        {%- if s.heading != blank -%}
+          <{{ heading_tag }} class="{{ heading_class }} siwa-product-row__title">{{ s.heading }}</{{ heading_tag }}>
+        {%- endif -%}
+      </div>
+
+      {%- if s.show_view_all and view_all_url != blank -%}
+        <div class="siwa-product-row__action">
+          {%- render 'siwa-button', label: view_all_label, href: view_all_url, variant: 'text' -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- if row_count > 0 -%}
+      {%- capture row_items -%}
+        {%- for product in row_products limit: s.product_limit -%}
+          {%- liquid
+            assign card_lazy = true
+            if forloop.index <= 4
+              assign card_lazy = false
+            endif
+          -%}
+          <li class="siwa-product-row__item">
+            {%- render 'siwa-product-card',
+              product: product,
+              lazy: card_lazy,
+              show_price: s.show_price,
+              show_inspired_by: s.show_inspired_by,
+              heading_level: card_heading
+            -%}
+          </li>
+        {%- endfor -%}
+      {%- endcapture -%}
+
+      {%- if is_carousel -%}
+        <div
+          class="siwa-product-row__viewport"
+          role="region"
+          tabindex="0"
+          aria-label="{{ region_label | escape }}"
+        >
+          <ul class="siwa-product-row__track" role="list">{{ row_items }}</ul>
+        </div>
+      {%- else -%}
+        <ul class="siwa-grid siwa-product-row__grid" role="list">{{ row_items }}</ul>
+      {%- endif -%}
+
+    {%- else -%}
+      <div class="siwa-empty siwa-product-row__empty">
+        <p class="siwa-body siwa-product-row__empty-text">{{ empty_label }}</p>
+        {%- render 'siwa-button', label: empty_action_label, href: empty_url, variant: 'secondary' -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product row",
+  "class": "siwa-product-row",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Name what is in the row, not the row itself — \"New drops\", \"Best sellers\". Leave blank to show no heading.",
+      "default": "New drops"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "info": "A short label above the heading. Optional."
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading level",
+      "info": "The hero owns the page's only h1. Use h3 only if this row sits underneath another h2.",
+      "options": [
+        { "value": "h2", "label": "h2" },
+        { "value": "h3", "label": "h3" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "info": "Homepage-worthy handles in this catalogue: men-new-drops, women-new-drops, men-best-sellers, women-best-sellers, best-sellers, new-drops, for-her, for-him, bundles, original-creations, body-splash."
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "label": "Products shown",
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show the link to the whole collection",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "view_all_label",
+      "label": "Link label",
+      "info": "Leave blank to use the store's translated \"Shop all\"."
+    },
+    {
+      "type": "url",
+      "id": "view_all_url",
+      "label": "Link URL",
+      "info": "Leave blank to link to the collection chosen above."
+    },
+    {
+      "type": "header",
+      "content": "Card options"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show prices",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_inspired_by",
+      "label": "Show the \"Inspired by\" line",
+      "info": "Never shown on a Siwa Original — an Original is inspired by nobody.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "in_stock_only",
+      "label": "Hide sold-out products",
+      "info": "The catalogue audit found 14 of 60 products fully sold out, so this decides whether the row is allowed to fill with cards nobody can buy. Off keeps them: a sold-out card is still honest merchandising and carries its stamp, name and price.",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Layout & spacing"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "info": "Carousel is one scrolling row with the next card peeking off the edge. Grid is the design system's product grid, which falls 4 → 3 → 2 on its own.",
+      "options": [
+        { "value": "carousel", "label": "Carousel" },
+        { "value": "grid", "label": "Grid" }
+      ],
+      "default": "carousel"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "Columns",
+      "info": "Grid layout only, and desktop only. The grid falls to three columns below 1200px and two below 768px on its own.",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "rhythm",
+      "label": "Vertical rhythm",
+      "info": "A homepage alternates the two. Commerce for product rows, ceremonial for story sections — never two ceremonial blocks in a row.",
+      "options": [
+        { "value": "tight", "label": "Commerce" },
+        { "value": "section", "label": "Ceremonial" }
+      ],
+      "default": "tight"
+    },
+    {
+      "type": "range",
+      "id": "item_gap",
+      "label": "Space between cards",
+      "info": "Carousel layout only. The grid takes its gutters from the design system so every grid in the store lines up.",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Extra padding top",
+      "info": "Added on top of the vertical rhythm above.",
+      "min": 0,
+      "max": 144,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Extra padding bottom",
+      "info": "Added on top of the vertical rhythm above.",
+      "min": 0,
+      "max": 144,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Extra padding top (mobile)",
+      "min": 0,
+      "max": 144,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Extra padding bottom (mobile)",
+      "min": 0,
+      "max": 144,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product row",
+      "settings": {
+        "heading": "New drops",
+        "heading_tag": "h2",
+        "collection": "new-drops",
+        "product_limit": 12,
+        "show_view_all": true,
+        "show_price": true,
+        "show_inspired_by": true,
+        "in_stock_only": false,
+        "layout": "carousel",
+        "columns": 4,
+        "rhythm": "tight",
+        "item_gap": 20
+      }
+    }
+  ]
+}
+{% endschema %}

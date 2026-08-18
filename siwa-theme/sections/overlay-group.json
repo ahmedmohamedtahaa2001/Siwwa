@@ -1,9 +1,0 @@
-{
-  "type": "overlay",
-  "name": "Overlays",
-  "sections": {
-    "cart-drawer": { "type": "cart-drawer", "settings": {} },
-    "newsletter-popup": { "type": "newsletter-popup", "settings": {} }
-  },
-  "order": ["cart-drawer", "newsletter-popup"]
-}

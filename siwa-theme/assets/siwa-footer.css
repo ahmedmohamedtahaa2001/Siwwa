@@ -1,0 +1,326 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   siwa-footer.css — G-02 SiteFooter
+
+   DESIGN.md §3 registers the footer and v3.0.0 ships no CSS for it (Gate 0
+   finding F3). This file is that missing layer, written the same way the
+   design system writes its own: logical properties only, every value a
+   token, and the preset levers doing the work a per-preset stylesheet would
+   otherwise do.
+
+   WHAT THE LEVERS CARRY HERE
+     --rule-weight       every rule in the footer, so Desert's 2px graphic
+                         lines and Archive's hairlines are the same markup
+     --label-transform   column headings uppercase in Latin, untouched in
+                         Arabic and in Papyrus
+     --ornament-display  the mark before each heading, present in Archive,
+                         Desert and Nocturne, absent in Oasis and Papyrus
+     --radius-commerce   the newsletter input and its submit
+     --shadow-commerce   the only shadow allowed anywhere near this layer
+
+   The one thing a token cannot express is structure, and there is exactly
+   one of those: Desert separates its columns with rules instead of
+   whitespace. That is written against [data-theme='desert'] at the bottom
+   of this file rather than as an {% if %} in the section.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.siwa-footer {
+  background-color: var(--colors-surface);
+  color: var(--colors-text);
+  border-block-start: var(--rule-weight) solid var(--colors-border);
+}
+
+.siwa-footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+}
+
+/* ── Brand + columns ───────────────────────────────────────────────────── */
+
+.siwa-footer__top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr);
+  gap: var(--spacing-12);
+  align-items: start;
+}
+
+.siwa-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  align-items: flex-start;
+}
+
+.siwa-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--tap-min);
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-bold);
+  color: var(--colors-heading-alt);
+  text-decoration: none;
+}
+
+.siwa-footer__logo-image {
+  inline-size: var(--siwa-logo-width);
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: contain;
+}
+
+.siwa-footer__tagline {
+  max-inline-size: var(--measure);
+  font-size: var(--text-body-sm);
+  color: var(--colors-text-secondary);
+}
+
+.siwa-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(var(--siwa-footer-cols, 3), minmax(0, 1fr));
+  gap: var(--spacing-8);
+}
+
+.siwa-footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  min-inline-size: 0;
+}
+
+/* A newsletter needs a field's worth of room; a link list does not. */
+.siwa-footer__col--wide { grid-column: span 2; }
+
+.siwa-footer__heading {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: var(--font-ui);
+  font-size: var(--text-label);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-label);
+  text-transform: var(--label-transform);
+  color: var(--colors-text-secondary);
+}
+
+/* The ornament. A rotated square is symmetrical on both axes, so it needs
+   no RTL mirror; presets that do not draw a mark set --ornament-display to
+   none and it vanishes with no markup change.
+
+   Deliberately NOT gold. The newsletter's submit is the footer's one gold
+   element (principle 1), and a mark repeated beside every column heading
+   would be the second — anti-pattern 5. --colors-border-strong is a line
+   colour, which is what this is. */
+.siwa-footer__mark {
+  display: var(--ornament-display);
+  flex: 0 0 auto;
+  inline-size: var(--spacing-1);
+  block-size: var(--spacing-1);
+  background-color: var(--colors-border-strong);
+  transform: rotate(45deg);
+}
+
+.siwa-footer__links {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 44px per row: the house floor is target size, not type size. */
+.siwa-footer__links a {
+  display: flex;
+  align-items: center;
+  min-block-size: var(--tap-min);
+  font-size: var(--text-body-sm);
+  color: var(--colors-text);
+  text-decoration: none;
+}
+.siwa-footer__links a:hover {
+  color: var(--colors-heading-alt);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+.siwa-footer__links a[aria-current='page'] {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.siwa-footer__text {
+  font-size: var(--text-body-sm);
+  color: var(--colors-text-secondary);
+}
+
+/* §7.3 — the non-affiliation line is legal copy, not marketing copy. It is
+   set quietly and it is never editable in the Customizer, which is why it
+   reads from catalog.disclaimer and has no text setting. */
+.siwa-footer__disclaimer {
+  max-inline-size: var(--measure);
+  padding-block-start: var(--spacing-3);
+  border-block-start: var(--rule-weight) solid var(--colors-border);
+  font-size: var(--text-label);
+  line-height: var(--leading-body);
+  color: var(--colors-text-secondary);
+}
+
+/* ── Newsletter ────────────────────────────────────────────────────────── */
+
+.siwa-footer__form { display: flex; flex-direction: column; gap: var(--spacing-3); }
+
+.siwa-footer__form-row {
+  display: flex;
+  align-items: stretch;
+  gap: var(--spacing-2);
+}
+.siwa-footer__form-row .siwa-input {
+  flex: 1 1 auto;
+  min-inline-size: 0;
+  border-radius: var(--radius-commerce);
+  box-shadow: var(--shadow-commerce);
+}
+.siwa-footer__form-row .siwa-button {
+  flex: 0 0 auto;
+  border-radius: var(--radius-commerce);
+  box-shadow: var(--shadow-commerce);
+}
+
+/* Success is never colour alone — it carries an icon and a sentence. */
+.siwa-footer__form-success {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+  font-size: var(--text-body-sm);
+  color: var(--colors-success);
+}
+.siwa-footer__form-success svg,
+.siwa-footer__error-icon {
+  flex: 0 0 auto;
+  inline-size: var(--spacing-4);
+  block-size: var(--spacing-4);
+  margin-block-start: var(--spacing-1);
+}
+
+/* ── Bottom bar ────────────────────────────────────────────────────────── */
+
+.siwa-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  padding-block-start: var(--spacing-6);
+  border-block-start: var(--rule-weight) solid var(--colors-border);
+}
+
+.siwa-footer__legal,
+.siwa-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-4);
+  min-inline-size: 0;
+}
+
+.siwa-footer__policies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+.siwa-footer__policies a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--tap-min);
+  font-size: var(--text-body-sm);
+  color: var(--colors-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.siwa-footer__policies a:hover { color: var(--colors-text); }
+
+.siwa-footer__copyright {
+  font-size: var(--text-body-sm);
+  color: var(--colors-text-secondary);
+}
+
+/* Payment marks come from shop.enabled_payment_types through
+   payment_type_svg_tag, so they always match what checkout will actually
+   take. No image file in this theme claims a card it cannot process. */
+.siwa-footer__payments {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+.siwa-footer__payment {
+  display: flex;
+  align-items: center;
+  block-size: var(--spacing-6);
+}
+.siwa-footer__payment svg {
+  block-size: 100%;
+  inline-size: auto;
+  border-radius: var(--radius-commerce);
+}
+
+/* ── Language ──────────────────────────────────────────────────────────
+   Same real localization form as the header — one submit per language, so
+   the locale switches with JavaScript off. */
+
+.siwa-footer__locale-set {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.siwa-footer__locale-option[aria-current='true'] {
+  background-color: var(--colors-background);
+  border-color: var(--colors-text);
+  color: var(--colors-text);
+}
+
+/* ── Preset structure ──────────────────────────────────────────────────
+   Desert is the one direction whose columns are divided rather than spaced.
+   Expressed here against the preset, never as a branch in the Liquid. */
+
+[data-theme='desert'] .siwa-footer {
+  border-block-start-width: calc(var(--rule-weight) * 2);
+  border-block-start-color: var(--colors-text);
+}
+[data-theme='desert'] .siwa-footer__col {
+  padding-inline-start: var(--spacing-6);
+  border-inline-start: var(--rule-weight) solid var(--colors-border-strong);
+}
+[data-theme='desert'] .siwa-footer__bottom {
+  border-block-start-width: calc(var(--rule-weight) * 2);
+  border-block-start-color: var(--colors-text);
+}
+
+/* Oasis spends whitespace instead of ink: no ground change, one hairline. */
+[data-theme='oasis'] .siwa-footer { background-color: var(--colors-background); }
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+
+@media (max-width: 1200px) {
+  .siwa-footer__top { grid-template-columns: minmax(0, 1fr); gap: var(--spacing-8); }
+  .siwa-footer__grid { --siwa-footer-cols: 2; }
+  .siwa-footer__col--wide { grid-column: span 2; }
+}
+
+@media (max-width: 768px) {
+  .siwa-footer__inner { gap: var(--spacing-8); }
+  .siwa-footer__grid { --siwa-footer-cols: 1; gap: var(--spacing-6); }
+  .siwa-footer__col--wide { grid-column: span 1; }
+  .siwa-footer__form-row { flex-direction: column; align-items: stretch; }
+  .siwa-footer__bottom { flex-direction: column; align-items: flex-start; }
+
+  /* A divider that only ever appears at the start of a single column reads
+     as a mistake, so Desert's rules move to the block axis on one column. */
+  [data-theme='desert'] .siwa-footer__col {
+    padding-inline-start: 0;
+    border-inline-start: 0;
+    padding-block-start: var(--spacing-4);
+    border-block-start: var(--rule-weight) solid var(--colors-border-strong);
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "findings": [],
+  "contrast": [
+    {
+      "label": "body text on page",
+      "fg": "--pl-ink #000000",
+      "bg": "--pl-bg #fafafa",
+      "ratio": 20.12,
+      "min": 4.5,
+      "pass": true
+    },
+    {
+      "label": "text on card surface",
+      "fg": "--pl-ink #000000",
+      "bg": "--pl-surface #f5f5f5",
+      "ratio": 19.26,
+      "min": 4.5,
+      "pass": true
+    },
+    {
+      "label": "muted subtitle on page",
+      "fg": "--pl-ink-muted #707070",
+      "bg": "--pl-bg #fafafa",
+      "ratio": 4.74,
+      "min": 4.5,
+      "pass": true
+    },
+    {
+      "label": "muted on surface",
+      "fg": "--pl-ink-muted #707070",
+      "bg": "--pl-surface #f5f5f5",
+      "ratio": 4.54,
+      "min": 4.5,
+      "pass": true
+    },
+    {
+      "label": "button label on black fill",
+      "fg": "--pl-ink-inverse #ffffff",
+      "bg": "--pl-ink #000000",
+      "ratio": 21,
+      "min": 4.5,
+      "pass": true
+    },
+    {
+      "label": "hero CTA label on white fill",
+      "fg": "--pl-ink #000000",
+      "bg": "--pl-ink-inverse #ffffff",
+      "ratio": 21,
+      "min": 4.5,
+      "pass": true
+    }
+  ]
+}

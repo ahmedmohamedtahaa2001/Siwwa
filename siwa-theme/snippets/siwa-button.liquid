@@ -1,0 +1,73 @@
+{%- comment -%}
+  Snippet: siwa-button | Owner: A-02 | Task: ST-03
+
+  A-01 Button. Every committed action in the store comes through here, so the
+  hierarchy between two actions is decided by a parameter and not by whoever
+  happened to write the markup that day.
+
+  THE LABEL IS THE CALLER'S, ALREADY TRANSLATED.
+  A snippet cannot know whether its label is a locale key, a schema setting or
+  a string built from a price, so it does not guess: the caller resolves the
+  copy and hands over the finished text. `label` blank renders NOTHING — a
+  control with no accessible name is worse than a missing control, and an
+  empty <button> would be a rule-10 error the moment it shipped.
+
+  GOLD IS RATIONED BY THE CALLER, NOT HERE.
+  Principle 1 allows one --primary per fold. This snippet will render as many
+  as it is asked to; deciding that a surface has already spent its gold is the
+  calling section's job, and CI warning 14 counts them per section.
+
+  Principle 7: the tester is a first-class CTA and takes the outline
+  treatment. --tester and --secondary are visually identical on purpose, and
+  they are separate classes so that a rule can assert the tester was never
+  rendered as --primary on a surface that carries another CTA. Never pass
+  variant: 'primary' for a tester unless it is the only CTA on the surface.
+
+  NO BEHAVIOUR. The behaviour layer is assets/siwa-theme.js; a caller wires it
+  by handing over the hook attributes through `data_attrs`.
+
+  Parameters
+    label       required. Already-translated string. Blank renders nothing.
+    href        optional. Present renders <a>, absent renders <button type="button">.
+    variant     optional. primary | secondary | tester | quiet | text. Default secondary.
+    size        optional. 'sm' adds --sm; the visual box drops to 40px and the
+                CSS extends the hit area back to 44px. Anything else is default.
+    block       optional boolean. Adds --block for full-width in cart and on mobile.
+    aria_label  optional. Overrides the visible label as the accessible name.
+                Required by rule 10 for any control whose label is an icon.
+    data_attrs  optional. Raw attribute string, for the behaviour layer's hooks.
+    id          optional. DOM id, for aria-controls and label associations.
+{%- endcomment -%}
+
+{%- liquid
+  assign button_variant = variant | default: 'secondary'
+  assign button_class = 'siwa-button siwa-button--' | append: button_variant
+
+  if size == 'sm'
+    assign button_class = button_class | append: ' siwa-button--sm'
+  endif
+
+  if block
+    assign button_class = button_class | append: ' siwa-button--block'
+  endif
+-%}
+
+{%- if label != blank -%}
+  {%- if href != blank -%}
+    <a
+      class="{{ button_class }}"
+      href="{{ href }}"
+      {%- if id != blank %} id="{{ id }}"{% endif %}
+      {%- if aria_label != blank %} aria-label="{{ aria_label | escape }}"{% endif %}
+      {{ data_attrs }}
+    >{{ label }}</a>
+  {%- else -%}
+    <button
+      class="{{ button_class }}"
+      type="button"
+      {%- if id != blank %} id="{{ id }}"{% endif %}
+      {%- if aria_label != blank %} aria-label="{{ aria_label | escape }}"{% endif %}
+      {{ data_attrs }}
+    >{{ label }}</button>
+  {%- endif -%}
+{%- endif -%}

@@ -1,0 +1,27 @@
+{{ 'section-editorial.css' | asset_url | stylesheet_tag }}
+
+<section class="pl-editorial{% if section.settings.dark %} pl-editorial--dark{% endif %}">
+  <div class="pl-editorial__inner">
+    {%- if section.settings.quote != blank -%}
+      <blockquote class="pl-editorial__quote">{{ section.settings.quote }}</blockquote>
+    {%- endif -%}
+    {%- if section.settings.attribution != blank -%}
+      <p class="pl-editorial__attribution">{{ section.settings.attribution }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Editorial quote",
+  "tag": "section",
+  "class": "shopify-section--pl-editorial",
+  "settings": [
+    { "type": "textarea", "id": "quote", "label": "Quote",
+      "default": "Modern fragrances inspired by memory." },
+    { "type": "text", "id": "attribution", "label": "Attribution" },
+    { "type": "checkbox", "id": "dark", "label": "Dark background", "default": false }
+  ],
+  "presets": [{ "name": "Editorial quote" }]
+}
+{% endschema %}

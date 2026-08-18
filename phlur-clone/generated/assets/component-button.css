@@ -1,0 +1,87 @@
+/* Button — measured: 40px tall, padding-inline 30px,
+   12px / 500 / 0.8px / uppercase,
+   radius 0, 1px border matching fill, transition 0.25s cubic-bezier(0.8, 0, 0.2, 1) */
+
+.pl-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  block-size: var(--pl-button-h);
+  padding-inline: var(--pl-button-pad-i);
+  padding-block: 0;
+
+  font-family: var(--pl-font-mono);
+  font-size: var(--pl-fs-button);
+  font-weight: 500;
+  letter-spacing: var(--pl-ls-button);
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+
+  border: 1px solid currentColor;
+  border-radius: var(--pl-radius);
+  cursor: pointer;
+  transition: background-color var(--pl-duration) var(--pl-easing),
+              color var(--pl-duration) var(--pl-easing),
+              border-color var(--pl-duration) var(--pl-easing);
+}
+
+/* phlur.com ships a 40px control, which is under the WCAG 2.2 AA 44x44
+   target floor. Keep the measured 40px visual box and extend the hit area
+   with a transparent pseudo-element — matches Phlur pixel-for-pixel while
+   satisfying the Siwa accessibility floor. */
+.pl-button::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: 50%;
+  block-size: var(--pl-tap-min);
+  transform: translateY(-50%);
+}
+
+.pl-button--primary {
+  background-color: var(--pl-ink);
+  color: var(--pl-ink-inverse);
+  border-color: var(--pl-ink);
+}
+.pl-button--primary:hover {
+  background-color: transparent;
+  color: var(--pl-ink);
+}
+
+/* on-image variant — the hero "SHOP NOW": white fill, black label */
+.pl-button--inverse {
+  background-color: var(--pl-ink-inverse);
+  color: var(--pl-ink);
+  border-color: var(--pl-ink-inverse);
+}
+.pl-button--inverse:hover {
+  background-color: transparent;
+  color: var(--pl-ink-inverse);
+}
+
+.pl-button--ghost {
+  background-color: transparent;
+  color: var(--pl-ink);
+  border-color: var(--pl-ink);
+}
+.pl-button--ghost:hover {
+  background-color: var(--pl-ink);
+  color: var(--pl-ink-inverse);
+}
+
+.pl-button:focus-visible {
+  outline: 2px solid var(--pl-ink);   /* Siwa a11y: 2px solid at 2px offset */
+  outline-offset: 2px;
+}
+
+.pl-button[aria-disabled='true'],
+.pl-button:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-button { transition: none; }
+}

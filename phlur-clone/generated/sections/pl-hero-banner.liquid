@@ -1,0 +1,104 @@
+{{ 'section-hero-banner.css' | asset_url | stylesheet_tag }}
+{{ 'component-button.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign align = section.settings.alignment
+  assign hero_class = 'pl-hero'
+  if align == 'center'
+    assign hero_class = hero_class | append: ' pl-hero--center'
+  elsif align == 'end'
+    assign hero_class = hero_class | append: ' pl-hero--end'
+  endif
+  if section.settings.text_color == 'dark'
+    assign hero_class = hero_class | append: ' pl-hero--dark'
+  endif
+-%}
+
+<section class="{{ hero_class }}"
+         style="--pl-hero-h: {{ section.settings.height }}px;"
+         {% if section.settings.heading != blank %}aria-label="{{ section.settings.heading | escape }}"{% endif %}>
+
+  <div class="pl-hero__media">
+    {%- if section.settings.video != blank -%}
+      {{ section.settings.video
+         | video_tag: autoplay: true, loop: true, muted: true, controls: false,
+                      playsinline: true, image_size: '1920x' }}
+    {%- elsif section.settings.image != blank -%}
+      {{ section.settings.image
+         | image_url: width: 3000
+         | image_tag:
+             loading: 'eager',
+             fetchpriority: 'high',
+             widths: '750,1100,1500,1920,2400,3000',
+             sizes: '100vw',
+             alt: section.settings.image.alt | default: section.settings.heading | escape }}
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag }}
+    {%- endif -%}
+  </div>
+
+  {%- if section.settings.show_scrim -%}
+    <div class="pl-hero__scrim" aria-hidden="true"></div>
+  {%- endif -%}
+
+  <div class="pl-hero__content">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="pl-hero__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.settings.subheading != blank -%}
+      <p class="pl-hero__subheading">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+
+    {%- comment -%}
+      siwa-design-system principle 1 — one offering per fold. phlur.com measured
+      exactly 1 CTA in the hero, so a single button is both the faithful and the
+      compliant choice. Deliberately not repeatable via blocks.
+    {%- endcomment -%}
+    {%- if section.settings.cta_label != blank -%}
+      {%- render 'pl-button',
+            label: section.settings.cta_label,
+            href: section.settings.cta_url,
+            variant: section.settings.cta_variant -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero banner",
+  "tag": "section",
+  "class": "shopify-section--pl-hero",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Background image" },
+    { "type": "video", "id": "video", "label": "Background video (overrides image)" },
+    { "type": "range", "id": "height", "min": 320, "max": 900, "step": 10,
+      "unit": "px", "label": "Height", "default": 620,
+      "info": "phlur.com measures 623px at desktop." },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Vanilla Canyon" },
+    { "type": "text", "id": "subheading", "label": "Subheading" },
+    { "type": "text", "id": "cta_label", "label": "Button label", "default": "Shop now" },
+    { "type": "url", "id": "cta_url", "label": "Button link" },
+    { "type": "select", "id": "cta_variant", "label": "Button style", "default": "inverse",
+      "options": [
+        { "value": "inverse", "label": "White on image" },
+        { "value": "primary", "label": "Black" },
+        { "value": "ghost", "label": "Outline" }
+      ] },
+    { "type": "select", "id": "alignment", "label": "Content position", "default": "start",
+      "options": [
+        { "value": "start", "label": "Bottom left" },
+        { "value": "center", "label": "Bottom center" },
+        { "value": "end", "label": "Bottom right" }
+      ] },
+    { "type": "select", "id": "text_color", "label": "Text colour", "default": "light",
+      "options": [
+        { "value": "light", "label": "White" },
+        { "value": "dark", "label": "Black" }
+      ] },
+    { "type": "checkbox", "id": "show_scrim", "label": "Darken behind text", "default": true,
+      "info": "Keeps the heading above 4.5:1 contrast on light imagery." }
+  ],
+  "presets": [{ "name": "Hero banner" }]
+}
+{% endschema %}

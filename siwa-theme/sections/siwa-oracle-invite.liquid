@@ -1,0 +1,485 @@
+{%- comment -%}
+  Section: siwa-oracle-invite | Owner: A-06 | Task: ST-07
+
+  USF-01, Section 7 — the Oracle's dedicated homepage home. Phlur's slot 4 is
+  a 608px full-bleed programme banner; the bible fills it with the quiz
+  explainer, and the load-bearing half of its brief is "with visual
+  explanation of the flow". A banner with a heading and a button is not an
+  explanation, so the flow is actually drawn: C-02 FeatureRow puts the image
+  on one side and, on the other, a numbered ladder of the questions the
+  Oracle asks before it speaks.
+
+  THIS SECTION IS NOT THE QUIZ.
+  D-01 OracleQuiz / QuizStep / QuizProgress / QuizResult are a separate P0
+  feature with their own components and their own behaviour. This surface
+  invites into it and sets the expectation; the CTA points wherever the
+  merchant put the quiz. Nothing here holds state, so nothing here needs a
+  line of JavaScript — and section-level JavaScript is a CI error in this
+  theme regardless (the behaviour layer is assets/siwa-theme.js).
+
+  THE SIX STEPS ARE BLOCKS, NOT A RANGE LOOP.
+  `{% for i in (1..6) %}` would give the merchant six rows they cannot edit,
+  reorder or delete, and the bible's failure list opens with "generic
+  questions that could apply to any product category" — which is exactly what
+  uneditable placeholder rows become. They are `section.blocks` of type
+  `step`, drag-reorderable in the Customizer, each carrying
+  `{{ block.shopify_attributes }}` so the theme editor can select one.
+
+  They render as an <ol> because they are a sequence: a screen reader should
+  announce "list, 6 items" and count through them, which a stack of <div>s
+  never does. The visible number comes from `sections.oracle.step`
+  interpolated with `forloop.index` — there is no digit typed into this file,
+  and the word "Step" is the locale's, so Arabic reads "خطوة ١" and not a
+  Latin label with an Arabic sentence after it.
+
+  NOTHING HERE IS TYPED COPY.
+  · eyebrow / heading / body / CTA label are schema settings that fall back to
+    `sections.oracle.*` when the merchant leaves them blank — the store ships
+    saying something true in both languages before anyone opens the editor.
+  · The Oracle's name is `general.brand.oracle_name`, never a literal. It is
+    the most-repeated proper noun in the store and the Arabic naming decision
+    is still open (الحكيم today), so one edit to the dictionary has to be able
+    to rename it everywhere. It is read twice here: as the accessible name of
+    the region, and as the sigil that stands in for an unset image.
+  · Every step's label and text are block settings.
+
+  ONE GOLD PER FOLD (principle 1).
+  This fold spends its gold on the Oracle's CTA and nowhere else: the step
+  spine, the markers and the numbers are drawn in --colors-border-strong and
+  --colors-text-secondary, not in gold, so the single gold object on the band
+  is the thing the bible wants clicked. `cta_variant` still exposes secondary
+  and tester, because a merchant who also runs the hero's gold CTA inside
+  this same viewport needs a way to step this one down.
+
+  MOBILE IS THE PRIMARY CASE, NOT THE FALLBACK.
+  70%+ of Siwa's traffic is mobile and the bible calls a quiz that is not
+  mobile-optimised a failure outright. .siwa-feature-row collapses to one
+  column at 768px on its own; the step ladder stacks its number above its
+  copy rather than beside it below that breakpoint, the media well swaps to a
+  landscape ratio so it cannot eat the first screen, and the CTA goes
+  full-width at 480px. See assets/siwa-oracle-invite.css.
+
+  GATE 0 FINDING F2.
+  Anything a media query has to override later is emitted INSIDE a matching
+  media query. The desktop padding pair is set on the bare scoped selector;
+  the mobile pair is set again inside `@media (max-width: 768px)`. Emitting
+  the mobile values at section scope would out-rank every class-level query
+  in the stylesheet and freeze one value at all widths — the trap
+  siwa-footer.liquid documents on its column count.
+{%- endcomment -%}
+
+{{ 'siwa-oracle-invite.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign s = section.settings
+
+  comment
+    Setting blank → locale key. The house pattern: a merchant's words win, and
+    the translated line is what ships until they type any.
+  endcomment
+  assign eyebrow = s.eyebrow
+  if eyebrow == blank
+    assign eyebrow = 'sections.oracle.eyebrow' | t
+  endif
+
+  assign heading = s.heading
+  if heading == blank
+    assign heading = 'sections.oracle.heading' | t
+  endif
+
+  comment
+    `body` is richtext and already arrives wrapped in <p>. The locale fallback
+    is a plain string, so it is wrapped here — .siwa-prose spaces element
+    children, and a bare text node would sit outside that rhythm.
+  endcomment
+  assign body_html = s.body
+  if body_html == blank
+    assign body_html = 'sections.oracle.body' | t | prepend: '<p>' | append: '</p>'
+  endif
+
+  assign cta_label = s.cta_label
+  if cta_label == blank
+    assign cta_label = 'sections.oracle.cta' | t
+  endif
+
+  assign oracle_name = 'general.brand.oracle_name' | t
+  assign image_alt = s.image_alt | escape
+  assign heading_id = 'siwa-oracle-heading-' | append: section.id
+
+  comment
+    Which side the media sits on is `order` under the hood — one of the two
+    documented physical exceptions (DESIGN.md §5), already mirrored inside
+    .siwa-feature-row--reverse. Nothing to mirror here.
+  endcomment
+  assign row_class = 'siwa-feature-row siwa-oracle-invite__row'
+  if s.media_position == 'inline-end'
+    assign row_class = row_class | append: ' siwa-feature-row--reverse'
+  endif
+
+  comment
+    The dark scheme inverts through the design system's `.on-dark` band, which
+    re-points the semantic tokens per preset (assets/siwa-themes.css). This
+    section invents no palette of its own.
+  endcomment
+  assign band_class = 'siwa-oracle-invite siwa-oracle-invite--' | append: s.color_scheme
+  assign band_class = band_class | append: ' siwa-oracle-invite--rhythm-' | append: s.rhythm
+  if s.color_scheme == 'dark'
+    assign band_class = band_class | append: ' on-dark'
+  endif
+-%}
+
+{% style %}
+  #shopify-section-{{ section.id }} .siwa-oracle-invite__inner {
+    --siwa-oracle-pad-start: {{ s.padding_top }}px;
+    --siwa-oracle-pad-end: {{ s.padding_bottom }}px;
+  }
+
+  {%- comment -%}
+    F2. Inside the query, not at section scope — see the header comment.
+  {%- endcomment -%}
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .siwa-oracle-invite__inner {
+      --siwa-oracle-pad-start: {{ s.mobile_padding_top }}px;
+      --siwa-oracle-pad-end: {{ s.mobile_padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<section class="{{ band_class }}" aria-label="{{ oracle_name | escape }}">
+  <div class="siwa-container siwa-oracle-invite__inner">
+    <div class="{{ row_class }}">
+      <div class="siwa-feature-row__media siwa-media siwa-oracle-invite__media">
+        {%- if s.image != blank -%}
+          {{
+            s.image
+            | image_url: width: 1400
+            | image_tag:
+              class: 'siwa-oracle-invite__image',
+              alt: image_alt,
+              loading: 'lazy',
+              widths: '400, 600, 800, 1000, 1200, 1400',
+              sizes: '(max-width: 768px) 100vw, 50vw'
+          }}
+        {%- else -%}
+          {%- comment -%}
+            No image yet: a sigil rather than a grey placeholder box. The name
+            is the locale key, so this stands in correctly in both languages.
+            aria-hidden because the eyebrow and the region name already carry
+            it — a screen reader should hear it once, not three times.
+          {%- endcomment -%}
+          <p class="siwa-oracle-invite__sigil" aria-hidden="true">{{ oracle_name }}</p>
+        {%- endif -%}
+      </div>
+
+      <div class="siwa-feature-row__body siwa-oracle-invite__body">
+        <p class="siwa-label siwa-oracle-invite__eyebrow">{{ eyebrow }}</p>
+        <h2 class="siwa-h2 siwa-oracle-invite__heading" id="{{ heading_id }}">{{ heading }}</h2>
+        <div class="siwa-prose siwa-oracle-invite__text">{{ body_html }}</div>
+
+        {%- if section.blocks.size > 0 -%}
+          <ol class="siwa-oracle-invite__steps" aria-labelledby="{{ heading_id }}">
+            {%- for block in section.blocks -%}
+              <li class="siwa-oracle-invite__step" {{ block.shopify_attributes }}>
+                <span class="siwa-label siwa-oracle-invite__step-number">
+                  {{- 'sections.oracle.step' | t: number: forloop.index -}}
+                </span>
+                {%- if block.settings.label != blank -%}
+                  <span class="siwa-oracle-invite__step-label">{{ block.settings.label }}</span>
+                {%- endif -%}
+                {%- if block.settings.text != blank -%}
+                  <span class="siwa-oracle-invite__step-text">{{ block.settings.text }}</span>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ol>
+        {%- endif -%}
+
+        {%- comment -%}
+          No link, no control. A CTA that goes nowhere is a dead control, and
+          an invitation with a button that does not open the quiz is worse
+          than an invitation with none.
+        {%- endcomment -%}
+        {%- if s.cta_url != blank -%}
+          <div class="siwa-cluster siwa-oracle-invite__cta">
+            {%- render 'siwa-button', label: cta_label, href: s.cta_url, variant: s.cta_variant -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Oracle invitation",
+  "tag": "div",
+  "class": "siwa-oracle-invite-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave any of the four fields below blank and the store's own translated line is used, in whichever language the visitor is reading. Type into one and your words win."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "info": "Blank uses the translated eyebrow."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Blank uses the translated heading. Say what happens, not what it is — \"Six questions. Then the Oracle speaks.\", never \"Find your scent\"."
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "info": "Blank uses the translated line, which already names the tester. Whatever you write, keep the tester in it — a reading nobody can try is a guess."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button label",
+      "info": "Blank uses the translated label. Name the act, not the mechanism — \"Ask the Oracle\", never \"Learn more\" (DESIGN.md §8, anti-pattern 11)."
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Button link",
+      "info": "Point it at the quiz. With no link the invitation renders without its button rather than shipping a control that goes nowhere."
+    },
+    {
+      "type": "select",
+      "id": "cta_variant",
+      "label": "Button treatment",
+      "info": "Gold is rationed one to a fold (principle 1). This fold is where it belongs — unless the hero's gold CTA is still on screen beside it, in which case step this one down.",
+      "options": [
+        { "value": "primary", "label": "Gold — the strongest action on the band" },
+        { "value": "secondary", "label": "Outline" },
+        { "value": "tester", "label": "Tester outline" }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Real product or workshop photography (DESIGN.md §8, anti-pattern 15). With no image the Oracle's name stands in its place."
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image description",
+      "info": "What a reader who cannot see it would need to know. Leave blank if the image only decorates — the picture then announces nothing rather than announcing noise."
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "Image side",
+      "info": "Mirrors automatically in Arabic. Below 768px the image always sits above the explanation.",
+      "options": [
+        { "value": "inline-start", "label": "Start of the line" },
+        { "value": "inline-end", "label": "End of the line" }
+      ],
+      "default": "inline-start"
+    },
+    {
+      "type": "header",
+      "content": "Layout & spacing"
+    },
+    {
+      "type": "select",
+      "id": "rhythm",
+      "label": "Vertical rhythm",
+      "info": "Ceremonial is the section rhythm; dense is the commerce one. DESIGN.md §4 asks that the two alternate down the page.",
+      "options": [
+        { "value": "section", "label": "Ceremonial — full section rhythm" },
+        { "value": "tight", "label": "Dense — commerce rhythm" }
+      ],
+      "default": "section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Extra padding top",
+      "info": "Added on top of the rhythm above, so the rhythm keeps working when this is 0.",
+      "min": 0,
+      "max": 96,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Extra padding bottom",
+      "min": 0,
+      "max": 96,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Extra padding top (mobile)",
+      "min": 0,
+      "max": 96,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Extra padding bottom (mobile)",
+      "min": 0,
+      "max": 96,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Ground",
+      "info": "Ink inverts the band through the design system's .on-dark tokens, which every design direction supplies its own values for. No colour is set here.",
+      "options": [
+        { "value": "page", "label": "Page — the parchment ground" },
+        { "value": "surface", "label": "Sand — one step up from the page" },
+        { "value": "dark", "label": "Ink — inverted band" }
+      ],
+      "default": "surface"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "One question the Oracle asks. The number in front of it is counted and translated for you — do not type it. Ask something only a fragrance house could ask: \"What's your style?\" is the failure the feature bible names by name."
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Step label",
+          "info": "Three to five words."
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Step text",
+          "info": "One concrete sentence. Sensory before technical (DESIGN.md §7.1)."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "default": {
+    "blocks": [
+      {
+        "type": "step",
+        "settings": {
+          "label": "The room you walk into",
+          "text": "A desk, a dinner, a desert night. The Oracle starts with where the scent has to work."
+        }
+      },
+      {
+        "type": "step",
+        "settings": {
+          "label": "What you already wear",
+          "text": "Name one fragrance you love. It tells the Oracle more than any adjective."
+        }
+      },
+      {
+        "type": "step",
+        "settings": {
+          "label": "How close you stand",
+          "text": "Read across a table, or found only at the wrist."
+        }
+      },
+      {
+        "type": "step",
+        "settings": {
+          "label": "How long it must hold",
+          "text": "Four hours before you reapply, or twelve that outlast the evening."
+        }
+      },
+      {
+        "type": "step",
+        "settings": {
+          "label": "The season you dress for",
+          "text": "August in Cairo and January in Siwa do not take the same oil."
+        }
+      },
+      {
+        "type": "step",
+        "settings": {
+          "label": "Original, Impression, or both",
+          "text": "Siwa's own compositions, our interpretations of scents you already know, or the whole house."
+        }
+      }
+    ]
+  },
+  "presets": [
+    {
+      "name": "Oracle invitation",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "label": "The room you walk into",
+            "text": "A desk, a dinner, a desert night. The Oracle starts with where the scent has to work."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "label": "What you already wear",
+            "text": "Name one fragrance you love. It tells the Oracle more than any adjective."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "label": "How close you stand",
+            "text": "Read across a table, or found only at the wrist."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "label": "How long it must hold",
+            "text": "Four hours before you reapply, or twelve that outlast the evening."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "label": "The season you dress for",
+            "text": "August in Cairo and January in Siwa do not take the same oil."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "label": "Original, Impression, or both",
+            "text": "Siwa's own compositions, our interpretations of scents you already know, or the whole house."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

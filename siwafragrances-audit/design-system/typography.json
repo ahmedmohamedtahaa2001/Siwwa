@@ -1,0 +1,72 @@
+{
+  "_note": "Resolved from live CSS custom properties + computed styles at 1440px.",
+  "families": {
+    "heading": "Poppins, sans-serif",
+    "body": "Poppins, sans-serif",
+    "comment": "Single-family system. Poppins (geometric sans) is used for 100% of interface text.",
+    "loading": "Served by Shopify's font CDN via the theme's font_face helper (no Google Fonts request).",
+    "notInCss": "The script wordmark ('Summer.2026') and the italic-serif fragrance-note labels around product photography are baked into the image assets, NOT web fonts."
+  },
+  "weights": {
+    "heading": 400,
+    "body": 400,
+    "comment": "Only weight 400 is used anywhere. Emphasis is created with letter-spacing and uppercase, never with weight."
+  },
+  "scale": {
+    "--text-xs": "0.75rem / 12px",
+    "--text-sm": "0.8125rem / 13px",
+    "--text-base": "0.875rem / 14px",
+    "--text-lg": "1.0rem / 16px",
+    "--text-xl": "1.25rem / 20px",
+    "--text-h1": "clamp(1.375rem, 1.1463rem + 0.9756vw, 2rem)  \u2192 22px @1440",
+    "--text-h2": "clamp(1.25rem, 1.0671rem + 0.7805vw, 1.75rem) \u2192 20px @1440",
+    "--text-h3": "clamp(1.125rem, 1.0335rem + 0.3902vw, 1.375rem)",
+    "--text-h4": "clamp(1rem, 0.9543rem + 0.1951vw, 1.125rem)",
+    "--text-h5": "0.875rem / 14px",
+    "--text-h6": "0.75rem / 12px"
+  },
+  "letterSpacing": {
+    "heading": "0.18em",
+    "button": "0.18em",
+    "body": "0.0em",
+    "computed": {
+      "h1@1440": "3.96px",
+      "button": "2.34px",
+      "nav": "2.16px"
+    },
+    "comment": "0.18em is very wide tracking \u2014 this is the single strongest typographic signature of the site."
+  },
+  "textTransform": {
+    "heading": "uppercase",
+    "button": "uppercase",
+    "productCard": "uppercase",
+    "body": "none"
+  },
+  "lineHeight": {
+    "body": "1.65 (23.1px @14px)",
+    "heading": "1.5 (33px @22px)",
+    "button": "1.65"
+  },
+  "computedSamples": {
+    "body": {
+      "font": "14px/23.1px Poppins",
+      "color": "#1C1C1C",
+      "letterSpacing": "normal"
+    },
+    "h1": {
+      "font": "22px/33px Poppins 400",
+      "letterSpacing": "3.96px",
+      "textTransform": "uppercase"
+    },
+    "headerNav": {
+      "font": "12px/20.4px Poppins 400",
+      "letterSpacing": "2.16px",
+      "textTransform": "uppercase"
+    },
+    "button": {
+      "font": "13px/21.45px Poppins 400",
+      "letterSpacing": "2.34px",
+      "textTransform": "uppercase"
+    }
+  }
+}

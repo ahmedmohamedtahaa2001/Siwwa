@@ -1,0 +1,56 @@
+{{ 'section-site-footer.css' | asset_url | stylesheet_tag }}
+{{ 'component-button.css' | asset_url | stylesheet_tag }}
+
+<footer class="pl-footer">
+  <div class="pl-footer__inner">
+    <div>
+      <h2 class="pl-footer__title">{{ section.settings.signup_title | default: 'Stay in touch' }}</h2>
+      {%- form 'customer', class: 'pl-footer__signup-form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="pl-footer__signup">
+          <label class="visually-hidden" for="pl-newsletter">Email</label>
+          <input id="pl-newsletter" type="email" name="contact[email]"
+                 placeholder="Email address" autocomplete="email" required>
+          {%- render 'pl-button', label: 'Sign up', type: 'submit', variant: 'ghost' -%}
+        </div>
+      {%- endform -%}
+    </div>
+
+    {%- for block in section.blocks -%}
+      <div {{ block.shopify_attributes }}>
+        <h2 class="pl-footer__title">{{ block.settings.title }}</h2>
+        <ul class="pl-footer__list" role="list">
+          {%- for link in linklists[block.settings.menu].links -%}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <div class="pl-footer__bottom">
+    <span>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}</span>
+    <span>{{ section.settings.legal }}</span>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "signup_title", "label": "Signup heading", "default": "Stay in touch" },
+    { "type": "text", "id": "legal", "label": "Legal line" }
+  ],
+  "blocks": [
+    { "type": "menu", "name": "Link column", "settings": [
+      { "type": "text", "id": "title", "label": "Title", "default": "Shop" },
+      { "type": "link_list", "id": "menu", "label": "Menu" }
+    ] }
+  ],
+  "max_blocks": 4,
+  "presets": [{
+    "name": "Footer",
+    "blocks": [{ "type": "menu" }, { "type": "menu" }, { "type": "menu" }]
+  }]
+}
+{% endschema %}

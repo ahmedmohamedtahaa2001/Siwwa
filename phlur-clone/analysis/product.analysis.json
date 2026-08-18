@@ -1,0 +1,1656 @@
+{
+  "page": "product",
+  "designSystem": {
+    "palette": {
+      "backgrounds": [
+        {
+          "hex": "#fafafa",
+          "weight": 14354097,
+          "h": 0,
+          "s": 0,
+          "l": 98
+        },
+        {
+          "hex": "#000000",
+          "weight": 6557846,
+          "h": 0,
+          "s": 0,
+          "l": 0
+        },
+        {
+          "hex": "#f5f5f5",
+          "weight": 1341492,
+          "h": 0,
+          "s": 0,
+          "l": 96.1
+        },
+        {
+          "hex": "#ffffff",
+          "weight": 504224,
+          "h": 0,
+          "s": 0,
+          "l": 100
+        },
+        {
+          "hex": "#e6e6e6",
+          "weight": 62000,
+          "h": 0,
+          "s": 0,
+          "l": 90.2
+        },
+        {
+          "hex": "#5d442a",
+          "weight": 51300,
+          "h": 30.588235294117652,
+          "s": 37.8,
+          "l": 26.5
+        },
+        {
+          "hex": "#eaeaea",
+          "weight": 11692,
+          "h": 0,
+          "s": 0,
+          "l": 91.8
+        },
+        {
+          "hex": "#c3c3c3",
+          "weight": 6144,
+          "h": 0,
+          "s": 0,
+          "l": 76.5
+        },
+        {
+          "hex": "#f0f0f0",
+          "weight": 3168,
+          "h": 0,
+          "s": 0,
+          "l": 94.1
+        }
+      ],
+      "text": [
+        {
+          "hex": "#000000",
+          "weight": 121880,
+          "h": 0,
+          "s": 0,
+          "l": 0
+        },
+        {
+          "hex": "#ffffff",
+          "weight": 8040,
+          "h": 0,
+          "s": 0,
+          "l": 100
+        },
+        {
+          "hex": "#fdfbef",
+          "weight": 3840,
+          "h": 51.42857142857134,
+          "s": 77.8,
+          "l": 96.5
+        },
+        {
+          "hex": "#808080",
+          "weight": 3240,
+          "h": 0,
+          "s": 0,
+          "l": 50.2
+        },
+        {
+          "hex": "#0000ee",
+          "weight": 3080,
+          "h": 240,
+          "s": 100,
+          "l": 46.7
+        },
+        {
+          "hex": "#999999",
+          "weight": 1440,
+          "h": 0,
+          "s": 0,
+          "l": 60
+        },
+        {
+          "hex": "#9a9a9a",
+          "weight": 1360,
+          "h": 0,
+          "s": 0,
+          "l": 60.4
+        }
+      ],
+      "borders": [
+        {
+          "hex": "#000000",
+          "weight": 828897,
+          "h": 0,
+          "s": 0,
+          "l": 0
+        },
+        {
+          "hex": "#bdbdbd",
+          "weight": 161801,
+          "h": 0,
+          "s": 0,
+          "l": 74.1
+        }
+      ]
+    },
+    "warmth": {
+      "chromaticBackgrounds": 1,
+      "warm": 1,
+      "cool": 0,
+      "verdict": "warm-leaning"
+    },
+    "typography": [
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "22px",
+        "px": 22,
+        "fontWeight": "400",
+        "lineHeight": "34px",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "count": 2,
+        "samples": [
+          "Shop All",
+          "New Arrivals"
+        ],
+        "tags": [
+          "a"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "22px",
+        "px": 22,
+        "fontWeight": "500",
+        "lineHeight": "34px",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "count": 1,
+        "samples": [
+          "Perfume"
+        ],
+        "tags": [
+          "button"
+        ]
+      },
+      {
+        "fontFamily": "ABCReproMono-Medium",
+        "fontSize": "22px",
+        "px": 22,
+        "fontWeight": "500",
+        "lineHeight": "24px",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "count": 1,
+        "samples": [
+          "Close Cart"
+        ],
+        "tags": [
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "20px",
+        "px": 20,
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "count": 4,
+        "samples": [
+          "Country/region",
+          "Skin Musk Bergamot Nectar Sheer Jasmine",
+          "Fresh Cyclamen Neroli Blossom Orange Flower"
+        ],
+        "tags": [
+          "h2",
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "aktiv-grotesk-extended",
+        "fontSize": "20px",
+        "px": 20,
+        "fontWeight": "600",
+        "lineHeight": "28px",
+        "letterSpacing": "0.42px",
+        "textTransform": "uppercase",
+        "count": 1,
+        "samples": [
+          "Missing Person"
+        ],
+        "tags": [
+          "h1"
+        ]
+      },
+      {
+        "fontFamily": "aktiv-grotesk-extended",
+        "fontSize": "18px",
+        "px": 18,
+        "fontWeight": "600",
+        "lineHeight": "25.2px",
+        "letterSpacing": "0.96px",
+        "textTransform": "uppercase",
+        "count": 3,
+        "samples": [
+          "Scent Notes",
+          "Modern Fine Fragrance",
+          "You May Also Like"
+        ],
+        "tags": [
+          "h2"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "18px",
+        "px": 18,
+        "fontWeight": "500",
+        "lineHeight": "27px",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "count": 2,
+        "samples": [
+          "·",
+          "·"
+        ],
+        "tags": [
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "aktiv-grotesk-extended",
+        "fontSize": "18px",
+        "px": 18,
+        "fontWeight": "600",
+        "lineHeight": "25.2px",
+        "letterSpacing": "0.64px",
+        "textTransform": "uppercase",
+        "count": 1,
+        "samples": [
+          "Membership"
+        ],
+        "tags": [
+          "h3"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "16px",
+        "px": 16,
+        "fontWeight": "400",
+        "lineHeight": "28.8px",
+        "letterSpacing": "0.6px",
+        "textTransform": "none",
+        "count": 2,
+        "samples": [
+          "Press Alt+1 for screen-reader mode, Alt+0 to c",
+          "Accessibility Screen-Reader Guide, Feedback, a"
+        ],
+        "tags": [
+          "span",
+          "a"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "16px",
+        "px": 16,
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "count": 5,
+        "samples": [
+          "Membership",
+          "Sign in",
+          "About"
+        ],
+        "tags": [
+          "a",
+          "h4"
+        ]
+      },
+      {
+        "fontFamily": "ABCReproMono-Medium",
+        "fontSize": "15px",
+        "px": 15,
+        "fontWeight": "500",
+        "lineHeight": "38px",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "count": 3,
+        "samples": [
+          "·",
+          "·",
+          "·"
+        ],
+        "tags": [
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "ABCReproMono-Medium",
+        "fontSize": "15px",
+        "px": 15,
+        "fontWeight": "400",
+        "lineHeight": "38px",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "count": 8,
+        "samples": [
+          "·",
+          "·",
+          "·"
+        ],
+        "tags": [
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "14px",
+        "px": 14,
+        "fontWeight": "400",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "count": 48,
+        "samples": [
+          "Shop",
+          "About",
+          "Membership"
+        ],
+        "tags": [
+          "span",
+          "a",
+          "h3",
+          "p",
+          "h2",
+          "small",
+          "li"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "14px",
+        "px": 14,
+        "fontWeight": "400",
+        "lineHeight": "25.2px",
+        "letterSpacing": "0.6px",
+        "textTransform": "none",
+        "count": 2,
+        "samples": [
+          "Log in",
+          "Cart"
+        ],
+        "tags": [
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "14px",
+        "px": 14,
+        "fontWeight": "400",
+        "lineHeight": "18px",
+        "letterSpacing": "0.1px",
+        "textTransform": "none",
+        "count": 1,
+        "samples": [
+          "If nude were a perfume, this is it"
+        ],
+        "tags": [
+          "h3"
+        ]
+      },
+      {
+        "fontFamily": "aktiv-grotesk-extended",
+        "fontSize": "14px",
+        "px": 14,
+        "fontWeight": "600",
+        "lineHeight": "19.6px",
+        "letterSpacing": "0.64px",
+        "textTransform": "uppercase",
+        "count": 14,
+        "samples": [
+          "Vanilla Canyon",
+          "Missing Person",
+          "Father Figure"
+        ],
+        "tags": [
+          "a",
+          "span",
+          "h4"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "14px",
+        "px": 14,
+        "fontWeight": "400",
+        "lineHeight": "40px",
+        "letterSpacing": "normal",
+        "textTransform": "capitalize",
+        "count": 1,
+        "samples": [
+          "Join"
+        ],
+        "tags": [
+          "button"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "14px",
+        "px": 14,
+        "fontWeight": "500",
+        "lineHeight": "14px",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "count": 4,
+        "samples": [
+          "United States",
+          "USD",
+          "$"
+        ],
+        "tags": [
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "13px",
+        "px": 13,
+        "fontWeight": "400",
+        "lineHeight": "36px",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "count": 11,
+        "samples": [
+          "Introducing Vanilla Canyon →",
+          "Members: Free gift with Vanilla Canyon →",
+          "Free shipping on orders $50+"
+        ],
+        "tags": [
+          "span",
+          "h4",
+          "a",
+          "h3"
+        ]
+      },
+      {
+        "fontFamily": "aktiv-grotesk-extended",
+        "fontSize": "13px",
+        "px": 13,
+        "fontWeight": "600",
+        "lineHeight": "18.2px",
+        "letterSpacing": "0.64px",
+        "textTransform": "uppercase",
+        "count": 6,
+        "samples": [
+          "Mini Perfume Set",
+          "Vanilla & Cream",
+          "Discovery Set"
+        ],
+        "tags": [
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "px": 12,
+        "fontWeight": "500",
+        "lineHeight": "38px",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "count": 8,
+        "samples": [
+          "Skip to content",
+          "100mL",
+          "50mL"
+        ],
+        "tags": [
+          "a",
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "px": 12,
+        "fontWeight": "400",
+        "lineHeight": "21.6px",
+        "letterSpacing": "0.78px",
+        "textTransform": "uppercase",
+        "count": 1,
+        "samples": [
+          "BESTSELLER"
+        ],
+        "tags": [
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "12px",
+        "px": 12,
+        "fontWeight": "400",
+        "lineHeight": "21.6px",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "count": 33,
+        "samples": [
+          "Missing Person",
+          "Floral Musk",
+          "Father Figure"
+        ],
+        "tags": [
+          "span",
+          "div"
+        ]
+      },
+      {
+        "fontFamily": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "px": 12,
+        "fontWeight": "400",
+        "lineHeight": "38px",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "count": 41,
+        "samples": [
+          "Add",
+          "Price",
+          "$45"
+        ],
+        "tags": [
+          "span",
+          "a"
+        ]
+      },
+      {
+        "fontFamily": "aktiv-grotesk-extended",
+        "fontSize": "12px",
+        "px": 12,
+        "fontWeight": "600",
+        "lineHeight": "16.8px",
+        "letterSpacing": "0.64px",
+        "textTransform": "uppercase",
+        "count": 42,
+        "samples": [
+          "Strawberry Letter",
+          "Mood Ring",
+          "Not Your Baby"
+        ],
+        "tags": [
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "12px",
+        "px": 12,
+        "fontWeight": "400",
+        "lineHeight": "18px",
+        "letterSpacing": "0.36px",
+        "textTransform": "none",
+        "count": 21,
+        "samples": [
+          "2mL Sample",
+          "2mL Sample",
+          "2mL Sample"
+        ],
+        "tags": [
+          "div"
+        ]
+      },
+      {
+        "fontFamily": "ABCReproMono-Medium",
+        "fontSize": "11px",
+        "px": 11,
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "letterSpacing": "0.78px",
+        "textTransform": "uppercase",
+        "count": 3,
+        "samples": [
+          "Top",
+          "Heart",
+          "Base"
+        ],
+        "tags": [
+          "h4"
+        ]
+      },
+      {
+        "fontFamily": "ABCReproMono-Medium",
+        "fontSize": "11px",
+        "px": 11,
+        "fontWeight": "500",
+        "lineHeight": "11px",
+        "letterSpacing": "0.7px",
+        "textTransform": "uppercase",
+        "count": 5,
+        "samples": [
+          "NEW",
+          "BESTSELLER",
+          "BESTSELLER"
+        ],
+        "tags": [
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "ABCReproMono-Medium",
+        "fontSize": "11px",
+        "px": 11,
+        "fontWeight": "500",
+        "lineHeight": "36px",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "count": 42,
+        "samples": [
+          "Add",
+          "Add",
+          "Add"
+        ],
+        "tags": [
+          "span"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "11px",
+        "px": 11,
+        "fontWeight": "400",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "count": 2,
+        "samples": [
+          "or",
+          "Learn More"
+        ],
+        "tags": [
+          "p",
+          "a"
+        ]
+      },
+      {
+        "fontFamily": "ABCRepro-Regular",
+        "fontSize": "8px",
+        "px": 8,
+        "fontWeight": "400",
+        "lineHeight": "14.4px",
+        "letterSpacing": "0.6px",
+        "textTransform": "none",
+        "count": 1,
+        "samples": [
+          "0"
+        ],
+        "tags": [
+          "span"
+        ]
+      }
+    ],
+    "spacing": {
+      "scale": [
+        {
+          "px": -22,
+          "uses": 6
+        },
+        {
+          "px": -1,
+          "uses": 38
+        },
+        {
+          "px": 1,
+          "uses": 2
+        },
+        {
+          "px": 2,
+          "uses": 9
+        },
+        {
+          "px": 3,
+          "uses": 3
+        },
+        {
+          "px": 4,
+          "uses": 25
+        },
+        {
+          "px": 5,
+          "uses": 17
+        },
+        {
+          "px": 6,
+          "uses": 10
+        },
+        {
+          "px": 8,
+          "uses": 14
+        },
+        {
+          "px": 10,
+          "uses": 184
+        },
+        {
+          "px": 11,
+          "uses": 86
+        },
+        {
+          "px": 12,
+          "uses": 36
+        },
+        {
+          "px": 15,
+          "uses": 23
+        },
+        {
+          "px": 16,
+          "uses": 54
+        },
+        {
+          "px": 20,
+          "uses": 168
+        },
+        {
+          "px": 24,
+          "uses": 17
+        },
+        {
+          "px": 25,
+          "uses": 3
+        },
+        {
+          "px": 30,
+          "uses": 22
+        },
+        {
+          "px": 32,
+          "uses": 18
+        },
+        {
+          "px": 40,
+          "uses": 20
+        },
+        {
+          "px": 60,
+          "uses": 8
+        },
+        {
+          "px": 80,
+          "uses": 18
+        }
+      ],
+      "baseUnitFit": [
+        {
+          "base": 5,
+          "agreement": 0.587
+        },
+        {
+          "base": 10,
+          "agreement": 0.531
+        },
+        {
+          "base": 4,
+          "agreement": 0.479
+        },
+        {
+          "base": 8,
+          "agreement": 0.178
+        },
+        {
+          "base": 12,
+          "agreement": 0.08
+        }
+      ]
+    },
+    "shape": {
+      "radii": [
+        {
+          "value": "0px",
+          "count": 1485
+        },
+        {
+          "value": "50%",
+          "count": 13
+        },
+        {
+          "value": "80px",
+          "count": 1
+        },
+        {
+          "value": "5px",
+          "count": 1
+        }
+      ],
+      "shadows": [
+        {
+          "value": "rgba(0, 0, 0, 0.05) 0px 4px 5px 0px",
+          "count": 1
+        },
+        {
+          "value": "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px",
+          "count": 1
+        },
+        {
+          "value": "rgba(0, 0, 0, 0.5) 0px 5px 15px 0px",
+          "count": 1
+        }
+      ]
+    },
+    "breakpoints": [
+      {
+        "type": "max",
+        "px": 400,
+        "uses": 1
+      },
+      {
+        "type": "max",
+        "px": 480,
+        "uses": 1
+      },
+      {
+        "type": "min",
+        "px": 480,
+        "uses": 1
+      },
+      {
+        "type": "max",
+        "px": 600,
+        "uses": 1
+      },
+      {
+        "type": "max",
+        "px": 640,
+        "uses": 1
+      },
+      {
+        "type": "min",
+        "px": 700,
+        "uses": 1
+      },
+      {
+        "type": "max",
+        "px": 700,
+        "uses": 1
+      },
+      {
+        "type": "min",
+        "px": 701,
+        "uses": 1
+      },
+      {
+        "type": "max",
+        "px": 749,
+        "uses": 3
+      },
+      {
+        "type": "min",
+        "px": 749,
+        "uses": 1
+      },
+      {
+        "type": "min",
+        "px": 750,
+        "uses": 3
+      },
+      {
+        "type": "max",
+        "px": 880,
+        "uses": 2
+      },
+      {
+        "type": "min",
+        "px": 900,
+        "uses": 1
+      },
+      {
+        "type": "max",
+        "px": 960,
+        "uses": 1
+      },
+      {
+        "type": "max",
+        "px": 989,
+        "uses": 3
+      },
+      {
+        "type": "min",
+        "px": 989,
+        "uses": 1
+      },
+      {
+        "type": "min",
+        "px": 990,
+        "uses": 1
+      },
+      {
+        "type": "max",
+        "px": 990,
+        "uses": 2
+      },
+      {
+        "type": "min",
+        "px": 1000,
+        "uses": 1
+      },
+      {
+        "type": "min",
+        "px": 1024,
+        "uses": 1
+      },
+      {
+        "type": "min",
+        "px": 1200,
+        "uses": 1
+      },
+      {
+        "type": "max",
+        "px": 1200,
+        "uses": 1
+      },
+      {
+        "type": "max",
+        "px": 1440,
+        "uses": 1
+      },
+      {
+        "type": "max",
+        "px": 1600,
+        "uses": 1
+      }
+    ],
+    "fontFaces": [
+      {
+        "family": "Figtree",
+        "weight": "400",
+        "src": "\"//phlur.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2\""
+      },
+      {
+        "family": "Figtree",
+        "weight": "700",
+        "src": "\"//phlur.com/cdn/fonts/figtree/figtree_n7.2fd9bfe01586148e644724096c9d75e8c7a90e55.woff2\""
+      },
+      {
+        "family": "Figtree",
+        "weight": "400",
+        "src": "\"//phlur.com/cdn/fonts/figtree/figtree_i4.89f7a4275c064845c304a4cf8a4a586060656db2.woff2\""
+      },
+      {
+        "family": "Figtree",
+        "weight": "700",
+        "src": "\"//phlur.com/cdn/fonts/figtree/figtree_i7.06add7096a6f2ab742e09ec7e498115904eda1fe.woff2\""
+      },
+      {
+        "family": "Figtree",
+        "weight": "400",
+        "src": "\"//phlur.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2\""
+      },
+      {
+        "family": "ABCRepro-Regular",
+        "src": "\"//phlur.com/cdn/shop/t/105/assets/ABCRepro-Regular.woff2?v=34804900962658174201782867163\""
+      },
+      {
+        "family": "ABCReproMono-Medium",
+        "weight": "normal",
+        "src": "\"//phlur.com/cdn/shop/t/105/assets/ABCReproMono-Medium.woff2?v=176760288586883009441782867164\""
+      },
+      {
+        "family": "oke-widget-icons",
+        "weight": "400",
+        "src": "\"https://d3hw6dc1ow8pp2.cloudfront.net/reviews-widget-plus/fonts/oke-widget-icons.ttf\""
+      },
+      {
+        "family": "AvenirNext",
+        "weight": "700",
+        "src": "\"https://cdn.shopify.com/s/files/1/0264/0124/3198/files/AvenirNext-Bold.woff?v=1728405404\""
+      },
+      {
+        "family": "AvenirNext",
+        "weight": "600",
+        "src": "\"https://cdn.shopify.com/s/files/1/0264/0124/3198/files/AvenirNext-DemiBold.woff?v=1728405439\""
+      },
+      {
+        "family": "AvenirNext",
+        "weight": "500",
+        "src": "\"https://cdn.shopify.com/s/files/1/0264/0124/3198/files/AvenirNext-Medium.woff2?v=1728405460\""
+      },
+      {
+        "family": "AvenirNext",
+        "weight": "400",
+        "src": "\"https://cdn.shopify.com/s/files/1/0264/0124/3198/files/AvenirNext-Regular.woff?v=1728405460\""
+      },
+      {
+        "family": "Kanit-Klaviyo-Hosted",
+        "weight": "400",
+        "src": "\"https://static.klaviyo.com/onsite/hosted-fonts/Kanit/latin/kanit_latin_italic_400.woff2\""
+      },
+      {
+        "family": "Kanit-Klaviyo-Hosted",
+        "weight": "700",
+        "src": "\"https://static.klaviyo.com/onsite/hosted-fonts/Kanit/latin/kanit_latin_italic_700.woff2\""
+      },
+      {
+        "family": "Kanit-Klaviyo-Hosted",
+        "weight": "400",
+        "src": "\"https://static.klaviyo.com/onsite/hosted-fonts/Kanit/latin/kanit_latin_regular_400.woff2\""
+      },
+      {
+        "family": "Kanit-Klaviyo-Hosted",
+        "weight": "700",
+        "src": "\"https://static.klaviyo.com/onsite/hosted-fonts/Kanit/latin/kanit_latin_regular_700.woff2\""
+      },
+      {
+        "family": "Nunito-Sans-Klaviyo-Hosted",
+        "weight": "400",
+        "src": "\"https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_italic_400.woff2\""
+      },
+      {
+        "family": "Nunito-Sans-Klaviyo-Hosted",
+        "weight": "700",
+        "src": "\"https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_italic_700.woff2\""
+      },
+      {
+        "family": "Nunito-Sans-Klaviyo-Hosted",
+        "weight": "400",
+        "src": "\"https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_regular_400.woff2\""
+      },
+      {
+        "family": "Nunito-Sans-Klaviyo-Hosted",
+        "weight": "700",
+        "src": "\"https://static.klaviyo.com/onsite/hosted-fonts/Nunito-Sans/latin/nunito-sans_latin_regular_700.woff2\""
+      },
+      {
+        "family": "Repro",
+        "weight": "400",
+        "src": "\"https://cdn.shopify.com/s/files/1/0517/7203/1157/files/ABCRepro-Regular_05530fa0-6a3f-40d8-abf0-54a8fe01cf11.woff2?v=17"
+      },
+      {
+        "family": "ReproMono",
+        "weight": "600",
+        "src": "\"https://cdn.shopify.com/s/files/1/0517/7203/1157/files/ABCReproMono-Medium_162f06bc-33db-449f-b14b-17e5a4dca080.woff2?v"
+      },
+      {
+        "family": "affirm",
+        "weight": "normal",
+        "src": "\"data:font/woff2;base64,d09GMgABAAAAAAlYAA8AAAAAFEgAAAj7AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGjYbIByCNgZgAIMOEQgKl1ST"
+      }
+    ]
+  },
+  "layout": {
+    "display": [
+      {
+        "value": "block",
+        "count": 957
+      },
+      {
+        "value": "flex",
+        "count": 248
+      },
+      {
+        "value": "inline",
+        "count": 184
+      },
+      {
+        "value": "inline-block",
+        "count": 73
+      },
+      {
+        "value": "list-item",
+        "count": 25
+      },
+      {
+        "value": "grid",
+        "count": 11
+      },
+      {
+        "value": "inline-flex",
+        "count": 2
+      }
+    ],
+    "gridTemplates": [
+      {
+        "value": "311.938px",
+        "count": 5
+      },
+      {
+        "value": "1425px",
+        "count": 1
+      }
+    ],
+    "maxWidths": [
+      {
+        "value": "100%",
+        "count": 108
+      },
+      {
+        "value": "2000px",
+        "count": 12
+      },
+      {
+        "value": "calc(20% - 16px)",
+        "count": 4
+      },
+      {
+        "value": "1635px",
+        "count": 3
+      },
+      {
+        "value": "1440px",
+        "count": 2
+      },
+      {
+        "value": "50%",
+        "count": 2
+      },
+      {
+        "value": "800px",
+        "count": 2
+      },
+      {
+        "value": "742px",
+        "count": 1
+      },
+      {
+        "value": "600px",
+        "count": 1
+      },
+      {
+        "value": "300px",
+        "count": 1
+      },
+      {
+        "value": "calc(100% - 16px)",
+        "count": 1
+      },
+      {
+        "value": "calc(100% - 32px)",
+        "count": 1
+      }
+    ]
+  },
+  "sections": [
+    {
+      "classes": "shopify-section shopify-section-group-header-group announcement-bar-section",
+      "kind": "header",
+      "height": 36,
+      "width": 1425,
+      "y": 0,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 0,
+      "links": 3,
+      "buttons": 1,
+      "headings": [],
+      "descendants": 23
+    },
+    {
+      "classes": "shopify-section shopify-section-group-header-group section-header shopify-section-header-sticky",
+      "kind": "header",
+      "height": 56,
+      "width": 1425,
+      "y": 36,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 13,
+      "links": 13,
+      "buttons": 1,
+      "headings": [],
+      "descendants": 86
+    },
+    {
+      "classes": "shopify-section shopify-section-group-header-group shopify-section--shop-nav-drawer",
+      "kind": "header",
+      "height": 0,
+      "width": 1425,
+      "y": 92,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 0,
+      "links": 5,
+      "buttons": 3,
+      "headings": [
+        "Country/region"
+      ],
+      "descendants": 38
+    },
+    {
+      "classes": "shopify-section",
+      "kind": "generic",
+      "height": 72,
+      "width": 1425,
+      "y": 92,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 2,
+      "links": 3,
+      "buttons": 0,
+      "headings": [],
+      "descendants": 11
+    },
+    {
+      "classes": "shopify-section section",
+      "kind": "product-carousel",
+      "height": 1312,
+      "width": 1425,
+      "y": 164,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 8,
+      "links": 7,
+      "buttons": 5,
+      "headings": [
+        "Missing Person",
+        "100mL Eau de Parfum",
+        "If nude were a perfume, this is it"
+      ],
+      "descendants": 130
+    },
+    {
+      "classes": "shopify-section pdp-sticky-cta-wrapper",
+      "kind": "generic",
+      "height": 100,
+      "width": 620,
+      "y": 870,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 0,
+      "links": 0,
+      "buttons": 2,
+      "headings": [],
+      "descendants": 13
+    },
+    {
+      "classes": "shopify-section pdp-full-width-brand-vid",
+      "kind": "generic",
+      "height": 0,
+      "width": 1425,
+      "y": 1476,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 0,
+      "links": 0,
+      "buttons": 0,
+      "headings": [],
+      "descendants": 1
+    },
+    {
+      "classes": "shopify-section section",
+      "kind": "generic",
+      "height": 649.1,
+      "width": 1425,
+      "y": 1476,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 1,
+      "links": 0,
+      "buttons": 0,
+      "headings": [
+        "Scent Notes"
+      ],
+      "descendants": 25
+    },
+    {
+      "classes": "shopify-section section",
+      "kind": "product-carousel",
+      "height": 599.7,
+      "width": 1425,
+      "y": 2125.2,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 12,
+      "links": 5,
+      "buttons": 7,
+      "headings": [
+        "Modern Fine Fragrance"
+      ],
+      "descendants": 132
+    },
+    {
+      "classes": "shopify-section related-products-wrap",
+      "kind": "product-carousel",
+      "height": 582,
+      "width": 1425,
+      "y": 4878.7,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 18,
+      "links": 16,
+      "buttons": 10,
+      "headings": [
+        "You May Also Like"
+      ],
+      "descendants": 169
+    },
+    {
+      "classes": "shopify-section pdp-notification-popup-section",
+      "kind": "generic",
+      "height": 0,
+      "width": 1425,
+      "y": 5460.7,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 0,
+      "links": 0,
+      "buttons": 0,
+      "headings": [],
+      "descendants": 1
+    },
+    {
+      "classes": "shopify-section shopify-section-group-footer-group",
+      "kind": "footer",
+      "height": 489,
+      "width": 1425,
+      "y": 5520.7,
+      "bg": "rgba(0, 0, 0, 0)",
+      "images": 1,
+      "links": 9,
+      "buttons": 2,
+      "headings": [
+        "Collections",
+        "Categories",
+        "Customer Care"
+      ],
+      "descendants": 71
+    }
+  ],
+  "components": [
+    {
+      "signature": "div.rebuy-product-media",
+      "instances": 56,
+      "avgW": 109,
+      "avgH": 109,
+      "uniformWidth": false,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "a.rebuy-product-image.clickable",
+      "instances": 56,
+      "avgW": 109,
+      "avgH": 109,
+      "uniformWidth": false,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "img.primary-image",
+      "instances": 14,
+      "avgW": 255,
+      "avgH": 255,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": false,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "img.secondary-image",
+      "instances": 14,
+      "avgW": 255,
+      "avgH": 255,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": false,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "img.motion-reduce",
+      "instances": 10,
+      "avgW": 312,
+      "avgH": 312,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": false,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.nav-arrow",
+      "instances": 6,
+      "avgW": 32,
+      "avgH": 32,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": false,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "img.product-gallery-nav-icon",
+      "instances": 6,
+      "avgW": 16,
+      "avgH": 16,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": false,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.slick-slide.slick-cloned",
+      "instances": 6,
+      "avgW": 494,
+      "avgH": 212,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.slick-slide",
+      "instances": 6,
+      "avgW": 494,
+      "avgH": 212,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.product-media-container.media-type-image.media-fit-contain",
+      "instances": 5,
+      "avgW": 633,
+      "avgH": 633,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": false,
+      "radius": "0px",
+      "bg": "rgb(250, 250, 250)"
+    },
+    {
+      "signature": "div.product__media.media.media--transparent",
+      "instances": 5,
+      "avgW": 633,
+      "avgH": 633,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": false,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "img.image-magnify-none",
+      "instances": 5,
+      "avgW": 633,
+      "avgH": 633,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": false,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.media.media--transparent.media--hover-effect",
+      "instances": 5,
+      "avgW": 312,
+      "avgH": 312,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": false,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "h4.card__heading.aktiv",
+      "instances": 5,
+      "avgW": 312,
+      "avgH": 41,
+      "uniformWidth": true,
+      "hasImage": false,
+      "hasHeading": true,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "a.secondary-menu-item-click",
+      "instances": 4,
+      "avgW": 72,
+      "avgH": 44,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.rebuy-product-block.strawberry-letter-sample.product-id-7655290273973",
+      "instances": 4,
+      "avgW": 494,
+      "avgH": 60,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.rebuy-product-block.mood-ring-sample.product-id-7977263661237",
+      "instances": 4,
+      "avgW": 494,
+      "avgH": 60,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.rebuy-product-block.not-your-baby-sample.product-id-7382085304501",
+      "instances": 4,
+      "avgW": 494,
+      "avgH": 60,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.rebuy-product-block.vanilla-canyon-sample.product-id-10484023328949",
+      "instances": 4,
+      "avgW": 494,
+      "avgH": 60,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.rebuy-product-block.honey-moon-sample.product-id-10383474032821",
+      "instances": 4,
+      "avgW": 494,
+      "avgH": 60,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.rebuy-product-block.afterglow-sample.product-id-10302309073077",
+      "instances": 4,
+      "avgW": 494,
+      "avgH": 60,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.rebuy-product-block.cherry-stem-sample.product-id-10215035699381",
+      "instances": 4,
+      "avgW": 494,
+      "avgH": 60,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.rebuy-product-block.rose-whip-sample.product-id-8182622945461",
+      "instances": 4,
+      "avgW": 494,
+      "avgH": 60,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "div.rebuy-product-block.golden-rule-sample.product-id-8129956970677",
+      "instances": 4,
+      "avgW": 494,
+      "avgH": 60,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "signature": "li.search-trending-products__item",
+      "instances": 3,
+      "avgW": 250,
+      "avgH": 48,
+      "uniformWidth": true,
+      "hasImage": true,
+      "hasHeading": false,
+      "hasLink": true,
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)"
+    }
+  ]
+}

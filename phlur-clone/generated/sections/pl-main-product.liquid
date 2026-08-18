@@ -1,0 +1,99 @@
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-button.css' | asset_url | stylesheet_tag }}
+{{ 'component-badge-stamp.css' | asset_url | stylesheet_tag }}
+
+<section class="pl-pdp">
+  <div class="pl-pdp__media">
+    {%- for media in product.media limit: section.settings.gallery_limit -%}
+      <figure>
+        {{ media | image_url: width: 1400
+                 | image_tag: loading: forloop.first ? 'eager' : 'lazy',
+                              widths: '500,700,1000,1400',
+                              sizes: '(max-width: 989px) 100vw, 55vw',
+                              alt: media.alt | default: product.title | escape }}
+      </figure>
+    {%- else -%}
+      <figure>{{ 'product-1' | placeholder_svg_tag }}</figure>
+    {%- endfor -%}
+  </div>
+
+  <div class="pl-pdp__info">
+    <h1 class="pl-pdp__title">{{ product.title }}</h1>
+
+    {%- if product.type != blank -%}
+      <p class="pl-pdp__subtitle">{{ product.type }}</p>
+    {%- endif -%}
+
+    <p class="pl-pdp__price">
+      {%- if product.compare_at_price > product.price -%}
+        <del>{{ product.compare_at_price | money }}</del>
+        {{ product.price | money }}
+      {%- else -%}
+        {{ product.price | money }}
+      {%- endif -%}
+    </p>
+
+    {%- form 'product', product -%}
+      {%- unless product.has_only_default_variant -%}
+        {%- for option in product.options_with_values -%}
+          <fieldset class="pl-pdp__variants">
+            <legend class="visually-hidden">{{ option.name }}</legend>
+            {%- for value in option.values -%}
+              <label class="pl-pdp__variant"
+                     aria-checked="{% if option.selected_value == value %}true{% else %}false{% endif %}">
+                <input class="visually-hidden" type="radio"
+                       name="option-{{ option.position }}" value="{{ value | escape }}"
+                       {% if option.selected_value == value %}checked{% endif %}>
+                {{ value }}
+              </label>
+            {%- endfor -%}
+          </fieldset>
+        {%- endfor -%}
+      {%- endunless -%}
+
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+      <button class="pl-button pl-button--primary pl-pdp__atc" type="submit"
+              {% unless product.available %}disabled{% endunless %}>
+        {% if product.available %}Add to bag{% else %}Sold out{% endif %}
+      </button>
+    {%- endform -%}
+
+    <div class="pl-pdp__accordion">
+      {%- for block in section.blocks -%}
+        <details {{ block.shopify_attributes }}>
+          <summary>{{ block.settings.title }}</summary>
+          <div class="pl-pdp__panel">
+            {%- if block.settings.use_description -%}
+              {{ product.description }}
+            {%- else -%}
+              {{ block.settings.content }}
+            {%- endif -%}
+          </div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product",
+  "tag": "section",
+  "settings": [
+    { "type": "range", "id": "gallery_limit", "min": 1, "max": 8, "step": 1,
+      "label": "Gallery images", "default": 4 }
+  ],
+  "blocks": [
+    { "type": "panel", "name": "Accordion panel", "settings": [
+      { "type": "text", "id": "title", "label": "Title", "default": "Details" },
+      { "type": "checkbox", "id": "use_description", "label": "Use product description", "default": false },
+      { "type": "richtext", "id": "content", "label": "Content" }
+    ] }
+  ],
+  "presets": [{
+    "name": "Product",
+    "blocks": [{ "type": "panel" }, { "type": "panel" }]
+  }]
+}
+{% endschema %}

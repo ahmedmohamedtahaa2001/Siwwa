@@ -1,0 +1,73 @@
+/* Product card — measured: 300x420,
+   media 1:1 on #f5f5f5, radius 0, no shadow.
+   Title 14px/600 uppercase 0.64px tracking. Maps to Siwa 'product-card'. */
+
+.pl-card {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border-radius: var(--pl-radius);
+  box-shadow: none;              /* Siwa rule 4 + measured 'none' */
+  text-decoration: none;
+  color: inherit;
+}
+
+.pl-card__media {
+  position: relative;
+  aspect-ratio: 1 / 1;           /* measured 1 */
+  overflow: hidden;
+  background-color: var(--pl-surface);
+  border-radius: var(--pl-radius);
+}
+
+.pl-card__image {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--pl-duration) var(--pl-easing);
+}
+.pl-card:hover .pl-card__image { transform: scale(1.03); }
+
+.pl-card__body {
+  padding-block-start: var(--pl-space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--pl-space-1);
+  text-align: start;             /* logical — survives RTL */
+}
+
+.pl-card__title {
+  font-family: var(--pl-font-display);
+  font-size: var(--pl-fs-card);
+  font-weight: 600;
+  letter-spacing: var(--pl-ls-card);
+  text-transform: uppercase;
+  color: var(--pl-ink);
+  margin: 0;
+}
+
+.pl-card__subtitle {
+  font-family: var(--pl-font-body);
+  font-size: var(--pl-fs-body);
+  font-weight: 400;
+  color: var(--pl-ink-muted);
+  margin: 0;
+}
+
+/* Siwa rule 6: price is never gold — always ink. */
+.pl-card__price {
+  font-family: var(--pl-font-body);
+  font-size: var(--pl-fs-body);
+  color: var(--pl-ink);
+  margin: 0;
+}
+.pl-card__price--sale { color: var(--pl-ink); }
+.pl-card__price del   { color: var(--pl-ink-muted); margin-inline-end: var(--pl-space-1); }
+
+.pl-card:focus-visible { outline: 2px solid var(--pl-ink); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-card__image { transition: none; }
+  .pl-card:hover .pl-card__image { transform: none; }
+}

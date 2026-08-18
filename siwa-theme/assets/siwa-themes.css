@@ -1,0 +1,940 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   siwa-themes.css — the five design directions.
+
+   LOAD LAST, after siwa-tokens.css → siwa-base.css → siwa-components.css.
+   This file only re-points tokens; it never invents component structure.
+
+   HOW IT WORKS
+   The Customizer setting `settings.theme_preset` writes `data-theme` onto
+   <body> in layout/theme.liquid. Every block below re-points the design
+   system's own token names for that scope, so a section written once renders
+   five different ways without a single `{% if %}` in its markup.
+
+     <body data-theme="nocturne">   → the whole store is Nocturne
+
+   WHY THE BLOCKS ARE ON <body> AND NOT :root
+   Nesting. The component showcase renders the same section five times on one
+   page, each wrapper carrying its own `data-theme`, so a reviewer sees all
+   five directions side by side. Token blocks scoped to an attribute inherit
+   into whatever they wrap; blocks on :root could not do this.
+
+   WHAT A PRESET MAY CHANGE
+   Colour, type family, type ramp, radius, shadow, border weight, spacing
+   rhythm, motion, and the preset levers in §0. What a preset may NEVER change
+   is in §7 — those are laws, not styles.
+
+   ACCESSIBILITY
+   Every palette here is verified by tools/check-contrast.mjs on every run, the
+   same gate the Archive palette passes. Nothing in this file is eyeballed.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════════════
+   §0 · PRESET LEVERS
+
+   Tokens that exist so a preset can change a component's *behaviour* without
+   the component knowing which preset is active. Declared here with their
+   Archive values; every preset block re-points them.
+
+   A section author uses these instead of branching on the theme name:
+     border-radius: var(--radius-commerce);
+     box-shadow:    var(--shadow-commerce);
+     text-transform: var(--label-transform);
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Shape and elevation policy for the commerce layer ─────────────────
+     DESIGN.md principle 3 makes "stamped, not rounded" a global law. In this
+     theme it becomes a per-preset policy carried by these two tokens, so
+     Papyrus can round and soften while the other four stay stamped. See
+     DEVIATIONS.md #2. */
+  --radius-commerce: var(--rounded-none);
+  --shadow-commerce: var(--shadow-none);
+
+  /* ── Line weight ────────────────────────────────────────────────────── */
+  --border-width: 1px;
+  --border-width-strong: 2px;
+  --rule-weight: 1px;
+
+  /* ── Label register. Neutralised for Arabic in §6 — a joined script has no
+     case and letter-spacing severs its joins. ─────────────────────────── */
+  --label-transform: uppercase;
+
+  /* ── Ornament. Presets that draw a mark before a label set this to
+     `block`; presets that do not set `none`. ──────────────────────────── */
+  --ornament-display: block;
+  --ornament-size: 24px;
+
+  /* ── Media behaviour on hover. Principle 4: the card does not lift, the
+     media scales. Presets tune how far. ───────────────────────────────── */
+  --media-hover-scale: 1.03;
+
+  /* ── Accent glow. Nocturne only; 0 elsewhere so the declaration is inert. */
+  --accent-glow: 0 0 0 0 transparent;
+
+  /* ── Tokens the design system needs but v3.0.0 never emitted ─────────── */
+  --colors-surface-raised: #fdfcf7;
+  --colors-info: #3f5a63;
+  --colors-shimmer: #e2d9c1;
+
+  /* The Impression line's accent. v3.0.0 named silver as a concept and gave
+     it no token; every Impression surface needs one. */
+  --colors-silver: #7c8583;
+  --colors-silver-strong: #5b6462;
+
+  /* Label inks for the catalog stamps. Emitted so tooling can check the
+     stamp label against its own ground rather than assuming parchment. */
+  --colors-on-original: #f7f5ee;
+  --colors-on-impression: #d3d8d1;
+  --colors-on-verified: #f7f5ee;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   §1 · ARCHIVE — the baseline. Editorial field guide.
+
+   Serif display, hairline rules instead of boxes, parchment ground, gold as
+   foil on a single action, small-caps eyebrows, generous whitespace. A museum
+   catalogue. This is the Siwa Design System v3.0.0 palette verbatim — every
+   other preset is measured against it.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+[data-theme='archive'] {
+  --colors-background: #f7f5ee;
+  --colors-surface: #eae0c4;
+  --colors-surface-hover: #d3cab0;
+  --colors-surface-raised: #fdfcf7;
+  --colors-surface-dark: #2f3932;
+
+  --colors-text: #1b2724;
+  --colors-text-secondary: #6f6156;
+  --colors-heading: #6b4a28;
+  --colors-heading-alt: #50251c;
+  --colors-on-dark: #d3d8d1;
+
+  --colors-primary: #b38145;
+  --colors-primary-strong: #a5773f;
+  --colors-secondary: #e1b160;
+  /* v3.0.0 named silver as the Impression line's accent and never tokenised it.
+     #7c8583 was the obvious reading of it and measures 2.88:1 on sand — below
+     the SC 1.4.11 floor for a meaningful stroke. Darkened by the smallest step
+     that clears 3:1 on both grounds. */
+  --colors-silver: #767f7d;
+  --colors-silver-strong: #5b6462;
+
+  --colors-border: #e4b68a;
+  --colors-border-strong: #997a5c;
+  --colors-hairline-accent: #b8bdbd;
+
+  --colors-link: #845a48;
+  --colors-success: #586851;
+  --colors-warning: #8b5823;
+  --colors-danger: #9c3b2c;
+  --colors-info: #3f5a63;
+  --colors-tag: #66634e;
+
+  --colors-original: #6b4a28;
+  --colors-impression: #2f3932;
+  --colors-verified: #586851;
+  --colors-on-original: #f7f5ee;
+  --colors-on-impression: #d3d8d1;
+  --colors-on-verified: #f7f5ee;
+
+  --scrim-color: rgba(27, 39, 36, 0.5);
+  --colors-shimmer: #e2d9c1;
+
+  --font-display-latin: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-ui-latin: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-display-arabic: 'Aref Ruqaa', 'Amiri', Georgia, serif;
+  --font-ui-arabic: 'IBM Plex Sans Arabic', 'Almarai', Arial, sans-serif;
+  --font-display: var(--font-display-latin);
+  --font-ui: var(--font-ui-latin);
+
+  --text-hero: clamp(2rem, 1.2rem + 3.4vw, 3rem);
+  --text-h1: clamp(1.75rem, 1.3rem + 1.9vw, 2.25rem);
+  --text-h2: clamp(1.5rem, 1.2rem + 1.3vw, 1.875rem);
+  --text-h3: 1.5rem;
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-label: 0.75rem;
+
+  --leading-display: 1.1;
+  --leading-heading: 1.25;
+  --leading-body: 1.6;
+  --tracking-display: -0.01em;
+  --tracking-label: 0.12em;
+  --tracking-button: 0.08em;
+
+  --spacing-section: 72px;
+  --spacing-section-tight: 48px;
+  --spacing-card: 32px;
+
+  --rounded-sm: 2px;
+  --rounded-editorial: 16px;
+  --rounded-bento: 24px;
+  --radius-commerce: 0px;
+  --shadow-commerce: none;
+
+  --shadow-editorial: 0 4px 20px 0 rgba(27, 39, 36, 0.1);
+  --shadow-modal: 0 8px 32px 0 rgba(27, 39, 36, 0.18), 0 2px 8px 0 rgba(27, 39, 36, 0.1);
+
+  --duration-fast: 120ms;
+  --duration-medium: 240ms;
+  --duration-slow: 400ms;
+
+  --control-h: 48px;
+  --control-h-sm: 40px;
+  --nav-height: 64px;
+  --grid-max-width: 1200px;
+
+  --border-width: 1px;
+  --border-width-strong: 2px;
+  --rule-weight: 1px;
+  --label-transform: uppercase;
+  --ornament-display: block;
+  --media-hover-scale: 1.03;
+  --accent-glow: 0 0 0 0 transparent;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   §2 · OASIS MINIMAL — modern minimal luxury.
+
+   Sans throughout, near-monochrome, 1px lines, very large whitespace. Gold
+   appears once per surface and usually as a dot or a rule rather than a fill.
+   Hierarchy is carried by size and space; ornament is switched off and the
+   editorial radius drops to 4px, so surfaces read as sheets of paper rather
+   than as cards.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+[data-theme='oasis'] {
+  --colors-background: #fbfaf7;
+  --colors-surface: #f2f0ea;
+  --colors-surface-hover: #e7e4dc;
+  --colors-surface-raised: #ffffff;
+  --colors-surface-dark: #1c1d1a;
+
+  --colors-text: #1a1b18;
+  --colors-text-secondary: #66655d;
+  --colors-heading: #1a1b18;
+  --colors-heading-alt: #1a1b18;
+  --colors-on-dark: #f2f0ea;
+
+  --colors-primary: #b38145;
+  --colors-primary-strong: #8f6528;
+  --colors-secondary: #d9b57c;
+  --colors-silver: #84837c;
+  --colors-silver-strong: #5b5a54;
+
+  --colors-border: #e6e3db;
+  --colors-border-strong: #84837c;
+  --colors-hairline-accent: #d5d1c7;
+
+  --colors-link: #36453b;
+  --colors-success: #4a6049;
+  --colors-warning: #835420;
+  --colors-danger: #93392b;
+  --colors-info: #3a545e;
+  --colors-tag: #63604f;
+
+  --colors-original: #6b4a28;
+  --colors-impression: #2f3932;
+  --colors-verified: #586851;
+  --colors-on-original: #fbfaf7;
+  --colors-on-impression: #e7eae4;
+  --colors-on-verified: #fbfaf7;
+
+  --scrim-color: rgba(26, 27, 24, 0.42);
+  --colors-shimmer: #eae7df;
+
+  --font-display-latin: 'Inter Tight', 'Inter', -apple-system, Arial, sans-serif;
+  --font-ui-latin: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-display-arabic: 'IBM Plex Sans Arabic', 'Almarai', Arial, sans-serif;
+  --font-ui-arabic: 'IBM Plex Sans Arabic', 'Almarai', Arial, sans-serif;
+  --font-display: var(--font-display-latin);
+  --font-ui: var(--font-ui-latin);
+
+  --text-hero: clamp(2rem, 1.1rem + 3.8vw, 3.25rem);
+  --text-h1: clamp(1.625rem, 1.2rem + 1.8vw, 2.125rem);
+  --text-h2: clamp(1.375rem, 1.15rem + 1vw, 1.625rem);
+  --text-h3: 1.25rem;
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-label: 0.6875rem;
+
+  --leading-display: 1.15;
+  --leading-heading: 1.3;
+  --leading-body: 1.7;
+  --tracking-display: -0.02em;
+  --tracking-label: 0.18em;
+  --tracking-button: 0.1em;
+
+  --spacing-section: 96px;
+  --spacing-section-tight: 64px;
+  --spacing-card: 40px;
+
+  --rounded-sm: 1px;
+  --rounded-editorial: 4px;
+  --rounded-bento: 4px;
+  --radius-commerce: 0px;
+  --shadow-commerce: none;
+
+  --shadow-editorial: 0 1px 3px 0 rgba(26, 27, 24, 0.05);
+  --shadow-modal: 0 12px 44px 0 rgba(26, 27, 24, 0.12);
+
+  --duration-fast: 100ms;
+  --duration-medium: 200ms;
+  --duration-slow: 320ms;
+
+  --control-h: 48px;
+  --control-h-sm: 40px;
+  --nav-height: 72px;
+  --grid-max-width: 1280px;
+  --grid-outer-gutter: 32px;
+
+  --border-width: 1px;
+  --border-width-strong: 1px;
+  --rule-weight: 1px;
+  --label-transform: uppercase;
+  --ornament-display: none;
+  --media-hover-scale: 1.02;
+  --accent-glow: 0 0 0 0 transparent;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   §3 · DESERT BOLD — high-contrast graphic.
+
+   Bone ground, ink blocks, oversized display type, zero radius on every layer
+   including modals, and a hard offset shadow instead of a blur. Borders are
+   ink at 2–3px, so a control's edge is a drawn line rather than a tint. The
+   poster register: dense composition, type does the shouting.
+
+   The Latin display face ships one weight — it is already black — so display
+   headings here never ask for 700.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+[data-theme='desert'] {
+  --colors-background: #ece8dd;
+  --colors-surface: #ddd8c8;
+  --colors-surface-hover: #cdc7b3;
+  --colors-surface-raised: #f5f2ea;
+  --colors-surface-dark: #121210;
+
+  --colors-text: #121210;
+  --colors-text-secondary: #4b4a43;
+  --colors-heading: #121210;
+  --colors-heading-alt: #121210;
+  --colors-on-dark: #ece8dd;
+
+  /* A poster gold, pulled down until it clears 3:1 on bone while the ink label
+     on it still clears 4.5:1. The brighter #c98b34 this started as measured
+     2.37:1 and could not carry a CTA edge. */
+  --colors-primary: #aa7320;
+  --colors-primary-strong: #96601c;
+  --colors-secondary: #e8b95e;
+  --colors-silver: #6f7472;
+  --colors-silver-strong: #4a4f4d;
+
+  --colors-border: #121210;
+  --colors-border-strong: #121210;
+  --colors-hairline-accent: #bdb7a2;
+
+  --colors-link: #7a2f1e;
+  --colors-success: #3d5233;
+  --colors-warning: #7a4a12;
+  --colors-danger: #8f2e1f;
+  --colors-info: #284b56;
+  --colors-tag: #4d4a3a;
+
+  --colors-original: #6b4a28;
+  --colors-impression: #2f3932;
+  --colors-verified: #586851;
+  --colors-on-original: #ece8dd;
+  --colors-on-impression: #e0e4dd;
+  --colors-on-verified: #ece8dd;
+
+  --scrim-color: rgba(18, 18, 16, 0.62);
+  --colors-shimmer: #d4cfbe;
+
+  --font-display-latin: 'Archivo Black', 'Inter', Impact, sans-serif;
+  --font-ui-latin: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-display-arabic: 'Cairo', 'IBM Plex Sans Arabic', Arial, sans-serif;
+  --font-ui-arabic: 'IBM Plex Sans Arabic', 'Cairo', Arial, sans-serif;
+  --font-display: var(--font-display-latin);
+  --font-ui: var(--font-ui-latin);
+
+  --text-hero: clamp(2.75rem, 1.4rem + 6vw, 5rem);
+  --text-h1: clamp(2.125rem, 1.35rem + 3.2vw, 3.25rem);
+  --text-h2: clamp(1.625rem, 1.2rem + 1.9vw, 2.25rem);
+  --text-h3: 1.375rem;
+  --text-body-lg: 1.0625rem;
+  --text-body: 0.9375rem;
+  --text-body-sm: 0.8125rem;
+  --text-label: 0.6875rem;
+
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.5;
+  --tracking-display: -0.03em;
+  --tracking-label: 0.18em;
+  --tracking-button: 0.12em;
+
+  --spacing-section: 64px;
+  --spacing-section-tight: 40px;
+  --spacing-card: 24px;
+
+  --rounded-sm: 0px;
+  --rounded-editorial: 0px;
+  --rounded-bento: 0px;
+  --radius-commerce: 0px;
+  --shadow-commerce: none;
+
+  --shadow-editorial: 6px 6px 0 0 var(--colors-text);
+  --shadow-modal: 10px 10px 0 0 var(--colors-text);
+
+  --duration-fast: 80ms;
+  --duration-medium: 140ms;
+  --duration-slow: 240ms;
+
+  --control-h: 52px;
+  --control-h-sm: 44px;
+  --nav-height: 68px;
+  --grid-max-width: 1360px;
+  --grid-gutter: 12px;
+
+  --border-width: 2px;
+  --border-width-strong: 3px;
+  --rule-weight: 2px;
+  --label-transform: uppercase;
+  --ornament-display: block;
+  --media-hover-scale: 1.05;
+  --accent-glow: 0 0 0 0 transparent;
+}
+
+/* Desert's focus ring is thicker so it reads against 2px ink borders. */
+[data-theme='desert'] {
+  --focus-ring: 0 0 0 3px var(--colors-background), 0 0 0 6px var(--colors-text);
+  --focus-ring-width: 3px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   §4 · NOCTURNE — the library's dark mode.
+
+   Deep green-black ground: the brand's ink used as the page rather than as a
+   band. Gold and silver become light sources instead of fills, shadows go
+   soft and wide, display type is a high-contrast old-style serif. The
+   boutique after closing time.
+
+   DESIGN.md §12 decision 4 warns against producing dark mode by re-mapping
+   tokens ad hoc. This is not that: Nocturne is a full palette designed against
+   its own grounds and verified by tools/check-contrast.mjs on every run, the
+   same gate the light palette passes. See DEVIATIONS.md #3.
+
+   The catalog trio keeps its hues so the stamps stay recognisably the same
+   objects; only their luminance is lifted enough to sit on an ink page, and
+   their label inks flip to dark. See DEVIATIONS.md #4.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+[data-theme='nocturne'] {
+  --colors-background: #121714;
+  --colors-surface: #1b211c;
+  --colors-surface-hover: #252d26;
+  --colors-surface-raised: #232b24;
+  /* An inverted band inside a dark theme goes *deeper*, not lighter. Keeping
+     the band dark is what lets every `.on-dark` semantic below survive
+     unchanged — a light band here would strand --colors-secondary, which is
+     defined as light gold for dark grounds. */
+  --colors-surface-dark: #0b0f0c;
+
+  --colors-text: #e6e8e0;
+  --colors-text-secondary: #a2a99f;
+  --colors-heading: #e1b160;
+  --colors-heading-alt: #e8c57e;
+  --colors-on-dark: #e6e8e0;
+
+  --colors-primary: #d9a755;
+  --colors-primary-strong: #e1b160;
+  --colors-secondary: #f0d29b;
+  --colors-silver: #9aa4a1;
+  --colors-silver-strong: #c3ccc8;
+
+  --colors-border: #2b332c;
+  --colors-border-strong: #7f8c83;
+  --colors-hairline-accent: #3a443c;
+
+  --colors-link: #e1b160;
+  --colors-success: #8aae7d;
+  --colors-warning: #dda65f;
+  --colors-danger: #e58a78;
+  --colors-info: #86b6c9;
+  --colors-tag: #b0af98;
+
+  --colors-original: #c9a15f;
+  --colors-impression: #8f9c96;
+  --colors-verified: #8aae7d;
+  --colors-on-original: #121714;
+  --colors-on-impression: #121714;
+  --colors-on-verified: #121714;
+
+  --scrim-color: rgba(6, 9, 7, 0.72);
+  --colors-shimmer: #232b24;
+
+  --font-display-latin: 'Cormorant Garamond', 'Fraunces', Georgia, serif;
+  --font-ui-latin: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-display-arabic: 'Amiri', 'Aref Ruqaa', Georgia, serif;
+  --font-ui-arabic: 'Noto Kufi Arabic', 'IBM Plex Sans Arabic', Arial, sans-serif;
+  --font-display: var(--font-display-latin);
+  --font-ui: var(--font-ui-latin);
+
+  --text-hero: clamp(2.25rem, 1.3rem + 4.2vw, 3.5rem);
+  --text-h1: clamp(1.875rem, 1.35rem + 2.2vw, 2.5rem);
+  --text-h2: clamp(1.5rem, 1.2rem + 1.4vw, 2rem);
+  --text-h3: 1.5rem;
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-label: 0.75rem;
+
+  --leading-display: 1.1;
+  --leading-heading: 1.28;
+  --leading-body: 1.65;
+  --tracking-display: 0em;
+  --tracking-label: 0.16em;
+  --tracking-button: 0.1em;
+
+  --spacing-section: 80px;
+  --spacing-section-tight: 56px;
+  --spacing-card: 32px;
+
+  --rounded-sm: 2px;
+  --rounded-editorial: 16px;
+  --rounded-bento: 20px;
+  --radius-commerce: 2px;
+  --shadow-commerce: none;
+
+  --shadow-editorial: 0 8px 30px 0 rgba(0, 0, 0, 0.45);
+  --shadow-modal: 0 20px 60px 0 rgba(0, 0, 0, 0.6);
+
+  --duration-fast: 160ms;
+  --duration-medium: 320ms;
+  --duration-slow: 520ms;
+
+  --control-h: 48px;
+  --control-h-sm: 40px;
+  --nav-height: 68px;
+  --grid-max-width: 1240px;
+
+  --border-width: 1px;
+  --border-width-strong: 2px;
+  --rule-weight: 1px;
+  --label-transform: uppercase;
+  --ornament-display: block;
+  --media-hover-scale: 1.03;
+  --accent-glow: 0 0 24px -6px var(--colors-primary);
+
+  /* The dark ring is the visible one on an ink page. */
+  --focus-ring: 0 0 0 2px var(--colors-background), 0 0 0 4px var(--colors-secondary);
+
+  color-scheme: dark;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   §5 · PAPYRUS SOFT — warm, rounded, approachable.
+
+   Pastel parchment, soft drop shadows on the commerce layer, 14–24px radii, a
+   rounded sans for both display and UI, and sentence-case labels instead of
+   tracked-out uppercase. This is the face a first-time gift buyer meets on a
+   phone.
+
+   Papyrus is the one preset that deliberately breaks DESIGN.md principle 3
+   ("stamped, not rounded — on the commerce layer") and principle 4 ("no shadow
+   outside the editorial layer"). Both were global rules in v3.0.0; here they
+   are per-preset policy carried by --radius-commerce and --shadow-commerce,
+   so the other four presets keep the stamped behaviour untouched. Recorded in
+   DEVIATIONS.md #2.
+
+   What is a law rather than a style still holds here: the price is never gold,
+   the tester CTA keeps the primary CTA's footprint, no state is carried by
+   colour alone, and the catalog trio is unchanged. See §7.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+[data-theme='papyrus'] {
+  --colors-background: #fdf8f0;
+  --colors-surface: #f6ecdc;
+  --colors-surface-hover: #eee0c9;
+  --colors-surface-raised: #fffdf8;
+  --colors-surface-dark: #3a352e;
+
+  --colors-text: #2a251f;
+  --colors-text-secondary: #6c5f53;
+  --colors-heading: #6f4a26;
+  --colors-heading-alt: #59331f;
+  --colors-on-dark: #f6ecdc;
+
+  /* Papyrus's pastel ground is the lightest in the system, so its gold has to
+     be the deepest of the five to clear 3:1 against it. */
+  --colors-primary: #bb8341;
+  --colors-primary-strong: #9a6a26;
+  --colors-secondary: #ecc78a;
+  --colors-silver: #87837d;
+  --colors-silver-strong: #5e5a54;
+
+  --colors-border: #ecdcc2;
+  --colors-border-strong: #8f7a5e;
+  --colors-hairline-accent: #dcc7a5;
+
+  --colors-link: #8a5340;
+  --colors-success: #546b4c;
+  --colors-warning: #8c5a1d;
+  --colors-danger: #a23e2c;
+  --colors-info: #3f5f6a;
+  --colors-tag: #67634d;
+
+  --colors-original: #6b4a28;
+  --colors-impression: #2f3932;
+  --colors-verified: #586851;
+  --colors-on-original: #fdf8f0;
+  --colors-on-impression: #e6eae3;
+  --colors-on-verified: #fdf8f0;
+
+  --scrim-color: rgba(58, 53, 46, 0.48);
+  --colors-shimmer: #efe2ce;
+
+  --font-display-latin: 'Nunito', 'Inter', -apple-system, Arial, sans-serif;
+  --font-ui-latin: 'Nunito', 'Inter', -apple-system, Arial, sans-serif;
+  --font-display-arabic: 'Baloo Bhaijaan 2', 'Almarai', Arial, sans-serif;
+  --font-ui-arabic: 'Almarai', 'Baloo Bhaijaan 2', Arial, sans-serif;
+  --font-display: var(--font-display-latin);
+  --font-ui: var(--font-ui-latin);
+
+  --text-hero: clamp(2rem, 1.25rem + 3.2vw, 2.875rem);
+  --text-h1: clamp(1.625rem, 1.25rem + 1.6vw, 2.125rem);
+  --text-h2: clamp(1.375rem, 1.15rem + 1vw, 1.75rem);
+  --text-h3: 1.375rem;
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-label: 0.8125rem;
+
+  --leading-display: 1.2;
+  --leading-heading: 1.35;
+  --leading-body: 1.7;
+  --tracking-display: -0.005em;
+  --tracking-label: 0.02em;
+  --tracking-button: 0.01em;
+
+  --spacing-section: 64px;
+  --spacing-section-tight: 44px;
+  --spacing-card: 28px;
+
+  --rounded-sm: 8px;
+  --rounded-editorial: 20px;
+  --rounded-bento: 24px;
+  --radius-commerce: 14px;
+  --shadow-commerce: 0 2px 8px 0 rgba(58, 53, 46, 0.09);
+
+  --shadow-editorial: 0 6px 24px 0 rgba(58, 53, 46, 0.11);
+  --shadow-modal: 0 16px 48px 0 rgba(58, 53, 46, 0.2);
+
+  --duration-fast: 140ms;
+  --duration-medium: 260ms;
+  --duration-slow: 420ms;
+
+  --control-h: 50px;
+  --control-h-sm: 44px;
+  --tap-min: 48px;
+  --nav-height: 64px;
+  --grid-max-width: 1160px;
+
+  --border-width: 1px;
+  --border-width-strong: 2px;
+  --rule-weight: 1px;
+  /* Friendly register: labels are set in sentence case, not tracked-out caps. */
+  --label-transform: none;
+  --ornament-display: none;
+  --media-hover-scale: 1.04;
+  --accent-glow: 0 0 0 0 transparent;
+
+  --focus-ring: 0 0 0 3px var(--colors-background), 0 0 0 5px var(--colors-text);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   §6 · ARABIC
+
+   siwa-tokens.css swaps the family pair and neutralises tracking on
+   `:root:lang(ar), [lang="ar"]` — which matches <html>. Every preset block
+   above sits on <body> and re-declares those same properties, so without this
+   section a preset would win over the language swap and Arabic would render in
+   a Latin face.
+
+   `:lang(ar)` matches an inherited language, so one selector per preset covers
+   both <html lang="ar"> and a scoped ar preview inside an English page.
+
+   What changes here and nowhere else:
+     · the family pair            — each preset names its own Arabic faces
+     · tracking → 0               — Arabic is joined; tracking severs the joins
+     · text-transform → none      — Arabic has no case
+     · leading → looser           — ascenders, descenders and diacritics need room
+   ═══════════════════════════════════════════════════════════════════════ */
+
+[data-theme]:lang(ar) {
+  --font-display: var(--font-display-arabic);
+  --font-ui: var(--font-ui-arabic);
+  --tracking-display: 0em;
+  --tracking-body: 0em;
+  --tracking-label: 0em;
+  --tracking-button: 0em;
+  --label-transform: none;
+}
+
+[data-theme='archive']:lang(ar) {
+  --leading-body: 1.8;
+  --leading-heading: 1.45;
+  --leading-display: 1.3;
+}
+
+[data-theme='oasis']:lang(ar) {
+  --leading-body: 1.85;
+  --leading-heading: 1.5;
+  --leading-display: 1.35;
+}
+
+[data-theme='desert']:lang(ar) {
+  --leading-body: 1.7;
+  --leading-heading: 1.3;
+  /* Cairo 900 at Desert's display sizes needs more room than Archivo Black. */
+  --leading-display: 1.15;
+  --text-hero: clamp(2.25rem, 1.2rem + 4.8vw, 4rem);
+}
+
+[data-theme='nocturne']:lang(ar) {
+  --leading-body: 1.85;
+  --leading-heading: 1.5;
+  --leading-display: 1.35;
+}
+
+[data-theme='papyrus']:lang(ar) {
+  --leading-body: 1.9;
+  --leading-heading: 1.55;
+  --leading-display: 1.4;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   §7 · INVARIANTS — what no preset may change.
+
+   These are laws, not styles. They are restated as CSS so that a preset
+   author who forgets one is corrected by the cascade, and they are asserted
+   again by tools/validate-siwa.mjs so a violation fails the build rather than
+   shipping quietly.
+
+   1. The price is never gold.        DESIGN.md principle 6.
+   2. Catalog stamps keep their meaning and their own ground/label pair.
+      DESIGN.md non-negotiable 1.
+   3. Focus is always visible, in every preset, on every ground.  SC 2.4.7.
+   4. The tester CTA keeps the primary CTA's footprint.  DESIGN.md principle 7.
+   5. Reduced motion is honoured at the token level.  SC 2.3.3.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* 1 · The price is ink, on every preset, on every surface. Gold on a price
+   reads as a markdown sticker; ink on a price reads as a fact. */
+[data-theme] .siwa-price,
+[data-theme] .siwa-card__price,
+[data-theme] .siwa-bundle__total {
+  color: var(--colors-text);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  /* "1,450 EGP" stays one LTR run inside an Arabic paragraph. */
+  unicode-bidi: isolate;
+}
+
+/* 3 · A preset may restyle focus; it may not remove it. */
+[data-theme] :focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* 5 · Motion collapses to instant, and the preset levers that animate go
+   inert with it. Content is never withheld behind an animation that will not
+   play — reveal end-states are forced in siwa-base.css. */
+@media (prefers-reduced-motion: reduce) {
+  [data-theme] {
+    --duration-fast: 0ms;
+    --duration-medium: 0ms;
+    --duration-slow: 0ms;
+    --duration-story: 0ms;
+    --media-hover-scale: 1;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   §8 · LABEL INKS AND THE INVERTED BAND
+
+   Two things siwa-components.css hardcodes to a token that only holds true on
+   a light ground:
+
+     .siwa-button--primary  { color: var(--colors-text); }
+     .siwa-badge--original  { color: var(--colors-background); }
+
+   On Nocturne, --colors-text is near-white and --colors-primary is gold: the
+   CTA label would land at 2:1. Rather than fork the component CSS, each preset
+   declares what ink sits on each fill, and the rules at the end of this
+   section re-point the components at those tokens. The pairs are checked by
+   tools/check-contrast.mjs like every other pair.
+
+   The `.on-dark` band is the second case. siwa-tokens.css re-points the band's
+   semantics with literal warm hexes, which are correct for Archive and wrong
+   for the other four. Each preset supplies its own band values below.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+[data-theme='archive'] {
+  --colors-on-primary: #1b2724;
+  --band-surface: #3a453d;
+  --band-surface-hover: #47534a;
+  --band-text-secondary: #a8b0a8;
+  --band-border: #4a564d;
+  --band-border-strong: #8b968d;
+}
+
+[data-theme='oasis'] {
+  --colors-on-primary: #1a1b18;
+  --band-surface: #2a2b27;
+  --band-surface-hover: #35362f;
+  --band-text-secondary: #a5a49c;
+  --band-border: #35362f;
+  --band-border-strong: #8d8c84;
+}
+
+[data-theme='desert'] {
+  --colors-on-primary: #121210;
+  --band-surface: #24241f;
+  --band-surface-hover: #2f2f28;
+  --band-text-secondary: #afaea4;
+  --band-border: #2f2f28;
+  --band-border-strong: #919086;
+}
+
+[data-theme='nocturne'] {
+  --colors-on-primary: #121714;
+  --band-surface: #151a16;
+  --band-surface-hover: #1f261f;
+  --band-text-secondary: #a2a99f;
+  --band-border: #232b24;
+  --band-border-strong: #7f8c83;
+}
+
+[data-theme='papyrus'] {
+  --colors-on-primary: #2a251f;
+  --band-surface: #4a443b;
+  --band-surface-hover: #57503f;
+  --band-text-secondary: #c5bbad;
+  --band-border: #554e44;
+  --band-border-strong: #9e9386;
+}
+
+/* The band, re-expressed in tokens so it follows whichever preset is active.
+   A .siwa-card inside .on-dark is already correct — components need no dark
+   variants of their own. */
+[data-theme] .on-dark {
+  --colors-background: var(--colors-surface-dark);
+  --colors-surface: var(--band-surface);
+  --colors-surface-hover: var(--band-surface-hover);
+  --colors-surface-raised: var(--band-surface-hover);
+  --colors-text: var(--colors-on-dark);
+  --colors-text-secondary: var(--band-text-secondary);
+  --colors-heading: var(--colors-secondary);
+  --colors-heading-alt: var(--colors-secondary);
+  --colors-primary: var(--colors-secondary);
+  --colors-primary-strong: var(--colors-secondary);
+  --colors-on-primary: var(--colors-surface-dark);
+  --colors-border: var(--band-border);
+  --colors-border-strong: var(--band-border-strong);
+  --colors-link: var(--colors-secondary);
+  --focus-ring: var(--focus-ring-dark);
+
+  background-color: var(--colors-background);
+  color: var(--colors-text);
+}
+
+/* Invariant 6 · a label on a fill is legible on every preset, on every fill. */
+[data-theme] .siwa-button--primary {
+  color: var(--colors-on-primary);
+}
+
+[data-theme] .siwa-badge--original {
+  color: var(--colors-on-original);
+}
+
+[data-theme] .siwa-badge--impression {
+  color: var(--colors-on-impression);
+}
+
+[data-theme] .siwa-badge--verified {
+  color: var(--colors-on-verified);
+}
+
+/* Labels follow the preset's register rather than a hardcoded `uppercase`.
+   Arabic sets --label-transform to none in §6, so this one declaration also
+   removes the meaningless casing from every Arabic label. */
+[data-theme] .siwa-badge,
+[data-theme] .siwa-button,
+[data-theme] .siwa-label,
+[data-theme] .siwa-eyebrow,
+[data-theme] .siwa-card__eyebrow,
+[data-theme] .siwa-section-heading__eyebrow {
+  text-transform: var(--label-transform);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   §9 · SCRIMS
+
+   siwa-components.css hardcodes the bento and hero scrims to
+   `rgba(27, 39, 36, …)` — the Archive ink. They are the only two colour runs
+   in the design system that are not tokenised, and being gradients they would
+   not follow a preset: Nocturne and Desert would show an Archive-green wash
+   over their own grounds.
+
+   The scrim is not decoration. DESIGN.md §3.5 and §3.11 make it the thing that
+   guarantees 4.5:1 for text over a photograph regardless of which image a
+   merchandiser uploads next month. So it is re-pointed here per preset rather
+   than left to drift.
+
+   `--scrim-rgb` is a bare triplet so a single token can drive several alpha
+   stops in one gradient.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+[data-theme='archive'] { --scrim-rgb: 27 39 36; }
+[data-theme='oasis'] { --scrim-rgb: 26 27 24; }
+[data-theme='desert'] { --scrim-rgb: 18 18 16; }
+/* Nocturne's page is already ink, so its scrim goes deeper than the ground to
+   stay legible as a separation rather than reading as a flat tint. */
+[data-theme='nocturne'] { --scrim-rgb: 4 6 5; }
+[data-theme='papyrus'] { --scrim-rgb: 58 53 46; }
+
+[data-theme] .siwa-bento__media::after {
+  background: linear-gradient(
+    to top,
+    rgb(var(--scrim-rgb) / 0.78) 0%,
+    rgb(var(--scrim-rgb) / 0.35) 45%,
+    rgb(var(--scrim-rgb) / 0.05) 100%
+  );
+}
+
+/* A gradient takes no logical keyword, so the inline-axis direction is one of
+   the three places in the system where a physical direction is unavoidable.
+   `dir` sits on <html> and `data-theme` on <body>, hence the ancestor order. */
+[data-theme] .siwa-hero__media::after {
+  background: linear-gradient(
+    to right,
+    rgb(var(--scrim-rgb) / 0.7) 0%,
+    rgb(var(--scrim-rgb) / 0.2) 60%,
+    transparent 100%
+  );
+}
+
+[dir='rtl'] [data-theme] .siwa-hero__media::after {
+  background: linear-gradient(
+    to left,
+    rgb(var(--scrim-rgb) / 0.7) 0%,
+    rgb(var(--scrim-rgb) / 0.2) 60%,
+    transparent 100%
+  );
+}

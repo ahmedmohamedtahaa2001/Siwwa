@@ -1,46 +1,38 @@
-{%- comment -%}
-  Siwa — theme layout
-  ------------------------------------------------------------------
-  The bilingual spine. One locale switch flips direction, type
-  families, numerals, layout mirroring, title, meta description and
-  canonical. Nothing below is a literal a merchant might want to
-  change: colours, spacing, radius and fonts all resolve from
-  settings_schema.json, and every visible string from locales/.
-
-  Design tokens are the SAME custom properties the component library
-  ships (--primary, --sp-md, --r-md). They are re-declared here from
-  settings so the merchant owns them, then siwa-tokens.css supplies
-  everything the merchant does not control.
-  Source of truth: ../component-library/css/tokens.css
-{%- endcomment -%}
+<!doctype html>
 {%- liquid
-  assign locale_code = request.locale.iso_code
+  assign locale = request.locale.iso_code
   assign is_rtl = false
-  if locale_code == 'ar' or locale_code == 'he' or locale_code == 'fa' or locale_code == 'ur'
+  if locale == 'ar' or locale == 'he' or locale == 'fa' or locale == 'ur'
     assign is_rtl = true
   endif
+  assign preset = settings.theme_preset | default: 'archive'
 -%}
-<!doctype html>
 <html
-  lang="{{ locale_code }}"
+  lang="{{ locale }}"
   dir="{% if is_rtl %}rtl{% else %}ltr{% endif %}"
-  class="{% if is_rtl %}locale-rtl{% else %}locale-ltr{% endif %}"
-  data-money-format="{{ shop.money_format | escape }}"
 >
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="{{ settings.color_canvas }}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
-    {%- if settings.font_ar_stylesheet_url != blank -%}
-      <link rel="stylesheet" href="{{ settings.font_ar_stylesheet_url }}" media="print" onload="this.media='all'">
+    {%- comment -%}
+      This must run BEFORE the stylesheets. `.siwa-reveal` only takes its hidden
+      start state under `.js`, so content is never withheld from a visitor
+      without JavaScript. Without this line every revealed section stays
+      invisible for everyone else.
+    {%- endcomment -%}
+    <script>document.documentElement.classList.add('js');</script>
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; {{ 'general.meta.tags' | t: tags: current_tags | join: ', ' }}{% endif -%}
-      {%- if current_page != 1 %} &ndash; {{ current_page }}{% endif -%}
+      {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
@@ -48,97 +40,72 @@
       <meta name="description" content="{{ page_description | escape }}">
     {%- endif -%}
 
-    {{ content_for_header }}
-
-    {{ 'siwa-tokens.css' | asset_url | stylesheet_tag }}
-    {{ 'siwa-components.css' | asset_url | stylesheet_tag }}
+    {%- comment -%}
+      Type. Each design direction names its own Latin + Arabic pair, and all
+      five pairs load here so switching direction or locale never waits on a
+      font request. Loaded remotely by deliberate exception — see
+      .theme-check.yml.
+    {%- endcomment -%}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@300..700&family=Inter+Tight:wght@300..700&family=Archivo+Black&family=Cormorant+Garamond:wght@300..700&family=Nunito:wght@300..800&family=JetBrains+Mono:wght@400..600&display=swap"
+    >
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300..700&family=Cairo:wght@300..900&family=Amiri:wght@400;700&family=Noto+Kufi+Arabic:wght@300..700&family=Baloo+Bhaijaan+2:wght@400..800&family=Almarai:wght@300;400;700;800&display=swap"
+    >
 
     {%- comment -%}
-      Module behaviour. `defer` so it never blocks the parser; the script
-      boots on DOMContentLoaded and re-boots on shopify:section:load.
+      The design system's load order is mandatory — the cascade depends on it.
+      Tokens define the custom properties, base consumes them for the reset,
+      type and layout, components consume both, and the preset layer re-points
+      the tokens last so a design direction wins over the defaults without
+      touching a single component rule.
     {%- endcomment -%}
-    <script src="{{ 'siwa-modules.js' | asset_url }}" defer="defer"></script>
+    {{ 'siwa-tokens.css' | asset_url | stylesheet_tag }}
+    {{ 'siwa-base.css' | asset_url | stylesheet_tag }}
+    {{ 'siwa-components.css' | asset_url | stylesheet_tag }}
+    {{ 'siwa-themes.css' | asset_url | stylesheet_tag }}
 
-    {%- style -%}
-      /* Merchant-owned token overrides. Every value below is a schema
-         setting; none is a literal. */
-      :root {
-        --primary:        {{ settings.color_primary }};
-        --primary-alt:    {{ settings.color_primary_alt }};
-        --on-primary:     {{ settings.color_on_primary }};
-        --canvas:         {{ settings.color_canvas }};
-        --surface-card:   {{ settings.color_surface_card }};
-        --surface-hover:  {{ settings.color_surface_hover }};
-        --surface-dark:   {{ settings.color_surface_dark }};
-        --on-dark:        {{ settings.color_on_dark }};
-        --hairline:       {{ settings.color_hairline }};
-        --ink:            {{ settings.color_ink }};
-        --heading:        {{ settings.color_heading }};
-        --text-secondary-aa: {{ settings.color_text_secondary }};
-        --link:           {{ settings.color_link }};
-        --success-aa:     {{ settings.color_success }};
-        --tag:            {{ settings.color_tag }};
-        --sale:           {{ settings.color_sale }};
-
-        --palm-green:     {{ settings.cultural_palm_green }};
-        --date-red:       {{ settings.cultural_date_red }};
-        --date-yellow:    {{ settings.cultural_date_yellow }};
-        --desert-brown:   {{ settings.cultural_desert_brown }};
-
-        --container:      {{ settings.container_width }}px;
-        --gutter:         {{ settings.gutter }}px;
-        --sp-section:     {{ settings.section_spacing }}px;
-        --r-md:           {{ settings.radius_md }}px;
-        --r-full:         {{ settings.radius_full }}px;
-
-        --font-display:   {{ settings.font_display.family }}, {{ settings.font_display.fallback_families }};
-        --font-ui:        {{ settings.font_ui.family }}, {{ settings.font_ui.fallback_families }};
-        --font-ar-display: {{ settings.font_ar_display_stack }};
-        --font-ar-ui:      {{ settings.font_ar_ui_stack }};
-
-        --vintage-grain:    {{ settings.vintage_grain_opacity | divided_by: 100.0 }};
-        --vintage-vignette: {{ settings.vintage_vignette_opacity | divided_by: 100.0 }};
-      }
-
-      {{ settings.font_display | font_face: font_display: 'swap' }}
-      {{ settings.font_ui | font_face: font_display: 'swap' }}
-
-      body {
-        margin: 0;
-        background: var(--canvas);
-        color: var(--ink);
-        font: 400 var(--t-body)/var(--lh-body) var(--font-ui);
-      }
-      .skip-link {
-        position: absolute;
-        inset-inline-start: -9999px;
-        top: 0;
-        z-index: 100;
-        padding: var(--sp-sm) var(--sp-md);
-        background: var(--canvas);
-        color: var(--ink);
-      }
-      .skip-link:focus { inset-inline-start: 0; }
-    {%- endstyle -%}
+    {{ content_for_header }}
   </head>
 
-  <body class="template-{{ template.name | handle }}">
-    <a class="skip-link" href="#MainContent">
-      {{ 'general.accessibility.skip_to_content' | t }}
-    </a>
+  <body
+    class="siwa-body"
+    data-theme="{{ preset }}"
+    data-locale="{{ locale }}"
+    data-template="{{ template.name }}"
+  >
+    {%- comment -%}
+      The skip link is the first focusable element in the body — WCAG 2.2
+      SC 2.4.1, and the design system's own §6.1.
+    {%- endcomment -%}
+    <a class="siwa-skip-link" href="#main-content">{{ 'accessibility.skip_to_content' | t }}</a>
 
-    {% sections 'header-group' %}
+    {%- comment -%}
+      Section groups, not `{% section %}`. Two reasons. A statically rendered
+      section ignores its `presets`, so a fresh install would show an empty
+      announcement bar until someone opened the Customizer. And a group lets a
+      merchant reorder the bar against the header, or add a second promotional
+      section above the nav, without a developer.
+    {%- endcomment -%}
+    {%- sections 'header-group' -%}
 
-    <main id="MainContent" role="main" tabindex="-1">
+    <main id="main-content" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
-    {% sections 'footer-group' %}
+    {%- sections 'footer-group' -%}
 
     {%- comment -%}
-      Overlays: cart drawer and newsletter popup. Last in the DOM so they
-      sit above everything without a z-index fight.
+      One live region for the whole document. Cart count, filter results, price
+      on variant change and search result counts all announce through it, so a
+      screen reader hears the change without a component owning its own region.
     {%- endcomment -%}
-    {% sections 'overlay-group' %}
+    <div class="sr-only" id="siwa-live-region" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="{{ 'siwa-theme.js' | asset_url }}" defer></script>
   </body>
 </html>

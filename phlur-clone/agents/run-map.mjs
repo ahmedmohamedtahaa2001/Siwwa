@@ -1,0 +1,15 @@
+import { measure, loadSiwaTokens, reconcile } from './mapper.mjs';
+import fs from 'node:fs/promises';
+const IN = new URL('../inspection/', import.meta.url).pathname;
+const OUT = new URL('../mapping/', import.meta.url).pathname;
+const tokens = await loadSiwaTokens('/ahmed-taha-dev/Siwa/siwa-design-system/tokens/siwa-tokens.css');
+const all = {};
+for (const p of ['home','product','collection']) all[p] = await measure(p, IN);
+const rec = reconcile(all.home, tokens);
+await fs.writeFile(OUT+'measurements.json', JSON.stringify(all,null,2));
+await fs.writeFile(OUT+'siwa-tokens.json', JSON.stringify(tokens,null,2));
+await fs.writeFile(OUT+'overrides.json', JSON.stringify(rec,null,2));
+console.log('tokens parsed:', Object.keys(tokens).length);
+console.log('overrides:', rec.overrides.length, '| compatible:', rec.compat.length);
+console.log('\n=== HERO ===');       console.log(JSON.stringify(all.home.hero,null,1));
+console.log('\n=== PRODUCT CARD ==='); console.log(JSON.stringify(all.home.productCard,null,1));

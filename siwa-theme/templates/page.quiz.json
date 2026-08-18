@@ -1,1 +1,0 @@
-{ "sections": { "main": { "type": "scent-quiz", "blocks": { "q1": { "type": "question", "settings": {} }, "q2": { "type": "question", "settings": {} }, "q3": { "type": "question", "settings": {} } }, "block_order": ["q1","q2","q3"], "settings": {} } }, "order": ["main"] }

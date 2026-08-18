@@ -1,0 +1,376 @@
+{
+  "_note": "Component inventory observed across homepage, collection, product, cart, search and content templates (Prestige 11.1.0).",
+  "globalChrome": [
+    {
+      "name": "Announcement bar",
+      "selector": "[id*=announcement_bar]",
+      "height": "40px",
+      "style": "Black #1C1C1C bar, white 12px uppercase centred text, letter-spacing ~0.18em",
+      "content": "EXPLORE YOUR PERSONA. FREE SHIPPING ORDERS OVER 1500",
+      "sticky": false,
+      "notes": "Single slide; no rotation observed."
+    },
+    {
+      "name": "Header",
+      "height": "153px desktop",
+      "layout": "3 rows — announcement / centred logo + right icon cluster / centred nav row",
+      "sticky": false,
+      "variants": [
+        "Transparent overlay on the homepage slideshow (white logo + white nav)",
+        "Solid white on all other templates (dark logo + dark nav)"
+      ],
+      "icons": [
+        "Account (person)",
+        "Search (magnifier)",
+        "Cart (bag, with item-count dot)"
+      ],
+      "nav": [
+        "HOME",
+        "SHOP ALL",
+        "ORIGINAL CREATIONS",
+        "FOR HIM",
+        "FOR HER",
+        "UNISEX",
+        "BUNDLES",
+        "BODY SPLASH",
+        "BODY LOTION",
+        "CONTACT US"
+      ],
+      "notes": "Flat single-level menu — no dropdowns or mega-menu anywhere on the site."
+    },
+    {
+      "name": "Mobile nav drawer",
+      "trigger": "button[aria-controls=sidebar-menu] (<1000px)",
+      "style": "Left slide-in, ~88% viewport width, white, 40% black page overlay",
+      "content": "Same flat 10-item list, uppercase 14px, wide tracking; LOGIN link pinned bottom-left with person icon"
+    },
+    {
+      "name": "Cart drawer",
+      "selector": "cart-drawer#cart-drawer",
+      "style": "Right slide-in, ~450px, white, 40% black overlay",
+      "parts": [
+        "'CART' heading + X close",
+        "Line item: vendor / title / price / variant / qty stepper (− n +) / Remove link",
+        "'COMPLETE WITH' cross-sell carousel with dot pagination and inline 'Add to cart'",
+        "'Add order note' toggle",
+        "Full-width black CHECKOUT button showing the total: 'CHECKOUT • LE 380.00'"
+      ],
+      "gaps": [
+        "No free-shipping progress indicator, despite the announcement bar promising free shipping over 1500 EGP"
+      ]
+    },
+    {
+      "name": "Footer",
+      "style": "Dark #1C1C1C, white text, 3 columns",
+      "columns": {
+        "MAIN MENU": "the 10 nav links",
+        "MORE INFORMATION": [
+          "SEARCH",
+          "REFUND POLICY",
+          "ABOUT US",
+          "PRIVACY POLICY"
+        ],
+        "NEWSLETTER": "blurb + e-mail input + SUBSCRIBE button"
+      },
+      "social": [
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "WhatsApp"
+      ],
+      "legal": "© 2026 - SIWA FRAGRANCES"
+    },
+    {
+      "name": "Trust icon row",
+      "selector": "[id*=text-with-icons]",
+      "items": [
+        {
+          "icon": "rotate-arrow",
+          "title": "14 DAYS RETURN",
+          "body": "Returns are accepted for items in their original, unused sealed condition."
+        },
+        {
+          "icon": "support",
+          "title": "SUPPORT 24/7",
+          "body": "Reach out to us via DM. Email: contact@siwafragrances.com"
+        },
+        {
+          "icon": "lock",
+          "title": "PAYMENT PROTECTION",
+          "body": "Your payment details are encrypted and secure."
+        }
+      ],
+      "placement": "Immediately above the footer on every template"
+    },
+    {
+      "name": "Newsletter pop-in",
+      "trigger": "On load (homepage)",
+      "copy": "A GIFT FOR YOUR FIRST SIWA ORDER — Subscribe to our newsletter and receive 50 EGP off your first purchase with Siwa Fragrances",
+      "fields": [
+        "E-mail"
+      ],
+      "cta": "GET MY DISCOUNT",
+      "style": "Bottom-right card, white, square corners"
+    },
+    {
+      "name": "Cookie / privacy banner",
+      "selector": ".privacy-banner",
+      "actions": [
+        "Accept",
+        "Decline"
+      ]
+    },
+    {
+      "name": "Shopify Chat widget",
+      "position": "bottom-right",
+      "label": "Chat",
+      "borderRadius": "16px",
+      "notes": "Only rounded element on the entire site — visually inconsistent with the 0-radius system."
+    }
+  ],
+  "productCard": {
+    "structure": [
+      "Image (1:1, note-name labels baked into the artwork at the four corners)",
+      "Vendor / inspiration line — 11px uppercase, muted",
+      "Product title — uppercase, wide tracking",
+      "Price — 'FROM LE 800.00' when multi-variant, else 'LE 380.00'",
+      "Judge.me star row + rating in parentheses e.g. ★★★★★ (5.0)"
+    ],
+    "badges": [
+      {
+        "type": "SOLD OUT",
+        "position": "top-left",
+        "style": "#E32C2B background, white uppercase text, square"
+      },
+      {
+        "type": "ON SALE",
+        "style": "#FFD700 gold background, black 65% text"
+      }
+    ],
+    "hover": "Image swap where a second image exists (54/60 products have only one image, so hover is inert for 90% of the catalog)",
+    "textTransform": "uppercase (--product-card-text-transform)"
+  },
+  "buttons": {
+    "primary": {
+      "background": "#1C1C1C",
+      "color": "#FFFFFF",
+      "borderRadius": "0",
+      "padding": "10.4px 28px",
+      "font": "13px Poppins 400 uppercase",
+      "letterSpacing": "2.34px",
+      "transition": "background-size .45s cubic-bezier(.785,.135,.15,.86), background-position .45s steps(1), color .45s, border .45s",
+      "hover": "Background wipe driven by background-size/position rather than a colour fade"
+    },
+    "secondary/outline": {
+      "background": "transparent",
+      "color": "#1C1C1C",
+      "border": "1px solid #DDDDDD",
+      "borderRadius": "0"
+    },
+    "onImage": {
+      "background": "transparent",
+      "color": "#FFFFFF",
+      "border": "1px solid rgba(255,255,255,.6)",
+      "examples": [
+        "SHOP ALL",
+        "SUMMER COLLECTION",
+        "SHOP NOW",
+        "FOR HER",
+        "FOR HIM"
+      ]
+    },
+    "disabled": {
+      "example": "SOLD OUT — full-width outlined, non-interactive"
+    }
+  },
+  "forms": {
+    "input": {
+      "borderRadius": "0",
+      "border": "1px solid",
+      "padding": "10.4px 12.8px",
+      "font": "14px Poppins",
+      "transition": "border-color .1s ease-in-out"
+    },
+    "variantSwatch": {
+      "shape": "square block swatch",
+      "border": "1px solid #1C1C1C",
+      "padding": "8.4px 14px",
+      "selected": "solid dark border",
+      "unavailable": "struck-through / faded"
+    }
+  },
+  "collectionTemplate": {
+    "toolbar": [
+      "Grid-density switcher (3 icons: 2-up, 4-up, list)",
+      "'38 PRODUCTS' count, centred",
+      "'SORT BY' dropdown, right"
+    ],
+    "sidebar": {
+      "desktop": "safe-sticky facets sidebar, visible ≥1000px",
+      "mobile": "facets-drawer",
+      "facets": [
+        "Availability — 'In stock only'",
+        "Price — min/max range"
+      ]
+    },
+    "gaps": [
+      "No H1 and no visible collection title on 18/20 collection pages",
+      "No collection descriptions anywhere (0/19 collections have body_html)",
+      "Only 2 facets — no scent-family, gender, size or concentration filters despite the catalogue supporting them"
+    ]
+  },
+  "productTemplate": {
+    "layout": "2-column — sticky media left, details right",
+    "detailOrder": [
+      "Title (uppercase, tracked)",
+      "Price",
+      "hairline divider",
+      "Vendor / inspiration reference",
+      "Size variant swatches",
+      "'Size chart' link",
+      "Stock state ('Out of stock', red italic)",
+      "Add-to-cart / SOLD OUT button",
+      "Description"
+    ],
+    "descriptionTemplate": [
+      "Persona",
+      "The Story",
+      "Notes (Top / Heart / Base)",
+      "Best For"
+    ],
+    "belowFold": [
+      "Judge.me 'Customer Reviews' block",
+      "'Related products' carousel",
+      "Trust icon row",
+      "Footer"
+    ],
+    "gaps": [
+      "The 4-part description template is only applied to a minority of the catalogue (Persona on 6/60, Notes on 14/60)",
+      "No accordions — the whole description renders as one flat block"
+    ]
+  },
+  "homepageSections": [
+    {
+      "order": 1,
+      "type": "slideshow",
+      "height": "672px",
+      "content": "Full-bleed hero, 'Summer.2026' script wordmark baked into the image, 'SUMMER DROP / THE SEASON HAS ARRIVED'",
+      "cta": [
+        "SHOP ALL",
+        "SUMMER COLLECTION"
+      ]
+    },
+    {
+      "order": 2,
+      "type": "featured_collections",
+      "height": "760px",
+      "content": "'NEW IN' with MEN | WOMEN tab switcher, 4-up product grid",
+      "cta": "VIEW MEN NEW DROPS"
+    },
+    {
+      "order": 3,
+      "type": "image-with-text-overlay",
+      "height": "576px",
+      "content": "'OFFERS & DISCOUNTS / OUR BUNDLES'",
+      "cta": "SHOP NOW"
+    },
+    {
+      "order": 4,
+      "type": "featured-collections",
+      "height": "795px",
+      "content": "'BEST SELLERS' with MEN | WOMEN tab switcher, 4-up grid",
+      "cta": "VIEW ALL MEN BEST SELLERS"
+    },
+    {
+      "order": 5,
+      "type": "judgeme testimonials",
+      "height": "628px",
+      "content": "'Customers are saying' — 4.98 ★ from 1,225 verified reviews, carousel of individual reviews (many in Arabic)"
+    },
+    {
+      "order": 6,
+      "type": "scrolling-content",
+      "height": "187px",
+      "content": "Black marquee — 'TRUE ELEGANCE' repeating"
+    },
+    {
+      "order": 7,
+      "type": "collection_list",
+      "height": "792px",
+      "content": "'OUR COLLECTIONS' — image tiles with FOR HER / FOR HIM overlay buttons"
+    },
+    {
+      "order": 8,
+      "type": "scrolling-content",
+      "height": "199px",
+      "content": "Black marquee — 'SIGNATURE LUXURY' repeating"
+    },
+    {
+      "order": 9,
+      "type": "media-grid",
+      "height": "807px",
+      "content": "'UNCOVER HIDDEN GEMS' — 3 tiles: ORIGINAL CREATIONS / BODY SPLASHES / BODY LOTION",
+      "defect": "Tile heading and its CTA button overlap and collide at 1440px"
+    },
+    {
+      "order": 10,
+      "type": "text-with-icons",
+      "height": "275px",
+      "content": "Trust row"
+    },
+    {
+      "order": 11,
+      "type": "footer",
+      "height": "607px"
+    }
+  ],
+  "iconSystem": {
+    "source": "Prestige inline SVG sprite",
+    "observed": [
+      "person/account",
+      "magnifier/search",
+      "shopping bag",
+      "hamburger",
+      "close X",
+      "chevron",
+      "plus/minus",
+      "rotate (returns)",
+      "support",
+      "padlock",
+      "facebook",
+      "instagram",
+      "tiktok",
+      "whatsapp"
+    ]
+  },
+  "motion": {
+    "keyframes": [
+      "animateCircularProgress",
+      "animateIconBlock",
+      "animateIconInline",
+      "cell-parallax",
+      "ping",
+      "quantitySelectorSpinner",
+      "spin"
+    ],
+    "buttonTransition": ".45s cubic-bezier(.785,.135,.15,.86)",
+    "inputTransition": ".1s ease-in-out",
+    "drawerTransition": ".25s ease-in-out",
+    "reducedMotion": "Honoured — 3 prefers-reduced-motion blocks in theme.css"
+  },
+  "shape": {
+    "borderRadius": {
+      "button": "0",
+      "input": "0",
+      "judgeMe": "0",
+      "shopifyChat": "16px (inconsistent)",
+      "rounded-full": "9999px (utility, used for dots/avatars only)"
+    },
+    "shadows": {
+      "--shadow": "0 5px 15px rgb(0 0 0 / .05)",
+      "--shadow-sm": "0 2px 8px rgb(0 0 0 / .05)",
+      "--shadow-md": "0 5px 30px rgb(0 0 0 / .05)",
+      "usage": "Barely used — the design relies on hairline borders, not elevation"
+    }
+  }
+}

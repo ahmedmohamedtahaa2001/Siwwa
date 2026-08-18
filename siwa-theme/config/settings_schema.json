@@ -4,316 +4,237 @@
     "theme_name": "Siwa",
     "theme_version": "0.1.0",
     "theme_author": "Siwa Fragrances",
-    "theme_documentation_url": "https:\/\/siwafragrances.com",
-    "theme_support_url": "https:\/\/siwafragrances.com\/pages\/contact"
+    "theme_documentation_url": "https://github.com/siwa/siwa-theme",
+    "theme_support_url": "https://github.com/siwa/siwa-theme/issues"
   },
   {
-    "name": "t:settings_schema.colors_chrome.name",
-    "info": "t:settings_schema.colors_chrome.info",
-    "settings": [
-      {
-        "type": "header",
-        "content": "t:settings_schema.colors_chrome.header_brand"
-      },
-      {
-        "type": "color",
-        "id": "color_primary",
-        "label": "t:settings_schema.colors_chrome.color_primary",
-        "info": "t:settings_schema.colors_chrome.color_primary_info",
-        "default": "#b18044"
-      },
-      {
-        "type": "color",
-        "id": "color_primary_alt",
-        "label": "t:settings_schema.colors_chrome.color_primary_alt",
-        "default": "#e1b160"
-      },
-      {
-        "type": "color",
-        "id": "color_on_primary",
-        "label": "t:settings_schema.colors_chrome.color_on_primary",
-        "info": "t:settings_schema.colors_chrome.color_on_primary_info",
-        "default": "#212012"
-      },
-      {
-        "type": "header",
-        "content": "t:settings_schema.colors_chrome.header_surface"
-      },
-      {
-        "type": "color",
-        "id": "color_canvas",
-        "label": "t:settings_schema.colors_chrome.color_canvas",
-        "default": "#f7f5ee"
-      },
-      {
-        "type": "color",
-        "id": "color_surface_card",
-        "label": "t:settings_schema.colors_chrome.color_surface_card",
-        "default": "#eae0c4"
-      },
-      {
-        "type": "color",
-        "id": "color_surface_hover",
-        "label": "t:settings_schema.colors_chrome.color_surface_hover",
-        "default": "#e4b68a"
-      },
-      {
-        "type": "color",
-        "id": "color_surface_dark",
-        "label": "t:settings_schema.colors_chrome.color_surface_dark",
-        "default": "#212012"
-      },
-      {
-        "type": "color",
-        "id": "color_on_dark",
-        "label": "t:settings_schema.colors_chrome.color_on_dark",
-        "default": "#d4cfc2"
-      },
-      {
-        "type": "color",
-        "id": "color_hairline",
-        "label": "t:settings_schema.colors_chrome.color_hairline",
-        "info": "t:settings_schema.colors_chrome.color_hairline_info",
-        "default": "#ccbca0"
-      },
-      {
-        "type": "header",
-        "content": "t:settings_schema.colors_chrome.header_text"
-      },
-      {
-        "type": "color",
-        "id": "color_ink",
-        "label": "t:settings_schema.colors_chrome.color_ink",
-        "default": "#212012"
-      },
-      {
-        "type": "color",
-        "id": "color_heading",
-        "label": "t:settings_schema.colors_chrome.color_heading",
-        "default": "#50251c"
-      },
-      {
-        "type": "color",
-        "id": "color_text_secondary",
-        "label": "t:settings_schema.colors_chrome.color_text_secondary",
-        "info": "t:settings_schema.colors_chrome.color_text_secondary_info",
-        "default": "#7d6a5b"
-      },
-      {
-        "type": "color",
-        "id": "color_link",
-        "label": "t:settings_schema.colors_chrome.color_link",
-        "default": "#8b5f4c"
-      },
-      {
-        "type": "header",
-        "content": "t:settings_schema.colors_chrome.header_semantic"
-      },
-      {
-        "type": "color",
-        "id": "color_success",
-        "label": "t:settings_schema.colors_chrome.color_success",
-        "info": "t:settings_schema.colors_chrome.color_success_info",
-        "default": "#6d5949"
-      },
-      {
-        "type": "color",
-        "id": "color_tag",
-        "label": "t:settings_schema.colors_chrome.color_tag",
-        "default": "#b09b7e"
-      },
-      {
-        "type": "color",
-        "id": "color_sale",
-        "label": "t:settings_schema.colors_chrome.color_sale",
-        "default": "#e1b160"
-      }
-    ]
-  },
-  {
-    "name": "t:settings_schema.colors_cultural.name",
-    "info": "t:settings_schema.colors_cultural.info",
+    "name": "Design direction",
     "settings": [
       {
         "type": "paragraph",
-        "content": "t:settings_schema.colors_cultural.firewall_warning"
+        "content": "One choice sets the whole store's visual register — colour, type, radius, shadow, spacing rhythm and motion. Every section follows it automatically; nothing needs to be restyled per direction. Preview them side by side on the /pages/preset-preview page."
       },
       {
-        "type": "color",
-        "id": "cultural_palm_green",
-        "label": "t:settings_schema.colors_cultural.palm_green",
-        "default": "#4f5734"
-      },
-      {
-        "type": "color",
-        "id": "cultural_date_red",
-        "label": "t:settings_schema.colors_cultural.date_red",
-        "default": "#8f3a2e"
-      },
-      {
-        "type": "color",
-        "id": "cultural_date_yellow",
-        "label": "t:settings_schema.colors_cultural.date_yellow",
-        "default": "#977f3a"
-      },
-      {
-        "type": "color",
-        "id": "cultural_desert_brown",
-        "label": "t:settings_schema.colors_cultural.desert_brown",
-        "default": "#865431"
+        "type": "select",
+        "id": "theme_preset",
+        "label": "Design direction",
+        "info": "Oasis is the direction this store ships in. Archive is the design system's own baseline, Nocturne is the dark mode, and Papyrus is the rounded, gift-first direction.",
+        "options": [
+          {
+            "value": "archive",
+            "label": "Archive — editorial field guide"
+          },
+          {
+            "value": "oasis",
+            "label": "Oasis — minimal luxury"
+          },
+          {
+            "value": "desert",
+            "label": "Desert — bold graphic"
+          },
+          {
+            "value": "nocturne",
+            "label": "Nocturne — dark"
+          },
+          {
+            "value": "papyrus",
+            "label": "Papyrus — warm and rounded"
+          }
+        ],
+        "default": "oasis"
       }
     ]
   },
   {
-    "name": "t:settings_schema.typography.name",
+    "name": "Brand",
     "settings": [
       {
         "type": "header",
-        "content": "t:settings_schema.typography.header_latin"
+        "content": "Identity"
       },
       {
-        "type": "font_picker",
-        "id": "font_display",
-        "label": "t:settings_schema.typography.font_display",
-        "info": "t:settings_schema.typography.font_display_info",
-        "default": "assistant_n4"
-      },
-      {
-        "type": "font_picker",
-        "id": "font_ui",
-        "label": "t:settings_schema.typography.font_ui",
-        "default": "assistant_n4"
-      },
-      {
-        "type": "header",
-        "content": "t:settings_schema.typography.header_arabic"
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
       },
       {
         "type": "text",
-        "id": "font_ar_display_stack",
-        "label": "t:settings_schema.typography.font_ar_display",
-        "info": "t:settings_schema.typography.font_ar_info",
-        "default": "\"Aref Ruqaa\", \"Markazi Text\", \"Noto Naskh Arabic\", serif"
-      },
-      {
-        "type": "text",
-        "id": "font_ar_ui_stack",
-        "label": "t:settings_schema.typography.font_ar_ui",
-        "default": "\"IBM Plex Sans Arabic\", Tajawal, \"Noto Sans Arabic\", sans-serif"
-      },
-      {
-        "type": "url",
-        "id": "font_ar_stylesheet_url",
-        "label": "t:settings_schema.typography.font_ar_stylesheet",
-        "info": "t:settings_schema.typography.font_ar_stylesheet_info"
-      }
-    ]
-  },
-  {
-    "name": "t:settings_schema.layout.name",
-    "settings": [
-      {
-        "type": "range",
-        "id": "container_width",
-        "min": 1000,
-        "max": 1600,
-        "step": 20,
-        "unit": "px",
-        "label": "t:settings_schema.layout.container_width",
-        "default": 1200
+        "id": "logo_wordmark",
+        "label": "Wordmark",
+        "info": "Shown when no logo image is set. Set in the display face.",
+        "default": "SIWA"
       },
       {
         "type": "range",
-        "id": "gutter",
-        "min": 12,
-        "max": 48,
+        "id": "logo_width",
+        "label": "Logo width",
+        "min": 60,
+        "max": 220,
         "step": 4,
         "unit": "px",
-        "label": "t:settings_schema.layout.gutter",
-        "default": 24
+        "default": 120
       },
       {
-        "type": "range",
-        "id": "section_spacing",
-        "min": 32,
-        "max": 120,
-        "step": 8,
-        "unit": "px",
-        "label": "t:settings_schema.layout.section_spacing",
-        "default": 72
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
       },
       {
-        "type": "range",
-        "id": "radius_md",
-        "min": 0,
-        "max": 24,
-        "step": 1,
-        "unit": "px",
-        "label": "t:settings_schema.layout.radius_md",
-        "info": "t:settings_schema.layout.radius_md_info",
-        "default": 0
+        "type": "header",
+        "content": "Social sharing"
       },
       {
-        "type": "range",
-        "id": "radius_full",
-        "min": 0,
-        "max": 9999,
-        "step": 1,
-        "unit": "px",
-        "label": "t:settings_schema.layout.radius_full",
-        "info": "t:settings_schema.layout.radius_full_info",
-        "default": 0
+        "type": "image_picker",
+        "id": "share_image",
+        "label": "Default sharing image"
       }
     ]
   },
   {
-    "name": "t:settings_schema.bilingual.name",
+    "name": "Catalog separation",
     "settings": [
       {
         "type": "paragraph",
-        "content": "t:settings_schema.bilingual.info"
+        "content": "Non-negotiable 1. ORIGINAL or IMPRESSION appears on every product thumbnail and in the first line of every product page. The badge is never the only carrier of the distinction — the page states it in prose too. These settings name the metafield and tags that decide which stamp a product gets."
+      },
+      {
+        "type": "text",
+        "id": "catalog_metafield",
+        "label": "Catalog line metafield",
+        "info": "Namespace and key holding \"original\" or \"impression\". Falls back to the tags below.",
+        "default": "custom.catalog_line"
+      },
+      {
+        "type": "text",
+        "id": "tag_original",
+        "label": "Original tag",
+        "default": "original"
+      },
+      {
+        "type": "text",
+        "id": "tag_impression",
+        "label": "Impression tag",
+        "default": "impression"
       },
       {
         "type": "checkbox",
-        "id": "enable_language_toggle",
-        "label": "t:settings_schema.bilingual.enable_toggle",
+        "id": "require_catalog_badge",
+        "label": "Warn on untagged products",
+        "info": "Shows an admin-only notice on any product card that carries neither stamp, so a mixed grid without badges is caught before a customer sees it.",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Commerce",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Free shipping"
+      },
+      {
+        "type": "paragraph",
+        "content": "One number, referenced by the announcement bar, the cart progress bar, the trust strip and the footer. Never write it into copy by hand."
+      },
+      {
+        "type": "range",
+        "id": "free_shipping_threshold",
+        "label": "Free shipping threshold",
+        "info": "In your store currency. The planning documents disagree — the Feature Bible says 500, the design system's worked example says 1,500. Set the decided figure here once.",
+        "min": 0,
+        "max": 3000,
+        "step": 50,
+        "unit": "EGP",
+        "default": 500
+      },
+      {
+        "type": "checkbox",
+        "id": "show_shipping_progress",
+        "label": "Show progress toward free shipping in the cart",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "The tester tier"
+      },
+      {
+        "type": "paragraph",
+        "content": "Principle 7 — the tester is a first-class CTA with the same footprint as Add to bag, never a smaller or quieter option."
+      },
+      {
+        "type": "checkbox",
+        "id": "tester_enabled",
+        "label": "Show the tester CTA on product pages",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "tester_variant_title",
+        "label": "Tester variant title",
+        "info": "The variant name that identifies the tester tier, matched case-insensitively.",
+        "default": "Tester"
+      },
+      {
+        "type": "header",
+        "content": "Payment and returns"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_cod",
+        "label": "Show cash on delivery",
         "default": true
       },
       {
         "type": "checkbox",
-        "id": "arabic_numerals",
-        "label": "t:settings_schema.bilingual.arabic_numerals",
-        "info": "t:settings_schema.bilingual.arabic_numerals_info",
-        "default": false
+        "id": "show_installments",
+        "label": "Show installment availability",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "return_window_days",
+        "label": "Return window",
+        "min": 0,
+        "max": 90,
+        "step": 5,
+        "unit": "d",
+        "default": 30
       }
     ]
   },
   {
-    "name": "t:settings_schema.vintage.name",
+    "name": "Language",
     "settings": [
       {
         "type": "paragraph",
-        "content": "t:settings_schema.vintage.info"
+        "content": "Arabic is a first-class rendering of the same store, not a translation layer. Setting the storefront locale to ar switches direction, the font pair, tracking, casing and leading in one step — no section needs Arabic-specific markup."
       },
       {
-        "type": "range",
-        "id": "vintage_grain_opacity",
-        "min": 0,
-        "max": 10,
-        "step": 1,
-        "unit": "%",
-        "label": "t:settings_schema.vintage.grain_opacity",
-        "default": 4
+        "type": "checkbox",
+        "id": "show_language_toggle",
+        "label": "Show the language toggle in the header",
+        "default": true
       },
       {
-        "type": "range",
-        "id": "vintage_vignette_opacity",
-        "min": 0,
-        "max": 20,
-        "step": 1,
-        "unit": "%",
-        "label": "t:settings_schema.vintage.vignette_opacity",
-        "default": 12
+        "type": "checkbox",
+        "id": "show_language_toggle_footer",
+        "label": "Show the language toggle in the footer",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Motion",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Reduced motion is honoured at the token level — a visitor who asks for less motion gets every duration collapsed to zero, and reveal animations are forced to their end state so no content is withheld."
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_reveals",
+        "label": "Reveal sections on scroll",
+        "default": true
       }
     ]
   }

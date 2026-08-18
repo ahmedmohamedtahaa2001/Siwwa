@@ -1,0 +1,41 @@
+/* ════════════════════════════════════════════════════════════════════
+   P-01 ProductCard — badge stack                            [COMMERCE]
+
+   An extension of the design system's card, not a fork of it.
+   siwa-components.css is a byte-for-byte copy of v3.0.0 and stays that
+   way; anything this theme needs on top of it lives here.
+
+   WHY THIS FILE EXISTS.
+   `.siwa-badge--overlay` anchors one badge to the inline-start corner of
+   the media. A card can need two at once — the catalog stamp, which is
+   non-negotiable on every thumbnail (non-negotiable 1, CI rule 11), and a
+   status stamp, because 14 of the 60 products in this catalogue are sold
+   out. Two `--overlay` badges land on the same coordinates and the second
+   hides the first, so the one badge that may never be hidden is exactly
+   the one that would disappear.
+
+   The stack takes over the positioning and the badges inside it go
+   static. The corner, the inset and the z-rung are unchanged — this only
+   turns one slot into a column.
+   ════════════════════════════════════════════════════════════════════ */
+
+.siwa-card__badges {
+  position: absolute;
+  inset-block-start: var(--spacing-2);
+  inset-inline-start: var(--spacing-2);
+  z-index: var(--z-card-badge);
+
+  display: flex;
+  flex-direction: column;
+  /* Stamps are different widths. Without this they stretch to the widest. */
+  align-items: flex-start;
+  gap: var(--spacing-1);
+}
+
+/* Inside the stack the badges are laid out by the flex column, not by
+   their own corner anchor. No z-index is needed or allowed here — a
+   static box does not take one, and the stack already carries the rung. */
+.siwa-card__badges .siwa-badge--overlay {
+  position: static;
+  inset: auto;
+}

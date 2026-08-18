@@ -1,0 +1,67 @@
+{{ 'section-product-carousel.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-badge-stamp.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign coll = collections[section.settings.collection]
+  assign limit = section.settings.product_limit
+-%}
+
+<section class="pl-carousel">
+  <div class="pl-carousel__inner">
+    <div class="pl-carousel__head">
+      {%- if section.settings.title != blank -%}
+        <h2 class="pl-carousel__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.show_view_all and coll != blank -%}
+        <a class="pl-carousel__link" href="{{ coll.url }}">
+          {{ section.settings.view_all_label | default: 'Shop All' }}
+        </a>
+      {%- endif -%}
+    </div>
+
+    {%- if coll.products.size > 0 -%}
+      <ul class="pl-carousel__track" role="list"
+          {% if section.settings.title != blank %}aria-label="{{ section.settings.title | escape }}"{% endif %}>
+        {%- for product in coll.products limit: limit -%}
+          <li class="pl-carousel__item">
+            {%- render 'pl-product-card',
+                  product: product,
+                  show_price: section.settings.show_price,
+                  lazy: forloop.index > 4 -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- else -%}
+      <ul class="pl-carousel__track" role="list">
+        {%- for i in (1..5) -%}
+          <li class="pl-carousel__item">
+            <div class="pl-card">
+              <div class="pl-card__media">{{ 'product-1' | placeholder_svg_tag: 'pl-card__image' }}</div>
+              <div class="pl-card__body"><h3 class="pl-card__title">Product title</h3></div>
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product carousel",
+  "tag": "section",
+  "class": "shopify-section--pl-carousel",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Heading", "default": "Bestsellers" },
+    { "type": "collection", "id": "collection", "label": "Collection" },
+    { "type": "range", "id": "product_limit", "min": 4, "max": 16, "step": 1,
+      "label": "Products shown", "default": 12 },
+    { "type": "checkbox", "id": "show_view_all", "label": "Show \"Shop All\" link", "default": true },
+    { "type": "text", "id": "view_all_label", "label": "Link label", "default": "Shop All" },
+    { "type": "checkbox", "id": "show_price", "label": "Show price", "default": true }
+  ],
+  "presets": [{ "name": "Product carousel" }]
+}
+{% endschema %}

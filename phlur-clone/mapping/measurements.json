@@ -1,0 +1,697 @@
+{
+  "home": {
+    "buttons": [
+      {
+        "text": "Skip to content",
+        "w": 130,
+        "h": 40,
+        "bg": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "border": "1px solid rgb(0, 0, 0)",
+        "padding": "0px 30px 0px 30px",
+        "font": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "transition": "0.25s cubic-bezier(0.8, 0, 0.2, 1)"
+      },
+      {
+        "text": "SHOP NOW",
+        "w": 130,
+        "h": 40,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "border": "1px solid rgb(255, 255, 255)",
+        "padding": "0px 30px 0px 30px",
+        "font": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "transition": "0.25s cubic-bezier(0.8, 0, 0.2, 1)"
+      },
+      {
+        "text": "Shop Bestsellers",
+        "w": 197.7,
+        "h": 40,
+        "bg": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "border": "1px solid rgb(0, 0, 0)",
+        "padding": "0px 30px 0px 30px",
+        "font": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "transition": "0.25s cubic-bezier(0.8, 0, 0.2, 1)"
+      }
+    ],
+    "badges": [
+      {
+        "text": "NEW",
+        "w": 35.2,
+        "h": 19,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "4px 6px 4px 6px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium"
+      },
+      {
+        "text": "BESTSELLER",
+        "w": 89.4,
+        "h": 19,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "4px 6px 4px 6px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium"
+      },
+      {
+        "text": "$20 CREDIT",
+        "w": 89.4,
+        "h": 19,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "4px 6px 4px 6px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium"
+      },
+      {
+        "text": "NEW",
+        "w": 35.2,
+        "h": 19,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "4px 6px 4px 6px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium"
+      },
+      {
+        "text": "BESTSELLER",
+        "w": 89.4,
+        "h": 19,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "4px 6px 4px 6px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium"
+      },
+      {
+        "text": "NEW",
+        "w": 35.2,
+        "h": 19,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "4px 6px 4px 6px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium"
+      }
+    ],
+    "productCard": {
+      "w": 299.5,
+      "h": 420.1,
+      "bg": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "imageBox": {
+        "w": 299.5,
+        "h": 299.5,
+        "ratio": 1
+      },
+      "imageWrapperBg": "rgb(245, 245, 245)",
+      "title": {
+        "text": "NEW",
+        "fontSize": "11px",
+        "weight": "500",
+        "transform": "uppercase",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium",
+        "marginTop": "0px"
+      },
+      "subtitle": {
+        "text": "4 x 7mL Eau de Parfum",
+        "fontSize": "14px",
+        "color": "rgb(0, 0, 0)",
+        "weight": "400"
+      },
+      "instances": 78
+    },
+    "grid": [
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "20px",
+        "w": 1265,
+        "children": 3,
+        "overflow": "auto"
+      },
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "normal",
+        "w": 1425,
+        "children": 3,
+        "overflow": "visible"
+      },
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "normal",
+        "w": 1325,
+        "children": 12,
+        "overflow": "visible"
+      },
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "normal",
+        "w": 1265,
+        "children": 3,
+        "overflow": "visible"
+      }
+    ],
+    "hero": {
+      "h": 623.4,
+      "w": 1425,
+      "bg": "rgba(0, 0, 0, 0)",
+      "heading": {
+        "text": "Vanilla Canyon",
+        "fontSize": "44px",
+        "weight": "600",
+        "transform": "uppercase",
+        "letterSpacing": "0.96px",
+        "color": "rgb(255, 255, 255)",
+        "font": "aktiv-grotesk-extended",
+        "lineHeight": "44px"
+      },
+      "cta": {
+        "text": "SHOP NOW",
+        "w": 130,
+        "h": 40,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px"
+      },
+      "contentBox": null,
+      "ctaCount": 1
+    },
+    "header": {
+      "h": 56,
+      "bg": "rgba(0, 0, 0, 0)",
+      "position": "static",
+      "padding": "0px 0px 0px 0px",
+      "links": [
+        {
+          "text": "Missing Person",
+          "href": "/collections/missing-person",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        },
+        {
+          "text": "Vanilla Skin",
+          "href": "/collections/vanilla-skin",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        },
+        {
+          "text": "Father Figure",
+          "href": "/collections/father-figure",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        },
+        {
+          "text": "Beach Skin",
+          "href": "/collections/beach-skin",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    "container": [
+      {
+        "value": "2000px",
+        "count": 15
+      },
+      {
+        "value": "1440px",
+        "count": 2
+      },
+      {
+        "value": "1635px",
+        "count": 2
+      },
+      {
+        "value": "800px",
+        "count": 2
+      },
+      {
+        "value": "742px",
+        "count": 1
+      }
+    ]
+  },
+  "product": {
+    "buttons": [
+      {
+        "text": "Skip to content",
+        "w": 130,
+        "h": 40,
+        "bg": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "border": "1px solid rgb(0, 0, 0)",
+        "padding": "0px 30px 0px 30px",
+        "font": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "transition": "0.25s cubic-bezier(0.8, 0, 0.2, 1)"
+      },
+      {
+        "text": "",
+        "w": 292.3,
+        "h": 40,
+        "bg": "rgb(234, 234, 234)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "80px",
+        "border": "0px none rgb(0, 0, 0)",
+        "padding": "0px 16px 0px 16px",
+        "font": "ABCRepro-Regular",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "letterSpacing": "normal",
+        "textTransform": "none",
+        "transition": "0.25s cubic-bezier(0.8, 0, 0.2, 1)"
+      },
+      {
+        "text": "",
+        "w": 582.5,
+        "h": 40,
+        "bg": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "border": "1px solid rgb(0, 0, 0)",
+        "padding": "0px 30px 0px 30px",
+        "font": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "transition": "0.25s cubic-bezier(0.8, 0, 0.2, 1)"
+      },
+      {
+        "text": "",
+        "w": 208.1,
+        "h": 40,
+        "bg": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "border": "1px solid rgb(0, 0, 0)",
+        "padding": "0px 30px 0px 30px",
+        "font": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "transition": "0.25s cubic-bezier(0.8, 0, 0.2, 1)"
+      },
+      {
+        "text": "Shop Bestsellers",
+        "w": 197.7,
+        "h": 40,
+        "bg": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "border": "1px solid rgb(0, 0, 0)",
+        "padding": "0px 30px 0px 30px",
+        "font": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "transition": "0.25s cubic-bezier(0.8, 0, 0.2, 1)"
+      }
+    ],
+    "badges": [
+      {
+        "text": "BESTSELLER",
+        "w": 106.6,
+        "h": 27.6,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "3px 11px 3px 11px",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "letterSpacing": "0.78px",
+        "font": "ABCReproMono-Medium"
+      },
+      {
+        "text": "NEW",
+        "w": 35.2,
+        "h": 19,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "4px 6px 4px 6px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium"
+      },
+      {
+        "text": "BESTSELLER",
+        "w": 89.4,
+        "h": 19,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "4px 6px 4px 6px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium"
+      },
+      {
+        "text": "BESTSELLER",
+        "w": 89.4,
+        "h": 19,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "4px 6px 4px 6px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium"
+      },
+      {
+        "text": "BESTSELLER",
+        "w": 89.4,
+        "h": 19,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "4px 6px 4px 6px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium"
+      },
+      {
+        "text": "NEW",
+        "w": 35.2,
+        "h": 19,
+        "bg": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "radius": "0px",
+        "padding": "4px 6px 4px 6px",
+        "fontSize": "11px",
+        "fontWeight": "500",
+        "letterSpacing": "0.7px",
+        "font": "ABCReproMono-Medium"
+      }
+    ],
+    "productCard": {
+      "w": 281.3,
+      "h": 411.8,
+      "bg": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "imageBox": null,
+      "imageWrapperBg": "rgb(245, 245, 245)",
+      "title": null,
+      "subtitle": null,
+      "instances": 47
+    },
+    "grid": [
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "20px",
+        "w": 1265,
+        "children": 3,
+        "overflow": "auto"
+      },
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "normal",
+        "w": 1265,
+        "children": 5,
+        "overflow": "visible"
+      },
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "normal",
+        "w": 632.5,
+        "children": 6,
+        "overflow": "visible"
+      },
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "normal",
+        "w": 1345,
+        "children": 13,
+        "overflow": "visible"
+      }
+    ],
+    "header": {
+      "h": 56,
+      "bg": "rgba(0, 0, 0, 0)",
+      "position": "static",
+      "padding": "0px 0px 0px 0px",
+      "links": [
+        {
+          "text": "Missing Person",
+          "href": "/collections/missing-person",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        },
+        {
+          "text": "Vanilla Skin",
+          "href": "/collections/vanilla-skin",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        },
+        {
+          "text": "Father Figure",
+          "href": "/collections/father-figure",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        },
+        {
+          "text": "Beach Skin",
+          "href": "/collections/beach-skin",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    "container": [
+      {
+        "value": "2000px",
+        "count": 12
+      },
+      {
+        "value": "1635px",
+        "count": 3
+      },
+      {
+        "value": "1440px",
+        "count": 2
+      },
+      {
+        "value": "800px",
+        "count": 2
+      },
+      {
+        "value": "742px",
+        "count": 1
+      }
+    ]
+  },
+  "collection": {
+    "buttons": [
+      {
+        "text": "Skip to content",
+        "w": 130,
+        "h": 40,
+        "bg": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "border": "1px solid rgb(0, 0, 0)",
+        "padding": "0px 30px 0px 30px",
+        "font": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "transition": "0.25s cubic-bezier(0.8, 0, 0.2, 1)"
+      },
+      {
+        "text": "Shop Bestsellers",
+        "w": 197.7,
+        "h": 40,
+        "bg": "rgb(0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "0px",
+        "border": "1px solid rgb(0, 0, 0)",
+        "padding": "0px 30px 0px 30px",
+        "font": "ABCReproMono-Medium",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "letterSpacing": "0.8px",
+        "textTransform": "uppercase",
+        "transition": "0.25s cubic-bezier(0.8, 0, 0.2, 1)"
+      }
+    ],
+    "badges": [],
+    "productCard": {
+      "w": 301.3,
+      "h": 431.8,
+      "bg": "rgba(0, 0, 0, 0)",
+      "radius": "0px",
+      "shadow": "none",
+      "imageBox": null,
+      "imageWrapperBg": "rgb(245, 245, 245)",
+      "title": null,
+      "subtitle": null,
+      "instances": 21
+    },
+    "grid": [
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "20px",
+        "w": 1265,
+        "children": 3,
+        "overflow": "auto"
+      },
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "normal",
+        "w": 1265,
+        "children": 7,
+        "overflow": "auto"
+      },
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "20px",
+        "w": 1265,
+        "children": 47,
+        "overflow": "visible"
+      },
+      {
+        "display": "flex",
+        "cols": "none",
+        "gap": "60px 20px",
+        "w": 1265,
+        "children": 5,
+        "overflow": "visible"
+      }
+    ],
+    "header": {
+      "h": 56,
+      "bg": "rgba(0, 0, 0, 0)",
+      "position": "static",
+      "padding": "0px 0px 0px 0px",
+      "links": [
+        {
+          "text": "Missing Person",
+          "href": "/collections/missing-person",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        },
+        {
+          "text": "Vanilla Skin",
+          "href": "/collections/vanilla-skin",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        },
+        {
+          "text": "Father Figure",
+          "href": "/collections/father-figure",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        },
+        {
+          "text": "Beach Skin",
+          "href": "/collections/beach-skin",
+          "fontSize": "13px",
+          "transform": "none",
+          "letterSpacing": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    "container": [
+      {
+        "value": "2000px",
+        "count": 9
+      },
+      {
+        "value": "1440px",
+        "count": 2
+      },
+      {
+        "value": "800px",
+        "count": 2
+      },
+      {
+        "value": "742px",
+        "count": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "name": "home",
+    "url": "https://phlur.com/",
+    "ok": true,
+    "nodes": 1355,
+    "sections": 7,
+    "images": 149,
+    "sheets": 150,
+    "vars": 247,
+    "mediaQueries": 38
+  },
+  {
+    "name": "product",
+    "url": "https://phlur.com/products/missing-person-100ml",
+    "ok": true,
+    "nodes": 1500,
+    "sections": 7,
+    "images": 163,
+    "sheets": 150,
+    "vars": 247,
+    "mediaQueries": 39
+  },
+  {
+    "name": "collection",
+    "url": "https://phlur.com/collections/perfumes",
+    "ok": true,
+    "nodes": 1078,
+    "sections": 3,
+    "images": 186,
+    "sheets": 157,
+    "vars": 247,
+    "mediaQueries": 37
+  }
+]
