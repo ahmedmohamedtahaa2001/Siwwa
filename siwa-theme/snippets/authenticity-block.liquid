@@ -1,0 +1,17 @@
+{%- comment -%}
+Snippet: authenticity-block — shows batch code, QR and sourcing language for Originals
+{%- endcomment -%}
+<div class="siwa-authenticity">
+  <h4 class="siwa-authenticity__title">{{ 'authenticity.title' | t }}</h4>
+  <p class="siwa-authenticity__sourcing">{{ product.metafields.siwa.sourcing | default: "Crafted in Egypt" }}</p>
+
+  {% if product.metafields.siwa.batch_code %}
+    <p class="siwa-authenticity__batch">{{ 'authenticity.batch' | t }}: {{ product.metafields.siwa.batch_code }}</p>
+  {% endif %}
+
+  {% if product.metafields.siwa.qr_image %}
+    <div class="siwa-authenticity__qr"><img src="{{ product.metafields.siwa.qr_image | img_url: '200x200' }}" alt="QR"></div>
+  {% endif %}
+
+  <p><a class="siwa-link" href="/pages/verify">{{ 'authenticity.verify' | t }}</a> · <a class="siwa-link" href="/pages/report">{{ 'authenticity.report' | t }}</a></p>
+</div>

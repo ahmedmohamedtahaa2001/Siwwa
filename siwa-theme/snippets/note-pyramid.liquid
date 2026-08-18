@@ -1,0 +1,50 @@
+{%- comment -%}
+Snippet: note-pyramid — renders a simple note pyramid from product metafields or tags
+{%- endcomment -%}
+<div class="siwa-note-pyramid">
+  {% assign top = product.metafields.siwa.top_notes | split: ',' %}
+  {% assign middle = product.metafields.siwa.middle_notes | split: ',' %}
+  {% assign base = product.metafields.siwa.base_notes | split: ',' %}
+
+  {%- comment -%} fallback: try to parse the description text if metafields are empty {%- endcomment -%}
+  {% if top == blank or top.size == 0 or top == blank %}
+    {% assign desc = product.description_text | default: '' | downcase %}
+    {% if desc contains 'top' and desc contains 'heart' and desc contains 'base' %}
+      {% assign after_top = desc | split: 'top:' | last %}
+      {% assign top_part = after_top | split: 'heart:' | first %}
+      {% assign after_heart = desc | split: 'heart:' | last %}
+      {% assign middle_part = after_heart | split: 'base:' | first %}
+      {% assign base_part = desc | split: 'base:' | last %}
+      {% assign top = top_part | replace: '.', ',' | split: ',' %}
+      {% assign middle = middle_part | replace: '.', ',' | split: ',' %}
+      {% assign base = base_part | replace: '.', ',' | split: ',' %}
+    {% endif %}
+  {% endif %}
+
+  <div class="siwa-note-pyramid__group siwa-note-pyramid__top">
+    <p class="siwa-note-pyramid__label">{{ 'note_pyramid.top' | t }}</p>
+    <ul>
+      {% for n in top %}
+        {% if n != blank %}<li>{{ n }}</li>{% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="siwa-note-pyramid__group siwa-note-pyramid__middle">
+    <p class="siwa-note-pyramid__label">{{ 'note_pyramid.middle' | t }}</p>
+    <ul>
+      {% for n in middle %}
+        {% if n != blank %}<li>{{ n }}</li>{% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="siwa-note-pyramid__group siwa-note-pyramid__base">
+    <p class="siwa-note-pyramid__label">{{ 'note_pyramid.base' | t }}</p>
+    <ul>
+      {% for n in base %}
+        {% if n != blank %}<li>{{ n }}</li>{% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>

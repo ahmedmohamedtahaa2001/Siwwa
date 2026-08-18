@@ -1,0 +1,13 @@
+{%- comment -%}
+Snippet: provenience-card — production transparency for Impressions
+{%- endcomment -%}
+<div class="siwa-provenience">
+  <h4>{{ 'provenience.title' | t }}</h4>
+  <p>{{ product.metafields.siwa.provenience | default: "Crafted in Egypt" }}</p>
+  {% if product.metafields.siwa.production_details %}
+    <details>
+      <summary>{{ 'provenience.details' | t }}</summary>
+      <p>{{ product.metafields.siwa.production_details }}</p>
+    </details>
+  {% endif %}
+</div>

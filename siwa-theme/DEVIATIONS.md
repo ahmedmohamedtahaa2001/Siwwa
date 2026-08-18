@@ -194,3 +194,11 @@ layer is still an error, which is the case principle 4 was written for.
   drawer, mega menu, dialog, scrim, focus trap, scroll reveals, live region — is
   implemented once in `assets/siwa-theme.js` and documented at the top of that
   file. Sections wire to its data attributes and write no JS of their own.
+
+## Recent implementation notes (2026-08-18)
+
+- Implemented `siwa-editorial.liquid` and seeded it with `our-story` content from the audit to fill the brand-statement slot (deviation D-3). The editorial CSS carries a waived warning about Arabic letter-spacing; this is documented and intentionally preserved until a direction-wide typographic fix is applied.
+- Added `assets/siwa-product-card.css` to implement a stacked badge column (`.siwa-card__badges`) so the catalog stamp is never hidden by transient status stamps.
+- Seeded `templates/index.json` with defaults for `oracle` and `tester` sections and wired the bento tiles to the audit collections for accurate preview content.
+
+If any deviation above needs reverting before release, mark the item and run the final validator suite again.

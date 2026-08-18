@@ -88,9 +88,8 @@
   endif
 
   comment
-    `body` is richtext and already arrives wrapped in <p>. The locale fallback
-    is a plain string, so it is wrapped here — .siwa-prose spaces element
-    children, and a bare text node would sit outside that rhythm.
+    `body` is richtext; if the schema field is blank the locale value is used.
+    The fallback is wrapped in paragraph tags so it renders inside .siwa-prose.
   endcomment
   assign body_html = s.body
   if body_html == blank
@@ -221,7 +220,7 @@
     },
     {
       "type": "paragraph",
-      "content": "Leave any of the four fields below blank and the store's own translated line is used, in whichever language the visitor is reading. Type into one and your words win."
+      "content": "sections.oracle.schema_intro"
     },
     {
       "type": "text",
@@ -388,96 +387,24 @@
   "max_blocks": 6,
   "default": {
     "blocks": [
-      {
-        "type": "step",
-        "settings": {
-          "label": "The room you walk into",
-          "text": "A desk, a dinner, a desert night. The Oracle starts with where the scent has to work."
-        }
-      },
-      {
-        "type": "step",
-        "settings": {
-          "label": "What you already wear",
-          "text": "Name one fragrance you love. It tells the Oracle more than any adjective."
-        }
-      },
-      {
-        "type": "step",
-        "settings": {
-          "label": "How close you stand",
-          "text": "Read across a table, or found only at the wrist."
-        }
-      },
-      {
-        "type": "step",
-        "settings": {
-          "label": "How long it must hold",
-          "text": "Four hours before you reapply, or twelve that outlast the evening."
-        }
-      },
-      {
-        "type": "step",
-        "settings": {
-          "label": "The season you dress for",
-          "text": "August in Cairo and January in Siwa do not take the same oil."
-        }
-      },
-      {
-        "type": "step",
-        "settings": {
-          "label": "Original, Impression, or both",
-          "text": "Siwa's own compositions, our interpretations of scents you already know, or the whole house."
-        }
-      }
+      { "type": "step", "settings": { "label": "", "text": "" } },
+      { "type": "step", "settings": { "label": "", "text": "" } },
+      { "type": "step", "settings": { "label": "", "text": "" } },
+      { "type": "step", "settings": { "label": "", "text": "" } },
+      { "type": "step", "settings": { "label": "", "text": "" } },
+      { "type": "step", "settings": { "label": "", "text": "" } }
     ]
   },
   "presets": [
     {
       "name": "Oracle invitation",
       "blocks": [
-        {
-          "type": "step",
-          "settings": {
-            "label": "The room you walk into",
-            "text": "A desk, a dinner, a desert night. The Oracle starts with where the scent has to work."
-          }
-        },
-        {
-          "type": "step",
-          "settings": {
-            "label": "What you already wear",
-            "text": "Name one fragrance you love. It tells the Oracle more than any adjective."
-          }
-        },
-        {
-          "type": "step",
-          "settings": {
-            "label": "How close you stand",
-            "text": "Read across a table, or found only at the wrist."
-          }
-        },
-        {
-          "type": "step",
-          "settings": {
-            "label": "How long it must hold",
-            "text": "Four hours before you reapply, or twelve that outlast the evening."
-          }
-        },
-        {
-          "type": "step",
-          "settings": {
-            "label": "The season you dress for",
-            "text": "August in Cairo and January in Siwa do not take the same oil."
-          }
-        },
-        {
-          "type": "step",
-          "settings": {
-            "label": "Original, Impression, or both",
-            "text": "Siwa's own compositions, our interpretations of scents you already know, or the whole house."
-          }
-        }
+        { "type": "step", "settings": { "label": "", "text": "" } },
+        { "type": "step", "settings": { "label": "", "text": "" } },
+        { "type": "step", "settings": { "label": "", "text": "" } },
+        { "type": "step", "settings": { "label": "", "text": "" } },
+        { "type": "step", "settings": { "label": "", "text": "" } },
+        { "type": "step", "settings": { "label": "", "text": "" } }
       ]
     }
   ]

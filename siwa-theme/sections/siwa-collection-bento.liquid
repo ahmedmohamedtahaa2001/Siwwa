@@ -1,0 +1,117 @@
+{{ 'siwa-components.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%}
+  siwa-collection-bento — renders a bento grid driven by up to four
+  configurable collection handles. Each tile prefers the collection's
+  `image` and `title` at runtime; schema settings allow overrides for
+  preview and editor convenience. Keeping copy in schema fixes validator
+  errors about hardcoded customer-facing strings.
+{%- endcomment -%}
+
+{%- liquid
+  assign s = section.settings
+  assign tiles = ''
+
+  /* Explicit reads so the validator recognises schema controls */
+  assign tile_1_collection = s.tile_1_collection | default: ''
+  assign tile_1_title = s.tile_1_title | default: ''
+  assign tile_1_text = s.tile_1_text | default: ''
+  assign tile_1_url = s.tile_1_url | default: ''
+  assign tile_1_w = s.tile_1_w | default: 2
+  assign tile_1_h = s.tile_1_h | default: 2
+
+  assign tile_2_collection = s.tile_2_collection | default: ''
+  assign tile_2_title = s.tile_2_title | default: ''
+  assign tile_2_text = s.tile_2_text | default: ''
+  assign tile_2_url = s.tile_2_url | default: ''
+  assign tile_2_w = s.tile_2_w | default: 1
+  assign tile_2_h = s.tile_2_h | default: 1
+
+  assign tile_3_collection = s.tile_3_collection | default: ''
+  assign tile_3_title = s.tile_3_title | default: ''
+  assign tile_3_text = s.tile_3_text | default: ''
+  assign tile_3_url = s.tile_3_url | default: ''
+  assign tile_3_w = s.tile_3_w | default: 1
+  assign tile_3_h = s.tile_3_h | default: 1
+
+  assign tile_4_collection = s.tile_4_collection | default: ''
+  assign tile_4_title = s.tile_4_title | default: ''
+  assign tile_4_text = s.tile_4_text | default: ''
+  assign tile_4_url = s.tile_4_url | default: ''
+  assign tile_4_w = s.tile_4_w | default: 1
+  assign tile_4_h = s.tile_4_h | default: 1
+-%}
+
+<div class="siwa-section siwa-section--tight">
+  <div class="siwa-container">
+    <div class="siwa-section-heading">
+      <h2 class="siwa-h2">{{ s.heading | default: 'sections.collection_bento.heading' | t }}</h2>
+    </div>
+
+    <div class="siwa-bento">
+      {%- for i in (1..4) -%}
+        {%- assign handle = s["tile_" | append: i | append: "_collection"] -%}
+        {%- if handle != blank -%}
+          {%- assign coll = collections[handle] -%}
+          {%- assign tile_title = s["tile_" | append: i | append: "_title"] | default: coll.title -%}
+          {%- assign tile_text = s["tile_" | append: i | append: "_text"] | default: '' -%}
+          {%- assign tile_link = s["tile_" | append: i | append: "_url"] | default: coll.url -%}
+          {%- assign w = s["tile_" | append: i | append: "_w"] | default: 1 -%}
+          {%- assign h = s["tile_" | append: i | append: "_h"] | default: 1 -%}
+          <a class="siwa-bento__tile{% if coll.image %} siwa-bento__tile--photo{% endif %} siwa-bento__tile--w{{ w }} siwa-bento__tile--h{{ h }}" href="{{ tile_link }}">
+            {%- if coll.image -%}
+              <div class="siwa-bento__media">{{ coll.image | image_tag: alt: tile_title }}</div>
+            {%- else -%}
+              <div class="siwa-bento__media">{{ 'lifestyle-2' | placeholder_svg_tag }}</div>
+            {%- endif -%}
+
+            <div class="siwa-bento__content">
+              <h3 class="siwa-bento__title">{{ tile_title }}</h3>
+              {%- if tile_text != blank -%}
+                <p class="siwa-bento__text">{{ tile_text }}</p>
+              {%- endif -%}
+            </div>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection bento",
+  "class": "siwa-collection-bento",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Collections" },
+    { "type": "text", "id": "tile_1_collection", "label": "Tile 1 collection handle" },
+    { "type": "text", "id": "tile_1_title", "label": "Tile 1 title (override)" },
+    { "type": "text", "id": "tile_1_text", "label": "Tile 1 text" },
+    { "type": "text", "id": "tile_1_url", "label": "Tile 1 URL (override)" },
+    { "type": "number", "id": "tile_1_w", "label": "Tile 1 width span", "default": 2 },
+    { "type": "number", "id": "tile_1_h", "label": "Tile 1 height span", "default": 2 },
+
+    { "type": "text", "id": "tile_2_collection", "label": "Tile 2 collection handle" },
+    { "type": "text", "id": "tile_2_title", "label": "Tile 2 title (override)" },
+    { "type": "text", "id": "tile_2_text", "label": "Tile 2 text" },
+    { "type": "text", "id": "tile_2_url", "label": "Tile 2 URL (override)" },
+    { "type": "number", "id": "tile_2_w", "label": "Tile 2 width span", "default": 1 },
+    { "type": "number", "id": "tile_2_h", "label": "Tile 2 height span", "default": 1 },
+
+    { "type": "text", "id": "tile_3_collection", "label": "Tile 3 collection handle" },
+    { "type": "text", "id": "tile_3_title", "label": "Tile 3 title (override)" },
+    { "type": "text", "id": "tile_3_text", "label": "Tile 3 text" },
+    { "type": "text", "id": "tile_3_url", "label": "Tile 3 URL (override)" },
+    { "type": "number", "id": "tile_3_w", "label": "Tile 3 width span", "default": 1 },
+    { "type": "number", "id": "tile_3_h", "label": "Tile 3 height span", "default": 1 },
+
+    { "type": "text", "id": "tile_4_collection", "label": "Tile 4 collection handle" },
+    { "type": "text", "id": "tile_4_title", "label": "Tile 4 title (override)" },
+    { "type": "text", "id": "tile_4_text", "label": "Tile 4 text" },
+    { "type": "text", "id": "tile_4_url", "label": "Tile 4 URL (override)" },
+    { "type": "number", "id": "tile_4_w", "label": "Tile 4 width span", "default": 1 },
+    { "type": "number", "id": "tile_4_h", "label": "Tile 4 height span", "default": 1 }
+  ],
+  "presets": [{ "name": "Collection bento" }]
+}
+{% endschema %}

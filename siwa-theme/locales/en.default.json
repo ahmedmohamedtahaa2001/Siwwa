@@ -160,7 +160,8 @@
       "heading": "Six questions. Then the Oracle speaks.",
       "body": "Answer six questions about how you live and what you already love. The Oracle reads them and names three to five scents that fit — each one with a tester, so nothing is a guess.",
       "cta": "Ask the Oracle",
-      "step": "Step {{ number }}"
+      "step": "Step {{ number }}",
+      "schema_intro": "Leave any of the fields below blank and the store's translated line will be used. Type into one and your words win."
     },
     "tester_invite": {
       "eyebrow": "The first crossing",
@@ -172,6 +173,10 @@
     },
     "collections": {
       "heading": "Where to start"
+    }
+    ,
+    "collection_bento": {
+      "heading": "Collections"
     }
   },
   "preset_preview": {
@@ -192,5 +197,37 @@
     "sample_alt": "Oud Nights 50ml, amber glass bottle, front",
     "email_error": "Email format is incorrect. Example: you@example.com",
     "longevity_value": "6–8 hours"
+  }
+  ,
+  "oracle": {
+    "page_title": "Ask the Oracle",
+    "page_intro": "Answer a few quick questions and we’ll name scents that fit.",
+    "q_signature": "Which scent family feels like you?",
+    "opt_fruity": "Fruity",
+    "opt_woody": "Woody",
+    "opt_gourmand": "Gourmand",
+    "opt_fresh": "Fresh / Clean",
+    "opt_floral": "Floral",
+    "q_occasion": "Where will you wear it?",
+    "opt_daily": "Daily",
+    "opt_evening": "Evening",
+    "opt_special": "Special occasions",
+    "q_intensity": "How strong do you like it?",
+    "opt_light": "Light veil",
+    "opt_moderate": "Moderate",
+    "opt_strong": "Strong presence",
+    "q_notes": "Which notes attract you most?",
+    "opt_citrus": "Citrus",
+    "q_season": "Which season suits you?",
+    "opt_summer": "Summer",
+    "opt_winter": "Winter",
+    "opt_all": "All year",
+    "submit": "Reveal my matches",
+    "results_title": "The Oracle suggests",
+    "results_cta": "Try the testers"
+  },
+  "verify": {
+    "title": "Verify a batch",
+    "prompt": "Enter a batch code or scan a QR that points here with `?batch=`."
   }
 }

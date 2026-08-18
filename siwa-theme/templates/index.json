@@ -1,5 +1,125 @@
 {
   "sections": {
+    "hero": {
+      "type": "siwa-hero",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "cta_label": "",
+        "cta_url": ""
+      }
+    },
+    "products_new": {
+      "type": "siwa-product-row",
+      "settings": {
+        "heading": "New drops",
+        "product_limit": 12,
+        "layout": "carousel",
+        "collection": "new-drops",
+        "in_stock_only": false,
+        "show_inspired_by": true
+      }
+    },
+    "editorial": {
+      "type": "siwa-editorial",
+      "settings": {
+        "eyebrow": "",
+        "statement": "<p>Producing high quality niche perfumes which suit different tastes. A distinctive bouquet of high-quality and carefully selected perfumes inspired by the beauty and charm of Siwa Oasis. Made in Egypt to international standards.</p>",
+        "attribution": "Siwa Fragrances",
+        "cta_label": "Read our story",
+        "cta_url": "/pages/our-story",
+        "alignment": "center",
+        "color_scheme": "surface"
+      }
+    },
+    "oracle": {
+      "type": "siwa-oracle-invite",
+      "settings": {
+        "eyebrow": "The Oracle",
+        "heading": "Six questions. Then the Oracle speaks.",
+        "body": "<p>Answer six quick questions about how you live and what you already love. The Oracle reads them and names three to five scents that fit — each one with a tester, so nothing is a guess.</p>",
+        "cta_label": "Ask the Oracle",
+        "cta_url": "/pages/oracle-quiz",
+        "cta_variant": "primary",
+        "media_position": "inline-start",
+        "color_scheme": "surface",
+        "rhythm": "section"
+      }
+    },
+    "oracle_steps": {
+      "type": "siwa-oracle-invite",
+      "blocks": [
+        { "type": "step", "settings": { "label": "Your signature", "text": "Which of these best describes the scents you already love?" } },
+        { "type": "step", "settings": { "label": "Occasion", "text": "Where will you wear this most often — daily, evenings, or special occasions?" } },
+        { "type": "step", "settings": { "label": "Intensity", "text": "Do you prefer a light veil or a long-lasting presence?" } },
+        { "type": "step", "settings": { "label": "Notes", "text": "Which notes appeal to you most — citrus, floral, woody or gourmand?" } },
+        { "type": "step", "settings": { "label": "Season", "text": "Which season fits the scent — summer, winter, or all-year?" } },
+        { "type": "step", "settings": { "label": "Tester", "text": "Would you like a tester to try first?" } }
+      ]
+    },
+    "products_best": {
+      "type": "siwa-product-row",
+      "settings": {
+        "heading": "Best sellers",
+        "product_limit": 12,
+        "layout": "carousel",
+        "collection": "best-sellers",
+        "in_stock_only": true,
+        "show_inspired_by": true
+      }
+    },
+    "bento": {
+      "type": "siwa-collection-bento",
+      "settings": {
+        "heading": "Collections",
+        "tile_1_collection": "best-sellers",
+        "tile_1_title": "BEST SELLERS",
+        "tile_1_text": "24 scents",
+        "tile_1_url": "/collections/best-sellers",
+        "tile_1_w": 2,
+        "tile_1_h": 2,
+
+        "tile_2_collection": "new-drops",
+        "tile_2_title": "new drops",
+        "tile_2_text": "31 scents",
+        "tile_2_url": "/collections/new-drops",
+
+        "tile_3_collection": "original-creations",
+        "tile_3_title": "Original Creations",
+        "tile_3_text": "8 scents",
+        "tile_3_url": "/collections/original-creations",
+
+        "tile_4_collection": "summer-collection",
+        "tile_4_title": "Summer Collection",
+        "tile_4_text": "22 scents",
+        "tile_4_url": "/collections/summer-collection"
+      }
+    },
+    "tester": {
+      "type": "siwa-tester-invite",
+      "settings": {
+        "eyebrow": "The first crossing",
+        "heading": "Try it first.",
+        "body": "<p>Every fragrance has a tester. Wear it for a week, then decide whether to carry the full bottle.</p>",
+        "tester_product": {
+          "handle": "layering-vanilla",
+          "url": "/products/layering-vanilla",
+          "price_min": 8500,
+          "variants": [
+            { "title": "Tester", "price": 8500, "url": "/products/layering-vanilla?variant=42389308932144" }
+          ]
+        },
+        "tester_url": "/collections/testers",
+        "kit_heading": "The Discovery Kit",
+        "kit_body": "A set of testers in one order — meet the house before you choose.",
+        "kit_cta_label": "See the kits",
+        "kit_collection": "",
+        "show_kit_products": false,
+        "media_position": "inline-start",
+        "color_scheme": "surface",
+        "rhythm": "section"
+      }
+    },
     "preview": {
       "type": "siwa-preset-preview",
       "blocks": {
@@ -31,5 +151,5 @@
       }
     }
   },
-  "order": ["preview"]
+  "order": ["hero","products_new","editorial","oracle","products_best","bento","tester","preview"]
 }

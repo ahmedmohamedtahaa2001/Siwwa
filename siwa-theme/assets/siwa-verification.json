@@ -1,0 +1,7 @@
+{
+  "batches": {
+    "BATCH-001": { "handle": "purevelle", "status": "verified", "notes": "Genuine, matched to wholesale manifest." },
+    "BATCH-002": { "handle": "tobacco-honey", "status": "verified", "notes": "Genuine." },
+    "BATCH-XYZ": { "handle": "forbidden-cherry", "status": "suspect", "notes": "Contact support to verify." }
+  }
+}

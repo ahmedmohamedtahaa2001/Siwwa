@@ -1,0 +1,12 @@
+{
+  "products": [
+    { "handle": "purevelle", "title": "Purevelle", "url": "/products/purevelle", "description": "Top: Sicilian Orange, Calabrian Bergamot & Sicilian Lemon. Heart: Juicy Fruits. Base: White Musk, Madagascar Vanilla & Amber" },
+    { "handle": "tobacco-honey", "title": "Tobacco Honey", "url": "/products/tobacco-honey", "description": "Sweet Tobacco, Honey, Cinnamon, Vanilla, Tonka" },
+    { "handle": "forbidden-cherry", "title": "Forbidden Cherry", "url": "/products/forbidden-cherry", "description": "Cherry, Almond, Vanilla, Tonka, Vetiver" },
+    { "handle": "silvere", "title": "Silvere", "url": "/products/silvere", "description": "Juniper, Nutmeg, Coriander, Musks, Amber Woods" },
+    { "handle": "sundaze", "title": "Sundaze", "url": "/products/sundaze", "description": "Passionfruit, Bitter Orange, Frangipani, Madagascar Vanilla" },
+    { "handle": "vanilla-91", "title": "Vanilla 91", "url": "/products/vanilla-91", "description": "Vanilla, Jasmine, Sandalwood — cozy gourmand" },
+    { "handle": "siwa-trail", "title": "Siwa Trail", "url": "/products/siwa-trail", "description": "Hazelnut, Pear, Vanilla, Amber, Soft Woods" },
+    { "handle": "layering-vanilla", "title": "Layering Vanilla", "url": "/products/layering-vanilla", "description": "Vanilla, Musk, Soft Amber" }
+  ]
+}

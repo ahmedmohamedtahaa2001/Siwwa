@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "oracle": {
+      "type": "siwa-oracle-page",
+      "settings": {}
+    }
+  },
+  "order": ["oracle"]
+}

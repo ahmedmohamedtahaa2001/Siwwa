@@ -1,0 +1,38 @@
+{%- comment -%}
+Snippet: siwa-reading — lightweight Reading input/output microflow for PDP
+{%- endcomment -%}
+<div class="siwa-reading">
+  <form class="siwa-reading__form" data-reading-form>
+    <label>{{ 'reading_q1' | t }}</label>
+    <select name="skin_type">
+      <option value="normal">{{ 'skin.normal' | t }}</option>
+      <option value="oily">{{ 'skin.oily' | t }}</option>
+      <option value="dry">{{ 'skin.dry' | t }}</option>
+    </select>
+
+    <label>{{ 'reading_q2' | t }}</label>
+    <select name="preference">
+      <option value="light">{{ 'reading.pref_light' | t }}</option>
+      <option value="moderate">{{ 'reading.pref_moderate' | t }}</option>
+      <option value="strong">{{ 'reading.pref_strong' | t }}</option>
+    </select>
+
+    <button class="siwa-btn" type="button" data-reading-submit>{{ 'reading_get' | t }}</button>
+  </form>
+
+  <div class="siwa-reading__result" data-reading-result style="display:none;">
+    <h3>{{ 'reading_name' | t }}</h3>
+    <p>{{ 'reading_sample_output' | t }}</p>
+    <p class="siwa-reading__cta"><a class="siwa-btn" href="/pages/oracle-quiz">{{ 'oracle_cta' | t }}</a></p>
+  </div>
+
+  <script>
+    (function(){
+      var root = document.currentScript ? document.currentScript.parentElement : null;
+      var form = root && root.querySelector('[data-reading-form]');
+      var submit = root && root.querySelector('[data-reading-submit]');
+      var result = root && root.querySelector('[data-reading-result]');
+      if(submit && result){ submit.addEventListener('click', function(){ result.style.display = 'block'; }); }
+    })();
+  </script>
+</div>

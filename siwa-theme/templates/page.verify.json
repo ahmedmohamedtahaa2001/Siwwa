@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "verify": { "type": "siwa-verify", "settings": {} }
+  },
+  "order": ["verify"]
+}

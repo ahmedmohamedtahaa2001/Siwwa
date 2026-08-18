@@ -1,0 +1,53 @@
+{{ 'siwa-pdp.css' | asset_url | stylesheet_tag }}
+{%- comment -%}
+Section: siwa-product | Owner: A-09 | Task: PDP shell including Note Pyramid, The Reading, Authenticity
+{%- endcomment -%}
+<section id="siwa-product-{{ section.id }}" class="siwa-product">
+  <div class="siwa-product__container siwa-container">
+    <div class="siwa-product__media">
+      {% if product.featured_image %}
+        <img src="{{ product.featured_image | img_url: '1024x1024' }}" alt="{{ product.title }}">
+      {% endif %}
+    </div>
+    <div class="siwa-product__info">
+      <h1 class="siwa-product__title">{{ product.title }}</h1>
+      <div class="siwa-product__price">{{ product.price | money }}</div>
+      <div class="siwa-product__cta">
+        <button class="siwa-btn siwa-btn--primary">{{ 'products.product.add_to_cart' | t }}</button>
+        <button class="siwa-btn siwa-btn--secondary js-open-reading">{{ 'reading_name' | t }}</button>
+      </div>
+
+      <div class="siwa-product__pyramid">
+        {% render 'note-pyramid', product: product %}
+      </div>
+
+      <div class="siwa-product__reading js-reading" style="display:none;">
+        {% render 'siwa-reading', product: product %}
+      </div>
+
+      <div class="siwa-product__trust">
+        {% if product.tags contains settings.tag_original %}
+          {% render 'authenticity-block', product: product %}
+        {% else %}
+          {% render 'provenience-card', product: product %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var btn = document.querySelector('#siwa-product-{{ section.id }} .js-open-reading');
+      var panel = document.querySelector('#siwa-product-{{ section.id }} .js-reading');
+      if(btn && panel){ btn.addEventListener('click', function(){ panel.style.display = panel.style.display === 'none' ? 'block' : 'none'; }); }
+    })();
+  </script>
+
+{% schema %}
+{
+  "name": "siwa-product",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "" }
+  ]
+}
+{% endschema %}
