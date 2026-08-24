@@ -1,0 +1,152 @@
+{{ 'perfume-quotes.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    --perfume-quotes-padding-desktop: {{ section.settings.padding_vertical }}px {{ section.settings.padding_horizontal }}px;
+    --perfume-quotes-copy-gap: {{ section.settings.column_gap }}px;
+    --perfume-quotes-copy-padding: {{ section.settings.copy_padding }}px;
+    --perfume-quotes-background: {{ section.settings.background_color }};
+    --perfume-quotes-text: {{ section.settings.text_color }};
+  }
+{% endstyle %}
+
+<div class="page-width container-padding-60 perfume-quotes scroll-trigger animate--slide-in">
+  <div class="flex-container-row">
+    <div class="flex-one-third">
+      <h3 class="repro perfume-quote">{{ section.settings.quote | escape }}</h3>
+      {%- if section.settings.author != blank or section.settings.role != blank -%}
+        <p>
+          {{- section.settings.author | escape -}}
+          {%- if section.settings.author != blank and section.settings.role != blank -%}<br>{%- endif -%}
+          {{- section.settings.role | escape -}}
+        </p>
+      {%- endif -%}
+    </div>
+    <div class="flex-two-thirds">
+      {%- if section.settings.image != blank -%}
+        {{- section.settings.image
+          | image_url: width: 1920
+          | image_tag:
+            loading: 'lazy',
+            widths: '375, 550, 750, 1100, 1500, 1920',
+            sizes: '(min-width: 750px) 66.666vw, 100vw',
+            alt: section.settings.image_alt
+        -}}
+      {%- elsif section.settings.image_url != blank -%}
+        <img
+          loading="lazy"
+          src="{{ section.settings.image_url | escape }}"
+          alt="{{ section.settings.image_alt | escape }}"
+          width="1920"
+          height="1080"
+        >
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Perfumer quote",
+  "tag": "section",
+  "class": "section perfume-quotes-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "quote",
+      "label": "Quote",
+      "default": "“I wanted to play with contrasts against the backdrop of a beautiful vanilla note. I used some modern spice, a touch of watery fruit, airy florals and rich, warm and intoxicating woods. It all combines for this stimulating and addictive experience that leaves an everlasting impression.”"
+    },
+    {
+      "type": "text",
+      "id": "author",
+      "label": "Perfumer name",
+      "default": "Clement Gavarry"
+    },
+    {
+      "type": "text",
+      "id": "role",
+      "label": "Perfumer role",
+      "default": "Vanilla Skin Perfumer"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_url",
+      "label": "Fallback image URL",
+      "default": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/PHLUR_VanillaSkin_EDP_PerfumerQuoteImage.jpg?v=1718659714&width=1920"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image alt text",
+      "default": "perfume quote"
+    },
+    {
+      "type": "header",
+      "content": "Layout and colors"
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop vertical padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop horizontal padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Column gap",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "copy_padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Copy right padding",
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#fafafa"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Perfumer quote"
+    }
+  ]
+}
+{% endschema %}

@@ -1,9 +1,0 @@
-{
-  "sections": {
-    "main": {
-      "type": "siwa-product",
-      "settings": {}
-    }
-  },
-  "order": ["main"]
-}

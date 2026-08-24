@@ -1,0 +1,16 @@
+{%- comment -%}
+  Renders an article card.
+
+  Accepts:
+  - card_article: Article object
+{%- endcomment -%}
+{%- if card_article != blank -%}
+  <article class="blog-card">
+    <a href="{{ card_article.url }}">
+      {%- if card_article.image != blank -%}
+        {{ card_article.image | image_url: width: 1200 | image_tag: widths: '240, 480, 720, 960, 1200', loading: 'lazy', alt: card_article.image.alt }}
+      {%- endif -%}
+      <h3>{{ card_article.title | escape }}</h3>
+    </a>
+  </article>
+{%- endif -%}

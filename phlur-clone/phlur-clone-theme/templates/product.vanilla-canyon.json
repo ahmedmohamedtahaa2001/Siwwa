@@ -1,0 +1,553 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "product-breadcrumbs",
+      "blocks": {
+        "all": {
+          "type": "crumb",
+          "settings": {
+            "label": "Shop All",
+            "link": "/collections/all"
+          }
+        },
+        "perfume": {
+          "type": "crumb",
+          "settings": {
+            "label": "Perfume",
+            "link": "/collections/perfumes"
+          }
+        },
+        "canyon": {
+          "type": "crumb",
+          "settings": {
+            "label": "Vanilla Canyon",
+            "link": "/collections/vanilla-canyon"
+          }
+        }
+      },
+      "block_order": [
+        "all",
+        "perfume",
+        "canyon"
+      ],
+      "settings": {
+        "aria_label": "breadcrumbs",
+        "desktop_padding_top": 24,
+        "desktop_padding_horizontal": 80,
+        "desktop_padding_bottom": 24,
+        "tablet_padding_horizontal": 40,
+        "mobile_padding_top": 15,
+        "mobile_padding_horizontal": 20,
+        "mobile_padding_bottom": 15,
+        "desktop_font_size": 14,
+        "mobile_font_size": 13,
+        "desktop_line_height": 21,
+        "mobile_line_height": 18.2,
+        "link_color": "#666666",
+        "divider_size": 20,
+        "mobile_divider_size": 18,
+        "divider_slot_width": 28,
+        "mobile_divider_slot_width": 22
+      }
+    },
+    "main": {
+      "type": "product-main",
+      "blocks": {
+        "size_50": {
+          "type": "variant_link",
+          "settings": {
+            "label": "50mL",
+            "link": "/products/vanilla-canyon-50ml",
+            "active": true,
+            "available": true
+          }
+        },
+        "size_travel": {
+          "type": "variant_link",
+          "settings": {
+            "label": "9.5mL",
+            "link": "/products/vanilla-canyon-travel-size",
+            "active": false,
+            "available": true
+          }
+        },
+        "size_duet": {
+          "type": "variant_link",
+          "settings": {
+            "label": "Duet",
+            "link": "/products/vanilla-canyon-fragrance-duet",
+            "active": false,
+            "available": true
+          }
+        },
+        "scent_vanilla": {
+          "type": "scent",
+          "settings": {
+            "title": "Vanilla Skin",
+            "descriptor": "Woody Gourmand",
+            "link": "/products/vanilla-skin-perfume",
+            "fallback_asset": "1-PHLUR_PDP_VanillaSkin_EDP_50ml_CapOn.jpg",
+            "alt": "vanilla skin perfume",
+            "active": false
+          }
+        },
+        "scent_canyon": {
+          "type": "scent",
+          "settings": {
+            "title": "Vanilla Canyon",
+            "descriptor": "Woody Amber",
+            "link": "/products/vanilla-canyon-50ml",
+            "fallback_asset": "VANILLACANYON-50ml-ledge.jpg",
+            "alt": "Vanilla Canyon - 50mL - Phlur",
+            "active": true
+          }
+        },
+        "scent_missing": {
+          "type": "scent",
+          "settings": {
+            "title": "Missing Person",
+            "descriptor": "Floral Musk",
+            "link": "/products/missing-person-50ml",
+            "fallback_asset": "1-PHLUR_PDP_MissingPerson_EDP_CapOn.jpg",
+            "alt": "missing person perfume"
+          }
+        },
+        "scent_father": {
+          "type": "scent",
+          "settings": {
+            "title": "Father Figure",
+            "descriptor": "Woody Fresh",
+            "link": "/products/father-figure-50ml",
+            "fallback_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "alt": "father figure perfume"
+          }
+        },
+        "scent_honey": {
+          "type": "scent",
+          "settings": {
+            "title": "Honey Moon",
+            "descriptor": "Floral Gourmand",
+            "link": "/products/honey-moon-50ml",
+            "fallback_asset": "honeymoon-50ml-ledge.jpg",
+            "alt": "Honey Moon Eau de Parfum"
+          }
+        },
+        "scent_cherry": {
+          "type": "scent",
+          "settings": {
+            "title": "Cherry Stem",
+            "descriptor": "Fruity Wood",
+            "link": "/products/cherry-stem-50ml",
+            "fallback_asset": "CherryStem-50mL-Ledge.jpg",
+            "alt": "Cherry Stem - 50mL - Phlur"
+          }
+        },
+        "scent_afterglow": {
+          "type": "scent",
+          "settings": {
+            "title": "Afterglow",
+            "descriptor": "Woody Amber",
+            "link": "/products/afterglow-50ml",
+            "fallback_asset": "Afterglow-50mL-Ledge.jpg",
+            "alt": "Afterglow - 50mL - Phlur"
+          }
+        },
+        "scent_strawberry": {
+          "type": "scent",
+          "settings": {
+            "title": "Strawberry Letter",
+            "descriptor": "Fruity Wood",
+            "link": "/products/strawberry-letter-perfume",
+            "fallback_asset": "StrawberryLetter-50mL.jpg",
+            "alt": "strawberry perfume"
+          }
+        },
+        "scent_rose": {
+          "type": "scent",
+          "settings": {
+            "title": "Rose Whip",
+            "descriptor": "Fruity Floral",
+            "link": "/products/rose-whip-50ml",
+            "fallback_asset": "Rose_Whip_-_50mL_Allure_2025.jpg",
+            "alt": "Rose Whip - 50mL - Phlur"
+          }
+        },
+        "scent_golden": {
+          "type": "scent",
+          "settings": {
+            "title": "Golden Rule",
+            "descriptor": "Floral Citrus",
+            "link": "/products/golden-rule-50ml",
+            "fallback_asset": "PHLUR_Ecomm_PDP_EDP_50ml_GoldenRule.jpg",
+            "alt": "golden rule eau de parfum"
+          }
+        },
+        "scent_soft": {
+          "type": "scent",
+          "settings": {
+            "title": "Soft Spot",
+            "descriptor": "Woody Musk",
+            "link": "/products/soft-spot-50ml",
+            "fallback_asset": "1-PHLUR_PDP_SoftSpot_EDP_CapOn.jpg",
+            "alt": "soft spot full sized fragrance"
+          }
+        },
+        "scent_mood": {
+          "type": "scent",
+          "settings": {
+            "title": "Mood Ring",
+            "descriptor": "Fruity Floral",
+            "link": "/products/mood-ring-50ml",
+            "fallback_asset": "MoodRing-50mL.jpg",
+            "alt": "mood ring perfume by phlur"
+          }
+        },
+        "scent_somebody": {
+          "type": "scent",
+          "settings": {
+            "title": "Somebody Wood",
+            "descriptor": "Woody Citrus",
+            "link": "/products/somebody-wood-50ml",
+            "fallback_asset": "1-PHLUR_PDP_SomebodyWood_EDP_CapOn.jpg",
+            "alt": "Somebody Wood - 50mL - Phlur"
+          }
+        },
+        "description": {
+          "type": "accordion",
+          "settings": {
+            "title": "Description",
+            "content": "<p>Vanilla Canyon is inspired by the feeling of limitlessness. Like gazing into a vast canyon or driving toward the horizon on an open road, it’s an ode to awe-striking moments that take your breath away and make you feel alive. Vanilla Canyon is a soulful, yet sweet, take on vanilla. Warm vanilla is grounded in oak wood for a textured depth, and laced with wild honey, velvet plum, patchouli, and tonka, it lingers on the skin like a warm sunrise.</p>"
+          }
+        },
+        "notes": {
+          "type": "accordion",
+          "settings": {
+            "title": "Notes",
+            "content": "<p>Top: Velvet Plum, Tonka Beans<br>Heart: Jasmine Petals, Wild Honey<br>Base: Madagascar Vanilla, Patchouli, Oak Wood</p>"
+          }
+        },
+        "ingredients": {
+          "type": "accordion",
+          "settings": {
+            "title": "Ingredients",
+            "content": "<p>Please be aware that ingredient lists may change or vary from time to time. Please refer to the ingredient list on the product package you receive for the most up to date list of ingredients.</p><p>&nbsp;</p><p>Ingredients: Alcohol Denat., Fragrance (Parfum), Vanillin, Water/Aqua/Eau, Tetramethyl Acetyloctahydronaphthalenes, Ethylhexyl Salicylate, Coumarin, Butyl Methoxydibenzoylmethane, Pogostemon Cablin Oil, Rose Ketones, Beta-Caryophyllene.</p>"
+          }
+        },
+        "layer_cherry": {
+          "type": "product",
+          "settings": {
+            "fallback_full_title": "Cherry Stem - 50mL",
+            "fallback_display_title": "Cherry Stem",
+            "fallback_category": "50mL Eau de Parfum",
+            "fallback_badge": "BESTSELLER",
+            "fallback_url": "/products/cherry-stem-50ml",
+            "fallback_primary_asset": "CherryStem-50mL-Ledge.jpg",
+            "fallback_hover_asset": "CherryStem-50mL-Editorial5.jpg",
+            "primary_alt": "Cherry Stem - 50mL - Phlur",
+            "fallback_image_width": 4000,
+            "fallback_image_height": 4000,
+            "fallback_variant_id": "51618166145205",
+            "fallback_product_id": "10216077033653",
+            "fallback_price": "$99",
+            "fallback_available": true
+          }
+        },
+        "layer_heavy": {
+          "type": "product",
+          "settings": {
+            "fallback_full_title": "Heavy Cream - Body Mist",
+            "fallback_display_title": "Heavy Cream",
+            "fallback_category": "Full Size Body Mist",
+            "fallback_badge": "BESTSELLER",
+            "fallback_url": "/products/heavy-cream-body-mist",
+            "fallback_primary_asset": "HeavyCream-BodyMist_CapOn2.jpg",
+            "fallback_hover_asset": "HeavyCream-BodyMist_Splash.jpg",
+            "primary_alt": "Heavy Cream Body Mist",
+            "fallback_image_width": 4000,
+            "fallback_image_height": 4000,
+            "fallback_variant_id": "44406518939701",
+            "fallback_product_id": "7940060057781",
+            "fallback_price": "$39",
+            "fallback_available": true
+          }
+        }
+      },
+      "block_order": [
+        "size_50",
+        "size_travel",
+        "size_duet",
+        "scent_canyon",
+        "scent_missing",
+        "scent_father",
+        "scent_vanilla",
+        "scent_honey",
+        "scent_cherry",
+        "scent_afterglow",
+        "scent_strawberry",
+        "scent_rose",
+        "scent_golden",
+        "scent_soft",
+        "scent_mood",
+        "scent_somebody",
+        "description",
+        "notes",
+        "ingredients",
+        "layer_cherry",
+        "layer_heavy"
+      ],
+      "settings": {
+        "fallback_title": "Vanilla Canyon",
+        "variant_title": "50mL Eau de Parfum",
+        "tagline": "Warm vanilla rooted in oak",
+        "rating_value": "4.6",
+        "rating_percent_exact": "93.5802",
+        "review_count": 119,
+        "rating_aria": "Rated 4.6 out of 5 stars",
+        "tagline_border_color": "#5d442a",
+        "fallback_price": "$99",
+        "fallback_variant_id": "52807465402549",
+        "fallback_product_id": "10497284735157",
+        "fallback_product_url": "/products/vanilla-canyon-50ml",
+        "show_variant_links": true,
+        "variant_links_heading": "Size",
+        "scent_heading": "Scent",
+        "scent_card_width": 92,
+        "scent_gap": 8,
+        "membership_text": "Get 10% cashback with Membership",
+        "layer_heading": "Layer It With",
+        "details_label": "View full details",
+        "gallery_item_count": 6,
+        "gallery_alt_1": "Vanilla Canyon - 50mL - Phlur",
+        "gallery_alt_2": "Vanilla Canyon - 50mL - Phlur",
+        "gallery_alt_3": "Vanilla Canyon - 50mL - Phlur",
+        "gallery_alt_4": "Vanilla Canyon - 50mL - Phlur",
+        "gallery_alt_5": "Vanilla Canyon - 50mL - Phlur",
+        "gallery_alt_6": "Vanilla Canyon - 50mL - Phlur",
+        "gallery_badge_1": "NEW",
+        "gallery_badge_2": "NEW",
+        "gallery_badge_3": "NEW",
+        "gallery_badge_4": "NEW",
+        "gallery_badge_5": "NEW",
+        "gallery_badge_6": "NEW",
+        "gallery_badges_per_slide": false,
+        "gallery_badge": "NEW",
+        "gallery_width_adjustment": 0,
+        "product_kind": "perfume"
+      }
+    },
+    "product_scent_notes": {
+      "type": "product-scent-notes",
+      "blocks": {
+        "top": {
+          "type": "note",
+          "settings": {
+            "label": "Top",
+            "notes": "Velvet Plum\nTonka Beans"
+          }
+        },
+        "heart": {
+          "type": "note",
+          "settings": {
+            "label": "Heart",
+            "notes": "Jasmine Petals\nWild Honey"
+          }
+        },
+        "base": {
+          "type": "note",
+          "settings": {
+            "label": "Base",
+            "notes": "Madagascar Vanilla\nPatchouli\nOak Wood"
+          }
+        }
+      },
+      "block_order": [
+        "top",
+        "heart",
+        "base"
+      ],
+      "settings": {
+        "heading": "Scent Notes",
+        "fallback_asset": "Vanilla_Canyon-_Ingredients.jpg",
+        "image_alt": "Vanilla Canyon scent ingredients"
+      }
+    },
+    "product_related_collection": {
+      "type": "product-related-collection",
+      "blocks": {
+        "p01": {
+          "type": "product",
+          "settings": {
+            "product": "vanilla-canyon-50ml"
+          }
+        },
+        "p02": {
+          "type": "product",
+          "settings": {
+            "product": "missing-person-50ml"
+          }
+        },
+        "p03": {
+          "type": "product",
+          "settings": {
+            "product": "father-figure-50ml"
+          }
+        },
+        "p04": {
+          "type": "product",
+          "settings": {
+            "product": "vanilla-skin-perfume"
+          }
+        },
+        "p05": {
+          "type": "product",
+          "settings": {
+            "product": "honey-moon-50ml"
+          }
+        },
+        "p06": {
+          "type": "product",
+          "settings": {
+            "product": "cherry-stem-50ml"
+          }
+        },
+        "p07": {
+          "type": "product",
+          "settings": {
+            "product": "strawberry-letter-perfume"
+          }
+        },
+        "p08": {
+          "type": "product",
+          "settings": {
+            "product": "golden-rule-50ml"
+          }
+        },
+        "p09": {
+          "type": "product",
+          "settings": {
+            "product": "afterglow-50ml"
+          }
+        },
+        "p10": {
+          "type": "product",
+          "settings": {
+            "product": "rose-whip-50ml"
+          }
+        },
+        "p11": {
+          "type": "product",
+          "settings": {
+            "product": "soft-spot-50ml"
+          }
+        },
+        "p12": {
+          "type": "product",
+          "settings": {
+            "product": "mood-ring-50ml"
+          }
+        },
+        "p13": {
+          "type": "product",
+          "settings": {
+            "product": "somebody-wood-50ml"
+          }
+        }
+      },
+      "block_order": [
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p06",
+        "p07",
+        "p08",
+        "p09",
+        "p10",
+        "p11",
+        "p12",
+        "p13"
+      ],
+      "settings": {
+        "source_mode": "blocks",
+        "heading": "Modern Fine Fragrance",
+        "product_limit": 13,
+        "variant_label": "50mL Eau de Parfum",
+        "padding_top": 38,
+        "mobile_padding_top": 28,
+        "item_gap": 16
+      }
+    },
+    "perfume-quotes": {
+      "type": "perfume-quotes",
+      "settings": {
+        "quote": "“I was inspired by wide-open horizons and the freedom to just be. I wanted to give vanilla a new form, less sugary, more soulful. Blending Madagascar vanilla with oak wood, honeyed warmth, and patchouli creates a grounded, intimate depth that lingers beautifully on skin.”",
+        "author": "Jerome Epinette",
+        "role": "Vanilla Canyon Perfumer",
+        "image_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/vanilla_canyon_-_Perfumer_Quote.jpg?v=1785886134",
+        "image_alt": "perfume quote",
+        "padding_vertical": 60,
+        "padding_horizontal": 80,
+        "column_gap": 20,
+        "copy_padding": 60,
+        "background_color": "#fafafa",
+        "text_color": "#000000"
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+        "fallback_product_id": "10497284735157",
+        "rating": "4.6",
+        "review_count": 119
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "blocks": {
+        "related_1": { "type": "product", "settings": { "fallback_product_id": "1", "fallback_variant_id": "1", "fallback_handle": "vanilla-skin-perfume", "fallback_title": "Vanilla Skin", "fallback_full_title": "Vanilla Skin - 50mL", "fallback_category": "50mL Eau de Parfum", "fallback_price": "$99", "fallback_regular_price": "$99", "fallback_link": "/products/vanilla-skin-perfume", "fallback_primary_url": "1-PHLUR_PDP_VanillaSkin_EDP_50ml_CapOn.jpg", "fallback_secondary_url": "6-PHLUR_PDP_VanillaSkin_EDP_50ML_Editorial.jpg", "fallback_available": true } },
+        "related_2": { "type": "product", "settings": { "fallback_product_id": "2", "fallback_variant_id": "2", "fallback_handle": "missing-person-50ml", "fallback_title": "Missing Person", "fallback_full_title": "Missing Person - 50mL", "fallback_category": "50mL Eau de Parfum", "fallback_price": "$99", "fallback_regular_price": "$99", "fallback_link": "/products/missing-person-50ml", "fallback_primary_url": "1-PHLUR_PDP_MissingPerson_EDP_CapOn.jpg", "fallback_secondary_url": "mp_pdp.jpg", "fallback_available": true } },
+        "related_3": { "type": "product", "settings": { "fallback_product_id": "3", "fallback_variant_id": "3", "fallback_handle": "father-figure-50ml", "fallback_title": "Father Figure", "fallback_full_title": "Father Figure - 50mL", "fallback_category": "50mL Eau de Parfum", "fallback_price": "$99", "fallback_regular_price": "$99", "fallback_link": "/products/father-figure-50ml", "fallback_primary_url": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg", "fallback_secondary_url": "FF.jpg", "fallback_available": true } },
+        "related_4": { "type": "product", "settings": { "fallback_product_id": "4", "fallback_variant_id": "4", "fallback_handle": "mood-ring-50ml", "fallback_title": "Mood Ring", "fallback_full_title": "Mood Ring - 50mL", "fallback_category": "50mL Eau de Parfum", "fallback_price": "$99", "fallback_regular_price": "$99", "fallback_link": "/products/mood-ring-50ml", "fallback_primary_url": "MoodRing-50mL.jpg", "fallback_secondary_url": "6-PHLR_PDP_MoodRing_50ml_EDP_Editorial.jpg", "fallback_available": true } }
+      },
+      "block_order": ["related_1", "related_2", "related_3", "related_4"],
+      "settings": {
+        "source_mode": "blocks",
+        "product_limit": 8,
+        "heading": "You May Also Like",
+        "widget_id": "145779",
+        "source_product_id": "10497284735157",
+        "padding_bottom": 60,
+        "previous_icon_asset": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Chevron-L.svg?v=1773632141",
+        "next_icon_asset": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Chevron-R.svg?v=1773632124"
+      }
+    },
+    "brand_video": {
+      "type": "pdp-brand-video",
+      "settings": {
+        "video_source_mode": "theme_asset",
+        "desktop_video_asset": "f6185d3473374cf7828232ad564d8a15.HD-720p-4.5Mbps-91277877.mp4",
+        "mobile_video_asset": "ec5852b07b5843aab17cd448ae3871d3.HD-1080p-7.2Mbps-91277878.mp4",
+        "desktop_padding_top": 40,
+        "desktop_padding_horizontal": 80,
+        "desktop_padding_bottom": 40,
+        "mobile_padding_top": 20,
+        "mobile_padding_horizontal": 20,
+        "mobile_padding_bottom": 20,
+        "section_max_width": 2000,
+        "video_aspect_ratio": "1280 / 561",
+        "mobile_video_aspect_ratio": "335 / 438.75"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "brand_video",
+    "product_scent_notes",
+    "product_related_collection",
+    "perfume-quotes",
+    "product-reviews",
+    "related-products"
+  ]
+}

@@ -1,0 +1,28 @@
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+  assign display_title = product.metafields.custom.display_title | default: product.title | remove: ' - 50mL' | remove: ' - 50ML'
+  assign variant_label = product.metafields.custom.variant_title | default: settings.variant_label
+  assign badge_label = forced_badge | default: product.metafields.custom.badge
+  if badge_label == blank and product.tags contains settings.bestseller_tag
+    assign badge_label = settings.bestseller_label
+  endif
+  if badge_label == blank
+    assign badge_label = settings.fallback_badge
+  endif
+  assign secondary_media = product.media[1]
+  assign image_sizes = '(min-width: 1600px) 367px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)'
+-%}
+<li id="Slide-{{ section.id }}-{{ product.id }}" class="swiper-slide" data-related-slide{% if block != blank %} {{ block.shopify_attributes }}{% endif %}>
+  <div class="card-wrapper product-card-wrapper underline-links-hover">
+    <div class="card card--standard card--media" style="--ratio-percent: 100%;">
+      <div class="card__inner color-scheme-2 gradient ratio" style="--ratio-percent: 100%;">
+        <div class="card__media"><div class="media media--transparent media--hover-effect"><a href="{{ product.url }}" aria-labelledby="title--{{ product.id }} Badge--{{ product.id }}">
+          {{ product.featured_media | image_url: width: 533 | image_tag: widths: '165,360,533,720,940,1066', sizes: image_sizes, loading: 'lazy', class: 'motion-reduce', alt: product.featured_media.alt }}
+          {%- if secondary_media != blank -%}{{ secondary_media | image_url: width: 533 | image_tag: widths: '165,360,533,720,940,1066', sizes: image_sizes, loading: 'lazy', class: 'motion-reduce', alt: secondary_media.alt }}{%- endif -%}
+        </a></div></div>
+        <div class="card__content"><div class="card__information"><h4 class="card__heading aktiv"><a id="StandardCardNoMediaLink--{{ product.id }}" href="{{ product.url }}" class="full-unstyled-link" aria-labelledby="StandardCardNoMediaLink--{{ product.id }} NoMediaStandardBadge--{{ product.id }}">{{ product.title }}</a></h4></div><div class="card__badge top left{% if badge_label != blank %} show-label-badge{% endif %}">{% if badge_label != blank %}<span id="Badge--{{ product.id }}" class="badge badge-label badge--bottom-left">{{ badge_label }}</span>{% else %}<span id="Badge--{{ product.id }}" class="visually-hidden">{{ product.title }}</span>{% endif %}<span id="NoMediaStandardBadge--{{ product.id }}" class="visually-hidden">{{ badge_label | default: product.title }}</span></div></div>
+      </div>
+      <div class="card__content"><div class="card__information"><h4 class="card__heading aktiv" id="title--{{ product.id }}"><a id="CardLink--{{ product.id }}" href="{{ product.url }}" class="full-unstyled-link" aria-labelledby="CardLink--{{ product.id }} Badge--{{ product.id }}">{{ display_title }}<br><span class="variant-info p2">{{ variant_label }}</span></a></h4><div class="card-information"><span class="caption-large light"></span></div></div><div class="quick-add no-js-hidden"><product-form data-section-id="{{ section.id }}"><form method="post" action="{{ routes.cart_add_url }}" id="quick-add-{{ product.id }}" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form" data-related-form><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="id" value="{{ variant.id }}" class="product-variant-id"><button id="quick-add-{{ product.id }}-submit" class="quick-add__submit outline-black button button--full-width" type="submit" aria-labelledby="quick-add-{{ product.id }}-submit title--{{ product.id }}" aria-live="polite" data-sold-out-message="true"{% unless variant.available %} disabled aria-disabled="true"{% endunless %}><span class="flex-container-row{% unless variant.available %} hidden{% endunless %}"><span class="add">{{ settings.add_label }}</span>&nbsp;<span class="square-dot">·</span>&nbsp;<span class="price{% if variant.compare_at_price > variant.price %} price--on-sale{% endif %}"><span class="price__container"><span class="price__regular"><span class="visually-hidden visually-hidden--inline">{{ settings.regular_price_label }}</span><span class="price-item price-item--regular">{{ variant.price | money_without_trailing_zeros }}</span></span>{% if variant.compare_at_price > variant.price %}<span class="price__sale"><span class="visually-hidden visually-hidden--inline">{{ settings.regular_price_label }}</span><s class="price-item price-item--regular">{{ variant.compare_at_price | money_without_trailing_zeros }}</s></span>{% endif %}</span></span></span><span class="sold-out-message{% if variant.available %} hidden{% endif %}">{{ settings.sold_out_label }}</span><div class="loading__spinner hidden"><svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg></div></button><input type="hidden" name="product-id" value="{{ product.id }}"><input type="hidden" name="section-id" value="{{ section.id }}"></form></product-form></div></div>
+    </div>
+  </div>
+</li>

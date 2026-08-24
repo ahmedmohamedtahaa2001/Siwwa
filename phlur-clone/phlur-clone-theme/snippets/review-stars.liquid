@@ -1,0 +1,8 @@
+{%- assign star_count = rating | default: 5 -%}
+<span class="oke-stars" role="img" aria-label="Rated {{ star_count }} out of 5 stars">
+  {%- for index in (1..5) -%}
+    <svg class="oke-star{% if index <= star_count %} is-filled{% endif %}" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false">
+      <path d="M10 1.25l2.7 5.47 6.04.88-4.37 4.26 1.03 6.01L10 15.03l-5.4 2.84 1.03-6.01L1.26 7.6l6.04-.88L10 1.25Z"/>
+    </svg>
+  {%- endfor -%}
+</span>

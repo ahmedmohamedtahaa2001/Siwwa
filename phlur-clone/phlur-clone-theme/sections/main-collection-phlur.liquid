@@ -1,0 +1,91 @@
+{{ 'collection-grid.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign banner_title = collection.title | default: section.settings.banner_alt
+  if collection.handle == 'all'
+    assign banner_title = section.settings.banner_alt
+  endif
+  assign banner_description = collection.description | strip_html
+  if banner_description == blank
+    assign banner_description = section.settings.intro_fallback
+  endif
+  assign resolved_banner_image = collection.image
+  if collection.handle == 'all' or resolved_banner_image == blank
+    assign resolved_banner_image = section.settings.banner_image
+  endif
+  assign grouped_all_enabled = section.settings.enable_grouped_all | default: true
+  assign collection_page_size = section.settings.products_per_page | default: 24
+-%}
+<section class="phlur-collection-reference" style="--collection-bg:{{ section.settings.background_color }};--collection-fg:{{ section.settings.text_color }};--collection-desktop-gutter:{{ section.settings.desktop_gutter }}px;--collection-mobile-gutter:{{ section.settings.mobile_gutter }}px;--collection-grid-gap:{{ section.settings.grid_gap }}px">
+  <div class="phlur-collection-banner">
+    <div class="phlur-collection-banner__image">
+      {%- if resolved_banner_image != blank -%}
+        {{ resolved_banner_image | image_url: width: 2200 | image_tag: widths: '750, 1100, 1500, 1800, 2200', sizes: '100vw', loading: 'eager', fetchpriority: 'high', alt: banner_title }}
+      {%- else -%}
+        <img src="{{ 'collection-all-banner.jpg' | asset_url }}" alt="{{ section.settings.banner_alt | escape }}" width="2200" height="349" loading="eager" fetchpriority="high">
+      {%- endif -%}
+    </div>
+    <div class="phlur-collection-banner__text"><h1>{% if section.settings.eyebrow != blank %}<span>{{ section.settings.eyebrow }}</span>{% endif %}{{ banner_title }}</h1>{% if banner_description != blank %}<p>{{ banner_description }}</p>{% endif %}</div>
+  </div>
+  {%- capture fallback_navigation -%}
+    <li class="menu-item shop-all"><a class="secondary-menu-item-click current-page" href="{{ routes.all_products_collection_url }}">{{ section.settings.nav_all_label }}</a></li>
+    <li class="menu-item"><a class="secondary-menu-item-click" href="{{ routes.collections_url }}/best-sellers">Best Sellers</a></li><li class="menu-item"><a class="secondary-menu-item-click" href="{{ routes.collections_url }}/perfumes">Perfumes</a></li><li class="menu-item"><a class="secondary-menu-item-click" href="{{ routes.collections_url }}/for-her">For Her</a></li><li class="menu-item"><a class="secondary-menu-item-click" href="{{ routes.collections_url }}/for-him">For Him</a></li><li class="menu-item"><a class="secondary-menu-item-click" href="{{ routes.collections_url }}/new-drops">New Drops</a></li><li class="menu-item"><a class="secondary-menu-item-click" href="{{ routes.collections_url }}/summer-collection">Summer Collection</a></li>
+  {%- endcapture -%}
+  {%- capture menu_navigation -%}{% for link in section.settings.navigation_menu.links %}<li class="menu-item"><a class="secondary-menu-item-click{% if link.current %} current-page{% endif %}" href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}{%- endcapture -%}
+  {%- assign navigation_items = menu_navigation | strip -%}{% if navigation_items == blank %}{% assign navigation_items = fallback_navigation %}{% endif %}
+  <nav class="collection-subnav" aria-label="Collection categories"><ul class="shop-submenu" role="list">{{ navigation_items }}</ul></nav>
+  <nav class="collection-subnav-mobile" aria-label="Collection categories"><ul class="scroll-menu" role="list">{{ navigation_items }}</ul></nav>
+  <div class="phlur-collection-groups" id="ProductGridContainer">
+    {%- if collection.handle != 'all' or grouped_all_enabled == false -%}
+      {%- paginate collection.products by collection_page_size -%}
+        <section class="phlur-product-group phlur-product-group--current" data-collection-handle="{{ collection.handle }}">
+          <div class="phlur-product-group__header"><h2>{{ collection.title }}</h2><span class="phlur-product-group__count">{{ collection.products_count }} {{ section.settings.products_count_label | default: 'products' }}</span></div>
+          {%- if collection.products_count > 0 -%}<ul class="phlur-product-group__grid" id="product-grid" role="list">{%- for product in collection.products -%}<li>{% render 'collection-product-card', card_product: product, collection: collection, loading: 'lazy' %}</li>{%- endfor -%}</ul>{%- else -%}<p class="phlur-collection-empty">{{ section.settings.empty_message | default: 'No products are available in this collection.' }}</p>{%- endif -%}
+          {%- if paginate.pages > 1 -%}<nav class="phlur-pagination" aria-label="Pagination">{%- if paginate.previous -%}<a href="{{ paginate.previous.url }}" rel="prev">{{ section.settings.previous_label | default: 'Previous' }}</a>{%- endif -%}<span aria-current="page">{{ paginate.current_page }} / {{ paginate.pages }}</span>{%- if paginate.next -%}<a href="{{ paginate.next.url }}" rel="next">{{ section.settings.next_label | default: 'Next' }}</a>{%- endif -%}</nav>{%- endif -%}
+        </section>
+      {%- endpaginate -%}
+    {%- else -%}
+    {%- for group_index in (1..6) -%}
+      {%- liquid
+        case group_index
+          when 1
+            assign source_collection = section.settings.group_1_collection
+            assign group_heading = section.settings.group_1_heading
+            assign group_description = section.settings.group_1_description
+          when 2
+            assign source_collection = section.settings.group_2_collection
+            assign group_heading = section.settings.group_2_heading
+            assign group_description = section.settings.group_2_description
+          when 3
+            assign source_collection = section.settings.group_3_collection
+            assign group_heading = section.settings.group_3_heading
+            assign group_description = section.settings.group_3_description
+          when 4
+            assign source_collection = section.settings.group_4_collection
+            assign group_heading = section.settings.group_4_heading
+            assign group_description = section.settings.group_4_description
+          when 5
+            assign source_collection = section.settings.group_5_collection
+            assign group_heading = section.settings.group_5_heading
+            assign group_description = section.settings.group_5_description
+          when 6
+            assign source_collection = section.settings.group_6_collection
+            assign group_heading = section.settings.group_6_heading
+            assign group_description = section.settings.group_6_description
+        endcase
+        assign group_url = source_collection.url | default: routes.all_products_collection_url
+      -%}
+      {%- if source_collection != blank and source_collection.products_count > 0 -%}
+      <section class="phlur-product-group" data-collection-handle="{{ source_collection.handle }}">
+        <div class="phlur-product-group__header"><h2><a href="{{ group_url }}">{{ group_heading }}</a></h2><a class="sub-collection-link-out" href="{{ group_url }}">{{ section.settings.group_link_label }} {{ group_heading }}</a>{% if group_description != blank %}<p>{{ group_description }}</p>{% endif %}</div>
+        <ul class="phlur-product-group__grid" role="list"{% if forloop.first %} id="product-grid"{% endif %}>
+          {% for product in source_collection.products limit: section.settings.products_per_group %}<li>{% render 'collection-product-card', card_product: product, collection: source_collection, loading: 'lazy' %}</li>{% endfor %}
+        </ul>
+      </section>
+      {%- endif -%}
+    {%- endfor -%}
+    {%- endif -%}
+  </div>
+</section>
+{% schema %}
+{"name":"PHLUR collection landing","settings":[{"type":"image_picker","id":"banner_image","label":"Banner image"},{"type":"text","id":"banner_alt","label":"Banner alt text","default":"All"},{"type":"text","id":"eyebrow","label":"Collection eyebrow","default":"Collection:"},{"type":"textarea","id":"intro_fallback","label":"Intro fallback","default":"Fragrance for every ritual – scent explored in every form"},{"type":"link_list","id":"navigation_menu","label":"Collection navigation"},{"type":"text","id":"nav_all_label","label":"Shop all label","default":"Shop All"},{"type":"collection","id":"group_1_collection","label":"Group 1 collection"},{"type":"text","id":"group_1_heading","label":"Group 1 heading","default":"Bestsellers"},{"type":"text","id":"group_1_description","label":"Group 1 description","default":"Discover what everyone is reaching for"},{"type":"collection","id":"group_2_collection","label":"Group 2 collection"},{"type":"text","id":"group_2_heading","label":"Group 2 heading","default":"Perfume"},{"type":"text","id":"group_2_description","label":"Group 2 description","default":"Scents that tell your story"},{"type":"collection","id":"group_3_collection","label":"Group 3 collection"},{"type":"text","id":"group_3_heading","label":"Group 3 heading","default":"Body Mist"},{"type":"text","id":"group_3_description","label":"Group 3 description","default":"Light, layerable mists for hair and body"},{"type":"collection","id":"group_4_collection","label":"Group 4 collection"},{"type":"text","id":"group_4_heading","label":"Group 4 heading","default":"Body Care"},{"type":"text","id":"group_4_description","label":"Group 4 description","default":"Nourishing formulas, elevated with scent"},{"type":"collection","id":"group_5_collection","label":"Group 5 collection"},{"type":"text","id":"group_5_heading","label":"Group 5 heading","default":"Gifts & Sets"},{"type":"text","id":"group_5_description","label":"Group 5 description","default":"Gifts and sets designed to delight"},{"type":"collection","id":"group_6_collection","label":"Group 6 collection"},{"type":"text","id":"group_6_heading","label":"Group 6 heading","default":"Farewell Sale"},{"type":"text","id":"group_6_description","label":"Group 6 description","default":"Up to 40% off discontinued scents. All products are final sale."},{"type":"text","id":"group_link_label","label":"Group link label","default":"Shop All"},{"type":"range","id":"products_per_group","label":"Products per group","min":4,"max":12,"step":1,"default":8},{"type":"color","id":"background_color","label":"Background color","default":"#fafafa"},{"type":"color","id":"text_color","label":"Text color","default":"#000000"},{"type":"range","id":"desktop_gutter","label":"Desktop page gutter","min":0,"max":120,"step":4,"unit":"px","default":80},{"type":"range","id":"mobile_gutter","label":"Mobile page gutter","min":0,"max":40,"step":2,"unit":"px","default":20},{"type":"range","id":"grid_gap","label":"Product grid gap","min":0,"max":40,"step":2,"unit":"px","default":20}],"blocks":[{"type":"fallback_product","name":"Fallback product","settings":[{"type":"product","id":"product","label":"Product"},{"type":"text","id":"title","label":"Title","default":"Missing Person"},{"type":"text","id":"subtitle","label":"Category","default":"50mL Eau de Parfum"},{"type":"text","id":"price","label":"Price","default":"$99"},{"type":"text","id":"compare_price","label":"Compare-at price"},{"type":"text","id":"badge","label":"Badge"},{"type":"image_picker","id":"primary_image","label":"Primary image"},{"type":"image_picker","id":"secondary_image","label":"Secondary image"},{"type":"url","id":"product_url","label":"Product URL"},{"type":"url","id":"image_url","label":"Legacy fallback image URL"},{"type":"text","id":"alt_text","label":"Image alt text"}]}],"presets":[{"name":"PHLUR collection landing"}]}
+{% endschema %}

@@ -1,0 +1,18 @@
+{%- comment -%}
+  Renders a product card.
+
+  Accepts:
+  - card_product: Product object
+  - card_collection: Optional collection object for contextual URLs
+{%- endcomment -%}
+{%- if card_product != blank -%}
+  <article class="product-card">
+    <a href="{{ card_product.url | within: card_collection }}">
+      {%- if card_product.featured_media != blank -%}
+        {{ card_product.featured_media | image_url: width: 900 | image_tag: widths: '180, 360, 540, 720, 900', loading: 'lazy', alt: card_product.featured_media.alt }}
+      {%- endif -%}
+      <h3>{{ card_product.title | escape }}</h3>
+      <p>{{ card_product.price | money }}</p>
+    </a>
+  </article>
+{%- endif -%}

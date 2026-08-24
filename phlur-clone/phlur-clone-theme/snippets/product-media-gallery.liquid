@@ -1,0 +1,40 @@
+{%- liquid
+  assign gallery_setting_ids = 'gallery_image_1|gallery_image_2|gallery_image_3|gallery_image_4|gallery_image_5|gallery_image_6' | split: '|'
+-%}
+<div class="swiper productSwiper" data-product-gallery role="region" aria-label="{{ section.settings.gallery_aria_label | escape }}">
+  <div id="Slider-Gallery-{{ section.id }}" class="swiper-wrapper product__media-list" data-current-index="0">
+    {%- for setting_id in gallery_setting_ids -%}
+      {%- if forloop.index > section.settings.gallery_item_count -%}{%- break -%}{%- endif -%}
+      {%- assign media_index = forloop.index0 -%}
+      {%- assign media = product.media[media_index] -%}
+      {%- assign custom_media = section.settings[setting_id] -%}
+      {%- case forloop.index -%}
+        {%- when 1 -%}{%- assign gallery_alt = section.settings.gallery_alt_1 -%}{%- assign gallery_badge = section.settings.gallery_badge_1 -%}
+        {%- when 2 -%}{%- assign gallery_alt = section.settings.gallery_alt_2 -%}{%- assign gallery_badge = section.settings.gallery_badge_2 -%}
+        {%- when 3 -%}{%- assign gallery_alt = section.settings.gallery_alt_3 -%}{%- assign gallery_badge = section.settings.gallery_badge_3 -%}
+        {%- when 4 -%}{%- assign gallery_alt = section.settings.gallery_alt_4 -%}{%- assign gallery_badge = section.settings.gallery_badge_4 -%}
+        {%- when 5 -%}{%- assign gallery_alt = section.settings.gallery_alt_5 -%}{%- assign gallery_badge = section.settings.gallery_badge_5 -%}
+        {%- when 6 -%}{%- assign gallery_alt = section.settings.gallery_alt_6 -%}{%- assign gallery_badge = section.settings.gallery_badge_6 -%}
+      {%- endcase -%}
+      {%- unless section.settings.gallery_badges_per_slide -%}{%- assign gallery_badge = section.settings.gallery_badge -%}{%- endunless -%}
+      {%- assign gallery_loading = 'lazy' -%}{%- assign gallery_priority = 'auto' -%}{%- if forloop.first -%}{%- assign gallery_loading = 'eager' -%}{%- assign gallery_priority = 'high' -%}{%- endif -%}
+      {%- if media != blank or custom_media != blank -%}<div class="swiper-slide{% if forloop.first %} swiper-slide-active{% elsif forloop.index == 2 %} swiper-slide-next{% endif %}" data-swiper-slide-index="{{ media_index }}" role="group" aria-label="{{ forloop.index }} / {{ section.settings.gallery_item_count }}">
+        <div class="product-media-container media-type-image media-fit-contain global-media-settings gradient constrain-height" style="--ratio: {{ section.settings.gallery_ratio_percent | divided_by: 100.0 }}; --preview-ratio: {{ section.settings.gallery_ratio_percent | divided_by: 100.0 }};">
+          <div class="pdp-discount-note"><span>{{ gallery_badge | escape }}</span></div>
+          <div class="product__media media media--transparent">
+            {%- if media != blank -%}
+              {{ media | image_url: width: 1946 | image_tag: class: 'image-magnify-none', widths: '246,493,600,713,823,990,1100,1206,1346,1426,1646,1946', sizes: '(min-width: 1600px) 825px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)', loading: gallery_loading, fetchpriority: gallery_priority, decoding: 'async', alt: gallery_alt }}
+            {%- elsif custom_media != blank -%}
+              {{ custom_media | image_url: width: 1946 | image_tag: class: 'image-magnify-none', widths: '246,493,600,713,823,990,1100,1206,1346,1426,1646,1946', sizes: '(min-width: 1600px) 825px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)', loading: gallery_loading, fetchpriority: gallery_priority, decoding: 'async', alt: gallery_alt }}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>{%- endif -%}
+    {%- endfor -%}
+  </div>
+  <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal" aria-label="{{ section.settings.gallery_aria_label | escape }}">
+    {%- for setting_id in gallery_setting_ids -%}{%- if forloop.index > section.settings.gallery_item_count -%}{%- break -%}{%- endif -%}<span class="swiper-pagination-bullet{% if forloop.first %} swiper-pagination-bullet-active{% endif %}" data-gallery-index="{{ forloop.index0 }}" role="button" tabindex="0" aria-label="{{ section.settings.show_image_label | escape }} {{ forloop.index }}"{% if forloop.first %} aria-current="true"{% endif %}></span>{%- endfor -%}
+  </div>
+  <div class="swiper-button-prev swiper-button-disabled" role="button" aria-label="{{ section.settings.previous_image_label | escape }}" aria-disabled="true" tabindex="-1"><div class="nav-arrow"><div class="nav-arrow-bg-circle"></div><img src="{{ 'Chevron-L.svg' | asset_url }}" alt="" aria-hidden="true" width="24" height="24" class="product-gallery-nav-icon"></div></div>
+  <div class="swiper-button-next" role="button" aria-label="{{ section.settings.next_image_label | escape }}" aria-disabled="false" tabindex="0"><div class="nav-arrow"><div class="nav-arrow-bg-circle"></div><img src="{{ 'Chevron-R.svg' | asset_url }}" alt="" aria-hidden="true" width="24" height="24" class="product-gallery-nav-icon"></div></div>
+</div>

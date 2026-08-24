@@ -1,0 +1,519 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "product-breadcrumbs",
+      "blocks": {
+        "all": {
+          "type": "crumb",
+          "settings": {
+            "label": "Shop All",
+            "link": "/collections/all"
+          }
+        },
+        "mist": {
+          "type": "crumb",
+          "settings": {
+            "label": "Body Mist",
+            "link": "/collections/body-mist"
+          }
+        },
+        "vanilla": {
+          "type": "crumb",
+          "settings": {
+            "label": "Vanilla Skin",
+            "link": "/collections/vanilla-skin"
+          }
+        }
+      },
+      "block_order": [
+        "all",
+        "mist",
+        "vanilla"
+      ],
+      "settings": {
+        "aria_label": "breadcrumbs"
+      }
+    },
+    "main": {
+      "type": "product-main",
+      "blocks": {
+        "scent_vanilla": {
+          "type": "scent",
+          "settings": {
+            "title": "Vanilla Skin",
+            "descriptor": "Woody Gourmand",
+            "link": "/products/vanilla-skin-body-mist",
+            "fallback_asset": "vanilla-skin-body-mist-main.jpg",
+            "alt": "Vanilla Skin body mist",
+            "active": true
+          }
+        },
+        "scent_blackberry": {
+          "type": "scent",
+          "settings": {
+            "title": "Vanilla Blackberry",
+            "descriptor": "Fruity Gourmand",
+            "link": "/products/vanilla-blackberry-body-mist",
+            "fallback_asset": "vanilla-blackberry-body-mist.jpg",
+            "alt": "Vanilla Blackberry body mist"
+          }
+        },
+        "scent_cream": {
+          "type": "scent",
+          "settings": {
+            "title": "Heavy Cream",
+            "descriptor": "Gourmand",
+            "link": "/products/heavy-cream-body-mist",
+            "fallback_asset": "heavy-cream-body-mist.jpg",
+            "alt": "Heavy Cream body mist"
+          }
+        },
+        "description": {
+          "type": "accordion",
+          "settings": {
+            "title": "Description",
+            "content": "<p>Familiar and delectable. Hypnotic and decadent. Vanilla Skin, unlike any vanilla fragrance, evokes an iconic creaminess wrapped in a kaleidoscope of spice and intrigue. The dual nature of pink pepper and sugar settle down through rich cashmere before nestling into a core of addictive vanilla and cozy sandalwood. Vanilla Skin is a multidimensional take on an intoxicating sensual gourmand.</p><p>For a longer-lasting, more intense version of this best-selling fragrance, try the <a href=\"/products/vanilla-skin-perfume\">Vanilla Skin Perfume</a>.</p>"
+          }
+        },
+        "notes": {
+          "type": "accordion",
+          "settings": {
+            "title": "Notes",
+            "content": "<p>Top: Pink Pepper, Pink Apple, Sugar Crystals<br>Heart: Lily, Jasmine Petals, Cashmere Wood<br>Base: Benzoin, Vanilla, Sandalwood, Agarwood</p>"
+          }
+        },
+        "ingredients": {
+          "type": "accordion",
+          "settings": {
+            "title": "Ingredients",
+            "use_ingredients_metafield": true,
+            "content": "<p>Alcohol Denat.<br>Water/Eau/Aqua<br>Fragrance/Parfum*</p><p>*Fragrance Ingredients: Ethylene Brassylate, Dimethylcyclohexylethoxy Isobutylpropanoate, Tetrahydro-Methyl-Methylpropyl)-Pyran-4-Ol, Ethyl Hydroxypyrone, Ethyl Vanillin, Vanillin, Methyl dihydrojasmonate, Tetramethyl Acetyloctahydronaphthalenes, Oxacycloheptadec-10-EN-2-One, Dipropylene Glycol, Methyl Hydrogenated Rosinate, Isopropyl Myristate, Alpha-Isomethyl Ionone, Benzyl Alcohol, Benzyl Benzoate, Farnesol, Limonene.</p>"
+          }
+        },
+        "cream_duo": {
+          "type": "product",
+          "settings": {
+            "fallback_full_title": "Vanilla & Cream - Hair & Body Mist Duo",
+            "fallback_display_title": "Vanilla & Cream",
+            "fallback_category": "Hair & Body Mist Duo",
+            "fallback_badge": "BESTSELLER",
+            "fallback_url": "/products/vanilla-cream-duo-body-mists",
+            "fallback_primary_asset": "phlur-vanilla-cream-duo.jpg",
+            "fallback_hover_asset": "vanilla-cream-duo-lifestyle.jpg",
+            "primary_alt": "Vanilla and Cream Hair and Body Mist Duo",
+            "fallback_image_width": 4000,
+            "fallback_image_height": 4000,
+            "fallback_variant_id": "44983499882677",
+            "fallback_product_id": "8125310632117",
+            "fallback_price": "$68",
+            "fallback_compare_price": "$78",
+            "fallback_available": true,
+            "badge_color": "#000000",
+            "badge_background": "#ffffff"
+          }
+        },
+        "body_duo": {
+          "type": "product",
+          "settings": {
+            "fallback_full_title": "Vanilla Skin - Body Duo",
+            "fallback_display_title": "Vanilla Skin",
+            "fallback_category": "Body Duo",
+            "fallback_badge": "NEW",
+            "fallback_url": "/products/vanilla-skin-body-duo",
+            "fallback_primary_asset": "vanilla-skin-body-duo.jpg",
+            "fallback_hover_asset": "vanilla-skin-body-duo-editorial.jpg",
+            "primary_alt": "Vanilla Skin Body Duo",
+            "fallback_image_width": 4000,
+            "fallback_image_height": 4000,
+            "fallback_variant_id": "52436570734773",
+            "fallback_product_id": "10413999161525",
+            "fallback_price": "$72",
+            "fallback_compare_price": "$84",
+            "fallback_available": true,
+            "badge_color": "#000000",
+            "badge_background": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "scent_vanilla",
+        "scent_blackberry",
+        "scent_cream",
+        "description",
+        "notes",
+        "ingredients",
+        "cream_duo",
+        "body_duo"
+      ],
+      "settings": {
+        "product_kind": "body-mist",
+        "fallback_title": "Vanilla Skin",
+        "variant_title": "Full Size Body Mist",
+        "tagline": "An intoxicating vanilla good enough to eat",
+        "rating_value": "4.7",
+        "rating_percent_exact": "95.1852",
+        "review_count": 2464,
+        "rating_aria": "Rated 4.7 out of 5 stars",
+        "tagline_border_color": "#845736",
+        "fallback_price": "$39",
+        "fallback_compare_price": "",
+        "fallback_variant_id": "43153584783541",
+        "fallback_product_id": "7507395477685",
+        "gallery_item_count": 5,
+        "gallery_fallback_asset_1": "vanilla-skin-body-mist-main.jpg",
+        "gallery_fallback_asset_2": "vanilla-skin-body-mist-studio.jpg",
+        "gallery_fallback_asset_3": "vanilla-skin-body-mist-notes.jpg",
+        "gallery_fallback_asset_4": "vanilla-skin-body-mist-ingredient.jpg",
+        "gallery_fallback_asset_5": "vanilla-skin-body-mist-lifestyle.jpg",
+        "gallery_fallback_asset_6": "",
+        "gallery_alt_1": "Vanilla Skin body mist",
+        "gallery_alt_2": "Vanilla Skin body mist",
+        "gallery_alt_3": "Vanilla Skin fragrance notes",
+        "gallery_alt_4": "Vanilla Skin ingredients",
+        "gallery_alt_5": "Vanilla Skin body mist",
+        "gallery_badge": "BESTSELLER",
+        "membership_text": "Get 10% cashback with Membership",
+        "layer_heading": "Layer It With",
+        "quick_add_label": "Add",
+        "details_label": "View full details"
+      }
+    },
+    "brand_video": {
+      "type": "pdp-brand-video",
+      "settings": {
+        "video_source_mode": "theme_asset",
+        "desktop_video_asset": "f6185d3473374cf7828232ad564d8a15.HD-720p-4.5Mbps-91277877.mp4",
+        "mobile_video_asset": "ec5852b07b5843aab17cd448ae3871d3.HD-1080p-7.2Mbps-91277878.mp4",
+        "desktop_padding_top": 40,
+        "desktop_padding_horizontal": 80,
+        "desktop_padding_bottom": 40,
+        "mobile_padding_top": 20,
+        "mobile_padding_horizontal": 20,
+        "mobile_padding_bottom": 20,
+        "section_max_width": 2000,
+        "video_aspect_ratio": "1280 / 561",
+        "mobile_video_aspect_ratio": "335 / 438.75"
+      }
+    },
+    "product_scent_notes": {
+      "type": "product-scent-notes",
+      "blocks": {
+        "top": { "type": "note", "settings": { "label": "Top", "notes": "Velvet Plum\nTonka Beans" } },
+        "heart": { "type": "note", "settings": { "label": "Heart", "notes": "Jasmine Petals\nWild Honey" } },
+        "base": { "type": "note", "settings": { "label": "Base", "notes": "Madagascar Vanilla\nPatchouli\nOak Wood" } }
+      },
+      "block_order": ["top", "heart", "base"],
+      "settings": {
+        "heading": "Scent Notes",
+        "fallback_asset": "Vanilla_Canyon-_Ingredients.jpg",
+        "image_alt": "Product scent ingredients"
+      }
+    },
+    "product_related_collection": {
+      "type": "product-related-collection",
+      "settings": {
+        "heading": "The Body Mist Collection",
+        "collection": "body-mist",
+        "link_label": "Shop All",
+        "link": "/collections/body-mist",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "perfume-quotes": {
+      "type": "perfume-quotes",
+      "settings": {
+        "quote": "“I wanted to play with contrasts against the backdrop of a beautiful vanilla note. I used some modern spice, a touch of watery fruit, airy florals and rich, warm and intoxicating woods. It all combines for this stimulating and addictive experience that leaves an everlasting impression.”",
+        "image_alt": "Vanilla Skin perfumer quote"
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "blocks": {
+        "deborah": {
+          "type": "review",
+          "settings": {
+            "review_id": "a3060c09-51e7-4725-a89a-428bebe09f61",
+            "author": "Deborah",
+            "verified": false,
+            "source_badge": "Shop",
+            "product": "Father Figure Travel Size",
+            "product_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "rating": 5,
+            "date": "2 days ago",
+            "title": "5 Stars",
+            "body": "Beautiful, woody, skin like finish"
+          }
+        },
+        "michelle": {
+          "type": "review",
+          "settings": {
+            "review_id": "105e07c0-9bab-405b-af5f-6ab8acc3a96d",
+            "author": "Michelle C.",
+            "verified": true,
+            "product": "Father Figure 50mL",
+            "product_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "age": "55-64",
+            "gender": "Female",
+            "rating": 5,
+            "date": "5 days ago",
+            "title": "Looooovvvve this scent",
+            "body": "Can't explain it but, it just makes me want to keep inhaling over and over again. "
+          }
+        },
+        "marina": {
+          "type": "review",
+          "settings": {
+            "review_id": "4f92c56c-9f99-44b2-beda-237fa8ee4a96",
+            "author": "Marina M.",
+            "verified": true,
+            "product": "Father Figure Travel Size",
+            "product_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "age": "25-34",
+            "gender": "Female",
+            "rating": 5,
+            "date": "1 week ago",
+            "title": "Mhmmm",
+            "body": "One of my forever favorites. I always get so many compliments, smells wonderful and unique "
+          }
+        },
+        "cornelia": {
+          "type": "review",
+          "settings": {
+            "review_id": "7b89e6c8-142a-4cd3-a5c4-9312d8eb5cfc",
+            "author": "Cornelia",
+            "verified": false,
+            "source_badge": "Shop",
+            "product": "Father Figure Travel Size",
+            "product_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "rating": 5,
+            "date": "1 week ago",
+            "title": "5 Stars",
+            "body": "I love this unique fragrance!"
+          }
+        },
+        "jenny": {
+          "type": "review",
+          "settings": {
+            "review_id": "081d3974-b232-403e-b41a-c94cff083e51",
+            "author": "Jenny",
+            "verified": false,
+            "source_badge": "Shop",
+            "product": "Father Figure Fragrance Duet",
+            "product_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "rating": 5,
+            "date": "1 week ago",
+            "title": "5 Stars",
+            "body": "One of my most favorite scents! Reminds me of my childhood on so many levels!"
+          }
+        }
+      },
+      "block_order": [
+        "deborah",
+        "michelle",
+        "marina",
+        "cornelia",
+        "jenny"
+      ],
+      "settings": {
+        "fallback_product_id": "10227666976949",
+        "rating": "4.8",
+        "review_count": 904
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "blocks": {
+        "vanilla_canyon": {
+          "type": "product",
+          "settings": {
+            "product": "vanilla-canyon-travel-size",
+            "fallback_product_id": "10479614689461",
+            "fallback_variant_id": "52740267770037",
+            "fallback_handle": "vanilla-canyon-travel-size",
+            "fallback_title": "Vanilla Canyon",
+            "fallback_full_title": "Vanilla Canyon - Travel Size",
+            "fallback_category": "9.5mL Eau de Parfum",
+            "fallback_price": "$25.60",
+            "fallback_regular_price": "$32",
+            "price_model": "active_discount",
+            "fallback_link": "/products/vanilla-canyon-travel-size?variant=52740267770037&_rdiscovery-handle=vanilla-canyon-travel-size&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/VANILLACANYON-9.5mL-Ledge_800x800.jpg?v=1785883244",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/269_800x800.jpg?v=1785883245",
+            "fallback_tag_classes": "tag-discountapplies tag-fragrance_vanilla-canyon tag-labelnew tag-membershipgift",
+            "fallback_available": true
+          }
+        },
+        "discovery": {
+          "type": "product",
+          "settings": {
+            "product": "fragrance-discovery-set",
+            "fallback_product_id": "10406636028085",
+            "fallback_variant_id": "52408137744565",
+            "fallback_handle": "fragrance-discovery-set",
+            "fallback_title": "Discovery Set",
+            "fallback_full_title": "Fragrance Discovery Set",
+            "fallback_category": "8 x 2mL Samples",
+            "fallback_price": "$31.20",
+            "fallback_regular_price": "$39",
+            "price_model": "active_discount",
+            "fallback_link": "/products/fragrance-discovery-set?variant=52408137744565&_rdiscovery-handle=fragrance-discovery-set&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/DiscoverySetLedge_ColorBoosted_800x800.jpg?v=1775754801",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/newimage4_800x800.jpg?v=1775754801",
+            "fallback_tag_classes": "tag-discountapplies tag-final-sale tag-label20_credit tag-lto tag-lto20 tag-sample-set tag-stackable",
+            "fallback_available": true
+          }
+        },
+        "cashmere": {
+          "type": "product",
+          "settings": {
+            "product": "cashmere-skin-travel-size-body-mist",
+            "fallback_product_id": "10268048687285",
+            "fallback_variant_id": "51922995839157",
+            "fallback_handle": "cashmere-skin-travel-size-body-mist",
+            "fallback_title": "Cashmere Skin",
+            "fallback_full_title": "Cashmere Skin - Travel Size Body Mist",
+            "fallback_category": "Travel Size Body Mist",
+            "fallback_price": "$20.80",
+            "fallback_regular_price": "$26",
+            "price_model": "active_discount",
+            "fallback_link": "/products/cashmere-skin-travel-size-body-mist?variant=51922995839157&_rdiscovery-handle=cashmere-skin-travel-size-body-mist&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/CashmereSkin_3oz_Main_800x800.jpg",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/CashmereSkin_3oz_Studio_800x800.jpg",
+            "fallback_tag_classes": "tag-discountapplies tag-fragrance_cashmere-skin",
+            "fallback_available": true
+          }
+        },
+        "blackberry": {
+          "type": "product",
+          "settings": {
+            "product": "vanilla-blackberry-travel-size-body-mist",
+            "fallback_product_id": "10219909152949",
+            "fallback_variant_id": "51637725429941",
+            "fallback_handle": "vanilla-blackberry-travel-size-body-mist",
+            "fallback_title": "Vanilla Blackberry",
+            "fallback_full_title": "Vanilla Blackberry - Travel Size Body Mist",
+            "fallback_category": "Travel Size Body Mist",
+            "fallback_price": "$20.80",
+            "fallback_regular_price": "$26",
+            "price_model": "active_discount",
+            "fallback_link": "/products/vanilla-blackberry-travel-size-body-mist?variant=51637725429941&_rdiscovery-handle=vanilla-blackberry-travel-size-body-mist&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/VanillaBlackberry_3oz_Main_800x800.jpg",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/VanillaBlackberry_3oz_Studio_800x800.jpg",
+            "fallback_tag_classes": "tag-discountapplies tag-fragrance_vanilla-blackberry",
+            "fallback_available": true
+          }
+        },
+        "mrs_smith": {
+          "type": "product",
+          "settings": {
+            "product": "mrs-smith-travel-size-body-mist",
+            "fallback_product_id": "10189671563445",
+            "fallback_variant_id": "51377642897589",
+            "fallback_handle": "mrs-smith-travel-size-body-mist",
+            "fallback_title": "Mrs. Smith",
+            "fallback_full_title": "Mrs. Smith - Travel Size Body Mist",
+            "fallback_category": "Travel Size Body Mist",
+            "fallback_price": "$19",
+            "fallback_regular_price": "$26",
+            "price_model": "sale",
+            "fallback_link": "/products/mrs-smith-travel-size-body-mist?variant=51377642897589&_rdiscovery-handle=mrs-smith-travel-size-body-mist&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/MrsSmith_3oz_Main_800x800.jpg?v=1753125955",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/MrsSmith_3oz_Studio_800x800.jpg?v=1753125955",
+            "fallback_tag_classes": "tag-exclude_lto tag-farewell tag-final-sale tag-fragrance_mrs-smith tag-labelfarewell_sale",
+            "fallback_available": true
+          }
+        },
+        "endless": {
+          "type": "product",
+          "settings": {
+            "product": "island-swim-and-beach-skin-duo",
+            "fallback_product_id": "10444218433717",
+            "fallback_variant_id": "52544722829493",
+            "fallback_handle": "island-swim-and-beach-skin-duo",
+            "fallback_title": "Endless Summer",
+            "fallback_full_title": "Endless Summer - Body Mist Duo",
+            "fallback_category": "Hair & Body Mist Duo",
+            "fallback_price": "$68",
+            "fallback_regular_price": "$78",
+            "price_model": "sale",
+            "fallback_link": "/products/island-swim-and-beach-skin-duo?variant=52544722829493&_rdiscovery-handle=island-swim-and-beach-skin-duo&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Endless_Summer_Duo_-_Ledge_800x800.jpg?v=1781570028",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/island_escape_trio_800x800.jpg?v=1781722480",
+            "fallback_tag_classes": "tag-discountapplies tag-labelnew",
+            "fallback_available": true
+          }
+        },
+        "paradise": {
+          "type": "product",
+          "settings": {
+            "product": "island-paradise-body-mist-duo",
+            "fallback_product_id": "10427545190581",
+            "fallback_variant_id": "52475021197493",
+            "fallback_handle": "island-paradise-body-mist-duo",
+            "fallback_title": "Island Paradise",
+            "fallback_full_title": "Island Paradise - Body Mist Duo",
+            "fallback_category": "Hair & Body Mist Duo",
+            "fallback_price": "$68",
+            "fallback_regular_price": "$78",
+            "price_model": "sale",
+            "fallback_link": "/products/island-paradise-body-mist-duo?variant=52475021197493&_rdiscovery-handle=island-paradise-body-mist-duo&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/paradiseBerryDuo-BodyMists-Main_800x800.jpg?v=1777683813",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/VanillaNectar_PeachSkinDuo-Studio_800x800.jpg?v=1777683814",
+            "fallback_tag_classes": "tag-discountapplies tag-labelnew",
+            "fallback_available": true
+          }
+        },
+        "island_swim": {
+          "type": "product",
+          "settings": {
+            "product": "island-swim-full-size-body-mist",
+            "fallback_product_id": "10426127614133",
+            "fallback_variant_id": "52471784636597",
+            "fallback_handle": "island-swim-full-size-body-mist",
+            "fallback_title": "Island Swim",
+            "fallback_full_title": "Island Swim - Full Size Body Mist",
+            "fallback_category": "Full Size Body Mist",
+            "fallback_price": "$31.20",
+            "fallback_regular_price": "$39",
+            "price_model": "active_discount",
+            "fallback_link": "/products/island-swim-full-size-body-mist?variant=52471784636597&_rdiscovery-handle=island-swim-full-size-body-mist&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/island_swim_8oz_800x800.jpg?v=1777678523",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/IslandSwim_8oz_Studio_3f1171f5-1ba5-40d2-8d66-1e26b4c87684_800x800.jpg?v=1777678477",
+            "fallback_tag_classes": "tag-discountapplies tag-labelnew",
+            "fallback_available": true
+          }
+        }
+      },
+      "block_order": [
+        "vanilla_canyon",
+        "discovery",
+        "cashmere",
+        "blackberry",
+        "mrs_smith",
+        "endless",
+        "paradise",
+        "island_swim"
+      ],
+      "settings": {
+        "source_mode": "blocks",
+        "product_limit": 8,
+        "heading": "You May Also Like",
+        "widget_id": "145779",
+        "source_product_id": "10429585653941",
+        "padding_bottom": 60,
+        "previous_icon_asset": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Chevron-L.svg?v=1773632141",
+        "next_icon_asset": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Chevron-R.svg?v=1773632124"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "brand_video",
+    "product_scent_notes",
+    "product_related_collection",
+    "perfume-quotes",
+    "product-reviews",
+    "related-products"
+  ]
+}

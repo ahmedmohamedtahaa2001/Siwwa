@@ -1,0 +1,31 @@
+{%- # theme-check-disable ImgWidthAndHeight -%}
+{%- liquid
+  assign chosen = product.selected_or_first_available_variant
+  assign product_id = product.id | default: block.settings.fallback_product_id
+  assign variant_id = chosen.id | default: block.settings.fallback_variant_id
+  assign handle = product.handle | default: block.settings.fallback_handle
+  assign title = product.metafields.custom.product_title_fragrance | default: block.settings.fallback_title | default: product.title
+  assign category = product.metafields.custom.product_title_category | default: block.settings.fallback_category | default: product.type
+  assign full_title = product.title | default: block.settings.fallback_full_title | default: title
+  assign available = chosen.available
+  if product == blank
+    assign available = block.settings.fallback_available
+  endif
+  assign card_url = product.url
+  if card_url != blank
+    assign card_url = card_url | append: '?variant=' | append: variant_id | append: '&_rdiscovery-handle=' | append: handle | append: '&_rdiscovery-widget=' | append: widget_id
+  else
+    assign card_url = block.settings.fallback_link
+  endif
+  assign price_model = block.settings.price_model | default: 'regular'
+  assign display_price = chosen.price | money_without_trailing_zeros | default: block.settings.fallback_price
+  assign regular_price = chosen.compare_at_price | money_without_trailing_zeros | default: block.settings.fallback_regular_price
+  assign primary = product.featured_media
+  assign secondary = product.media[1]
+-%}
+<li id="Slide-{{ widget_id }}-{{ product_id }}" aria-label="{{ index }} / {{ count }}" role="group" class="swiper-slide {{ handle }} product-id-{{ product_id }} {{ block.settings.fallback_tag_classes }}{% if index == 1 %} swiper-slide-active{% elsif index == 2 %} swiper-slide-next{% endif %}" {{ block.shopify_attributes }}>
+<div class="rebuy-product-media"><a class="rebuy-product-image clickable" href="{{ card_url }}">{% if primary != blank %}{{ primary | image_url: width: 800 | image_tag: class: 'primary-image', alt: full_title | prepend: 'View ' }}{% else %}{% assign primary_prefix = block.settings.fallback_primary_url | slice: 0, 4 %}<img src="{% if primary_prefix == 'http' %}{{ block.settings.fallback_primary_url }}{% else %}{{ block.settings.fallback_primary_url | asset_url }}{% endif %}" alt="View {{ full_title | escape }}" class="primary-image">{% endif %}{% if secondary != blank %}{{ secondary | image_url: width: 800 | image_tag: class: 'secondary-image', alt: full_title | prepend: 'View ' }}{% else %}{% assign secondary_prefix = block.settings.fallback_secondary_url | slice: 0, 4 %}<img src="{% if secondary_prefix == 'http' %}{{ block.settings.fallback_secondary_url }}{% else %}{{ block.settings.fallback_secondary_url | asset_url }}{% endif %}" alt="View {{ full_title | escape }}" class="secondary-image">{% endif %}</a></div>
+<div class="rebuy-product-info"><a role="heading" aria-level="5" href="{{ card_url }}" aria-label="View {{ full_title | escape }}" class="rebuy-product-title clickable"><span class="product-title-metafield">{{ title }}</span><span class="variant">{{ category }}</span></a></div>
+<div class="rebuy-product-actions"><button class="outline-black quick-add__submit button button--full-width" type="button" aria-label="{% if available %}{{ section.settings.add_label }} the product, {{ full_title }} to Cart{% else %}{{ section.settings.sold_out_label }}, {{ full_title }}{% endif %}"{% unless available %} disabled aria-disabled="true"{% endunless %}><span>{% if available %}{{ section.settings.add_label }}{% else %}{{ section.settings.sold_out_label }}{% endif %}</span>{% if available %}&nbsp;<span class="square-dot">·</span>&nbsp;<div class="rebuy-product-price"><div>{% if price_model == 'active_discount' %}<span class="rebuy-money sale-active-price"><span class="regular-price">{{ display_price }}</span></span> <span class="rebuy-money regular-price-no-sale"><span class="sr-only">{{ section.settings.price_label }}</span> <span>{{ regular_price }}</span></span>{% elsif price_model == 'sale' %}<span class="rebuy-money sale"><span class="sr-only">{{ section.settings.sale_price_label }}</span> <span>{{ display_price }}</span></span> <span class="rebuy-money compare-at"><span class="sr-only">{{ section.settings.original_price_label }}</span> <span>{{ regular_price }}</span></span>{% else %}<span class="rebuy-money"><span class="sr-only">{{ section.settings.price_label }}</span> <span>{{ display_price }}</span></span>{% endif %}</div></div>{% endif %}</button></div>
+</li>
+{%- # theme-check-enable ImgWidthAndHeight -%}

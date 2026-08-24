@@ -1,0 +1,123 @@
+{
+  "sections": {
+    "collection_subnav": {
+      "type": "home-collection-subnav",
+      "settings": { "show": true, "aria_label": "Shop collections" },
+      "blocks": {
+        "all": { "type": "link", "settings": { "label": "Shop All", "link": "/collections/all" } },
+        "best": { "type": "link", "settings": { "label": "Best Sellers", "link": "/collections/best-sellers" } },
+        "perfume": { "type": "link", "settings": { "label": "Perfume", "link": "/collections/perfumes" } },
+        "mist": { "type": "link", "settings": { "label": "For Her", "link": "/collections/for-her" } },
+        "care": { "type": "link", "settings": { "label": "For Him", "link": "/collections/for-him" } },
+        "gifts": { "type": "link", "settings": { "label": "New Drops", "link": "/collections/new-drops" } },
+        "trio": { "type": "link", "settings": { "label": "Summer Collection", "link": "/collections/summer-collection" } }
+      },
+      "block_order": ["all", "best", "perfume", "mist", "care", "gifts", "trio"]
+    },
+    "hero": {
+      "type": "home-media-banner",
+      "settings": {
+        "heading": "Vanilla Canyon",
+        "body": "A soulful vanilla that wears like the freedom of the open road",
+        "button_label": "SHOP NOW",
+        "link": "/products/vanilla-canyon-50ml"
+      }
+    },
+    "bestsellers": {
+      "type": "home-product-carousel",
+      "settings": {
+        "heading": "Bestsellers",
+        "collection": "best-sellers",
+        "products_to_show": 12,
+        "show_view_all": true,
+        "view_all_label": "Shop All",
+        "view_all_link": "/collections/all"
+      }
+    },
+    "statement": {
+      "type": "home-rich-text",
+      "settings": {
+        "heading": "Modern fragrances inspired by memories and feelings — those intimately personal and universally shared.",
+        "link_label": "About Us",
+        "link": "/pages/contact"
+      }
+    },
+    "members": {
+      "type": "home-membership-banner",
+      "settings": {
+        "heading": "MEMBERS GET MORE",
+        "body": "Over $200 worth of gifts and savings",
+        "button_label": "JOIN NOW",
+        "link": "/collections/best-sellers",
+        "image_alt": ""
+      }
+    },
+    "wear": {
+      "type": "home-product-carousel",
+      "settings": {
+        "heading": "Wear What's True",
+        "collection": "perfumes",
+        "fallback_catalog": "perfumes",
+        "products_to_show": 12,
+        "show_view_all": true,
+        "view_all_label": "Shop Perfume",
+        "view_all_link": "/collections/perfumes"
+      }
+    },
+    "featured": {
+      "type": "home-collection-list",
+      "blocks": {
+        "perfume": {
+          "type": "collection",
+          "settings": {
+            "collection": "perfumes",
+            "fallback_asset": "home-collection-perfume.jpg",
+            "title": "Perfume",
+            "link": "/collections/perfumes"
+          }
+        },
+        "mist": {
+          "type": "collection",
+          "settings": {
+            "collection": "for-her",
+            "fallback_asset": "home-collection-body-mist.jpg",
+            "title": "For Her",
+            "link": "/collections/for-her"
+          }
+        }
+      },
+      "block_order": [
+        "perfume",
+        "mist"
+      ],
+      "settings": {
+        "heading": "Featured Collections"
+      }
+    },
+    "discover": {
+      "type": "home-image-text",
+      "settings": {
+        "heading": "There's More to Discover",
+        "body": "<p>The Discovery Set is an eight-piece sample collection – with $20 credit towards your next full size fragrance.</p>",
+        "button_label": "SHOP NOW",
+        "link": "/collections/new-drops",
+        "image_alt": ""
+      }
+    },
+    "product_related_collection": {
+      "type": "product-related-collection",
+      "settings": {"heading":"The Body Mist Collection","collection":"body-mist"}
+    }
+  },
+  "order": [
+    "collection_subnav",
+    "hero",
+    "bestsellers",
+    "statement",
+    "members",
+    "wear",
+    "featured",
+    "discover",
+    "product_related_collection"
+  ]
+}

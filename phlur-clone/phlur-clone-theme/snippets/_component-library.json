@@ -1,0 +1,147 @@
+{
+  "atoms": [],
+  "molecules": [
+    {
+      "name": "collection-product-card",
+      "path": "snippets/collection-product-card.liquid",
+      "purpose": "PHLUR-style Shopify product card using live product, variant, media, availability, badge, and localized price data",
+      "params": ["card_product", "collection", "loading"],
+      "variants_supported": ["regular-price", "sale-price", "sold-out", "primary-secondary-media"],
+      "schema_groups_used": ["7.1", "7.2", "7.3", "7.4", "7.6", "7.8", "7.10", "7.12", "7.18"],
+      "used_by": ["sections/main-collection-phlur.liquid"],
+      "added_in_task": "standard-collection-template"
+    },
+    {
+      "name": "cart-drawer",
+      "path": "snippets/cart-drawer.liquid",
+      "purpose": "Shopify-native cart flyout with empty state and bestseller cross-sell slider",
+      "params": ["cart", "settings", "routes"],
+      "variants_supported": ["empty", "populated", "desktop", "mobile"],
+      "schema_groups_used": ["7.1", "7.2", "7.3", "7.4", "7.5", "7.7", "7.8", "7.10", "7.12", "7.13", "7.16", "7.18"],
+      "used_by": ["layout/theme.liquid"],
+      "added_in_task": "cart-drawer-pixel-parity"
+    },
+    {
+      "name": "cart-recommendation-card",
+      "path": "snippets/cart-recommendation-card.liquid",
+      "purpose": "Cart bestseller product card using real Shopify product and variant data",
+      "params": ["recommendation", "index"],
+      "variants_supported": ["regular-price", "sale-price", "sold-out"],
+      "schema_groups_used": ["7.1", "7.2", "7.3", "7.4", "7.6", "7.8", "7.12", "7.18"],
+      "used_by": ["snippets/cart-drawer.liquid"],
+      "added_in_task": "cart-drawer-pixel-parity"
+    },
+    {
+      "name": "product-media-gallery",
+      "path": "snippets/product-media-gallery.liquid",
+      "purpose": "Schema-configured product media carousel",
+      "params": ["section", "product"],
+      "variants_supported": ["desktop-slider", "mobile-slider", "fallback-media"],
+      "schema_groups_used": ["7.1", "7.3", "7.6", "7.13", "7.16"],
+      "used_by": ["sections/product-main.liquid"],
+      "added_in_task": "existing; registered for vanilla-canyon-50ml"
+    },
+    {
+      "name": "product-form",
+      "path": "snippets/product-form.liquid",
+      "purpose": "Product purchase and membership actions",
+      "params": ["section", "product"],
+      "variants_supported": ["available", "sold-out", "membership"],
+      "schema_groups_used": ["7.1", "7.2", "7.4", "7.8", "7.9", "7.10", "7.12", "7.14"],
+      "used_by": ["sections/product-main.liquid"],
+      "added_in_task": "existing; registered for vanilla-canyon-50ml"
+    },
+    {
+      "name": "product-breadcrumb",
+      "path": "sections/product-breadcrumbs.liquid",
+      "purpose": "Ordered product breadcrumb trail",
+      "params": ["section.settings", "section.blocks"],
+      "variants_supported": ["desktop", "tablet", "mobile"],
+      "schema_groups_used": ["7.1", "7.3", "7.4", "7.5", "7.13"],
+      "used_by": ["templates/product.json", "templates/product.vanilla-canyon.json"],
+      "added_in_task": "vanilla-canyon-50ml"
+    }
+  ],
+  "sections": [
+    {
+      "name": "main-collection-phlur",
+      "path": "sections/main-collection-phlur.liquid",
+      "purpose": "PHLUR-style grouped Shop All landing with dynamic paginated rendering for every ordinary Shopify collection",
+      "params": ["collection", "section.settings"],
+      "variants_supported": ["grouped-all", "current-collection", "empty", "paginated"],
+      "schema_groups_used": ["7.1", "7.3", "7.4", "7.5", "7.6", "7.7", "7.8", "7.10", "7.12", "7.18", "7.19"],
+      "used_by": ["templates/collection.json"],
+      "added_in_task": "standard-collection-template"
+    },
+    {
+      "name": "footer",
+      "path": "sections/footer.liquid",
+      "purpose": "Schema-configured Phlur-parity footer with menu, newsletter, localization, and copyright regions",
+      "params": ["section.settings", "section.blocks", "localization"],
+      "variants_supported": ["desktop-five-column", "tablet-four-column", "mobile-two-column", "newsletter-copy-only", "newsletter-form", "localization-popup"],
+      "schema_groups_used": ["7.1", "7.2", "7.3", "7.4", "7.5", "7.7", "7.10", "7.12", "7.13", "7.14", "7.15", "7.19"],
+      "used_by": ["sections/footer-group.json"],
+      "added_in_task": "phlur-footer-parity"
+    },
+    {
+      "name": "pdp-brand-video",
+      "path": "sections/pdp-brand-video.liquid",
+      "purpose": "Responsive autoplay product brand film",
+      "params": ["section.settings"],
+      "variants_supported": ["desktop-video", "mobile-video"],
+      "schema_groups_used": ["7.1", "7.3", "7.5", "7.6", "7.19"],
+      "used_by": ["templates/product.json", "templates/product.vanilla-canyon.json"],
+      "added_in_task": "vanilla-canyon-50ml"
+    },
+    {
+      "name": "product-scent-notes",
+      "path": "sections/product-scent-notes.liquid",
+      "purpose": "Responsive product note pyramid and ingredient image",
+      "params": ["section.settings", "section.blocks"],
+      "variants_supported": ["desktop-split", "mobile-stacked", "merchant-image", "theme-asset-fallback"],
+      "schema_groups_used": ["7.1", "7.3", "7.4", "7.5", "7.6", "7.7", "7.19"],
+      "used_by": ["templates/product.json", "templates/product.vanilla-canyon.json"],
+      "added_in_task": "standard-product-template"
+    },
+    {
+      "name": "product-related-collection",
+      "path": "sections/product-related-collection.liquid",
+      "purpose": "Product-aware merchandising collection rail",
+      "params": ["section.settings", "section.blocks", "product"],
+      "variants_supported": ["collection-source", "block-source", "desktop-slider", "mobile-slider"],
+      "schema_groups_used": ["7.1", "7.3", "7.4", "7.5", "7.7", "7.8", "7.13", "7.18", "7.19"],
+      "used_by": ["templates/product.json", "templates/product.vanilla-canyon.json"],
+      "added_in_task": "standard-product-template"
+    },
+    {
+      "name": "perfume-quotes",
+      "path": "sections/perfume-quotes.liquid",
+      "purpose": "Product perfumer quote with responsive editorial media",
+      "params": ["section.settings"],
+      "variants_supported": ["desktop-split", "mobile-stacked", "merchant-image", "url-fallback"],
+      "schema_groups_used": ["7.1", "7.3", "7.4", "7.5", "7.6", "7.7", "7.19"],
+      "used_by": ["templates/product.json", "templates/product.vanilla-canyon.json"],
+      "added_in_task": "standard-product-template"
+    },
+    {
+      "name": "product-reviews",
+      "path": "sections/product-reviews.liquid",
+      "purpose": "Product review summary and review list integration",
+      "params": ["section.settings", "section.blocks", "product"],
+      "variants_supported": ["okendo-widget", "schema-fallback", "deferred-reviews"],
+      "schema_groups_used": ["7.1", "7.3", "7.4", "7.5", "7.7", "7.8", "7.13", "7.18", "7.19"],
+      "used_by": ["templates/product.json", "templates/product.vanilla-canyon.json"],
+      "added_in_task": "standard-product-template"
+    },
+    {
+      "name": "related-products",
+      "path": "sections/related-products.liquid",
+      "purpose": "You May Also Like product recommendation rail",
+      "params": ["section.settings", "section.blocks", "product"],
+      "variants_supported": ["collection-source", "block-source", "desktop-slider", "mobile-slider"],
+      "schema_groups_used": ["7.1", "7.3", "7.4", "7.5", "7.7", "7.8", "7.13", "7.18", "7.19"],
+      "used_by": ["templates/product.json", "templates/product.vanilla-canyon.json"],
+      "added_in_task": "standard-product-template"
+    }
+  ]
+}

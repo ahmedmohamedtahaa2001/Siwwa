@@ -1,0 +1,50 @@
+<aside id="CartDrawer" class="cart-drawer rebuy-cart__flyout" data-cart-drawer data-dialog role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="CartDrawerTitle" tabindex="-1">
+  <div class="cart-drawer__header-anchor" data-rebuy-cart-anchor="header">
+    <header class="cart-drawer__header" data-rebuy-cart-header-top>
+      <div class="cart-drawer__header-inner" data-rebuy-cart-header-top-inner>
+        <h2 id="CartDrawerTitle" class="rebuy-cart__title">{{ settings.phlur_cart_heading | escape }}</h2>
+        <div class="cart-drawer__header-actions" data-rebuy-cart-header-top-inner-right>
+          {%- if shop.customer_accounts_enabled -%}<a class="cart-drawer__account rebuy-button-login" href="{{ routes.account_login_url }}" aria-label="Account"><img src="{{ 'phlur-profile.svg' | asset_url }}" alt="Profile" width="16" height="16"></a>{%- endif -%}
+        </div>
+      </div>
+      <button id="CartDrawerClose" class="cart-drawer__close rebuy-cart__flyout-close" type="button" data-cart-close aria-label="{{ settings.phlur_cart_close_label | escape }}">{% render 'icon-svg', icon: 'close', size: 24, stroke_width: settings.shell_icon_stroke_width %}<span class="visually-hidden">{{ settings.phlur_cart_close_label | escape }}</span></button>
+    </header>
+  </div>
+  <div class="cart-drawer__scroll" data-rebuy-cart-scroll-area>
+    <div class="cart-drawer__body" data-rebuy-cart-anchor="body" data-cart-drawer-body>
+      <div class="cart-drawer__cart-items" data-rebuy-component="cart-items" data-rebuy-component-id="cart_items">
+        {%- if cart.empty? -%}
+          <div class="cart-drawer__empty rebuy-cart__flyout-empty-cart" data-cart-empty><h3>{{ settings.phlur_cart_empty_text | escape }}</h3><p><a href="{{ routes.all_products_collection_url }}">{{ settings.phlur_cart_bestsellers_label | escape }}</a></p></div>
+        {%- else -%}
+          <form action="{{ routes.cart_url }}" method="post" data-cart-drawer-form><div class="cart-drawer__items">
+            {%- for item in cart.items -%}
+              <article class="cart-drawer__item" data-cart-line="{{ forloop.index }}">{%- if item.image -%}<a class="cart-drawer__item-image" href="{{ item.url }}">{{ item.image | image_url: width: 220 | image_tag: loading: 'lazy', widths: '110, 220', alt: item.image.alt }}</a>{%- endif -%}<div class="cart-drawer__item-info"><a class="cart-drawer__item-title" href="{{ item.url }}">{{ item.product.title }}</a>{%- unless item.product.has_only_default_variant -%}<span class="cart-drawer__variant">{{ item.variant.title }}</span>{%- endunless -%}<strong>{{ item.final_line_price | money }}</strong><div class="cart-drawer__quantity"><button type="button" data-cart-quantity="{{ item.quantity | minus: 1 }}" aria-label="Decrease {{ item.product.title | escape }} quantity">−</button><span aria-label="Quantity">{{ item.quantity }}</span><button type="button" data-cart-quantity="{{ item.quantity | plus: 1 }}" aria-label="Increase {{ item.product.title | escape }} quantity">+</button><button class="cart-drawer__remove" type="button" data-cart-quantity="0" aria-label="Remove {{ item.product.title | escape }}">Remove</button></div></div></article>
+            {%- endfor -%}
+          </div></form>
+        {%- endif -%}
+      </div>
+      <div class="cart-drawer__cross-sell" data-rebuy-component="cross-sell-widget" data-rebuy-component-id="bestsellers">
+        <section class="cart-drawer__recommendations rebuy-widget widget-type-cart widget-display-embed is-visible widget-layout-line" aria-labelledby="CartRecommendationsTitle">
+          <div class="cart-drawer__recommendation-widget rebuy-widget-container widget-display-embed is-visible">
+            <h3 id="CartRecommendationsTitle" class="cart-drawer__recommendation-title-main primary-title">{{ settings.phlur_cart_recommendations_heading | escape }}</h3>
+            <div class="cart-drawer__slider cartSwiper swiper swiper-initialized swiper-horizontal">
+              <ul class="cart-drawer__recommendation-list rebuy-widget-container swiper-wrapper widget-display-embed is-visible" data-cart-slider role="list">
+                {%- assign recommendation_count = 0 -%}
+                {%- for index in (1..6) -%}{%- capture product_key -%}cart_recommendation_{{ index }}{%- endcapture -%}{%- assign recommendation_handle = settings[product_key] -%}{%- assign recommendation = all_products[recommendation_handle] -%}{%- if recommendation != blank -%}{%- assign recommendation_count = recommendation_count | plus: 1 -%}{%- render 'cart-recommendation-card', recommendation: recommendation, index: recommendation_count -%}{%- endif -%}{%- endfor -%}
+                {%- if recommendation_count == 0 -%}
+                  {%- for index in (1..6) -%}
+                    {%- capture title_key -%}cart_fallback_{{ index }}_title{%- endcapture -%}{%- capture subtitle_key -%}cart_fallback_{{ index }}_subtitle{%- endcapture -%}{%- capture price_key -%}cart_fallback_{{ index }}_price{%- endcapture -%}{%- capture compare_key -%}cart_fallback_{{ index }}_compare{%- endcapture -%}{%- capture image_key -%}cart_fallback_{{ index }}_image{%- endcapture -%}{%- capture link_key -%}cart_fallback_{{ index }}_link{%- endcapture -%}
+                    {%- render 'cart-recommendation-card', recommendation: blank, index: index, fallback_title: settings[title_key], fallback_subtitle: settings[subtitle_key], fallback_price: settings[price_key], fallback_compare: settings[compare_key], fallback_image: settings[image_key], fallback_link: settings[link_key] -%}
+                  {%- endfor -%}
+                {%- endif -%}
+              </ul>
+              <button class="cart-drawer__slider-button cart-drawer__slider-button--previous swiper-button-prev swiper-button" type="button" data-cart-slider-prev aria-label="Previous products" disabled aria-disabled="true">‹</button>
+              <button class="cart-drawer__slider-button cart-drawer__slider-button--next swiper-button-next swiper-button" type="button" data-cart-slider-next aria-label="Next products">›</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <footer class="cart-drawer__footer" data-rebuy-cart-anchor="footer" {% if cart.empty? %}hidden{% endif %}><form action="{{ routes.cart_url }}" method="post"><button class="cart-drawer__checkout" type="submit" name="checkout"><span>{{ settings.phlur_cart_checkout_label | escape }}</span><span aria-hidden="true">·</span><strong>{{ cart.total_price | money }}</strong></button></form></footer>
+</aside>

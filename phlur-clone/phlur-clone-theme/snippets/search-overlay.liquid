@@ -1,0 +1,31 @@
+{% style %}
+  #SearchDialog-{{ section.id }} .snf-product__arrow-icon {
+    width: {{ settings.search_trending_arrow_size }}px;
+    height: {{ settings.search_trending_arrow_size }}px;
+  }
+{% endstyle %}
+<div id="SearchDialog-{{ section.id }}" class="search-overlay search-modal modal__content" data-search-overlay data-dialog role="dialog" aria-modal="true" aria-label="{{ section.settings.search_label | escape }}" aria-hidden="true" tabindex="-1">
+  <div class="search-overlay__body search-modal__content search-modal__content-bottom" tabindex="-1">
+    <predictive-search class="search-modal__form" data-loading-text="Loading...">
+      <div class="search-overlay__header search-modal-header">
+        <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+          <div class="search-overlay__field field">
+            <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="" placeholder="{{ section.settings.search_placeholder | escape }}" role="combobox" aria-expanded="false" aria-owns="predictive-search-results" aria-controls="predictive-search-results" aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" data-predictive-search-input>
+            <input type="hidden" name="options[prefix]" value="last"><input type="hidden" name="sort_by" value="best-selling">
+            <button type="reset" class="reset__button field__button hidden" aria-label="Clear search term"></button>
+            <button type="submit" class="search-overlay__submit search__button field__button" aria-label="{{ section.settings.search_submit_label | escape }}">{% render 'icon-svg', icon: 'search', size: section.settings.icon_size, stroke_width: section.settings.icon_stroke_width %}</button>
+          </div>
+        </form>
+        <button type="button" class="search-overlay__close search-modal__close-button modal__close-button link link--text focus-inset" data-search-close aria-label="{{ section.settings.close_label | escape }}">{% render 'icon-svg', icon: 'close', size: section.settings.icon_size, stroke_width: section.settings.icon_stroke_width %}</button>
+      </div>
+      <div id="predictive-search-results" class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search data-predictive-search-results></div>
+      <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+    </predictive-search>
+    <div id="search-suggestions" class="show" data-search-suggestions>
+      <h4>{{ section.settings.popular_searches_heading | escape }}</h4>
+      <ul class="search-popular__list" role="list">{%- for block in section.blocks -%}{%- if block.type == 'popular_search' -%}<li class="{{ block.settings.label | handle }} menu-item" {{ block.shopify_attributes }}><a class="secondary-menu-item-click" href="{{ block.settings.link }}">{% if section.settings.popular_icon_url != blank %}<img src="{{ section.settings.popular_icon_url }}" alt="" width="16" height="16">{% endif %}{{ block.settings.label | escape }}</a></li>{%- endif -%}{%- endfor -%}</ul>
+      <h4 class="search-trending-products__heading">{{ section.settings.trending_products_heading | escape }}</h4>
+      <ul class="search-trending-products__list" role="list">{%- for block in section.blocks -%}{%- if block.type == 'trending_product' -%}<li class="search-trending-products__item" {{ block.shopify_attributes }}><a class="search-trending-products__link" href="{{ block.settings.link }}"><span class="trending-wrap">{% if block.settings.image_url != blank %}<img class="search-trending-products__image" src="{{ block.settings.image_url }}" alt="{{ block.settings.image_alt | escape }}" width="48" height="48" loading="lazy">{% endif %}<span class="search-trending-products__info"><span class="search-trending-products__title">{{ block.settings.title | escape }}</span><span class="search-trending-products__subtitle">{{ block.settings.subtitle | escape }}</span></span></span><span class="snf-product__arrow"><img src="{{ settings.search_trending_arrow_url }}" alt="{{ settings.search_trending_arrow_alt | escape }}" aria-hidden="true" width="{{ settings.search_trending_arrow_size }}" height="{{ settings.search_trending_arrow_size }}" class="snf-product__arrow-icon"></span></a></li>{%- endif -%}{%- endfor -%}</ul>
+    </div>
+  </div>
+</div>

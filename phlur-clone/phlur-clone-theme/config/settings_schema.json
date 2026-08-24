@@ -1,0 +1,385 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "PHLUR Clone",
+    "theme_version": "1.0.0",
+    "theme_author": "Siwa",
+    "theme_documentation_url": "https://help.shopify.com/en/manual/online-store/themes",
+    "theme_support_url": "https://help.shopify.com/"
+  },
+  {
+    "name": "Brand",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "min": 60,
+        "max": 320,
+        "step": 10,
+        "unit": "px",
+        "label": "Logo width",
+        "default": 140
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_background_alt",
+        "label": "Alternate background",
+        "default": "#f4f1ec"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Text",
+        "default": "#171717"
+      },
+      {
+        "type": "color",
+        "id": "color_text_muted",
+        "label": "Muted text",
+        "default": "#686868"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Accent",
+        "default": "#171717"
+      },
+      {
+        "type": "color",
+        "id": "color_border",
+        "label": "Borders",
+        "default": "#d8d8d8"
+      },
+      {
+        "type": "color",
+        "id": "color_button_text",
+        "label": "Button text",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_error",
+        "label": "Error",
+        "default": "#b42318"
+      },
+      {
+        "type": "color",
+        "id": "color_success",
+        "label": "Success",
+        "default": "#237a45"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "select",
+        "id": "type_body_font",
+        "label": "Body font",
+        "options": [{ "value": "ABCRepro-Regular", "label": "ABC Repro Regular" }, { "value": "ABCReproMono-Medium", "label": "ABC Repro Mono Medium" }],
+        "default": "ABCRepro-Regular"
+      },
+      {
+        "type": "select",
+        "id": "type_heading_font",
+        "label": "Heading font",
+        "options": [{ "value": "ABCRepro-Regular", "label": "ABC Repro Regular" }, { "value": "ABCReproMono-Medium", "label": "ABC Repro Mono Medium" }],
+        "default": "ABCRepro-Regular"
+      },
+      {
+        "type": "select",
+        "id": "type_mono_font",
+        "label": "Utility and button font",
+        "options": [{ "value": "ABCReproMono-Medium", "label": "ABC Repro Mono Medium" }, { "value": "ABCRepro-Regular", "label": "ABC Repro Regular" }],
+        "default": "ABCReproMono-Medium"
+      },
+      {
+        "type": "range",
+        "id": "type_body_scale",
+        "min": 80,
+        "max": 130,
+        "step": 5,
+        "unit": "%",
+        "label": "Body text scale",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "type_heading_scale",
+        "min": 80,
+        "max": 160,
+        "step": 5,
+        "unit": "%",
+        "label": "Heading scale",
+        "default": 100
+      }
+    ]
+  },
+  {
+    "name": "Layout",
+    "settings": [
+      {
+        "type": "range",
+        "id": "page_width",
+        "min": 1000,
+        "max": 1600,
+        "step": 20,
+        "unit": "px",
+        "label": "Page width",
+        "default": 1440
+      },
+      {
+        "type": "range",
+        "id": "page_gutter",
+        "min": 12,
+        "max": 64,
+        "step": 4,
+        "unit": "px",
+        "label": "Page gutter",
+        "default": 24
+      },
+      {
+        "type": "range",
+        "id": "button_radius",
+        "min": 0,
+        "max": 40,
+        "step": 2,
+        "unit": "px",
+        "label": "Button corner radius",
+        "default": 0
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "select",
+        "id": "cart_type",
+        "label": "Cart type",
+        "options": [
+          {
+            "value": "drawer",
+            "label": "Drawer"
+          },
+          {
+            "value": "page",
+            "label": "Page"
+          }
+        ],
+        "default": "drawer"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_cart_note",
+        "label": "Show cart note",
+        "default": false
+      },
+      { "type": "text", "id": "phlur_cart_heading", "label": "Phlur cart heading", "default": "Bag" },
+      { "type": "text", "id": "phlur_cart_empty_text", "label": "Phlur empty text", "default": "Your bag is empty." },
+      { "type": "text", "id": "phlur_cart_bestsellers_label", "label": "Phlur empty link", "default": "Shop Bestsellers" },
+      { "type": "text", "id": "phlur_cart_recommendations_heading", "label": "Phlur recommendations heading", "default": "Shop Bestsellers" },
+      { "type": "text", "id": "phlur_cart_checkout_label", "label": "Phlur checkout label", "default": "Checkout" },
+      { "type": "text", "id": "phlur_cart_close_label", "label": "Phlur close label", "default": "Close Cart" },
+      {
+        "type": "text",
+        "id": "cart_drawer_label",
+        "label": "Cart drawer label",
+        "default": "Shopping cart"
+      },
+      {
+        "type": "text",
+        "id": "cart_drawer_heading",
+        "label": "Cart drawer heading",
+        "default": "Bag"
+      },
+      {
+        "type": "text",
+        "id": "cart_empty_text",
+        "label": "Empty cart text",
+        "default": "Your bag is empty."
+      },
+      {
+        "type": "text",
+        "id": "continue_shopping_label",
+        "label": "Continue shopping label",
+        "default": "Shop Bestsellers"
+      },
+      { "type": "text", "id": "cart_recommendations_heading", "label": "Recommendations heading", "default": "Shop Bestsellers" },
+      { "type": "text", "id": "cart_recommendation_1", "label": "Recommendation 1 handle", "default": "coffret-mini-perfume-set" },
+      { "type": "text", "id": "cart_recommendation_2", "label": "Recommendation 2 handle", "default": "vanilla-cream-duo-body-mists" },
+      { "type": "text", "id": "cart_recommendation_3", "label": "Recommendation 3 handle", "default": "fragrance-discovery-set" },
+      { "type": "text", "id": "cart_recommendation_4", "label": "Recommendation 4 handle", "default": "vanilla-canyon-travel-size" },
+      { "type": "text", "id": "cart_recommendation_5", "label": "Recommendation 5 handle", "default": "vanilla-skin-body-mist" },
+      { "type": "text", "id": "cart_recommendation_6", "label": "Recommendation 6 handle", "default": "somebody-wood-50ml" },
+      { "type": "header", "content": "Cart visual fallback products" },
+      { "type": "text", "id": "cart_fallback_1_title", "label": "Fallback 1 title", "default": "Mini Perfume Set" },
+      { "type": "text", "id": "cart_fallback_1_subtitle", "label": "Fallback 1 subtitle", "default": "4 x 7mL Eau de Parfum" },
+      { "type": "text", "id": "cart_fallback_1_price", "label": "Fallback 1 price", "default": "$59" },
+      { "type": "text", "id": "cart_fallback_1_compare", "label": "Fallback 1 compare price", "default": "none" },
+      { "type": "text", "id": "cart_fallback_1_image", "label": "Fallback 1 image", "default": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/HCS_391c34f2-b4e3-48b5-8ab4-675200005fc1_800x800.jpg?v=1777325341" },
+      { "type": "url", "id": "cart_fallback_1_link", "label": "Fallback 1 link", "default": "/collections/all" },
+      { "type": "text", "id": "cart_fallback_2_title", "label": "Fallback 2 title", "default": "Vanilla & Cream" },
+      { "type": "text", "id": "cart_fallback_2_subtitle", "label": "Fallback 2 subtitle", "default": "Hair & Body Mist Duo" },
+      { "type": "text", "id": "cart_fallback_2_price", "label": "Fallback 2 price", "default": "$68" },
+      { "type": "text", "id": "cart_fallback_2_compare", "label": "Fallback 2 compare price", "default": "$78" },
+      { "type": "text", "id": "cart_fallback_2_image", "label": "Fallback 2 image", "default": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Vanilla_CreamDuo-BodyMists_800x800.jpg?v=1735324623" },
+      { "type": "url", "id": "cart_fallback_2_link", "label": "Fallback 2 link", "default": "/collections/all" },
+      { "type": "text", "id": "cart_fallback_3_title", "label": "Fallback 3 title", "default": "Discovery Set" },
+      { "type": "text", "id": "cart_fallback_3_subtitle", "label": "Fallback 3 subtitle", "default": "8 x 2mL Samples" },
+      { "type": "text", "id": "cart_fallback_3_price", "label": "Fallback 3 price", "default": "$39" },
+      { "type": "text", "id": "cart_fallback_3_compare", "label": "Fallback 3 compare price", "default": "none" },
+      { "type": "text", "id": "cart_fallback_3_image", "label": "Fallback 3 image", "default": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/DiscoverySetLedge_ColorBoosted_800x800.jpg?v=1775754801" },
+      { "type": "url", "id": "cart_fallback_3_link", "label": "Fallback 3 link", "default": "/collections/all" },
+      { "type": "text", "id": "cart_fallback_4_title", "label": "Fallback 4 title", "default": "Vanilla Canyon" },
+      { "type": "text", "id": "cart_fallback_4_subtitle", "label": "Fallback 4 subtitle", "default": "9.5mL Eau de Parfum" },
+      { "type": "text", "id": "cart_fallback_4_price", "label": "Fallback 4 price", "default": "$32" },
+      { "type": "text", "id": "cart_fallback_4_compare", "label": "Fallback 4 compare price", "default": "none" },
+      { "type": "text", "id": "cart_fallback_4_image", "label": "Fallback 4 image", "default": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/VANILLACANYON-9.5mL-Ledge_800x800.jpg?v=1785883244" },
+      { "type": "url", "id": "cart_fallback_4_link", "label": "Fallback 4 link", "default": "/collections/all" },
+      { "type": "text", "id": "cart_fallback_5_title", "label": "Fallback 5 title", "default": "Vanilla Skin" },
+      { "type": "text", "id": "cart_fallback_5_subtitle", "label": "Fallback 5 subtitle", "default": "Full Size Body Mist" },
+      { "type": "text", "id": "cart_fallback_5_price", "label": "Fallback 5 price", "default": "$39" },
+      { "type": "text", "id": "cart_fallback_5_compare", "label": "Fallback 5 compare price", "default": "none" },
+      { "type": "text", "id": "cart_fallback_5_image", "label": "Fallback 5 image", "default": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/VanillaSkin-FullSize_Allure_800x800.jpg?v=1727377166" },
+      { "type": "url", "id": "cart_fallback_5_link", "label": "Fallback 5 link", "default": "/collections/all" },
+      { "type": "text", "id": "cart_fallback_6_title", "label": "Fallback 6 title", "default": "Somebody Wood" },
+      { "type": "text", "id": "cart_fallback_6_subtitle", "label": "Fallback 6 subtitle", "default": "50mL Eau de Parfum" },
+      { "type": "text", "id": "cart_fallback_6_price", "label": "Fallback 6 price", "default": "$60" },
+      { "type": "text", "id": "cart_fallback_6_compare", "label": "Fallback 6 compare price", "default": "$99" },
+      { "type": "text", "id": "cart_fallback_6_image", "label": "Fallback 6 image", "default": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/1-PHLUR_PDP_SomebodyWood_EDP_CapOn_800x800.jpg?v=1738117442" },
+      { "type": "url", "id": "cart_fallback_6_link", "label": "Fallback 6 link", "default": "/collections/all" },
+      {
+        "type": "text",
+        "id": "subtotal_label",
+        "label": "Subtotal label",
+        "default": "Subtotal"
+      },
+      {
+        "type": "text",
+        "id": "checkout_label",
+        "label": "Checkout label",
+        "default": "Checkout"
+      },
+      {
+        "type": "text",
+        "id": "close_label",
+        "label": "Close label",
+        "default": "Close Cart"
+      },
+      {
+        "type": "range",
+        "id": "shell_icon_size",
+        "label": "Shell icon size",
+        "min": 16,
+        "max": 36,
+        "step": 2,
+        "unit": "px",
+        "default": 24
+      },
+      {
+        "type": "range",
+        "id": "shell_icon_stroke_width",
+        "label": "Shell icon stroke",
+        "min": 1,
+        "max": 3,
+        "step": 0.5,
+        "default": 1.5
+      }
+    ]
+  },
+  {
+    "name": "Newsletter popup",
+    "settings": [
+      { "type": "checkbox", "id": "newsletter_popup_enable", "label": "Enable popup", "default": false },
+      { "type": "range", "id": "newsletter_popup_delay", "label": "Delay", "min": 1, "max": 30, "step": 1, "unit": "s", "default": 5 },
+      { "type": "text", "id": "newsletter_popup_heading", "label": "Heading", "default": "Stay in the know" },
+      { "type": "richtext", "id": "newsletter_popup_text", "label": "Text", "default": "<p>Sign up for first access to new launches and special offers.</p>" },
+      { "type": "text", "id": "newsletter_email_placeholder", "label": "Email placeholder", "default": "Email" },
+      { "type": "text", "id": "newsletter_submit_label", "label": "Button label", "default": "Join" }
+    ]
+  },
+  {
+    "name": "Global shell appearance",
+    "settings": [
+      { "type": "range", "id": "shell_overlay_opacity", "label": "Overlay opacity", "min": 0, "max": 80, "step": 5, "unit": "%", "default": 35 },
+      { "type": "range", "id": "shell_panel_width", "label": "Drawer width", "min": 320, "max": 600, "step": 20, "unit": "px", "default": 480 },
+      { "type": "range", "id": "shell_search_size", "label": "Search input size", "min": 14, "max": 32, "step": 1, "unit": "px", "default": 22 },
+      { "type": "range", "id": "shell_drawer_header_height", "label": "Drawer header height", "min": 48, "max": 96, "step": 4, "unit": "px", "default": 68 },
+      { "type": "range", "id": "shell_transition_duration", "label": "Drawer transition", "min": 100, "max": 800, "step": 50, "unit": "ms", "default": 350 },
+      { "type": "range", "id": "shell_logo_text_size", "label": "Text logo size", "min": 16, "max": 40, "step": 1, "unit": "px", "default": 24 },
+      { "type": "range", "id": "shell_logo_letter_spacing", "label": "Text logo letter spacing", "min": 0, "max": 50, "step": 1, "unit": "%", "default": 26 },
+      { "type": "range", "id": "shell_desktop_gap", "label": "Desktop navigation gap", "min": 8, "max": 60, "step": 2, "unit": "px", "default": 28 }
+      ,{ "type": "range", "id": "shell_mega_columns", "label": "Mega menu columns", "min": 2, "max": 8, "step": 1, "default": 6 }
+      ,{ "type": "range", "id": "shell_mega_gap", "label": "Mega menu gap", "min": 0, "max": 60, "step": 4, "unit": "px", "default": 24 }
+      ,{ "type": "range", "id": "shell_mega_padding_vertical", "label": "Mega menu vertical padding", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 32 }
+      ,{ "type": "range", "id": "shell_mega_padding_horizontal", "label": "Mega menu horizontal padding", "min": 0, "max": 80, "step": 4, "unit": "px", "default": 20 }
+      ,{ "type": "select", "id": "shell_feature_ratio", "label": "Featured image ratio", "options": [{"value":"1 / 1","label":"Square"},{"value":"4 / 5","label":"Portrait"},{"value":"3 / 2","label":"Landscape"}], "default": "1 / 1" }
+      ,{ "type": "range", "id": "shell_search_max_width", "label": "Search content width", "min": 600, "max": 1600, "step": 40, "unit": "px", "default": 920 }
+      ,{ "type": "range", "id": "shell_cart_image_width", "label": "Cart image width", "min": 60, "max": 180, "step": 10, "unit": "px", "default": 110 }
+      ,{ "type": "range", "id": "shell_footer_columns", "label": "Footer desktop columns", "min": 2, "max": 6, "step": 1, "default": 5 }
+      ,{ "type": "range", "id": "shell_footer_mobile_columns", "label": "Footer mobile columns", "min": 1, "max": 3, "step": 1, "default": 2 }
+      ,{ "type": "range", "id": "shell_footer_gap", "label": "Footer grid gap", "min": 0, "max": 60, "step": 4, "unit": "px", "default": 24 }
+      ,{ "type": "range", "id": "shell_mobile_breakpoint", "label": "Mobile breakpoint", "min": 480, "max": 800, "step": 10, "unit": "px", "default": 750 }
+      ,{ "type": "range", "id": "shell_tablet_breakpoint", "label": "Tablet breakpoint", "min": 800, "max": 1200, "step": 10, "unit": "px", "default": 990 }
+      ,{ "type": "range", "id": "shell_layer_overlay", "label": "Overlay layer", "min": 10, "max": 200, "step": 10, "default": 90 }
+      ,{ "type": "range", "id": "shell_layer_panel", "label": "Panel layer", "min": 20, "max": 300, "step": 10, "default": 100 }
+      ,{ "type": "header", "content": "Search trending products" }
+      ,{ "type": "text", "id": "search_trending_arrow_url", "label": "Arrow image URL", "default": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/nav-right-arrow-featured.svg?v=4440169485021819010" }
+      ,{ "type": "text", "id": "search_trending_arrow_alt", "label": "Arrow alt text", "default": "Nav Right Arrow" }
+      ,{ "type": "range", "id": "search_trending_arrow_size", "label": "Arrow size", "min": 12, "max": 48, "step": 1, "unit": "px", "default": 24 }
+    ]
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      {
+        "type": "url",
+        "id": "social_instagram_link",
+        "label": "Instagram"
+      },
+      {
+        "type": "url",
+        "id": "social_tiktok_link",
+        "label": "TikTok"
+      },
+      {
+        "type": "url",
+        "id": "social_facebook_link",
+        "label": "Facebook"
+      },
+      {
+        "type": "url",
+        "id": "social_pinterest_link",
+        "label": "Pinterest"
+      },
+      {
+        "type": "url",
+        "id": "social_youtube_link",
+        "label": "YouTube"
+      }
+    ]
+  }
+]

@@ -1,7 +1,0 @@
-.siwa-product{padding:var(--section-padding,24px) 0}
-.siwa-product__container{display:flex;gap:24px}
-.siwa-product__media img{max-width:420px;width:100%;height:auto}
-.siwa-product__info{flex:1}
-.siwa-note-pyramid__group{margin:12px 0}
-.siwa-reading__form label{display:block;margin-top:8px}
-.siwa-authenticity{border-top:1px solid var(--colors-border-strong);padding-top:12px;margin-top:12px}

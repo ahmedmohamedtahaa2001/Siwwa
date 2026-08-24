@@ -1,0 +1,41 @@
+{%- liquid
+  assign card_product = block.settings.product
+  assign card_variant = card_product.selected_or_first_available_variant
+  assign card_id = card_product.id | default: block.settings.fallback_product_id
+  assign variant_id = card_variant.id | default: block.settings.fallback_variant_id
+  assign card_url = card_product.url | default: block.settings.fallback_url
+  assign full_title = card_product.title | default: block.settings.fallback_full_title
+  assign display_title = block.settings.display_title | default: card_product.metafields.custom.display_title | default: block.settings.fallback_display_title
+  assign category = block.settings.category | default: card_product.metafields.custom.variant_title | default: block.settings.fallback_category
+  assign badge = block.settings.badge | default: card_product.metafields.custom.badge | default: block.settings.fallback_badge
+  assign primary_media = block.settings.primary_image | default: card_product.featured_media
+  assign hover_media = block.settings.hover_image | default: card_product.media[1]
+  assign primary_alt = block.settings.primary_alt | default: primary_media.alt | default: full_title
+  assign hover_alt = block.settings.hover_alt | default: hover_media.alt
+  assign price = card_variant.price | money_without_trailing_zeros | default: block.settings.fallback_price
+  assign compare_price = card_variant.compare_at_price | money_without_trailing_zeros | default: block.settings.fallback_compare_price
+  assign available = card_product.available
+  if card_product == blank
+    assign available = block.settings.fallback_available
+  endif
+-%}
+<div class="card-wrapper product-card-wrapper underline-links-hover" {{ block.shopify_attributes }}>
+  <div class="card card--standard card--media" style="--ratio-percent: 100%;">
+    <div class="card__inner color-scheme-2 gradient ratio" style="--ratio-percent: 100%;">
+      <div class="card__media"><div class="media media--transparent media--hover-effect"><a href="{{ card_url }}" aria-labelledby="title--{{ card_id }} Badge--{{ card_id }}">
+        {%- if primary_media != blank -%}
+          {{ primary_media | image_url: width: 533 | image_tag: widths: '165,360,533,720,940,1066', sizes: layer_sizes, loading: 'lazy', class: 'motion-reduce', alt: primary_alt }}
+        {%- else -%}
+          <img src="{{ block.settings.fallback_primary_asset | asset_url }}" srcset="{{ block.settings.fallback_primary_asset | asset_url }} 165w, {{ block.settings.fallback_primary_asset | asset_url }} 360w, {{ block.settings.fallback_primary_asset | asset_url }} 533w, {{ block.settings.fallback_primary_asset | asset_url }} 720w, {{ block.settings.fallback_primary_asset | asset_url }} 940w, {{ block.settings.fallback_primary_asset | asset_url }} 1066w, {{ block.settings.fallback_primary_asset | asset_url }} {{ block.settings.fallback_image_width }}w" sizes="{{ layer_sizes }}" alt="{{ primary_alt | escape }}" class="motion-reduce" loading="lazy" width="{{ block.settings.fallback_image_width }}" height="{{ block.settings.fallback_image_height }}">
+        {%- endif -%}
+        {%- if hover_media != blank -%}
+          {{ hover_media | image_url: width: 533 | image_tag: widths: '165,360,533,720,940,1066', sizes: layer_sizes, loading: 'lazy', class: 'motion-reduce', alt: hover_alt }}
+        {%- else -%}
+          <img src="{{ block.settings.fallback_hover_asset | asset_url }}" srcset="{{ block.settings.fallback_hover_asset | asset_url }} 165w, {{ block.settings.fallback_hover_asset | asset_url }} 360w, {{ block.settings.fallback_hover_asset | asset_url }} 533w, {{ block.settings.fallback_hover_asset | asset_url }} 720w, {{ block.settings.fallback_hover_asset | asset_url }} 940w, {{ block.settings.fallback_hover_asset | asset_url }} 1066w, {{ block.settings.fallback_hover_asset | asset_url }} {{ block.settings.fallback_image_width }}w" sizes="{{ layer_sizes }}" alt="{{ hover_alt | escape }}" class="motion-reduce" loading="lazy" width="{{ block.settings.fallback_image_width }}" height="{{ block.settings.fallback_image_height }}">
+        {%- endif -%}
+      </a></div></div>
+      <div class="card__content"><div class="card__information"><h4 class="card__heading aktiv"><a id="StandardCardNoMediaLink--{{ card_id }}" href="{{ card_url }}" class="full-unstyled-link" aria-labelledby="StandardCardNoMediaLink--{{ card_id }} NoMediaStandardBadge--{{ card_id }}">{{ full_title | escape }}</a></h4></div><div class="card__badge top left{% if badge != blank %} show-label-badge{% endif %}">{% if badge != blank %}<span id="Badge--{{ card_id }}" class="badge badge-label badge--bottom-left" style="--badge-foreground:{{ block.settings.badge_color }};--badge-background:{{ block.settings.badge_background }};color:{{ block.settings.badge_color }};background:{{ block.settings.badge_background }};">{{ badge | escape }}</span>{% else %}<span id="Badge--{{ card_id }}" class="visually-hidden">{{ full_title | escape }}</span>{% endif %}<span id="NoMediaStandardBadge--{{ card_id }}" class="visually-hidden">{{ badge | default: full_title | escape }}</span></div></div>
+    </div>
+    <div class="card__content"><div class="card__information"><h4 class="card__heading aktiv" id="title--{{ card_id }}"><a id="CardLink--{{ card_id }}" href="{{ card_url }}" class="full-unstyled-link" aria-labelledby="CardLink--{{ card_id }} Badge--{{ card_id }}">{{ display_title | escape }}<br><p class="variant-info p2">{{ category | escape }}</p></a></h4><div class="card-information"><span class="caption-large light"></span></div></div><div class="quick-add no-js-hidden"><product-form data-section-id="{{ section.id }}"><form method="post" action="{{ routes.cart_add_url | default: '/cart/add' }}" id="quick-add-{{ card_id }}" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input name="id" type="hidden" value="{{ variant_id }}" class="product-variant-id"><button id="quick-add-{{ card_id }}-submit" class="quick-add__submit outline-black button button--full-width" type="submit" aria-labelledby="quick-add-{{ card_id }}-submit title--{{ card_id }}" aria-live="polite" data-sold-out-message="true"{% unless available %} disabled aria-disabled="true"{% endunless %}><span class="flex-container-row{% unless available %} hidden{% endunless %}"><span class="add">{{ section.settings.layer_add_label | escape }}</span>&nbsp;<span class="square-dot">·</span>&nbsp;<span class="price price{% if compare_price != blank %}--on-sale{% endif %}"><span class="price__container"><span class="price__regular"><span class="visually-hidden visually-hidden--inline">{{ section.settings.layer_regular_price_label | escape }}</span><span class="price-item price-item--regular">{{ price }}</span></span>{% if compare_price != blank %}<span class="price__sale"><span class="visually-hidden visually-hidden--inline">{{ section.settings.layer_regular_price_label | escape }}</span><s class="price-item price-item--regular">{{ compare_price }}</s></span>{% endif %}</span></span></span><span class="sold-out-message{% if available %} hidden{% endif %}">{{ section.settings.layer_sold_out_label | escape }}</span><div class="loading__spinner hidden"><svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg></div></button><input type="hidden" name="product-id" value="{{ card_id }}"><input type="hidden" name="section-id" value="{{ section.id }}"></form></product-form></div></div>
+  </div>
+</div>

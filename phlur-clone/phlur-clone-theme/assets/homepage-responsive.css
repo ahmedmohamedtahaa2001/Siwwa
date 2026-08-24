@@ -1,0 +1,3 @@
+.home-products__controls{display:flex;gap:8px}.home-products__controls button{width:36px;height:36px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}.home-subnav{display:flex;align-items:center;justify-content:center;gap:var(--gap)}
+@media(min-width:750px) and (max-width:1200px){.home-banner{height:min(var(--h),615px)}.home-products__track{grid-auto-columns:calc((100% - 2*var(--gap))/3)}.home-collections__container{padding-right:40px;padding-left:40px}.home-split__content{padding:6%}.home-split__content h2{font-size:30px}}
+@media(max-width:880px){.home-collections__title{font-size:14px;line-height:1.3;letter-spacing:.72px}.home-collections__card-title{font-size:12px;letter-spacing:.52px}}

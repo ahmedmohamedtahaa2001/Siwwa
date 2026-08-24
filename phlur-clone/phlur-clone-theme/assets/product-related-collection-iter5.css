@@ -1,0 +1,8 @@
+/* Final evidence-backed tablet/mobile typography. Desktop (>=990px) is frozen. */
+@media(max-width:989px){
+  [data-related-collection] h2{font-family:aktiv-grotesk-extended,sans-serif;font-size:16px;line-height:22.4px;font-weight:600;letter-spacing:.96px}
+  [data-related-collection] .card__heading{font-family:aktiv-grotesk-extended,sans-serif;font-size:14px;line-height:19.6px;font-weight:600;letter-spacing:.6px}
+  [data-related-collection] .variant-info{font-family:ABCRepro-Regular,sans-serif;font-size:12px;line-height:17px;font-weight:400;letter-spacing:.6px}
+}
+@media(min-width:750px) and (max-width:989px){[data-related-collection]{padding-top:38px}[data-related-collection] .collection__title{margin-bottom:30px}[data-related-collection] .media{height:auto;aspect-ratio:1}[data-related-collection] .card__heading{margin-top:20px;margin-bottom:18px}}
+@media(max-width:749px){[data-related-collection] .collection__title{margin-bottom:21px}[data-related-collection] .media{height:auto;aspect-ratio:1}[data-related-collection] .card__heading{margin-top:15px}}

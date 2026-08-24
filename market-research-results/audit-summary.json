@@ -1,0 +1,1010 @@
+{
+  "audit_date": "2026-08-24",
+  "source": "https://siwafragrances.com/products.json?limit=250",
+  "product_count": 61,
+  "variant_count": 173,
+  "available_variants": 128,
+  "unavailable_variants": 45,
+  "blank_product_types": 60,
+  "blank_skus": 59,
+  "single_image_products": 55,
+  "price_egp": {
+    "minimum": 350.00,
+    "maximum": 2300.00,
+    "average": 1006.3005780346821
+  },
+  "products": [
+    {
+      "id": 7804844867632,
+      "handle": "nude-amber",
+      "title": "Nude Amber",
+      "vendor": "Blonde Amber",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 750.00,
+      "price_max_egp": 1850.00,
+      "url": "https://siwafragrances.com/products/nude-amber"
+    },
+    {
+      "id": 8047986114608,
+      "handle": "purevelle",
+      "title": "Purevelle",
+      "vendor": "Erba Pura Xerjoff",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 550.00,
+      "price_max_egp": 1250.00,
+      "url": "https://siwafragrances.com/products/purevelle"
+    },
+    {
+      "id": 7735874912304,
+      "handle": "tobacco-honey",
+      "title": "Tobacco Honey",
+      "vendor": "Naxos Xerjoff",
+      "product_type": "",
+      "tags": [
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 550.00,
+      "price_max_egp": 1250.00,
+      "url": "https://siwafragrances.com/products/tobacco-honey"
+    },
+    {
+      "id": 7735874584624,
+      "handle": "forbidden-cherry",
+      "title": "Forbidden Cherry",
+      "vendor": "Lost Cherry Tom Ford",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 500.00,
+      "price_max_egp": 1100.00,
+      "url": "https://siwafragrances.com/products/forbidden-cherry"
+    },
+    {
+      "id": 7976568782896,
+      "handle": "silvere",
+      "title": "Silvere",
+      "vendor": "Gentle Fluidity Silver MFK",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 1,
+      "image_count": 1,
+      "price_min_egp": 600.00,
+      "price_max_egp": 1600.00,
+      "url": "https://siwafragrances.com/products/silvere"
+    },
+    {
+      "id": 8032720257072,
+      "handle": "sundaze",
+      "title": "Sundaze",
+      "vendor": "Power Of You Giorgio Armani",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 500.00,
+      "price_max_egp": 1100.00,
+      "url": "https://siwafragrances.com/products/sundaze"
+    },
+    {
+      "id": 7973168840752,
+      "handle": "vanilla-91",
+      "title": "Vanilla 91",
+      "vendor": "Siwa Fragrances",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 1,
+      "available_variants": 1,
+      "image_count": 2,
+      "price_min_egp": 380.00,
+      "price_max_egp": 380.00,
+      "url": "https://siwafragrances.com/products/vanilla-91"
+    },
+    {
+      "id": 7735876517936,
+      "handle": "siwa-trail",
+      "title": "Siwa Trail",
+      "vendor": "Guidance Amouage",
+      "product_type": "",
+      "tags": [
+        "Men",
+        "new",
+        "Unisex",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 0,
+      "image_count": 1,
+      "price_min_egp": 600.00,
+      "price_max_egp": 1750.00,
+      "url": "https://siwafragrances.com/products/siwa-trail"
+    },
+    {
+      "id": 7954863554608,
+      "handle": "pink-arrogance",
+      "title": "Pink Arrogance",
+      "vendor": "Siwa original creation",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 450.00,
+      "price_max_egp": 1000.00,
+      "url": "https://siwafragrances.com/products/pink-arrogance"
+    },
+    {
+      "id": 7954860539952,
+      "handle": "pink-allure",
+      "title": "Pink Allure",
+      "vendor": "Siwa original creation",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 590.00,
+      "price_max_egp": 1400.00,
+      "url": "https://siwafragrances.com/products/pink-allure"
+    },
+    {
+      "id": 7954857918512,
+      "handle": "lost-on-you",
+      "title": "Lost On You",
+      "vendor": "Lost In Paris Roja",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 750.00,
+      "price_max_egp": 1900.00,
+      "url": "https://siwafragrances.com/products/lost-on-you"
+    },
+    {
+      "id": 7954855362608,
+      "handle": "aurableu",
+      "title": "Aurableu",
+      "vendor": "Symphony LV",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 700.00,
+      "price_max_egp": 1750.00,
+      "url": "https://siwafragrances.com/products/aurableu"
+    },
+    {
+      "id": 7924236714032,
+      "handle": "absolute-drunk",
+      "title": "Absolute Drunk",
+      "vendor": "Il Padrino Sospiro",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 0,
+      "image_count": 1,
+      "price_min_egp": 750.00,
+      "price_max_egp": 1850.00,
+      "url": "https://siwafragrances.com/products/absolute-drunk"
+    },
+    {
+      "id": 7909727961136,
+      "handle": "bleu-exclusive",
+      "title": "Bleu Exclusive",
+      "vendor": "Bleu De Chanel L’exclusif",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 750.00,
+      "price_max_egp": 1900.00,
+      "url": "https://siwafragrances.com/products/bleu-exclusive"
+    },
+    {
+      "id": 7735876878384,
+      "handle": "belle-riche",
+      "title": "Belle Riche",
+      "vendor": "La Belle Le Parfum",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 550.00,
+      "price_max_egp": 1150.00,
+      "url": "https://siwafragrances.com/products/belle-riche"
+    },
+    {
+      "id": 7776920109104,
+      "handle": "bare-glow",
+      "title": "Bare Glow",
+      "vendor": "Goddess Burberry",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 450.00,
+      "price_max_egp": 1000.00,
+      "url": "https://siwafragrances.com/products/bare-glow"
+    },
+    {
+      "id": 7767390748720,
+      "handle": "bleu-intense",
+      "title": "Bleu Intense",
+      "vendor": "Bleu De Chanel Parfum",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 0,
+      "image_count": 1,
+      "price_min_egp": 500.00,
+      "price_max_egp": 1050.00,
+      "url": "https://siwafragrances.com/products/bleu-intense"
+    },
+    {
+      "id": 7754046046256,
+      "handle": "silk-vanilla-body-lotion",
+      "title": "Silk Vanilla Body Lotion",
+      "vendor": "Siwa Fragrances",
+      "product_type": "body lotion",
+      "tags": [],
+      "variant_count": 1,
+      "available_variants": 0,
+      "image_count": 1,
+      "price_min_egp": 350.00,
+      "price_max_egp": 350.00,
+      "url": "https://siwafragrances.com/products/silk-vanilla-body-lotion"
+    },
+    {
+      "id": 7735877664816,
+      "handle": "mango-pineapple",
+      "title": "Mango Pineapple",
+      "vendor": "Summer Hammer",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "new",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 750.00,
+      "price_max_egp": 1850.00,
+      "url": "https://siwafragrances.com/products/mango-pineapple"
+    },
+    {
+      "id": 7735877533744,
+      "handle": "vanilla-bundle",
+      "title": "Vanilla Bundle",
+      "vendor": "Siwa Fragrances",
+      "product_type": "",
+      "tags": [
+        "Bundles"
+      ],
+      "variant_count": 3,
+      "available_variants": 0,
+      "image_count": 1,
+      "price_min_egp": 1060.00,
+      "price_max_egp": 1555.00,
+      "url": "https://siwafragrances.com/products/vanilla-bundle"
+    },
+    {
+      "id": 7735877500976,
+      "handle": "drunk-gold",
+      "title": "Drunk Gold",
+      "vendor": "Angels’ Share Paradis",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 750.00,
+      "price_max_egp": 1950.00,
+      "url": "https://siwafragrances.com/products/drunk-gold"
+    },
+    {
+      "id": 7735877402672,
+      "handle": "marshmallow-bundle",
+      "title": "Marshmallow Bundle",
+      "vendor": "Siwa Fragrances",
+      "product_type": "",
+      "tags": [
+        "Bundles"
+      ],
+      "variant_count": 1,
+      "available_variants": 1,
+      "image_count": 1,
+      "price_min_egp": 950.00,
+      "price_max_egp": 950.00,
+      "url": "https://siwafragrances.com/products/marshmallow-bundle"
+    },
+    {
+      "id": 7735877369904,
+      "handle": "marshmallow",
+      "title": "Marshmallow",
+      "vendor": "Siwa Fragrances",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 1,
+      "available_variants": 1,
+      "image_count": 1,
+      "price_min_egp": 375.00,
+      "price_max_egp": 375.00,
+      "url": "https://siwafragrances.com/products/marshmallow"
+    },
+    {
+      "id": 7735877238832,
+      "handle": "lagoon-flair",
+      "title": "Lagoon Flair",
+      "vendor": "Le Beau Le Parfum",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "new"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 450.00,
+      "price_max_egp": 1200.00,
+      "url": "https://siwafragrances.com/products/lagoon-flair"
+    },
+    {
+      "id": 7735877206064,
+      "handle": "boujee-blush",
+      "title": "Boujee Blush",
+      "vendor": "Kayali Boujee Marshmallow",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "new",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 500.00,
+      "price_max_egp": 1200.00,
+      "url": "https://siwafragrances.com/products/boujee-blush"
+    },
+    {
+      "id": 7735877173296,
+      "handle": "sweet-oud",
+      "title": "Sweet Oud",
+      "vendor": "Oud Cadenza MC",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "new",
+        "Unisex",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 0,
+      "image_count": 2,
+      "price_min_egp": 650.00,
+      "price_max_egp": 1650.00,
+      "url": "https://siwafragrances.com/products/sweet-oud"
+    },
+    {
+      "id": 7735876911152,
+      "handle": "libre-desire",
+      "title": "Libre Desire",
+      "vendor": "YSL Libre intense",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "new",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 500.00,
+      "price_max_egp": 1250.00,
+      "url": "https://siwafragrances.com/products/libre-desire"
+    },
+    {
+      "id": 7735876747312,
+      "handle": "sweet-rum",
+      "title": "Sweet Rum",
+      "vendor": "Siwa Fragrances",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 1,
+      "available_variants": 1,
+      "image_count": 3,
+      "price_min_egp": 375.00,
+      "price_max_egp": 375.00,
+      "url": "https://siwafragrances.com/products/sweet-rum"
+    },
+    {
+      "id": 7735876649008,
+      "handle": "apple-pie",
+      "title": "Apple Pie",
+      "vendor": "Siwa Fragrances",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 1,
+      "available_variants": 1,
+      "image_count": 3,
+      "price_min_egp": 375.00,
+      "price_max_egp": 375.00,
+      "url": "https://siwafragrances.com/products/apple-pie"
+    },
+    {
+      "id": 7735876616240,
+      "handle": "silk-vanilla",
+      "title": "Silk Vanilla",
+      "vendor": "Siwa Fragrances",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 1,
+      "available_variants": 1,
+      "image_count": 3,
+      "price_min_egp": 375.00,
+      "price_max_egp": 375.00,
+      "url": "https://siwafragrances.com/products/silk-vanilla"
+    },
+    {
+      "id": 7735876583472,
+      "handle": "gourmet",
+      "title": "Gourmet",
+      "vendor": "Siwa original creation",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "new",
+        "Unisex",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 1,
+      "image_count": 2,
+      "price_min_egp": 800.00,
+      "price_max_egp": 2100.00,
+      "url": "https://siwafragrances.com/products/gourmet"
+    },
+    {
+      "id": 7735876419632,
+      "handle": "chocolate-creme",
+      "title": "Chocolate Creme",
+      "vendor": "Siwa original creation",
+      "product_type": "",
+      "tags": [
+        "Men",
+        "new",
+        "Unisex",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 450.00,
+      "price_max_egp": 1250.00,
+      "url": "https://siwafragrances.com/products/chocolate-creme"
+    },
+    {
+      "id": 7735876321328,
+      "handle": "layering-30-ml-bundle",
+      "title": "Layering bundle",
+      "vendor": "Siwa Fragrances",
+      "product_type": "",
+      "tags": [
+        "Bundles"
+      ],
+      "variant_count": 12,
+      "available_variants": 12,
+      "image_count": 1,
+      "price_min_egp": 1105.00,
+      "price_max_egp": 1995.00,
+      "url": "https://siwafragrances.com/products/layering-30-ml-bundle"
+    },
+    {
+      "id": 7735876223024,
+      "handle": "coffee-vanilla",
+      "title": "Coffee Vanilla",
+      "vendor": "Siwa original creation",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "new",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 2,
+      "image_count": 1,
+      "price_min_egp": 550.00,
+      "price_max_egp": 1150.00,
+      "url": "https://siwafragrances.com/products/coffee-vanilla"
+    },
+    {
+      "id": 7735876190256,
+      "handle": "layering-apple",
+      "title": "Layering Apple",
+      "vendor": "Eden Juicy Apple kayali",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Women"
+      ],
+      "variant_count": 2,
+      "available_variants": 2,
+      "image_count": 1,
+      "price_min_egp": 450.00,
+      "price_max_egp": 650.00,
+      "url": "https://siwafragrances.com/products/layering-apple"
+    },
+    {
+      "id": 7735876059184,
+      "handle": "caramel-vanigliato",
+      "title": "Caramel vanigliato",
+      "vendor": "Bianco Latte Giardini Di Toscana",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 2,
+      "image_count": 1,
+      "price_min_egp": 550.00,
+      "price_max_egp": 1550.00,
+      "url": "https://siwafragrances.com/products/caramel-vanigliato"
+    },
+    {
+      "id": 7735875829808,
+      "handle": "luna-di-roma",
+      "title": "Luna Di Roma",
+      "vendor": "Valentino Donna Born In Roma Intense",
+      "product_type": "",
+      "tags": [
+        "Women"
+      ],
+      "variant_count": 1,
+      "available_variants": 1,
+      "image_count": 1,
+      "price_min_egp": 600.00,
+      "price_max_egp": 600.00,
+      "url": "https://siwafragrances.com/products/luna-di-roma"
+    },
+    {
+      "id": 7735875797040,
+      "handle": "coco-woods",
+      "title": "Coco Woods",
+      "vendor": "Vanilla Powder Matiere Premiere",
+      "product_type": "",
+      "tags": [
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 850.00,
+      "price_max_egp": 2300.00,
+      "url": "https://siwafragrances.com/products/coco-woods"
+    },
+    {
+      "id": 7735875731504,
+      "handle": "soul-poudree",
+      "title": "Soul Poudree",
+      "vendor": "Narciso Poudree",
+      "product_type": "",
+      "tags": [
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 2,
+      "image_count": 1,
+      "price_min_egp": 400.00,
+      "price_max_egp": 1050.00,
+      "url": "https://siwafragrances.com/products/soul-poudree"
+    },
+    {
+      "id": 7735875600432,
+      "handle": "iris-elixir",
+      "title": "Iris elixir",
+      "vendor": "Prada L’Homme Intense",
+      "product_type": "",
+      "tags": [
+        "Men"
+      ],
+      "variant_count": 2,
+      "available_variants": 0,
+      "image_count": 1,
+      "price_min_egp": 850.00,
+      "price_max_egp": 1350.00,
+      "url": "https://siwafragrances.com/products/iris-elixir"
+    },
+    {
+      "id": 7735875502128,
+      "handle": "hot-male",
+      "title": "Hot Male",
+      "vendor": "You Intensely Giorgio Armani",
+      "product_type": "",
+      "tags": [
+        "Men"
+      ],
+      "variant_count": 2,
+      "available_variants": 1,
+      "image_count": 1,
+      "price_min_egp": 800.00,
+      "price_max_egp": 1250.00,
+      "url": "https://siwafragrances.com/products/hot-male"
+    },
+    {
+      "id": 7735875436592,
+      "handle": "marasi",
+      "title": "Marasi",
+      "vendor": "40 Knots Xerjoff",
+      "product_type": "",
+      "tags": [
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 550.00,
+      "price_max_egp": 1400.00,
+      "url": "https://siwafragrances.com/products/marasi"
+    },
+    {
+      "id": 7735875338288,
+      "handle": "hibiscusex",
+      "title": "Hibiscusex",
+      "vendor": "Hibiscus Mahajád",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 700.00,
+      "price_max_egp": 1650.00,
+      "url": "https://siwafragrances.com/products/hibiscusex"
+    },
+    {
+      "id": 7735875272752,
+      "handle": "male-elixir",
+      "title": "Male Elixir",
+      "vendor": "Le Male Elixir JPG",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men"
+      ],
+      "variant_count": 3,
+      "available_variants": 1,
+      "image_count": 1,
+      "price_min_egp": 450.00,
+      "price_max_egp": 1250.00,
+      "url": "https://siwafragrances.com/products/male-elixir"
+    },
+    {
+      "id": 7735875207216,
+      "handle": "layering-lychee",
+      "title": "Layering Lychee",
+      "vendor": "Eden Sparkling Lychee 39 Kayali",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 1,
+      "image_count": 1,
+      "price_min_egp": 450.00,
+      "price_max_egp": 1000.00,
+      "url": "https://siwafragrances.com/products/layering-lychee"
+    },
+    {
+      "id": 7735875010608,
+      "handle": "stellar-nights",
+      "title": "Stellar Nights",
+      "vendor": "Stellar Times Louis Vuitton",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 1,
+      "image_count": 1,
+      "price_min_egp": 800.00,
+      "price_max_egp": 2050.00,
+      "url": "https://siwafragrances.com/products/stellar-nights"
+    },
+    {
+      "id": 7735874977840,
+      "handle": "hot-vanilla",
+      "title": "Hot Vanilla",
+      "vendor": "Althaïr Parfums de Marly",
+      "product_type": "",
+      "tags": [
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 550.00,
+      "price_max_egp": 1550.00,
+      "url": "https://siwafragrances.com/products/hot-vanilla"
+    },
+    {
+      "id": 7735874879536,
+      "handle": "layering-pistachio",
+      "title": "Layering Pistachio",
+      "vendor": "Yum Pistachio Gelato Kayali",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 450.00,
+      "price_max_egp": 1000.00,
+      "url": "https://siwafragrances.com/products/layering-pistachio"
+    },
+    {
+      "id": 7735874814000,
+      "handle": "layering-vanilla",
+      "title": "Layering Vanilla",
+      "vendor": "Vanilla 28 Kayali",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 450.00,
+      "price_max_egp": 1000.00,
+      "url": "https://siwafragrances.com/products/layering-vanilla"
+    },
+    {
+      "id": 7735874715696,
+      "handle": "mango-on-woods",
+      "title": "Mango on woods",
+      "vendor": "God of Fire Stéphane Humbert",
+      "product_type": "",
+      "tags": [
+        "Men"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 700.00,
+      "price_max_egp": 1800.00,
+      "url": "https://siwafragrances.com/products/mango-on-woods"
+    },
+    {
+      "id": 7735874682928,
+      "handle": "pacific-elixir",
+      "title": "Pacific Elixir",
+      "vendor": "Pacific Chill Louis Vuitton",
+      "product_type": "",
+      "tags": [
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 600.00,
+      "price_max_egp": 1500.00,
+      "url": "https://siwafragrances.com/products/pacific-elixir"
+    },
+    {
+      "id": 7735874551856,
+      "handle": "carnal-trail",
+      "title": "Carnal Trail",
+      "vendor": "Side Effect Initio",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 2,
+      "image_count": 1,
+      "price_min_egp": 600.00,
+      "price_max_egp": 1550.00,
+      "url": "https://siwafragrances.com/products/carnal-trail"
+    },
+    {
+      "id": 7735874519088,
+      "handle": "insane-pineapple",
+      "title": "Insane Pineapple",
+      "vendor": "Nishane Hacivat",
+      "product_type": "",
+      "tags": [
+        "Men"
+      ],
+      "variant_count": 3,
+      "available_variants": 2,
+      "image_count": 1,
+      "price_min_egp": 500.00,
+      "price_max_egp": 1350.00,
+      "url": "https://siwafragrances.com/products/insane-pineapple"
+    },
+    {
+      "id": 7735874322480,
+      "handle": "lady-killer",
+      "title": "Lady killer",
+      "vendor": "Layton PDM",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 750.00,
+      "price_max_egp": 1750.00,
+      "url": "https://siwafragrances.com/products/lady-killer"
+    },
+    {
+      "id": 7735874158640,
+      "handle": "irresistible-vanilla",
+      "title": "Irresistible Vanilla",
+      "vendor": "Siwa original creation",
+      "product_type": "",
+      "tags": [
+        "Best Selling"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 400.00,
+      "price_max_egp": 1000.00,
+      "url": "https://siwafragrances.com/products/irresistible-vanilla"
+    },
+    {
+      "id": 7735874125872,
+      "handle": "summer-elegance",
+      "title": "summer elegance",
+      "vendor": "Imagination LV",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men"
+      ],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 850.00,
+      "price_max_egp": 2150.00,
+      "url": "https://siwafragrances.com/products/summer-elegance"
+    },
+    {
+      "id": 7735873568816,
+      "handle": "mawj",
+      "title": "Mawj",
+      "vendor": "Siwa Fragrances",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men"
+      ],
+      "variant_count": 3,
+      "available_variants": 0,
+      "image_count": 1,
+      "price_min_egp": 800.00,
+      "price_max_egp": 1850.00,
+      "url": "https://siwafragrances.com/products/mawj"
+    },
+    {
+      "id": 7735873404976,
+      "handle": "summer-holidays",
+      "title": "Summer Holidays",
+      "vendor": "LV Afternoon Swim",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men",
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 1,
+      "image_count": 1,
+      "price_min_egp": 650.00,
+      "price_max_egp": 1700.00,
+      "url": "https://siwafragrances.com/products/summer-holidays"
+    },
+    {
+      "id": 7735873044528,
+      "handle": "citrine",
+      "title": "Citrine",
+      "vendor": "Tygar Bvlgari",
+      "product_type": "",
+      "tags": [
+        "Best Selling",
+        "Men"
+      ],
+      "variant_count": 3,
+      "available_variants": 0,
+      "image_count": 1,
+      "price_min_egp": 750.00,
+      "price_max_egp": 1850.00,
+      "url": "https://siwafragrances.com/products/citrine"
+    },
+    {
+      "id": 7735872585776,
+      "handle": "soiree",
+      "title": "Soiree",
+      "vendor": "Grand Soir MFK",
+      "product_type": "",
+      "tags": [],
+      "variant_count": 3,
+      "available_variants": 3,
+      "image_count": 1,
+      "price_min_egp": 550.00,
+      "price_max_egp": 1400.00,
+      "url": "https://siwafragrances.com/products/soiree"
+    },
+    {
+      "id": 7735872389168,
+      "handle": "alluring-rose",
+      "title": "Alluring Rose",
+      "vendor": "Delina La Rosée Parfums de Marly",
+      "product_type": "",
+      "tags": [
+        "Women"
+      ],
+      "variant_count": 3,
+      "available_variants": 0,
+      "image_count": 1,
+      "price_min_egp": 475.00,
+      "price_max_egp": 1000.00,
+      "url": "https://siwafragrances.com/products/alluring-rose"
+    }
+  ]
+}

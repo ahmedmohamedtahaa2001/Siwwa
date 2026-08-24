@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://siwafragrances.com/schemas/fragrance-product.json",
+  "title": "Siwa Fragrance Product",
+  "type": "object",
+  "required": ["id", "handle", "title", "brand", "product_type", "description", "variants", "images", "seo"],
+  "properties": {
+    "id": { "type": ["integer", "string"] },
+    "handle": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "title": { "type": "string", "minLength": 2 },
+    "brand": { "type": "string", "minLength": 2 },
+    "product_line": { "type": ["string", "null"] },
+    "inspired_by": {
+      "type": ["object", "null"],
+      "properties": {
+        "fragrance": { "type": "string" },
+        "brand": { "type": "string" },
+        "disclaimer": { "type": "string" }
+      },
+      "required": ["fragrance", "brand", "disclaimer"],
+      "additionalProperties": false
+    },
+    "product_type": { "enum": ["eau_de_parfum", "eau_de_toilette", "perfume_oil", "body_splash", "body_lotion", "bundle", "other"] },
+    "concentration": { "type": ["string", "null"] },
+    "audience": {
+      "type": "array",
+      "items": { "enum": ["women", "men", "unisex"] },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "description": { "type": "string", "minLength": 40 },
+    "fragrance_families": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "notes": {
+      "type": "object",
+      "properties": {
+        "top": { "type": "array", "items": { "type": "string" } },
+        "heart": { "type": "array", "items": { "type": "string" } },
+        "base": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["top", "heart", "base"],
+      "additionalProperties": false
+    },
+    "performance": {
+      "type": "object",
+      "properties": {
+        "longevity": { "enum": ["light", "moderate", "long", "very_long", "unknown"] },
+        "projection": { "enum": ["intimate", "moderate", "strong", "very_strong", "unknown"] }
+      },
+      "required": ["longevity", "projection"],
+      "additionalProperties": false
+    },
+    "seasons": { "type": "array", "items": { "enum": ["spring", "summer", "autumn", "winter", "all_year"] }, "uniqueItems": true },
+    "occasions": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "sku", "title", "price_egp", "available"],
+        "properties": {
+          "id": { "type": ["integer", "string"] },
+          "sku": { "type": "string", "minLength": 1 },
+          "title": { "type": "string" },
+          "volume_ml": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+          "price_egp": { "type": "number", "minimum": 0 },
+          "compare_at_price_egp": { "type": ["number", "null"], "minimum": 0 },
+          "available": { "type": "boolean" },
+          "barcode": { "type": ["string", "null"] },
+          "weight_grams": { "type": ["number", "null"], "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "images": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["url", "alt"],
+        "properties": {
+          "url": { "type": "string", "format": "uri" },
+          "alt": { "type": "string", "minLength": 3 },
+          "width": { "type": ["integer", "null"], "minimum": 1 },
+          "height": { "type": ["integer", "null"], "minimum": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "rating": {
+      "type": ["object", "null"],
+      "properties": {
+        "value": { "type": "number", "minimum": 0, "maximum": 5 },
+        "count": { "type": "integer", "minimum": 0 }
+      },
+      "required": ["value", "count"],
+      "additionalProperties": false
+    },
+    "seo": {
+      "type": "object",
+      "required": ["title", "meta_description", "canonical_url"],
+      "properties": {
+        "title": { "type": "string", "minLength": 10 },
+        "meta_description": { "type": "string", "minLength": 40 },
+        "canonical_url": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

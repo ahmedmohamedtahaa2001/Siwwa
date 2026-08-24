@@ -1,0 +1,71 @@
+{%- liquid
+  assign item_title = fallback_title
+  assign item_subtitle = fallback_subtitle
+  assign item_price = fallback_price
+  assign item_compare_price = fallback_compare_price
+  assign item_url = fallback_url | default: routes.all_products_collection_url
+  assign item_image = fallback_image
+  assign item_secondary_image = fallback_secondary_image
+  assign item_available = true
+  assign item_badge = fallback_badge
+
+  if card_product != blank
+    assign item_title = card_product.metafields.custom.product_title_fragrance | default: card_product.title
+    assign item_subtitle = card_product.metafields.custom.product_title_category | default: card_product.type
+    assign item_price = card_product.price | money
+    if card_product.compare_at_price > card_product.price
+      assign item_compare_price = card_product.compare_at_price | money
+    endif
+    assign item_url = card_product.url | within: collection
+    assign item_image = card_product.featured_media.preview_image
+    assign item_secondary_image = card_product.media[1].preview_image
+    assign item_available = card_product.available
+    if card_product.compare_at_price > card_product.price
+      assign item_badge = 'Sale'
+    elsif card_product.tags contains 'label-new'
+      assign item_badge = 'New'
+    endif
+  endif
+-%}
+
+<article class="phlur-collection-card card-wrapper product-card-wrapper underline-links-hover" data-product-card>
+ <div class="card card--standard card--media" style="--ratio-percent:100%">
+  <div class="card__inner color-scheme-2 gradient ratio" style="--ratio-percent:100%">
+   <a class="phlur-collection-card__media card__media media media--transparent media--hover-effect" href="{{ item_url }}" aria-label="View {{ item_title | escape }}">
+    {%- if item_badge != blank -%}<span class="phlur-collection-card__badge">{{ item_badge | escape }}</span>{%- endif -%}
+    {%- if item_image != blank -%}
+      {{ item_image | image_url: width: 1000 | image_tag: class: 'phlur-collection-card__image phlur-collection-card__image--primary', widths: '240, 360, 480, 640, 800, 1000', sizes: '(min-width: 990px) 25vw, 50vw', loading: loading, alt: item_image.alt | default: item_title }}
+      {%- if item_secondary_image != blank -%}
+        {{ item_secondary_image | image_url: width: 1000 | image_tag: class: 'phlur-collection-card__image phlur-collection-card__image--secondary', widths: '240, 360, 480, 640, 800, 1000', sizes: '(min-width: 990px) 25vw, 50vw', loading: 'lazy', alt: item_secondary_image.alt | default: item_title }}
+      {%- endif -%}
+    {%- else -%}
+      {%- if fallback_image != blank -%}
+        {{ fallback_image | image_url: width: 1000 | image_tag: class: 'phlur-collection-card__image phlur-collection-card__image--primary', widths: '240, 360, 480, 640, 800, 1000', sizes: '(min-width: 990px) 25vw, 50vw', loading: loading, alt: fallback_alt | default: item_title }}
+      {%- elsif fallback_image_url != blank -%}
+        <img class="phlur-collection-card__image phlur-collection-card__image--primary" src="{{ fallback_image_url }}" alt="{{ fallback_alt | default: item_title | escape }}" width="900" height="900" loading="{{ loading }}">
+      {%- endif -%}
+      {%- if fallback_secondary_image != blank -%}{{ fallback_secondary_image | image_url: width: 1000 | image_tag: class: 'phlur-collection-card__image phlur-collection-card__image--secondary', loading: 'lazy', alt: '' }}{%- endif -%}
+    {%- endif -%}
+   </a>
+   <div class="card__content phlur-collection-card__overlay">
+    <div class="card__information"><h4 class="card__heading aktiv"><a class="full-unstyled-link" href="{{ item_url }}">{{ item_title | escape }}</a></h4></div>
+   </div>
+  </div>
+  <div class="card__content phlur-collection-card__details">
+    <div class="card__information"><h4 class="card__heading aktiv"><a class="phlur-collection-card__title full-unstyled-link" href="{{ item_url }}">{{ item_title | default: 'Missing Person' | escape }}<br><span class="phlur-collection-card__subtitle variant-info p2">{{ item_subtitle | default: '50mL Eau de Parfum' | escape }}</span></a></h4><div class="card-information"><span class="caption-large light"></span></div></div>
+    <div class="phlur-collection-card__buy-row quick-add no-js-hidden">
+      {%- if card_product != blank -%}
+        <form method="post" action="{{ routes.cart_add_url }}" class="phlur-collection-card__form form" data-type="add-to-cart-form" data-collection-product-form>
+          <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}">
+          <input type="hidden" name="quantity" value="1">
+          <button class="phlur-collection-card__add quick-add__submit outline-black button button--full-width" type="submit" aria-label="{% if item_available %}Add {{ item_title | escape }} to cart{% else %}{{ item_title | escape }} is sold out{% endif %}"{% unless item_available %} disabled{% endunless %}>
+            <span class="flex-container-row"><span class="add">{% if item_available %}Add{% else %}Sold Out{% endif %}</span><span aria-hidden="true" class="phlur-collection-card__dot square-dot">·</span><span class="price"><span class="price__container"><span class="price__regular"><span class="price-item price-item--regular">{{ item_price }}</span>{% if item_compare_price != blank %} <s>{{ item_compare_price }}</s>{% endif %}</span></span></span></span>
+          </button>
+        </form>
+      {%- else -%}
+        <a class="phlur-collection-card__add quick-add__submit outline-black button button--full-width" href="{{ item_url }}"><span class="flex-container-row"><span class="add">Add</span><span aria-hidden="true" class="square-dot">·</span><span class="price">{{ item_price | default: '$99' }}{% if fallback_compare_price != blank %} <s>{{ fallback_compare_price }}</s>{% endif %}</span></span></a>
+      {%- endif -%}
+    </div>
+  </div>
+ </div>
+</article>

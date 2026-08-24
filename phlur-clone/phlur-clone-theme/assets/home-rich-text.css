@@ -1,0 +1,18 @@
+.rich-text{position:relative;z-index:1;width:100%;padding:0;border:0 solid transparent;color:var(--rich-text-color,#000);background:var(--rich-text-background,#fafafa)}
+.rich-text__wrapper{display:flex;width:100%;max-width:2000px;margin:0}
+.rich-text__wrapper--left{justify-content:flex-start}
+.rich-text__wrapper .container-padding-40{width:100%;max-width:1024px;padding:40px 80px}
+.rich-text__blocks.left{width:100%;max-width:864px;margin:0;text-align:left}
+.rich-text__heading{width:100%;margin:0;color:var(--rich-text-color,#000);font-family:'ABCRepro-Regular',sans-serif;font-size:20px;font-style:normal;font-weight:400;letter-spacing:normal;line-height:30px;text-align:left;text-transform:none}
+.rich-text__heading::after{display:block;clear:both;height:0;content:""}
+.rich-text__buttons{display:inline-flex;flex-wrap:wrap;width:100%;max-width:450px;justify-content:flex-start;gap:10px;margin-top:20px}
+.rich-text .button.outline-black{display:block;width:130px;height:40px;padding:0 30px;border:1px solid var(--rich-text-color,#000);border-radius:0;color:var(--rich-text-color,#000);background:transparent;font-family:'ABCReproMono-Medium',sans-serif;font-size:12px;font-style:normal;font-weight:500;letter-spacing:.8px;line-height:38px;text-align:center;text-decoration:none;text-transform:uppercase;transition:.25s cubic-bezier(.8,0,.2,1)}
+.rich-text .button.outline-black:hover,.rich-text .button.outline-black:active{color:var(--rich-text-background,#fafafa);background:var(--rich-text-color,#000)}
+.rich-text .button.outline-black:focus,.rich-text .button.outline-black:focus-visible{outline:none!important}
+.js .rich-text .scroll-trigger{opacity:0;transform:translateY(2rem)}
+.js .rich-text .scroll-trigger.scroll-trigger--active{animation:slideIn .3s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes slideIn{from{opacity:.01;transform:translateY(2rem)}to{opacity:1;transform:translateY(0)}}
+@media screen and (max-width:1199px){.rich-text__wrapper .container-padding-40{padding-right:40px;padding-left:40px}}
+@media screen and (max-width:880px){.rich-text__heading{font-size:17px;line-height:140%}.rich-text .button.outline-black{height:36px;font-size:11px;letter-spacing:.66px;line-height:34px}}
+@media screen and (max-width:749px){.rich-text__wrapper .container-padding-40{padding:30px 20px}}
+@media (prefers-reduced-motion:reduce){.js .rich-text .scroll-trigger{opacity:1;transform:none}.js .rich-text .scroll-trigger.scroll-trigger--active{animation:none}}

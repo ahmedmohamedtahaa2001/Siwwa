@@ -1,0 +1,48 @@
+{
+  "accessibility": {
+    "skip_to_text": "Skip to content",
+    "close": "Close",
+    "loading": "Loading"
+  },
+  "general": {
+    "pagination": {
+      "page": "Page {{ number }}"
+    },
+    "search": {
+      "search": "Search",
+      "placeholder": "Search products",
+      "submit": "Submit"
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to cart",
+      "sold_out": "Sold out",
+      "unavailable": "Unavailable",
+      "quantity": "Quantity"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Cart",
+      "empty": "Your cart is empty",
+      "checkout": "Check out"
+    }
+  },
+  "newsletter": {
+    "success": "Thanks for subscribing"
+  },
+  "customer": {
+    "account": {
+      "title": "Account"
+    },
+    "login_page": {
+      "title": "Login"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Here's your {{ value }} gift card for {{ shop }}!"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<section class="main-cart page-width" aria-labelledby="MainCartTitle">
+  <header class="main-cart__header"><h1 id="MainCartTitle">{{ settings.cart_drawer_heading | escape }}</h1><a href="{{ routes.all_products_collection_url }}">{{ settings.continue_shopping_label | escape }}</a></header>
+  {%- if cart.empty? -%}
+    <div class="main-cart__empty"><h2>{{ settings.cart_empty_text | escape }}</h2><a class="button" href="{{ routes.all_products_collection_url }}">{{ settings.continue_shopping_label | escape }}</a></div>
+  {%- else -%}
+    <form action="{{ routes.cart_url }}" method="post">
+      <div class="main-cart__lines">
+        {%- for item in cart.items -%}
+          <article class="main-cart__line">
+            <a href="{{ item.url }}">{%- if item.image -%}{{ item.image | image_url: width: 360 | image_tag: loading: 'lazy', widths: '120, 240, 360', alt: item.image.alt }}{%- endif -%}</a>
+            <div><a class="main-cart__title" href="{{ item.url }}">{{ item.product.title }}</a>{%- unless item.product.has_only_default_variant -%}<p>{{ item.variant.title }}</p>{%- endunless -%}<label for="CartQuantity-{{ forloop.index }}">Quantity</label><input id="CartQuantity-{{ forloop.index }}" name="updates[]" type="number" min="0" value="{{ item.quantity }}"><a href="{{ item.url_to_remove }}">Remove</a></div>
+            <strong>{{ item.final_line_price | money }}</strong>
+          </article>
+        {%- endfor -%}
+      </div>
+      <footer class="main-cart__footer"><p><span>{{ settings.subtotal_label | escape }}</span><strong>{{ cart.total_price | money }}</strong></p><div><button type="submit" name="update">Update bag</button><button type="submit" name="checkout">{{ settings.checkout_label | escape }}</button></div></footer>
+    </form>
+  {%- endif -%}
+</section>
+{% schema %}{"name":"Main cart","settings":[]}{% endschema %}

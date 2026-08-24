@@ -1,0 +1,73 @@
+{%- liquid
+  assign ix = index | minus: 1
+  if fallback_catalog != 'perfumes'
+    assign titles = 'Mini Perfume Set|Vanilla & Cream|Discovery Set|Island Escape|Missing Person|Father Figure|Vanilla Skin|Heavy Cream|Vanilla Blackberry|Island Swim|Missing Person|Missing Person' | split: '|'
+    assign full_titles = 'Mini Perfume Coffret|Vanilla & Cream - Body Mist Duo|Fragrance Discovery Set|Island Escape - Body Mist Trio|Missing Person - 100mL|Father Figure - 100mL|Vanilla Skin - Body Mist|Heavy Cream - Body Mist|Vanilla Blackberry - Body Mist|Island Swim - Body Mist|Missing Person - Daily Ritual Duo|Missing Person - Body Oil' | split: '|'
+    assign subtitles = '4 x 7mL Eau de Parfum|Hair & Body Mist Duo|8 x 2mL Samples|Travel Size Body Mist Trio|100mL Eau de Parfum|100mL Eau de Parfum|Full Size Body Mist|Full Size Body Mist|Full Size Body Mist|Full Size Body Mist|Daily Ritual Duo|Body Oil' | split: '|'
+    assign prices = '$59|$68|$39|$68|$139|$139|$39|$39|$39|$39|$120|$45' | split: '|'
+    assign compares = ' |$78| |$78| | | | | | |$144| ' | split: '|'
+    assign badges = 'NEW|BESTSELLER|$20 CREDIT|NEW|BESTSELLER|BESTSELLER|BESTSELLER|BESTSELLER|BESTSELLER|NEW|BESTSELLER|BESTSELLER' | split: '|'
+    assign product_handles = 'coffret-mini-perfume-set|vanilla-cream-duo-body-mists|fragrance-discovery-set|island-escape-body-mist-trio|missing-person-100ml|father-figure-100ml|vanilla-skin-body-mist|heavy-cream-body-mist|vanilla-blackberry-body-mist|island-swim-full-size-body-mist|missing-person-daily-ritual-duo-full-size|missing-person-body-oil' | split: '|'
+    assign variants = '52467265700021|44983499882677|52408137744565|52483978100917|45231949709493|51711389335733|43153584783541|44500500054197|51637717434549|52471784636597|43739076198581|43733419491509' | split: '|'
+    assign product_ids = '10424663048373|8125310632117|10406636028085|10429585653941|8190667227317|10227666976949|7507395477685|7977308979381|10219907907765|10426127614133|7688308228277|7687250673845' | split: '|'
+    assign images = 'https://phlur.com/cdn/shop/files/HCS_391c34f2-b4e3-48b5-8ab4-675200005fc1.jpg?v=1777325341§https://phlur.com/cdn/shop/files/Vanilla_CreamDuo-BodyMists.jpg?v=1735324623§https://phlur.com/cdn/shop/files/DiscoverySetLedge_ColorBoosted.jpg?v=1775754801§https://phlur.com/cdn/shop/files/Island_Escape_Trio-BodyMists-Main_4c610ed2-bea1-4b5a-bfd8-78ec60d338ee.jpg?v=1778706903§https://phlur.com/cdn/shop/files/MP_Jumbo_ledge.jpg?v=1743536252§https://phlur.com/cdn/shop/files/FFJumbo.jpg?v=1757467192§https://phlur.com/cdn/shop/files/VanillaSkin-FullSize_Allure.jpg?v=1727377166§https://phlur.com/cdn/shop/files/HeavyCream-BodyMist_CapOn2.jpg?v=1729714192§https://phlur.com/cdn/shop/files/VanillaBlackberry_8oz_Main_1361ae57-bc18-4089-8b2e-c63550429ef8.jpg?v=1763016876§https://phlur.com/cdn/shop/files/island_swim_8oz.jpg?v=1777678523§https://phlur.com/cdn/shop/files/Missing_Person_-_Longevity_Duo_-_Full_Size.jpg?v=1743211292§https://phlur.com/cdn/shop/files/1-PHLR_PDP_MissingPerson_BodyOil_CapOn.jpg?v=1758847539' | split: '§'
+    assign hovers = 'https://phlur.com/cdn/shop/files/Mini_Perfume_-_Cherry_Stem_Update.jpg?v=1777341497§https://phlur.com/cdn/shop/files/Vanilla_Cream_Duo_-_Lifestyle.jpg?v=1747888249§https://phlur.com/cdn/shop/files/newimage4.jpg?v=1775754801§https://phlur.com/cdn/shop/files/islandescapetrio-1_bb190607-555f-444a-81ff-beeb26a80234.jpg?v=1777685944§https://phlur.com/cdn/shop/files/5_VS_100ml.jpg?v=1757486848§https://phlur.com/cdn/shop/files/Father_Figure_-_Jumbo_-_Studio.jpg?v=1757486848§https://phlur.com/cdn/shop/files/Frame_4857.jpg?v=1764570802§https://phlur.com/cdn/shop/files/HeavyCream-BodyMist_Splash.jpg?v=1763016963§https://phlur.com/cdn/shop/files/VanillaBlackberry_8oz_Studio.jpg?v=1771645682§https://phlur.com/cdn/shop/files/IslandSwim_8oz_Studio_3f1171f5-1ba5-40d2-8d66-1e26b4c87684.jpg?v=1777678477§https://phlur.com/cdn/shop/files/MissingPerson-LingeringScentSet2.jpg?v=1743211292§https://phlur.com/cdn/shop/files/MP_Body_Oil.jpg?v=1770243454' | split: '§'
+    assign alts = full_titles
+  else
+  assign titles = 'Vanilla Canyon|Missing Person|Father Figure|Vanilla Skin|Cherry Stem|Honey Moon|Golden Rule|Rose Whip|Afterglow|Strawberry Letter|Soft Spot|Mood Ring' | split: '|'
+  assign full_titles = 'Vanilla Canyon - 50mL|Missing Person - 50mL|Father Figure - 50mL|Vanilla Skin - 50mL|Cherry Stem - 50mL|Honey Moon - 50mL|Golden Rule - 50mL|Rose Whip - 50mL|Afterglow - 50mL|Strawberry Letter - 50mL|Soft Spot - 50mL|Mood Ring - 50mL' | split: '|'
+  assign subtitles = '50mL Eau de Parfum|50mL Eau de Parfum|50mL Eau de Parfum|50mL Eau de Parfum|50mL Eau de Parfum|50mL Eau de Parfum|50mL Eau de Parfum|50mL Eau de Parfum|50mL Eau de Parfum|50mL Eau de Parfum|50mL Eau de Parfum|50mL Eau de Parfum' | split: '|'
+  assign prices = '$99|$99|$99|$99|$99|$99|$99|$99|$99|$99|$99|$99' | split: '|'
+  assign compares = ' | | | | | | | | | | | ' | split: '|'
+  assign badges = 'NEW|BESTSELLER|BESTSELLER|BESTSELLER|BESTSELLER|NEW| | | | | | ' | split: '|'
+  assign product_handles = 'vanilla-canyon-50ml|missing-person-50ml|father-figure-50ml|vanilla-skin-perfume|cherry-stem-50ml|honey-moon-50ml|golden-rule-50ml|rose-whip-50ml|afterglow-50ml|strawberry-letter-perfume|soft-spot-50ml|mood-ring-50ml' | split: '|'
+  assign variants = '52807465402549|41584939303093|42911173345461|44311341105333|51618166145205|52337144004789|44901290737845|45172738883765|52076038750389|41613422887093|44141916750005|41613441564853' | split: '|'
+  assign product_ids = '10497284735157|7154547589301|7460668375221|7917274333365|10216077033653|10383564603573|8115902513333|8178008555701|10307644588213|7163424473269|7848555380917|7163429224629' | split: '|'
+  assign images = 'VANILLACANYON-50ml-ledge.jpg|1-PHLUR_PDP_MissingPerson_EDP_CapOn.jpg|FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg|1-PHLUR_PDP_VanillaSkin_EDP_50ml_CapOn.jpg|CherryStem-50mL-Ledge.jpg|honeymoon-50ml-ledge.jpg|PHLUR_Ecomm_PDP_EDP_50ml_GoldenRule.jpg|Rose_Whip_-_50mL_Allure_2025.jpg|Afterglow-50mL-Ledge.jpg|StrawberryLetter-50mL.jpg|1-PHLUR_PDP_SoftSpot_EDP_CapOn.jpg|MoodRing-50mL.jpg' | split: '|'
+  assign hovers = '268.jpg|mp_pdp.jpg|FF.jpg|VS_8251ef77-6a29-4dac-be8b-130a4ade753f.jpg|CherryStem-50mL-Editorial5.jpg|honeymoon-50ml-editorial-1.jpg|Golden_Rule_-_50mL_-_Editorial.jpg|RoseWhip-50mL-Editorial.jpg|Afterglow_-_50mL_-_Editorial.jpg|Nav_-_Collection_Feature_-_Strawberry_Letter.jpg|SoftSpot-FS.jpg|6-PHLR_PDP_MoodRing_50ml_EDP_Editorial.jpg' | split: '|'
+  assign alts = 'Vanilla Canyon - 50mL - Phlur|missing person perfume|father figure perfume|vanilla skin perfume|Cherry Stem - 50mL - Phlur|Honey Moon Eau de Parfum|golden rule eau de parfum|Rose Whip - 50mL - Phlur|Afterglow - 50mL - Phlur|strawberry perfume|soft spot full sized fragrance|mood ring perfume by phlur' | split: '|'
+  endif
+  assign fallback_url = '/products/' | append: product_handles[ix]
+  assign fallback_image = images[ix]
+  assign fallback_hover = hovers[ix]
+  if fallback_catalog == 'perfumes'
+    assign fallback_image = images[ix] | asset_url | append: '?v=1'
+    assign fallback_hover = hovers[ix] | asset_url | append: '?v=1'
+  endif
+  assign display_title = product.metafields.custom.display_title | default: titles[ix]
+  assign full_title = product.title | default: full_titles[ix]
+  assign display_subtitle = product.metafields.custom.display_subtitle | default: product.metafields.descriptors.subtitle | default: subtitles[ix]
+  assign display_badge = product.metafields.custom.badge | default: product.metafields.descriptors.badge | default: badges[ix]
+  assign display_url = product.url | default: fallback_url
+  assign variant_id = product.selected_or_first_available_variant.id | default: variants[ix]
+  assign form_product_id = product.id | default: product_ids[ix]
+  assign product_available = true
+  if product != blank and product.selected_or_first_available_variant.available == false
+    assign product_available = false
+  endif
+  assign display_price = prices[ix]
+  assign compare_price = compares[ix] | strip
+  if product != blank and product.price != blank
+    assign display_price = product.price | money
+    if product.compare_at_price > product.price
+      assign compare_price = product.compare_at_price | money
+    else
+      assign compare_price = blank
+    endif
+  endif
+-%}
+<li id="Slide-{{ section_id }}-{{ index }}" class="swiper-slide featured-collection__slide{% if index == 1 %} swiper-slide-active{% elsif index == 2 %} swiper-slide-next{% endif %}" data-cascade style="--animation-order:{{ index }};margin-right:16px">
+  <div class="card-wrapper product-card-wrapper underline-links-hover"><div class="card card--standard card--media" style="--ratio-percent:100%">
+    <div class="card__inner color-scheme-2 gradient ratio" style="--ratio-percent:100%"><div class="card__media"><div class="media media--transparent media--hover-effect">
+      {%- if product != blank and product.featured_media != blank -%}
+        {{ product.featured_media | image_url: width: 1066 | image_tag: widths: '165,360,533,720,940,1066', sizes: '(min-width:1600px) 367px, (min-width:990px) calc((100vw - 130px)/4), (min-width:750px) calc((100vw - 120px)/3), calc((100vw - 35px)/2)', class: 'motion-reduce', loading: 'lazy' }}
+        {%- if product.media[1] != blank -%}{{ product.media[1] | image_url: width: 1066 | image_tag: widths: '165,360,533,720,940,1066', sizes: '(min-width:1600px) 367px, (min-width:990px) calc((100vw - 130px)/4), (min-width:750px) calc((100vw - 120px)/3), calc((100vw - 35px)/2)', class: 'motion-reduce featured-collection__hover-image', loading: 'lazy' }}{%- else -%}<img src="{{ fallback_hover }}" alt="" class="motion-reduce featured-collection__hover-image" width="1066" height="1066" loading="lazy">{%- endif -%}
+      {%- else -%}
+        <img src="{{ fallback_image }}&amp;width=533" srcset="{{ fallback_image }}&amp;width=165 165w, {{ fallback_image }}&amp;width=360 360w, {{ fallback_image }}&amp;width=533 533w, {{ fallback_image }}&amp;width=720 720w, {{ fallback_image }}&amp;width=940 940w, {{ fallback_image }}&amp;width=1066 1066w" sizes="(min-width:1600px) 367px, (min-width:990px) calc((100vw - 130px)/4), (min-width:750px) calc((100vw - 120px)/3), calc((100vw - 35px)/2)" alt="{{ alts[ix] | escape }}" class="motion-reduce" width="4000" height="4000" loading="lazy"><img src="{{ fallback_hover }}&amp;width=533" srcset="{{ fallback_hover }}&amp;width=165 165w, {{ fallback_hover }}&amp;width=360 360w, {{ fallback_hover }}&amp;width=533 533w, {{ fallback_hover }}&amp;width=720 720w, {{ fallback_hover }}&amp;width=940 940w, {{ fallback_hover }}&amp;width=1066 1066w" sizes="(min-width:1600px) 367px, (min-width:990px) calc((100vw - 130px)/4), (min-width:750px) calc((100vw - 120px)/3), calc((100vw - 35px)/2)" alt="" class="motion-reduce featured-collection__hover-image" width="4000" height="4000" loading="lazy">
+      {%- endif -%}
+    </div></div><div class="card__content"><div class="card__information"><h4 class="card__heading aktiv"><a id="StandardCardNoMediaLink-{{ section_id }}-{{ index }}" href="{{ display_url }}" class="full-unstyled-link" aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ index }}{% if display_badge != blank %} NoMediaStandardBadge-{{ section_id }}-{{ index }}{% endif %}">{{ full_title | escape }}</a></h4></div>{% if display_badge != blank %}<div class="card__badge top left show-label-badge"><span class="badge badge-label badge--bottom-left" id="NoMediaStandardBadge-{{ section_id }}-{{ index }}" style="background-color:#fff;color:#000">{{ display_badge }}</span></div>{% endif %}</div></div>
+    <div class="card__content"><div class="card__information">{% if display_badge != blank %}<span id="Badge-{{ section_id }}-{{ index }}" class="visually-hidden">{{ display_badge }}</span>{% endif %}<h4 class="card__heading aktiv" id="title-{{ section_id }}-{{ index }}"><a id="CardLink-{{ section_id }}-{{ index }}" href="{{ display_url }}" class="full-unstyled-link" aria-labelledby="CardLink-{{ section_id }}-{{ index }}{% if display_badge != blank %} Badge-{{ section_id }}-{{ index }}{% endif %}">{{ display_title | escape }}<br><p class="variant-info p2">{{ display_subtitle | escape }}</p></a></h4><div class="card-information"><span class="caption-large light"></span></div></div>
+      <div class="quick-add no-js-hidden"><product-form data-section-id="{{ section_id }}"><form method="post" action="{{ routes.cart_add_url | default: '/cart/add' }}" id="quick-add-{{ section_id }}{{ variant_id }}" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="id" value="{{ variant_id }}" class="product-variant-id"><button type="submit" id="quick-add-{{ section_id }}{{ variant_id }}-submit" class="quick-add__submit outline-black button button--full-width" aria-labelledby="quick-add-{{ section_id }}{{ variant_id }}-submit title-{{ section_id }}-{{ index }}" aria-live="polite" data-sold-out-message="true"{% unless product_available %} disabled aria-disabled="true"{% endunless %}><span class="flex-container-row{% unless product_available %} hidden{% endunless %}"><span class="add">{{ add_label | default: 'Add' | escape }}</span><span aria-hidden="true">&nbsp;·&nbsp;</span><span class="price"><span class="price__container"><span class="price__regular"><span class="visually-hidden visually-hidden--inline">Regular price</span><span class="price-item price-item--regular">{{ display_price }}</span></span>{% if compare_price != blank %}<span class="price__sale"><span class="visually-hidden visually-hidden--inline">Regular price</span><s class="price-item price-item--regular">{{ compare_price }}</s></span>{% endif %}</span></span></span><span class="sold-out-message{% if product_available %} hidden{% endif %}">Sold out</span><span class="loading__spinner hidden" aria-hidden="true"><svg class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg></span></button><input type="hidden" name="product-id" value="{{ form_product_id }}"><input type="hidden" name="section-id" value="{{ section_id }}"></form></product-form></div>
+    </div>
+  </div></div>
+</li>

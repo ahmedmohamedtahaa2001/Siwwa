@@ -1,0 +1,51 @@
+{%- assign variant = product.selected_or_first_available_variant -%}
+{%- assign variant_id = variant.id | default: section.settings.fallback_variant_id -%}
+{%- assign scent_loading = 'lazy' -%}
+{%- if section.settings.fallback_product_url == '/products/vanilla-skin-perfume' -%}{%- assign scent_loading = 'eager' -%}{%- endif -%}
+{%- if section.settings.show_variant_links -%}
+  <div class="variant-links">
+    <span class="variant-link-title h3 repro">{{ section.settings.variant_links_heading | escape }}</span>
+    <div class="variant-link-wrap">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'variant_link' -%}
+          <a href="{{ block.settings.link }}" class="{% if block.settings.active %} active{% endif %}{% if block.settings.available %} available{% endif %}" {{ block.shopify_attributes }}>{{ block.settings.label | escape }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+<div class="scent-collection-wrapper">
+  <span class="variant-link-title h3 repro">{{ section.settings.scent_heading | escape }}</span>
+  <div class="swiper scentCollectionSwiper swiper-initialized swiper-horizontal">
+    <ul class="rebuy-widget-container swiper-wrapper" id="Slider-{{ section.id }}" data-id="{{ section.id }}" role="list" aria-label="{{ section.settings.scent_aria_label | escape }}">
+      {%- assign scent_index = 0 -%}
+      {%- for block in section.blocks -%}{%- if block.type == 'scent' -%}
+        <li class="swiper-slide{% if block.settings.active %} active-product swiper-slide-active{% elsif scent_index == 1 %} swiper-slide-next{% endif %}" data-swiper-slide-title="{{ block.settings.title | escape }} &lt;span&gt;{{ block.settings.descriptor | escape }}&lt;/span&gt;" style="width: {{ section.settings.scent_card_width }}px; margin-right: {{ section.settings.scent_gap }}px;" {{ block.shopify_attributes }}>
+          <div class="collection-product-image"><a href="{{ block.settings.link }}">{% if block.settings.image != blank %}{{ block.settings.image | image_url: width: 400 | image_tag: loading: scent_loading, alt: block.settings.alt }}{% else %}<img src="{{ block.settings.fallback_asset | asset_url }}" alt="{{ block.settings.alt | escape }}" loading="{{ scent_loading }}" width="400" height="400">{% endif %}</a></div>
+          <p class="mobile"><span>{{ block.settings.title | escape }}</span><span class="accent">{{ block.settings.descriptor | escape }}</span></p>
+        </li>
+        {%- assign scent_index = scent_index | plus: 1 -%}
+      {%- endif -%}{%- endfor -%}
+    </ul>
+    <div class="swiper-button-prev swiper-button swiper-button-disabled" role="button" tabindex="-1" aria-label="{{ section.settings.scent_previous_label | escape }}" aria-disabled="true"><svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path></svg></div>
+    <div class="swiper-button-next swiper-button" role="button" tabindex="0" aria-label="{{ section.settings.scent_next_label | escape }}" aria-disabled="false"><svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path></svg></div>
+    <div class="swiper-pagination-custom">{%- assign scent_index = 0 -%}{%- for block in section.blocks -%}{%- if block.type == 'scent' -%}<span class="swiper-pagination-bullet{% if block.settings.active %} swiper-pagination-bullet-active{% endif %}" data-index="{{ scent_index }}">{{ block.settings.title | escape }} <span>{{ block.settings.descriptor | escape }}</span></span>{%- assign scent_index = scent_index | plus: 1 -%}{%- endif -%}{%- endfor -%}</div>
+  </div>
+</div>
+<div class="join-membership-wrap"><div class="join-membership-message"><modal-opener data-modal="#memberCTAModal"><button type="button" class="membership-message-body" aria-haspopup="dialog"><p><span>{{ section.settings.membership_text | escape }}</span><img class="chevron" src="{{ section.settings.membership_chevron_asset | asset_url }}" alt="" title="{{ section.settings.membership_chevron_title | escape }}" width="{{ section.settings.membership_chevron_size }}" height="{{ section.settings.membership_chevron_size }}"></p></button></modal-opener></div></div>
+<product-form class="product-form main-form" data-hide-errors="false" data-section-id="{{ section.id }}">
+  <div class="product-form__error-message-wrapper" role="alert" hidden><svg aria-hidden="true" focusable="false" class="icon icon-error" viewBox="0 0 13 13"><circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"></circle><circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"></circle><path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"></path></svg><span class="product-form__error-message"></span></div>
+  <form method="post" action="{{ routes.cart_add_url | default: '/cart/add' }}" id="product-form-{{ section.id }}" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form">
+    <input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
+    {%- if product.has_only_default_variant -%}
+      <input type="hidden" name="id" value="{{ variant_id }}" class="product-variant-id">
+    {%- else -%}
+      <label class="variant-link-title h3 repro" for="ProductVariant-{{ section.id }}">{{ section.settings.variant_selector_label | default: 'Choose an option' | escape }}</label>
+      <select id="ProductVariant-{{ section.id }}" name="id" class="product-variant-id" data-product-variant-select>
+        {%- for product_variant in product.variants -%}<option value="{{ product_variant.id }}"{% if product_variant == variant %} selected{% endif %}{% unless product_variant.available %} disabled{% endunless %}>{{ product_variant.title | escape }} — {{ product_variant.price | money_without_trailing_zeros }}{% unless product_variant.available %} — {{ section.settings.layer_sold_out_label | default: 'Sold out' | escape }}{% endunless %}</option>{%- endfor -%}
+      </select>
+    {%- endif -%}
+    <div class="product-form__buttons"><modal-opener id="memberModalOpen" data-modal="#memberCTAModal" class="hidden"><button class="membership-popup-modal__button link" type="button" aria-haspopup="dialog">{{ section.settings.membership_button_label | escape }}</button></modal-opener><button id="ProductSubmitButton-{{ section.id }}" class="product-form__submit button button--full-width button--primary" aria-disabled="false"><span>{{ section.settings.add_to_bag_label | escape }}&nbsp;<span class="square-dot">·</span>&nbsp;{% if variant.price != blank %}{{ variant.price | money_without_trailing_zeros }}{% else %}{{ section.settings.fallback_price }}{% endif %}&nbsp;<span class="pdp-compare-at">{% if variant.compare_at_price != blank %}{{ variant.compare_at_price | money_without_trailing_zeros }}{% else %}{{ section.settings.fallback_compare_price }}{% endif %}</span></span></button><script id="attn-waitlist-eligibility" type="application/json">{"{{ variant_id }}":false}</script><div id="attn-waitlist-trigger" style="display: none;"></div></div>
+    <input type="hidden" name="product-id" value="{{ product.id }}"><input type="hidden" name="section-id" value="{{ section.id }}">
+  </form>
+</product-form>

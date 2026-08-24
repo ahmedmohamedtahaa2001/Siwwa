@@ -1,0 +1,14 @@
+<li id="Slide-{{ section.id }}-{{ block.id }}" class="swiper-slide" data-related-slide {{ block.shopify_attributes }}>
+  <div class="card-wrapper product-card-wrapper underline-links-hover">
+    <div class="card card--standard card--media">
+      <div class="card__inner color-scheme-2 gradient ratio">
+        <div class="card__media"><div class="media media--transparent media--hover-effect"><a href="/products/{{ handle }}">
+          <img src="{{ primary_asset | asset_url }}" alt="{{ title | escape }} - 50mL" width="533" height="533" loading="lazy" class="motion-reduce">
+          <img src="{{ secondary_asset | asset_url }}" alt="" width="533" height="533" loading="lazy" class="motion-reduce">
+        </a></div></div>
+        <div class="card__content"><div class="card__badge top left{% if badge != blank %} show-label-badge{% endif %}">{% if badge != blank %}<span class="badge badge-label badge--bottom-left">{{ badge }}</span>{% endif %}</div></div>
+      </div>
+      <div class="card__content"><div class="card__information"><h4 class="card__heading aktiv"><a href="/products/{{ handle }}" class="full-unstyled-link">{{ title }}<br><span class="variant-info p2">50mL Eau de Parfum</span></a></h4></div><div class="quick-add no-js-hidden"><a class="quick-add__submit outline-black button button--full-width" href="/products/{{ handle }}"><span class="flex-container-row"><span class="add">Add</span>&nbsp;<span class="square-dot">·</span>&nbsp;<span class="price"><span class="price-item price-item--regular">LE 4,970</span></span></span></a></div></div>
+    </div>
+  </div>
+</li>

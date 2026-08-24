@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    {%- assign formatted_balance = gift_card.balance | money_without_trailing_zeros -%}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ 'gift_cards.issued.title' | t: value: formatted_balance, shop: shop.name }}</title>
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+    {{ content_for_header }}
+  </head>
+  <body class="template-gift-card">
+    <main role="main">
+      <h1>{{ shop.name }}</h1>
+      <p>{{ gift_card.balance | money }}</p>
+      <p>{{ gift_card.code | format_code }}</p>
+    </main>
+  </body>
+</html>

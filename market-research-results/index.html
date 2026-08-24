@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Siwa Fragrances market research and redesign opportunity — an executive presentation for business owners.">
+  <title>Siwa Fragrances — Market Opportunity & Redesign Blueprint</title>
+  <style>
+    :root {
+      --ink: #211a16;
+      --muted: #6e625a;
+      --cream: #f5f0e8;
+      --paper: #fffdf9;
+      --sand: #d7b98a;
+      --gold: #b88436;
+      --terracotta: #9f4d36;
+      --forest: #26483c;
+      --line: rgba(33, 26, 22, .13);
+      --shadow: 0 20px 60px rgba(58, 39, 26, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .45;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+      z-index: 10;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(245, 240, 232, .88);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 750; letter-spacing: -.02em; }
+    .mark { width: 34px; height: 34px; border: 1px solid var(--ink); border-radius: 50% 50% 42% 58%; display: grid; place-items: center; font-family: Georgia, serif; font-style: italic; }
+    .nav-links { display: flex; gap: 22px; align-items: center; font-size: 14px; color: var(--muted); }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--ink); }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border: 1px solid var(--ink); text-decoration: none; font-weight: 700; font-size: 14px; transition: .2s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,26,22,.14); }
+    .button.dark { background: var(--ink); color: white; }
+    .button.light { background: transparent; }
+    .eyebrow { margin: 0 0 16px; color: var(--terracotta); text-transform: uppercase; letter-spacing: .15em; font-size: 12px; font-weight: 800; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; margin-top: 0; }
+    h1 { font-size: clamp(52px, 8vw, 104px); line-height: .91; letter-spacing: -.055em; margin-bottom: 28px; max-width: 960px; }
+    h2 { font-size: clamp(38px, 5vw, 66px); line-height: .98; letter-spacing: -.04em; margin-bottom: 24px; }
+    h3 { font-size: 25px; line-height: 1.1; }
+    .hero { padding: 92px 0 70px; min-height: 760px; position: relative; overflow: hidden; }
+    .hero::after { content: ""; position: absolute; width: 540px; height: 540px; right: -100px; top: 30px; border-radius: 50%; border: 1px solid rgba(184,132,54,.35); box-shadow: inset 0 0 0 90px rgba(215,185,138,.08), inset 0 0 0 180px rgba(184,132,54,.05); z-index: -1; }
+    .hero-copy { max-width: 760px; font-size: 20px; color: var(--muted); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .hero-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 72px; }
+    .meta-cell { background: rgba(255,253,249,.78); padding: 28px; }
+    .meta-cell strong { display: block; font-family: Georgia, serif; font-size: 34px; font-weight: 500; }
+    .meta-cell span { color: var(--muted); font-size: 13px; }
+    section { padding: 100px 0; }
+    .paper { background: var(--paper); }
+    .dark-section { background: var(--ink); color: #fffaf3; }
+    .section-head { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: start; margin-bottom: 50px; }
+    .lead { font-size: 21px; color: var(--muted); max-width: 700px; margin: 0; }
+    .dark-section .lead { color: #cfc4bb; }
+    .numbers { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); }
+    .number { padding: 32px 24px; border-right: 1px solid var(--line); }
+    .number:last-child { border-right: 0; }
+    .number b { display: block; font-family: Georgia, serif; color: var(--terracotta); font-size: 48px; font-weight: 500; line-height: 1; }
+    .number span { display: block; margin-top: 12px; color: var(--muted); font-size: 14px; }
+    .opportunity { margin-top: 44px; padding: 34px; display: grid; grid-template-columns: auto 1fr; gap: 22px; background: #f0e4d2; border-left: 4px solid var(--gold); }
+    .opportunity i { font-family: Georgia, serif; font-size: 54px; color: var(--gold); line-height: .8; }
+    .opportunity p { margin: 0; font-size: 20px; }
+    .engine { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; counter-reset: engine; }
+    .engine-step { counter-increment: engine; min-height: 220px; border: 1px solid rgba(255,255,255,.2); padding: 24px; display: flex; flex-direction: column; justify-content: space-between; }
+    .engine-step::before { content: "0" counter(engine); font-family: Georgia, serif; color: var(--sand); font-size: 15px; }
+    .engine-step h3 { margin: 0; font-size: 24px; }
+    .engine-step p { margin: 12px 0 0; color: #bfb4ab; font-size: 14px; }
+    .leaders { margin-top: 56px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .leaders span { border: 1px solid rgba(255,255,255,.22); padding: 9px 13px; font-size: 13px; color: #d7ccc3; }
+    .benchmark-table, .gap-table { width: 100%; border-collapse: collapse; background: var(--paper); font-size: 14px; }
+    .benchmark-table th, .benchmark-table td, .gap-table th, .gap-table td { padding: 18px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .benchmark-table th, .gap-table th { background: #eee4d4; color: var(--ink); font-size: 11px; text-transform: uppercase; letter-spacing: .09em; }
+    .benchmark-table td:first-child, .gap-table td:first-child { font-weight: 750; }
+    .table-wrap { overflow-x: auto; box-shadow: var(--shadow); }
+    .priority { display: inline-block; padding: 3px 7px; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+    .p0 { background: #f0d3ca; color: #7e2e1d; } .p1 { background: #f1dfbd; color: #735116; } .p2 { background: #d7e5de; color: #21483a; }
+    .journey { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .journey-step { background: var(--paper); padding: 24px 18px; min-height: 210px; }
+    .journey-step b { display: block; color: var(--terracotta); font-family: Georgia, serif; font-size: 14px; }
+    .journey-step h3 { margin: 34px 0 10px; font-size: 21px; }
+    .journey-step p { margin: 0; color: var(--muted); font-size: 13px; }
+    .pdp { display: grid; grid-template-columns: .85fr 1.15fr; gap: 34px; align-items: start; }
+    .phone { max-width: 390px; margin: 0 auto; padding: 13px; border: 2px solid var(--ink); border-radius: 38px; background: #171310; box-shadow: var(--shadow); }
+    .phone-screen { background: var(--paper); border-radius: 27px; overflow: hidden; min-height: 650px; }
+    .mock-gallery { height: 245px; background: linear-gradient(135deg,#ead8bb,#f8f4ed); display: grid; place-items: center; position: relative; }
+    .mock-bottle { width: 86px; height: 145px; background: linear-gradient(90deg,#aa7b42,#e0bd7f,#90602d); border-radius: 10px 10px 18px 18px; box-shadow: 0 22px 30px rgba(69,43,20,.22); }
+    .mock-bottle::before { content:""; display:block; width:44px; height:25px; margin:-25px auto 0; background:#32271f; border-radius:4px 4px 0 0; }
+    .mock-copy { padding: 22px; }
+    .mock-copy small { color: var(--terracotta); text-transform: uppercase; letter-spacing:.1em; font-weight:800; }
+    .mock-copy h3 { margin: 8px 0; font-size: 30px; }
+    .mock-copy p { margin: 6px 0; color: var(--muted); font-size: 13px; }
+    .mock-sizes { display:flex; gap:8px; margin:15px 0; }
+    .mock-sizes span { border:1px solid var(--line); padding:8px; font-size:11px; }
+    .mock-cta { background:var(--ink); color:white; text-align:center; padding:14px; font-weight:750; font-size:13px; }
+    .anatomy { display: grid; gap: 10px; counter-reset: anatomy; }
+    .anatomy-item { counter-increment: anatomy; display:grid; grid-template-columns:48px 1fr; gap:14px; border:1px solid var(--line); padding:18px; background:var(--paper); }
+    .anatomy-item::before { content:counter(anatomy, decimal-leading-zero); color:var(--terracotta); font-family:Georgia,serif; font-size:17px; }
+    .anatomy-item strong { display:block; }
+    .anatomy-item span { color:var(--muted); font-size:13px; }
+    .data-layers { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .data-layer { padding:28px; border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.05); min-height:220px; }
+    .data-layer b { color:var(--sand); font-family:Georgia,serif; font-size:36px; font-weight:500; }
+    .data-layer h3 { margin:28px 0 10px; }
+    .data-layer p { color:#bfb4ab; font-size:14px; margin:0; }
+    .positioning { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: stretch; }
+    .quote-card { padding: 52px; background: var(--forest); color: white; display: flex; flex-direction: column; justify-content: space-between; min-height: 430px; }
+    .quote-card blockquote { margin: 0; font-family: Georgia, serif; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -.03em; }
+    .quote-card small { color: #c3d0c8; }
+    .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .pillar { background: var(--paper); padding: 28px; min-height: 180px; }
+    .pillar span { color: var(--gold); font-weight: 800; font-size: 12px; letter-spacing: .12em; }
+    .pillar h3 { margin: 24px 0 8px; }
+    .pillar p { margin: 0; color: var(--muted); font-size: 14px; }
+    .roadmap { position: relative; }
+    .phase { display: grid; grid-template-columns: 180px 1fr; gap: 40px; border-top: 1px solid var(--line); padding: 34px 0; }
+    .phase:first-child { border-top: 0; }
+    .phase-id { color: var(--terracotta); font-weight: 800; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; }
+    .phase-id strong { display: block; font-family: Georgia, serif; color: var(--ink); font-size: 28px; letter-spacing: normal; text-transform: none; margin-bottom: 6px; }
+    .phase h3 { margin-bottom: 14px; }
+    .phase ul { margin: 0; padding-left: 20px; color: var(--muted); columns: 2; column-gap: 40px; }
+    .phase li { margin: 0 0 8px; break-inside: avoid; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .feature { background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.16); padding: 28px; min-height: 240px; }
+    .feature .tag { display: inline-block; color: var(--sand); border: 1px solid rgba(215,185,138,.4); padding: 5px 8px; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+    .feature h3 { margin: 40px 0 12px; }
+    .feature p { margin: 0; color: #bfb4ab; font-size: 14px; }
+    .feature.featured { background: var(--terracotta); grid-column: span 2; }
+    .feature.featured p { color: #f1dcd5; max-width: 650px; }
+    .scorecard { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .score-card { border: 1px solid var(--line); padding: 28px; background: var(--paper); }
+    .score-card h3 { margin-bottom: 18px; }
+    .score-card ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    .score-card li { margin: 8px 0; }
+    .decision { background: #e9d7ba; }
+    .decision-inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 70px; align-items: center; }
+    .decision h2 { max-width: 740px; }
+    .decision p { color: #59483b; font-size: 19px; }
+    .next-list { list-style: none; padding: 0; margin: 0; counter-reset: next; }
+    .next-list li { counter-increment: next; display: grid; grid-template-columns: 42px 1fr; gap: 12px; padding: 16px 0; border-bottom: 1px solid rgba(33,26,22,.16); font-weight: 650; }
+    .next-list li::before { content: counter(next, decimal-leading-zero); color: var(--terracotta); font-family: Georgia, serif; }
+    .files { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .file { display: block; padding: 22px; border: 1px solid var(--line); background: var(--paper); text-decoration: none; }
+    .file:hover { border-color: var(--gold); }
+    .file strong { display: block; }
+    .file span { color: var(--muted); font-size: 13px; }
+    footer { padding: 36px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 24px; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: .65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 900px) {
+      .nav-links a:not(.button) { display: none; }
+      .section-head, .positioning, .decision-inner { grid-template-columns: 1fr; gap: 32px; }
+      .numbers { grid-template-columns: 1fr 1fr; }
+      .number:nth-child(2) { border-right: 0; }
+      .number:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .engine { grid-template-columns: 1fr 1fr; }
+      .feature-grid { grid-template-columns: 1fr 1fr; }
+      .feature.featured { grid-column: span 2; }
+      .phase { grid-template-columns: 1fr; gap: 16px; }
+    }
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 28px, 1180px); }
+      .nav-inner { min-height: 62px; }
+      .nav .button { min-height: 38px; padding: 0 12px; }
+      .hero { padding-top: 62px; min-height: auto; }
+      .hero-meta, .numbers, .engine, .pillars, .feature-grid, .scorecard, .files { grid-template-columns: 1fr; }
+      .journey, .data-layers { grid-template-columns: 1fr; }
+      .pdp { grid-template-columns:1fr; }
+      .meta-cell, .number { border-right: 0; border-bottom: 1px solid var(--line); }
+      .feature.featured { grid-column: span 1; }
+      .phase ul { columns: 1; }
+      .quote-card { padding: 34px; }
+      section { padding: 72px 0; }
+      .footer-inner { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top"><span class="mark">S</span><span>Siwa Fragrances</span></a>
+      <div class="nav-links">
+        <a href="#opportunity">Opportunity</a>
+        <a href="#strategy">Strategy</a>
+        <a href="#roadmap">Roadmap</a>
+        <a class="button dark" href="#decision">Owner brief</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Executive market research · August 2026</p>
+        <h1>From perfume store to scent authority.</h1>
+        <p class="hero-copy">A practical growth blueprint for Siwa Fragrances—built from 16 market benchmarks, 61 current products, 173 variants, and one clear opportunity: make fragrance easier to understand, trust, try, and buy.</p>
+        <div class="hero-actions">
+          <a class="button dark" href="#opportunity">See the business case</a>
+          <a class="button light" href="#roadmap">View the roadmap</a>
+        </div>
+        <div class="hero-meta reveal">
+          <div class="meta-cell"><strong>16</strong><span>global and regional leaders studied</span></div>
+          <div class="meta-cell"><strong>61</strong><span>Siwa products audited</span></div>
+          <div class="meta-cell"><strong>3 phases</strong><span>from foundation to defensible innovation</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="paper" id="opportunity">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">The business case</p><h2>The store works. The decision experience does not work hard enough.</h2></div>
+          <p class="lead">Siwa already has a viable Shopify foundation, local pricing, product breadth, reviews, bundles, and seasonal merchandising. The growth constraint is the information layer: product identity, scent discovery, imagery, stock recovery, and buying reassurance are inconsistent.</p>
+        </div>
+        <div class="numbers reveal">
+          <div class="number"><b>98%</b><span>of products have no structured product type</span></div>
+          <div class="number"><b>90%</b><span>of products rely on only one image</span></div>
+          <div class="number"><b>34%</b><span>of variants have no SKU at all</span></div>
+          <div class="number"><b>26%</b><span>of variants were unavailable in the audit</span></div>
+        </div>
+        <div class="opportunity reveal"><i>“</i><p>The highest-value redesign is not more homepage decoration. It is a reliable fragrance data layer and a mobile product page that helps a customer predict scent fit, understand value, and buy with confidence.</p></div>
+      </div>
+    </section>
+
+    <section class="dark-section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow" style="color:var(--sand)">What leaders do</p><h2>They compress uncertainty.</h2></div>
+          <p class="lead">The strongest stores are not winning through visual novelty alone. They answer the customer’s questions in a deliberate commercial sequence.</p>
+        </div>
+        <div class="engine reveal">
+          <article class="engine-step"><div><h3>Recognition</h3><p>Start from a known scent, need, note, or emotional reference.</p></div></article>
+          <article class="engine-step"><div><h3>Fit</h3><p>Translate notes into family, mood, occasion, season, and character.</p></div></article>
+          <article class="engine-step"><div><h3>Proof</h3><p>Show quality, concentration, reviews, sourcing, and transparent claims.</p></div></article>
+          <article class="engine-step"><div><h3>Low risk</h3><p>Offer samples, credits, precise delivery, confirmed payment methods, and sealed-only full-bottle returns.</p></div></article>
+          <article class="engine-step"><div><h3>Retention</h3><p>Build bundles, recommendations, layering, and preference memory.</p></div></article>
+        </div>
+        <div class="leaders reveal" aria-label="Benchmarked market leaders">
+          <span>Sephora</span><span>Ulta</span><span>Notino</span><span>Faces</span><span>Ounass</span><span>FragranceNet</span><span>FragranceX</span><span>Dossier</span><span>Oakcha</span><span>ALT.</span><span>DIVAIN</span><span>Essence Vault</span><span>Noted Aromas</span><span>Oil Perfumery</span><span>Perfume Parlour</span><span>Generic Perfumes</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" style="border-top:1px solid rgba(255,255,255,.12)">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow" style="color:var(--sand)">The data foundation</p><h2>One product truth should power every selling surface.</h2></div>
+          <p class="lead">The proposed schema is not an IT document for its own sake. It prevents staff from rewriting conflicting product information in cards, pages, search, ads, feeds, recommendations, and support conversations.</p>
+        </div>
+        <div class="data-layers reveal">
+          <article class="data-layer"><b>01</b><h3>Product identity</h3><p>Siwa name, product status, original/inspired relationship, brand, story, lifecycle, and bilingual content.</p></article>
+          <article class="data-layer"><b>02</b><h3>Scent intelligence</h3><p>Families, accords, top/heart/base notes, sweetness, freshness, warmth, intensity, season, occasion, and climate fit.</p></article>
+          <article class="data-layer"><b>03</b><h3>Sellable variant</h3><p>Unique SKU, size, format, price, currency, stock, barcode, weight, restock state, and variant-specific media.</p></article>
+          <article class="data-layer"><b>04</b><h3>Proof and safety</h3><p>Ingredients, allergens, warnings, concentration, claim evidence, rating distribution, verified reviews, and sync dates.</p></article>
+          <article class="data-layer"><b>05</b><h3>Relationships</h3><p>Samples, credit, bundles, components, layering partners, close alternatives, and complementary products.</p></article>
+          <article class="data-layer"><b>06</b><h3>Channels and governance</h3><p>SEO, aliases, canonical URL, structured data, owner, completeness score, review date, and publishing status.</p></article>
+        </div>
+        <div class="opportunity reveal" style="margin-top:32px;background:rgba(215,185,138,.12);border-color:var(--sand)"><i>→</i><p style="color:#f5eee5">Commercial result: the same structured facts can power filters, bilingual search, the PDP, Google feeds, recommendations, bundles, review summaries, and future AI experiences—without duplicating content operations.</p></div>
+      </div>
+    </section>
+
+    <section class="paper" id="benchmarks">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Benchmark detail</p><h2>Who was studied—and what Siwa should learn.</h2></div>
+          <p class="lead">The benchmark combines prestige retailers, authentic-fragrance specialists, inspired-by leaders, and GCC operators. No single store is the model; the opportunity is to combine their strongest mechanisms with Siwa’s local advantage.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="benchmark-table">
+            <thead><tr><th>Benchmark group</th><th>Leaders</th><th>What they do especially well</th><th>What Siwa should adopt</th><th>What not to copy</th></tr></thead>
+            <tbody>
+              <tr><td>Prestige discovery</td><td>Sephora, Ulta</td><td>Guided discovery, visual attributes, fulfillment choice, review intelligence, loyalty</td><td>Clear scent hierarchy, highlights, review themes, buying information in one zone</td><td>Complexity and app-heavy pages that may slow mobile</td></tr>
+              <tr><td>Authentic specialists</td><td>FragranceNet, FragranceX</td><td>Authenticity proof, condition transparency, discount credibility, persistent reassurance</td><td>Evidence-based trust, exact variant condition, delivery and returns beside CTA</td><td>Promotion density that can weaken premium positioning</td></tr>
+              <tr><td>European/GCC curation</td><td>Notino, Faces, Ounass</td><td>Deep scent taxonomy, note education, regional payments, premium navigation</td><td>Clickable notes, family filters, Arabic relevance, luxury restraint</td><td>Catalog breadth without guidance for beginners</td></tr>
+              <tr><td>Inspired-by editors</td><td>Dossier, Oakcha</td><td>Ownable product identity, premium presentation, structured notes, review summaries</td><td>Siwa name first, inspiration second, quality proof and balanced review facets</td><td>Unverified similarity or performance precision</td></tr>
+              <tr><td>Value and bundle engines</td><td>ALT., Essence Vault, Noted Aromas</td><td>Concrete savings, risk reversal, discovery ladders, mix-and-match wardrobes</td><td>Samples, credit, bundle progress, clear savings, occasion-led sets</td><td>Aggressive urgency, visual noise, or unlike-for-like price comparisons</td></tr>
+              <tr><td>Utility and format depth</td><td>DIVAIN, Oil Perfumery, Perfume Parlour, Generic Perfumes</td><td>Search by known original, try-before-opening, oils, multiple formats</td><td>Alias-aware search, portable trial, expand only proven winners</td><td>Huge variant menus and confusing pre-configuration</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Detailed gap analysis</p><h2>What is missing, why it matters, and when to fix it.</h2></div>
+          <p class="lead">The gaps separate foundational truth from conversion improvements and long-term differentiation. P0 issues should be corrected before advanced features or large paid-media investment.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="gap-table">
+            <thead><tr><th>Area</th><th>Current Siwa condition</th><th>Business consequence</th><th>Required move</th><th>Priority</th></tr></thead>
+            <tbody>
+              <tr><td>Brand identity</td><td>Reference fragrances are often stored in the vendor field</td><td>Customer confusion, feed risk, weak Siwa equity</td><td>Brand = Siwa; inspiration becomes separate reviewed metadata</td><td><span class="priority p0">P0</span></td></tr>
+              <tr><td>Variant identity</td><td>59 blank SKUs; most populated SKUs are reused</td><td>Inventory, fulfillment, attribution, and feed errors</td><td>Stable unique SKU for every sellable size and format</td><td><span class="priority p0">P0</span></td></tr>
+              <tr><td>Taxonomy</td><td>60 of 61 products lack product type; tags are shallow</td><td>Weak filters, search, reporting, and recommendations</td><td>Typed product, family, notes, format, occasion, and climate fields</td><td><span class="priority p0">P0</span></td></tr>
+              <tr><td>Options and price</td><td>Ten option labels, mixed volume formats, zero compare-at values</td><td>Confusing selection and unreliable value claims</td><td>Normalize size, volume, bundle components, and absent sale values</td><td><span class="priority p0">P0</span></td></tr>
+              <tr><td>Visual confidence</td><td>55 products use one image</td><td>Customer cannot judge packaging, scale, detail, or gifting</td><td>Six-role gallery for priority products</td><td><span class="priority p1">P1</span></td></tr>
+              <tr><td>Purchase reassurance</td><td>Support, exact ETA, payment, and return detail are not consistently near CTA</td><td>Unanswered anxiety before checkout</td><td>Local promise and direct WhatsApp/support in purchase zone</td><td><span class="priority p1">P1</span></td></tr>
+              <tr><td>Stock recovery</td><td>26% of variants unavailable</td><td>Paid and organic demand reaches dead ends</td><td>Notify, alternative size, close substitute, and restock context</td><td><span class="priority p1">P1</span></td></tr>
+              <tr><td>Reviews</td><td>High ratings exist, but detailed decision facets are limited</td><td>Proof feels compressed and less credible</td><td>Verified variant, similarity, longevity, season, city, skin/fabric prompts</td><td><span class="priority p1">P1</span></td></tr>
+              <tr><td>Regional advantage</td><td>EGP exists, but no evidenced bilingual scent graph or climate layer</td><td>Global competitors remain equally useful for discovery</td><td>Arabic/English search, Egyptian climate, local payment and gifting context</td><td><span class="priority p2">P2</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper" id="strategy">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Recommended strategy</p><h2>Own the Egyptian scent decision.</h2></div>
+          <p class="lead">Siwa should not present itself as a cheap-copy index. It can own a more valuable space: accessible creative fragrance, transparent inspiration, bilingual guidance, climate relevance, and sample-first confidence.</p>
+        </div>
+        <div class="positioning reveal">
+          <div class="quote-card"><blockquote>“Find your scent for real Egyptian life.”</blockquote><small>Explore Siwa originals and transparent interpretations by notes, mood, occasion, and climate—then try before committing.</small></div>
+          <div class="pillars">
+            <article class="pillar"><span>01</span><h3>Siwa first</h3><p>Own name, story, packaging, and creative identity remain primary.</p></article>
+            <article class="pillar"><span>02</span><h3>Transparent</h3><p>Every inspired scent states what matches, what deliberately differs, the evidence, and the absence of affiliation.</p></article>
+            <article class="pillar"><span>03</span><h3>Bilingual</h3><p>English, Arabic, transliteration, notes, moods, and common misspellings.</p></article>
+            <article class="pillar"><span>04</span><h3>Climate-aware</h3><p>Realistic hot-weather guidance backed by method and community evidence.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Future customer journey</p><h2>Every step should reduce a different uncertainty.</h2></div>
+          <p class="lead">The redesign should be treated as one connected decision system, not separate homepage, collection, and product-page projects.</p>
+        </div>
+        <div class="journey reveal">
+          <article class="journey-step"><b>01</b><h3>Arrive</h3><p>Understand Siwa’s promise, originals vs interpretations, shipping threshold, and trust.</p></article>
+          <article class="journey-step"><b>02</b><h3>Discover</h3><p>Browse by known scent, family, note, mood, occasion, climate, or gift need.</p></article>
+          <article class="journey-step"><b>03</b><h3>Compare</h3><p>See why products match and refine fresher, less sweet, stronger, or more formal.</p></article>
+          <article class="journey-step"><b>04</b><h3>Evaluate</h3><p>Understand notes, dry-down, performance evidence, value, reviews, and formulation.</p></article>
+          <article class="journey-step"><b>05</b><h3>Commit</h3><p>Compare size value, sprays and lifespan; buy with exact stock, ETA, confirmed payment, sealed return rule, and reminder choice.</p></article>
+          <article class="journey-step"><b>06</b><h3>Replenish</h3><p>Record sample reactions, submit a variant-linked review, receive an opt-in running-low reminder, reorder, layer, and refill.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Product-page redesign</p><h2>The first mobile screen must close the confidence gap.</h2></div>
+          <p class="lead">Most purchase decisions pass through the product page. The new layout should cluster the essential truth and next action first, then allow deeper scent education below.</p>
+        </div>
+        <div class="pdp reveal">
+          <div class="phone" aria-label="Conceptual Siwa mobile product page">
+            <div class="phone-screen"><div class="mock-gallery"><div class="mock-bottle"></div></div><div class="mock-copy"><small>Inspired interpretation · warm amber</small><h3>Nude Amber</h3><p>Golden vanilla, resin, and soft woods for cool evenings.</p><p>★★★★★ 4.8 · verified reviews · filter by size</p><div class="mock-sizes"><span>30 ml · [PRICE_30ML]</span><span>50 ml · [PRICE_50ML]</span></div><p><strong>50 ml ≈ 500 sprays</strong><br>Moderate use: ≈ 4 months · estimated</p><p>Free shipping at [FREE_SHIPPING_THRESHOLD] · returns: sealed, unopened, unused only</p><div class="mock-cta">Add to bag</div><div class="mock-cta" style="margin-top:8px;background:transparent;color:var(--ink);border:1px solid var(--ink)">قارن مع عطر تاني</div></div></div>
+          </div>
+          <div class="anatomy">
+            <div class="anatomy-item"><div><strong>Decision-useful gallery</strong><span>Bottle, box, scale, atomizer, note visual, and lifestyle/video—not six decorative duplicates.</span></div></div>
+            <div class="anatomy-item"><div><strong>Identity without confusion</strong><span>Siwa name first; Original Creation or Inspired Interpretation as an explicit status.</span></div></div>
+            <div class="anatomy-item"><div><strong>One-sentence scent promise</strong><span>Plain language before technical notes: smell, mood, and best moment.</span></div></div>
+            <div class="anatomy-item"><div><strong>Variant, spray, and value clarity</strong><span>Size, format, price/ml, estimated sprays, lifespan, days/EGP, availability, and larger-size savings.</span></div></div>
+            <div class="anatomy-item"><div><strong>Fulfillment compact</strong><span>Specific ETA, owner-confirmed payment methods, [FREE_SHIPPING_THRESHOLD] progress, sealed/unopened return rule, and support.</span></div></div>
+            <div class="anatomy-item"><div><strong>Low-risk path</strong><span>A sample or discovery option stays visible beside the full-bottle commitment.</span></div></div>
+            <div class="anatomy-item"><div><strong>Evidence below</strong><span>Matches/differences vs inspiration, variant-filtered reviews, note story, climate, ingredients, alternatives, comparison, and layering.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">New conversion system</p><h2>Make every size understandable in sprays, time, and value.</h2></div>
+          <p class="lead">Bottle volume is abstract. Estimated uses and lifespan help customers choose a size; the same calculation can predict a relevant repurchase moment.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="benchmark-table">
+            <thead><tr><th>Variant</th><th>Estimated sprays</th><th>Light · 2/day</th><th>Moderate · 4/day</th><th>Heavy · 8/day</th><th>Unit value</th></tr></thead>
+            <tbody>
+              <tr><td>30 ml · [PRICE_30ML]</td><td>≈ 300</td><td>≈ 150 days</td><td>≈ 75 days</td><td>≈ 37 days</td><td>Calculated price/ml + days/EGP</td></tr>
+              <tr><td>50 ml · [PRICE_50ML]</td><td>≈ 500</td><td>≈ 250 days</td><td>≈ 125 days</td><td>≈ 62 days</td><td>Calculated price/ml + days/EGP</td></tr>
+              <tr><td>100 ml · [PRICE_100ML]</td><td>≈ 1,000</td><td>≈ 500 days</td><td>≈ 250 days</td><td>≈ 125 days</td><td>Show larger-size advantage dynamically</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="opportunity reveal"><i>÷</i><p><strong>Formula:</strong> volume ml ÷ spray output ml. The 0.1 ml/spray assumption is a configurable starting point—not a guaranteed bottle count. Measure each atomizer family, label results as estimates, and let customers change daily usage.</p></div>
+        <div class="scorecard reveal" style="margin-top:18px">
+          <article class="score-card"><h3>Larger-size savings</h3><ul><li>Current price per ml</li><li>Estimated sprays and use days</li><li>Days per EGP</li><li>Absolute and percentage unit-value advantage</li><li>Extra estimated days versus selected size</li></ul></article>
+          <article class="score-card"><h3>Repurchase engine</h3><ul><li>Customer chooses light, moderate, heavy, or custom</li><li>Default is disclosed moderate use</li><li>Opt-in reminder near 75% of estimated lifespan</li><li>Exact purchased variant and reorder link</li><li>Optional [LOYALTY_REORDER_DISCOUNT_PCT]</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Proof architecture</p><h2>Reviews and comparisons must be specific enough to trust.</h2></div>
+          <p class="lead">Generic star averages blur the purchased variant and hide the evidence behind inspired-by claims. The redesign makes both traceable.</p>
+        </div>
+        <div class="positioning reveal">
+          <div class="quote-card" style="background:var(--terracotta)"><div><p class="eyebrow" style="color:#f0caba">Variant-specific review</p><blockquote style="font-size:37px">“Verified purchase — 50 ml EDP”</blockquote></div><small>Nude Amber · exact variant · purchase month/year · rating date · review facets<br><br>Filters: All · 30 ml · 50 ml · 100 ml. The review request comes from order history, so the variant is pre-filled and locked.</small></div>
+          <div class="pillars">
+            <article class="pillar"><span>Matches</span><h3>What aligns</h3><p>Family, shared notes, comparable concentration band, mood, occasion, and season—each backed by a source.</p></article>
+            <article class="pillar"><span>Differs</span><h3>What changes</h3><p>Added/removed notes, creative deviations, projection, evidence-based performance, and documented formulation differences.</p></article>
+            <article class="pillar"><span>Evidence</span><h3>Claim discipline</h3><p>Source, method, test date, sample size, confidence, and legal-review status.</p></article>
+            <article class="pillar"><span>Language</span><h3>No false identity</h3><p>“Inspired by the scent profile of…” Never original, identical, authorized, or affiliated.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Compare and convert</p><h2>Help customers choose—or build a qualified pair.</h2></div>
+          <p class="lead">“قارن مع عطر تاني” opens a searchable selector and compares two real variants. On mobile, the same fields become stacked cards or an accessible horizontal table.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="gap-table">
+            <thead><tr><th>Attribute</th><th>Perfume A</th><th>Perfume B</th></tr></thead>
+            <tbody>
+              <tr><td>Identity</td><td>Nude Amber · 50 ml</td><td>Dark Oud · 50 ml</td></tr>
+              <tr><td>Scent profile</td><td>Family, top/heart/base, sweetness, freshness, warmth, intensity</td><td>Same normalized fields for a fair comparison</td></tr>
+              <tr><td>Wear context</td><td>Season, occasion, Cairo heat guidance</td><td>Season, occasion, Cairo heat guidance</td></tr>
+              <tr><td>Performance</td><td>Evidence-labeled longevity and sillage</td><td>Evidence-labeled longevity and sillage</td></tr>
+              <tr><td>Variant value</td><td>[PRICE_A], price/ml, sprays, lifespan, days/EGP</td><td>[PRICE_B], price/ml, sprays, lifespan, days/EGP</td></tr>
+              <tr><td>Proof</td><td>Rating + exact-variant review count</td><td>Rating + exact-variant review count</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="opportunity reveal"><i>+</i><p><strong>Dynamic pair offer:</strong> “Can’t choose? Take both” with owner-configured `[DYNAMIC_BUNDLE_DISCOUNT_PCT]`. The cart keeps two real variant IDs and applies a temporary promotion instance. Eligibility, stock, margin, stacking, and refund allocation are revalidated at checkout.</p></div>
+      </div>
+    </section>
+
+    <section class="decision" style="padding:58px 0">
+      <div class="wrap reveal">
+        <p class="eyebrow">Confirmed policy guardrails</p>
+        <h2 style="max-width:1000px">No opened-bottle returns. No unconfirmed payments. No unapproved prices.</h2>
+        <div class="scorecard">
+          <article class="score-card"><h3>Returns</h3><p>Full perfume bottles are returnable only when sealed, unopened, unused, and inside the confirmed window. Opened or used bottles are never returnable.</p></article>
+          <article class="score-card"><h3>Payments</h3><p>Display only pay-in-full payment methods explicitly confirmed as operational by the business owner.</p></article>
+          <article class="score-card"><h3>Variables</h3><p>Use [FREE_SHIPPING_THRESHOLD], [DYNAMIC_BUNDLE_DISCOUNT_PCT], [SAMPLE_PRICE], and [LOYALTY_REORDER_DISCOUNT_PCT] until margin and AOV approval.</p></article>
+          <article class="score-card"><h3>Consent</h3><p>Email, SMS, and WhatsApp repurchase reminders are opt-in, preference-controlled, and subject to applicable privacy/direct-marketing rules.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Execution roadmap</p><h2>Fix truth first. Add intelligence second.</h2></div>
+          <p class="lead">Advanced recommendations only become credible when the catalog underneath them is structured, complete, and measurable.</p>
+        </div>
+        <div class="roadmap reveal">
+          <article class="phase"><div class="phase-id"><strong>Phase 0</strong>Days 1–5</div><div><h3>Measurement and governance</h3><ul><li>Establish funnel and margin baselines</li><li>Approve scent vocabularies</li><li>Export theme, apps, metafields, policies</li><li>Approve inspiration and claims language</li></ul></div></article>
+          <article class="phase"><div class="phase-id"><strong>Phase 1</strong>Weeks 1–3</div><div><h3>Trustworthy conversion foundation</h3><ul><li>Repair SKUs and product types</li><li>Separate Siwa brand from inspiration</li><li>Normalize size, pricing, and stock</li><li>Measure atomizers; ship sprays/lifespan/value estimator</li><li>Add variant-specific verified reviews</li><li>Rebuild product cards and mobile PDP</li><li>Add bilingual aliases and filters</li><li>Pilot samples with redeemable credit</li></ul></div></article>
+          <article class="phase"><div class="phase-id"><strong>Phase 2</strong>Weeks 4–8</div><div><h3>Guided discovery and order value</h3><ul><li>Scent Compass and “similar, but…”</li><li>Desert Climate Mode</li><li>Matches/differences comparison block</li><li>Two-scent comparison and dynamic pair offer</li><li>Opt-in repurchase reminder engine</li><li>Bundle builder and Layering Lab</li><li>Sample QR diary and saved scent profile</li></ul></div></article>
+          <article class="phase"><div class="phase-id"><strong>Phase 3</strong>Weeks 9–16+</div><div><h3>Defensible data products</h3><ul><li>Community performance by climate</li><li>Wardrobe gap finder</li><li>Gift-by-memory builder</li><li>Data-led original compositions</li><li>Selective format extensions</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow" style="color:var(--sand)">Creative advantage</p><h2>Features competitors cannot copy overnight.</h2></div>
+          <p class="lead">A generic quiz is easy to imitate. A bilingual scent graph connected to samples, local climate evidence, and remembered customer reactions becomes a genuine asset.</p>
+        </div>
+        <div class="feature-grid reveal">
+          <article class="feature featured"><span class="tag">Core advantage</span><h3>Arabic–English scent search graph</h3><p>Search by original fragrance, Siwa name, Arabic spelling, transliteration, note, mood, season, occasion, or natural language—then explain why each result matches.</p></article>
+          <article class="feature"><span class="tag">Local relevance</span><h3>Desert Climate Mode</h3><p>Recommendations and spray guidance recalibrated for hot-dry, hot-humid, day, and evening wear.</p></article>
+          <article class="feature"><span class="tag">Risk reduction</span><h3>Try → credit → remember</h3><p>Samples carry full-bottle credit, QR wear diary, and preference memory for the next recommendation.</p></article>
+          <article class="feature"><span class="tag">Discovery</span><h3>Scent Compass</h3><p>Transparent visual controls for fresh/warm, clean/rich, sweetness, intensity, and oud.</p></article>
+          <article class="feature"><span class="tag">AOV</span><h3>Layering Lab</h3><p>Explain pair, ratio, spray order, resulting character, and bundle the recipe in one action.</p></article>
+          <article class="feature"><span class="tag">Retention</span><h3>Wardrobe gap finder</h3><p>Map owned and tried products, reveal missing roles, and recommend samples before another near-duplicate.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">How success is measured</p><h2>Commercial outcomes, not feature clicks.</h2></div>
+          <p class="lead">Every redesign choice should be judged by conversion and customer quality, with margin, returns, speed, and inventory health as guardrails.</p>
+        </div>
+        <div class="scorecard reveal">
+          <article class="score-card"><h3>Data readiness</h3><ul><li>100% unique variant SKUs</li><li>100% product type and original/inspired status</li><li>100% normalized volume and price</li><li>Complete scent attributes for active perfumes</li></ul></article>
+          <article class="score-card"><h3>Conversion funnel</h3><ul><li>Product view → add to cart</li><li>Add to cart → checkout</li><li>Checkout → purchase</li><li>Segmented by mobile, source, and product status</li></ul></article>
+          <article class="score-card"><h3>Discovery and comparison</h3><ul><li>Search and filter conversion</li><li>Compare usage and second-product selection</li><li>Compare → purchase conversion</li><li>Compare → dual-purchase conversion</li><li>Dynamic-pair AOV and margin</li></ul></article>
+          <article class="score-card"><h3>Retention and business health</h3><ul><li>Repurchase reminder open/click/conversion</li><li>Incremental repurchase lift vs holdout</li><li>Size-up conversion and gross margin</li><li>Sealed return/refund rate and reason</li><li>Core Web Vitals and accessibility</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="decision" id="decision">
+      <div class="wrap decision-inner reveal">
+        <div><p class="eyebrow">Owner decision</p><h2>Approve the foundation before approving a full visual redesign.</h2><p>Begin with the top revenue and traffic products, prove the new decision experience, and then scale the enriched system across the catalog. This reduces redesign risk and creates reusable data for search, filters, recommendations, SEO, feeds, reviews, and future AI experiences.</p></div>
+        <ol class="next-list">
+          <li>Approve positioning and vocabulary</li>
+          <li>Repair catalog identity and pricing</li>
+          <li>Enrich the top 10 products</li>
+          <li>Prototype one mobile PDP</li>
+          <li>Launch tracking and sample pilot</li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Research package</p><h2>The evidence behind the recommendation.</h2></div>
+          <p class="lead">The complete package includes store-by-store evidence, current catalog analysis, machine-readable data, and the proposed production schema.</p>
+        </div>
+        <div class="files reveal">
+          <a class="file" href="FINAL-MARKET-RESEARCH-AND-REDESIGN.md"><strong>Final strategy blueprint</strong><span>Gap matrix, UX, roadmap, experiments, KPIs</span></a>
+          <a class="file" href="research-original-leaders.md"><strong>Original fragrance leaders</strong><span>Seven authentic-retail benchmarks</span></a>
+          <a class="file" href="research-inspired-leaders.md"><strong>Inspired-by leaders</strong><span>Nine specialist benchmarks</span></a>
+          <a class="file" href="current-store-audit.md"><strong>Current Siwa audit</strong><span>Catalog, data, UX, trust, and SEO evidence</span></a>
+          <a class="file" href="product-schema-v2.json"><strong>Product schema v2</strong><span>Recommended commerce data contract</span></a>
+          <a class="file" href="README.md"><strong>Package index</strong><span>Guide to every research artifact</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>Siwa Fragrances · Market opportunity and redesign blueprint</span><span>Research snapshot: 24 August 2026</span></div></footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>

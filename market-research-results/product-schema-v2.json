@@ -1,0 +1,420 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://siwafragrances.com/schemas/fragrance-product-v2.json",
+  "title": "Siwa Fragrance Commerce Product v2",
+  "type": "object",
+  "required": [
+    "id", "handle", "status", "brand", "product_type", "names", "olfactive",
+    "wear_profile", "formulation", "variants", "media", "fulfillment", "seo", "governance"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "handle": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "status": { "enum": ["draft", "active", "archived", "discontinued"] },
+    "brand": { "const": "Siwa Fragrances" },
+    "product_type": { "enum": ["inspired_fragrance", "original_fragrance", "body_splash", "body_lotion", "perfume_oil", "discovery_set", "bundle", "other"] },
+    "names": { "$ref": "#/$defs/localizedNames" },
+    "descriptions": { "$ref": "#/$defs/localizedContent" },
+    "inspiration": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/inspiration" }
+      ]
+    },
+    "olfactive": { "$ref": "#/$defs/olfactive" },
+    "wear_profile": { "$ref": "#/$defs/wearProfile" },
+    "formulation": { "$ref": "#/$defs/formulation" },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/variant" }
+    },
+    "bundle_components": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/bundleComponent" }
+    },
+    "merchandising": { "$ref": "#/$defs/merchandising" },
+    "media": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/media" }
+    },
+    "proof": { "$ref": "#/$defs/proof" },
+    "comparison_profile": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/comparisonProfile" }] },
+    "review_observations": { "type": "array", "items": { "$ref": "#/$defs/reviewObservation" } },
+    "commerce_config": { "$ref": "#/$defs/commerceConfig" },
+    "fulfillment": { "$ref": "#/$defs/fulfillment" },
+    "seo": { "$ref": "#/$defs/seo" },
+    "governance": { "$ref": "#/$defs/governance" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "product_type": { "const": "inspired_fragrance" } }, "required": ["product_type"] },
+      "then": { "properties": { "inspiration": { "$ref": "#/$defs/inspiration" } }, "required": ["inspiration"] }
+    },
+    {
+      "if": { "properties": { "product_type": { "const": "original_fragrance" } }, "required": ["product_type"] },
+      "then": { "properties": { "inspiration": { "type": "null" } }, "required": ["inspiration"] }
+    }
+  ],
+  "$defs": {
+    "money": {
+      "type": "object",
+      "required": ["amount", "currency"],
+      "properties": {
+        "amount": { "type": "number", "minimum": 0 },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" }
+      },
+      "additionalProperties": false
+    },
+    "localizedNames": {
+      "type": "object",
+      "required": ["en", "ar"],
+      "properties": {
+        "en": { "type": "string", "minLength": 2 },
+        "ar": { "type": "string", "minLength": 2 }
+      },
+      "additionalProperties": false
+    },
+    "localizedContent": {
+      "type": "object",
+      "required": ["short_hook_en", "short_hook_ar"],
+      "properties": {
+        "short_hook_en": { "type": "string", "minLength": 10 },
+        "short_hook_ar": { "type": "string", "minLength": 10 },
+        "long_en": { "type": "string" },
+        "long_ar": { "type": "string" },
+        "usage_en": { "type": "string" },
+        "usage_ar": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "inspiration": {
+      "type": "object",
+      "required": ["reference_brand", "reference_product", "relationship_label", "disclaimer_en", "disclaimer_ar", "legal_review_status"],
+      "properties": {
+        "reference_brand": { "type": "string", "minLength": 1 },
+        "reference_product": { "type": "string", "minLength": 1 },
+        "reference_concentration": { "type": ["string", "null"] },
+        "relationship_label": { "enum": ["inspired_by", "our_interpretation_of"] },
+        "disclaimer_en": { "type": "string", "minLength": 10 },
+        "disclaimer_ar": { "type": "string", "minLength": 10 },
+        "legal_review_status": { "enum": ["pending", "approved", "rejected", "expired"] },
+        "comparison": {
+          "type": ["object", "null"],
+          "properties": {
+            "reference_size_ml": { "type": "number", "exclusiveMinimum": 0 },
+            "reference_price": { "$ref": "#/$defs/money" },
+            "source_url": { "type": "string", "format": "uri" },
+            "checked_at": { "type": "string", "format": "date-time" }
+          },
+          "required": ["reference_size_ml", "reference_price", "source_url", "checked_at"],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "olfactive": {
+      "type": "object",
+      "required": ["families", "accords", "notes", "axes"],
+      "properties": {
+        "families": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } },
+        "accords": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "strength"],
+            "properties": { "id": { "type": "string" }, "strength": { "type": "integer", "minimum": 1, "maximum": 5 } },
+            "additionalProperties": false
+          }
+        },
+        "notes": {
+          "type": "object",
+          "required": ["top", "heart", "base", "dominant"],
+          "properties": {
+            "top": { "$ref": "#/$defs/noteIds" },
+            "heart": { "$ref": "#/$defs/noteIds" },
+            "base": { "$ref": "#/$defs/noteIds" },
+            "dominant": { "$ref": "#/$defs/noteIds" }
+          },
+          "additionalProperties": false
+        },
+        "axes": {
+          "type": "object",
+          "required": ["sweetness", "freshness", "warmth", "richness", "intensity"],
+          "properties": {
+            "sweetness": { "$ref": "#/$defs/scale" },
+            "freshness": { "$ref": "#/$defs/scale" },
+            "warmth": { "$ref": "#/$defs/scale" },
+            "richness": { "$ref": "#/$defs/scale" },
+            "intensity": { "$ref": "#/$defs/scale" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "noteIds": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "scale": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "wearProfile": {
+      "type": "object",
+      "required": ["audience", "seasons", "dayparts", "occasions", "climate_fit", "performance"],
+      "properties": {
+        "audience": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["feminine", "masculine", "unisex"] } },
+        "seasons": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["spring", "summer", "autumn", "winter", "all_year"] } },
+        "dayparts": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["day", "night"] } },
+        "occasions": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["office", "daily", "date", "formal", "evening", "travel", "gifting", "special_event"] } },
+        "climate_fit": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["hot_humid", "hot_dry", "mild", "cold"] } },
+        "performance": {
+          "type": "object",
+          "required": ["longevity_band", "projection", "evidence_status"],
+          "properties": {
+            "longevity_band": { "enum": ["light", "moderate", "long", "very_long", "unknown"] },
+            "projection": { "enum": ["intimate", "moderate", "strong", "very_strong", "unknown"] },
+            "evidence_status": { "enum": ["untested", "brand_tested", "community_observed", "both"] },
+            "claim_evidence_id": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "formulation": {
+      "type": "object",
+      "required": ["format", "concentration_type", "ingredients_inci", "allergens", "warnings_en", "warnings_ar"],
+      "properties": {
+        "format": { "enum": ["spray", "roll_on_oil", "solid", "lotion", "splash", "set"] },
+        "concentration_type": { "enum": ["EDT", "EDP", "extrait", "oil", "mist", "not_applicable", "unknown"] },
+        "concentration_pct": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "origin_country": { "type": ["string", "null"] },
+        "vegan": { "type": ["boolean", "null"] },
+        "cruelty_free": { "type": ["boolean", "null"] },
+        "alcohol_free": { "type": ["boolean", "null"] },
+        "ingredients_inci": { "type": "array", "items": { "type": "string" } },
+        "allergens": { "type": "array", "items": { "type": "string" } },
+        "warnings_en": { "type": "array", "items": { "type": "string" } },
+        "warnings_ar": { "type": "array", "items": { "type": "string" } },
+        "claim_evidence_ids": { "type": "array", "uniqueItems": true, "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "variant": {
+      "type": "object",
+      "required": ["id", "sku", "label", "size_ml", "format", "price", "inventory_status", "weight_g"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "sku": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "size_ml": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "format": { "enum": ["spray", "roll_on_oil", "solid", "lotion", "splash", "set"] },
+        "price": { "$ref": "#/$defs/money" },
+        "compare_at_price": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/money" }] },
+        "barcode": { "type": ["string", "null"] },
+        "mpn": { "type": ["string", "null"] },
+        "inventory_status": { "enum": ["in_stock", "low_stock", "preorder", "backorder", "out_of_stock"] },
+        "inventory_policy": { "enum": ["deny", "continue"] },
+        "restock_at": { "type": ["string", "null"], "format": "date-time" },
+        "lead_time_days": { "type": "integer", "minimum": 0 },
+        "weight_g": { "type": "number", "minimum": 0 },
+        "spray_estimation": {
+          "type": "object",
+          "required": ["spray_output_ml", "estimated_sprays", "output_source", "usage_presets"],
+          "properties": {
+            "spray_output_ml": { "type": "number", "exclusiveMinimum": 0 },
+            "estimated_sprays": { "type": "integer", "minimum": 1 },
+            "output_source": { "enum": ["measured", "product_default", "global_default"] },
+            "measured_at": { "type": ["string", "null"], "format": "date-time" },
+            "usage_presets": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": ["id", "sprays_per_day", "estimated_days"],
+                "properties": {
+                  "id": { "enum": ["light", "moderate", "heavy", "custom"] },
+                  "sprays_per_day": { "type": "number", "exclusiveMinimum": 0 },
+                  "estimated_days": { "type": "integer", "minimum": 1 }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "media_ids": { "type": "array", "uniqueItems": true, "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "bundleComponent": {
+      "type": "object",
+      "required": ["variant_id", "quantity"],
+      "properties": {
+        "variant_id": { "type": "string", "minLength": 1 },
+        "quantity": { "type": "integer", "minimum": 1 },
+        "substitution_allowed": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "merchandising": {
+      "type": "object",
+      "properties": {
+        "badges": { "type": "array", "uniqueItems": true, "items": { "enum": ["bestseller", "new", "limited", "exclusive", "original", "inspired"] } },
+        "collection_ids": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "layering_product_ids": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "similar_product_ids": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "sample_variant_id": { "type": ["string", "null"] },
+        "sample_credit": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/money" }] },
+        "bundle_eligible": { "type": "boolean" },
+        "giftable": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "media": {
+      "type": "object",
+      "required": ["id", "url", "role", "position", "alt_en", "alt_ar"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "role": { "enum": ["hero", "packaging", "scale", "detail", "note_visual", "lifestyle", "bundle_layout", "video"] },
+        "position": { "type": "integer", "minimum": 1 },
+        "alt_en": { "type": "string", "minLength": 3 },
+        "alt_ar": { "type": "string", "minLength": 3 },
+        "width": { "type": ["integer", "null"], "minimum": 1 },
+        "height": { "type": ["integer", "null"], "minimum": 1 },
+        "variant_ids": { "type": "array", "uniqueItems": true, "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "proof": {
+      "type": ["object", "null"],
+      "properties": {
+        "rating_average": { "type": "number", "minimum": 0, "maximum": 5 },
+        "review_count": { "type": "integer", "minimum": 0 },
+        "verified_count": { "type": "integer", "minimum": 0 },
+        "recommendation_pct": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "rating_distribution": {
+          "type": "object",
+          "properties": {
+            "1": { "type": "integer", "minimum": 0 }, "2": { "type": "integer", "minimum": 0 },
+            "3": { "type": "integer", "minimum": 0 }, "4": { "type": "integer", "minimum": 0 },
+            "5": { "type": "integer", "minimum": 0 }
+          },
+          "required": ["1", "2", "3", "4", "5"],
+          "additionalProperties": false
+        },
+        "source": { "type": "string" },
+        "synced_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["rating_average", "review_count", "verified_count", "rating_distribution", "source", "synced_at"],
+      "additionalProperties": false
+    },
+    "reviewObservation": {
+      "type": "object",
+      "required": ["id", "product_id", "variant_id", "order_line_id", "verified_purchase", "purchased_at", "reviewed_at", "rating"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "product_id": { "type": "string", "minLength": 1 },
+        "variant_id": { "type": "string", "minLength": 1 },
+        "order_line_id": { "type": "string", "minLength": 1 },
+        "verified_purchase": { "const": true },
+        "purchased_at": { "type": "string", "format": "date-time" },
+        "reviewed_at": { "type": "string", "format": "date-time" },
+        "rating": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "variant_label_snapshot": { "type": "string", "minLength": 1 },
+        "similarity_score": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
+        "longevity_hours": { "type": ["number", "null"], "minimum": 0 },
+        "sillage": { "enum": ["intimate", "moderate", "strong", "very_strong", "not_provided"] },
+        "season_tags": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "occasion_tags": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "city": { "type": ["string", "null"] },
+        "surface": { "enum": ["skin", "fabric", "both", "not_provided"] }
+      },
+      "additionalProperties": false
+    },
+    "comparisonStatement": {
+      "type": "object",
+      "required": ["statement_en", "statement_ar", "evidence_type", "source", "confidence", "legal_review_status"],
+      "properties": {
+        "statement_en": { "type": "string", "minLength": 5 },
+        "statement_ar": { "type": "string", "minLength": 5 },
+        "evidence_type": { "enum": ["formula_record", "brand_test", "community_observation", "reference_publication", "creative_intent"] },
+        "source": { "type": "string", "minLength": 1 },
+        "tested_at": { "type": ["string", "null"], "format": "date-time" },
+        "sample_size": { "type": ["integer", "null"], "minimum": 1 },
+        "confidence": { "enum": ["low", "medium", "high"] },
+        "legal_review_status": { "enum": ["pending", "approved", "rejected", "expired"] }
+      },
+      "additionalProperties": false
+    },
+    "comparisonProfile": {
+      "type": "object",
+      "required": ["reference_label", "matches", "differences", "updated_at"],
+      "properties": {
+        "reference_label": { "type": "string", "minLength": 1 },
+        "matches": { "type": "array", "items": { "$ref": "#/$defs/comparisonStatement" } },
+        "differences": { "type": "array", "items": { "$ref": "#/$defs/comparisonStatement" } },
+        "updated_at": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    },
+    "commerceConfig": {
+      "type": "object",
+      "required": ["free_shipping_threshold", "confirmed_payment_methods", "dynamic_bundle_discount_pct", "reorder_reminder_fraction", "opened_bottle_returns_allowed"],
+      "properties": {
+        "free_shipping_threshold": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/money" }] },
+        "confirmed_payment_methods": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "dynamic_bundle_discount_pct": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "loyalty_reorder_discount_pct": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "reorder_reminder_fraction": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+        "opened_bottle_returns_allowed": { "const": false },
+        "return_requires_sealed": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "fulfillment": {
+      "type": "object",
+      "required": ["return_window_days", "return_requires_sealed", "opened_or_used_return_allowed", "return_exceptions_en", "return_exceptions_ar", "support_url"],
+      "properties": {
+        "return_window_days": { "type": "integer", "minimum": 0 },
+        "return_requires_sealed": { "const": true },
+        "opened_or_used_return_allowed": { "const": false },
+        "return_exceptions_en": { "type": "array", "items": { "type": "string" } },
+        "return_exceptions_ar": { "type": "array", "items": { "type": "string" } },
+        "dispatch_cutoff": { "type": ["string", "null"] },
+        "support_url": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": false
+    },
+    "seo": {
+      "type": "object",
+      "required": ["title_en", "title_ar", "description_en", "description_ar", "canonical_url", "index_status", "search_aliases_en", "search_aliases_ar"],
+      "properties": {
+        "title_en": { "type": "string", "minLength": 10 },
+        "title_ar": { "type": "string", "minLength": 10 },
+        "description_en": { "type": "string", "minLength": 40 },
+        "description_ar": { "type": "string", "minLength": 40 },
+        "canonical_url": { "type": "string", "format": "uri" },
+        "index_status": { "enum": ["index", "noindex"] },
+        "search_aliases_en": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "search_aliases_ar": { "type": "array", "uniqueItems": true, "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "governance": {
+      "type": "object",
+      "required": ["owner", "completeness_score", "last_reviewed_at", "published_at", "updated_at"],
+      "properties": {
+        "owner": { "type": "string", "minLength": 1 },
+        "completeness_score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "claim_evidence_ids": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "last_reviewed_at": { "type": "string", "format": "date-time" },
+        "published_at": { "type": ["string", "null"], "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$comment": "Cross-record rules such as global SKU uniqueness, media and relationship referential integrity, review distribution sums, and compare-at-price greater than selling price require application-level validation."
+}

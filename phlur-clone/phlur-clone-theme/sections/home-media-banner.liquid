@@ -1,0 +1,55 @@
+{{ 'home-vanilla-canyon.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign hero_heading = section.settings.heading | default: 'Vanilla Canyon'
+  assign hero_body = section.settings.body | default: 'A soulful vanilla that wears like the freedom of the open road'
+  assign hero_button = section.settings.button_label | default: 'SHOP NOW'
+  assign hero_link = section.settings.link | default: '/products/vanilla-canyon-50ml'
+  assign desktop_video = section.settings.video_url
+  if desktop_video == blank
+    assign desktop_video = 'home-vanilla-canyon-desktop.mp4' | asset_url
+  endif
+  assign mobile_video = section.settings.mobile_video_url
+  if mobile_video == blank
+    assign mobile_video = 'home-vanilla-canyon-mobile.mp4' | asset_url
+  endif
+  assign desktop_poster = section.settings.poster_desktop
+  if desktop_poster == blank
+    assign desktop_poster = 'home-vanilla-canyon-poster-desktop.jpg' | asset_url
+  endif
+  assign mobile_poster = section.settings.poster_mobile
+  if mobile_poster == blank
+    assign mobile_poster = 'home-vanilla-canyon-poster-mobile.jpg' | asset_url
+  endif
+-%}
+<section id="shopify-section-{{ section.id }}" class="shopify-section section-full-width-banner vanilla-canyon-hero">
+  <a class="homepage-hero-link-wrapper homepage-hero-link-{{ section.id }} page-width link-forloop-2" href="{{ hero_link }}">
+    <div class="homepage-hero-link-wrapper-{{ section.id }} container-bottom-padding-40 forloop-2">
+      <div data-section-id="{{ section.id }}" class="homepage-hero-wrap homepage-hero-text--{{ section.id }} homepage-hero-text--750 origHeight">
+        <div class="homepage-hero-text__container"><div class="hero__media hero__media--{{ section.id }} origHeight"><div class="hero__media-container">
+          <picture class="vanilla-canyon-hero__poster"><source media="(max-width: 880px)" srcset="{{ mobile_poster }}"><img src="{{ desktop_poster }}" alt="" width="1920" height="840" loading="eager" fetchpriority="high" decoding="sync"></picture>
+          <video loop autoplay muted playsinline preload="none" id="Mp4Video-{{ section.id }}" class="origHeight" aria-label="{{ hero_heading | escape }}" data-performance-video data-video-after-load>
+            <source data-src="{{ mobile_video }}" media="(max-width: 880px)" type="video/mp4">
+            <source data-src="{{ desktop_video }}" media="(min-width: 881px)" type="video/mp4">
+          </video>
+        </div></div></div>
+        <div class="homepage-hero-text__inner"><div class="homepage-hero-text__aligner homepage-hero-text--left_bottom homepage-hero-text-mobile--left_bottom">
+          <h2 class="large desktop">{{ hero_heading }}</h2><h2 class="large mobile">{{ hero_heading }}</h2>
+          <p class="desktop">{{ hero_body }}</p><p class="mobile">A soulful vanilla that wears like the freedom<br>of the open road</p>
+          <button class="desktop solid-white" type="button">{{ hero_button }}</button><button class="mobile solid-white" type="button">{{ hero_button }}</button>
+        </div></div>
+      </div>
+    </div>
+  </a>
+</section>
+{% schema %}
+{"name":"Vanilla Canyon hero","settings":[
+{"type":"text","id":"heading","label":"Heading","default":"Vanilla Canyon"},
+{"type":"textarea","id":"body","label":"Body","default":"A soulful vanilla that wears like the freedom of the open road"},
+{"type":"text","id":"button_label","label":"Button label","default":"SHOP NOW"},
+{"type":"url","id":"link","label":"Link"},
+{"type":"url","id":"video_url","label":"Desktop MP4 URL"},
+{"type":"url","id":"mobile_video_url","label":"Mobile MP4 URL"},
+{"type":"text","id":"poster_desktop","label":"Desktop poster URL"},
+{"type":"text","id":"poster_mobile","label":"Mobile poster URL"}
+],"presets":[{"name":"Vanilla Canyon hero"}]}
+{% endschema %}

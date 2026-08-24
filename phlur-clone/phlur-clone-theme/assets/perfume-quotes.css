@@ -1,0 +1,122 @@
+.perfume-quotes-section {
+  margin-top: 0;
+  background: var(--perfume-quotes-background);
+  color: var(--perfume-quotes-text);
+}
+
+.shopify-section > .perfume-quotes {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: var(--perfume-quotes-padding-desktop);
+}
+
+.perfume-quotes .flex-container-row {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: var(--perfume-quotes-copy-gap);
+  text-align: center;
+}
+
+.perfume-quotes .flex-one-third {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 33.33%;
+  max-width: 600px;
+  padding-right: var(--perfume-quotes-copy-padding);
+  text-align: left;
+}
+
+.perfume-quotes .flex-two-thirds {
+  width: 66.66%;
+  min-width: 0;
+  text-align: left;
+}
+
+.perfume-quotes .perfume-quote {
+  margin: 0 0 5px;
+  color: var(--perfume-quotes-text);
+  font-family: ABCRepro-Regular, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.perfume-quotes .flex-one-third > p {
+  margin: 0 0 0;
+  font-size: 14px;
+  line-height: 160%;
+}
+
+.perfume-quotes img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+}
+
+@media (max-width: 1200px) and (min-width: 750px) {
+  .shopify-section > .perfume-quotes {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 989px) {
+  .perfume-quotes .flex-container-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+  }
+
+  .perfume-quotes .flex-one-third,
+  .perfume-quotes .flex-two-thirds {
+    width: 100%;
+  }
+
+  .perfume-quotes .flex-one-third {
+    order: 2;
+    max-width: 600px;
+    margin-top: 24px;
+    padding-right: 0;
+  }
+
+  .perfume-quotes .perfume-quote {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+  }
+
+  .perfume-quotes .flex-one-third > p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 749px) {
+  .shopify-section > .perfume-quotes {
+    padding: 40px 20px;
+  }
+}
+
+@keyframes perfumeQuoteSlideIn {
+  from { opacity: 0; transform: translateY(2rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.perfume-quotes.animate--slide-in {
+  animation: perfumeQuoteSlideIn .3s cubic-bezier(.4, 0, .2, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .perfume-quotes.animate--slide-in {
+    animation: none;
+  }
+}

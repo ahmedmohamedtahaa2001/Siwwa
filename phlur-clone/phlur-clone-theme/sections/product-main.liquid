@@ -1,0 +1,289 @@
+{{ 'product-main.css' | asset_url | stylesheet_tag }}
+{{ 'product-info-revision.css' | asset_url | stylesheet_tag }}
+{{ 'product-info-ground-truth.css' | asset_url | stylesheet_tag }}
+{{ 'product-info-ground-tuning.css' | asset_url | stylesheet_tag }}
+{{ 'layer-it-with.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-spinner.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-main.js' | asset_url }}" defer></script>
+{%- assign display_title = product.metafields.custom.display_title | default: section.settings.fallback_title -%}
+{% style %}
+  body, #MainContent { width: 100%; max-width: 100%; }
+  #shopify-section-{{ section.id }} > section > .page-width {
+    padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+    max-width: {{ section.settings.section_max_width }}px;
+  }
+  #shopify-section-{{ section.id }} .product {
+    gap: {{ section.settings.item_gap }}px;
+    max-width: {{ section.settings.product_content_width }}px;
+    --gallery-sticky-top: {{ section.settings.gallery_sticky_top }}px;
+    --membership-chevron-size: {{ section.settings.membership_chevron_size }}px;
+  }
+  #shopify-section-{{ section.id }} .scentCollectionSwiper {
+    --scent-card-width: {{ section.settings.scent_card_width }}px;
+    --scent-card-gap: {{ section.settings.scent_gap }}px;
+  }
+  #shopify-section-{{ section.id }} .productSwiper {
+    --gallery-badge-background: {{ section.settings.gallery_badge_background }};
+    --gallery-badge-color: {{ section.settings.gallery_badge_color }};
+    --gallery-bullet-color: {{ section.settings.gallery_bullet_color }};
+    --gallery-bullet-inactive-color: {{ section.settings.gallery_bullet_inactive_color }};
+    --gallery-arrow-background: {{ section.settings.gallery_arrow_background }};
+    --gallery-arrow-size: {{ section.settings.gallery_arrow_size }}px;
+    --gallery-icon-size: {{ section.settings.gallery_icon_size }}px;
+    --gallery-ratio: {{ section.settings.gallery_ratio_percent | divided_by: 100.0 }};
+    --gallery-previous-offset: {{ section.settings.gallery_previous_offset }}px;
+    --gallery-next-offset: {{ section.settings.gallery_next_offset }}px;
+    --gallery-arrow-blur: {{ section.settings.gallery_arrow_blur }}px;
+    --gallery-disabled-opacity: {{ section.settings.gallery_disabled_opacity | divided_by: 100.0 }};
+    --gallery-badge-top: {{ section.settings.gallery_badge_top }}px;
+    --gallery-badge-left: {{ section.settings.gallery_badge_left }}px;
+    --gallery-badge-padding-vertical: {{ section.settings.gallery_badge_padding_vertical }}px;
+    --gallery-badge-padding-horizontal: {{ section.settings.gallery_badge_padding_horizontal }}px;
+    --gallery-badge-font-size: {{ section.settings.gallery_badge_font_size }}px;
+    --gallery-badge-line-height: {{ section.settings.gallery_badge_line_height }}px;
+    --gallery-pagination-bottom: {{ section.settings.gallery_pagination_bottom }}px;
+    --gallery-pagination-gap: {{ section.settings.gallery_pagination_gap }}px;
+    --gallery-bullet-size: {{ section.settings.gallery_bullet_size }}px;
+    --gallery-bullet-border-width: {{ section.settings.gallery_bullet_border_width }}px;
+    --gallery-transition-duration: {{ section.settings.gallery_transition_duration }}ms;
+    --gallery-mobile-gap: {{ section.settings.gallery_mobile_gap }}px;
+    --gallery-mobile-gutter: {{ section.settings.gallery_mobile_gutter }}px;
+    --gallery-mobile-slide-inset: {{ section.settings.gallery_mobile_slide_inset }}px;
+    --gallery-desktop-height: {{ section.settings.gallery_desktop_height }}px;
+    --gallery-laptop-height: {{ section.settings.gallery_laptop_height }}px;
+    --gallery-tablet-height: {{ section.settings.gallery_tablet_height }}px;
+    --gallery-mobile-height: {{ section.settings.gallery_mobile_height }}px;
+    --gallery-width-adjustment: {{ section.settings.gallery_width_adjustment }}px;
+    --gallery-badge-letter-spacing: {{ section.settings.gallery_badge_letter_spacing }}px;
+    --gallery-mobile-pagination-bottom: {{ section.settings.gallery_mobile_pagination_bottom }}px;
+    --gallery-control-transition: {{ section.settings.gallery_control_transition }};
+    --gallery-image-fit: {{ section.settings.gallery_image_fit }};
+    --gallery-badge-font-family: {{ section.settings.gallery_badge_font_family }};
+    --gallery-badge-font-weight: {{ section.settings.gallery_badge_font_weight }};
+    --gallery-badge-transform: {{ section.settings.gallery_badge_transform }};
+    --gallery-badge-item-gap: {{ section.settings.gallery_badge_item_gap }}px;
+  }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} > section > .page-width {
+      padding: {{ section.settings.mobile_padding_top }}px {{ section.settings.mobile_padding_horizontal }}px {{ section.settings.mobile_padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+<section id="MainProduct-{{ section.id }}" class="section-{{ section.id }}-padding gradient color-scheme-1 product-kind--{{ section.settings.product_kind | handleize }}" data-section="{{ section.id }}">
+  <svg class="oke-star-definitions" aria-hidden="true" width="0" height="0" style="position:absolute;color:#000"><defs><path id="oke-star-empty" fill="currentColor" d="M16 1.9l4.3 8.8 9.7 1.4-7 6.8 1.7 9.6-8.7-4.6-8.7 4.6L9 18.9l-7-6.8 9.7-1.4L16 1.9z"></path><path id="oke-star-filled" fill="currentColor" d="M16 1.9l4.3 8.8 9.7 1.4-7 6.8 1.7 9.6-8.7-4.6-8.7 4.6L9 18.9l-7-6.8 9.7-1.4L16 1.9z"></path></defs></svg>
+  <div class="page-width"><div class="container-bottom-padding-60">
+    <div class="product product--medium product--left product--thumbnail_slider product--mobile-hide grid grid--1-col grid--2-col-tablet">
+      <div class="grid__item product__media-wrapper">{% render 'product-media-gallery' %}</div>
+      <div class="product__info-wrapper grid__item scroll-trigger animate--slide-in">
+        <product-info id="ProductInfo-{{ section.id }}" class="product__info-container product__column-sticky" data-section="{{ section.id }}" data-url="{{ product.url | default: section.settings.fallback_product_url }}">
+          <div class="product__title">
+            <div class="flex-container-row"><h1 class="aktiv h3">{{ display_title | escape }}</h1><div data-oke-star-rating data-oke-reviews-product-id="shopify-{{ product.id | default: section.settings.fallback_product_id }}" data-oke-rendered><div data-oke-reviews-version="0.103.2" data-oke-container class="okeReviews oke-sr"><div class="oke-is-clickable" tabindex="0" role="button"><div class="oke-sr-rating"> {{ section.settings.rating_value }} </div><div class="oke-sr-stars"><div class="oke-stars"><div class="oke-stars-background"><svg height="13" viewBox="0 0 199.3846153846154 32" aria-hidden="true" role="none"><use x="0" href="#oke-star-empty"></use><use x="41.84615384615385" href="#oke-star-empty"></use><use x="83.6923076923077" href="#oke-star-empty"></use><use x="125.53846153846155" href="#oke-star-empty"></use><use x="167.3846153846154" href="#oke-star-empty"></use></svg></div><div class="oke-stars-foreground" style="width:{{ section.settings.rating_percent_exact }}%;"><svg height="13" viewBox="0 0 199.3846153846154 32" aria-hidden="true" role="none"><use x="0" href="#oke-star-filled"></use><use x="41.84615384615385" href="#oke-star-filled"></use><use x="83.6923076923077" href="#oke-star-filled"></use><use x="125.53846153846155" href="#oke-star-filled"></use><use x="167.3846153846154" href="#oke-star-filled"></use></svg></div><span class="oke-a11yText">{{ section.settings.rating_aria | escape }}</span></div></div><div class="oke-sr-count"><span class="oke-sr-count-number">{{ section.settings.rating_value }}</span><span class="oke-sr-label-text"> {{ section.settings.rating_label | escape }}</span><span class="oke-sr-total-text"> ({{ section.settings.review_count }})</span></div><span class="oke-a11yText">{{ section.settings.rating_click_label | escape }}</span></div><script type="application/json" data-oke-metafield-data>{"averageRating":"{{ section.settings.rating_value }}","reviewCount":{{ section.settings.review_count }}}</script></div></div></div>
+            <h3 class="repro variant-title">{{ product.metafields.custom.variant_title | default: section.settings.variant_title | escape }}</h3>
+            <h3 class="repro tagline" style="border-left:{{ section.settings.tagline_border_width }}px solid {{ section.settings.tagline_border_color }};">{{ product.metafields.custom.tagline | default: section.settings.tagline | escape }}</h3>
+          </div>
+          <p class="product__text inline-richtext subtitle">{{ section.settings.subtitle }}</p>
+          {% render 'product-form' %}
+          <div class="Phlur-Accordion">
+            {%- assign accordion_index = 0 -%}
+            {%- for block in section.blocks -%}{%- if block.type == 'accordion' -%}
+              <div class="js_accordion{% if accordion_index == 0 %} first-accordion open{% endif %}" {{ block.shopify_attributes }}>
+                <button class="accordion-header-wrap" type="button" aria-expanded="{% if accordion_index == 0 %}true{% else %}false{% endif %}" aria-controls="AccordionPanel-{{ section.id }}-{{ block.id }}"><span class="summary__title"><span>{{ block.settings.title | escape }}</span></span><span class="icon-plus-rotate" aria-hidden="true"></span></button>
+                <div id="AccordionPanel-{{ section.id }}-{{ block.id }}" class="accordion_content rte">{% if block.settings.use_ingredients_metafield and product.metafields.custom.ingredients != blank %}{{ product.metafields.custom.ingredients | metafield_tag }}{% else %}{{ block.settings.content }}{% endif %}</div>
+              </div>
+              {%- assign accordion_index = accordion_index | plus: 1 -%}
+            {%- endif -%}{%- endfor -%}
+          {%- if section.settings.show_layer_it_with -%}
+            {%- assign layer_sizes = '(min-width: 1600px) 367px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)' -%}
+            <p class="layer-it-with-heading">{{ section.settings.layer_heading | escape }}</p>
+            <div class="layer-it-with-pdp">
+              {%- for block in section.blocks -%}{%- if block.type == 'product' -%}{% render 'layer-product-card', block: block, section: section, layer_sizes: layer_sizes %}{%- endif -%}{%- endfor -%}
+            </div>
+          {%- endif -%}
+          </div>
+        </product-info>
+      </div>
+    </div>
+  </div></div>
+</section>
+{% schema %}
+{
+  "name": "Product main",
+  "settings": [
+    { "type": "header", "content": "Product content" },
+    { "type": "text", "id": "product_kind", "label": "Product style scope", "default": "body-mist" },
+    { "type": "text", "id": "fallback_title", "label": "Fallback title", "default": "Vanilla Skin" },
+    { "type": "text", "id": "variant_title", "label": "Variant title", "default": "Full Size Body Mist" },
+    { "type": "text", "id": "tagline", "label": "Tagline", "default": "An intoxicating vanilla good enough to eat" },
+    { "type": "inline_richtext", "id": "subtitle", "label": "Subtitle" },
+    { "type": "text", "id": "rating_value", "label": "Rating value", "default": "4.8" },
+    { "type": "range", "id": "rating_percent", "label": "Rating fill", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 97 },
+    { "type": "text", "id": "rating_percent_exact", "label": "Exact rating fill percent", "default": "96.7901" },
+    { "type": "number", "id": "review_count", "label": "Review count", "default": 959 },
+    { "type": "text", "id": "rating_label", "label": "Rating label", "default": "Stars" },
+    { "type": "text", "id": "reviews_label", "label": "Reviews label", "default": "Reviews" },
+    { "type": "text", "id": "rating_aria", "label": "Rating accessibility text", "default": "Rated 4.8 out of 5 stars" },
+    { "type": "text", "id": "rating_click_label", "label": "Rating action accessibility text", "default": "Click to scroll to reviews" },
+    { "type": "range", "id": "tagline_border_width", "label": "Tagline border width", "min": 0, "max": 8, "step": 1, "unit": "px", "default": 2 },
+    { "type": "color", "id": "tagline_border_color", "label": "Tagline border color", "default": "#000000" },
+    { "type": "text", "id": "fallback_price", "label": "Fallback price", "default": "$39" },
+    { "type": "text", "id": "fallback_compare_price", "label": "Fallback compare price" },
+    { "type": "text", "id": "fallback_variant_id", "label": "Fallback variant ID", "default": "43153584783541" },
+    { "type": "text", "id": "fallback_product_id", "label": "Fallback product ID", "default": "7507395477685" },
+    { "type": "text", "id": "fallback_product_url", "label": "Fallback product URL", "default": "/products/vanilla-skin-body-mist" },
+    { "type": "checkbox", "id": "show_variant_links", "label": "Show size links", "default": false },
+    { "type": "text", "id": "variant_links_heading", "label": "Size links heading", "default": "Size" },
+    { "type": "text", "id": "scent_heading", "label": "Scent heading", "default": "Scent" },
+    { "type": "text", "id": "scent_aria_label", "label": "Scent slider accessibility label", "default": "Slider" },
+    { "type": "text", "id": "scent_previous_label", "label": "Previous scent label", "default": "Previous scent" },
+    { "type": "text", "id": "scent_next_label", "label": "Next scent label", "default": "Next scent" },
+    { "type": "range", "id": "scent_card_width", "label": "Scent card width", "min": 60, "max": 140, "step": 1, "unit": "px", "default": 92 },
+    { "type": "range", "id": "scent_gap", "label": "Scent card gap", "min": 0, "max": 24, "step": 1, "unit": "px", "default": 8 },
+    { "type": "text", "id": "membership_text", "label": "Membership message", "default": "Get 10% cashback with Membership" },
+    { "type": "text", "id": "membership_button_label", "label": "Membership button label", "default": "JOIN MEMBERSHIP TO PURCHASE" },
+    { "type": "text", "id": "membership_chevron_asset", "label": "Membership chevron asset", "default": "chevron-right-bounding.svg" },
+    { "type": "range", "id": "membership_chevron_size", "label": "Membership chevron size", "min": 12, "max": 32, "step": 1, "unit": "px", "default": 16 },
+    { "type": "text", "id": "membership_chevron_title", "label": "Membership chevron title", "default": "chevron arrow" },
+    { "type": "text", "id": "add_to_bag_label", "label": "Add button label", "default": "Add to Bag" },
+    { "type": "text", "id": "variant_selector_label", "label": "Variant selector label", "default": "Choose an option" },
+    { "type": "text", "id": "layer_heading", "label": "Related heading", "default": "Layer It With" },
+    { "type": "checkbox", "id": "show_layer_it_with", "label": "Show Layer It With", "default": true },
+    { "type": "text", "id": "layer_add_label", "label": "Layer quick add label", "default": "Add" },
+    { "type": "text", "id": "layer_sold_out_label", "label": "Layer sold out label", "default": "Sold out" },
+    { "type": "text", "id": "layer_regular_price_label", "label": "Layer regular price accessibility label", "default": "Regular price" },
+    { "type": "header", "content": "Product gallery" },
+    { "type": "range", "id": "gallery_item_count", "label": "Gallery item count", "min": 1, "max": 6, "step": 1, "default": 5 },
+    { "type": "image_picker", "id": "gallery_image_1", "label": "Gallery image 1" },
+    { "type": "image_picker", "id": "gallery_image_2", "label": "Gallery image 2" },
+    { "type": "image_picker", "id": "gallery_image_3", "label": "Gallery image 3" },
+    { "type": "image_picker", "id": "gallery_image_4", "label": "Gallery image 4" },
+    { "type": "image_picker", "id": "gallery_image_5", "label": "Gallery image 5" },
+    { "type": "image_picker", "id": "gallery_image_6", "label": "Gallery image 6" },
+    { "type": "text", "id": "gallery_alt_1", "label": "Gallery alt 1", "default": "Vanilla Skin body mist" },
+    { "type": "text", "id": "gallery_alt_2", "label": "Gallery alt 2", "default": "Vanilla Skin body mist" },
+    { "type": "text", "id": "gallery_alt_3", "label": "Gallery alt 3", "default": "Vanilla Skin fragrance notes" },
+    { "type": "text", "id": "gallery_alt_4", "label": "Gallery alt 4", "default": "Vanilla Skin ingredients" },
+    { "type": "text", "id": "gallery_alt_5", "label": "Gallery alt 5", "default": "Vanilla Skin body mist" },
+    { "type": "text", "id": "gallery_alt_6", "label": "Gallery alt 6", "default": "Vanilla Skin body mist" },
+    { "type": "text", "id": "gallery_badge_1", "label": "Gallery badge 1", "default": "BESTSELLER" },
+    { "type": "text", "id": "gallery_badge_2", "label": "Gallery badge 2", "default": "BESTSELLER" },
+    { "type": "text", "id": "gallery_badge_3", "label": "Gallery badge 3" },
+    { "type": "text", "id": "gallery_badge_4", "label": "Gallery badge 4" },
+    { "type": "text", "id": "gallery_badge_5", "label": "Gallery badge 5" },
+    { "type": "text", "id": "gallery_badge_6", "label": "Gallery badge 6" },
+    { "type": "checkbox", "id": "gallery_badges_per_slide", "label": "Use per-slide badges", "default": false },
+    { "type": "text", "id": "gallery_badge", "label": "Badge for every slide", "default": "BESTSELLER" },
+    { "type": "text", "id": "gallery_aria_label", "label": "Gallery pagination label", "default": "Product media" },
+    { "type": "text", "id": "previous_image_label", "label": "Previous image label", "default": "Previous image" },
+    { "type": "text", "id": "next_image_label", "label": "Next image label", "default": "Next image" },
+    { "type": "text", "id": "show_image_label", "label": "Pagination item label", "default": "Show image" },
+    { "type": "color", "id": "gallery_badge_background", "label": "Badge background", "default": "#ffffff" },
+    { "type": "color", "id": "gallery_badge_color", "label": "Badge text", "default": "#000000" },
+    { "type": "color", "id": "gallery_bullet_color", "label": "Pagination active color", "default": "#000000" },
+    { "type": "color_background", "id": "gallery_bullet_inactive_color", "label": "Pagination inactive color", "default": "rgba(0,0,0,0.26)" },
+    { "type": "color_background", "id": "gallery_arrow_background", "label": "Arrow background", "default": "rgba(195,195,195,0.4)" },
+    { "type": "range", "id": "gallery_ratio_percent", "label": "Media aspect ratio", "min": 50, "max": 150, "step": 1, "unit": "%", "default": 100 },
+    { "type": "range", "id": "gallery_arrow_size", "label": "Arrow button size", "min": 24, "max": 64, "step": 2, "unit": "px", "default": 32 },
+    { "type": "range", "id": "gallery_icon_size", "label": "Arrow icon size", "min": 12, "max": 36, "step": 2, "unit": "px", "default": 16 },
+    { "type": "range", "id": "gallery_icon_width", "label": "Arrow image intrinsic width", "min": 12, "max": 36, "step": 2, "unit": "px", "default": 24 },
+    { "type": "range", "id": "gallery_icon_height", "label": "Arrow image intrinsic height", "min": 12, "max": 36, "step": 2, "unit": "px", "default": 24 },
+    { "type": "range", "id": "gallery_previous_offset", "label": "Previous arrow offset", "min": 0, "max": 60, "step": 2, "unit": "px", "default": 16 },
+    { "type": "range", "id": "gallery_next_offset", "label": "Next arrow offset", "min": 0, "max": 60, "step": 2, "unit": "px", "default": 16 },
+    { "type": "range", "id": "gallery_arrow_blur", "label": "Arrow background blur", "min": 0, "max": 20, "step": 1, "unit": "px", "default": 12 },
+    { "type": "range", "id": "gallery_disabled_opacity", "label": "Disabled arrow opacity", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 35 },
+    { "type": "range", "id": "gallery_badge_top", "label": "Badge top", "min": 0, "max": 60, "step": 2, "unit": "px", "default": 12 },
+    { "type": "range", "id": "gallery_badge_left", "label": "Badge left", "min": 0, "max": 60, "step": 2, "unit": "px", "default": 12 },
+    { "type": "range", "id": "gallery_badge_padding_vertical", "label": "Badge vertical padding", "min": 0, "max": 12, "step": 1, "unit": "px", "default": 3 },
+    { "type": "range", "id": "gallery_badge_padding_horizontal", "label": "Badge horizontal padding", "min": 0, "max": 20, "step": 1, "unit": "px", "default": 7 },
+    { "type": "range", "id": "gallery_badge_font_size", "label": "Badge font size", "min": 8, "max": 20, "step": 1, "unit": "px", "default": 10 },
+    { "type": "range", "id": "gallery_badge_line_height", "label": "Badge line height", "min": 10, "max": 30, "step": 1, "unit": "px", "default": 16 },
+    { "type": "range", "id": "gallery_pagination_bottom", "label": "Pagination bottom", "min": 0, "max": 60, "step": 2, "unit": "px", "default": 24 },
+    { "type": "range", "id": "gallery_pagination_gap", "label": "Pagination gap", "min": 0, "max": 24, "step": 1, "unit": "px", "default": 10 },
+    { "type": "range", "id": "gallery_bullet_size", "label": "Pagination bullet size", "min": 4, "max": 16, "step": 1, "unit": "px", "default": 4 },
+    { "type": "range", "id": "gallery_bullet_border_width", "label": "Pagination border width", "min": 0, "max": 4, "step": 1, "unit": "px", "default": 1 },
+    { "type": "range", "id": "gallery_transition_duration", "label": "Slide transition", "min": 100, "max": 1000, "step": 50, "unit": "ms", "default": 300 },
+    { "type": "range", "id": "gallery_mobile_gap", "label": "Mobile slide gap", "min": 0, "max": 24, "step": 1, "unit": "px", "default": 12 },
+    { "type": "range", "id": "gallery_mobile_gutter", "label": "Mobile gallery gutter", "min": 0, "max": 60, "step": 1, "unit": "px", "default": 20 },
+    { "type": "number", "id": "gallery_mobile_slide_inset", "label": "Mobile slide width inset", "default": 81.2 },
+    { "type": "number", "id": "gallery_desktop_height", "label": "Gallery height desktop", "default": 633 },
+    { "type": "number", "id": "gallery_laptop_height", "label": "Gallery height laptop", "default": 465 },
+    { "type": "number", "id": "gallery_tablet_height", "label": "Gallery height tablet", "default": 337 },
+    { "type": "number", "id": "gallery_mobile_height", "label": "Gallery height mobile", "default": 293.8 },
+    { "type": "number", "id": "gallery_width_adjustment", "label": "Gallery desktop width adjustment", "default": 7.5 },
+    { "type": "number", "id": "gallery_badge_letter_spacing", "label": "Badge letter spacing", "default": 0.8 },
+    { "type": "range", "id": "gallery_mobile_pagination_bottom", "label": "Mobile pagination bottom", "min": 0, "max": 40, "step": 1, "unit": "px", "default": 16 },
+    { "type": "text", "id": "gallery_control_transition", "label": "Gallery transition CSS", "default": "all .25s cubic-bezier(.8,0,.2,1)" },
+    { "type": "select", "id": "gallery_image_fit", "label": "Gallery image fit", "options": [{ "value": "cover", "label": "Cover" }, { "value": "contain", "label": "Contain" }], "default": "cover" },
+    { "type": "text", "id": "gallery_badge_font_family", "label": "Badge font family", "default": "ABCReproMono-Medium, sans-serif" },
+    { "type": "range", "id": "gallery_badge_font_weight", "label": "Badge font weight", "min": 100, "max": 900, "step": 100, "default": 400 },
+    { "type": "select", "id": "gallery_badge_transform", "label": "Badge text transform", "options": [{ "value": "uppercase", "label": "Uppercase" }, { "value": "none", "label": "None" }], "default": "uppercase" },
+    { "type": "range", "id": "gallery_badge_item_gap", "label": "Badge item gap", "min": 0, "max": 20, "step": 1, "unit": "px", "default": 5 },
+    { "type": "header", "content": "Layout & Spacing" },
+    { "type": "range", "id": "padding_top", "label": "Padding top (desktop)", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom (desktop)", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding_left", "label": "Padding left (desktop)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_right", "label": "Padding right (desktop)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "margin_top", "label": "Margin top", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "margin_bottom", "label": "Margin bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "section_max_width", "label": "Max width", "min": 800, "max": 1920, "step": 40, "unit": "px", "default": 1600 },
+    { "type": "number", "id": "product_content_width", "label": "Product content max width", "default": 1600 },
+    { "type": "number", "id": "gallery_sticky_top", "label": "Gallery sticky top", "default": 67 },
+    { "type": "range", "id": "item_gap", "label": "Gap between product columns", "min": 0, "max": 80, "step": 4, "unit": "px", "default": 0 },
+    { "type": "header", "content": "Mobile Spacing" },
+    { "type": "range", "id": "mobile_padding_top", "label": "Padding top (mobile)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "mobile_padding_bottom", "label": "Padding bottom (mobile)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 40 },
+    { "type": "range", "id": "mobile_padding_horizontal", "label": "Horizontal padding (mobile)", "min": 0, "max": 60, "step": 4, "unit": "px", "default": 0 }
+  ],
+  "blocks": [
+    { "type": "variant_link", "name": "Size link", "settings": [
+      { "type": "text", "id": "label", "label": "Label", "default": "50mL" },
+      { "type": "url", "id": "link", "label": "Link" },
+      { "type": "checkbox", "id": "active", "label": "Active size", "default": false },
+      { "type": "checkbox", "id": "available", "label": "Available", "default": true }
+    ] },
+    { "type": "scent", "name": "Scent", "settings": [
+      { "type": "text", "id": "title", "label": "Title", "default": "Vanilla Skin" },
+      { "type": "text", "id": "descriptor", "label": "Descriptor", "default": "Summer Warmth" },
+      { "type": "url", "id": "link", "label": "Link" },
+      { "type": "image_picker", "id": "image", "label": "Image" },
+      { "type": "text", "id": "fallback_asset", "label": "Fallback asset", "default": "vanilla-skin-body-mist-main.jpg" },
+      { "type": "text", "id": "alt", "label": "Alt text", "default": "Vanilla Skin body mist" },
+      { "type": "checkbox", "id": "active", "label": "Active scent", "default": false }
+    ] },
+    { "type": "accordion", "name": "Accordion", "settings": [
+      { "type": "text", "id": "title", "label": "Title", "default": "Description" },
+      { "type": "richtext", "id": "content", "label": "Content" },
+      { "type": "checkbox", "id": "use_ingredients_metafield", "label": "Use ingredients metafield", "default": false }
+    ] },
+    { "type": "product", "name": "Layer product", "limit": 2, "settings": [
+      { "type": "product", "id": "product", "label": "Product" },
+      { "type": "text", "id": "display_title", "label": "Display fragrance title override" },
+      { "type": "text", "id": "category", "label": "Category/size override" },
+      { "type": "text", "id": "badge", "label": "Badge override" },
+      { "type": "image_picker", "id": "primary_image", "label": "Primary image override" },
+      { "type": "image_picker", "id": "hover_image", "label": "Hover image override" },
+      { "type": "text", "id": "primary_alt", "label": "Primary image alt" },
+      { "type": "text", "id": "hover_alt", "label": "Hover image alt" },
+      { "type": "text", "id": "fallback_full_title", "label": "Fallback full title", "default": "Coconut Skin - Travel Size Body Mist" },
+      { "type": "text", "id": "fallback_display_title", "label": "Fallback display title", "default": "Coconut Skin" },
+      { "type": "text", "id": "fallback_category", "label": "Fallback category/size", "default": "Travel Size Body Mist" },
+      { "type": "text", "id": "fallback_badge", "label": "Fallback badge", "default": "FAREWELL SALE" },
+      { "type": "url", "id": "fallback_url", "label": "Fallback URL" },
+      { "type": "text", "id": "fallback_primary_asset", "label": "Fallback primary asset", "default": "coconut-skin-main.jpg" },
+      { "type": "text", "id": "fallback_hover_asset", "label": "Fallback hover asset", "default": "coconut-skin-hover.jpg" },
+      { "type": "number", "id": "fallback_image_width", "label": "Fallback intrinsic width", "default": 4000 },
+      { "type": "number", "id": "fallback_image_height", "label": "Fallback intrinsic height", "default": 4000 },
+      { "type": "text", "id": "fallback_variant_id", "label": "Fallback variant ID", "default": "44430945222837" },
+      { "type": "text", "id": "fallback_product_id", "label": "Fallback product ID", "default": "7960858886325" },
+      { "type": "text", "id": "fallback_price", "label": "Fallback price", "default": "$19" },
+      { "type": "text", "id": "fallback_compare_price", "label": "Fallback compare price", "default": "$26" },
+      { "type": "checkbox", "id": "fallback_available", "label": "Fallback available", "default": true },
+      { "type": "color", "id": "badge_color", "label": "Badge text color", "default": "#000000" },
+      { "type": "color", "id": "badge_background", "label": "Badge background", "default": "#ffffff" }
+    ] }
+  ],
+  "max_blocks": 30,
+  "presets": [{ "name": "Product main" }]
+}
+{% endschema %}

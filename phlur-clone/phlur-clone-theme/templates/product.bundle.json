@@ -1,0 +1,490 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "product-breadcrumbs",
+      "blocks": {
+        "all": {
+          "type": "crumb",
+          "settings": {
+            "label": "Shop All",
+            "link": "/collections/all"
+          }
+        },
+        "mist": {
+          "type": "crumb",
+          "settings": {
+            "label": "Body Mist",
+            "link": "/collections/body-mist"
+          }
+        },
+        "gifts": {
+          "type": "crumb",
+          "settings": {
+            "label": "Gifts & Sets",
+            "link": "/collections/gifts"
+          }
+        }
+      },
+      "block_order": [
+        "all",
+        "mist",
+        "gifts"
+      ],
+      "settings": {
+        "aria_label": "breadcrumbs"
+      }
+    },
+    "main": {
+      "type": "product-main",
+      "blocks": {
+        "scent_island": {
+          "type": "scent",
+          "settings": {
+            "title": "Island Escape",
+            "descriptor": "Summer Warmth",
+            "link": "/products/island-escape-body-mist-trio",
+            "fallback_asset": "island-escape-trio-main.jpg",
+            "alt": "Island Escape - Body Mist Trio - Phlur",
+            "active": true
+          }
+        },
+        "scent_decadent": {
+          "type": "scent",
+          "settings": {
+            "title": "Decadent Layering",
+            "descriptor": "Warm & Sweet",
+            "link": "/products/decadent-layering-set-travel-size-body-mists",
+            "fallback_asset": "decadent-layering-set.jpg",
+            "alt": "Decadent Layering Set - Travel Size Body Mists - Phlur"
+          }
+        },
+        "scent_paradise": {
+          "type": "scent",
+          "settings": {
+            "title": "Paradise Skin",
+            "descriptor": "Soft & Sunlit",
+            "link": "/products/paradise-skin-trio-travel-size-body-mists",
+            "fallback_asset": "paradise-skin-trio.jpg",
+            "alt": "Paradise Skin Set - Travel Size Body Mists - Phlur"
+          }
+        },
+        "description": {
+          "type": "accordion",
+          "settings": {
+            "title": "Description",
+            "content": "<p>Island Escape features three sun-drenched scents drifting in a fresh summer breeze. Beach Skin’s creamy coconut and vanilla melt into Island Swim’s sparkling citrus and ocean mist, while Paradise Nectar blooms with luminous florals and ripe fruit. Layer them together for a wardrobe of summer scents that settles like sun on bare skin.</p>"
+          }
+        },
+        "set": {
+          "type": "accordion",
+          "settings": {
+            "title": "In This Set",
+            "content": "<p>Island Swim - Travel Size Body Mist</p><p>Dive into tropical waters with Island Swim, a bright, airy, and effortlessly fresh mist. Bright calamansi blends with sweet plumeria, creamy coconut, and smooth sandalwood for an easy, sun-warmed wear.</p><p>Paradise Nectar - Travel Size Body Mist</p><p>Paradise Nectar is the scent of a seaside garden, bursting with tropical freshness and soft floral blooms. Bright black currant and mandarin mingle with tuberose for a luminous, glowing finish. It feels like warm coastal air brushing over sun-warmed petals, full of life and color.</p><p>Beach Skin - Travel Size Body Mist</p><p>Breathe in the gauzy ocean mist, feel the heat of sand, and watch the dappled light dance across the waves. Beach Skin bottles the kiss of sun and skin as soft tiare blossoms wash over traces of salty air accented by the citrusy spark of bergamot. A transparent veil of coconut milk and sandalwood linger on skin leaving remnants of creamy warmth that’s both airy and sensual.</p>"
+          }
+        },
+        "notes": {
+          "type": "accordion",
+          "settings": {
+            "title": "Notes",
+            "content": "<p>Island Swim - Travel Size Body Mist<br>Top: Bergamot Splash, Calamansi, Coconut<br>Heart: Ocean Mist, Blue Lavender, Plumeria<br>Base: Sandalwood, Marine Amber, Skin Musk</p><p>Paradise Nectar - Travel Size Body Mist<br>Top: Black Currant, Pink Pepper, Mandarin<br>Heart: Tuberose, Jasmine, Lotus Flower<br>Base: Patchouli, Amber Woods, Cashmere Woods</p><p>Beach Skin - Travel Size<br>Top: Bergamot, Salted Tiare Flower, Pink Pepper<br>Heart: Coconut Milk, Lily of the Valley<br>Base: Sandalwood, Vanilla, Musk</p>"
+          }
+        },
+        "ingredients": {
+          "type": "accordion",
+          "settings": {
+            "title": "Ingredients",
+            "use_ingredients_metafield": true,
+            "content": "<p>Island Swim - Travel Size Body Mist</p><p>*Fragrance Ingredients: Benzyl Salicylate, Benzyl Alcohol, Butyl Methoxydibenzoylmethane, Linalool, Limonene, Hydroxycitronellal, Hexyl Cinnamal, Geraniol, Citronellol, Alpha-Isomethyl ionone, Coumarin, Cinnamyl Alcohol, Citral, Citric Acid, Tetrahydroxypropyl Ethylenediamine.</p><p>Paradise Nectar - Travel Size Body Mist</p><p>*Fragrance Ingredients: Tetramethyl acetyloctahydronaphthalenes, Benzyl Salicylate, Citrus Aurantium Bergamia (Bergamot) Peel Oil, Vanillin, Limonene, Ethylhexyl Salicylate, Linalyl Acetate, Hexyl Cinnamal, Hydroxycitronellal, Pinene, Geraniol, Linalool, Pogostemon Cablin Oil, Dimethyl Phenethyl Acetate, Alpha-Isomethyl Ionone, Geranyl Acetate, Rose Ketones, Coumarin, Terpineol, Citronellol, Eugenia Caryophyllus Oil, Eugenol, Terpinolene, Beta-Caryophyllene, Citral, Trimethylcyclopentenyl Methylisopentenol, Alpha-Terpinene, Butyl Methoxydibenzoylmethane, Benzyl Alcohol, Benzyl Benzoate, Eugenyl Acetate.</p><p>Beach Skin - Travel Size Body Mist</p><p>*Fragrance Ingredients: Benzyl Salicylate, Coumarin, Hydroxycitronellal, Limonene, Linalool, Methyldihydrojasmonate, 1,5,5,9-Tetramethyl-13-oxatricyclo(8.3.0.0(4,9))tridecane, 3-(5,5,6-Trimethylbicyclo[2.2.1]hept-2-yl)cyclohexanol, Cis-3-Hexenyl Salicylate, Dihydro Pentamethylindanone, Dipropylene Glycol, Ethyl Hydroxypyrone, Ethyl Linalool, Ethyl Trimethylcyclopentene Butenol, Ethyl Vanillin, Ethylene Brassylate, Gamma-Nonalactone, Isobutyl Methyl Tetrahydropyranol, Linalyl Acetate, Methylenedioxyphenyl Methyelpropanal, Oxacyclohexadecen-2-one, Sandalore, Tetramethyl Acetyloctahydronaphthalenes, Vanillin.</p>"
+          }
+        },
+        "coconut": {
+          "type": "product",
+          "settings": {
+            "fallback_full_title": "Coconut Skin - Travel Size Body Mist",
+            "fallback_display_title": "Coconut Skin",
+            "fallback_category": "Travel Size Body Mist",
+            "fallback_badge": "FAREWELL SALE",
+            "fallback_url": "/products/coconut-skin-travel-size-body-mist",
+            "fallback_primary_asset": "coconut-skin-main.jpg",
+            "fallback_hover_asset": "coconut-skin-hover.jpg",
+            "primary_alt": "Coconut Skin travel size body mist",
+            "hover_alt": "",
+            "fallback_image_width": 4000,
+            "fallback_image_height": 4000,
+            "fallback_variant_id": "44430945222837",
+            "fallback_product_id": "7960858886325",
+            "fallback_price": "$19",
+            "fallback_compare_price": "$26",
+            "fallback_available": true,
+            "badge_color": "#000000",
+            "badge_background": "#ffffff"
+          }
+        },
+        "dragon": {
+          "type": "product",
+          "settings": {
+            "fallback_full_title": "Dragon Fruit - Travel Size Body Mist",
+            "fallback_display_title": "Dragon Fruit",
+            "fallback_category": "Travel Size Body Mist",
+            "fallback_badge": "",
+            "fallback_url": "/products/dragon-fruit-travel-size-body-mist",
+            "fallback_primary_asset": "dragon-fruit-main.jpg",
+            "fallback_hover_asset": "dragon-fruit-hover.jpg",
+            "primary_alt": "Dragon Fruit travel size body mist",
+            "hover_alt": "",
+            "fallback_image_width": 4000,
+            "fallback_image_height": 4000,
+            "fallback_variant_id": "43974774685877",
+            "fallback_product_id": "7764983349429",
+            "fallback_price": "$26",
+            "fallback_compare_price": "",
+            "fallback_available": true,
+            "badge_color": "#000000",
+            "badge_background": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "scent_island",
+        "scent_decadent",
+        "scent_paradise",
+        "description",
+        "set",
+        "notes",
+        "ingredients",
+        "coconut",
+        "dragon"
+      ],
+      "settings": {
+        "fallback_title": "Island Escape",
+        "variant_title": "Travel Size Body Mist Trio",
+        "tagline": "The beach, the breeze, the bloom",
+        "rating_value": "4.8",
+        "rating_percent_exact": "96.7901",
+        "review_count": 959,
+        "rating_aria": "Rated 4.8 out of 5 stars",
+        "tagline_border_width": 2,
+        "tagline_border_color": "#000000",
+        "fallback_price": "$68",
+        "fallback_compare_price": "$78",
+        "fallback_variant_id": "52483978100917",
+        "fallback_product_id": "10429585653941",
+        "gallery_fallback_asset_1": "island-escape-trio-main.jpg",
+        "gallery_fallback_asset_2": "island-escape-trio-lifestyle.jpg",
+        "gallery_fallback_asset_3": "island-swim-notes.jpg",
+        "gallery_fallback_asset_4": "paradise-nectar-notes.jpg",
+        "gallery_fallback_asset_5": "beach-skin-notes.jpg",
+        "gallery_fallback_asset_6": "island-escape-trio-editorial.jpg",
+        "gallery_alt": "Island Escape - Body Mist Trio - Phlur",
+        "gallery_badge": "NEW",
+        "layer_heading": "Layer It With",
+        "quick_add_label": "Add",
+        "details_label": "View full details"
+      }
+    },
+    "product_related_collection": {
+      "type": "product-related-collection",
+      "settings": {
+        "heading": "Body Mist Collection",
+        "collection": "body-mist",
+        "link_label": "Shop All",
+        "link": "/collections/body-mist",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "perfume-quotes": {
+      "type": "perfume-quotes",
+      "settings": {
+        "quote": "Coastal flowers kissed by citrus.",
+        "image_alt": "perfume quote"
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "blocks": {
+        "deborah": {
+          "type": "review",
+          "settings": {
+            "review_id": "a3060c09-51e7-4725-a89a-428bebe09f61",
+            "author": "Deborah",
+            "verified": false,
+            "source_badge": "Shop",
+            "product": "Father Figure Travel Size",
+            "product_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "rating": 5,
+            "date": "2 days ago",
+            "title": "5 Stars",
+            "body": "Beautiful, woody, skin like finish"
+          }
+        },
+        "michelle": {
+          "type": "review",
+          "settings": {
+            "review_id": "105e07c0-9bab-405b-af5f-6ab8acc3a96d",
+            "author": "Michelle C.",
+            "verified": true,
+            "product": "Father Figure 50mL",
+            "product_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "age": "55-64",
+            "gender": "Female",
+            "rating": 5,
+            "date": "5 days ago",
+            "title": "Looooovvvve this scent",
+            "body": "Can't explain it but, it just makes me want to keep inhaling over and over again. "
+          }
+        },
+        "marina": {
+          "type": "review",
+          "settings": {
+            "review_id": "4f92c56c-9f99-44b2-beda-237fa8ee4a96",
+            "author": "Marina M.",
+            "verified": true,
+            "product": "Father Figure Travel Size",
+            "product_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "age": "25-34",
+            "gender": "Female",
+            "rating": 5,
+            "date": "1 week ago",
+            "title": "Mhmmm",
+            "body": "One of my forever favorites. I always get so many compliments, smells wonderful and unique "
+          }
+        },
+        "cornelia": {
+          "type": "review",
+          "settings": {
+            "review_id": "7b89e6c8-142a-4cd3-a5c4-9312d8eb5cfc",
+            "author": "Cornelia",
+            "verified": false,
+            "source_badge": "Shop",
+            "product": "Father Figure Travel Size",
+            "product_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "rating": 5,
+            "date": "1 week ago",
+            "title": "5 Stars",
+            "body": "I love this unique fragrance!"
+          }
+        },
+        "jenny": {
+          "type": "review",
+          "settings": {
+            "review_id": "081d3974-b232-403e-b41a-c94cff083e51",
+            "author": "Jenny",
+            "verified": false,
+            "source_badge": "Shop",
+            "product": "Father Figure Fragrance Duet",
+            "product_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "rating": 5,
+            "date": "1 week ago",
+            "title": "5 Stars",
+            "body": "One of my most favorite scents! Reminds me of my childhood on so many levels!"
+          }
+        }
+      },
+      "block_order": [
+        "deborah",
+        "michelle",
+        "marina",
+        "cornelia",
+        "jenny"
+      ],
+      "settings": {
+        "fallback_product_id": "10227666976949",
+        "rating": "4.8",
+        "review_count": 904
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "blocks": {
+        "vanilla_canyon": {
+          "type": "product",
+          "settings": {
+            "product": "vanilla-canyon-travel-size",
+            "fallback_product_id": "10479614689461",
+            "fallback_variant_id": "52740267770037",
+            "fallback_handle": "vanilla-canyon-travel-size",
+            "fallback_title": "Vanilla Canyon",
+            "fallback_full_title": "Vanilla Canyon - Travel Size",
+            "fallback_category": "9.5mL Eau de Parfum",
+            "fallback_price": "$25.60",
+            "fallback_regular_price": "$32",
+            "price_model": "active_discount",
+            "fallback_link": "/products/vanilla-canyon-travel-size?variant=52740267770037&_rdiscovery-handle=vanilla-canyon-travel-size&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/VANILLACANYON-9.5mL-Ledge_800x800.jpg?v=1785883244",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/269_800x800.jpg?v=1785883245",
+            "fallback_tag_classes": "tag-discountapplies tag-fragrance_vanilla-canyon tag-labelnew tag-membershipgift",
+            "fallback_available": true
+          }
+        },
+        "discovery": {
+          "type": "product",
+          "settings": {
+            "product": "fragrance-discovery-set",
+            "fallback_product_id": "10406636028085",
+            "fallback_variant_id": "52408137744565",
+            "fallback_handle": "fragrance-discovery-set",
+            "fallback_title": "Discovery Set",
+            "fallback_full_title": "Fragrance Discovery Set",
+            "fallback_category": "8 x 2mL Samples",
+            "fallback_price": "$31.20",
+            "fallback_regular_price": "$39",
+            "price_model": "active_discount",
+            "fallback_link": "/products/fragrance-discovery-set?variant=52408137744565&_rdiscovery-handle=fragrance-discovery-set&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/DiscoverySetLedge_ColorBoosted_800x800.jpg?v=1775754801",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/newimage4_800x800.jpg?v=1775754801",
+            "fallback_tag_classes": "tag-discountapplies tag-final-sale tag-label20_credit tag-lto tag-lto20 tag-sample-set tag-stackable",
+            "fallback_available": true
+          }
+        },
+        "cashmere": {
+          "type": "product",
+          "settings": {
+            "product": "cashmere-skin-travel-size-body-mist",
+            "fallback_product_id": "10268048687285",
+            "fallback_variant_id": "51922995839157",
+            "fallback_handle": "cashmere-skin-travel-size-body-mist",
+            "fallback_title": "Cashmere Skin",
+            "fallback_full_title": "Cashmere Skin - Travel Size Body Mist",
+            "fallback_category": "Travel Size Body Mist",
+            "fallback_price": "$20.80",
+            "fallback_regular_price": "$26",
+            "price_model": "active_discount",
+            "fallback_link": "/products/cashmere-skin-travel-size-body-mist?variant=51922995839157&_rdiscovery-handle=cashmere-skin-travel-size-body-mist&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/CashmereSkin_3oz_Main_800x800.jpg",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/CashmereSkin_3oz_Studio_800x800.jpg",
+            "fallback_tag_classes": "tag-discountapplies tag-fragrance_cashmere-skin",
+            "fallback_available": true
+          }
+        },
+        "blackberry": {
+          "type": "product",
+          "settings": {
+            "product": "vanilla-blackberry-travel-size-body-mist",
+            "fallback_product_id": "10219909152949",
+            "fallback_variant_id": "51637725429941",
+            "fallback_handle": "vanilla-blackberry-travel-size-body-mist",
+            "fallback_title": "Vanilla Blackberry",
+            "fallback_full_title": "Vanilla Blackberry - Travel Size Body Mist",
+            "fallback_category": "Travel Size Body Mist",
+            "fallback_price": "$20.80",
+            "fallback_regular_price": "$26",
+            "price_model": "active_discount",
+            "fallback_link": "/products/vanilla-blackberry-travel-size-body-mist?variant=51637725429941&_rdiscovery-handle=vanilla-blackberry-travel-size-body-mist&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/VanillaBlackberry_3oz_Main_800x800.jpg",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/VanillaBlackberry_3oz_Studio_800x800.jpg",
+            "fallback_tag_classes": "tag-discountapplies tag-fragrance_vanilla-blackberry",
+            "fallback_available": true
+          }
+        },
+        "mrs_smith": {
+          "type": "product",
+          "settings": {
+            "product": "mrs-smith-travel-size-body-mist",
+            "fallback_product_id": "10189671563445",
+            "fallback_variant_id": "51377642897589",
+            "fallback_handle": "mrs-smith-travel-size-body-mist",
+            "fallback_title": "Mrs. Smith",
+            "fallback_full_title": "Mrs. Smith - Travel Size Body Mist",
+            "fallback_category": "Travel Size Body Mist",
+            "fallback_price": "$19",
+            "fallback_regular_price": "$26",
+            "price_model": "sale",
+            "fallback_link": "/products/mrs-smith-travel-size-body-mist?variant=51377642897589&_rdiscovery-handle=mrs-smith-travel-size-body-mist&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/MrsSmith_3oz_Main_800x800.jpg?v=1753125955",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/MrsSmith_3oz_Studio_800x800.jpg?v=1753125955",
+            "fallback_tag_classes": "tag-exclude_lto tag-farewell tag-final-sale tag-fragrance_mrs-smith tag-labelfarewell_sale",
+            "fallback_available": true
+          }
+        },
+        "endless": {
+          "type": "product",
+          "settings": {
+            "product": "island-swim-and-beach-skin-duo",
+            "fallback_product_id": "10444218433717",
+            "fallback_variant_id": "52544722829493",
+            "fallback_handle": "island-swim-and-beach-skin-duo",
+            "fallback_title": "Endless Summer",
+            "fallback_full_title": "Endless Summer - Body Mist Duo",
+            "fallback_category": "Hair & Body Mist Duo",
+            "fallback_price": "$68",
+            "fallback_regular_price": "$78",
+            "price_model": "sale",
+            "fallback_link": "/products/island-swim-and-beach-skin-duo?variant=52544722829493&_rdiscovery-handle=island-swim-and-beach-skin-duo&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Endless_Summer_Duo_-_Ledge_800x800.jpg?v=1781570028",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/island_escape_trio_800x800.jpg?v=1781722480",
+            "fallback_tag_classes": "tag-discountapplies tag-labelnew",
+            "fallback_available": true
+          }
+        },
+        "paradise": {
+          "type": "product",
+          "settings": {
+            "product": "island-paradise-body-mist-duo",
+            "fallback_product_id": "10427545190581",
+            "fallback_variant_id": "52475021197493",
+            "fallback_handle": "island-paradise-body-mist-duo",
+            "fallback_title": "Island Paradise",
+            "fallback_full_title": "Island Paradise - Body Mist Duo",
+            "fallback_category": "Hair & Body Mist Duo",
+            "fallback_price": "$68",
+            "fallback_regular_price": "$78",
+            "price_model": "sale",
+            "fallback_link": "/products/island-paradise-body-mist-duo?variant=52475021197493&_rdiscovery-handle=island-paradise-body-mist-duo&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/paradiseBerryDuo-BodyMists-Main_800x800.jpg?v=1777683813",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/VanillaNectar_PeachSkinDuo-Studio_800x800.jpg?v=1777683814",
+            "fallback_tag_classes": "tag-discountapplies tag-labelnew",
+            "fallback_available": true
+          }
+        },
+        "island_swim": {
+          "type": "product",
+          "settings": {
+            "product": "island-swim-full-size-body-mist",
+            "fallback_product_id": "10426127614133",
+            "fallback_variant_id": "52471784636597",
+            "fallback_handle": "island-swim-full-size-body-mist",
+            "fallback_title": "Island Swim",
+            "fallback_full_title": "Island Swim - Full Size Body Mist",
+            "fallback_category": "Full Size Body Mist",
+            "fallback_price": "$31.20",
+            "fallback_regular_price": "$39",
+            "price_model": "active_discount",
+            "fallback_link": "/products/island-swim-full-size-body-mist?variant=52471784636597&_rdiscovery-handle=island-swim-full-size-body-mist&_rdiscovery-widget=145779",
+            "fallback_primary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/island_swim_8oz_800x800.jpg?v=1777678523",
+            "fallback_secondary_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/IslandSwim_8oz_Studio_3f1171f5-1ba5-40d2-8d66-1e26b4c87684_800x800.jpg?v=1777678477",
+            "fallback_tag_classes": "tag-discountapplies tag-labelnew",
+            "fallback_available": true
+          }
+        }
+      },
+      "block_order": [
+        "vanilla_canyon",
+        "discovery",
+        "cashmere",
+        "blackberry",
+        "mrs_smith",
+        "endless",
+        "paradise",
+        "island_swim"
+      ],
+      "settings": {
+        "source_mode": "blocks",
+        "product_limit": 8,
+        "heading": "You May Also Like",
+        "widget_id": "145779",
+        "source_product_id": "10429585653941",
+        "padding_bottom": 60,
+        "previous_icon_asset": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Chevron-L.svg?v=1773632141",
+        "next_icon_asset": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Chevron-R.svg?v=1773632124"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "product_related_collection",
+    "perfume-quotes",
+    "product-reviews",
+    "related-products"
+  ]
+}

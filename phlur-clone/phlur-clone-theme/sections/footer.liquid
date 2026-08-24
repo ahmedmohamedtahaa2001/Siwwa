@@ -1,0 +1,128 @@
+{{ 'phlur-footer.css' | asset_url | stylesheet_tag }}<script src="{{ 'phlur-footer.js' | asset_url }}" defer="defer"></script>
+{% style %}#shopify-section-{{ section.id }} [data-phlur-footer]{--footer-background:{{ section.settings.background_color }};--footer-heading-color:{{ section.settings.heading_color }};--footer-link-color:{{ section.settings.text_color }};--footer-link-hover-color:{{ section.settings.link_hover_color }};--footer-copyright-color:{{ section.settings.copyright_color }};--footer-focus-color:{{ section.settings.focus_color }};--footer-input-border-color:{{ section.settings.input_border_color }};--footer-popup-border-color:{{ section.settings.popup_border_color }};--footer-overlay-color:{{ section.settings.overlay_color }};--footer-font-family:{{ section.settings.font_family }};--footer-font-weight:{{ section.settings.font_weight }};--footer-page-width:{{ section.settings.page_width }}px;--footer-height-desktop:{{ section.settings.height_desktop }}px;--footer-height-tablet:{{ section.settings.height_tablet }}px;--footer-height-mobile:{{ section.settings.height_mobile }}px;--footer-margin-desktop:{{ section.settings.margin_top }}px;--footer-margin-tablet:{{ section.settings.margin_top_tablet }}px;--footer-margin-mobile:{{ section.settings.margin_top_mobile }}px;--footer-padding-top-desktop:{{ section.settings.padding_top }}px;--footer-padding-top-tablet:{{ section.settings.padding_top_tablet }}px;--footer-padding-top-mobile:{{ section.settings.padding_top_mobile }}px;--footer-gutter-desktop:{{ section.settings.gutter_desktop }}px;--footer-gutter-tablet:{{ section.settings.gutter_tablet }}px;--footer-gutter-mobile:{{ section.settings.gutter_mobile }}px;--footer-column-gap:{{ section.settings.column_gap }}px;--footer-column-gap-mobile:{{ section.settings.column_gap_mobile }}px;--footer-row-gap:{{ section.settings.row_gap }}px;--footer-row-gap-mobile:{{ section.settings.row_gap_mobile }}px;--footer-content-bottom-space:{{ section.settings.content_bottom_space }}px;--footer-content-bottom-space-mobile:{{ section.settings.content_bottom_space_mobile }}px;--footer-heading-size-desktop:{{ section.settings.heading_size }}px;--footer-heading-size-mobile:{{ section.settings.heading_size_mobile }}px;--footer-heading-line-height-desktop:{{ section.settings.heading_line_height }}px;--footer-heading-line-height-mobile:{{ section.settings.heading_line_height_mobile }}px;--footer-heading-gap:{{ section.settings.heading_gap }}px;--footer-heading-gap-mobile:{{ section.settings.heading_gap_mobile }}px;--footer-link-size-desktop:{{ section.settings.link_size }}px;--footer-link-size-mobile:{{ section.settings.link_size_mobile }}px;--footer-line-height-desktop:{{ section.settings.link_line_height }}px;--footer-line-height-mobile:{{ section.settings.link_line_height_mobile }}px;--footer-link-gap:{{ section.settings.link_gap }}px;--footer-link-gap-mobile:{{ section.settings.link_gap_mobile }}px;--footer-newsletter-width:{{ section.settings.newsletter_width }}px;--footer-newsletter-gap:{{ section.settings.newsletter_gap }}px;--footer-input-height:{{ section.settings.input_height }}px;--footer-input-padding:{{ section.settings.input_padding }}px;--footer-input-border-width:{{ section.settings.input_border_width }}px;--footer-submit-gap:{{ section.settings.submit_gap }}px;--footer-message-gap:{{ section.settings.message_gap }}px;--footer-bottom-offset:{{ section.settings.bottom_offset }}px;--footer-bottom-padding-top:{{ section.settings.bottom_padding_top }}px;--footer-bottom-padding-top-mobile:{{ section.settings.bottom_padding_top_mobile }}px;--footer-localization-height:{{ section.settings.localization_height }}px;--footer-localization-size:{{ section.settings.localization_size }}px;--footer-localization-weight:{{ section.settings.localization_weight }};--footer-localization-line-height:{{ section.settings.localization_line_height }}px;--footer-globe-size:{{ section.settings.globe_size }}px;--footer-globe-gap:{{ section.settings.globe_gap }}px;--footer-caret-width:{{ section.settings.caret_width }}px;--footer-caret-height:{{ section.settings.caret_height }}px;--footer-caret-gap:{{ section.settings.caret_gap }}px;--footer-transition-duration:{{ section.settings.transition_duration }}ms;--footer-popup-gap:{{ section.settings.popup_gap }}px;--footer-popup-width:{{ section.settings.popup_width }}px;--footer-popup-max-height:{{ section.settings.popup_max_height }}px;--footer-popup-mobile-height:{{ section.settings.popup_mobile_height }}vh;--footer-popup-padding:{{ section.settings.popup_padding }}px;--footer-popup-border-width:{{ section.settings.popup_border_width }}px;--footer-popup-title-gap:{{ section.settings.popup_title_gap }}px;--footer-popup-close-offset:{{ section.settings.popup_close_offset }}px;--footer-popup-close-size:{{ section.settings.popup_close_size }}px;--footer-popup-close-size-mobile:{{ section.settings.popup_close_size_mobile }}px;--footer-country-padding:{{ section.settings.country_padding }}px;--footer-copyright-size-desktop:{{ section.settings.copyright_size }}px;--footer-copyright-size-mobile:{{ section.settings.copyright_size_mobile }}px;--footer-copyright-line-height-desktop:{{ section.settings.copyright_line_height }}px;--footer-copyright-line-height-mobile:{{ section.settings.copyright_line_height_mobile }}px;--footer-copyright-letter-spacing:{{ section.settings.copyright_letter_spacing }}px;--footer-copyright-gap-mobile:{{ section.settings.copyright_gap_mobile }}px;--footer-focus-width:{{ section.settings.focus_width }}px;--footer-focus-offset:{{ section.settings.focus_offset }}px}{% endstyle %}
+<footer class="footer color-scheme-1 gradient section-{{ section.id }}-padding" data-phlur-footer><div class="footer__content-top page-width"><div class="container-padding"><div class="footer__blocks-wrapper grid grid--2-col-tablet-down grid--4-col-tablet grid--5-col-desktop scroll-trigger animate--slide-in" data-cascade>
+{%- for block in section.blocks -%}{%- case block.type -%}{%- when 'menu' -%}<div class="footer-block grid__item footer-block--menu scroll-trigger animate--slide-in" data-cascade style="--animation-order:{{ forloop.index }}" {{ block.shopify_attributes }}><h2 class="footer-block__heading inline-richtext">{{ block.settings.heading | default: 'Collections' | escape }}</h2><ul class="footer-block__details-content list-unstyled">
+{%- if block.settings.menu != blank and block.settings.menu.links.size > 0 -%}{%- for link in block.settings.menu.links -%}<li><a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link">{{ link.title | escape }}</a></li>{%- endfor -%}{%- else -%}{%- case block.settings.heading -%}
+{%- when 'Categories' -%}<li><a href="{{ collections.perfumes.url | default: routes.all_products_collection_url }}">Perfumes</a></li><li><a href="{{ collections['for-her'].url | default: routes.all_products_collection_url }}">For Her</a></li><li><a href="{{ collections['for-him'].url | default: routes.all_products_collection_url }}">For Him</a></li><li><a href="{{ collections['new-drops'].url | default: routes.all_products_collection_url }}">New Drops</a></li>
+{%- when 'Customer Care' -%}{% if pages.contact != blank %}<li><a href="{{ pages.contact.url }}">Contact</a></li>{% endif %}<li><a href="{{ routes.search_url }}">Search</a></li><li><a href="{{ routes.cart_url }}">Cart</a></li>{% if shop.customer_accounts_enabled %}<li><a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}">Account</a></li>{% endif %}{% if shop.shipping_policy != blank %}<li><a href="{{ shop.shipping_policy.url }}">Shipping Policy</a></li>{% endif %}{% if shop.refund_policy != blank %}<li><a href="{{ shop.refund_policy.url }}">Refund Policy</a></li>{% endif %}{% if shop.terms_of_service != blank %}<li><a href="{{ shop.terms_of_service.url }}">Terms of Service</a></li>{% endif %}{% if shop.privacy_policy != blank %}<li><a href="{{ shop.privacy_policy.url }}">Privacy Policy</a></li>{% endif %}
+{%- when 'Our Story' -%}<li><a href="{{ routes.root_url }}">Home</a></li><li><a href="{{ routes.all_products_collection_url }}">Shop All</a></li><li><a href="{{ routes.collections_url }}">Collections</a></li>{% if pages.contact != blank %}<li><a href="{{ pages.contact.url }}">Contact</a></li>{% endif %}
+{%- else -%}<li><a href="{{ routes.all_products_collection_url }}">Shop All</a></li><li><a href="{{ collections['best-sellers'].url | default: routes.all_products_collection_url }}">Best Sellers</a></li><li><a href="{{ collections.perfumes.url | default: routes.all_products_collection_url }}">Perfumes</a></li><li><a href="{{ collections['summer-collection'].url | default: routes.all_products_collection_url }}">Summer Collection</a></li>{%- endcase -%}{%- endif -%}</ul></div>
+{%- when 'newsletter' -%}<div class="footer-block grid__item footer-block--newsletter scroll-trigger animate--slide-in" data-cascade style="--animation-order:{{ forloop.index }}" {{ block.shopify_attributes }}><h2 class="footer-block__heading rte">{{ block.settings.heading | escape }}</h2><div class="footer-block__newsletter-copy">{{ block.settings.text }}</div>{% if block.settings.show_form %}{% form 'customer', class: 'footer-newsletter-form' %}<input type="hidden" name="contact[tags]" value="newsletter"><label class="visually-hidden" for="FooterEmail-{{ section.id }}">{{ block.settings.email_label | escape }}</label><input id="FooterEmail-{{ section.id }}" type="email" name="contact[email]" value="{{ form.email }}" autocomplete="email" placeholder="{{ block.settings.email_placeholder | escape }}" required><button type="submit">{{ block.settings.submit_label | escape }}</button>{% if form.errors %}<small class="footer-newsletter-form__message" role="alert">{{ form.errors.messages.email }}</small>{% endif %}{% if form.posted_successfully? %}<small class="footer-newsletter-form__message">{{ 'newsletter.success' | t }}</small>{% endif %}{% endform %}{% endif %}</div>{%- endcase -%}{%- endfor -%}
+</div></div></div><div class="footer__content-bottom scroll-trigger animate--slide-in" data-cascade><div class="footer__content-bottom-wrapper page-width"><div class="container-padding">
+{% if section.settings.show_localization %}<div class="footer__column footer__localization isolate">{% form 'localization', id: 'FooterCountryForm', class: 'localization-form' %}<div class="disclosure"><button type="button" class="disclosure__button localization-form__select localization-selector link link--text caption-large" aria-expanded="false" aria-controls="FooterCountry-country-results" data-localization-toggle><img src="{{ 'phlur-globe.svg' | asset_url }}" alt="Localization Icon" width="16" height="16"><span class="country">{{ localization.country.name | default: 'United States' }}</span><span>&nbsp;&nbsp;·&nbsp;&nbsp;</span><span>{{ localization.country.currency.iso_code | default: 'USD' }}{{ localization.country.currency.symbol | default: '$' }}</span><span class="languages">&nbsp;&nbsp;·&nbsp;&nbsp;{{ localization.language.endonym_name | default: 'English' | capitalize }}</span>{% render 'icon-chevron' %}</button><div class="disclosure__list-wrapper country-selector" hidden data-localization-list><button class="country-selector__close-button" type="button" aria-label="Close" data-localization-close><svg aria-hidden="true" viewBox="0 0 18 17"><path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor"/></svg></button><h3 class="location-title">Location Settings</h3><ul role="list" class="list-unstyled countries">{% for country in localization.available_countries %}<li class="disclosure__item"><button type="submit" name="country_code" value="{{ country.iso_code }}" class="disclosure__link"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %}>{{ country.name }}&nbsp;&nbsp;·&nbsp;&nbsp;{{ country.currency.iso_code }}{{ country.currency.symbol }}</button></li>{% else %}<li><span class="disclosure__link">United States&nbsp;&nbsp;·&nbsp;&nbsp;USD$&nbsp;&nbsp;·&nbsp;&nbsp;English</span></li><li><span class="disclosure__link">Canada&nbsp;&nbsp;·&nbsp;&nbsp;CAD$&nbsp;&nbsp;·&nbsp;&nbsp;English</span></li><li><span class="disclosure__link">Canada&nbsp;&nbsp;·&nbsp;&nbsp;CAD$&nbsp;&nbsp;·&nbsp;&nbsp;French</span></li>{% endfor %}</ul></div><div class="country-selector__overlay" data-localization-close></div></div>{% endform %}</div>{% endif %}
+{% if section.settings.show_copyright %}{% assign footer_year = 'now' | date: '%Y' %}<div class="footer__copyright caption"><small class="copyright__content">{{ section.settings.copyright_text | replace: '[year]', footer_year | escape }}</small></div>{% endif %}</div></div></div></footer>
+{% schema %}
+{
+  "name": "Footer",
+  "max_blocks": 5,
+  "settings": [
+    { "type": "header", "content": "Content" },
+    { "type": "checkbox", "id": "show_localization", "label": "Show localization", "default": true },
+    { "type": "checkbox", "id": "show_copyright", "label": "Show copyright", "default": true },
+    { "type": "text", "id": "copyright_text", "label": "Copyright text; use [year] for year", "default": "©[year] Phlur – All rights reserved." },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#f5f5f5" },
+    { "type": "color", "id": "heading_color", "label": "Headings", "default": "#808080" },
+    { "type": "color", "id": "text_color", "label": "Links and text", "default": "#000000" },
+    { "type": "color", "id": "link_hover_color", "label": "Link hover", "default": "#000000" },
+    { "type": "color", "id": "copyright_color", "label": "Copyright", "default": "#808080" },
+    { "type": "color", "id": "focus_color", "label": "Focus outline", "default": "#000000" },
+    { "type": "color", "id": "input_border_color", "label": "Input underline", "default": "#000000" },
+    { "type": "color", "id": "popup_border_color", "label": "Location popup border", "default": "#000000" },
+    { "type": "color", "id": "overlay_color", "label": "Mobile overlay", "default": "#00000080" },
+    { "type": "header", "content": "Typography" },
+    { "type": "text", "id": "font_family", "label": "Font family", "default": "ABCRepro-Regular, sans-serif" },
+    { "type": "number", "id": "font_weight", "label": "Font weight", "default": 400 },
+    { "type": "number", "id": "heading_size", "label": "Heading size desktop", "default": 14 },
+    { "type": "number", "id": "heading_size_mobile", "label": "Heading size mobile", "default": 13 },
+    { "type": "number", "id": "heading_line_height", "label": "Heading line height desktop", "default": 21 },
+    { "type": "number", "id": "heading_line_height_mobile", "label": "Heading line height mobile", "default": 21 },
+    { "type": "number", "id": "link_size", "label": "Link size desktop", "default": 14 },
+    { "type": "number", "id": "link_size_mobile", "label": "Link size mobile", "default": 13 },
+    { "type": "number", "id": "link_line_height", "label": "Link line height desktop", "default": 21 },
+    { "type": "number", "id": "link_line_height_mobile", "label": "Link line height mobile", "default": 21 },
+    { "type": "header", "content": "Desktop layout" },
+    { "type": "number", "id": "page_width", "label": "Maximum page width", "default": 2000 },
+    { "type": "number", "id": "height_desktop", "label": "Minimum footer height", "default": 489 },
+    { "type": "number", "id": "margin_top", "label": "Top margin", "default": 60 },
+    { "type": "number", "id": "padding_top", "label": "Top padding", "default": 36 },
+    { "type": "number", "id": "gutter_desktop", "label": "Horizontal gutter", "default": 80 },
+    { "type": "number", "id": "column_gap", "label": "Column gap", "default": 20 },
+    { "type": "number", "id": "row_gap", "label": "Row gap", "default": 60 },
+    { "type": "number", "id": "content_bottom_space", "label": "Top content bottom space", "default": 36 },
+    { "type": "number", "id": "heading_gap", "label": "Heading to links", "default": 16 },
+    { "type": "number", "id": "link_gap", "label": "Link row gap", "default": 8 },
+    { "type": "number", "id": "bottom_offset", "label": "Bottom row offset", "default": 36 },
+    { "type": "number", "id": "bottom_padding_top", "label": "Bottom row top padding", "default": 48 },
+    { "type": "header", "content": "Tablet and mobile layout" },
+    { "type": "number", "id": "height_tablet", "label": "Tablet minimum height", "default": 908 },
+    { "type": "number", "id": "height_mobile", "label": "Mobile minimum height", "default": 908 },
+    { "type": "number", "id": "margin_top_tablet", "label": "Tablet top margin", "default": 40 },
+    { "type": "number", "id": "margin_top_mobile", "label": "Mobile top margin", "default": 36 },
+    { "type": "number", "id": "padding_top_tablet", "label": "Tablet top padding", "default": 36 },
+    { "type": "number", "id": "padding_top_mobile", "label": "Mobile top padding", "default": 27 },
+    { "type": "number", "id": "gutter_tablet", "label": "Tablet horizontal gutter", "default": 40 },
+    { "type": "number", "id": "gutter_mobile", "label": "Mobile horizontal gutter", "default": 20 },
+    { "type": "number", "id": "column_gap_mobile", "label": "Mobile column gap", "default": 10 },
+    { "type": "number", "id": "row_gap_mobile", "label": "Mobile row gap", "default": 48 },
+    { "type": "number", "id": "content_bottom_space_mobile", "label": "Mobile top content bottom space", "default": 120 },
+    { "type": "number", "id": "heading_gap_mobile", "label": "Mobile heading to links", "default": 10 },
+    { "type": "number", "id": "link_gap_mobile", "label": "Mobile link row gap", "default": 4 },
+    { "type": "number", "id": "bottom_padding_top_mobile", "label": "Mobile bottom row top padding", "default": 0 },
+    { "type": "header", "content": "Newsletter form" },
+    { "type": "number", "id": "newsletter_width", "label": "Maximum form width", "default": 300 },
+    { "type": "number", "id": "newsletter_gap", "label": "Form top gap", "default": 10 },
+    { "type": "number", "id": "input_height", "label": "Input height", "default": 29 },
+    { "type": "number", "id": "input_padding", "label": "Input vertical padding", "default": 4 },
+    { "type": "number", "id": "input_border_width", "label": "Input underline width", "default": 1 },
+    { "type": "number", "id": "submit_gap", "label": "Submit left gap", "default": 12 },
+    { "type": "number", "id": "message_gap", "label": "Form message gap", "default": 8 },
+    { "type": "header", "content": "Localization" },
+    { "type": "number", "id": "localization_height", "label": "Control height", "default": 42 },
+    { "type": "number", "id": "localization_size", "label": "Control font size", "default": 14 },
+    { "type": "number", "id": "localization_weight", "label": "Control font weight", "default": 500 },
+    { "type": "number", "id": "localization_line_height", "label": "Control line height", "default": 21 },
+    { "type": "number", "id": "globe_size", "label": "Globe size", "default": 14 },
+    { "type": "number", "id": "globe_gap", "label": "Globe gap", "default": 7 },
+    { "type": "number", "id": "caret_width", "label": "Caret width", "default": 9 },
+    { "type": "number", "id": "caret_height", "label": "Caret height", "default": 5 },
+    { "type": "number", "id": "caret_gap", "label": "Caret gap", "default": 8 },
+    { "type": "number", "id": "transition_duration", "label": "Caret transition ms", "default": 200 },
+    { "type": "number", "id": "popup_gap", "label": "Popup control gap", "default": 8 },
+    { "type": "number", "id": "popup_width", "label": "Popup width", "default": 420 },
+    { "type": "number", "id": "popup_max_height", "label": "Popup maximum height", "default": 460 },
+    { "type": "number", "id": "popup_mobile_height", "label": "Mobile popup height (vh)", "default": 80 },
+    { "type": "number", "id": "popup_padding", "label": "Popup padding", "default": 24 },
+    { "type": "number", "id": "popup_border_width", "label": "Popup border width", "default": 1 },
+    { "type": "number", "id": "popup_title_gap", "label": "Popup title gap", "default": 16 },
+    { "type": "number", "id": "popup_close_offset", "label": "Popup close offset", "default": 14 },
+    { "type": "number", "id": "popup_close_size", "label": "Popup close size", "default": 18 },
+    { "type": "number", "id": "popup_close_size_mobile", "label": "Mobile popup close size", "default": 44 },
+    { "type": "number", "id": "country_padding", "label": "Country row padding", "default": 8 },
+    { "type": "header", "content": "Copyright and focus" },
+    { "type": "number", "id": "copyright_size", "label": "Copyright size desktop", "default": 12 },
+    { "type": "number", "id": "copyright_size_mobile", "label": "Copyright size mobile", "default": 13 },
+    { "type": "number", "id": "copyright_line_height", "label": "Copyright line height desktop", "default": 40 },
+    { "type": "number", "id": "copyright_line_height_mobile", "label": "Copyright line height mobile", "default": 13 },
+    { "type": "number", "id": "copyright_letter_spacing", "label": "Copyright letter spacing", "default": 0.7 },
+    { "type": "number", "id": "copyright_gap_mobile", "label": "Mobile copyright top gap", "default": 48 },
+    { "type": "number", "id": "focus_width", "label": "Focus outline width", "default": 2 },
+    { "type": "number", "id": "focus_offset", "label": "Focus outline offset", "default": 2 }
+  ],
+  "blocks": [
+    { "type": "menu", "name": "Menu column", "settings": [
+      { "type": "text", "id": "heading", "label": "Heading", "default": "Collections" },
+      { "type": "link_list", "id": "menu", "label": "Menu" }
+    ] },
+    { "type": "newsletter", "name": "Subscribe", "limit": 1, "settings": [
+      { "type": "text", "id": "heading", "label": "Heading", "default": "Subscribe" },
+      { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Sign up for 10% off your first order</p>" },
+      { "type": "checkbox", "id": "show_form", "label": "Show email form", "default": false },
+      { "type": "text", "id": "email_label", "label": "Email label", "default": "Email" },
+      { "type": "text", "id": "email_placeholder", "label": "Email placeholder", "default": "Email" },
+      { "type": "text", "id": "submit_label", "label": "Button label", "default": "Join" }
+    ] }
+  ],
+  "presets": [{ "name": "Footer", "blocks": [{ "type": "menu" }, { "type": "menu" }, { "type": "menu" }, { "type": "menu" }, { "type": "newsletter" }] }]
+}
+{% endschema %}

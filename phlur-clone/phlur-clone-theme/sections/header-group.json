@@ -1,0 +1,54 @@
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "show_announcement": true,
+        "enable_autoplay": true,
+        "autoplay_speed": 4,
+        "background_color": "#5d442a",
+        "text_color": "#fdfbef",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      },
+      "blocks": {
+        "vanilla-canyon": { "type": "announcement", "settings": { "desktop_text": "Introducing Vanilla Canyon →", "mobile_text": "Introducing Vanilla Canyon →", "link": "shopify://products/vanilla-canyon-50ml" } },
+        "member-gift": { "type": "announcement", "settings": { "desktop_text": "Members: Free gift with Vanilla Canyon →", "mobile_text": "Members: Free gift with Vanilla Canyon →", "link": "shopify://products/vanilla-canyon-50ml" } },
+        "free-shipping": { "type": "announcement", "settings": { "desktop_text": "Free shipping on orders $50+", "mobile_text": "Free shipping on orders $50+", "link": "shopify://collections/all" } }
+      }
+      ,"block_order": ["vanilla-canyon", "member-gift", "free-shipping"]
+    },
+    "header": {
+      "type": "header",
+      "settings": { "wordmark": "PHLUR", "shop_label": "Shop", "enable_sticky": true, "background_color": "#ffffff", "text_color": "#000000", "header_height": 56, "padding_top": 0, "padding_bottom": 0, "mobile_padding_top": 0, "mobile_padding_bottom": 0, "popular_searches_heading": "Popular Searches", "popular_icon_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Glass.svg?v=1785720242", "trending_products_heading": "Trending Products" },
+      "blocks": {
+        "column-shop": { "type": "menu_column", "settings": { "column_id": "shop", "heading": "Shop", "heading_link": "shopify://collections/all" } },
+        "shop-all": { "type": "shop_link", "settings": { "column": "shop", "label": "Shop All", "link": "shopify://collections/all" } },
+        "shop-new": { "type": "shop_link", "settings": { "column": "shop", "label": "Best Sellers", "link": "shopify://collections/best-sellers" } },
+        "shop-perfume": { "type": "shop_link", "settings": { "column": "shop", "label": "Perfume", "link": "shopify://collections/perfumes" } },
+        "shop-mist": { "type": "shop_link", "settings": { "column": "shop", "label": "For Her", "link": "shopify://collections/for-her" } },
+        "shop-body-care": { "type": "shop_link", "settings": { "column": "shop", "label": "For Him", "link": "shopify://collections/for-him" } },
+        "shop-gifts": { "type": "shop_link", "settings": { "column": "shop", "label": "New Drops", "link": "shopify://collections/new-drops" } },
+        "shop-farewell": { "type": "shop_link", "settings": { "column": "shop", "label": "Summer Collection", "link": "shopify://collections/summer-collection" } },
+        "featured-mini-set": { "type": "featured_card", "settings": { "label": "Vanilla Canyon", "link": "shopify://products/vanilla-canyon-50ml", "image_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/HCS_391c34f2-b4e3-48b5-8ab4-675200005fc1.jpg?v=1777325341", "image_alt": "Vanilla Canyon" } },
+        "featured-discovery": { "type": "featured_card", "settings": { "label": "Shop All", "link": "shopify://collections/all", "image_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/DiscoverySetLedge_ColorBoosted.jpg?v=1775754801", "image_alt": "Shop all products" } },
+        "popular-missing-person": { "type": "popular_search", "settings": { "label": "Best Sellers", "link": "shopify://collections/best-sellers" } },
+        "popular-vanilla-skin": { "type": "popular_search", "settings": { "label": "Perfumes", "link": "shopify://collections/perfumes" } },
+        "popular-father-figure": { "type": "popular_search", "settings": { "label": "For Her", "link": "shopify://collections/for-her" } },
+        "popular-beach-skin": { "type": "popular_search", "settings": { "label": "For Him", "link": "shopify://collections/for-him" } },
+        "trending-mini-set": { "type": "trending_product", "settings": { "title": "Mini Perfume Set", "subtitle": "4 x 7mL Eau de Parfum", "link": "shopify://products/coffret-mini-perfume-set", "image_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/HCS_391c34f2-b4e3-48b5-8ab4-675200005fc1.jpg?v=1777325341&width=80", "image_alt": "Mini Coffret - Perfume Set - Phlur" } },
+        "trending-vanilla-cream": { "type": "trending_product", "settings": { "title": "Vanilla & Cream", "subtitle": "Hair & Body Mist Duo", "link": "shopify://products/vanilla-cream-duo-body-mists", "image_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Vanilla_CreamDuo-BodyMists.jpg?v=1735324623&width=80", "image_alt": "vanilla-and-cream-body-mist-duo" } },
+        "trending-discovery-set": { "type": "trending_product", "settings": { "title": "Discovery Set", "subtitle": "8 x 2mL Samples", "link": "shopify://products/fragrance-discovery-set", "image_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/DiscoverySetLedge_ColorBoosted.jpg?v=1775754801&width=80", "image_alt": "Fragrance Discovery Set - Phlur" } }
+      },
+      "block_order": ["column-shop", "shop-all", "shop-new", "shop-perfume", "shop-mist", "shop-body-care", "shop-gifts", "shop-farewell", "featured-mini-set", "featured-discovery", "popular-missing-person", "popular-vanilla-skin", "popular-father-figure", "popular-beach-skin", "trending-mini-set", "trending-vanilla-cream", "trending-discovery-set"]
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

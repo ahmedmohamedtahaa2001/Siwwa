@@ -1,0 +1,83 @@
+{{ 'announcement-bar.css' | asset_url | stylesheet_tag }}
+{% style %}
+  #shopify-section-{{ section.id }} .utility-bar {
+    --announcement-bg: {{ section.settings.background_color }};
+    --announcement-text: {{ section.settings.text_color }};
+    --announcement-height: {{ section.settings.bar_height }}px;
+    --announcement-mobile-height: {{ section.settings.mobile_bar_height }}px;
+    --announcement-transition: {{ section.settings.transition_duration }}s;
+    --announcement-max-width: {{ section.settings.section_max_width }}px;
+    --announcement-padding-top: {{ section.settings.padding_top }}px;
+    --announcement-padding-right: {{ section.settings.padding_right }}px;
+    --announcement-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --announcement-padding-left: {{ section.settings.padding_left }}px;
+    --announcement-mobile-padding-top: {{ section.settings.mobile_padding_top }}px;
+    --announcement-mobile-padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    --announcement-mobile-padding-horizontal: {{ section.settings.mobile_padding_horizontal }}px;
+    --announcement-font-family: 'ABCReproMono-Medium', monospace;
+    --announcement-font-size: {{ section.settings.font_size }}px;
+    --announcement-mobile-font-size: {{ section.settings.mobile_font_size }}px;
+    --announcement-font-weight: {{ section.settings.font_weight }};
+    --announcement-letter-spacing: {{ section.settings.letter_spacing }}px;
+    --announcement-text-transform: {{ section.settings.text_transform }};
+    --announcement-icon-size: {{ section.settings.icon_size }}px;
+  }
+{% endstyle %}
+{%- if section.settings.show_announcement and section.blocks.size > 0 -%}
+  <div class="utility-bar" style="background-image: none; background-color: {{ section.settings.background_color }}; --announcement-text: {{ section.settings.text_color }};" data-announcement-bar data-autoplay="{{ section.settings.enable_autoplay }}" data-speed="{{ section.settings.autoplay_speed | times: 1000 }}">
+    <div class="page-width utility-bar__grid">
+      <div class="container-padding"><slideshow-component class="announcement-bar" role="region" aria-roledescription="{{ section.settings.carousel_label | escape }}" aria-label="{{ section.settings.accessibility_label | escape }}">
+        <div class="announcement-bar-slider slider-buttons">
+          {%- if section.blocks.size > 1 -%}<button type="button" class="slider-button slider-button--prev" name="previous" data-announcement-previous aria-label="{{ section.settings.previous_label | escape }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-announcement-caret' %}</button>{%- endif -%}
+          <div class="grid grid--1-col slider slider--everywhere" id="Slider-{{ section.id }}" aria-live="off" aria-atomic="true" data-autoplay="{{ section.settings.enable_autoplay }}" data-speed="{{ section.settings.autoplay_speed }}">
+            {%- for block in section.blocks -%}<div class="slideshow__slide slider__slide grid__item grid--1-col{% if forloop.first %} is-active{% endif %}" id="Slide-{{ section.id }}-{{ forloop.index }}" data-announcement-slide role="group" aria-roledescription="Announcement" aria-label="{{ forloop.index }} of {{ section.blocks.size }}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}" style="--slide-bg: {{ section.settings.background_color }}; --slide-text: {{ section.settings.text_color }};"{% unless forloop.first %} tabindex="-1"{% endunless %} {{ block.shopify_attributes }}><div class="announcement-bar__announcement" role="region" aria-label="Announcement">{%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset"{% unless forloop.first %} tabindex="-1"{% endunless %}><p class="announcement-bar__message h5"><span class="desktop">{{ block.settings.desktop_text | default: 'Free shipping on orders $50+' | escape }}</span><span class="mobile">{{ block.settings.mobile_text | default: block.settings.desktop_text | default: 'Free shipping on orders $50+' | escape }}</span></p></a>{%- else -%}<p class="announcement-bar__message h5"><span class="desktop">{{ block.settings.desktop_text | default: 'Free shipping on orders $50+' | escape }}</span><span class="mobile">{{ block.settings.mobile_text | default: block.settings.desktop_text | default: 'Free shipping on orders $50+' | escape }}</span></p>{%- endif -%}</div></div>{%- endfor -%}
+          </div>
+          {%- if section.blocks.size > 1 -%}<button type="button" class="slider-button slider-button--next" name="next" data-announcement-next aria-label="{{ section.settings.next_label | escape }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-announcement-caret' %}</button>{%- endif -%}
+        </div>
+      </slideshow-component></div>
+    </div>
+  </div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Announcement bar", "max_blocks": 5,
+  "settings": [
+    { "type": "header", "content": "Content & behavior" },
+    { "type": "checkbox", "id": "show_announcement", "label": "Show announcement", "default": true },
+    { "type": "checkbox", "id": "enable_autoplay", "label": "Rotate announcements", "default": true },
+    { "type": "range", "id": "autoplay_speed", "label": "Rotation interval", "min": 2, "max": 10, "step": 1, "unit": "s", "default": 4 },
+    { "type": "text", "id": "accessibility_label", "label": "Accessibility label", "default": "Announcement bar" },
+    { "type": "text", "id": "carousel_label", "label": "Carousel role description", "default": "Carousel" },
+    { "type": "text", "id": "previous_label", "label": "Previous button label", "default": "Previous announcement" },
+    { "type": "text", "id": "next_label", "label": "Next button label", "default": "Next announcement" },
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#5d442a" },
+    { "type": "color", "id": "text_color", "label": "Text and icon", "default": "#fdfbef" },
+    { "type": "range", "id": "bar_height", "label": "Bar height", "min": 28, "max": 64, "step": 2, "unit": "px", "default": 36 },
+    { "type": "range", "id": "mobile_bar_height", "label": "Mobile bar height", "min": 24, "max": 52, "step": 2, "unit": "px", "default": 36 },
+    { "type": "select", "id": "font_weight", "label": "Message weight", "options": [{ "value": "400", "label": "Regular" }, { "value": "600", "label": "Semibold" }], "default": "400" },
+    { "type": "select", "id": "text_transform", "label": "Text transform", "options": [{ "value": "none", "label": "None" }, { "value": "uppercase", "label": "Uppercase" }], "default": "none" },
+    { "type": "range", "id": "font_size", "label": "Text size", "min": 10, "max": 20, "step": 1, "unit": "px", "default": 12 },
+    { "type": "range", "id": "mobile_font_size", "label": "Mobile text size", "min": 9, "max": 18, "step": 1, "unit": "px", "default": 10 },
+    { "type": "range", "id": "letter_spacing", "label": "Letter spacing", "min": 0, "max": 4, "step": 0.1, "unit": "px", "default": 0 },
+    { "type": "range", "id": "transition_duration", "label": "Color transition", "min": 0, "max": 2, "step": 0.1, "unit": "s", "default": 0.6 },
+    { "type": "range", "id": "icon_size", "label": "Arrow size", "min": 8, "max": 24, "step": 2, "unit": "px", "default": 10 },
+    { "type": "range", "id": "icon_stroke_width", "label": "Arrow stroke", "min": 1, "max": 3, "step": 0.5, "default": 1 },
+    { "type": "header", "content": "Layout & Spacing" },
+    { "type": "range", "id": "padding_top", "label": "Padding top (desktop)", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom (desktop)", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding_left", "label": "Padding left (desktop)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 20 },
+    { "type": "range", "id": "padding_right", "label": "Padding right (desktop)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 20 },
+    { "type": "range", "id": "margin_top", "label": "Margin top", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "margin_bottom", "label": "Margin bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "section_max_width", "label": "Max width", "min": 800, "max": 1920, "step": 40, "unit": "px", "default": 1440 },
+    { "type": "range", "id": "item_gap", "label": "Gap between items", "min": 0, "max": 80, "step": 4, "unit": "px", "default": 24 },
+    { "type": "header", "content": "Mobile Spacing" },
+    { "type": "range", "id": "mobile_padding_top", "label": "Padding top (mobile)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "mobile_padding_bottom", "label": "Padding bottom (mobile)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "mobile_padding_horizontal", "label": "Horizontal padding (mobile)", "min": 0, "max": 60, "step": 4, "unit": "px", "default": 16 }
+  ],
+  "blocks": [{ "type": "announcement", "name": "Announcement", "settings": [{ "type": "text", "id": "desktop_text", "label": "Desktop text", "default": "Free shipping on orders $50+" }, { "type": "text", "id": "mobile_text", "label": "Mobile text", "default": "Free shipping on orders $50+" }, { "type": "url", "id": "link", "label": "Link" }] }],
+  "presets": [{ "name": "Announcement bar", "blocks": [{ "type": "announcement" }] }]
+}
+{% endschema %}

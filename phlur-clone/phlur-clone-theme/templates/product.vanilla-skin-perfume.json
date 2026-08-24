@@ -1,0 +1,517 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "product-breadcrumbs",
+      "blocks": {
+        "all": {
+          "type": "crumb",
+          "settings": {
+            "label": "Shop All",
+            "link": "/collections/all"
+          }
+        },
+        "perfume": {
+          "type": "crumb",
+          "settings": {
+            "label": "Perfume",
+            "link": "/collections/perfume"
+          }
+        },
+        "vanilla": {
+          "type": "crumb",
+          "settings": {
+            "label": "Vanilla Skin",
+            "link": "/collections/vanilla-skin"
+          }
+        }
+      },
+      "block_order": [
+        "all",
+        "perfume",
+        "vanilla"
+      ],
+      "settings": {
+        "aria_label": "breadcrumbs"
+      }
+    },
+    "main": {
+      "type": "product-main",
+      "blocks": {
+        "size_100": {
+          "type": "variant_link",
+          "settings": {
+            "label": "100mL",
+            "link": "/products/vanilla-skin-100ml",
+            "active": false,
+            "available": true
+          }
+        },
+        "size_50": {
+          "type": "variant_link",
+          "settings": {
+            "label": "50mL",
+            "link": "/products/vanilla-skin-perfume",
+            "active": true,
+            "available": true
+          }
+        },
+        "size_travel": {
+          "type": "variant_link",
+          "settings": {
+            "label": "9.5mL",
+            "link": "/products/vanilla-skin-travel-size",
+            "active": false,
+            "available": true
+          }
+        },
+        "size_duet": {
+          "type": "variant_link",
+          "settings": {
+            "label": "Duet",
+            "link": "/products/vanilla-skin-fragrance-duet",
+            "active": false,
+            "available": true
+          }
+        },
+        "scent_vanilla": {
+          "type": "scent",
+          "settings": {
+            "title": "Vanilla Skin",
+            "descriptor": "Woody Gourmand",
+            "link": "/products/vanilla-skin-perfume",
+            "fallback_asset": "1-PHLUR_PDP_VanillaSkin_EDP_50ml_CapOn.jpg",
+            "alt": "vanilla skin perfume",
+            "active": true
+          }
+        },
+        "scent_canyon": {
+          "type": "scent",
+          "settings": {
+            "title": "Vanilla Canyon",
+            "descriptor": "Woody Amber",
+            "link": "/products/vanilla-canyon-50ml",
+            "fallback_asset": "VANILLACANYON-50ml-ledge.jpg",
+            "alt": "Vanilla Canyon - 50mL - Phlur"
+          }
+        },
+        "scent_missing": {
+          "type": "scent",
+          "settings": {
+            "title": "Missing Person",
+            "descriptor": "Floral Musk",
+            "link": "/products/missing-person-50ml",
+            "fallback_asset": "1-PHLUR_PDP_MissingPerson_EDP_CapOn.jpg",
+            "alt": "missing person perfume"
+          }
+        },
+        "scent_father": {
+          "type": "scent",
+          "settings": {
+            "title": "Father Figure",
+            "descriptor": "Woody Fresh",
+            "link": "/products/father-figure-50ml",
+            "fallback_asset": "FatherFigure-50mL_6ab972d7-e860-4603-81e6-8f14cbaae348.jpg",
+            "alt": "father figure perfume"
+          }
+        },
+        "scent_honey": {
+          "type": "scent",
+          "settings": {
+            "title": "Honey Moon",
+            "descriptor": "Floral Gourmand",
+            "link": "/products/honey-moon-50ml",
+            "fallback_asset": "honeymoon-50ml-ledge.jpg",
+            "alt": "Honey Moon Eau de Parfum"
+          }
+        },
+        "scent_cherry": {
+          "type": "scent",
+          "settings": {
+            "title": "Cherry Stem",
+            "descriptor": "Fruity Wood",
+            "link": "/products/cherry-stem-50ml",
+            "fallback_asset": "CherryStem-50mL-Ledge.jpg",
+            "alt": "Cherry Stem - 50mL - Phlur"
+          }
+        },
+        "scent_afterglow": {
+          "type": "scent",
+          "settings": {
+            "title": "Afterglow",
+            "descriptor": "Woody Amber",
+            "link": "/products/afterglow-50ml",
+            "fallback_asset": "Afterglow-50mL-Ledge.jpg",
+            "alt": "Afterglow - 50mL - Phlur"
+          }
+        },
+        "scent_strawberry": {
+          "type": "scent",
+          "settings": {
+            "title": "Strawberry Letter",
+            "descriptor": "Fruity Wood",
+            "link": "/products/strawberry-letter-perfume",
+            "fallback_asset": "StrawberryLetter-50mL.jpg",
+            "alt": "strawberry perfume"
+          }
+        },
+        "scent_rose": {
+          "type": "scent",
+          "settings": {
+            "title": "Rose Whip",
+            "descriptor": "Fruity Floral",
+            "link": "/products/rose-whip-50ml",
+            "fallback_asset": "Rose_Whip_-_50mL_Allure_2025.jpg",
+            "alt": "Rose Whip - 50mL - Phlur"
+          }
+        },
+        "scent_golden": {
+          "type": "scent",
+          "settings": {
+            "title": "Golden Rule",
+            "descriptor": "Floral Citrus",
+            "link": "/products/golden-rule-50ml",
+            "fallback_asset": "PHLUR_Ecomm_PDP_EDP_50ml_GoldenRule.jpg",
+            "alt": "golden rule eau de parfum"
+          }
+        },
+        "scent_soft": {
+          "type": "scent",
+          "settings": {
+            "title": "Soft Spot",
+            "descriptor": "Woody Musk",
+            "link": "/products/soft-spot-50ml",
+            "fallback_asset": "1-PHLUR_PDP_SoftSpot_EDP_CapOn.jpg",
+            "alt": "soft spot full sized fragrance"
+          }
+        },
+        "scent_mood": {
+          "type": "scent",
+          "settings": {
+            "title": "Mood Ring",
+            "descriptor": "Fruity Floral",
+            "link": "/products/mood-ring-50ml",
+            "fallback_asset": "MoodRing-50mL.jpg",
+            "alt": "mood ring perfume by phlur"
+          }
+        },
+        "scent_somebody": {
+          "type": "scent",
+          "settings": {
+            "title": "Somebody Wood",
+            "descriptor": "Woody Citrus",
+            "link": "/products/somebody-wood-50ml",
+            "fallback_asset": "1-PHLUR_PDP_SomebodyWood_EDP_CapOn.jpg",
+            "alt": "Somebody Wood - 50mL - Phlur"
+          }
+        },
+        "description": {
+          "type": "accordion",
+          "settings": {
+            "title": "Description",
+            "content": "<p>Familiar and delectable. Hypnotic and decadent. Vanilla Skin, unlike any other vanilla perfume, evokes an iconic creaminess wrapped in a kaleidoscope of spice and intrigue. The dual nature of pink pepper and sugar settle down through rich cashmere before nestling into a core of addictive vanilla and cozy sandalwood. Vanilla Skin is a multidimensional take on an intoxicating sensual gourmand.</p><p>Our new Vanilla Skin perfume has a higher fragrance concentration than the viral Body Mist, developed to have a longer wear time that leaves a lingering, delectable trail in your wake.</p>"
+          }
+        },
+        "notes": {
+          "type": "accordion",
+          "settings": {
+            "title": "Notes",
+            "content": "<p>Top: Pink Pepper, Pink Apple, Sugar Crystals<br>Heart: Lily, Jasmine Petals, Cashmere Wood<br>Base: Benzoin, Vanilla, Sandalwood, Agarwood</p>"
+          }
+        },
+        "ingredients": {
+          "type": "accordion",
+          "settings": {
+            "title": "Ingredients",
+            "content": "<p>Please be aware that ingredient lists may change or vary from time to time. Please refer to the ingredient list on the product package you receive for the most up to date list of ingredients.</p><p>&nbsp;</p><p>Vanilla Skin Eau de Parfum is comprised of:<br>Alcohol Denat.<br>Fragrance/Parfum*<br>Water/Eau/Aqua.</p><p>&nbsp;</p><p>*Fragrance Ingredients: Ethylene Brassylate, Ethyl Hydroxypyrone, Ethyl Vanillin, Vanillin, Dimethylcyclohexylethoxy Isobutylpropanoate, Ethyl Trimethylcyclopentene Butenol, Tetrahydro-Methyl-Methylpropyl)-Pyran-4-Ol, Dihydro Pentamethylindanone, Methyldihydrojasmonate, Tetramethyl Acetyloctahydronaphthalenes, Dodecahydro-Tetramethylnaphthofuran, Methyl Hydrogenated Rosinate, Oxacycloheptadec-10-En-2-One, Oxacyclohexadec-12-En-2-One, (12e), Pentadecalactone, Dipropylene Glycol, Isopropyl Myristate, Alpha-Isomethyl Ionone, Benzyl Benzoate, Limonene, Farnesol, Benzyl Alcohol.</p>"
+          }
+        },
+        "mini_set": {
+          "type": "product",
+          "settings": {
+            "fallback_full_title": "Mini Perfume Coffret",
+            "fallback_display_title": "Mini Perfume Set",
+            "fallback_category": "4 x 7mL Eau de Parfum",
+            "fallback_badge": "NEW",
+            "fallback_url": "/products/coffret-mini-perfume-set",
+            "fallback_primary_asset": "HCS_391c34f2-b4e3-48b5-8ab4-675200005fc1.jpg",
+            "fallback_hover_asset": "Mini_Perfume_-_Cherry_Stem_Update.jpg",
+            "primary_alt": "Mini Coffret - Perfume Set - Phlur",
+            "fallback_image_width": 4000,
+            "fallback_image_height": 4000,
+            "fallback_variant_id": "52467265700021",
+            "fallback_product_id": "10424663048373",
+            "fallback_price": "$59",
+            "fallback_available": true
+          }
+        },
+        "body_mist": {
+          "type": "product",
+          "settings": {
+            "fallback_full_title": "Vanilla Skin - Body Mist",
+            "fallback_display_title": "Vanilla Skin",
+            "fallback_category": "Full Size Body Mist",
+            "fallback_badge": "BESTSELLER",
+            "fallback_url": "/products/vanilla-skin-body-mist",
+            "fallback_primary_asset": "vanilla-skin-body-mist-main.jpg",
+            "fallback_hover_asset": "vanilla-skin-body-mist-studio.jpg",
+            "primary_alt": "Vanilla Skin body mist",
+            "fallback_image_width": 2000,
+            "fallback_image_height": 2000,
+            "fallback_variant_id": "43153584783541",
+            "fallback_product_id": "7507395477685",
+            "fallback_price": "$39",
+            "fallback_available": true
+          }
+        }
+      },
+      "block_order": [
+        "size_100",
+        "size_50",
+        "size_travel",
+        "size_duet",
+        "scent_vanilla",
+        "scent_canyon",
+        "scent_missing",
+        "scent_father",
+        "scent_honey",
+        "scent_cherry",
+        "scent_afterglow",
+        "scent_strawberry",
+        "scent_rose",
+        "scent_golden",
+        "scent_soft",
+        "scent_mood",
+        "scent_somebody",
+        "description",
+        "notes",
+        "ingredients",
+        "mini_set",
+        "body_mist"
+      ],
+      "settings": {
+        "fallback_title": "Vanilla Skin",
+        "variant_title": "50mL Eau de Parfum",
+        "tagline": "An intoxicating vanilla good enough to eat",
+        "rating_value": "4.8",
+        "rating_percent_exact": "96.7901",
+        "review_count": 823,
+        "rating_aria": "Rated 4.8 out of 5 stars",
+        "tagline_border_color": "#845736",
+        "fallback_price": "$99",
+        "fallback_variant_id": "44311341105333",
+        "fallback_product_id": "7917274333365",
+        "fallback_product_url": "/products/vanilla-skin-perfume",
+        "show_variant_links": true,
+        "variant_links_heading": "Size",
+        "scent_heading": "Scent",
+        "membership_text": "Get 10% cashback with Membership",
+        "layer_heading": "Layer It With",
+        "details_label": "View full details",
+        "gallery_item_count": 6,
+        "gallery_alt_1": "vanilla skin perfume",
+        "gallery_alt_2": "vanilla skin eau de parfum",
+        "gallery_alt_3": "vanilla skin fragrance notes",
+        "gallery_alt_4": "vanilla skin perfume ingredients",
+        "gallery_alt_5": "vanilla skin perfume by phlur",
+        "gallery_alt_6": "vanilla skin perfume by phlur",
+        "gallery_badge_1": "BESTSELLER",
+        "gallery_badge_2": "BESTSELLER",
+        "gallery_badge_3": "",
+        "gallery_badge_4": "",
+        "gallery_badge_5": "",
+        "gallery_badge_6": "",
+        "gallery_badges_per_slide": true,
+        "product_kind": "perfume"
+      }
+    },
+    "product_scent_notes": {
+      "type": "product-scent-notes",
+      "blocks": {
+        "top": {
+          "type": "note",
+          "settings": {
+            "label": "Top",
+            "notes": "Pink Pepper\nPink Apple\nSugar Crystals"
+          }
+        },
+        "heart": {
+          "type": "note",
+          "settings": {
+            "label": "Heart",
+            "notes": "Lily\nJasmine Petals\nCashmere Wood"
+          }
+        },
+        "base": {
+          "type": "note",
+          "settings": {
+            "label": "Base",
+            "notes": "Benzoin\nVanilla\nSandalwood\nAgarwood"
+          }
+        }
+      },
+      "block_order": [
+        "top",
+        "heart",
+        "base"
+      ],
+      "settings": {
+        "heading": "Scent Notes",
+        "fallback_asset": "phlur-vanilla-skin-perfume-scent-notes.jpg",
+        "image_alt": ""
+      }
+    },
+    "product_related_collection": {
+      "type": "product-related-collection",
+      "blocks": {
+        "p01": {
+          "type": "product",
+          "settings": {
+            "product": "vanilla-canyon-50ml"
+          }
+        },
+        "p02": {
+          "type": "product",
+          "settings": {
+            "product": "missing-person-50ml"
+          }
+        },
+        "p03": {
+          "type": "product",
+          "settings": {
+            "product": "father-figure-50ml"
+          }
+        },
+        "p04": {
+          "type": "product",
+          "settings": {
+            "product": "vanilla-skin-perfume"
+          }
+        },
+        "p05": {
+          "type": "product",
+          "settings": {
+            "product": "honey-moon-50ml"
+          }
+        },
+        "p06": {
+          "type": "product",
+          "settings": {
+            "product": "cherry-stem-50ml"
+          }
+        },
+        "p07": {
+          "type": "product",
+          "settings": {
+            "product": "strawberry-letter-perfume"
+          }
+        },
+        "p08": {
+          "type": "product",
+          "settings": {
+            "product": "golden-rule-50ml"
+          }
+        },
+        "p09": {
+          "type": "product",
+          "settings": {
+            "product": "afterglow-50ml"
+          }
+        },
+        "p10": {
+          "type": "product",
+          "settings": {
+            "product": "rose-whip-50ml"
+          }
+        },
+        "p11": {
+          "type": "product",
+          "settings": {
+            "product": "soft-spot-50ml"
+          }
+        },
+        "p12": {
+          "type": "product",
+          "settings": {
+            "product": "mood-ring-50ml"
+          }
+        },
+        "p13": {
+          "type": "product",
+          "settings": {
+            "product": "somebody-wood-50ml"
+          }
+        }
+      },
+      "block_order": [
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p06",
+        "p07",
+        "p08",
+        "p09",
+        "p10",
+        "p11",
+        "p12",
+        "p13"
+      ],
+      "settings": {
+        "source_mode": "blocks",
+        "heading": "Modern Fine Fragrance",
+        "product_limit": 13,
+        "variant_label": "50mL Eau de Parfum",
+        "padding_top": 38,
+        "mobile_padding_top": 28,
+        "item_gap": 16
+      }
+    },
+    "perfume-quotes": {
+      "type": "perfume-quotes",
+      "settings": {
+        "quote": "“I wanted to play with contrasts against the backdrop of a beautiful vanilla note. I used some modern spice, a touch of watery fruit, airy florals and rich, warm and intoxicating woods. It all combines for this stimulating and addictive experience that leaves an everlasting impression.”",
+        "author": "Clement Gavarry",
+        "role": "Vanilla Skin Perfumer",
+        "image_url": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/PHLUR_VanillaSkin_EDP_PerfumerQuoteImage.jpg?v=1718659714&width=1920",
+        "image_alt": "perfume quote",
+        "padding_vertical": 60,
+        "padding_horizontal": 80,
+        "column_gap": 20,
+        "copy_padding": 60,
+        "background_color": "#fafafa",
+        "text_color": "#000000"
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+        "fallback_product_id": "7917274333365",
+        "rating": "4.8",
+        "review_count": 823
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "source_mode": "blocks",
+        "product_limit": 8,
+        "heading": "You May Also Like",
+        "widget_id": "145779",
+        "source_product_id": "7917274333365",
+        "padding_bottom": 60,
+        "previous_icon_asset": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Chevron-L.svg?v=1773632141",
+        "next_icon_asset": "https://cdn.shopify.com/s/files/1/0517/7203/1157/files/Chevron-R.svg?v=1773632124"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "product_scent_notes",
+    "product_related_collection",
+    "perfume-quotes",
+    "product-reviews",
+    "related-products"
+  ]
+}

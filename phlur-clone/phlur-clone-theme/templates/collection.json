@@ -1,0 +1,573 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-phlur",
+      "blocks": {
+        "fallback_1": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Mini Perfume Set",
+            "subtitle": "4 x 7mL Eau de Parfum",
+            "price": "$59",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/HCS_391c34f2-b4e3-48b5-8ab4-675200005fc1.jpg?v=1777325341&width=533"
+          }
+        },
+        "fallback_2": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Vanilla & Cream",
+            "subtitle": "Hair & Body Mist Duo",
+            "price": "$68 <s>$78</s>",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/Vanilla_CreamDuo-BodyMists.jpg?v=1735324623&width=533"
+          }
+        },
+        "fallback_3": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Discovery Set",
+            "subtitle": "8 x 2mL Samples",
+            "price": "$39",
+            "badge": "$20 CREDIT",
+            "image_url": "https://phlur.com/cdn/shop/files/DiscoverySetLedge_ColorBoosted.jpg?v=1775754801&width=533"
+          }
+        },
+        "fallback_4": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Island Escape",
+            "subtitle": "Travel Size Body Mist Trio",
+            "price": "$68 <s>$78</s>",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/Island_Escape_Trio-BodyMists-Main_4c610ed2-bea1-4b5a-bfd8-78ec60d338ee.jpg?v=1778706903&width=533"
+          }
+        },
+        "fallback_5": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Missing Person",
+            "subtitle": "100mL Eau de Parfum",
+            "price": "$139",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/MP_Jumbo_ledge.jpg?v=1743536252&width=533"
+          }
+        },
+        "fallback_6": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Father Figure",
+            "subtitle": "100mL Eau de Parfum",
+            "price": "$139",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/FFJumbo.jpg?v=1757467192&width=533"
+          }
+        },
+        "fallback_7": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Vanilla Skin",
+            "subtitle": "Full Size Body Mist",
+            "price": "$39",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/VanillaSkin-FullSize_Allure.jpg?v=1727377166&width=533"
+          }
+        },
+        "fallback_8": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Heavy Cream",
+            "subtitle": "Full Size Body Mist",
+            "price": "$39",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/HeavyCream-BodyMist_CapOn2.jpg?v=1729714192&width=533"
+          }
+        },
+        "fallback_9": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Vanilla Canyon",
+            "subtitle": "50mL Eau de Parfum",
+            "price": "$99",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/VANILLACANYON-50ml-ledge.jpg?v=1785888502&width=533"
+          }
+        },
+        "fallback_10": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Missing Person",
+            "subtitle": "100mL Eau de Parfum",
+            "price": "$139",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/MP_Jumbo_ledge.jpg?v=1743536252&width=533"
+          }
+        },
+        "fallback_11": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Father Figure",
+            "subtitle": "100mL Eau de Parfum",
+            "price": "$139",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/FFJumbo.jpg?v=1757467192&width=533"
+          }
+        },
+        "fallback_12": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Vanilla Skin",
+            "subtitle": "100mL Eau de Parfum",
+            "price": "$139",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/VS_Jumbo_ledge.jpg?v=1743536645&width=533"
+          }
+        },
+        "fallback_13": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Mini Perfume Set",
+            "subtitle": "4 x 7mL Eau de Parfum",
+            "price": "$59",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/HCS_391c34f2-b4e3-48b5-8ab4-675200005fc1.jpg?v=1777325341&width=533"
+          }
+        },
+        "fallback_14": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Discovery Set",
+            "subtitle": "8 x 2mL Samples",
+            "price": "$39",
+            "badge": "$20 CREDIT",
+            "image_url": "https://phlur.com/cdn/shop/files/DiscoverySetLedge_ColorBoosted.jpg?v=1775754801&width=533"
+          }
+        },
+        "fallback_15": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Honey Moon",
+            "subtitle": "50mL Eau de Parfum",
+            "price": "$99",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/honeymoon-50ml-ledge.jpg?v=1773187265&width=533"
+          }
+        },
+        "fallback_16": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Cherry Stem",
+            "subtitle": "50mL Eau de Parfum",
+            "price": "$99",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/CherryStem-50mL-Ledge.jpg?v=1756250215&width=533"
+          }
+        },
+        "fallback_17": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Island Paradise",
+            "subtitle": "Hair & Body Mist Duo",
+            "price": "$68 <s>$78</s>",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/paradiseBerryDuo-BodyMists-Main.jpg?v=1777683813&width=533"
+          }
+        },
+        "fallback_18": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Island Swim",
+            "subtitle": "Full Size Body Mist",
+            "price": "$39",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/island_swim_8oz.jpg?v=1777678523&width=533"
+          }
+        },
+        "fallback_19": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Paradise Nectar",
+            "subtitle": "Full Size Body Mist",
+            "price": "$39",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/paradisenectar8oz.jpg?v=1777680461&width=533"
+          }
+        },
+        "fallback_20": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Island Escape",
+            "subtitle": "Travel Size Body Mist Trio",
+            "price": "$68 <s>$78</s>",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/Island_Escape_Trio-BodyMists-Main_4c610ed2-bea1-4b5a-bfd8-78ec60d338ee.jpg?v=1778706903&width=533"
+          }
+        },
+        "fallback_21": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Endless Summer",
+            "subtitle": "Hair & Body Mist Duo",
+            "price": "$68 <s>$78</s>",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/Endless_Summer_Duo_-_Ledge.jpg?v=1781570028&width=533"
+          }
+        },
+        "fallback_22": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Vanilla & Cream",
+            "subtitle": "Hair & Body Mist Duo",
+            "price": "$68 <s>$78</s>",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/Vanilla_CreamDuo-BodyMists.jpg?v=1735324623&width=533"
+          }
+        },
+        "fallback_23": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Velvet Berry",
+            "subtitle": "Hair & Body Mist Duo",
+            "price": "$68 <s>$78</s>",
+            "badge": "",
+            "image_url": "https://phlur.com/cdn/shop/files/BerryCozyDuo_b34fabc0-b30c-4142-8025-4667c5c6f747.jpg?v=1764110692&width=533"
+          }
+        },
+        "fallback_24": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Berry Matcha",
+            "subtitle": "Hair & Body Mist Duo",
+            "price": "$68 <s>$78</s>",
+            "badge": "",
+            "image_url": "https://phlur.com/cdn/shop/files/Berry_Matcha_Duo_-_Body_Mists_-_Main_No_UC.jpg?v=1772305346&width=533"
+          }
+        },
+        "fallback_25": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Missing Person",
+            "subtitle": "Body Oil",
+            "price": "$45",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/1-PHLR_PDP_MissingPerson_BodyOil_CapOn.jpg?v=1758847539&width=533"
+          }
+        },
+        "fallback_26": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Vanilla Skin",
+            "subtitle": "Deodorant",
+            "price": "$20",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/Hero_on_Ledge.jpg?v=1728361384&width=533"
+          }
+        },
+        "fallback_27": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Vanilla Skin",
+            "subtitle": "Body Oil",
+            "price": "$45",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/VanillaSkinBodyOil_Main.jpg?v=1764197109&width=533"
+          }
+        },
+        "fallback_28": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Beach Skin",
+            "subtitle": "Shimmering Body Oil",
+            "price": "$45",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/beachSkinBodyOil_Main_b1291c16-1369-4fc0-b9f6-7395cd532e3d.jpg?v=1774375353&width=533"
+          }
+        },
+        "fallback_29": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Father Figure",
+            "subtitle": "Deodorant",
+            "price": "$20",
+            "badge": "",
+            "image_url": "https://phlur.com/cdn/shop/files/Deodorant-CapOn.jpg?v=1739391319&width=533"
+          }
+        },
+        "fallback_30": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Rose Whip",
+            "subtitle": "Deodorant",
+            "price": "$20",
+            "badge": "",
+            "image_url": "https://phlur.com/cdn/shop/files/Deodorant_-_Cap_On.jpg?v=1769799640&width=533"
+          }
+        },
+        "fallback_31": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Missing Person",
+            "subtitle": "Daily Ritual Duo",
+            "price": "$120 <s>$144</s>",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/Missing_Person_-_Longevity_Duo_-_Full_Size.jpg?v=1743211292&width=533"
+          }
+        },
+        "fallback_32": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Vanilla Skin",
+            "subtitle": "Daily Ritual Duo",
+            "price": "$120 <s>$144</s>",
+            "badge": "",
+            "image_url": "https://phlur.com/cdn/shop/files/VanillaSkin-DailyRitualDuo-FullSize.jpg?v=1764198202&width=533"
+          }
+        },
+        "fallback_33": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Mini Perfume Set",
+            "subtitle": "4 x 7mL Eau de Parfum",
+            "price": "$59",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/HCS_391c34f2-b4e3-48b5-8ab4-675200005fc1.jpg?v=1777325341&width=533"
+          }
+        },
+        "fallback_34": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Discovery Set",
+            "subtitle": "8 x 2mL Samples",
+            "price": "$39",
+            "badge": "$20 CREDIT",
+            "image_url": "https://phlur.com/cdn/shop/files/DiscoverySetLedge_ColorBoosted.jpg?v=1775754801&width=533"
+          }
+        },
+        "fallback_35": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Island Escape",
+            "subtitle": "Travel Size Body Mist Trio",
+            "price": "$68 <s>$78</s>",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/Island_Escape_Trio-BodyMists-Main_4c610ed2-bea1-4b5a-bfd8-78ec60d338ee.jpg?v=1778706903&width=533"
+          }
+        },
+        "fallback_36": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Mini Icons Duo",
+            "subtitle": "2 x 7mL Eaux de Parfum",
+            "price": "$35",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/mini_icons_duo_fbe33901-7d2a-43c2-89d8-33952f18f003.jpg?v=1775680777&width=533"
+          }
+        },
+        "fallback_37": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Custom Body Mist Travel Trio",
+            "subtitle": "3 x Travel Size Body Mists",
+            "price": "$68 <s>$78</s>",
+            "badge": "",
+            "image_url": "https://phlur.com/cdn/shop/files/preview_images/aacc7ec429bf43978585addce751332f.thumbnail.0000000000_1000x.jpg?v=1769130335"
+          }
+        },
+        "fallback_38": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Custom Perfume Travel Trio",
+            "subtitle": "3 x 9.5mL Eau de Parfums",
+            "price": "$81 <s>$96</s>",
+            "badge": "",
+            "image_url": "https://phlur.com/cdn/shop/files/preview_images/0a25ac1cf49e4d97ae687d810b7d5b42.thumbnail.0000000000_1000x.jpg?v=1769130334"
+          }
+        },
+        "fallback_39": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Vanilla & Cream",
+            "subtitle": "Hair & Body Mist Duo",
+            "price": "$68 <s>$78</s>",
+            "badge": "BESTSELLER",
+            "image_url": "https://phlur.com/cdn/shop/files/Vanilla_CreamDuo-BodyMists.jpg?v=1735324623&width=533"
+          }
+        },
+        "fallback_40": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Endless Summer",
+            "subtitle": "Hair & Body Mist Duo",
+            "price": "$68 <s>$78</s>",
+            "badge": "NEW",
+            "image_url": "https://phlur.com/cdn/shop/files/Endless_Summer_Duo_-_Ledge.jpg?v=1781570028&width=533"
+          }
+        },
+        "fallback_41": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Somebody Wood",
+            "subtitle": "50mL Eau de Parfum",
+            "price": "$60 <s>$99</s>",
+            "badge": "FAREWELL SALE",
+            "image_url": "https://phlur.com/cdn/shop/files/1-PHLUR_PDP_SomebodyWood_EDP_CapOn.jpg?v=1738117442&width=533"
+          }
+        },
+        "fallback_42": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Peach Skin",
+            "subtitle": "Full Size Body Mist",
+            "price": "$28 <s>$39</s>",
+            "badge": "FAREWELL SALE",
+            "image_url": "https://phlur.com/cdn/shop/files/PeachSkin_8oz_Main.jpg?v=1744411795&width=533"
+          }
+        },
+        "fallback_43": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Mrs. Smith",
+            "subtitle": "Full Size Body Mist",
+            "price": "$28 <s>$39</s>",
+            "badge": "FAREWELL SALE",
+            "image_url": "https://phlur.com/cdn/shop/files/MrsSmith_8oz_Main_51696231-8d04-4903-9b8d-44020b60e252.jpg?v=1752605476&width=533"
+          }
+        },
+        "fallback_44": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Vanilla Smoke",
+            "subtitle": "Full Size Body Mist",
+            "price": "$28 <s>$39</s>",
+            "badge": "FAREWELL SALE",
+            "image_url": "https://phlur.com/cdn/shop/files/VanillaSmoke_Main.jpg?v=1740608117&width=533"
+          }
+        },
+        "fallback_45": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Coconut Skin",
+            "subtitle": "Full Size Body Mist",
+            "price": "$28 <s>$39</s>",
+            "badge": "FAREWELL SALE",
+            "image_url": "https://phlur.com/cdn/shop/files/1.jpg?v=1721099862&width=533"
+          }
+        },
+        "fallback_46": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Moonstone",
+            "subtitle": "Full Size Body Mist",
+            "price": "$28 <s>$39</s>",
+            "badge": "FAREWELL SALE",
+            "image_url": "https://phlur.com/cdn/shop/files/1-PHLUR_PDP_Moonstone_BodyMist_8oz_CapOn.jpg?v=1713300182&width=533"
+          }
+        },
+        "fallback_47": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Mango Mood",
+            "subtitle": "Full Size Body Mist",
+            "price": "$28 <s>$39</s>",
+            "badge": "FAREWELL SALE",
+            "image_url": "https://phlur.com/cdn/shop/files/1-PHLUR_PDP_MangoMood_BodyMist_8oz_CapOn.jpg?v=1696884183&width=533"
+          }
+        },
+        "fallback_48": {
+          "type": "fallback_product",
+          "settings": {
+            "title": "Apricot Priv\u00e9e",
+            "subtitle": "Candle",
+            "price": "$27 <s>$45</s>",
+            "badge": "FAREWELL SALE",
+            "image_url": "https://phlur.com/cdn/shop/files/2-PHLUR_PDP_ApricotPrivee_Candle_Tipped.jpg?v=1696271665&width=533"
+          }
+        }
+      },
+      "block_order": [
+        "fallback_1",
+        "fallback_2",
+        "fallback_3",
+        "fallback_4",
+        "fallback_5",
+        "fallback_6",
+        "fallback_7",
+        "fallback_8",
+        "fallback_9",
+        "fallback_10",
+        "fallback_11",
+        "fallback_12",
+        "fallback_13",
+        "fallback_14",
+        "fallback_15",
+        "fallback_16",
+        "fallback_17",
+        "fallback_18",
+        "fallback_19",
+        "fallback_20",
+        "fallback_21",
+        "fallback_22",
+        "fallback_23",
+        "fallback_24",
+        "fallback_25",
+        "fallback_26",
+        "fallback_27",
+        "fallback_28",
+        "fallback_29",
+        "fallback_30",
+        "fallback_31",
+        "fallback_32",
+        "fallback_33",
+        "fallback_34",
+        "fallback_35",
+        "fallback_36",
+        "fallback_37",
+        "fallback_38",
+        "fallback_39",
+        "fallback_40",
+        "fallback_41",
+        "fallback_42",
+        "fallback_43",
+        "fallback_44",
+        "fallback_45",
+        "fallback_46",
+        "fallback_47",
+        "fallback_48"
+      ],
+      "settings": {
+        "banner_alt": "All",
+        "eyebrow": "Collection:",
+        "intro_fallback": "Fragrance for every ritual – scent explored in every form",
+        "nav_all_label": "Shop All",
+        "group_1_collection": "best-sellers",
+        "group_1_heading": "Best Sellers",
+        "group_1_description": "Discover what everyone is reaching for",
+        "group_2_collection": "perfumes",
+        "group_2_heading": "Perfumes",
+        "group_2_description": "Scents that tell your story",
+        "group_3_collection": "for-her",
+        "group_3_heading": "For Her",
+        "group_3_description": "Signature scents curated for her",
+        "group_4_collection": "for-him",
+        "group_4_heading": "For Him",
+        "group_4_description": "Signature scents curated for him",
+        "group_5_collection": "new-drops",
+        "group_5_heading": "New Drops",
+        "group_5_description": "Discover the latest Siwa fragrances",
+        "group_6_collection": "summer-collection",
+        "group_6_heading": "Summer Collection",
+        "group_6_description": "Scents made for warmer days",
+        "group_link_label": "Shop All",
+        "products_per_group": 8,
+        "background_color": "#fafafa",
+        "text_color": "#000000",
+        "desktop_gutter": 80,
+        "mobile_gutter": 20,
+        "grid_gap": 20
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

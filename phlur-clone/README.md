@@ -8,10 +8,12 @@ node agents/orchestrator.mjs              # analyse → map → build → valida
 xvfb-run -a node agents/orchestrator.mjs --inspect   # also re-crawl phlur.com
 ```
 
-`--inspect` **requires `xvfb-run` and real Chrome.** phlur.com sits behind a
-Cloudflare bot challenge that headless Chromium never clears — it serves
-"Just a moment…" indefinitely. `chromium.launch({ headless: false, channel: 'chrome' })`
-under a virtual display passes it.
+`--inspect` historically used `xvfb-run` and headed Chrome. As of the
+2026-08-21 ST-02 recrawl, installed Playwright with system Chrome in headless
+mode can render storefront pages when using `domcontentloaded` plus a bounded
+settle. Production still intermittently returns HTTP 403 (consistently for
+`/sitemap.xml` and `/account/login`), and its persistent background requests
+mean `networkidle` is not a reliable completion condition.
 
 ## Agents
 
@@ -25,7 +27,10 @@ under a virtual display passes it.
 | 5b | `verifier.mjs` | Renders the output in a browser and diffs geometry against the measured phlur values |
 | 6 | `orchestrator.mjs` | Runs 2→5b and writes `reports/final-report.json` |
 
-## Results
+## Historical generated-fragment results
+
+The results below describe the repository's earlier representative-page
+generator output, not the new full Shopify theme or the current ST-02 crawl.
 
 - **Geometry vs phlur.com: 26/26 checks pass** (`reports/verification.json`)
 - **Siwa CI rules: 0 errors, 0 warnings** (`reports/validation.json`)

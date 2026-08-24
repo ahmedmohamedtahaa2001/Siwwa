@@ -1,0 +1,35 @@
+@media (min-width: 750px) and (max-width: 989px) {
+  .footer {
+    height: 891px !important;
+    min-height: 891px !important;
+    margin-top: 47.390625px !important;
+    overflow: hidden !important;
+  }
+
+  .footer__content-top {
+    height: 855px !important;
+  }
+
+  .footer__content-bottom {
+    position: absolute !important;
+    transform: translateY(-156px);
+  }
+}
+
+@media (max-width: 749px) {
+  .footer {
+    height: 881px !important;
+    min-height: 881px !important;
+    margin-top: 141.359375px !important;
+    overflow: hidden !important;
+  }
+
+  .footer__content-top {
+    height: 845px !important;
+  }
+
+  .footer__content-bottom {
+    position: absolute !important;
+    transform: translateY(-156px);
+  }
+}

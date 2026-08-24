@@ -1,0 +1,57 @@
+{%- assign drawer_about_url = section.settings.about_link | default: pages.contact.url | default: routes.root_url -%}{%- assign drawer_membership_url = section.settings.membership_link | default: routes.all_products_collection_url -%}
+{{ 'shop-navigation-drawer.css' | asset_url | stylesheet_tag }}
+<div id="shop-nav-overlay" class="snd-overlay" aria-hidden="true" data-shop-overlay></div>
+<button type="button" class="snd-close-btn" data-shop-close aria-label="Close shop navigation">
+  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true" focusable="false"><path d="M4 4 22 22M22 4 4 22" stroke="currentColor" stroke-width="1.5"/></svg>
+</button>
+<nav id="shop-main-drawer" class="snd-drawer" aria-label="Shop navigation" aria-hidden="true" data-mega-menu>
+  <div class="snd-drawer__header"></div>
+  <div class="scrollable-menu" data-shop-menu-content>
+    <ul class="snd-main-menu" role="list">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'shop_link' -%}
+          {%- assign item_handle = block.settings.label | handleize -%}
+          <li class="motion-item" data-motion-item {{ block.shopify_attributes }}>
+            {%- if item_handle == 'perfume' or item_handle == 'body-mist' -%}
+              <button class="snd-menu-item snd-has-sub" type="button" data-sub-id="{{ item_handle }}" aria-haspopup="true" aria-expanded="false" aria-controls="shop-sub-drawer">{{ block.settings.label | escape }}</button>
+            {%- else -%}
+              <a href="{{ block.settings.link | default: routes.all_products_collection_url }}" class="snd-menu-item">{{ block.settings.label | escape }}</a>
+            {%- endif -%}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+    <div class="snd-drawer__footer">
+      <div class="menu-drawer__utility-links"><div class="menu-drawer__utility-links-wrap">
+        <ul class="menu-drawer__menu list-menu" role="list">
+          <li class="motion-item" data-motion-item><a href="{{ drawer_membership_url }}">{{ section.settings.membership_label | default: 'Shop All' | escape }}</a></li>
+          {% if shop.customer_accounts_enabled %}<li class="motion-item" data-motion-item><a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="menu-drawer__account link focus-inset h5">{% if customer %}Account{% else %}Sign in{% endif %}</a></li>{% endif %}
+          <li class="motion-item" data-motion-item><a href="{{ drawer_about_url }}">{{ section.settings.about_label | default: 'Contact' | escape }}</a></li>
+          <li class="menu-drawer__localization header-localization motion-item" data-motion-item>
+            {%- form 'localization', id: 'HeaderCountryMobileForm', class: 'localization-form' -%}
+              <button class="disclosure__button localization-form__select localization-selector link link--text caption-large" type="submit">{{ localization.country.name }} · {{ localization.country.currency.iso_code }}{{ localization.country.currency.symbol }} · {{ localization.language.endonym_name | capitalize }}</button>
+            {%- endform -%}
+          </li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+</nav>
+
+<nav id="shop-sub-drawer" class="snd-sub-drawer" aria-label="Sub-category navigation" aria-hidden="true" data-shop-subdrawer>
+  <div class="snd-sub-drawer__header">
+    <button type="button" class="snd-back-btn" data-shop-sub-back aria-label="Back to main menu"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+    <span class="snd-sub-drawer__title" data-shop-sub-title></span>
+  </div>
+  <div class="scrollable-menu">
+    <div class="snd-sub-panel" data-sub-panel="perfume" data-sub-title="Perfume" hidden>
+      <div class="snd-sub-group"><ul class="snd-sub-menu" role="list"><li><a href="{{ collections.perfumes.url | default: routes.all_products_collection_url }}">Shop All Perfume</a></li></ul></div>
+      <div class="snd-sub-group"><p class="snd-sub-group__heading">New Arrivals</p><ul class="snd-sub-menu" role="list"><li><a href="{{ all_products['vanilla-canyon-50ml'].url | default: routes.all_products_collection_url }}">Vanilla Canyon</a></li></ul></div>
+      <div class="snd-sub-group"><p class="snd-sub-group__heading">Bestsellers</p><ul class="snd-sub-menu" role="list"><li><a href="{{ all_products['missing-person-50ml'].url | default: collections['best-sellers'].url | default: routes.all_products_collection_url }}">Missing Person</a></li><li><a href="{{ all_products['father-figure-50ml'].url | default: collections['best-sellers'].url | default: routes.all_products_collection_url }}">Father Figure</a></li><li><a href="{{ all_products['vanilla-skin-perfume'].url | default: collections['best-sellers'].url | default: routes.all_products_collection_url }}">Vanilla Skin</a></li></ul></div>
+      <div class="snf-container"><p class="snf-heading">Featured</p><ul class="snf-product-list" role="list">
+        <li class="snf-product"><a href="{{ all_products['vanilla-canyon-50ml'].url | default: routes.all_products_collection_url }}" class="snf-product__link"><span class="wrap-img-text"><span class="snf-product__image-wrap"><img src="{{ 'VANILLACANYON-50ml-ledge.jpg' | asset_url }}" alt="New: Vanilla Canyon" width="80" height="80" loading="lazy"></span><span class="snf-product__text"><span class="snf-product__title">New: Vanilla Canyon</span><span class="snf-product__subtitle">A soulful vanilla that wears like the freedom of the open road</span></span></span><span class="snf-product__arrow" aria-hidden="true">→</span></a></li>
+        <li class="snf-product"><a href="{{ collections.perfumes.url | default: routes.all_products_collection_url }}" class="snf-product__link"><span class="wrap-img-text"><span class="snf-product__image-wrap"><img src="{{ 'HCS_391c34f2-b4e3-48b5-8ab4-675200005fc1.jpg' | asset_url }}" alt="Shop perfumes" width="80" height="80" loading="lazy"></span><span class="snf-product__text"><span class="snf-product__title">Shop Perfumes</span><span class="snf-product__subtitle">Explore the complete perfume collection</span></span></span><span class="snf-product__arrow" aria-hidden="true">→</span></a></li>
+      </ul></div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,105 @@
+<section
+  class="home-collections"
+  style="--bg:{{ section.settings.background }};--fg:{{ section.settings.text_color }};--card-fg:{{ section.settings.card_text_color }};--pt:{{ section.settings.padding_top }}px;--pr:{{ section.settings.padding_right }}px;--pb:{{ section.settings.padding_bottom }}px;--pl:{{ section.settings.padding_left }}px;--mpt:{{ section.settings.mobile_padding_top }}px;--mpb:{{ section.settings.mobile_padding_bottom }}px;--mph:{{ section.settings.mobile_padding_horizontal }}px;--mt:{{ section.settings.margin_top }}px;--mb:{{ section.settings.margin_bottom }}px;--mw:{{ section.settings.section_max_width }}px;--gap:{{ section.settings.item_gap }}px;--heading-size:{{ section.settings.heading_size }}px;--card-title-size:{{ section.settings.card_title_size }}px;--heading-gap:{{ section.settings.heading_gap }}px;--mobile-heading-gap:{{ section.settings.mobile_heading_gap }}px;--card-title-padding:{{ section.settings.card_title_padding }}px"
+>
+  <div class="home-collections__wrapper">
+    <div class="home-collections__container">
+      {% if section.settings.heading != blank %}
+        <div class="home-collections__title-wrapper">
+          <h2 class="home-collections__title">{{ section.settings.heading }}</h2>
+        </div>
+      {% endif %}
+
+      <div class="home-collections__slider">
+        <ul class="home-collections__grid" role="list">
+          {% for block in section.blocks %}
+            {% assign card_collection = block.settings.collection %}
+            {% assign card_url = block.settings.link | default: card_collection.url %}
+            {% assign card_title = block.settings.title | default: card_collection.title %}
+            {% assign fallback_asset = block.settings.fallback_asset %}
+            {% if fallback_asset == blank %}
+              {% if forloop.first %}
+                {% assign fallback_asset = section.settings.first_fallback_asset %}
+              {% elsif forloop.index == 2 %}
+                {% assign fallback_asset = section.settings.second_fallback_asset %}
+              {% endif %}
+            {% endif %}
+            <li class="home-collections__item" {{ block.shopify_attributes }}>
+              <div class="home-collections__card">
+                <div class="home-collections__media">
+                  {% if block.settings.image != blank %}
+                    {{ block.settings.image | image_url: width: 1600 | image_tag: widths: '360,550,750,1000,1250,1600', sizes: '(max-width: 989px) calc(100vw - 40px), calc((100vw - 180px) / 2)', loading: 'lazy', alt: card_title }}
+                  {% elsif fallback_asset != blank %}
+                    <img src="{{ fallback_asset | asset_url }}" alt="{{ card_title | escape }}" width="2160" height="2160" loading="lazy">
+                  {% elsif card_collection.image != blank %}
+                    {{ card_collection.image | image_url: width: 1600 | image_tag: widths: '360,550,750,1000,1250,1600', sizes: '(max-width: 989px) calc(100vw - 40px), calc((100vw - 180px) / 2)', loading: 'lazy', alt: card_title }}
+                  {% endif %}
+                </div>
+                {% if card_url != blank %}
+                  <a class="home-collections__link" href="{{ card_url }}">
+                {% else %}
+                  <div class="home-collections__link">
+                {% endif %}
+                  {% if card_title != blank %}
+                    <div class="home-collections__content">
+                      <div class="home-collections__information">
+                        <h4 class="home-collections__card-title">{{ card_title }}</h4>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% if card_url != blank %}</a>{% else %}</div>{% endif %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% # theme-check-disable BlockIdUsage %}
+{% schema %}
+{
+  "name": "Home collection list",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Featured Collections" },
+    { "type": "color", "id": "background", "label": "Background", "default": "#fafafa" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#000000" },
+    { "type": "color", "id": "card_text_color", "label": "Card text color", "default": "#ffffff" },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 12, "max": 40, "step": 1, "unit": "px", "default": 18 },
+    { "type": "range", "id": "card_title_size", "label": "Card title size", "min": 12, "max": 40, "step": 1, "unit": "px", "default": 14 },
+    { "type": "range", "id": "heading_gap", "label": "Space below heading", "min": 0, "max": 80, "step": 2, "unit": "px", "default": 30 },
+    { "type": "range", "id": "card_title_padding", "label": "Card title padding", "min": 0, "max": 40, "step": 1, "unit": "px", "default": 13 },
+    { "type": "text", "id": "first_fallback_asset", "label": "First card fallback asset", "default": "home-collection-perfume.jpg" },
+    { "type": "text", "id": "second_fallback_asset", "label": "Second card fallback asset", "default": "home-collection-body-mist.jpg" },
+    { "type": "header", "content": "Layout & Spacing" },
+    { "type": "range", "id": "padding_top", "label": "Padding top (desktop)", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 40 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom (desktop)", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 40 },
+    { "type": "range", "id": "padding_left", "label": "Padding left (desktop)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_right", "label": "Padding right (desktop)", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "margin_top", "label": "Margin top", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "margin_bottom", "label": "Margin bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 0 },
+    { "type": "range", "id": "section_max_width", "label": "Max width", "min": 800, "max": 1920, "step": 40, "unit": "px", "default": 1600 },
+    { "type": "range", "id": "item_gap", "label": "Gap between items", "min": 0, "max": 80, "step": 4, "unit": "px", "default": 20 },
+    { "type": "header", "content": "Mobile Spacing" },
+    { "type": "range", "id": "mobile_padding_top", "label": "Padding top (mobile)", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 30 },
+    { "type": "range", "id": "mobile_padding_bottom", "label": "Padding bottom (mobile)", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 30 },
+    { "type": "range", "id": "mobile_padding_horizontal", "label": "Horizontal padding (mobile)", "min": 0, "max": 60, "step": 4, "unit": "px", "default": 20 },
+    { "type": "range", "id": "mobile_heading_gap", "label": "Space below heading (mobile)", "min": 0, "max": 60, "step": 2, "unit": "px", "default": 20 }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Collection" },
+        { "type": "image_picker", "id": "image", "label": "Override image" },
+        { "type": "text", "id": "fallback_asset", "label": "Fallback theme asset filename" },
+        { "type": "text", "id": "title", "label": "Override title" },
+        { "type": "url", "id": "link", "label": "Override link" }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [{ "name": "Home collection list", "blocks": [{ "type": "collection" }, { "type": "collection" }] }]
+}
+{% endschema %}

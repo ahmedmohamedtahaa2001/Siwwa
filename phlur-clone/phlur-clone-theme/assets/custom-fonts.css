@@ -1,0 +1,32 @@
+/* Custom font-face declarations are added after source font assets are verified. */
+@font-face {
+  font-family: 'ABCRepro-Regular';
+  src: url('ABCRepro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABCReproMono-Medium';
+  src: url('ABCReproMono-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'aktiv-grotesk-extended';
+  src: url('aktiv-grotesk-extended-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'aktiv-grotesk-extended';
+  src: url('aktiv-grotesk-extended-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,36 @@
+[id^="MainProduct-"] .product__title .flex-container-row{display:flex;align-items:flex-start;justify-content:space-between;width:100%;gap:20px}
+[id^="MainProduct-"] .product__info-container h1.aktiv.h3{margin:0;font-family:aktiv-grotesk-extended,sans-serif;font-size:18px;line-height:23px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+[id^="MainProduct-"] [data-oke-star-rating]{margin-left:auto;flex:0 0 auto}
+[id^="MainProduct-"] .oke-is-clickable{display:flex;align-items:center;gap:6px;white-space:nowrap;color:#000;font:400 11px/16px ABCRepro-Regular,sans-serif}
+[id^="MainProduct-"] .oke-sr-rating{display:block}
+[id^="MainProduct-"] .oke-sr-stars{display:block;width:81px;height:13px}
+[id^="MainProduct-"] .oke-stars{position:relative;width:81px;height:13px;overflow:hidden}
+[id^="MainProduct-"] .oke-stars-background,[id^="MainProduct-"] .oke-stars-foreground{position:absolute;inset:0;overflow:hidden;color:#000;font-size:0;white-space:nowrap}
+[id^="MainProduct-"] .oke-stars-background svg,[id^="MainProduct-"] .oke-stars-foreground svg{display:block!important;width:81px!important;height:13px!important;color:#000!important;fill:#000!important}
+[id^="MainProduct-"] .oke-sr-count{display:block}
+[id^="MainProduct-"] .oke-sr-count-number,[id^="MainProduct-"] .oke-sr-label-text{display:none}
+[id^="MainProduct-"] .oke-sr-total-text{display:inline}
+[id^="MainProduct-"] .oke-stars-background{color:#e5e5e5!important}
+[id^="MainProduct-"] .oke-stars-foreground{color:#ffcf2a!important}
+[id^="MainProduct-"] .oke-stars-background svg{color:#e5e5e5!important;fill:#e5e5e5!important}
+[id^="MainProduct-"] .oke-stars-foreground svg{color:#ffcf2a!important;fill:#ffcf2a!important}
+[id^="MainProduct-"] .Phlur-Accordion .js_accordion:not(.open) .accordion_content{display:none}
+[id^="MainProduct-"] .scentCollectionSwiper .swiper-pagination-custom{display:flex!important;min-height:35px;margin-top:10px;padding:0;border:0;align-items:flex-start}
+[id^="MainProduct-"] .scentCollectionSwiper .swiper-pagination-custom>.swiper-pagination-bullet{display:none!important;width:auto;height:auto;padding:0;border:0;border-radius:0;background:transparent;color:#000;font:400 13px/18px ABCRepro-Regular,sans-serif}
+[id^="MainProduct-"] .scentCollectionSwiper .swiper-pagination-custom>.swiper-pagination-bullet-active{display:block!important}
+[id^="MainProduct-"] .scentCollectionSwiper .swiper-pagination-custom>.swiper-pagination-bullet>span{display:block;margin:0;color:#777;font:400 12px/17px ABCRepro-Regular,sans-serif}
+[id^="MainProduct-"] .hidden{display:none!important}
+[id^="MainProduct-"] .join-membership-wrap{margin:18px 0;background:transparent;border:0}
+[id^="MainProduct-"] .join-membership-message,[id^="MainProduct-"] .join-membership-message modal-opener{display:block;width:100%;background:transparent;border:0}
+[id^="MainProduct-"] .membership-message-body{appearance:none;display:block;width:100%;min-height:36px;padding:0;border:0;border-radius:0;background:transparent;color:#000;box-shadow:none;text-align:left}
+[id^="MainProduct-"] .membership-message-body p{display:flex;width:100%;align-items:center;justify-content:space-between;margin:0;font:400 13px/20px ABCRepro-Regular,sans-serif}
+[id^="MainProduct-"] .membership-message-body .chevron{display:block;width:16px;height:16px;object-fit:contain}
+[id^="MainProduct-"] .product__view-details{display:inline-flex!important;align-items:center;gap:8px;margin-top:24px;color:#000!important;font:400 13px/20px ABCRepro-Regular,sans-serif;text-decoration:underline;text-underline-offset:2px}
+[id^="MainProduct-"] .product__view-details svg{display:block!important;width:14px!important;height:10px!important;min-width:14px!important;max-width:14px!important;min-height:10px!important;max-height:10px!important;flex:0 0 14px;fill:currentColor!important}
+[id^="MainProduct-"] .layer-it-with-pdp{gap:12px}
+[id^="MainProduct-"] .layer-it-with-pdp .card-wrapper,[id^="MainProduct-"] .layer-it-with-pdp .card,[id^="MainProduct-"] .layer-it-with-pdp .card__inner{padding:0;border:0!important;box-shadow:none;background:transparent}
+[id^="MainProduct-"] .layer-it-with-pdp .card__heading{margin:10px 0 0;font:600 13px/18px aktiv-grotesk-extended,sans-serif;text-transform:uppercase}
+[id^="MainProduct-"] .layer-it-with-pdp .variant-info{margin:1px 0 8px;font:400 12px/17px ABCRepro-Regular,sans-serif;text-transform:none}
+[id^="MainProduct-"] .layer-it-with-pdp .quick-add{margin-top:8px}
+[id^="MainProduct-"] .layer-it-with-pdp .quick-add__submit{width:100%;height:38px;padding:0;border:1px solid #000;background:transparent;color:#000;font:400 12px/38px ABCRepro-Regular,sans-serif}
+@media(max-width:749px){[id^="MainProduct-"] .product__info-wrapper{width:100%;max-width:100%;flex-basis:100%}[id^="MainProduct-"] .product__info-container{width:100%;max-width:100%}[id^="MainProduct-"] .product__info-container h1.aktiv.h3{font-size:17px;line-height:22px}[id^="MainProduct-"] .oke-sr-stars{width:67px}[id^="MainProduct-"] .oke-stars{width:67px}[id^="MainProduct-"] .layer-it-with-pdp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;overflow:visible}}
