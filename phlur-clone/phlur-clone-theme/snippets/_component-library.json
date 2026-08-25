@@ -64,6 +64,16 @@
   ],
   "sections": [
     {
+      "name": "announcement-bar",
+      "path": "sections/announcement-bar.liquid",
+      "purpose": "PHLUR-parity global three-message announcement carousel with synchronized slide colors and accessible autoplay state",
+      "params": ["section.settings", "section.blocks"],
+      "variants_supported": ["desktop-36px", "mobile-30px", "autoplay", "manual-controls", "reduced-motion"],
+      "schema_groups_used": ["7.1", "7.3", "7.4", "7.5", "7.7", "7.10", "7.12", "7.13", "7.19"],
+      "used_by": ["sections/header-group.json"],
+      "added_in_task": "announcement-bar-pixel-parity"
+    },
+    {
       "name": "main-collection-phlur",
       "path": "sections/main-collection-phlur.liquid",
       "purpose": "PHLUR-style grouped Shop All landing with dynamic paginated rendering for every ordinary Shopify collection",

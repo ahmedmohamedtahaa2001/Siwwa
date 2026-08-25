@@ -143,6 +143,16 @@
     if (slides.length < 2) return;
     let index = 0;
     let timer;
+    const syncColors = (slide) => {
+      const styles = slide?.style;
+      const background = styles?.getPropertyValue('--slide-bg').trim();
+      const color = styles?.getPropertyValue('--slide-text').trim();
+      if (background) {
+        bar.style.backgroundImage = 'none';
+        bar.style.backgroundColor = background;
+      }
+      if (color) bar.style.setProperty('--announcement-text', color);
+    };
     const show = (next) => {
       index = (next + slides.length) % slides.length;
       slides.forEach((slide, slideIndex) => {
@@ -153,6 +163,7 @@
         else slide.setAttribute('tabindex', '-1');
         slide.querySelector('a')?.setAttribute('tabindex', active ? '0' : '-1');
       });
+      syncColors(slides[index]);
     };
     const restart = () => {
       window.clearInterval(timer);

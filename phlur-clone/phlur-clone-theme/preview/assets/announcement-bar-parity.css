@@ -1,0 +1,26 @@
+.utility-bar {
+  --announcement-mobile-height: 30px;
+  --announcement-font-family: ABCRepro-Regular, sans-serif;
+}
+
+.utility-bar .slider-button { display: none; }
+
+.utility-bar .announcement-bar-slider {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.utility-bar .announcement-bar__message {
+  font-family: var(--announcement-font-family);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+@media (max-width: 749px) {
+  .utility-bar .announcement-bar__message {
+    font-size: 13px;
+    line-height: var(--announcement-mobile-height);
+  }
+}
